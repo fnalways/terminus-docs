@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { en } from "./en";
-import { zh } from "./zh";
+
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   title: "Terminus",
@@ -13,6 +13,10 @@ export default withMermaid({
       ...en,
     },
   },
+  sitemap: {
+    hostname: "https://docs.jointerminus.com/",
+  },
+  lastUpdated: true,
   base: process.env.DOC_BASE || "/",
   vite: {
     build: {
