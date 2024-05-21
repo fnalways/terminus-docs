@@ -13,7 +13,7 @@ Terminus was initially developed as a logically single-user system, where each u
 
 Furthermore, we expect users to only need to log in to the desktop once to access all applications in the system. In contrast, every application on a phone requires us to log in separately.
 
-We believe that a unified account system will not only help break down data silos between different applications but also enhance the overall security of the system through a unified authentication process.
+We believe that a unified account system will not only help break down data silos between different applications but also enhance the overall security of the system.
 
 Finally, we hope that when applications migrate to Terminus, the required changes to accommodate the new account system will be minimal.
 
@@ -23,27 +23,27 @@ Finally, we hope that when applications migrate to Terminus, the required change
 
 We have designed an application authentication process under a multi-user system. The figure above is a schematic diagram of the process:
 
-1. After the user log in at the [Login page](../../how-to/terminus/setup/login.md) , all subsequent requests will automatically carry authentication information.
+1. After the user logs in at the [Login page](../../how-to/terminus/setup/login.md), all subsequent requests will automatically carry authentication information.
 2. Each time a user sends a request, the request will first go through the Authelia service for authentication.
-3. If the authentication information attached to the request does not pass, the application will automatically redirect to the [Login Page](../../how-to/terminus/setup/login.md),  and the user must manually perform [MFA](#multi-factor-authentication)
-4. For requests that pass through Authelia, BFL will attach the user's basic information and then forward it to the application, eliminating the need for the application to handle authentication itself.
+3. If the authentication information of the request fails the authentication, the application automatically redirects to the [Login page](../../how-to/terminus/setup/login.md), and the user must than manually perform [MFA](#multi-factor-authentication).
+4. For requests that pass the authentication of  Authelia, the [Backend for Launcher (BFL)](https://github.com/beclab/bfl) service will attach the user's basic information and then forward it to the application, eliminating the need for the application to handle authentication itself.
 5. [Cluster Scoped Application](./application.md#cluster-scoped-application) requires developers to build extra `Auth Server` to tie the application's account with BFL's account.
+   
+  :::info
+  You can refer to some `Auth Server` developed by the Terminus team: [wordpress-proxy](https://github.com/beclab/wordpress-proxy), [bytebase-proxy](https://github.com/beclab/bytebase-proxy), [gitlab-client-proxy](https://github.com/beclab/gitlab-client-proxy), [gitlab-server-proxy](https://github.com/beclab/gitlab-server-proxy).
+  :::
 
-You can refer to some `Auth Server` developed by the Terminus team: [wordpress-proxy](https://github.com/beclab/wordpress-proxy), [bytebase-proxy](https://github.com/beclab/bytebase-proxy), [gitlab-client-proxy](https://github.com/beclab/gitlab-client-proxy), [gitlab-server-proxy](https://github.com/beclab/gitlab-server-proxy)
+## Multi-factor Authentication 
 
-## Multi-factor Authentication
-
-Currently, systems that rely solely on passwords for identity authentication are often subjected to a large number of attacks. Various attack methods such as `Social Engineering` `brute force cracking`are also becoming more prevalent. MFA authentication has become the choice of more and more systems and services. Terminus adopts a variety of authentication factors with different security levels overlaid to ensure the security of user identity authentication in the system.
+Currently, systems that rely solely on passwords for identity authentication are often subjected to a large number of attacks such as `brute force cracking`. Multi-factor Authentication (MFA) has become a popular choice for for securing systems and services. Terminus adopts a variety of authentication factors with different security levels to ensure the security of user identity authentication in the system.
 
 - Password
 
-  At the initial creation of the user, we generate a random password for the user to complete the initialization process. After completing the user's identity recognition authentication, the user is required to modify the initial password and adopt a custom password with higher security.
+  Upon the initial creation of the user, Terminus OS generates a random password for the user to complete the initialization process. After completing the user's identity recognition authentication, the user is required to modify the initial password and adopt a custom password with higher security.
 
 - TOTP
 
-  During the [Terminus Activation](../../how-to/terminus/setup/wizard.md) process. TermiPass saves Terminus OS's TOTP (Time-Based One-Time Password).
-
-  When users perform sensitive operations, such as the [login process](../../how-to/terminus/setup/login.md), Terminus OS will require users to enter the `one-time two-factor authentication code` generated by TOTP in TermiPass.
+  During the [Terminus Activation](../../how-to/terminus/setup/wizard.md) process. TermiPass saves Terminus OS's Time-Based One-Time Password (TOTP). When users perform sensitive operations such as [login](../../how-to/terminus/setup/login.md), Terminus OS requires users to enter the `one-time two-factor authentication code` generated by TOTP in TermiPass.
 
 ## Multiple Accounts
 
@@ -54,36 +54,32 @@ There are 2 roles in Terminus OS:
 - **Admin**:The user who creates Terminus automatically becomes Admin, who can:
   - [Manage users](../../how-to/terminus/settings/account.md)
   - [Manage Cluster App](./application.md#cluster-application)
-  - Manage Hardware
-- **Member**: Users besides Admin
+  -  Manage Hardware
+- **Member**: Users other than Admin.
 
 :::info
-Admin has the right to view and modify the resource usage of all accounts, but he cannot view the data of other accounts
+Admins have the right to view and modify the resource usage of all accounts, but they cannot view the data of other accounts
 :::
 
 ### Account
 
-Because each Terminus OS Account corresponds to a [Terminus Name](../snowinning/terminus-name.md).
-
-At the same time, each Terminus belongs to a [Domain](../snowinning/terminus-name.md#domain).
-
-Therefore, users in Terminus such as `alice@myterminus.com` will use `Local Name`: alice in modules such as `BFL`
+Each Terminus OS Account corresponds to a [Terminus Name](../snowinning/terminus-name.md) that consists of a local name and a domain name. At the same time, each Terminus OS belongs to one [Domain](../snowinning/terminus-name.md#domain). Therefore, Terminus users such as `alice@myterminus.com` will use the local name, `alice`, in the Terminal OS.
 
 ## Resource Limit
 
 When creating a new user, Terminus OS needs to allocate CPU and memory resources to each user.
 
-When a new user installs a new application, the user's available resources are checked. If there are not enough resources left, installation will not be allowed.
+When a user installs a new application, Terminus OS will check the system's available resources. If there are not enough resources left, installation will not be allowed.
 
-At the same time, if a new user consumes more than 90% of the allocated resources in real time during use, Terminus OS will activate the protection mechanism at this time and `suspend` the two Community Applications that consume the highest user resources.
+If a new user consumes more than 90% of the allocated resources in real time, Terminus OS activates the protection mechanism. It suspends the two Community Applications that consume the most user resources.
 
-After the user's real-time consumption of resources drops to a reasonable level, you can manually modify the deployment running status in [Control Hub](../../how-to/terminus/controlhub/browse.md#修改部署运行状态) to resume the `suspend` Applications.
+After the user's real-time consumption of resources drops to a reasonable level, you can manually modify the deployment running status in [Control Hub](../../how-to/terminus/controlhub/browse.md#modify-running-status) to resume the `suspend` Applications.
 
 ## Learn More
 
 - Users
 
-  [Use TermiPass to manage Account ](../../how-to/termipass/account/index.md)<br>
+  [Use TermiPass to manage Account](../../how-to/termipass/account/index.md)<br>
   [Use Settings to manage the safety of one's account security](../../how-to/terminus/settings/home.md)<br>
   [Use Settings to manage System Account](../../how-to/terminus/settings/account.md)
 
