@@ -38,15 +38,15 @@ At the same time, Terminus’s GPU nodes enable virtual sharing capabilities. Up
 
 ## Model management
 
-Users and developers can seamlessly integrate open source LLM, Imagine, Vision and Speech models in their local environment.
+Users and developers can seamlessly integrate open source LLMs, Image, Vision and Speech models in their local environment.
 
-Users can install models through [Market](../../how-to/terminus/market/index.md), and models are managed locally through [Nitro](https://nitro.jan.ai/).
+Users can install models through [Market](../../how-to/terminus/market/index.md), and manage models locally through [Nitro](https://nitro.jan.ai/).
 
 Developers can submit new models through [Model TerminusManifest](../../developer/develop/package/model.md) or calls the local model using [API](../../developer/develop/advanced/ai.md).
 
 ## Middleware management
 
-We have integrated [Dify.ai](https://docs.dify.ai/) with Terminus OS, while retaining the original functions of Dify.ai:
+We have integrated [Dify.ai](https://docs.dify.ai/) with Terminus OS, while retaining the original functions of Dify.ai, we have:
 
 - Successfully linked accounts between two systems, eliminating the need for users to manually create and log into accounts.
 - Developed a specialized agent for each account, named Ashia.

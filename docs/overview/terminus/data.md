@@ -8,7 +8,7 @@ outline: [2, 4]
 
 Since data has "state" and requires extra effort for operation and maintenance, in the past developers often gave priority to using basic services provided by public clouds, such as: S3, RDS, etc.
 
-Kubernetes is an excellent container orchestration tool that can handle the orchestration of stateless applications very well. However, there has long been controversy over whether it can manage "state" data well.
+Kubernetes is an excellent container orchestration tool that can handle the orchestration of stateless applications very well. However, there has long been controversy over whether it can manage stateful data well.
 
 Considering that managing data on Kubernetes is a troublesome matter, Terminus hopes to take on this responsibility, optimize it from a system perspective, and provide developers with the same data hosting services as public clouds. Developers only need to focus on business logic.
 
@@ -53,21 +53,21 @@ For applications, there are 3 different storage paths to deal with different usa
 
 ### UserData
 
-Store files that change infrequently but require cross-application access, such as documents, photos, and videos.
+The `UserData` storage path stores files that change infrequently but require cross-application access, such as documents, photos, and videos.
 
-The application can obtain access permissions to a directory under the Home directory by applying for [UserData](../../developer/develop/package/manifest.md#userdata) permissions in TerminusManifest.yaml. For example, you can apply permissions to the Picture directory to [PhotoPrism](https://market.jointerminus.com/app/photoprism), and to [qBittorrent](https://market.jointerminus.com/app/qbittorrent) and [Jefflyn ](https://market.jointerminus.com/app/jellyfins) Apply permissions to the Downloads directory
+Applications can obtain access permissions to a directory under the Home directory by applying for [UserData](../../developer/develop/package/manifest.md#userdata) permissions in `TerminusManifest.yaml`. For example, you can request permissions to the Picture directory for [PhotoPrism](https://market.jointerminus.com/app/photoprism), and permissions to the Downloads directory for [qBittorrent](https://market.jointerminus.com/app/qbittorrent), and [Jefflyn](https://market.jointerminus.com/app/jellyfins).
 
 ### AppData
 
-Stores data that does not change frequently but needs to span nodes. For example, configuration files.
+The `AppData` storage path stores data that does not change frequently but needs to span across nodes. For example, configuration files.
 
-Applications can apply for [AppData](../../developer/develop/package/manifest.md#appdata) permissions in TerminusManifest.yaml.
+Applications can apply for [AppData](../../developer/develop/package/manifest.md#appdata) permissions in `TerminusManifest.yaml`.
 
 ### AppCache
 
-The application directly operates the disk and has good performance. The disadvantage is that it cannot be accessed across nodes. For example, the system database, application log and cache.
+The `AppCache` storage path is allocated for applications that directly operates the disk with good performance. The disadvantage is that it cannot be accessed across nodes. For example, the system database, application log, and cache.
 
-Applications can apply for [AppCache](../../developer/develop/package/manifest.md#appcache) permissions in TerminusManifest.yaml.
+Applications can apply for [AppCache](../../developer/develop/package/manifest.md#appcache) permissions in `TerminusManifest.yaml`.
 
 ## [PostgreSQL](../../developer/develop/advanced/database.md#rds)
 
@@ -109,11 +109,11 @@ At the same time, as part of the middleware. Zinc Search, like the other three d
 
 Backup is the backup and restore module of Terminus OS.
 
-It can help users back up the entire Terminus to Terminus Space, and also supports user-defined storage locations.
+It helps users backup the entire Terminus to Terminus Space, and also supports user-defined storage locations.
 
-Supports daily and weekly regular backups. The first backup of each backup plan is a full backup and serves as the first snapshot of the backup plan. Subsequent snapshots are incremental backups.
+Backup operations can be performed daily and weekly. The first backup of each backup plan is a full backup and serves as the first snapshot of the backup plan. Subsequent snapshots are incremental backups.
 
-Backup component backup content includes:
+Backup objects includes:
 
 - Kubernetes configuration data, such as user information, application information, etc.
 - Database data, such as Redis, MongoDB, PostgreSQL, etc.
