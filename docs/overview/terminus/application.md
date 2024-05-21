@@ -20,7 +20,7 @@ We have expanded on the concept that each Community Application belongs to an in
 
 - [Calling mechanism](#service-provider) between Community Application and system
 - [Communication mechanism](#service-provider) between Community Applications
-- [Collaboration mechanism](#cluster-application) when different users uses the same Community Application
+- [Collaboration mechanism](#cluster-application) when different users use the same Community Application
 
 ## Application identifier
 
@@ -138,7 +138,7 @@ You can refer to some transplants done by the Terminus team:
 
 ### Service Provider
 
-We provide a `Service Provider` mechanism for a community application to call system applications or services provided by other community applications.
+We provide a Service Provider mechanism for a community application to call system applications or services provided by other community applications.
 
 ![alt text](/images/overview/terminus/image3.jpeg)
 

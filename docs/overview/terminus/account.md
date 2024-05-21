@@ -26,11 +26,11 @@ We have designed an application authentication process under a multi-user system
 1. After the user logs in at the [Login page](../../how-to/terminus/setup/login.md), all subsequent requests will automatically carry authentication information.
 2. Each time a user sends a request, the request will first go through the Authelia service for authentication.
 3. If the authentication information of the request fails the authentication, the application automatically redirects to the [Login page](../../how-to/terminus/setup/login.md), and the user must than manually perform [MFA](#multi-factor-authentication).
-4. For requests that pass the authentication of  Authelia, the [Backend for Launcher (BFL)](https://github.com/beclab/bfl) service will attach the user's basic information and then forward it to the application, eliminating the need for the application to handle authentication itself.
+4. For requests that pass the authentication with Authelia, the [Backend for Launcher (BFL)](https://github.com/beclab/bfl) service will attach the user's basic information and then forward it to the application, eliminating the need for the application to handle authentication itself.
 5. [Cluster Scoped Application](./application.md#cluster-scoped-application) requires developers to build extra `Auth Server` to tie the application's account with BFL's account.
    
   :::info
-  You can refer to some `Auth Server` developed by the Terminus team: [wordpress-proxy](https://github.com/beclab/wordpress-proxy), [bytebase-proxy](https://github.com/beclab/bytebase-proxy), [gitlab-client-proxy](https://github.com/beclab/gitlab-client-proxy), [gitlab-server-proxy](https://github.com/beclab/gitlab-server-proxy).
+  You can refer to some `Auth Servers` developed by the Terminus team: [wordpress-proxy](https://github.com/beclab/wordpress-proxy), [bytebase-proxy](https://github.com/beclab/bytebase-proxy), [gitlab-client-proxy](https://github.com/beclab/gitlab-client-proxy), [gitlab-server-proxy](https://github.com/beclab/gitlab-server-proxy).
   :::
 
 ## Multi-factor Authentication 
