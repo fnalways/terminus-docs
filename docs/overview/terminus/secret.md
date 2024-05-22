@@ -8,9 +8,9 @@ outline: [2, 3]
 
 Secrets require cautious management.
 
-We aim to track who can access them, who is utilizing them, and how we can systematically rotate them (Secret Rotation).
+We aim to track who can access them, who are utilizing them, and how secret rotations are performed.
 
-However, in practice, we observe widespread secret dissemination. This phenomenon involves secrets becoming pervasive, appearing in plaintext within source code, configuration management tools like Chef, Puppet, Ansible, and eventually making their way into version control systems such as GitHub, GitLab, or Bitbucket. Ultimately, they are dispersed throughout our infrastructure, accessible to anyone with login credentials.
+However, in practice, we have observed widespread secret dissemination. Secrets are becoming pervasive, appearing in plaintext within source code, configuration management tools like Chef, Puppet, Ansible, and eventually making their way into version control systems such as GitHub, GitLab, or Bitbucket. Ultimately, they are dispersed throughout our infrastructure, accessible to anyone with login credentials.
 
 Terminus OS categorizes `secrets` based on usage scenarios and employs various management techniques.
 
@@ -26,7 +26,7 @@ Terminus OS categorizes `secrets` based on usage scenarios and employs various m
 
   - Logging into Terminus Space allows the Backup program to request tokens for automated backend backups.
 
-  - =Logging into Google enables the File program to synchronize with Google Drive data.
+  - Logging into Google enables the File program to synchronize with Google Drive data.
 
 - Applications in Terminus OS can acquire third-party service credentials integrated in Settings via [Service Provider](../../developer/develop/advanced/provider.md).
 
