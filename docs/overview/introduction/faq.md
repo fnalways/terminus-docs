@@ -80,7 +80,7 @@ But for the following two features, we may introduce reasonable charges due to t
 
    If you don't provide service via the public Internet, almost all of your traffic can be routed peer-to-peer through the VPN, and you won't be charged for it. However, we are not sure how the TailScale DERP service is billed.
 
-   If you need to provide service via the public Interne, we will charge you for the additional traffic generated with reference to the bills from cloud providers.
+   If you need to provide service via the public Internet, we will charge you for the additional traffic generated with reference to the bills from cloud providers.
 
 Meanwhile, we believe that cold backup and CDN are resource types that are relatively easy to DePinize, and we look forward to solutions based on [Otmoic Protocol](../protocol/otmoic.md).
 
@@ -90,7 +90,7 @@ Right now our smart contract is deployed on [OPTIMISTIC ROLLUPS](https://optimis
 
 We cover all Terminus Name registrations, which cost around $1-2 (USD) per registration. The purpose of this is to lower the barrier to using the system.
 
-But if users want to interact directly with smart contracts on the blockchain, such as posting comments or managing Domains, they need to pay the corresponding Gas themselves through the wallet plug-in on the brower.
+But if users want to interact directly with smart contracts on the blockchain, such as posting comments or managing Domains, they need to pay the corresponding Gas themselves through the wallet plug-in on the browser.
 
 ## When are other languages available?
 
