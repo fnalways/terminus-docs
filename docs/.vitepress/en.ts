@@ -468,10 +468,6 @@ export const en = defineConfig({
       },
     },
 
-    search: {
-      provider: "local",
-    },
-
     nav: [
       { text: "Overview", link: "/overview/introduction/what-is-terminus" },
       { text: "How To Use", link: "/how-to/terminus/" },
