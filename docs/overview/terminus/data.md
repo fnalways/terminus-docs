@@ -6,7 +6,7 @@ outline: [2, 4]
 
 ## Motivation
 
-Since data has "state" and requires extra effort for operation and maintenance, in the past developers often gave priority to using basic services provided by public clouds, such as: S3, RDS, etc.
+Since data has state and requires extra effort for operation and maintenance, in the past developers often gave priority to using basic services provided by public clouds, such as: S3, RDS, etc.
 
 Kubernetes is an excellent container orchestration tool that can handle the orchestration of stateless applications very well. However, there has long been controversy over whether it can manage stateful data well.
 
@@ -14,22 +14,22 @@ Considering that managing data on Kubernetes is a troublesome matter, Terminus h
 
 ## Introduction
 
-User data is usually stored in: file systems and databases, of which the database is built based on the file system. We want Terminus to:
+User data is usually stored in file systems and databases. Of the two, databases are built based on file systems. Here are our design philosophies with them:
 
-For file system:
+For file systems:
 
-- Because Terminus is designed for multi-node clusters, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
+- Terminus is designed for multi-node clusters. Therefore, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
 
-For database:
+For databases:
 
-- For common databases, developers only need to modify the configuration to complete the integration
-- Different users and applications can share database physical instances to save resource overhead
+- For common databases, developers only need to modify the configuration to complete the integration.
+- Different users and applications can share physical database instances to save resource overhead.
 
 For both:
 
-- Data between different users and different applications are isolated from each other
-- Be as scalable and highly available as possible
-- Ability to perform unified Backup and Restore at the system level
+- Data between different users and different applications are isolated from each other.
+- Scalable and highly available.
+- Capable of performing unified backup and restore at the system level.
 
 ## File system type
 
