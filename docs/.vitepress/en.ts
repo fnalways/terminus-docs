@@ -13,7 +13,7 @@ const side = {
           text: "Getting Started",
           link: "/overview/introduction/getting-started",
         },
-        { text: "BEC Architecture", link: "/overview/introduction/bec/" },
+        { text: "BEC Architecture", link: "/overview/introduction/bec" },
         { text: "FAQ", link: "/overview/introduction/faq" },
       ],
     },
