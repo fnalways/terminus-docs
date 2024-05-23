@@ -13,7 +13,7 @@ const side = {
           text: "Getting Started",
           link: "/overview/introduction/getting-started",
         },
-        { text: "BEC Architecture", link: "/overview/introduction/bec/" },
+        { text: "BEC Architecture", link: "/overview/introduction/bec" },
         { text: "FAQ", link: "/overview/introduction/faq" },
       ],
     },
@@ -460,13 +460,6 @@ export const en = defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "/icon.png",
     socialLinks: [{ icon: "github", link: "https://github.com/beclab" }],
-    lastUpdated: {
-      text: "Updated at",
-      formatOptions: {
-        dateStyle: "full",
-        timeStyle: "medium",
-      },
-    },
 
     nav: [
       { text: "Overview", link: "/overview/introduction/what-is-terminus" },
