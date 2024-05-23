@@ -53,7 +53,6 @@ Challenges associated with storing data on local devices include:
 
 - Given their dependency on battery life and network availability, local devices cannot reliably ensure high availability. This dependency intrinsically limits Local First software's ability to handle data synchronization efficiently.
 
-
 - [Conflict-Free Replicated Data Types (CRDTs)](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) provide a robust solution for client-side data synchronization in documentation applications. However, retrofitting existing open-source projects with CRDT technology is often impractical. Over the past two decades, most projects developed by the open-source community were not designed with CRDT adaptability in mind. Consequently, the Local First community faces the substantial task of developing an entirely new developer ecosystem from the ground up.
 
 - Relative to stationary devices, mobile devices offer lower cost-effectiveness, a disparity that may be exacerbated in the short-term with the advent of the GPU era. This could impact the feasibility and performance of local data storage and synchronization on these devices.
@@ -62,30 +61,30 @@ Challenges associated with storing data on local devices include:
 
 Instead of centralizing data storage, the BEC model advocates for distributing data across the most suitable locations. This concept derives from three foundational ideas:
 
--  Edge - Brings every individual a personal cloud.
+- Edge - Brings every individual a personal cloud.
 
-   Users maintain application data such as documents, chat logs, and photos on their private server (Edge).
-   
-   All user interactions, whether with other individuals or services, are facilitated through this server.
+  Users maintain application data such as documents, chat logs, and photos on their private server (Edge).
 
-   In the era following the advent of artificial intelligence, an agent residing on the Edge, equipped with comprehensive contextual information, will serve as a user's secondary brain and external persona.
-   
--  Blockchain - Stores only data of the highest value on blockchain.
+  All user interactions, whether with other individuals or services, are facilitated through this server.
 
-   Blockchain technology is renowned for its transparency, openness, immutability, and global accessibility.
-   
-   While current blockchain capacities may not support extensive data and transaction volumes, concentrating on essential transactions such as account registrations and asset transfers could reduce the requisite scale by three to four orders of magnitude. This could be feasible with existing blockchain infrastructure.
-   
-   The anticipated future model will retain only data and transactions related to Decentralized Identifiers [(DID)](../../snowinning/concepts.md#decentralized-identifier) and assets on the blockchain, analogous to website registrations and online banking transactions. All other data would reside on Edge nodes, utilizing peer-to-peer (P2P) transmissions for interaction.
+  In the era following the advent of artificial intelligence, an agent residing on the Edge, equipped with comprehensive contextual information, will serve as a user's secondary brain and external persona.
 
--  Client - Guarantees users with direct control over their private keys.
+- Blockchain - Stores only data of the highest value on blockchain.
 
-   In the initial design, we store the private key controlling [DID](../../snowinning/concepts.md#decentralized-identifier) on Edge to greatly simplify software development.
+  Blockchain technology is renowned for its transparency, openness, immutability, and global accessibility.
 
-   However, feedback from user interviews revealed a preference for personal custody of private keys, whether on mobile devices or via browser extensions, enhancing perceived security. Blockchain wallets exemplify this approach.
+  While current blockchain capacities may not support extensive data and transaction volumes, concentrating on essential transactions such as account registrations and asset transfers could reduce the requisite scale by three to four orders of magnitude. This could be feasible with existing blockchain infrastructure.
+
+  The anticipated future model will retain only data and transactions related to Decentralized Identifiers [(DID)](../snowinning/concepts.md#decentralized-identifier) and assets on the blockchain, analogous to website registrations and online banking transactions. All other data would reside on Edge nodes, utilizing peer-to-peer (P2P) transmissions for interaction.
+
+- Client - Guarantees users with direct control over their private keys.
+
+  In the initial design, we store the private key controlling [DID](../snowinning/concepts.md#decentralized-identifier) on Edge to greatly simplify software development.
+
+  However, feedback from user interviews revealed a preference for personal custody of private keys, whether on mobile devices or via browser extensions, enhancing perceived security. Blockchain wallets exemplify this approach.
 
 These principles have gone through extensive refinement throughout the developmental process, culminating in the three integral components of the Terminus system:
 
-- [Terminus OS](../../terminus/overview.md). A cloud-native operating system designed to operate on Edge devices
-- [Snowinning Protocol](../../snowinning/overview.md). This decentralized identity and credit system provides a framework for secure, trustless exchanges of information and value. It integrates with other components of the ecosystem to ensure that transactions and interactions across platforms remain secure and verifiable without centralized oversight.
-- [TermiPass](../../../how-to/termipass/overview.md). A comprehensive client software solution that operates across multiple platforms. It securely stores users' private keys and manages their identities and data across various Edge devices.
+- [Terminus OS](../terminus/overview.md). A cloud-native operating system designed to operate on Edge devices
+- [Snowinning Protocol](../snowinning/overview.md). This decentralized identity and credit system provides a framework for secure, trustless exchanges of information and value. It integrates with other components of the ecosystem to ensure that transactions and interactions across platforms remain secure and verifiable without centralized oversight.
+- [TermiPass](../../how-to/termipass/overview.md). A comprehensive client software solution that operates across multiple platforms. It securely stores users' private keys and manages their identities and data across various Edge devices.

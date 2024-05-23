@@ -6,12 +6,13 @@ outline: [2, 3]
 
 Terminus's mission is to "let people own their data again".
 
-It provides a next-generation decentralized Internet framework based on the Blockchain-Edge-Client [(BEC)](./bec/) architecture, consisting of three core components and a series of protocols.
+It provides a next-generation decentralized Internet framework based on the Blockchain-Edge-Client [(BEC)](./bec.md) architecture, consisting of three core components and a series of protocols.
 
 ## Core components
 - [**Snowinning Protocol**](../snowinning/overview.md): An identity and reputation protocol that adheres to W3C standards. It is user-owned and based on blockchain smart contracts.
 - [**Terminus OS**](../terminus/overview.md): A cloud-native, source-available operating system based on Kubernetes enhancements, running on user-owned edge devices.
 - [**TermiPass**](../../how-to/termipass/overview.md): A client software that assists users manage on-chain identities and edge devices.
+ 
 
 ## Protocols
 
@@ -22,8 +23,10 @@ We believe that in the future decentralized world, platforms may no longer exist
 - [**Recommend Protocol**](../protocol/recommend.md): A decentralized and privacy-protecting information distribution protocol designed to free you from the information bubble.
 
 We look forward to find more like-minded partners and create more agreements. Allow people to regain their digital sovereignty.
-
+ 
 Terminus derives its name from Isaac Asimov's book *Foundation*. In the story, Terminus is a planet at the edge of the galaxy where scientists compile the *Encyclopedia* to record all human knowledge from the past thousand years. This aligns with our vision: **allowing every individual, family, and business to document their unique journey through their own Terminus in the future**.
+ 
+>*Every person, every family and every business will be able to record their unique journey through their own Terminus in the future.*
 
 ## Use Cases
 
