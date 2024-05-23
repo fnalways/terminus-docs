@@ -13,8 +13,8 @@ Currently you can try out Terminus in one of two roles:
 
 If you:
 
-- Have an idle server with more than 8G of memory and more than 50G of hard disk space, or
-- Have been invited to beta test with Terminus Space's [Host Service](../../how-to/space/index.md#host-service)
+- Have an idle server with more than 8G of memory and more than 100G of hard disk space, or
+- Have been invited to beta test with Terminus Space's [Host Service](../../how-to/space/index.md#host-service).
 
 You can follow the following process to build Terminus. The process is divided into five steps:
 
@@ -24,16 +24,16 @@ You can follow the following process to build Terminus. The process is divided i
 
 2. **Install Terminus**
 
-   - If you are hosting Terminus your own server, you can [install Terminus with commands](../../how-to/terminus/setup/install.md)
+   - If you are hosting Terminus your own server, you can [install Terminus with commands](../../how-to/terminus/setup/install.md).
    - If you are installing Terminus via Host Service, refer to [Apply for Terminus on Terminus Space](../../how-to/space/host/create-terminus.md).
    
    At the end of this step, you will get the URL for Terminus and the initial login password.
 
 3. **Activate Terminus**
 
-   Open the Terminus Wizard in your browser using the URL and log in with the one-time password. Follow the instructions to complete the initial setup, including resetting your password and selecting a reverse proxy. Next, use TermiPass to scan the QR code displayed on the screen to activate Terminus. For complete activation guidance, see the [Wizard documentation](../../how-to/terminus/setup/wizard.md)
+   Open the Terminus Wizard in your browser using the URL and log in with the one-time password. Follow the instructions to complete the initial setup, including resetting your password and selecting a reverse proxy. Next, use TermiPass to scan the QR code displayed on the screen to activate Terminus. For complete activation guidance, see the [Wizard documentation](../../how-to/terminus/setup/wizard.md).
 
-4. **Login Terminus**
+4. **Log in to Terminus**
 
    Log in with the password you reset during activation and complete two-step verification on TermiPass. For more information, see the [Login documentation](../../how-to/terminus/setup/login.md).
 
@@ -59,9 +59,9 @@ You can share the [Administrator Manual](../../how-to/terminus/settings/account.
 
 3. **Activate Terminus**
 
-   Open the Terminus Wizard in your browser using the URL and log in with the one-time password. Follow the instructions to complete the initial setup, including resetting your password and selecting a reverse proxy. Next, use TermiPass to scan the QR code displayed on the screen to activate Terminus. For complete activation guidance, see the [Wizard documentation](../../how-to/terminus/setup/wizard.md)
+   Open the Terminus Wizard in your browser using the URL and log in with the one-time password. Follow the instructions to complete the initial setup, including resetting your password and selecting a reverse proxy. Next, use TermiPass to scan the QR code displayed on the screen to activate Terminus. For complete activation guidance, see the [Wizard documentation](../../how-to/terminus/setup/wizard.md).
 
-4. **Login Terminus**
+4. **Log in to Terminus**
 
    Log in with the password you reset during activation and complete two-step verification on TermiPass. For more information, see the [Login documentation](../../how-to/terminus/setup/login.md).
 
