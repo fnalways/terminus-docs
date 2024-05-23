@@ -26,7 +26,7 @@ We look forward to find more like-minded partners and create more agreements. Al
 
 Terminus derives its name from the book "Foundation" by Asimov. It is a planet at the end of the galaxy, where scientists compile the "Encyclopedia", hoping to record all the knowledge of all mankind over the past thousand years. This is in line with our vision:
 
-> _Every person, every family and every business will be able to record their unique journey through their own Terminus in the future._
+>*Every person, every family and every business will be able to record their unique journey through their own Terminus in the future.*
 
 ## Use Cases
 

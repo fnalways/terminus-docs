@@ -8,7 +8,7 @@ This chapter will introduce how to use the **Otomic System** from both the **LP 
 
 ## For LP
 
-For LPs, you need to set three parts: **Bridge**, **AMM(Automated Market Maker)**, and **Monitor**. The **Bridge** is a fundamental part of the system and needs to be set up first for the system to work. The **Amm** controls your hedging strategy, and the **Monitor** handles alert. 
+For LPs, you need to set three parts: **Bridge**, **AMM(Automated Market Maker)**, and **Monitor**. The **Bridge** is a fundamental part of the system and needs to be set up first for the system to work. **AMM** controls your hedging strategy. The **Monitor** tracks all data, allowing you to set alerts based on your own strategies.
 
 We provide preset configuration schemes for direct use, but we recommend customizing these configurations to suit your needs and achieve better execution results.
 
@@ -24,7 +24,7 @@ You can configure a bridge in two places:
 
 1. **Configure Token**
    
-   You need to provide or select two types of information to configure a `token`.
+   You need to provide or select two parts of information to configure a `token`.
 
    - The blockchain where the `token` is located.
    - Information about the `token` itself, including **Contract Address**, **Name displayed in the system**, **Market Name**, **Token Precision**, **Token Type**.
@@ -42,7 +42,7 @@ You can configure a bridge in two places:
 
 2. **Configure Wallet**
 
-   You need to provide or select two types of information to configure a `wallet`.
+   You need to provide or select two parts of information to configure a `wallet`.
 
    - The blockchain used by the `wallet`.
    - Information about the `wallet` itself, including **Address**, **Private Key**.
@@ -214,7 +214,7 @@ Here are the steps for the **Swap** process:
 
 2. Trade stage
 
-If the type or amount of tokens locked by the LP differs from the quoted information, or if the LP doesn't lock the token within the given time, you can click 'complain' to file a complaint. Regardless of why a transaction didn't succeed, you can ask for a refund before the refund countdown ends.
+If the type or amount of tokens locked by the LP differs from the quoted information, or if the LP doesn't lock the token within the given time, you can click 'complain' to file a complaint. Regardless of why a transaction didn't succeed, you can ask for a refund after the refund countdown ends.
 
 <video controls width="100%">
   <source src="/images/how-to/otmoic/swap.mp4" type="video/mp4">
