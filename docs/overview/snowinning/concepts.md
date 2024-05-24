@@ -28,10 +28,9 @@ As indicated by the graph below, a DID is a simple text string consisting of thr
 
 ![alt text](/images/overview/snowinning/did.png)
 
-DIDs, like blockchain addresses, are self-generated and self-owned identities, created using a mnemonic derived through a specific algorithmic sequence. 
+DIDs, like blockchain addresses, are self-generated and self-owned identities, created using a mnemonic derived through a specific algorithmic sequence.
 
 The relationships among mnemonic phrases, private keys, and DIDs can be succinctly described as follows:
-
 
 > Mnemonic -> Private Key -> Public Key -> Blockchain Address or DID
 
@@ -40,7 +39,7 @@ The relationships among mnemonic phrases, private keys, and DIDs can be succinct
 
 - To prevent loss and ensure recoverability, the mnemonic should be backed up offline.
 
-- The public key, blockchain address, and DID are derived from the private key. 
+- The public key, blockchain address, and DID are derived from the private key.
 - Since it is possible to derive the public key from the private key (but not vice versa), the public key, blockchain address, and DID can be safely made public.
 
 ## DID Registry
@@ -71,7 +70,7 @@ DHT networks represent a form of technology that achieves a higher degree of dec
 
 Leveraging DID and Blockchain Smart Contracts (constituting a DID Registry), we have established a decentralized peer-to-peer network that eliminates the need for third-party trust and enables direct information exchange between any two entities. We will illustrate this network topology using Alice and Bob, two users who have initially registered their DIDs on the blockchain.
 
-![alt text](/images/overview/snowinning/image5.png)
+![alt text](/images/overview/snowinning/network-topology.jpeg)
 
 This is how Alice and Bob send messages via the network:
 
@@ -80,7 +79,6 @@ This is how Alice and Bob send messages via the network:
 3. Alice's Edge sends a message to Bob's Edge.
 4. Upon receiving the message, Bob's Edge verifies the authenticity of Alice's message by validating the cryptographic signature against the blockchain, **similar to the role of a Certificate Authority (CA)**.
 5. Finally, once verified, the message is relayed from Bob's Edge to his terminal device.
-
 
 ## Verifiable Credential
 
@@ -131,8 +129,8 @@ It is crucial to recognize that VCs are not stored on the blockchain.
 
 We have reputation systems in conventional contexts, such as:
 
-- Online review platforms like Yelp, IMDB, etc. 
-- Financial scoring like [FICO Score](https://www.fico.com/en/products/fico-score), gather and aggregate claims to form a comprehensible reputation metric. 
+- Online review platforms like Yelp, IMDB, etc.
+- Financial scoring like [FICO Score](https://www.fico.com/en/products/fico-score), gather and aggregate claims to form a comprehensible reputation metric.
 
 Restaurants and movies are entities, user reviews are Claims, and a large number of Claims are collected and processed through algorithms to determine the entity's Reputation. Subsequent consumers can rely on this Reputation to make purchasing decisions and provide continuous feedback.
 
@@ -142,7 +140,7 @@ Snowinning Protocol transforms this model by embedding it in blockchain technolo
 
 1. Raw Data Collection: User-generated ratings and reviews are recorded directly within smart contracts.
 2. Reputation Processing: Developers can access this raw data to generate reputation insights, tailored to specific contexts and needs.
-3. Reputation Distribution: These insights are distributed via a specialized [Market Protocol](../protocol/market.md), enabling users to select appropriate Reputation Providers based on their specific requirements.  
+3. Reputation Distribution: These insights are distributed via a specialized [Market Protocol](../protocol/market.md), enabling users to select appropriate Reputation Providers based on their specific requirements.
 
 In each scenario, users can choose one or several Reputation Providers to get comprehensive opinions.
 
