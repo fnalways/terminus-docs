@@ -57,7 +57,7 @@ Only the Android and iOS versions of **TermiPass** can register for a Terminus N
 
 ### Android
 
-[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass_19_v1.2.4_2024-05-29_16-40.apk)
+[Download from Google Play](https://play.google.com/store/apps/details?id=com.terminus.termipass)
 
 ### iOS
 
@@ -65,12 +65,12 @@ Only the Android and iOS versions of **TermiPass** can register for a Terminus N
 
 ### Windows
 
-[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.exe)
+[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.exe)
 
 ### Mac
 
-[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.dmg)
+[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.dmg)
 
 ### Chrome Extension
 
-[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.chrome.zip)
+[Download from Github](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.chrome.zip)
