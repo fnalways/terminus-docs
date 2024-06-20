@@ -47,12 +47,8 @@ Store, manage, and autofill passwords securely using Vault in **Terminus**.
 
 | Platform         | Download Link                                                                                                              |  
 |------------------|----------------------------------------------------------------------------------------------------------------------------| 
-| Android          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass_19_v1.2.4_2024-05-29_16-40.apk) |  
+| Android          | [Install from Google Play](https://play.google.com/store/apps/details?id=com.terminus.termipass) |  
 | iOS              | [Install from AppStore](https://apps.apple.com/app/termipass/id6448082605)                                                 |  
-| Windows          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.exe)                         |  
-| Mac              | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.dmg)                         |    
-| Chrome Extension | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.4/TermiPass.chrome.zip)                  |     
-
-:::info
-Terminus Name registration is only available on the Android and iOS versions of **TermiPass**.
-:::
+| Windows          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.exe)                         |  
+| Mac              | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.dmg)                         |    
+| Chrome Extension | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.chrome.zip)                  |     
