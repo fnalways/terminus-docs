@@ -52,3 +52,7 @@ Store, manage, and autofill passwords securely using Vault in **Terminus**.
 | Windows          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.exe)                         |  
 | Mac              | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.dmg)                         |    
 | Chrome Extension | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.chrome.zip)                  |     
+
+:::info
+Terminus Name registration is only available on the Android and iOS versions of **TermiPass**.
+:::
