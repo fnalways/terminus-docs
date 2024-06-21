@@ -4,9 +4,9 @@ outline: [2, 3]
 
 # How to Start Developing an Application
 
-## Launch DevBox
+## Install and Launch DevBox
 
-Click on the **DevBox** icon in the launcher on the Terminus Desktop to open the **DevBox** application.
+Install [DevBox](https://market.jointerminus.com/app/devbox) from the Terminus Market. Click on the **DevBox** icon in the launcher on the Terminus Desktop to open the **DevBox** application.
 
 ![main screen](/images/developer/develop/tutorial/create/home.jpg)
 
