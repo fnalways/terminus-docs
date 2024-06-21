@@ -74,7 +74,7 @@ options:
 - Type: `string`
 - Accepted Value: `app`, `recommend`, `model`, `middleware`
 
-Terminus currently supports four types of applications, each requiring different fields. This document uses `app` as an example to explain each field. For information on other types, please refer to the configuration guide accordingly.
+Terminus currently supports four types of applications, each requiring different fields. This document uses `app` as an example to explain each field. For information on other types, please refer to the corresponding configuration guide.
 - [Recommend Configuration Guide](recommend.md)
 - [Model Configuration Guide](model.md)
 
@@ -329,7 +329,7 @@ spec:
   # optional. When set to true, only the admin can install this app.
   
   versionName: '10.8.11' 
-  # The version of the app that this chart contains. Quotes recommended. This corresponds to the appVersion field in the Chart.yaml file. It is not related to the version field.
+  # The version of the application that this chart contains. It is recommended to enclose the version number in quotes. This value corresponds to the appVersion field in the `Chart.yaml` file. Note that it is not related to the `version` field.
 
   featuredImage: https://file.bttcdn.com/appstore/jellyfin/promote_image_1.jpg
   # The featured image is displayed when the app is featured in the Market.
@@ -353,12 +353,12 @@ spec:
   requiredMemory: 256Mi
   requiredDisk: 128Mi
   requiredCpu: 0.5
-  # Specify the minimum resource required to install this app. Once the app is installed, the system will reserve these resources.
+  # Specifies the minimum resources required to install and run the application. Once the app is installed, the system will reserve these resources to ensure optimal performance.
 
   limitedDisk: 256Mi
   limitedCpu: 1
   limitedMemory: 512Mi
-  # Specify the resource limit for the app. The app will be temporary suspended if the resource limit is exceeded.
+  # Specifies the maximum resource limits for the application. If the app exceeds these limits, it will be temporarily suspended to prevent system overload and ensure stability.
 
   legal:
   - text: Community Standards
@@ -381,7 +381,7 @@ spec:
 
 The **Terminus OS** provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add requried middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
 
-You can use the `scripts` field to specify the scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
+Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
 
 :::info Example
 ```Yaml
@@ -530,7 +530,7 @@ options:
 
 - Type: `list<map>`
 
-If your app depends on other apps or requires a certain OS version or other apps, please specify here.
+Specify the dependencies and requirements for your application. It includes other applications that your app depends on, as well as any specific operating system (OS) version requirements.
 
 :::info Example
 ```yaml
@@ -550,7 +550,7 @@ options:
 - Optional
 - Type: `map`
 
-Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information
+Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information.
 
 :::info Example
 ```yaml
@@ -563,7 +563,7 @@ options:
 
 ### resetCookie
 
-- Optinal
+- Optional
 - Type: `map`
 
 If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information
@@ -579,10 +579,10 @@ options:
 
 ### upload
 
-- Optinal
+- Optional
 - Type: `map`
 
-The `Terminus Application Runtime (TAPR)` provides a common file-upload component to simplify upload. Refer to [upload](../advanced/file-upload.md) for more information
+The Terminus Application Runtime (TAPR) includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
 
 :::info Example
 ```yaml
@@ -599,11 +599,11 @@ upload:
 
 ### mobileSupported
 
-- Optinal
+- Optional
 - Type: `boolean`
 - Default: `false`
 
-Enable this option if the app can be used on a mobile web browser. This will let the app appear on the mobile version of Terminus Desktop.
+Determine whether the application is compatible with mobile web browsers and can be displayed on the mobile version of Terminus Desktop. Enable this option if the app is optimized for mobile web browsers. This will make the app visible and accessible on the mobile version of Terminus Desktop.
 
 :::info Example
 ```yaml
