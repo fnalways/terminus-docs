@@ -21,4 +21,3 @@ For Terminus OS users, especially developers, **ControlHub** provides a more pre
   - [Postgres](./middleware.md#postgres): Displays detailed information about the PostgreSQL database in cluster.
   - [MongoDB](./middleware.md#mongodb): Displays detailed information about the MongoDB database in cluster.
   - [Redis](./middleware.md#redis): Displays detailed information about the Redis database in the cluster.
-  - [Zinc](./middleware.md#zinc): Displays information about the indexing service that Zinc Search provides for applications in the system.

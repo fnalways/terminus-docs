@@ -30,22 +30,6 @@ The detailed information shows Redis cluster data, including the **cluster name,
 
 The **Databases list** below provides an overview of the Redis datab utilized by different applications within Terminus OS. It includes details such as **namespaces and passwords**.
 
-
-## Zinc
-
-![zinc](/images/how-to/terminus/controlhub/middleware/04.jpg)
-
-**Zinc** details display a list of indexes utilized by different applications within Terminus OS. The list shows **index names, document counts, and storage space used**. Buttons for **Schema Configuration** and **Search Testing** can be found on the right.
-
-
-Clicking the **Schema Configuration** button will open a dialogue displaying the schema configuration in JSON format.
-
-![schema](/images/how-to/terminus/controlhub/middleware/05.jpg)
-
-Clicking the **Search** button opens the Zinc Search dialog. You can perform full-text searches within the indexes using the Zinc Search syntax.
-
-![zinc search](/images/how-to/terminus/controlhub/middleware/06.jpg)
-
 ## Bytebase
 
 You can use third-party applications to view database status in Terminus OS. For example, [Bytebase](https://www.bytebase.com/) is a multipurpose middleware for working with databases. In the following section, we will use **Bytebase** to demonstrate how to access database in the middleware.
