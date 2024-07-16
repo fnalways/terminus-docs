@@ -79,7 +79,7 @@ If the PostgreSQL database application declared by the developer in the applicat
 
 ## [MongoDB](../../developer/develop/advanced/database.md#nosql)
 
-In the field of Internet of Things, MongoDB, as a representative of NoSQL, has a wide range of application scenarios. Terminus OS deploys [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) in the system. Provides developers with a cloud-native version of MongoDB Cluster.
+In the field of Internet of Things, MongoDB, as a representative of NoSQL, has a wide range of application scenarios.[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) can be easily deployed in Terminus OS. Provides developers with a cloud-native version of MongoDB Cluster.
 
 Like PostgreSQL, Terminus also manages MongoDB backup and restore in a unified manner. System users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
 
