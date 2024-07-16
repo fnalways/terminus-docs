@@ -14,44 +14,44 @@ TermiPass acts as a bridge between users and their Terminus systems, offering a 
 
 ## Account Management
 
- Manage multiple accounts to accommodate your various roles and identities.
+Manage multiple accounts to accommodate your various roles and identities.
 
-  - [Create a **Terminus** Name](./account/index.md#create-an-account)
-  - [Log In to **Terminus**](../terminus/setup/login.md)
-  - [Log In to **Terminus Space**](../space/account.md#log-in)
+- [Create a **Terminus** Name](./account/index.md#create-an-account)
+- [Log In to **Terminus**](../terminus/setup/login.md)
+- [Log In to **Terminus Space**](../space/account.md#log-in)
 
 ## Terminus Management
 
-  Activate, monitor, and manage your **Terminus** devices, including VPN connections.
+Activate, monitor, and manage your **Terminus** devices, including VPN connections.
 
-  - [Activate Terminus](../terminus/setup/wizard.md)
-  - [Get a Two-Factor Verification Code at Login](../terminus/setup/login.md#two-factor-verification)
-  - [View Connection Status](./manage-terminus.md#connection-status)
-  - [Manage VPN Connections](./manage-terminus.md#vpn-connection)
+- [Activate Terminus](../terminus/setup/wizard.md)
+- [Get a Two-Factor Verification Code at Login](../terminus/setup/login.md#two-factor-verification)
+- [View Connection Status](./manage-terminus.md#connection-status)
+- [Manage VPN Connections](./manage-terminus.md#vpn-connection)
 
 ## File Management
 
-  Manage and synchronize files across various devices on your **Terminus**.
+Manage and synchronize files across various devices on your **Terminus**.
 
-  - [File Management](../terminus/files/index.md)
-  - [Local File Sync](./local-file-sync.md)
+- [File Management](../terminus/files/index.md)
+- [Local File Sync](./local-file-sync.md)
 
 ## Password Management
 
 Store, manage, and autofill passwords securely using Vault in **Terminus**.
 
-  - [Vault](../terminus/vault/index.md)
-  - [Password Autofill](./password-autofill.md)
+- [Vault](../terminus/vault/index.md)
+- [Password Autofill](./password-autofill.md)
 
 ## Download TermiPass
 
-| Platform         | Download Link                                                                                                              |  
-|------------------|----------------------------------------------------------------------------------------------------------------------------| 
-| Android          | [Install from Google Play](https://play.google.com/store/apps/details?id=com.terminus.termipass) |  
-| iOS              | [Install from AppStore](https://apps.apple.com/app/termipass/id6448082605)                                                 |  
-| Windows          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.exe)                         |  
-| Mac              | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.dmg)                         |    
-| Chrome Extension | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.5/TermiPass.chrome.zip)                  |     
+| Platform         | Download Link                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------- |
+| Android          | [Install from Google Play](https://play.google.com/store/apps/details?id=com.terminus.termipass)          |
+| iOS              | [Install from AppStore](https://apps.apple.com/app/termipass/id6448082605)                                |
+| Windows          | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.9/TermiPass.exe)        |
+| Mac              | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.9/TermiPass.dmg)        |
+| Chrome Extension | [Download from GitHub](https://github.com/beclab/TermiPass/releases/download/v1.2.9/TermiPass.chrome.zip) |
 
 :::info
 Terminus Name registration is only available on the Android and iOS versions of **TermiPass**.
