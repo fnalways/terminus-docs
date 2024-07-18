@@ -608,3 +608,25 @@ Determine whether the application is compatible with mobile web browsers and can
 mobileSupported: true
 ```
 :::
+
+### oidc
+
+- Optional
+- Type: `map`
+
+The Terminus OS includes a built-in OpenID Connect authentication component to simplifies the way to verify the identity of users. Enable this option to use OpenID in your app. 
+```yaml
+# OpenID related varibles in yaml
+{{ .Values.oidc.client.id }}
+{{ .Values.oidc.client.secret }}
+{{ .Values.oidc.issuer }}
+```
+
+:::info Example
+```yaml
+oidc:
+  enabled: true
+  redirectUri: /path/to/uri
+  entranceName: navidrome
+```
+:::
