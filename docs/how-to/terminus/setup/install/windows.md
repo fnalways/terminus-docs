@@ -17,7 +17,7 @@ Before you begin, ensure your system meets these requirements:
   - Storage: 64GB or above (available disk space)
   - Supported Systems:
      - Windows: Windows 10 (Build 19041 or higher) or Windows 11 
-     - Linux (WSL): Ubuntu 20.04 LTS or later; Debian 11 or later
+     - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 - [TermiPass](../../../termipass/overview.md#download-termipass) mobile app installed on your smartphone
 - [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name) created
 
