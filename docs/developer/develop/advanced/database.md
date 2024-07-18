@@ -24,7 +24,7 @@ If you use **Citus**, **Terminus** will automatically shard the database tables 
 
 ## NoSQL
 
-The NoSQL cluster is not deployed by default in Terminus, but it can be installed from the Market easily. The administrator just needs to install the [**MongoDB**](https://market.jointerminus.com/middleware/mongodb) middleware, and the [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) will then manage the **MongoDB** cluster. Users can horizontally scale **MongoDB** Cluster replicas, as well as backup and restore databases.
+The NoSQL cluster is not deployed by default in Terminus, but it can be easily installed from the Market. To set up a NoSQL cluster, the administrator needs to install the [**MongoDB**](https://market.jointerminus.com/middleware/mongodb) middleware. Once installed, the [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) automatically manages the **MongoDB** cluster. Users can then horizontally scale **MongoDB** cluster replicas, as well as perform backup and restore operations on databases.
 
 You can specify detailed information for MongoDB in [TerminusManifest.yaml](../package/manifest.md#middleware) as follows.
 
