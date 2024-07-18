@@ -14,25 +14,25 @@ metadata:
   # provider registry needs to be installed under user-system
   namespace: user-system-{{ .Values.bfl.username}}
 spec:
-  # dataType of provider
-  dataType: app
-  deployment: demo
-  description: demo provider in app
+  version: v2   #The latest version is v2, but the system remains compatible with v1.
 
-  # accessible service of the provider
-  endpoint: app-svc
+  # dataType of provider, it is recommended to add app name to prevent duplication.
+  dataType: legacy_{{ .Release.Name }}
+  deployment: {{ .Release.Name }}
+  description: {{ .Release.Name }} legacy api v2
 
-  # group of the provider
-  group: service.app
+  # accessible service of the provider. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
+  endpoint: {{ .Release.Name }}-svc.{{ .Release.Namespace }}:1234
+
+  # group of the provider, it is recommended to add app name to prevent duplication.
+  group: api.{{ .Release.Name }}
   kind: provider
   namespace: "{{ .Release.Namespace }}"
   opApis:
     # name of the provided API
     - name: AppApi
-
       # URL of the API
-      uri: /api
-  version: v1
+      uri: /api  
 status:
   state: active
 ```
@@ -43,12 +43,20 @@ You can configure it in the [TerminusManifest.yaml](../package/manifest.md#sysda
 
 ```Yaml
 sysData:
-- group: service.bfl
-  dataType: app
-  version: v1
+- appName: providerapp  # The appname of the api provider. Required for ProviderRegistry v2. 
+  port: 8888  # The port of the provider service
+
+  # The default domain of provider is <appName>-svc.<appName>-<username>:<port>, if the service name and app namespace is not in default format, you can specify it in following field  
+  svc: app-svc  # Name of the service. Optional for ProviderRegistry v2.
+  namespace: ns # Namespace of the app. Optional for ProviderRegistry v2.
+
+  version: v2   # version of the ProviderRegistry
+  dataType: legacy_{{ .Release.Name }}  # dataType defined in ProviderRegistry
+  group: api.{{ .Release.Name }}   # group defined in ProviderRegistry
   ops:
-  - InstallDevApp
+  - AppApi   # name of opApis defined in ProviderRegistry
 ```
+
 Once configured, you can add the `access key` and `access secret` to the templates in **TAC**. They will be injected during installation for authorized usage.
 
 ```yaml
