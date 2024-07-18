@@ -48,13 +48,6 @@ This is difficult to achieve with the above-mentioned NAS operating systems buil
 
 Meanwhile, Terminus aims to provide a one-stop self-hosted solution, which goes beyond the scope of general NAS operating systems.
 
-## Does Terminus support Raspberry Pi?
-
-Raspberry Pi is not supported at the moment. We plan to support it in Q3 2024. Currently, it is not supported mainly because:
-
-- We do not have the manpower to test the compatibility of the system on the ARM platform. When the test is completed, we will add an image push of the ARM platform to the CI.
-- We hope that Raspberry Pi can take the role of Control Panel instead of just Worker. However, the current version of Terminus requires 7.5G of memory after default installation. We hope to start optimizing the default memory usage after the system functions are stabilized.
-
 ## I have several servers. Can I use Terminus to manage them one-stop?
 
 Yes. You can refer to [How to add a node](../../developer/develop/advanced/cli.md).
@@ -116,8 +109,9 @@ However, there are chances that applications developed through this method canno
 
 We use the term Terminus under two scenarios:
 
-- Describing the entire project. Specifically, it refers to the complete architecture including 3 core components and extension protocols.
+- Describing the entire project and the OS. Specifically, it refers to the complete architecture including 3 core components and extension protocols.
 - Describing the hardware devices running Terminus OS. Be it a Raspberry Pi or a cluster of multiple machines on the cloud, all can be called Terminus.
+
 
 ## What are the differences among the different "passwords"?
 

@@ -22,7 +22,7 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    ```bash
    wsl --update
    wsl --install -d Ubuntu-22.04
-   # Update WSL and install Ubuntu 
+   # Update WSL2 and install Ubuntu 
    ```
    
 2. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\YourUsername\`) with the following content:
