@@ -248,13 +248,18 @@ The `iframe` creates a new window within the desktop window through an iframe. T
 :::info Example
 ```Yaml
 permission:
+  appCache: true
   appData: true
+  userData:
+  - /Home/  
   sysData:
-  - group: api.intent
-    dataType: legacy_api
-    version: v1
+  - dataType: legacy_prowlarr
+    appName: prowlarr
+    port: 9696
+    group: api.prowlarr
+    version: v2
     ops:
-    - POST
+    - All
 ```
 :::
 
@@ -284,6 +289,8 @@ Whether the app requires read and write permission to user's `Home` folder. List
 - Type: `list<map>`
 - Optional
 
+Declare the list of APIs that this app needs to access.
+
 :::info Example
 ```Yaml
   sysData:
@@ -292,15 +299,17 @@ Whether the app requires read and write permission to user's `Home` folder. List
     version: v1
     ops:
     - InstallDevApp
-  - group: service.bfl
-    dataType: app
-    version: v1
+  - dataType: legacy_prowlarr
+    appName: prowlarr
+    port: 9696
+    group: api.prowlarr
+    version: v2
     ops:
-    - InstallDevApp
+    - All
 ```
 :::
 
-All system [providers](../advanced/provider.md) are list below
+All system API [providers](../advanced/provider.md) are list below:
 | Group | version | dataType | ops |
 | ----------- | ----------- | ----------- | ----------- |
 | service.appstore | v1 | app | InstallDevApp, UninstallDevApp
@@ -597,5 +606,27 @@ Determine whether the application is compatible with mobile web browsers and can
 :::info Example
 ```yaml
 mobileSupported: true
+```
+:::
+
+### oidc
+
+- Optional
+- Type: `map`
+
+The Terminus OS includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
+```yaml
+# OpenID related varibles in yaml
+{{ .Values.oidc.client.id }}
+{{ .Values.oidc.client.secret }}
+{{ .Values.oidc.issuer }}
+```
+
+:::info Example
+```yaml
+oidc:
+  enabled: true
+  redirectUri: /path/to/uri
+  entranceName: navidrome
 ```
 :::
