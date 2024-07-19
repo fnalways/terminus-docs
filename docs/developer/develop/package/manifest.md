@@ -409,10 +409,6 @@ middleware:
       script:
       - 'db.getSiblingDB("$databasename").myCollection.insertOne({ x: 111 });'
       # Please make sure each line is a complete query.
-  zincSearch:
-    username: zinc
-    indexes:
-    - name: index0
 ```
 :::
 
@@ -444,13 +440,6 @@ host --> {{ .Values.redis.host }}
 port --> "{{ .Values.redis.port }}"
 password --> "{{ .Values.redis.password }}"
 
-
-# For zincSearch, the corresponding value is as follow
-host --> {{ .Values.zinc.host }}
-port --> "{{ .Values.zinc.port }}"
-username --> {{ .Values.zinc.username }}
-passowrd --> "{{ .Values.zinc.password }}"  
-indexes  --> {{ .Values.zinc.indexes.<name> }}  # <name> is the index name configured in zincSearch section of TerminusManifest.yaml
 ```
 
 ## options

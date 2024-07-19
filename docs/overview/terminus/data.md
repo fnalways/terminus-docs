@@ -79,7 +79,7 @@ If the PostgreSQL database application declared by the developer in the applicat
 
 ## [MongoDB](../../developer/develop/advanced/database.md#nosql)
 
-In the field of Internet of Things, MongoDB, as a representative of NoSQL, has a wide range of application scenarios. Terminus OS deploys [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) in the system. Provides developers with a cloud-native version of MongoDB Cluster.
+MongoDB, as a representative of NoSQL, has a wide range of application scenarios in the Internet of Things field. By deploying [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator), developers have a cloud-native version of MongoDB cluster in Terminus.
 
 Like PostgreSQL, Terminus also manages MongoDB backup and restore in a unified manner. System users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
 
@@ -99,11 +99,6 @@ In addition, since Redis Cluster itself lacks a data isolation mechanism, Termin
 The system uses the Redis Cluster version, which is different from the stand-alone version of Redis. Developers need to carefully understand the official Redis documentation.
 :::
 
-## [ES (ZincSearch)](../../developer/develop/advanced/zinc.md)
-
-Terminus also deploys a stand-alone full-text search engine Zinc Search in the system. It has an ES-compatible API and can achieve satisfactory search response speed with less resource consumption. Similar to MacOS, Terminus OS will store various documents and text-type files in the system. Automatically indexed into Zinc Search. Provide users with convenient file search functions.
-
-At the same time, as part of the middleware. Zinc Search, like the other three databases, is also available to application developers. Developers can easily configure applications in TAC and add custom index schemas. You can call the full-text search interface of your own index in the application.
 
 ## Backup
 

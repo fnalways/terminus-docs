@@ -64,8 +64,3 @@ The information from these extended fields can be directly referenced in the tem
   | .Values.redis.port         | Number             | Redis database port                                                                                           |
   | .Values.redis.password     | String             | Redis database username                                                                                           |
   | .Values.redis.namespaces   | Map<String,String> | Redis namespace. Use the configured namespace as the key. For instance, if it's configured as 'app_ns', the variable would be `.Values.redis.namespaces.app_ns`|
-  | .Values.zinc.host          | String             | ZincSearch indexing service address                                                                                       |
-  | .Values.zinc.port          | Number             | ZincSearch indexing service port                                                                                   |
-  | .Values.zinc.username      | String             | ZincSearch indexing service username                                                                                 |
-  | .Values.zinc.password      | String             | ZincSearch indexing service password                                                                                   |
-  | .Values.zinc.indexes       | Map<String,String> | ZincSearch indexing service name. Use the configured indexing service name as the key. For instance, if it's configured as 'app_idx', the variable would be `.Values.zinc.indexes.app_idx`. |

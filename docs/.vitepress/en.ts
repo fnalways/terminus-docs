@@ -356,10 +356,6 @@ const side = {
             //   text: "Notification",
             //   link: "/developer/develop/advanced/notification",
             // },
-            {
-              text: "Zinc",
-              link: "/developer/develop/advanced/zinc",
-            },
             // {
             //   text: "Frontend",
             //   link: "/developer/develop/advanced/frontend",
