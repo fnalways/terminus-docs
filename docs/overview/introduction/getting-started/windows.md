@@ -21,15 +21,7 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
 
 ## Step 2: Install Terminus
 
-1. Open PowerShell as Administrator and run the following commands:
-   
-   ```bash
-   wsl --update
-   wsl --install -d Ubuntu-22.04
-   # Update WSL2 and install Ubuntu 
-   ```
-   
-2. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\YourUsername\`) with the following content:
+1. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\YourUsername\`) with the following content:
    
    ```bash
    [wsl2]
@@ -40,32 +32,51 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    [experimental]
    hostAddressLoopback=true
 
+2. Open PowerShell as Administrator and run the following commands:
+   
+   ```bash
+   wsl --update
+   wsl --install -d Ubuntu-22.04
+   # Update WSL2 and install Ubuntu 
+   ```
+
 3. Launch Ubuntu from the Start menu, and configure the Ubuntu environment as below:
 
-   a. Modify the `/etc/wsl.conf` file:
+   a. Modify the `/etc/wsl.conf` file by executing the following command:
 
-   ```bash
-   echo "[network]
-   generateHosts = false
-   generateResolvConf = false" | sudo tee -a /etc/wsl.conf
-   ```
-   :::info
-   This configuration prevents WSL2 from overwriting your Windows host's DNS settings.
-   :::
+      ```bash
+      echo "[network]
+      generateHosts = false
+      generateResolvConf = false" | sudo tee -a /etc/wsl.conf
+      # Prevent WSL2 from overwriting your Windows host's DNS settings.
+      ```
 
    b. Configure Mount:
 
-   ```bash
-   sudo mount --make-rshared /
-   ```
+      ```bash
+      sudo mount --make-rshared /
+      ```
 
-   c. Configure the hosts file:
+   c. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+  
+      ```bash
+      sudo apt install net-tools
+      ifconfig
+      # Get your local IP. Make sure it starts with `192.168`.
+      ```
+      
+      ```bash
+      sudo nano /etc/hosts
+      # Add the following line
+      192.168.xx.xx  ubuntu
+      # Replace with your actual local IP and your host name.
+      ```
 
-   ```bash
-   sudo nano /etc/hosts
-   # Add the following line
-   192.168.50.11  ubuntu  # Adjust to your actual local IP address
-   ```
+   d. Reboot your Ubuntu to ensure the changes take effect.
+
+      ```bash
+      sudo reboot
+      ``` 
     
 4. In Ubuntu, run the following command to install the latest build of Terminus:
 

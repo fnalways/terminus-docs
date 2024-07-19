@@ -21,21 +21,14 @@ Before you begin, ensure your system meets these requirements:
   - RAM: 8GB or above (available memory)
   - Storage: 64GB or above (available disk space)
   - Supported Systems:
-     - Windows: Windows 10 (Build 19041 or higher) or Windows 11 
+     - Windows 11 
      - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 - [TermiPass](../../../termipass/overview.md#download-termipass) mobile app installed on your smartphone
 - [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name) created
 
 ## Step 1: Install Terminus 
 
-1. Open PowerShell as Administrator and run the following to update WSL2 and install Ubuntu:
-   
-   ```bash
-   wsl --update
-   wsl --install -d Ubuntu-22.04
-   ```
-   
-2. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\YourUsername\`) with the following content:
+1. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\YourUsername\`) with the following content:
    
    ```bash
    [wsl2]
@@ -45,6 +38,13 @@ Before you begin, ensure your system meets these requirements:
 
    [experimental]
    hostAddressLoopback=true
+
+2. Open PowerShell as Administrator and run the following to update WSL2 and install Ubuntu:
+   
+   ```bash
+   wsl --update
+   wsl --install -d Ubuntu-22.04
+   ```
 
 3. Launch Ubuntu from the Start menu, and configure the Ubuntu environment as below:
 
@@ -65,17 +65,29 @@ Before you begin, ensure your system meets these requirements:
    sudo mount --make-rshared /
    ```
 
-   c. Configure the hosts file to ensure stable host resolution within WSL:
+   c. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+  
+      ```bash
+      sudo apt install net-tools
+      ifconfig
+      # Get your local IP. Make sure it starts with `192.168`.
+      ```
+      
+      ```bash
+      sudo nano /etc/hosts
+      192.168.xx.xx  ubuntu 
+      # Replace with your actual local IP and your host name.
+      ```
 
-   ```bash
-   sudo nano /etc/hosts
-   # Add the following line
-   192.168.50.11  ubuntu  # Adjust to your actual local IP address
-   ```
+      d. Reboot your Ubuntu to ensure the changes take effect.
+
+      ```bash
+      sudo reboot
+      ``` 
     
 4. In Ubuntu, run the following command to install the latest build of Terminus:
 
-  ```bash
+   ```bash
    curl -fsSL https://terminus.sh |  bash -
    ```
 
@@ -87,7 +99,6 @@ Before you begin, ensure your system meets these requirements:
    After uninstalling, retry the installation by running the original installation command.
    :::
 
- 
 ## Step 2: Enter Terminus Name
 
 At the end of the installation process, enter your domain name and Terminus Name as prompted by the system:

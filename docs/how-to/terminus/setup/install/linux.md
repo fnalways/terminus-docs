@@ -19,33 +19,55 @@ Before you begin, ensure your system meets these requirements:
 
 ## Step 1: Install Terminus 
 
-In your terminal, execute the following command to install Terminus:
 
-- **To install the latest version of Terminus OS**:
+1. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
-    ```bash
-    curl -fsSL https://terminus.sh |  bash -
-    ```
+   ```bash
+   sudo apt install net-tools
+   ifconfig
+   # Get your local IP. Make sure it starts with `192.168`.
+   ```
+   
+   ```bash
+   sudo nano /etc/hosts
+   # Add the following line
+   192.168.xx.xx   linux 
+   # Replace with your actual local IP and your host name.
+   ```
 
-- **To install a specific version**:
+2. Reboot your Ubuntu to apply the change.
+   
+   ```bash
+   sudo reboot
+   ```
 
-    ```bash
-    
-    curl -LO https://github.com/beclab/terminus/releases/download/${VERSION}/install-wizard-v${VERSION}.tar.gz
+3. Execute the following command to install Terminus:
 
-    mkdir -p install-wizard && cd install-wizard && \
-    tar -xzvf ../install-wizard-${VERSION}.tar.gz  && bash install_cmd.sh
-    ```
+   - **To install the latest version of Terminus OS**:
 
-   :::info
-   - Replace `{version}` with the current daily build version number. Check the [Terminus OS repository](https://github.com/beclab/terminus) for the latest version.
-   - If an error occurs during installation, use the following command to uninstall first:
+       ```bash
+       curl -fsSL https://terminus.sh |  bash -
+       ```
 
-        ```bash
-        bash uninstall_cmd.sh
-        ```
-        After uninstalling, retry the installation by running the original installation command.
-   :::
+   - **To install a specific version**:
+
+       ```bash
+       
+       curl -LO https://github.com/beclab/terminus/releases/download/${VERSION}/install-wizard-v${VERSION}.tar.gz
+
+       mkdir -p install-wizard && cd install-wizard && \
+       tar -xzvf ../install-wizard-${VERSION}.tar.gz  && bash install_cmd.sh
+       ```
+
+      :::info
+      - Replace `{version}` with the current daily build version number. Check the [Terminus OS repository](https://github.com/beclab/terminus) for the latest version.
+      - If an error occurs during installation, use the following command to uninstall first:
+
+           ```bash
+           bash uninstall_cmd.sh
+           ```
+           After uninstalling, retry the installation by running the original installation command.
+      :::
  
 ## Step 2: Enter Terminus Name
 
