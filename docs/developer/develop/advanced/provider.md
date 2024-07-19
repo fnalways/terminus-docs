@@ -21,7 +21,7 @@ spec:
   deployment: {{ .Release.Name }}
   description: {{ .Release.Name }} legacy api v2
 
-  # accessible service of the provider. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
+  # accessible service from the provider. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
   endpoint: {{ .Release.Name }}-svc.{{ .Release.Namespace }}:1234
 
   # group of the provider; it is recommended to add the app name to prevent duplication.
