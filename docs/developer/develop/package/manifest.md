@@ -309,7 +309,7 @@ Declare the list of APIs that this app needs to access.
 ```
 :::
 
-All system API [providers](../advanced/provider.md) are list below
+All system API [providers](../advanced/provider.md) are list below:
 | Group | version | dataType | ops |
 | ----------- | ----------- | ----------- | ----------- |
 | service.appstore | v1 | app | InstallDevApp, UninstallDevApp
