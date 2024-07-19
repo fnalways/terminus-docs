@@ -14,13 +14,34 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
 
 ## Step 2: Install Terminus
 
-1. In your terminal, run the following command to install the latest build of Terminus:
+1. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+
+   ```bash
+   sudo apt install net-tools
+   ifconfig
+   # Get your local IP. Make sure it starts with `192.168`.
+   ```
+   
+   ```bash
+   sudo nano /etc/hosts
+   # Add the following line
+   192.168.xx.xx   linux 
+   # Replace with your actual local IP and your host name.
+   ```
+
+2. Reboot your Linux to apply the change.
+   
+   ```bash
+   sudo reboot
+   ```
+
+3. In your terminal, run the following command to install the latest build of Terminus:
 
    ```sh
    curl -fsSL https://terminus.sh |  bash -
    ```
 
-2. At the end of the installation, take note of the URL for Terminus Activation wizard and your initial login password.
+4. At the end of the installation, take note of the URL for Terminus Activation wizard and your initial login password.
 
 Depending on your network and hardware configuration, the installation time may vary. For detailed instructions, see [Install Terminus on Linux](../../../how-to/terminus/setup/install/linux.md).
 

@@ -76,7 +76,7 @@ Before you begin, ensure your system meets these requirements:
       ```bash
       sudo nano /etc/hosts
       192.168.xx.xx  ubuntu 
-      # Bind your local IP with Ubuntu host.
+      # Replace with your actual local IP and your host name.
       ```
 
       d. Reboot your Ubuntu to ensure the changes take effect.

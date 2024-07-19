@@ -34,7 +34,7 @@ Before you begin, ensure your system meets these requirements:
    ```bash
    sudo nano /etc/hosts
    192.168.xx.xx  raspberrypi 
-   # Bind your local IP with Raspberry Pi host.
+   # Replace with your actual local IP and your host name.
    ```
 
 3. Reboot your Raspberry Pi to apply the changes.

@@ -22,7 +22,7 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
    ```
 
-3. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
    ```bash
    sudo apt install net-tools
@@ -32,8 +32,9 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    
    ```bash
    sudo nano /etc/hosts
+   # Add the following line
    192.168.xx.xx  raspberrypi 
-   # Bind your local IP with Raspberry Pi host.
+   # Replace with your actual local IP and your host name.
    ```
 
 3. Reboot your Raspberry Pi to apply the changes.
