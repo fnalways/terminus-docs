@@ -24,7 +24,7 @@ spec:
   # accessible service of the provider. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
   endpoint: {{ .Release.Name }}-svc.{{ .Release.Namespace }}:1234
 
-  # group of the provider, it is recommended to add app name to prevent duplication.
+  # group of the provider; it is recommended to add the app name to prevent duplication.
   group: api.{{ .Release.Name }}
   kind: provider
   namespace: "{{ .Release.Namespace }}"
