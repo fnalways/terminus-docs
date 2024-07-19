@@ -35,12 +35,11 @@ Before you begin, ensure your system meets these requirements:
    # Replace with your actual local IP and your host name.
    ```
 
-2. Reboot your Linux to apply the change.
+2. Reboot your Ubuntu to apply the change.
    
    ```bash
    sudo reboot
    ```
-
 
 3. Execute the following command to install Terminus:
 

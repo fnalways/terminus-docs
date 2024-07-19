@@ -25,11 +25,11 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    ```bash
    sudo nano /etc/hosts
    # Add the following line
-   192.168.xx.xx   linux 
+   192.168.xx.xx   Ubuntu 
    # Replace with your actual local IP and your host name.
    ```
 
-2. Reboot your Linux to apply the change.
+2. Reboot your Ubuntu to apply the change.
    
    ```bash
    sudo reboot
