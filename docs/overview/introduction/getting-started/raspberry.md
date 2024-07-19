@@ -1,5 +1,5 @@
 
-# Getting Started on Raspberry Pie
+# Getting Started on Raspberry Pi
 
 This guide will walk you through the essential steps to get Terminus up and running on your Raspberry Pi. Follow these steps to create your account, install Terminus, and start exploring the Terminus ecosystem.
 
@@ -22,27 +22,34 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
    echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
    ```
 
-2. Reboot your Raspberry Pi to apply the changes.
+3. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+
+   ```bash
+   sudo apt install net-tools
+   ifconfig
+   # Get your local IP. Make sure it starts with `192.168`.
+   ```
+   
+   ```bash
+   sudo nano /etc/hosts
+   192.168.xx.xx  raspberrypi 
+   # Bind your local IP with Raspberry Pi host.
+   ```
+
+3. Reboot your Raspberry Pi to apply the changes.
    ```bash
    sudo reboot
    ```
 
-3. Configure the hosts file to ensure stable host resolution. 
-   ```bash
-   sudo nano /etc/hosts
-   192.168.50.11  raspberrypi  # Adjust to your actual local IP address
-  
 4. Install the latest build of Terminus:
 
    ```bash
-   curl -sSfL https://github.com/beclab/Terminus/releases/download/${version}/install.sh | bash -
+   curl -fsSL https://terminus.sh |  bash -
    ```
-   :::info
-   Replace `{version}` with the current daily build version number. Check the [Terminus OS repository](https://github.com/beclab/terminus) for the latest version.
 
 5. At the end of the installation, take note of the URL for Terminus Activation wizard and your initial login password.
 
-For more detailed instructions, see [Install Terminus on Raspberry Pie](../../../how-to/terminus/setup/install/raspberry.md).
+For more detailed instructions, see [Install Terminus on Raspberry Pi](../../../how-to/terminus/setup/install/raspberry.md).
 
 ## Step 3: Activate Terminus
 

@@ -23,25 +23,33 @@ Before you begin, ensure your system meets these requirements:
       echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
       ```
 
-2. Reboot your Raspberry Pi to apply the changes.
+2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+
+   ```bash
+   sudo apt install net-tools
+   ifconfig
+   # Get your local IP. Make sure it starts with `192.168`.
+   ```
+   
+   ```bash
+   sudo nano /etc/hosts
+   192.168.xx.xx  raspberrypi 
+   # Bind your local IP with Raspberry Pi host.
+   ```
+
+3. Reboot your Raspberry Pi to apply the changes.
    ```bash
    sudo reboot
    ```
 
-3. Configure the hosts file. This ensures that the Raspberry Pi can resolve its own hostname to a stable IP address, which is important for internal networking within Terminus OS. 
-   ```bash
-   sudo nano /etc/hosts
-   192.168.50.11  raspberrypi  # Adjust to your actual local IP address.
-  
 4. Install the latest build of Terminus:
 
    ```bash
-   curl -sSfL https://github.com/beclab/Terminus/releases/download/${version}/install.sh | bash -
+   curl -fsSL https://terminus.sh |  bash -
    ```
-   :::info
-   - Replace `{version}` with the current daily build version number. Check the [Terminus OS repository](https://github.com/beclab/terminus) for the latest version.
 
-   - If an error occurs during installation, use the following command to uninstall first:
+   :::info
+   If an error occurs during installation, use the following command to uninstall first:
       ```bash
       bash uninstall_cmd.sh
       ```
