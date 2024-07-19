@@ -614,7 +614,7 @@ mobileSupported: true
 - Optional
 - Type: `map`
 
-The Terminus OS includes a built-in OpenID Connect authentication component to simplifies the way to verify the identity of users. Enable this option to use OpenID in your app. 
+The Terminus OS includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
 ```yaml
 # OpenID related varibles in yaml
 {{ .Values.oidc.client.id }}
