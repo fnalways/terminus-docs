@@ -22,7 +22,7 @@ Learn why you need a Terminus Name [here](../../../../overview/terminus/terminus
 1. Configure the Raspbian environment to enable necessary features: 
    
       ```bash
-      echo "cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee -a /boot/firmware/cmdline.txt
+      echo "$(head -1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee /boot/firmware/cmdline.txt
 
       echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
       ```

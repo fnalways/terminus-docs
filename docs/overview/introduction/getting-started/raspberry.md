@@ -14,7 +14,7 @@ Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/
 
 :::info
 Terminus Name is your unique identifier within Terminus.
-Learn more in [why do you need a Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name).
+Learn more about [why you need a Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name).
 :::
 
 ## Step 2: Install Terminus
@@ -22,7 +22,7 @@ Learn more in [why do you need a Terminus Name](../../terminus/terminus-name.md#
 1. Configure the Raspbian environment to enable necessary features: 
 
    ```bash
-   echo "cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee -a /boot/firmware/cmdline.txt
+   echo "$(head -1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee /boot/firmware/cmdline.txt
    
    echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
    ```

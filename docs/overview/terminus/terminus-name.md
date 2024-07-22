@@ -8,13 +8,13 @@ This document gets you familiar with Terminus Name, why do you need it, and how 
 
 ## What is a Terminus Name?
 
-A Terminus Name is a unique identifier within the Terminus ecosystem, serving as your digital identity and gateway to various services and features. Each Terminus Account corresponds to a Terminus Name, which consists of a local name and a domain name. For example, in `alice@myterminus.com`, *alice* is the Local Name, and *myterminus.com* is the domain name.
+A Terminus Name is a unique identifier within the Terminus ecosystem, serving as your digital identity and gateway to various services and features. Each Terminus Account corresponds to a Terminus Name, which consists of a local name and a domain. For example, in `alice@myterminus.com`, *alice* is the Local Name, and *myterminus.com* is the domain.
 
 ## Why do you need a Terminus Name?
 
 Your Terminus Name corresponds to a **unique domain name**, offering several key benefits:
 
-* **Ease of access**: The system automatically provisions subdomains for your applications within Terminus. Use your domain name as the personal web address to seamlessly access Terminus applications and services from anywhere. 
+* **Ease of access**: The system automatically provisions subdomains and access policies for your applications within Terminus. You can use the domain name as your personal web address to seamlessly access Terminus applications and services from anywhere. 
 * **Enhanced security with free HTTPS certificate**: Terminus domain name comes with a free HTTPS certificate, ensuring secure and encrypted communication for all your digital interactions.
 * **Easy to remember and personalized**: Terminus Name and the corresponding domain name are easy to remember, share, and personalized for your distinct online identity.
 

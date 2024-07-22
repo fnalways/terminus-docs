@@ -10,7 +10,12 @@ This guide will walk you through the essential steps to get Terminus up and runn
 
 ## Step 1: Create a Terminus Name
 
-Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/termipass/account/#create-terminus-name) as instructed on the screen.
+Open TermiPass on your mobile, and [create a new Terminus Name](../../../how-to/termipass/account/#create-terminus-name) as instructed on the screen. 
+
+:::info
+Terminus Name is your unique identifier within Terminus.
+Learn more about [why you need a Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name).
+:::
 
 ## Step 2: Install Terminus
 
