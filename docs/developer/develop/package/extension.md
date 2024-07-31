@@ -30,7 +30,7 @@ The information from these extended fields can be directly referenced in the tem
   | -------------- | ------------------ | ---------------------------------------------------- |
   | .Values.cluster.arch | String | Cluster CPU archtecture   |
 
-  Multi-platform (amd64 and arm) cluster is not supported for now.
+  Multi-platform (AMD64 and ARM) cluster is not supported for now.
 
 - Application Dependencies
   | Value       | Type               | Description 

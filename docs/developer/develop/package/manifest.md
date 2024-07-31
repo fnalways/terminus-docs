@@ -635,7 +635,7 @@ oidc:
 - Optional
 - Type: `int`
 
-Specify the timeout limit for API providers in seconds. If not set, the default timeout is `15` seconds. Use `0` to allow an unlimited API connection.
+Specifies the timeout limit for API providers in seconds. The default value is `15`. Use `0` to allow an unlimited API connection.
 
 :::info Example
 ```yaml
