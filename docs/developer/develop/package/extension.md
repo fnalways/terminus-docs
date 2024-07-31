@@ -25,6 +25,13 @@ The information from these extended fields can be directly referenced in the tem
   | .Values.userspace.appCache | String | Local node cache address available to the APP  |
   | .Values.userspace.userData | String | storage directory of User's data |
 
+- Cluster Information
+  | Value       | Type               | Description 
+  | -------------- | ------------------ | ---------------------------------------------------- |
+  | .Values.cluster.arch | String | Cluster CPU archtecture   |
+
+  Multi-platform (amd64 and arm) cluster is not supported for now.
+
 - Application Dependencies
   | Value       | Type               | Description 
   | -------------- | ------------------ | ---------------------------------------------------- |

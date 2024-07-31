@@ -630,3 +630,15 @@ oidc:
   entranceName: navidrome
 ```
 :::
+
+### apiTimeout
+- Optional
+- Type: `int`
+
+Specify the timeout limit for API providers in seconds. If not set, the default timeout is `15` seconds. Use `0` to allow an unlimited API connection.
+
+:::info Example
+```yaml
+apiTimeout: 0
+```
+:::
