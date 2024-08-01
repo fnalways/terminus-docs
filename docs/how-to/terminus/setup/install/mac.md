@@ -15,7 +15,7 @@ We recommend using it only for development or testing purposes.
 ## Prerequisites
 
 - A Mac meeting the following requirements:
-   - Architecture: Apple Silicon (ARM64)
+   - Architecture: X86-64 or ARM64
    - RAM: 8GB or above (available memory)
    - Storage: 64GB or above (available disk space)
    - MacOS: Monterey (12) or later
@@ -34,7 +34,7 @@ Learn why you need a Terminus Name [here](../../../../overview/terminus/terminus
 
 1. Configure Docker. 
    In Docker Desktop, navigate to **Settings** > **Resources**, and configure as below:
-    - CPU limit: Set to 11 CPUs
+    - CPU limit: Set to at least 4 CPUs
     - Memory limit: Set to at least 9 GB
   
 2. Click **Apply & Restart** to implement the changes.
