@@ -5,7 +5,7 @@
 ## API Call
 
 ```
-https://<username>.myterminus.com/terminus-info
+https://<username>.myterminus.com/api/terminus-info
 ```
 
 ## Data Structure
