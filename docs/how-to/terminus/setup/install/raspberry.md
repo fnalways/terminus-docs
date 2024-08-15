@@ -52,6 +52,8 @@ Learn why you need a Terminus Name [here](../../../../overview/terminus/terminus
    curl -fsSL https://terminus.sh |  bash -
    ```
 
+   Depending on your network, the installation may take 60-90 minutes.
+   
    :::info
    If an error occurs during installation, use the following command to uninstall first:
       ```bash
