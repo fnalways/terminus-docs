@@ -53,8 +53,6 @@ Learn more about [why you need a Terminus Name](../../terminus/terminus-name.md#
    curl -fsSL https://terminus.sh |  bash -
    ```
 
-   Depending on your network, the installation may take 60-90 minutes.
-
 5. At the end of the installation, take note of the URL for Terminus Activation wizard and your initial login password.
 
 For more detailed instructions, see [Install Terminus on Raspberry Pi](../../../how-to/terminus/setup/install/raspberry.md).
