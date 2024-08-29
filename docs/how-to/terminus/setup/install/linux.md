@@ -56,16 +56,12 @@ Learn why you need a Terminus Name [here](../../../../overview/terminus/terminus
 
    - **To install a specific version**:
 
-       ```bash
-       
-       curl -LO https://github.com/beclab/terminus/releases/download/${VERSION}/install-wizard-v${VERSION}.tar.gz
-
-       mkdir -p install-wizard && cd install-wizard && \
-       tar -xzvf ../install-wizard-${VERSION}.tar.gz  && bash install_cmd.sh
+       ```bash       
+       curl -sSfL https://github.com/beclab/Terminus/releases/download/${VERSION}/install.sh | bash -
        ```
 
       :::info
-      - Replace `{version}` with the current daily build version number. Check the [Terminus OS repository](https://github.com/beclab/terminus) for the latest version.
+      - Replace `${version}` with the current daily build version number. Check the [Terminus repository](https://github.com/beclab/terminus) for the latest version.
       - If an error occurs during installation, use the following command to uninstall first:
 
            ```bash
