@@ -42,10 +42,7 @@ Choose to either create a new Terminus Account or import an existing one.
 
 #### Create a New Account
 
-To create a new Terminus Account:
-
-1. In TermiPass app, Click on **Create a Terminus Name** to start creating a new Terminus account. This creates a DID at the same time.<br>
-2. [Bind your DID to a Terminus Name](#bind-terminus-name.md).
+In TermiPass app, Click on **Create a Terminus Name** to start creating a new Terminus account. This creates a DID at the same time.<br>
 
 ::: tip NOTE
 This option is only available on Terminus App for Android and iOS.
