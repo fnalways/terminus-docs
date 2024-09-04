@@ -4,7 +4,7 @@ outline: [2, 4]
 
 # Manage Accounts with TermiPass
 
-Managing Terminus Accounts is a core function of TermiPass. If you are new to TermiPass and Terminus, you can begin with [Creating a Terminus Name](#create-terminus-name). This guide will walk you through the process.
+Managing Terminus Accounts is a core function of TermiPass. If you are new to TermiPass and Terminus, you can begin with creating a Terminus Name. This guide will walk you through the process.
 
 ## Create a Terminus Name
 
@@ -38,14 +38,15 @@ Your password must meet the following criteria:
 
 ![alt text](/images/how-to/termipass/new_an_account.png)
 
-Choose to either create a new Terminus Account or import an existing one.
+Choose to either create a new Terminus Account or import an existing one. 
 
 #### Create a New Account
 
-To create a new Terminus Account:
+In TermiPass app, Click on **Create a Terminus Name** to start creating a new Terminus account. This creates a DID at the same time.<br>
 
-1. In TermiPass, Click on **Create a Terminus Name** to start creating a new Terminus account. This creates a DID at the same time.<br>
-2. [Bind your DID to a Terminus Name](#bind-terminus-name.md).
+::: tip NOTE
+This option is only available on Terminus App for Android and iOS.
+:::
 
 #### Import an Existing Account
 
