@@ -239,9 +239,42 @@ When `invisible` is `true`, the entrance will not be displayed on the **Terminus
 - Default: `default`
 - Optional
 
-How to open this entrance in [Desktop](../../../how-to/terminus/desktop.md)
+Explicity defines how to open this entrance in [Desktop](../../../how-to/terminus/desktop.md)
 
 The `iframe` creates a new window within the desktop window through an iframe. The `window` opens a new tab in the browser. The `default` follows the system setting, which is `iframe` by default.
+
+### windowPushState
+- Type: `boolean`
+- Default: `false`
+- Optional
+
+When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser‘s same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
+
+To ensure a seamless user experience, you can enable this option by setting it to true. This action prompts the gateway to automatically inject the following code into the iframe. This code sends an event to the parent window (desktop) whenever the iframe's URL changes. As a result, the desktop can track URL changes and open the correct page.
+
+::: details Code
+```Javascript
+<script>
+  (function () {
+    if (window.top == window) {
+        return;
+    }
+    const originalPushState = history.pushState;
+    const pushStateEvent = new Event("pushstate");
+    history.pushState = function (...args) {
+      originalPushState.apply(this, args);
+      window.dispatchEvent(pushStateEvent);
+    };
+    window.addEventListener("pushstate", () => {
+      window.parent.postMessage(
+        {type: "locationHref", message: location.href},
+        "*"
+      );
+    });
+  })();
+</script>
+```
+:::
 
 ## permission
 
