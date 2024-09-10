@@ -14,7 +14,7 @@ Before you start, ensure you have downloaded the [TermiPass](../overview.md#down
 
 In TermiPass app, tap **Create a Terminus Name** to start creating your Terminus account. Depending on your personal preference, you can choose to create a Terminus Name with or without binding a Verifiable Credential (VC).
 
-### Create Terminus Name fast without binding VC (Default)
+### Create Terminus Name fast without binding VC (default mode)
 
 To create a Terminus Name fast without binding VC:
 
@@ -25,7 +25,7 @@ To create a Terminus Name fast without binding VC:
 
 After you get your Terminus Name, wait for [Terminus installation](../../terminus/setup/install/) to complete, then proceed with [activation](../../terminus/setup/wizard.md).
 
-### Create Terminus Name with VC (Advanced Mode)
+### Create Terminus Name with VC (advanced mode)
 
 To create a unique, unrestricted individual Terminus Name, you need to bind a Verifiable Credential (VC) using the advanced mode. To enter this mode:
  
@@ -36,7 +36,7 @@ To create a unique, unrestricted individual Terminus Name, you need to bind a Ve
 
 Depending on how you use Terminus, you can choose to bind an Individual Terminus Name or an Organization Terminus Name to your account. 
 
-#### Bind an Individual Terminus Name
+#### Bind an individual Terminus Name
 
 We currently provide Verifiable Credentials (VC) via Google Gmail. For details, refer to the [Gmail Issuer Service](../../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service). To create your individual Terminus Name with Gmail VC:
 
@@ -66,7 +66,7 @@ To bind an **Organization Terminus Name**:
 
 Upon completion, you will receive an **Organization Terminus Name**.
 
-### Import an Existing Account
+### Import an existing account
 
 You can also create an account by importing from an existing one:
 
@@ -80,7 +80,7 @@ Accounts without a bound Terminus Name cannot be imported.
 Accounts with a bound Terminus Name can be imported to any TermiPass.
 :::
 
-### Backup Mnemonic Phrase
+### Backup mnemonic phrase
 
 In a decentralized account system, the mnemonic phrase is the **ONLY** way to recover your DID and Terminus Name. **Make sure you store your Terminus Name's mnemonic phrase securely!**
 
@@ -123,7 +123,7 @@ Each account has three stages:
 
    If your account is bound to Terminus, you'll have full access to all the features on the TermiPass.
 
-## Account Synchronization
+## Account synchronization
 
 Account in TermiPass, Terminus, and Terminus Space stay synchronized as described below:
 

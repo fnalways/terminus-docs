@@ -25,9 +25,19 @@ By simply replacing the "@" in your Terminus Name with a ".", you get your corre
 
 ## How to get a Terminus Name?
 
-Creating a Terminus Name is your starting point of using Terminus. It involves creating a Terminus Account and binding it to a Terminus Name on the mobile version of TermiPass.
+Creating a Terminus Name is your starting point of using Terminus. It involves creating a Terminus Account and binding it to a Terminus Name on the mobile version of TermiPass. Depending on whether you choose to bind a verification credential (VC), you can create a Terminus Name in the following modes:
+
+- [Fast creation without binding VC](../../how-to/termipass/account/index.md#create-terminus-name-fast-without-binding-vc-default-mode) (for individual users).
+- [Advanced creation that requires VC binding](../../how-to/termipass/account/index.md#create-terminus-name-with-vc-advanced-mode) (for both individual and organization users).
 
 Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-terminus-name) for detailed steps.
+
+## What's Terminus Name's relationship with DID
+
+A Decentralized Identifier (DID) is a unique, cryptographically verifiable identifier that doesn't rely on any centralized authority. While DIDs solve the issue of identity in a decentralized network, they are typically difficult for humans to remember or use in daily situations. 
+
+Terminus Name acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
+Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus Account](../../how-to/termipass/account/#stage-of-account).
 
 
 ## Learn more
@@ -37,4 +47,3 @@ Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-termi
 * [Understanding Decentralized Identifier (DID)](../../developer/contribute/snowinning/concepts.md)
 * [Types of domains](../../developer/contribute/snowinning/terminus-name.md#domain)
 * [Gmail Issuer Service](../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service)
-* [Stage of Terminus Account](../../how-to/termipass/account/#stage-of-account)
