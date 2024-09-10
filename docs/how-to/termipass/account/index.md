@@ -12,7 +12,7 @@ Before you start, ensure you have downloaded the [TermiPass](../overview.md#down
 
 ![Create terminus name](/images/how-to/termipass/create-terminus-name.png)
 
-In TermiPass app, tap **Create a Terminus Name** to start creating your Terminus account. This creates a decentralized ID (DID) at the same time. Depending on your personal preference, you can choose to create a Terminus Name with or without binding a Verifiable Credential (VC).
+In TermiPass app, tap **Create a Terminus Name** to start creating your Terminus account. Depending on your personal preference, you can choose to create a Terminus Name with or without binding a Verifiable Credential (VC).
 
 ### Create Terminus Name fast without binding VC (Default)
 
@@ -23,14 +23,16 @@ To create a Terminus Name fast without binding VC:
 
 ![Fast creation](/images/how-to/termipass/fast-creation.png)
 
-Now you can proceed to activate 
+After you get your Terminus Name, wait for [Terminus installation](../../terminus/setup/install/) to complete, then proceed with [activation](../../terminus/setup/wizard.md).
 
 ### Create Terminus Name with VC (Advanced Mode)
 
 To create a unique, unrestricted individual Terminus Name, you need to bind a Verifiable Credential (VC) using the advanced mode. To enter this mode:
  
 1. In the TermiPass app, tap **Create a Terminus Name**.
-2. Tap the **Advanced** button in the top right corner of the Terminus Name creation page.
+2. Tap the button in the top right corner of the Terminus Name creation page.
+
+![Advanced mode](/images/how-to/termipass/advanced-mode.jpg)
 
 Depending on how you use Terminus, you can choose to bind an Individual Terminus Name or an Organization Terminus Name to your account. 
 
