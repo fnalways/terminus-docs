@@ -50,7 +50,7 @@ outline: [2, 3]
 - #### Pods
   工作负载调度生成的 Pod 情况。在这里，你可以看到 Pod 的名称，运行状态，所在节点名称，Pod 的 IP 地址，近期的 CPU 和内存监控图表。
 
-  您可以这个 section 右上角的 **Revision records** 按钮来查看 Pod 的调度历史差异。点击另一个刷新按钮，可以手动刷新 pod 的实时状态
+  你可以这个 section 右上角的 **Revision records** 按钮来查看 Pod 的调度历史差异。点击另一个刷新按钮，可以手动刷新 pod 的实时状态
 
   ![revision records](/images/how-to/terminus/controlhub/browse/03.jpg)
 
@@ -69,7 +69,7 @@ outline: [2, 3]
  
 
     :::tip
-    您只能查看自己Namespace下容器的日志, 以及打开该容器的终端环境
+    你只能查看自己Namespace下容器的日志, 以及打开该容器的终端环境
     :::
 
   - **Volumes**<br>
@@ -133,7 +133,7 @@ Terminus OS 中有很多应用不支持多副本模式，将这类 Pod 增加到
 
 ### 编辑 YAML
 
-在 workload 的详情栏，最右上角，有一个功能展开按钮。点击展开后，可以选择`Edit Yaml`。您可以在弹出的文本编辑对话框里查看以yaml 格式编写的资源配置详情。您可以在此修改当前 workload 的yaml 配置，然后点击`OK`，保存生效。
+在 workload 的详情栏，最右上角，有一个功能展开按钮。点击展开后，可以选择`Edit Yaml`。你可以在弹出的文本编辑对话框里查看以yaml 格式编写的资源配置详情。你可以在此修改当前 workload 的yaml 配置，然后点击`OK`，保存生效。
 
 ![edit yaml](/images/how-to/terminus/controlhub/browse/10.jpg)
 
@@ -158,7 +158,7 @@ Secrets 是用来保存一些应用中会用的敏感数据内容。常用来记
 
 ![configmaps](/images/how-to/terminus/controlhub/browse/12.jpg)
 
-同样, 您可以在页面的第二栏展开`ConfigMaps`，查看这个应用的 Namespace 下所有的配置字典。点击可以在详情栏里看到这个 ConfigMap 的Details 和 Data
+同样, 你可以在页面的第二栏展开`ConfigMaps`，查看这个应用的 Namespace 下所有的配置字典。点击可以在详情栏里看到这个 ConfigMap 的Details 和 Data
 - **Details**: 展示 ConfigMap 的基础信息，包括所属的 Namespace、创建时间等
 - **Data**: 分别展示了 ConfigMap 的 Data Key和 Data Value。
 
@@ -170,7 +170,7 @@ Secrets 是用来保存一些应用中会用的敏感数据内容。常用来记
 
 ![Service accounts](/images/how-to/terminus/controlhub/browse/13.jpg)
 
-您可以在页面的第二栏展开`ServiceAccounts`，查看这个应用的 Namespace 下所有的ServiceAccounts。点击可以在详情栏里看到这个 ServiceAccounts 的Details, Data 和 Kubeconfig Settings
+你可以在页面的第二栏展开`ServiceAccounts`，查看这个应用的 Namespace 下所有的ServiceAccounts。点击可以在详情栏里看到这个 ServiceAccounts 的Details, Data 和 Kubeconfig Settings
 - **Details**: 展示 ServiceAccount 的基础信息，包括所属的 Namespace、创建时间等
 - **Data**: 分别展示这个 ServiceAccount 对应的 Secret 的 Data Key和 Data Value
 - **Kubeconfig Settings**: <br>
@@ -184,7 +184,7 @@ Secrets 是用来保存一些应用中会用的敏感数据内容。常用来记
 
 ![service1](/images/how-to/terminus/controlhub/browse/14.jpg)
 
-您可以在页面的第二栏展开`Services`，查看这个应用的 Namespace 下所有的 `Services`。点击可以在详情栏里看到这个 `Services` 的Details, Workloads, Ports, Pods, Labels, Annotations和Events。
+你可以在页面的第二栏展开`Services`，查看这个应用的 Namespace 下所有的 `Services`。点击可以在详情栏里看到这个 `Services` 的Details, Workloads, Ports, Pods, Labels, Annotations和Events。
 - **Details**: <br>
   展示 Service 的基础信息，包括所属的 Namespace、创建时间、选择算符、虚拟 IP、类型，以及这个 service 在集群 DNS 中的地址等信息。
 

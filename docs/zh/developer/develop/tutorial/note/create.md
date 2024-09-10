@@ -2,14 +2,15 @@
 outline: [2, 3]
 ---
 
-# 如何开始开发一个应用
+# 如何开发一个应用
 
-## Launch DevBox
+## Install and Launch DevBox
 
-  在Terminus桌面的启动台上点击DevBox图标，打开DevBox应用。
+1. Install [DevBox](https://market.jointerminus.com/app/devbox) from the Terminus Market. 
+2. Find the the **DevBox** icon in the launcher panel on the **Terminus Desktop**.
+3. Click on the icon to launch the application.
 
-  ![main screen](/images/developer/develop/tutorial/create/home.jpg)
-
+![main screen](/images/developer/develop/tutorial/create/home.jpg)
 
 ## Create Your App
 
@@ -24,12 +25,12 @@ outline: [2, 3]
 
 ## Setup App Config
   
-  创建应用后，可以在Files Tab下看到DevBox为您生成的 Terminus Application Chart文件。您可以根据需要添加、删除或重命名各个配置文件。
+  创建应用后，可以在Files Tab下看到DevBox为你生成的 Terminus Application Chart文件。你可以根据需要添加、删除或重命名各个配置文件。
 
   ![upload icon](/images/developer/develop/tutorial/create/add-file.jpg)
 
 ### Chart.yaml
-Chart.yaml 文件是 Helm Chart 规范所必须的文件之一。其中包含了应用的名称和Chart Version，您可以[在此](https://helm.sh/docs/topics/charts/)了解更多。我们暂时先不用修改默认创建的Chart.yaml.
+Chart.yaml 文件是 Helm Chart 规范所必须的文件之一。其中包含了应用的名称和Chart Version，你可以[在此](https://helm.sh/docs/topics/charts/)了解更多。我们暂时先不用修改默认创建的Chart.yaml.
 
 ### TerminusManifest.yaml
   你可以在 TerminusManifest.yaml 文件中修改 APP 的各项配置，比如更换应用的标题, icon等metadata，或是添加系统中间件，或者申请系统的文件目录访问权限，以及修改应用所需的资源限制等等
@@ -105,7 +106,7 @@ Chart.yaml 文件是 Helm Chart 规范所必须的文件之一。其中包含了
 
 ### deployment.yaml
 
-`templates`文件夹中的`deployment.yaml`详细描述了您应用的部署配置。
+`templates`文件夹中的`deployment.yaml`详细描述了你应用的部署配置。
 
 - 如果你的 APP，分为前后端两个不同的容器。你可以在 templates 的部署文件中，添加多个容器。DevBox 会识别多个容器，分别绑定不同的开发容器。例如，
 
@@ -171,11 +172,11 @@ Chart.yaml 文件是 Helm Chart 规范所必须的文件之一。其中包含了
   ```
 
 ## Bind Container
-配置完上述信息后，您需要在`Containers`界面中为这个开发中的 APP，绑定开发容器，进行代码开发。
+配置完上述信息后，你需要在`Containers`界面中为这个开发中的 APP，绑定开发容器，进行代码开发。
 
 ![containers](/images/developer/develop/tutorial/create/bind.jpg)
 
-您可以为绑定的开发容器设置一个指定的开发环境，目前 DevBox 支持 NodeJS、Golang、python 三种开发容器。让我们给 demo 前端容器绑定一个 NodeJS 开发容器，给 Server 容器，可以绑定一个 Golang 的开发容器。
+你可以为绑定的开发容器设置一个指定的开发环境，目前 DevBox 支持 NodeJS、Golang、python 三种开发容器。让我们给 demo 前端容器绑定一个 NodeJS 开发容器，给 Server 容器，可以绑定一个 Golang 的开发容器。
 
 这里选择了创建一个新的开发容器。如果之前已经创建过未绑定的开发容器，这里也可以选择一个已有的容器进行绑定。
 

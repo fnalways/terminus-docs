@@ -6,13 +6,13 @@
 只有 Android 和 iOS 版本支持该功能
 :::
 
-在这里您可以查看到 Terminus 的资源消耗信息。
+在这里你可以查看到 Terminus 的资源消耗信息。
 
 ![alt text](/images/how-to/termipass/resource.jpg)
 
 ## VPN connection
 
-您可以在 TermiPass 客户端开启 VPN 连接。
+你可以在 TermiPass 客户端开启 VPN 连接。
 
 ![alt text](/images/how-to/termipass/vpn.jpg)
 
@@ -20,7 +20,7 @@
 
 - 在 Terminus 移动客户端开启 VPN。请切到 Setting 界面，进入 Account，在 Account 页面中开启 VPN。
 
-请注意，如果您在 TermiPass 客户端开启了 VPN，那么无论您是通过 TermiPass 客户端连接到 Terminus，还是通过浏览器访问 Terminus，都将使用 VPN 连接。
+请注意，如果你在 TermiPass 客户端开启了 VPN，那么无论你是通过 TermiPass 客户端连接到 Terminus，还是通过浏览器访问 Terminus，都将使用 VPN 连接。
 
 ## Connection Status
 
@@ -40,27 +40,27 @@ TermiPass 将显示账号和 Terminus 的连接状态.
 
 ### Public Network Connection - Internet
 
-显示 “Internet” 状态，则表示，您是通过公网连接到 Terminus。
+显示 “Internet” 状态，则表示，你是通过公网连接到 Terminus。
 
 ### Internal Network Connection - Intranet
 
-显示 Intranet 状态，则表示，您是通过内网连接到 Terminus。
+显示 Intranet 状态，则表示，你是通过内网连接到 Terminus。
 
 ### FRP
 
-显示 FRP 状态，则表示，您是通过 FRP 连接到 Terminus。
+显示 FRP 状态，则表示，你是通过 FRP 连接到 Terminus。
 
 ### VPN Connection - DERP
 
-显示 DERP 状态，则表示，您是通过 VPN - DERP 连接连接到 Terminus。
+显示 DERP 状态，则表示，你是通过 VPN - DERP 连接连接到 Terminus。
 
 ### VPN Connection - P2P
 
-显示 P2P 状态，则表示，您是通过 VPN - P2P 连接连接到 Terminus。
+显示 P2P 状态，则表示，你是通过 VPN - P2P 连接连接到 Terminus。
 
 ### Offline Mode
 
-显示 Offline Mode 状态，则表示，您现在处于离线模式下，无法连接到 Terminus。
+显示 Offline Mode 状态，则表示，你现在处于离线模式下，无法连接到 Terminus。
 
 ## Abnormal Status
 
@@ -68,27 +68,27 @@ TermiPass 将显示账号和 Terminus 的连接状态.
 
 ### Network Connection Abnormality
 
-处于这种状态下，则提醒您 Network abnormality, please check local network settings，我们自动检测本地网络，网络恢复后会自动连接，自动同步数据。
+处于这种状态下，则提醒你 Network abnormality, please check local network settings，我们自动检测本地网络，网络恢复后会自动连接，自动同步数据。
 
 ### VPN Connection Not Enabled
 
-处于这种状态下，则提醒您 Need VPN to connect to Terminus. Connect，点击状态图标和状态条都会弹窗要求立即开启 VPN 连接。
+处于这种状态下，则提醒你 Need VPN to connect to Terminus. Connect，点击状态图标和状态条都会弹窗要求立即开启 VPN 连接。
 
 ### SSO Invalid
 
-处于这种状态下，则提醒您 Need to log in to Terminus again. Log in，点击状态图标和状态条都会弹窗提示。确认后，将进入输入密码页面，输入密码后完成重新登录。
+处于这种状态下，则提醒你 Need to log in to Terminus again. Log in，点击状态图标和状态条都会弹窗提示。确认后，将进入输入密码页面，输入密码后完成重新登录。
 
 ### SRP Invalid
 
-处于这种状态下，则提醒您 Need to reconnect to Terminus. Reconnect，点击状态图标和状态条都会弹窗提示。确认后，将进入输入密码页面，输入密码后完成重新登录。登录之后，您的 Vault 数据将和服务端 Vault 进行同步并合并，请放心这些数据都不会丢失。
+处于这种状态下，则提醒你 Need to reconnect to Terminus. Reconnect，点击状态图标和状态条都会弹窗提示。确认后，将进入输入密码页面，输入密码后完成重新登录。登录之后，你的 Vault 数据将和服务端 Vault 进行同步并合并，请放心这些数据都不会丢失。
 
 ### Device Is Inactive or Expired
 
-出现这种情况，您则提醒您 Need to reactivate Terminus. Learn more。可能的原因，我们都大致罗列了一下，最终的处理方式，由用户自行决定。
+出现这种情况，你则提醒你 Need to reactivate Terminus. Learn more。可能的原因，我们都大致罗列了一下，最终的处理方式，由用户自行决定。
 
 - 由于 Terminus 短暂性的网络连通问题引起的，Terminus 恢复正常后，此问题会自动消失。
 
-- 因为您的 Terminus 已经销毁，需要重新激活。如果您确认需要重新激活，请选择重新激活。
+- 因为你的 Terminus 已经销毁，需要重新激活。如果你确认需要重新激活，请选择重新激活。
 
 - 如果你无法确认情况，请忽略此信息，或寻求管理员帮助。
 

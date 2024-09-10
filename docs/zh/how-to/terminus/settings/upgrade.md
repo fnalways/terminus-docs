@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Upgrade
 
-您可以在这里对系统进行升级。
+你可以在这里对系统进行升级。
 
 ![alt text](/images/how-to/terminus/upgrade.png)
 
@@ -20,6 +20,6 @@ outline: [2, 3]
 
 ## Development Mode
 
-打开后，您将会启动开发版本的升级。
+打开后，你将会启动开发版本的升级。
 
 开发版本的更新频率更快，会更快的合并新的功能，但可能会出现由于测试不全面导致的不稳定。

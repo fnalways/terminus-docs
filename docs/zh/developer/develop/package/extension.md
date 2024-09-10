@@ -24,6 +24,13 @@ Terminus 在每个 [TAC](chart.md) 安装时，会根据 TAC 中 [TerminusManife
   | .Values.userspace.appCache | String | APP 可用的本地节点缓存地址 |
   | .Values.userspace.userData | String | 用户的数据存储目录 |
 
+- 集群信息
+  | 变量           | 类型               | 说明                                                 |
+  | -------------- | ------------------ | ---------------------------------------------------- |
+  | .Values.cluster.arch | String | 集群的 CPU 架构   |
+
+  暂不支持在混合架构（AMD64 和 ARM）下部署集群。
+
 - 应用依赖
   | 变量 | 类型 | 说明 |
   | -------------- | ------------------ | ---------------------------------------------------- |
@@ -67,8 +74,3 @@ Terminus 在每个 [TAC](chart.md) 安装时，会根据 TAC 中 [TerminusManife
   | .Values.redis.port         | Number             | Redis 数据库端口                                                                                           |
   | .Values.redis.password     | String             | Redis 数据库密码                                                                                           |
   | .Values.redis.namespaces   | Map<String,String> | Redis 命名空间名称，以申请命名空间作为 key，例如， 申请 app_ns, 变量为.Values.redis.namespaces.app_ns      |
-  | .Values.zinc.host          | String             | ZincSearch 索引服务地址                                                                                    |
-  | .Values.zinc.port          | Number             | ZincSearch 索引服务端口                                                                                    |
-  | .Values.zinc.username      | String             | ZincSearch 索引服务用户名                                                                                  |
-  | .Values.zinc.password      | String             | ZincSearch 索引服务密码                                                                                    |
-  | .Values.zinc.indexes       | Map<String,String> | ZincSearch 索引名称，以申索引名作为 key，例如， 申请 app_idx, 变量为.Values.zinc.indexes.app_idx           |

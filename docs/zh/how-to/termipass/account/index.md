@@ -6,7 +6,7 @@ outline: [2, 4]
 
 当你首次使用 TermiPass 时，可以直接尝试 [Create Terminus Name](#create-terminus-name)
 
-在使用一段时间后，您可以尝试了解：
+在使用一段时间后，你可以尝试了解：
 
 - [Account 账号的状态](#stage-of-account)
 - [Terminus Name 是同步的](#account-同步)
@@ -36,7 +36,7 @@ outline: [2, 4]
 - 包含数字
 - 包含符号
 
-如果您输入了不符合规则的密码，将无法完成密码设置步骤。
+如果你输入了不符合规则的密码，将无法完成密码设置步骤。
 
 :::tip
 
@@ -48,7 +48,7 @@ outline: [2, 4]
 
 设置完成之后，可以选择开启生物特征解锁，以使用人脸、指纹等更安全便捷的解锁方式。
 
-如果您在这里选择不开启生物特征解锁，后续您还可以在 TermiPass 的设置 中随时开启或关闭。
+如果你在这里选择不开启生物特征解锁，后续你还可以在 TermiPass 的设置 中随时开启或关闭。
 
 ### New an account
 
@@ -68,11 +68,11 @@ outline: [2, 4]
 
 请注意以下几种情况：
 
-1. 如果您输入错误的助记词，无法进行导入操作
+1. 如果你输入错误的助记词，无法进行导入操作
 
-2. 如果您输入的助记词对应的账号还没有绑定 Terminus Name，它无法导入到 TermiPass 客户端。
+2. 如果你输入的助记词对应的账号还没有绑定 Terminus Name，它无法导入到 TermiPass 客户端。
 
-3. 如果您输入的助记词对应的账号已经绑定 Terminus Name，那么它可以导入到任意 TermiPass 客户端。
+3. 如果你输入的助记词对应的账号已经绑定 Terminus Name，那么它可以导入到任意 TermiPass 客户端。
 
 ### Bind Terminus Name
 
@@ -80,30 +80,30 @@ outline: [2, 4]
 
 如果你是个人用户，点击 Individual Terminus Name，来绑定一个仅供个人使用的 Terminus Name。
 
-如果你是组织用户，不管您是否管理员，请都点击 Organization Terminus Name 来绑定一个组织的 Terminus Name。
+如果你是组织用户，不管你是否管理员，请都点击 Organization Terminus Name 来绑定一个组织的 Terminus Name。
 
 #### Individual Terminus Name
 
 ![alt text](/images/how-to/termipass/individual_terminus_name.png)
 
-如果您是个人用户，那么通常您将选择绑定个人 VC 来创建成为一个个人的 Terminus Name
+如果你是个人用户，那么通常你将选择绑定个人 VC 来创建成为一个个人的 Terminus Name
 
-我们提供了 Google Gmail VC 验证方式。详细的技术方案请参考：[Gmail Issuer Service](../../../overview/snowinning/terminus-name.md#gmail-issuer-service)
+我们提供了 Google Gmail VC 验证方式。详细的技术方案请参考：[Gmail 发行者服务](../../../developer/contribute/snowinning/terminus-name.md)
 
 1. 点击 VC 卡片后，将调起 Google 账号界面
 2. 选择要绑定的账号
 
-   a. 如果您的账号已经登录，则可以直接在这里选择要绑定的账号
+   a. 如果你的账号已经登录，则可以直接在这里选择要绑定的账号
 
-   b. 如果您需要绑定新的账号，则选择再添加一个账号。添加完成之后，将回到 Google 账号界面，您可以选择要绑定的账号
+   b. 如果你需要绑定新的账号，则选择再添加一个账号。添加完成之后，将回到 Google 账号界面，你可以选择要绑定的账号
 
-3. 点击之后将提示您将使用 Google 账号登录 TermiPass，请点击「继续」
+3. 点击之后将提示你将使用 Google 账号登录 TermiPass，请点击「继续」
 4. 等待绑定成功，在绑定成功的页面，点击「继续」
 5. 进入 Terminus Name 落地页
 
-如果绑定过程中，提示错误信息，请检查您的账号是否已经绑定过 Terminus Name，如果确认未曾绑定但还是无法完成绑定操作，请联系我们。
+如果绑定过程中，提示错误信息，请检查你的账号是否已经绑定过 Terminus Name，如果确认未曾绑定但还是无法完成绑定操作，请联系我们。
 
-当您看到以上界面的时候，请等待 [ Terminus 设备的安装](../../terminus/setup/install.md) 完成，以继续完成 [激活流程](../../terminus/setup/wizard.md) 即可。
+当你看到以上界面的时候，请等待 [ Terminus 设备的安装](../../terminus/setup/install/index.md) 完成，以继续完成 [激活流程](../../terminus/setup/wizard.md) 即可。
 
 #### Organization Terminus Name
 
@@ -111,25 +111,25 @@ outline: [2, 4]
 
 绑定 Organization Terminus Name 需要以下几步骤：
 
-1. 您将看到一个有关 Organization Terminus Name 说明页面，请认真阅读后，点击「Got it」继续
+1. 你将看到一个有关 Organization Terminus Name 说明页面，请认真阅读后，点击「Got it」继续
 
 2. 请选择加入已有组织，或者创建一个新组织
 
    a. 如果你的组织还没有完成创建，请扫码登录 Terminus Space 以完成[创建 Domain](../../space/domain/host-domain.md)
 
-   b. 如果您的组织已经创建了组织域名并完成验证和配置流程，请选择加入已有组织。
+   b. 如果你的组织已经创建了组织域名并完成验证和配置流程，请选择加入已有组织。
 
-3. 输入组织的域名，点击「继续」，请确认您的组织域名。如果输入的域名尚未完成验证和配置流程，则会报错，无法继续。如果您不慎输入了其它组织的域名，请返回此页面，确认域名的正确性。
+3. 输入组织的域名，点击「继续」，请确认你的组织域名。如果输入的域名尚未完成验证和配置流程，则会报错，无法继续。如果你不慎输入了其它组织的域名，请返回此页面，确认域名的正确性。
 
-4. 绑定您的组织邮箱。目前我们仅支持 Gmail 或 Google Workspace 的邮箱地址。绑定流程 请参考 Individual Terminus Name 的[Google 验证流程](#individual-terminus-name)
+4. 绑定你的组织邮箱。目前我们仅支持 Gmail 或 Google Workspace 的邮箱地址。绑定流程 请参考 Individual Terminus Name 的[Google 验证流程](#individual-terminus-name)
 
-5. 绑定完成，您将获得一个组织 Terminus Name。
+5. 绑定完成，你将获得一个组织 Terminus Name。
 
 ### Backup Mnemonic Phrase
 
-请您务必了解，在去中心化账号的系统中，助记词是您找回 DID/Terminus Name 的唯一方式。请务必妥善保管您的 Terminus Name 的助记词。
+请你务必了解，在去中心化账号的系统中，助记词是你找回 DID/Terminus Name 的唯一方式。请务必妥善保管你的 Terminus Name 的助记词。
 
-如果忘记了助记词，您将会丢失 DID/Terminus Name ，以及 Vault 里存储的数据控制权。我们强烈建议您采用离线的方式备份助记词。
+如果忘记了助记词，你将会丢失 DID/Terminus Name ，以及 Vault 里存储的数据控制权。我们强烈建议你采用离线的方式备份助记词。
 
 提醒：目前，Terminus Name 的助记词会保存在所有已导入的 TermiPass 上，助记词是由手机的秘钥存储，一般情况下，你只有在同时丢失所有装有 TermiPass 的手机和电脑后，才会丢失助记词。
 
@@ -139,15 +139,15 @@ outline: [2, 4]
 
 备份助记词时，我们有一个规范流程，如下：
 
-- 第一步，输入密码，在此页面上，单击最底部的「Export Mnemonic Phrase」进入备份助记词界面。您需要输入 TermiPass 的本机解锁密码后才能查看到助记词。
+- 第一步，输入密码，在此页面上，单击最底部的「Export Mnemonic Phrase」进入备份助记词界面。你需要输入 TermiPass 的本机解锁密码后才能查看到助记词。
 
 - 第二步，把助记词抄到纸上，妥善保存它。
 
 :::warning
-单击「Copy」 按钮会将 12 个助记词保存到剪切板。请妥善保存助记词。我们强烈建议您采用离线的方式备份助记词。
+单击「Copy」 按钮会将 12 个助记词保存到剪切板。请妥善保存助记词。我们强烈建议你采用离线的方式备份助记词。
 :::
 
-- 第三步，在页面上按完整的顺序填入 12 个单词。如填写正确，则代表您已经成功备份了助记词。
+- 第三步，在页面上按完整的顺序填入 12 个单词。如填写正确，则代表你已经成功备份了助记词。
 
 ## Stage Of Account
 

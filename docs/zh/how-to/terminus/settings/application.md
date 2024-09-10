@@ -4,17 +4,17 @@ outline: [2, 4]
 
 # Application
 
-您可以在这里对已经安装的应用进行管理。在列表中，您可以看到：
+你可以在这里对已经安装的应用进行管理。在列表中，你可以看到：
 
 - [用户系统应用](../../../overview/terminus/application.md#user-system-application)
 - [Community Application](../../../overview/terminus/application.md#community-application)
-- 如果您是 Admin， 还会看到 [Cluster Scoped Application](../../../overview/terminus/application.md#cluster-scoped-application)
+- 如果你是 Admin， 还会看到 [Cluster Scoped Application](../../../overview/terminus/application.md#cluster-scoped-application)
 
 ![alt text](/images/how-to/terminus/application.png)
 
 ## App Management
 
-您可以在这里查看常见的 [应用状态](../../../overview/terminus/application.md#应用状态)
+你可以在这里查看常见的 [应用状态](../../../overview/terminus/application.md#应用状态)
 :::info
 [Community Application](../../../overview/terminus/application.md#community-application)可以被 Suspend，以释放资源。
 :::
@@ -23,36 +23,36 @@ outline: [2, 4]
 
 ## Entrance Management
 
-您可以在这里更多了解 [Entrance](../../../overview/terminus/network.md#entrance)。
+你可以在这里更多了解 [Entrance](../../../overview/terminus/network.md#entrance)。
 
 ![alt text](/images/how-to/terminus/application_entrance.png)
 
 ### Setup Endpoint
 
-您可以在这里设置应用的 [Entrance Endpoint](../../../overview/terminus/network.md#endpoint)。
+你可以在这里设置应用的 [Entrance Endpoint](../../../overview/terminus/network.md#endpoint)。
 
 ![alt text](/images/how-to/terminus/application_domain_setup.png)
 
 #### Setup Custom Route id
 
-您可以将 Default route id 替换成自定义的值。 例如，将将 de463205 替换为 wordpress
+你可以将 Default route id 替换成自定义的值。 例如，将将 de463205 替换为 wordpress
 
 ![alt text](/images/how-to/terminus/application_third_level_domain.png)
 
 #### Setup Custom Domain
 
-您可以给 Entrance 设置一个独立的域名。
+你可以给 Entrance 设置一个独立的域名。
 
 ![alt text](/images/how-to/terminus/application_third_party_domain.png)
 
-在输入域名后，根据弹窗的提示信息，您需要在域名托管网站上添加一条 CNAME 解析记录。
+在输入域名后，根据弹窗的提示信息，你需要在域名托管网站上添加一条 CNAME 解析记录。
 
 ![alt text](/images/how-to/terminus/application_activation_third_party_domain.png)
 
 DNS 记录生效后，Status 将会变成 Activated，此时设置就完成了。
 
 :::info
-如果您想要您的朋友无需登录就访问这个网址，请将它的 AuthLevel [设置成 Public](#authlevel)
+如果你想要你的朋友无需登录就访问这个网址，请将它的 AuthLevel [设置成 Public](#authlevel)
 :::
 
 ### Setup Access Policies
@@ -82,7 +82,7 @@ DNS 记录生效后，Status 将会变成 Activated，此时设置就完成了�
 
 ![alt text](/images/how-to/terminus/application_add_sub_policies.png)
 
-在添加的对话框中，您可以用一个`正则表达式`设置策略匹配的某些子路径。
+在添加的对话框中，你可以用一个`正则表达式`设置策略匹配的某些子路径。
 
 然后可以选择针对这个子路径规则的访问模式。
 

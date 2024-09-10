@@ -6,7 +6,7 @@
 
 Vault 是 Web3 时代的密码管理器，它基于 Padloc 开发。
 
-您可以将私钥和网站、应用的账户密码存储在这里，可以在这里管理自己 DID，Terminus Name，OTP 和日常使用的密码。它支持在家庭、企业或任何其他类型的组织内轻松共享和管理敏感数据。也支持多种类型的快速搜索和过滤，按标签、按收藏、最近使用等快速查找 Vault Item。
+你可以将私钥和网站、应用的账户密码存储在这里，可以在这里管理自己 DID，Terminus Name，OTP 和日常使用的密码。它支持在家庭、企业或任何其他类型的组织内轻松共享和管理敏感数据。也支持多种类型的快速搜索和过滤，按标签、按收藏、最近使用等快速查找 Vault Item。
 
 ## 架构
 
@@ -18,7 +18,7 @@ Vault 在架构上分为两个部分：
 
   简单的说，传输过程中的数据是经过私钥加密的，在 Terminus 上保存的数据也是一样。在这两个环节即使加密数据被劫持，用户的秘密数据也不会被泄露。
 
-  在我们撰写安全白皮书前，您可以先可以参考 [Padloc Security Whitepaper](https://docs.padloc.app/docs/security/)
+  在我们撰写安全白皮书前，你可以先可以参考 [Padloc Security Whitepaper](https://docs.padloc.app/docs/security/)
 
   Vault 同时是一个 [Cluster Scoped Application](../../../overview/terminus/application.md#cluster-scoped-application)。这样可以做到同一台 Terminus 上的不同用户间可以通过 Shared Vault 共享数据。
 
@@ -26,14 +26,14 @@ Vault 在架构上分为两个部分：
 
   分为网页，手机，电脑和浏览器插件 4 种平台 6 个版本。其中手机，电脑和浏览器版都跟随 TermiPass 发行，Web 版作为一个默认系统应用跟随 Terminus 发行。
 
-  不同版本的客户端在日常使用和交互上保持了一致的体验，主要区别在于各平台在原生的密码自动填充的流程上不一致。您可以在本章节了解：
+  不同版本的客户端在日常使用和交互上保持了一致的体验，主要区别在于各平台在原生的密码自动填充的流程上不一致。你可以在本章节了解：
 
   1. Web 版 Vault 的激活
   2. 常见的概念
   3. Vault 的日常使用
   4. 团队内 Vault 的管理和使用
 
-  您可以通过 [Password Autofill](../../termipass/password-autofill.md) 章节了解如何通过 TermiPass 进行密码填充
+  你可以通过 [Password Autofill](../../termipass/password-autofill.md) 章节了解如何通过 TermiPass 进行密码填充
 
 ## 名词解释
 
@@ -56,7 +56,7 @@ Vault 应用名字的由来。用户的秘密数据被加密存储在这里，�
 
 ### Field
 
-在每条 Vault Item 中，有不同的 Field，您可以通过增加不同的 Field 来保存不同的数据。
+在每条 Vault Item 中，有不同的 Field，你可以通过增加不同的 Field 来保存不同的数据。
 
 我们目前支持添加的 Field 类型有：Username，Password，Mnemonic、Email Address、URL、Date、Mouth、Credit Card Number、Phone Number、PIN、Plain Text、One-Time Password。
 

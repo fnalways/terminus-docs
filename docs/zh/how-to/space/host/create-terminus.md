@@ -4,17 +4,17 @@ outline: [2, 3]
 
 # Create Terminus
 
-要创建 Terminus，请先确认您的账号状态，请点击[ account](../account.md#账号类型)了解更多账号信息。
+要创建 Terminus，请先确认你的账号状态，请点击[ account](../account.md#账号类型)了解更多账号信息。
 
 需要提醒的是，由于我们的 Host Service 目前在邀请内测中，所以并不是所有满足基本条件的账号都可以创建云上 Terminus。
 
-如果您无法创建云上 Terminus，但却有一台内存大于 8G，硬盘大于 50G 的闲置服务器，您可以尝试[安装 Terminus](../../terminus/setup/install.md)。
+如果你无法创建云上 Terminus，但却有一台内存大于 8G，硬盘大于 50G 的闲置服务器，你可以尝试[安装 Terminus](../../terminus/setup/install/index.md)。
 
-如果您仍然想体验云上 Terminus，请联系我们以获得 Host Service 内测邀请。
+如果你仍然想体验云上 Terminus，请联系我们以获得 Host Service 内测邀请。
 
 ![alt text](/images/how-to/space/create_terminus.jpg)
 
-如果您满足了创建云上 Terminus 的条件，请在引导页面上选择第二项，进入创建云上的 Terminus 流程。
+如果你满足了创建云上 Terminus 的条件，请在引导页面上选择第二项，进入创建云上的 Terminus 流程。
 
 ## Basic Configuration
 
@@ -36,13 +36,13 @@ outline: [2, 3]
 
 ![alt text](/images/how-to/space/storage_and_network.jpg)
 
-您需要了解我们对于存储和流量的收费信息。当然每个实例都包含了免费的存储和流量额度，超出额度的部分，将按照阶梯收取费用。
+你需要了解我们对于存储和流量的收费信息。当然每个实例都包含了免费的存储和流量额度，超出额度的部分，将按照阶梯收取费用。
 
 ## Confirm Order
 
 ![alt text](/images/how-to/space/confrim.jpg)
 
-确认订单并完成支付。支付完成后，您创建的 Terminus 就将开始进行安装。请等待安装完成，按指引完成 Terminus 的激活即可。
+确认订单并完成支付。支付完成后，你创建的 Terminus 就将开始进行安装。请等待安装完成，按指引完成 Terminus 的激活即可。
 
 需要了解 Terminus 的激活，请查看[激活流程](../../terminus/setup/wizard.md)
 
@@ -56,9 +56,9 @@ outline: [2, 3]
 
 在安装过程中，我们将实时显示安装过程中的 Terminus 状态，正常情况下，它会经历 Queuing - Installing - Pending activation - Running 这几种核心状态。
 
-当您看到，Pending activation 状态时，即可进行 Terminus 设备的激活。
+当你看到，Pending activation 状态时，即可进行 Terminus 设备的激活。
 
-如果您看到了 Errored 状态，可以销毁重新安装，也可以联系我们处理。
+如果你看到了 Errored 状态，可以销毁重新安装，也可以联系我们处理。
 
 看到 Runing 时，代表系统已经激活完成，处于正常运行之中。
 
@@ -94,4 +94,4 @@ outline: [2, 3]
 
 当 Terminus 处于 Pending activation 状态时，点击右上角的「Activation」按钮，弹窗会显示：绑定的 Terminus Name、One Time Password，Wizard URL。
 
-您可以使用 One Time Password 来激活 Terminus。激活完成时，请在 TermiPass 端修改您的 Terminus 密码。查看[激活流程](../../terminus/setup/wizard.md)
+你可以使用 One Time Password 来激活 Terminus。激活完成时，请在 TermiPass 端修改你的 Terminus 密码。查看[激活流程](../../terminus/setup/wizard.md)

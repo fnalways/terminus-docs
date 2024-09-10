@@ -14,22 +14,22 @@
 
 :::info 信息
 Terminus Name 是你在 Terminus 中的唯一身份标识。
-了解[为什么需要 Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
+了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
 ## 2. 安装 Terminus
 
-1. 设置 Ubuntu，将本地 IP 地址绑定到主机名，以确保 DNS 解析稳定：
+1. 将局域网 IP 地址绑定到 Ubantu 主机名，以确保 DNS 解析稳定：
 
    ```bash
    sudo apt install net-tools
    ifconfig
-   # 查找以 `192.168` 开头的本地 IP 地址。
+   # 查找以 `192.168` 开头的局域网 IP 地址。
    ```
    
    ```bash
    sudo nano /etc/hosts
-   # Add the following line
+   # 添加一行
    192.168.xx.xx   Ubuntu 
    # 将 xx 替换为你的实际 IP 地址和主机名。
    ```

@@ -11,7 +11,7 @@ outline: [2, 3]
 ::: details TerminusManifest.yaml 样例
 
 ```Yaml
-terminusManifest.version: 0.6.0
+terminusManifest.version: '0.7.0'
 terminusManifest.type: app
 metadata:
   name: helloworld
@@ -36,7 +36,7 @@ permission:
   - Home/Pictures/
   - Home/Downloads/BTDownloads/
 spec:
-  versionName: 0.0.1
+  versionName: '0.0.1'
   featuredImage: https://link.to/featured_image.webp
   promoteImage:
   - https://link.to/promote_image1.webp
@@ -66,7 +66,6 @@ options:
     type: system
     version: '>=0.1.0'
 ```
-
 :::
 
 ## TerminusManifest.yaml identifier
@@ -74,15 +73,14 @@ options:
 ### terminusManifest.type
 
 - Type: `string`
-- Accepted Value:: `app`,`recommend`,`model`
+- Accepted Value: `app`, `recommend`, `model`, `middleware`
 
-应用程序的 terminusManifest.type 应为 app。你可以点击链接查看不同类型扩展的配置指南
+Terminus currently supports four types of applications, each requiring different fields. This document uses `app` as an example to explain each field. For information on other types, please refer to the corresponding configuration guide.
 
 - [recommend 配置指南](recommend.md)
 - [model 配置指南](model.md)
 
 配置示例
-
 ```Yaml
 terminusManifest.type: app
 ```
@@ -97,8 +95,11 @@ terminusManifest.version 由 3 位英文句点分隔的整数组成。随着 Ter
 - 第 2 位数字增加意味着分发和安装必须字段存在变化，但 Terminus 系统仍兼容之前所有版本配置的应用分发与安装。我们建议开发者尽快更新升级应用的 TerminusManifest.yaml 文件。
 - 第 3 位数字的改变，不影响应用分发和安装。
 
-Terminus 系统当前的 terminusManifest.version 为`0.6.0`。开发者可以使用 1-3 位的版本号来标识该应用遵循的配置版本。以下是有效版本的一些示例：
+:::info 注意
+Terminus 系统当前的 terminusManifest.version 为`0.7.0`。
+:::
 
+开发者可以使用 1-3 位的版本号来标识该应用遵循的配置版本。以下是有效版本的一些示例：
 ```Yaml
 TerminusManifest.yaml.version: 1
 TerminusManifest.yaml.version: 0.1
@@ -109,10 +110,9 @@ TerminusManifest.yaml.version: "3.0.122"
 
 ## Metadata
 
-记录应用的元信息
+记录应用的元信息。
 
 配置示例
-
 ```Yaml
 metadata:
   name: nextcloud
@@ -169,7 +169,6 @@ Used to display your app on different categoiry page in app market
 Specify how to access this app, at least 1 required.每个应用至少需要 1 个入口，至多 10 个
 
 配置示例
-
 ```Yaml
 entrances:
 - name: a
@@ -241,21 +240,57 @@ Entrance 在 [Desktop](../../../how-to/terminus/desktop.md) 中窗口的打开�
 
 `iframe` 代表在 Desktop 的窗口内通过 iframe 新建一个窗口，`window` 代表在浏览器新的 Tab 页打开。`default` 代表跟随系统的默认选择，系统默认的选择是`iframe`
 
+### windowPushState
+- Type: `boolean`
+- Default: `false`
+- Optional
+
+When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser‘s same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
+
+To ensure a seamless user experience, you can enable this option by setting it to true. This action prompts the gateway to automatically inject the following code into the iframe. This code sends an event to the parent window (desktop) whenever the iframe's URL changes. As a result, the desktop can track URL changes and open the correct page.
+
+配置示例
+```Javascript
+<script>
+  (function () {
+    if (window.top == window) {
+        return;
+    }
+    const originalPushState = history.pushState;
+    const pushStateEvent = new Event("pushstate");
+    history.pushState = function (...args) {
+      originalPushState.apply(this, args);
+      window.dispatchEvent(pushStateEvent);
+    };
+    window.addEventListener("pushstate", () => {
+      window.parent.postMessage(
+        {type: "locationHref", message: location.href},
+        "*"
+      );
+    });
+  })();
+</script>
+```
+
 ## permission
 
 记录应用所需的权限信息
 
 配置示例
-
 ```Yaml
 permission:
+  appCache: true
   appData: true
+  userData:
+  - /Home/  
   sysData:
-  - group: api.intent
-    dataType: legacy_api
-    version: v1
+  - dataType: legacy_prowlarr
+    appName: prowlarr
+    port: 9696
+    group: api.prowlarr
+    version: v2
     ops:
-    - POST
+    - All
 ```
 
 ### appCache
@@ -284,8 +319,9 @@ permission:
 - Type: `list<map>`
 - Optional
 
-字段配置
+Declare the list of APIs that this app needs to access.
 
+配置示例
 ```Yaml
   sysData:
   - group: service.bfl
@@ -293,14 +329,16 @@ permission:
     version: v1
     ops:
     - InstallDevApp
-  - group: service.bfl
-    dataType: app
-    version: v1
+  - dataType: legacy_prowlarr
+    appName: prowlarr
+    port: 9696
+    group: api.prowlarr
+    version: v2
     ops:
-    - InstallDevApp
+    - All
 ```
 
-应用需要的系统数据权限，数据权限列表如下
+API 需要的系统数据权限，数据权限列表如下
 | Group | version | dataType | ops |
 | ----------- | ----------- | ----------- | ----------- |
 | service.appstore | v1 | app | InstallDevApp, UninstallDevApp
@@ -317,24 +355,23 @@ permission:
 | secret.vault | v1 | key | List, Info, Sign
 
 ## spec
-
-记录额外的应用信息，主要用于应用商店的展示。
-
-这里补一个类似 umbrel 的截图
-![spec字段对应图](https://camo.githubusercontent.com/bda18de74526b1df286b4278be6ab2e08459679237cc67122444e8d1df3b545f/68747470733a2f2f692e696d6775722e636f6d2f30436f7250524b2e706e67)
-
-组成版本号的整数应满足以下几条规则
-
-- 整数必须介于 0 到 65,535 之间（含 0 和 65,535）。
-- 非零整数不能以 0 开头。例如，032 无效，因为它以零开头。
-- 它们不能都为零。例如，0 和 0.0.0.0 是无效的，而 0.1.0.0 是有效的。
+> 记录额外的应用信息，主要用于应用商店的展示。
 
 配置示例
-
 ```Yaml
 spec:
-  versionName: 10.8.11
+  namespace: os-system 
+  # optional. Install the app to a specified namespace, e.g. os-system, user-space, user-system
+  
+  onlyAdmin:  true 
+  # optional. When set to true, only the admin can install this app.
+  
+  versionName: '10.8.11' 
+  # The version of the application that this chart contains. It is recommended to enclose the version number in quotes. This value corresponds to the appVersion field in the `Chart.yaml` file. Note that it is not related to the `version` field.
+
   featuredImage: https://file.bttcdn.com/appstore/jellyfin/promote_image_1.jpg
+  # The featured image is displayed when the app is featured in the Market.
+
   promoteImage:
   - https://file.bttcdn.com/appstore/jellyfin/promote_image_1.jpg
   - https://file.bttcdn.com/appstore/jellyfin/promote_image_2.jpg
@@ -350,12 +387,17 @@ spec:
   submitter: Terminus
   language:
   - en
+
   requiredMemory: 256Mi
-  limitedMemory: 512Mi
   requiredDisk: 128Mi
-  limitedDisk: 256Mi
   requiredCpu: 0.5
+  # Specifies the minimum resources required to install and run the application. Once the app is installed, the system will reserve these resources to ensure optimal performance.
+
+  limitedDisk: 256Mi
   limitedCpu: 1
+  limitedMemory: 512Mi
+  # Specifies the maximum resource limits for the application. If the app exceeds these limits, it will be temporarily suspended to prevent system overload and ensure stability.
+
   legal:
   - text: Community Standards
     url: https://jellyfin.org/docs/general/community-standards/
@@ -375,27 +417,35 @@ spec:
 - Type: `map`
 
 系统提供了高可用的中间件服务，开发者无需重复安装中间件，只需在此填写对应的中间件信息即可。
-配置示例
 
+Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
+
+配置示例
 ```Yaml
 middleware:
   postgres:
-    username: postgres
+    username: immich
     databases:
-    - name: db
-      distributed: true
+    - name: immich
+      extensions:
+      - vectors
+      - earthdistance
+      scripts:
+      - BEGIN;                                           
+      - ALTER DATABASE $databasename SET search_path TO "$user", public, vectors;
+      - ALTER SCHEMA vectors OWNER TO $dbusername;
+      - COMMIT;
+      # The OS provides two variables, $databasename and $dbusername, which will be replaced by TAPR when the command is executed.
   redis:
     password: password
     namespace: db0
   mongodb:
-    username: mongodb
+    username: chromium
     databases:
-    - name: db0
-    - name: db1
-  zincSearch:
-    username: zinc
-    indexes:
-    - name: index0
+    - name: chromium
+      script:
+      - 'db.getSiblingDB("$databasename").myCollection.insertOne({ x: 111 });'
+      # Please make sure each line is a complete query.
 ```
 
 假设你在 TerminusManifest.yaml 中填写了 middleware，你就不用自己再创建对应的中间件。直接在应用的 yaml 中填写对应的中间件信息。
@@ -427,23 +477,20 @@ databases --> "{{ .Values.mongodb.databases }}"
 host --> {{ .Values.redis.host }}
 port --> "{{ .Values.redis.port }}"
 password --> "{{ .Values.redis.password }}"
-
-
-// 获取zincSearch 对应的值
-host --> {{ .Values.zinc.host }}
-port --> "{{ .Values.zinc.port }}"
-username --> {{ .Values.zinc.username }}
-passowrd --> "{{ .Values.zinc.password }}"
-// <name>为在TerminusManifest.yaml中zincSearch indexes中的名称
-indexes  --> {{ .Values.zinc.indexes.<name> }}
 ```
 
 ## options
 
-可以在此部分配置系统相关的选项，例如验证 policy, 访问数据分析等
+可以在此部分配置系统相关的选项，例如验证 policy, 访问数据分析等。
 
 ### policies
 
+- Optional
+- Type: `map`
+
+Define detailed access control for subdomains of the app.
+
+配置示例
 ```yaml
 options:
   policies:
@@ -461,8 +508,7 @@ options:
 
 Whether this app is installed for all users in a Terminus cluster.
 
-For server
-
+Server 配置示例
 ```yaml
 metadata:
   name: gitlab
@@ -474,8 +520,7 @@ options:
       - gitlabclientb
 ```
 
-For client
-
+Client配置示例
 ```yaml
 metadata:
   name: gitlabclienta
@@ -494,6 +539,9 @@ options:
 - Optional
 - Type: `map`
 
+Enable website analytics for the app.
+
+配置示例
 ```yaml
 options:
   analytics:
@@ -504,17 +552,18 @@ options:
 
 - Type: `list<map>`
 
-If your app depends on other apps or requires a certain OS version, please specify here.
+Specify the dependencies and requirements for your application. It includes other applications that your app depends on, as well as any specific operating system (OS) version requirements.
 
+配置示例
 ```yaml
 options:
   dependencies:
     - name: terminus
-      version: ">=0.3.6-0"
+      version: ">=1.0.0-0"
       type: system
-  websocket:
-    url: /ws/message
-    port: 8888
+    - name: mongodb
+      version: ">=6.0.0-0"
+      type: middleware
 ```
 
 ### websocket
@@ -522,6 +571,9 @@ options:
 - Optional
 - Type: `map`
 
+Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information.
+
+配置示例
 ```yaml
 options:
   websocket:
@@ -531,9 +583,12 @@ options:
 
 ### resetCookie
 
-- Optinal
+- Optional
 - Type: `map`
 
+If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information。
+
+配置示例
 ```yaml
 options:
   resetCookie:
@@ -542,9 +597,12 @@ options:
 
 ### upload
 
-- Optinal
+- Optional
 - Type: `map`
 
+The Terminus Application Runtime (TAPR) includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
+
+配置示例
 ```yaml
 upload:
   # 允许上传的文件类型，*为任意类型， 上传时会指定file_type，必须在允许的文件类型中
@@ -554,4 +612,49 @@ upload:
   dest: /appdata
   # 文件上传的最大大小，单位为字节
   limitedSize: 3729747942
+```
+
+### mobileSupported
+
+- Optional
+- Type: `boolean`
+- Default: `false`
+
+Determine whether the application is compatible with mobile web browsers and can be displayed on the mobile version of Terminus Desktop. Enable this option if the app is optimized for mobile web browsers. This will make the app visible and accessible on the mobile version of Terminus Desktop.
+
+配置示例
+```yaml
+mobileSupported: true
+```
+
+### oidc
+
+- Optional
+- Type: `map`
+
+The Terminus OS includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
+```yaml
+# OpenID related varibles in yaml
+{{ .Values.oidc.client.id }}
+{{ .Values.oidc.client.secret }}
+{{ .Values.oidc.issuer }}
+```
+
+配置示例
+```yaml
+oidc:
+  enabled: true
+  redirectUri: /path/to/uri
+  entranceName: navidrome
+```
+
+### apiTimeout
+- Optional
+- Type: `int`
+
+Specifies the timeout limit for API providers in seconds. The default value is `15`. Use `0` to allow an unlimited API connection.
+
+配置示例
+```yaml
+apiTimeout: 0
 ```

@@ -18,14 +18,14 @@ outline: [2, 3]
 
 ## Ashia 的设置
 
-Ashia是您在Terminus中的个人AI助理。在 Dify 的页面上，选取“Studio”，选取“Ashia”，即可以进入 Ashia 的设置页面。
+Ashia是你在Terminus中的个人AI助理。在 Dify 的页面上，选取“Studio”，选取“Ashia”，即可以进入 Ashia 的设置页面。
 
 ![alt text](/images/how-to/terminus/dify/01.jpg)
 
-首次使用时，您会在在右侧看到 Agent 所用的模型还没有配置好，因而无法进行下一步的操作。此时，我们需要为其指定一个大语言模型。您可以调用[Remote Model](#using-remote-model) or [Self-hosted Model](#using-self-hosted-model)。
+首次使用时，你会在在右侧看到 Agent 所用的模型还没有配置好，因而无法进行下一步的操作。此时，我们需要为其指定一个大语言模型。你可以调用[Remote Model](#using-remote-model) or [Self-hosted Model](#using-self-hosted-model)。
 
 
-在左侧，您可以通过UI设置提示词、变量、上下文，以及为 Agent 添加工具。工具是可以附加在 Agent 中的辅助功能，dify.ai 提供了大量的可选工具。
+在左侧，你可以通过UI设置提示词、变量、上下文，以及为 Agent 添加工具。工具是可以附加在 Agent 中的辅助功能，dify.ai 提供了大量的可选工具。
 
 ![alt text](/images/how-to/terminus/dify/02.jpg)
 
@@ -37,7 +37,7 @@ Ashia是您在Terminus中的个人AI助理。在 Dify 的页面上，选取“St
 
 我们以使用 GPT4 为例，介绍如何设置远程模型。
 
-您首先需要点击右上角的用户名，点击“Settings”，进入设置界面。在设置界面点击“Model Provider”，选择远程模型的供应商。
+你首先需要点击右上角的用户名，点击“Settings”，进入设置界面。在设置界面点击“Model Provider”，选择远程模型的供应商。
 
 ![alt text](/images/how-to/terminus/dify/04.jpg)
 
@@ -53,15 +53,15 @@ Ashia是您在Terminus中的个人AI助理。在 Dify 的页面上，选取“St
 
 ### Install from Market
 
-您可以在 Market 中选择合适的本地（Self-hosted）模型。点击 “Get” 按钮即可一键在Terminus中安装一个大语言模型. 
+你可以在 Market 中选择合适的本地（Self-hosted）模型。点击 “Get” 按钮即可一键在Terminus中安装一个大语言模型. 
 ![alt text](/images/how-to/terminus/dify/08.jpg)
 
-待安装进度完成后，您可以进入左下角的“My Terminus”页来“Load”已安装的模型。加载成功后模型状态会变为“Running”，之后您可以在这个页面上“Unload”一个已加载的模型。您可以[在此](../terminus/market/index.md#models)查看在Market中安装和管理模型的更多信息。
+待安装进度完成后，你可以进入左下角的“My Terminus”页来“Load”已安装的模型。加载成功后模型状态会变为“Running”，之后你可以在这个页面上“Unload”一个已加载的模型。你可以[在此](../terminus/market/index.md#models)查看在Market中安装和管理模型的更多信息。
 
 ![alt text](/images/how-to/terminus/dify/09.jpg)
 
 ::: tip
-只有当您的 Terminus 拥有可访问的 GPU 时，才能看到相关页面和执行相关操作。
+只有当你的 Terminus 拥有可访问的 GPU 时，才能看到相关页面和执行相关操作。
 :::
 
 ::: warning
@@ -80,12 +80,12 @@ Ashia是您在Terminus中的个人AI助理。在 Dify 的页面上，选取“St
 ![alt text](/images/how-to/terminus/dify/13.jpg)
 
 ::: tip
-在模型停止加载后，自动配置的nitro也会被移除。如需要改用其它模型，您需要在Agent配置页面手动调整。
+在模型停止加载后，自动配置的nitro也会被移除。如需要改用其它模型，你需要在Agent配置页面手动调整。
 :::
 
 ## 创建 Konwledge 
 
-您可以为Agent添加knowledge来针对性地回答问题。在 Dify 的页面上方，有“Knowledge”选项卡. 点击进入，可以看到已经设置了一个名为 **_YourTerminusName_**'s Document的默认Knowledge。该 Knowledge 默认监听 Terminus 的 Files 中的 Documents 文件夹。
+你可以为Agent添加knowledge来针对性地回答问题。在 Dify 的页面上方，有“Knowledge”选项卡. 点击进入，可以看到已经设置了一个名为 **_YourTerminusName_**'s Document的默认Knowledge。该 Knowledge 默认监听 Terminus 的 Files 中的 Documents 文件夹。
 
 ![alt text](/images/how-to/terminus/dify/14.jpg)
 
@@ -94,12 +94,12 @@ Ashia是您在Terminus中的个人AI助理。在 Dify 的页面上，选取“St
 ![alt text](/images/how-to/terminus/dify/15.jpg)
 ![alt text](/images/how-to/terminus/dify/16.jpg)
 
-回到 Ashia Agent 的配置页面，在左侧的“Context”的位置点击 "Add" ，您就可以使用 Knowledge 为 Agent 添加定制化的上下文了。
+回到 Ashia Agent 的配置页面，在左侧的“Context”的位置点击 "Add" ，你就可以使用 Knowledge 为 Agent 添加定制化的上下文了。
 
 ![alt text](/images/how-to/terminus/dify/17.jpg)
 
-结合知识库数据管理功能，您可以自行建立更多的知识库，并设置各知识库监听的文件夹，从而用不同的知识库为不同的 Agent 提供支持。
+结合知识库数据管理功能，你可以自行建立更多的知识库，并设置各知识库监听的文件夹，从而用不同的知识库为不同的 Agent 提供支持。
 
 ## Explore Dify
 
-您可以参考 Dify 的官方手册进一步了解如何[创建一个Dify应用](https://docs.dify.ai/user-guide/creating-dify-apps/creating-an-application)
+你可以参考 Dify 的官方手册进一步了解如何[创建一个Dify应用](https://docs.dify.ai/user-guide/creating-dify-apps/creating-an-application)

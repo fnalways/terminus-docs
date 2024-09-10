@@ -41,7 +41,7 @@ Usage Ranking，是将系统的资源消耗，以 namespace 维度聚合，提�
 
 ## Resources
 
-Resources是从Namespace角度对当前和历史的系统物理资源的用量的统计图表。您可以查看所有用户的资源消耗汇总，也可以在页面右上角，选择特定用户，单独查看其消耗的系统物理资源。
+Resources是从Namespace角度对当前和历史的系统物理资源的用量的统计图表。你可以查看所有用户的资源消耗汇总，也可以在页面右上角，选择特定用户，单独查看其消耗的系统物理资源。
 
 ![resources](/images/how-to/terminus/controlhub/namespace/04.jpg)
 

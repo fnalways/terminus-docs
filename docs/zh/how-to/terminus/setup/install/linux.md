@@ -1,7 +1,7 @@
 
 # 在 Linux 上安装 Terminus
 
-本文档详细介绍了在 Linux 系统上安装 Terminus 的步骤。
+本文档详细介绍了在 Linux 设备上安装 Terminus 的步骤。
 
 ## 前提条件
 
@@ -16,7 +16,7 @@
 - 已创建 [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name)
 
 :::info 信息
-了解[为什么需要 Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
+了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
 ## 1. 安装 Terminus

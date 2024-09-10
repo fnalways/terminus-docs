@@ -14,40 +14,47 @@ metadata:
   # provider registry需要安装到user-system下面
   namespace: user-system-{{ .Values.bfl.username}}
 spec:
-  # provider 的 dataType
-  dataType: app
-  deployment: demo
-  description: demo provider in app
+  version: v2   #The latest version is v2, but the system remains compatible with v1.
 
-  # provider 的可访问service
-  endpoint: app-svc
+  # provider 的 dataType, it is recommended to add app name to prevent duplication.
+  dataType: legacy_{{ .Release.Name }}
+  deployment: {{ .Release.Name }}
+  description: {{ .Release.Name }} legacy api v2
 
-  # provider 的 group
-  group: service.app
+  # provider 的可访问service. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
+  endpoint: {{ .Release.Name }}-svc.{{ .Release.Namespace }}:1234
+
+  # provider 的 group; it is recommended to add the app name to prevent duplication.
+  group: api.{{ .Release.Name }}
   kind: provider
   namespace: "{{ .Release.Namespace }}"
   opApis:
     # 提供的接口名称
     - name: AppApi
-
       # 提供的接口访问路径
-      uri: /api
-  version: v1
+      uri: /api  
 status:
   state: active
 ```
 
 ## 申请 Privder 的访问权限
 
-可在 [TerminusManifest.yaml](../package/manifest.md#sysdata) 中配置
+可在 [TerminusManifest.yaml](../package/manifest.md#sysdata) 中配置。
 
 ```Yaml
 sysData:
-- group: service.bfl
-  dataType: app
-  version: v1
+- appName: providerapp  # The appname of the api provider. Required for ProviderRegistry v2. 
+  port: 8888  # The port of the provider service
+
+  # The default domain of provider is <appName>-svc.<appName>-<username>:<port>, if the service name and app namespace is not in default format, you can specify it in following field  
+  svc: app-svc  # Name of the service. Optional for ProviderRegistry v2.
+  namespace: ns # Namespace of the app. Optional for ProviderRegistry v2.
+
+  version: v2   # version of the ProviderRegistry
+  dataType: legacy_{{ .Release.Name }}  # dataType defined in ProviderRegistry
+  group: api.{{ .Release.Name }}   # group defined in ProviderRegistry
   ops:
-  - InstallDevApp
+  - AppApi   # name of opApis defined in ProviderRegistry
 ```
 
 配置后，在 TAC 的 templates 中可引用系统在安装时将为其注入的授权使用的 `access key` 和 `access secret`

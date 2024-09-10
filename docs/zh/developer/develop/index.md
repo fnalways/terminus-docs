@@ -1,6 +1,6 @@
 # Overview
 
-在 Terminus 上开发应用与当下主流的网站开发方法并没有太多区别，您只需要额外了解一些 Terminus 的基本概念，既可在 Terminus 上开发应用。
+在 Terminus 上开发应用与当下主流的网站开发方法并没有太多区别，你只需要额外了解一些 Terminus 的基本概念，既可在 Terminus 上开发应用。
 
 - [Terminus OS 的核心理念](../../overview/terminus/overview.md)
 - [了解 Terminus Application Chart 格式](./package/chart.md)

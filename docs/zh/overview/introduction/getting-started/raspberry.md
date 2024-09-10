@@ -14,7 +14,7 @@
 
 :::info 信息
 Terminus Name 是你在 Terminus 中的唯一身份标识。
-了解[为什么需要 Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
+了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
 ## 2. 安装 Terminus

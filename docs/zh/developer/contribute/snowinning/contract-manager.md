@@ -49,21 +49,21 @@ true //是否可以创建子级
 配合上一个接口,使用 `getDefinedTagNameByIndex(name, index)` 就可以查询到此 Tag 的 name, 或者使用 `getDefinedTagNames(name)` 可以查询这个 DID 定义的所有 Tag 的 name
 
 ##### 结构化 Tag
-如果 Tag 是一个复杂的结构体, 而不是一个值, 您可以使用 `getTagType(name, tagName)` 查询结构体的定义, 然后使用返回结果中的 **fieldNamesHash** 调用 `getFieldNamesEventBlock(fieldNamesHash)` 查询结构体定义的 block, 进而通过 ethers 库中queryFilter 查询到定义时的内部变量名
+如果 Tag 是一个复杂的结构体, 而不是一个值, 你可以使用 `getTagType(name, tagName)` 查询结构体的定义, 然后使用返回结果中的 **fieldNamesHash** 调用 `getFieldNamesEventBlock(fieldNamesHash)` 查询结构体定义的 block, 进而通过 ethers 库中queryFilter 查询到定义时的内部变量名
 
 > [!NOTE]
-> 结构体查询将会返回一段 abi 类型编码, 需要参照 abi 码表进行解析, 同时, 字段名的查询也较为复杂并且容易出错, 我们推荐您使用 SDK 中提供的功能获取 Tag 信息, 而不是手工操作合约
+> 结构体查询将会返回一段 abi 类型编码, 需要参照 abi 码表进行解析, 同时, 字段名的查询也较为复杂并且容易出错, 我们推荐你使用 SDK 中提供的功能获取 Tag 信息, 而不是手工操作合约
 > 
 > 
 
-在您获取到 Tag 的结构后, 可以使用 `getTagElem(definedDidName, valueDidName, tagName, elemPath)` 获取 Tag 中的值
+在你获取到 Tag 的结构后, 可以使用 `getTagElem(definedDidName, valueDidName, tagName, elemPath)` 获取 Tag 中的值
 
 > [!NOTE]
 > - definedDidName: 定义此 Tag 的 DID
 > - valueDidName: 需要读取值的 DID
 > - elemPath: tag 结构内部, 需要读取值的变量名, 传[]为全部读取
 > 
-> 与上方的定义相同, 此接口将返回 abi 编码后的数据, 需要您基于上方的 abi 定义进行解析. 
+> 与上方的定义相同, 此接口将返回 abi 编码后的数据, 需要你基于上方的 abi 定义进行解析. 
 > 此处同样建议使用 SDK 中的功能, 而非手工操作
 
 
@@ -99,7 +99,7 @@ true //是否可以创建子级
 ##### 读写
 
 > [!NOTE]
-> 此处不建议您直接使用以下方法操作 Tag, 您应该同 Tagger 合约来操作来读写 Tag
+> 此处不建议你直接使用以下方法操作 Tag, 你应该同 Tagger 合约来操作来读写 Tag
 
 
 - 写入数据
@@ -113,7 +113,7 @@ true //是否可以创建子级
 	使用 `removeTag(defineDidName, valueDidName, tagName)` 删除一个 Tag , 此方法删除的是 Tag 在某个 DID 上的值, 而非 Tag 定义
 
 - 操作数组
-	如果您的 Tag 内部有定义数组, 那么您可以使用 `popTagElem(defineDidName, valueDidName, tagName, elePaths)` 和 `pushTagElem(defineDidName, valueDidName, tagName, elePaths, value)` 来管理此数组
+	如果你的 Tag 内部有定义数组, 那么你可以使用 `popTagElem(defineDidName, valueDidName, tagName, elePaths)` 和 `pushTagElem(defineDidName, valueDidName, tagName, elePaths, value)` 来管理此数组
 
 > [!NOTE]
 > - defineDidName: 定义 tag 的 DID
@@ -152,14 +152,14 @@ fetch()
 ```
 
 > [!NOTE]
-> 如果您是在开发环境运行, 并且允许输出日志的话, 将会在同步过程中看到当前进度
+> 如果你是在开发环境运行, 并且允许输出日志的话, 将会在同步过程中看到当前进度
 > 
 
 ###### 快速获取
-为方便您使用, SDK 中还准备了 `formatDatas` 和 `loadDatas` 两个功能, 将 formatDatas 返回的结果存储下来, 在下次使用时, 通过 loadDatas 进行加载, 就可以省掉同步时间, 更简单的方法是访问官方的 **did-support** 服务中 `/all` 接口获取完整数据, 此接口获取的数据可以直接使用 loadDatas 进行加载
+为方便你使用, SDK 中还准备了 `formatDatas` 和 `loadDatas` 两个功能, 将 formatDatas 返回的结果存储下来, 在下次使用时, 通过 loadDatas 进行加载, 就可以省掉同步时间, 更简单的方法是访问官方的 **did-support** 服务中 `/all` 接口获取完整数据, 此接口获取的数据可以直接使用 loadDatas 进行加载
 
 ##### 查询特定 DID
-如果您已经读过上面合约的查询接口,就会知道合约层面并没有提供一个完整数据的查询接口,需要组合使用多个接口才能获取到一个 DID 的完整信息, 所以在 SDK 层面我们简化了接口的设计, 这里的 `fetchDomain` 方法将会返回一个 DID 的完成信息
+如果你已经读过上面合约的查询接口,就会知道合约层面并没有提供一个完整数据的查询接口,需要组合使用多个接口才能获取到一个 DID 的完整信息, 所以在 SDK 层面我们简化了接口的设计, 这里的 `fetchDomain` 方法将会返回一个 DID 的完成信息
 
 ```Typescript
 import DID from 'did-contract-developer-components'
@@ -181,13 +181,13 @@ fetch()
 ```
 
 ###### 快速查询
-当您的 SDK 示例, 也就是上方代码中的 did, 已经运行过 loadDatas 时, fetchDomain 将会使用先使用本地数据进行匹配, 如果本地没有此 DID 的数据, 才会从链上获取数据
+当你的 SDK 示例, 也就是上方代码中的 did, 已经运行过 loadDatas 时, fetchDomain 将会使用先使用本地数据进行匹配, 如果本地没有此 DID 的数据, 才会从链上获取数据
 
 ###### 更新 DID
-如果您担心快速查询将会导致没有获取到最新的数据, 您可以使用 `updateDomain` 或 `updateDomainById` 来更新本地数据
+如果你担心快速查询将会导致没有获取到最新的数据, 你可以使用 `updateDomain` 或 `updateDomainById` 来更新本地数据
 
 ###### 模糊匹配
-与快速查询情况相同, 当您本地加载过数据后, 就可以使用 SDK 提供的模糊查找功能了, 这两个功能都仅在本地数据中进行匹配
+与快速查询情况相同, 当你本地加载过数据后, 就可以使用 SDK 提供的模糊查找功能了, 这两个功能都仅在本地数据中进行匹配
 ```Typescript
 import DID from 'did-contract-developer-components'
 //... code
@@ -265,7 +265,7 @@ fetch()
 #### Tag
 
 ##### 定义 Tag
-使用 SDK 定义 Tag 时, 您可以使用面向对象的编程方法来构建一个 Tag 的内部结构, 无需考虑编码问题, 以下示例中包含了大多数常用数据类型
+使用 SDK 定义 Tag 时, 你可以使用面向对象的编程方法来构建一个 Tag 的内部结构, 无需考虑编码问题, 以下示例中包含了大多数常用数据类型
 
 ```Typescript
 import DID from 'did-contract-developer-components'

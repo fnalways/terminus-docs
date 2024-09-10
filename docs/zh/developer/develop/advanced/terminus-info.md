@@ -2,34 +2,13 @@
 
 terminus-info 是一个无需鉴权的接口，我们将一些系统可以对外展示的信息放在这里。可以理解为它是房子的门牌。
 
-## 内部调用
-
-```typescript
-public async updateTerminusInfo(): Promise<TerminusInfo> {
-    const response: any = await axios.get(
-        'http://bfl/bfl/backend/v1/terminus-info',
-    );
-    if (response.status !== 200) {
-        throw new Error(response.statusText);
-    }
-    if (response.data.code != 0) {
-        throw new Error(response.data);
-    }
-
-    this.terminusInfo = response.data.data;
-    this.logger.log('terminusInfo');
-    this.logger.log(this.terminusInfo);
-    return response.data.data;
-}
-```
-
 ## 外部调用
 
-略
+```
+https://<username>.myterminus.com/api/terminus-info
+```
 
-## 字段含义
-
-数据结构
+## 数据结构
 
 ```json
 interface TerminusInfo {

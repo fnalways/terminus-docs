@@ -4,17 +4,17 @@ outline: [2, 3]
 
 # Desktop
 
-您可以通过 Desktop 使用和管理在 Terminus OS 里安装的应用。
+你可以通过 Desktop 使用和管理在 Terminus OS 里安装的应用。
 
 ![alt text](/images/how-to/terminus/desktop.jpg)
 
 ## Dock & Launchpad
 
-当点击 Dock 上的“LaunchPad”图标后，您安装的所有就应用会呈现出来。
+当点击 Dock 上的“LaunchPad”图标后，你安装的所有就应用会呈现出来。
 
 ![alt text](/images/how-to/terminus/desktop_lauchpad.jpg)
 
-您可以采用跟电脑一样的交互方式
+你可以采用跟电脑一样的交互方式
 
 - 点击图标打开应用
 - 拖动图标改变在它们 Launchpad 里的排序
@@ -43,7 +43,7 @@ outline: [2, 3]
 
 ### 应用窗口
 
-应用默认采用“窗口”模式打开，它是一个嵌入在桌面的`iframe`页面，您基本可以像操作电脑窗口一样操作它们：
+应用默认采用“窗口”模式打开，它是一个嵌入在桌面的`iframe`页面，你基本可以像操作电脑窗口一样操作它们：
 
 - 通过点击标题栏，来拖动窗口位置
 - 通过拖动窗口的边缘，来缩放窗口的大小

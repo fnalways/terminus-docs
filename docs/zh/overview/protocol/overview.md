@@ -1,17 +1,18 @@
 ---
+
 outline: deep
+
 ---
 
-# Renaissance of the Protocol
+# 协议的复兴
 
-大概 5 年前，MIKE MASNICK 发表了一篇文章
-[Protocols, Not Platforms: A Technological Approach to Free Speech](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech), 向我们阐述了协议对于未来的重要性。
+大概 5 年前，MIKE MASNICK 发表了一篇文章 [Protocols, Not Platforms: A Technological Approach to Free Speech](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech), 向我们阐述了协议对于未来的重要性。
 
 我们欣喜的看到，有识之士们已经意识到这点，越来越多基于协议的应用被开发出来，例如：
 
-- 基于 ActivyPub 开发的 Mastodon
+- 基于 ActivityPub 开发的 Mastodon
 - 基于 Matrix 开发的 Element，
-- 基于 [AT Protocol ](https://atproto.com/) 的 BlueSky
+- 基于 [AT Protocol](https://atproto.com/) 的 BlueSky
 - Nostr
 - Farcaster
 
@@ -23,17 +24,17 @@ outline: deep
 
 通常理解，协议生态有四个角色：
 
-- Protocol：项目的发起者，标准的制定者，核心服务的开发者
-- Provider：提供硬件运行协议的核心服务，保证协议网络的运转。
+- **Protocol**：项目的发起者，标准的制定者，核心服务的开发者.
+- **Provider**：提供硬件运行协议的核心服务，保证协议网络的运转。
 
-  - 在区块领域，这类角色被称为 Miner
-  - 在联邦网络，例如 Mastodon，它们被称为 Relay
-  - 在 BT 网络，Tracker 承担了类似的角色
+  - 在区块领域，这类角色被称为 Miner.
+  - 在联邦网络，例如 Mastodon，它们被称为 Relay.
+  - 在 BT 网络，Tracker 承担了类似的角色.
 
-  我们统一称呼它们为 Provider，服务的提供者
+  我们统一称呼它们为 Provider，服务的提供者.
 
-- Application：基于 Protocol 开发的应用，应用见通过 Provider 进行通信，或者 P2P 通信
-- User：使用上述服务，并为生态注入资金（资源）
+- **Application**：基于 Protocol 开发的应用，应用见通过 Provider 进行通信，或者 P2P 通信.
+- **User**：使用上述服务，并为生态注入资金（资源）.
 
 Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力，时间和金钱进行争夺。
 
@@ -53,23 +54,23 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 用户运行服务器的成本是确定的：
 
-- 运行服务器需要专业的知识
-- 运行服务器需要初期硬件的投入
-- 运行服务器需要持续投入时间进行运维和支付维护费用
+- 运行服务器需要专业的知识。
+- 运行服务器需要初期硬件的投入。
+- 运行服务器需要持续投入时间进行运维和支付维护费用。
 
-对于以太坊的存档节点这样的服务，甚至对于小企业都难以接受
+对于以太坊的存档节点这样的服务，甚至对于小企业都难以接受。
 
 ### 产品体验
 
-去中心化的产品通常并不比他们的中心化同类好。互联网 20 年的历史，就是一部从去中心化软件到中心化平台过渡的历史。（讽刺的是，这个潮流符合上述的不等式）
+去中心化的产品通常并不比他们的中心化同类好。互联网 20 年的历史，就是一部从去中心化软件到中心化平台过渡的历史。（讽刺的是，这个潮流符合上述的不等式。）
 
-如果您有软件开发的背景，就可以比较容易的理解，在相同资源投入的情况下，中心化系统往往比去中心化系统的体验更容易优化。
+如果你有软件开发的背景，就可以比较容易的理解，在相同资源投入的情况下，中心化系统往往比去中心化系统的体验更容易优化。
 
 时至今日，去中心化系统只存在于 CDN，区块链 等极少数场景。
 
 ### 用户为什么不迁移
 
-总结下不等式两边
+总结下不等式两边：
 
 1. 左边：从 Web2 Platform 迁移到 Protocol 生态，用迁移成本高
 2. 右边：体验的提升为负
@@ -88,7 +89,7 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 简单的说，Terminus 需要通过和 Protocol 协作，在除隐私保护外的更多场景为用户带来体验的提升。我认为有两类场景：
 
-- 在 Web2 Platform 服务边际用户成本不为 0 的场景
+- **在 Web2 Platform 服务边际用户成本不为 0 的场景**
 
   Web2 Platform 的一大特点就是前期投入一个巨大的固定成本，之后用户服务的边际成本非常的低，所以用户可以免费使用，服务提供商通过广告盈利。
 
@@ -98,7 +99,7 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
   过去 Provider 由 Web2 Platform 担任，现在我们希望将这些协议化这些资源。
 
-- 用户在 Web2 Platform 为边际服务支付费用的场景
+- **用户在 Web2 Platform 为边际服务支付费用的场景**
 
   例如，SAAS，产品按照人头收取的费用。
 
@@ -117,7 +118,7 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 1. 在软件架构层面，我们认为协议网络是基于 信誉和 RFQ 的
 2. 在激励层面，我们希望遵循价值是由用户付费确定的原则
 
-### 基于 信誉和 RFQ 的 Protocol 网络
+### 基于信誉和 RFQ 的 Protocol 网络
 
 通过前面的分析，我们已经知道 Application 和 Provider 在协议生态中承担的角色。
 
@@ -132,19 +133,19 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 最后，结合一张图，介绍下我们设想的协议网络是如何运作的：
 
-![alt text](/images/overview/protocol/rfq.jpeg)
+![RFQ](/images/overview/protocol/rfq.jpeg)
 
-1. Application 发送 ASK 给 Relay
-2. Relay 将 ASK 广播给 Provider
-3. Provider 将 Bid 返回给 Relay
-4. Relay 将 Bid 返回给 Application
-5. Application 根据 Bid 和 Provider 的 Reputation 进行挑选，并完成付款
-6. Provider 为 Application 提供服务
-7. Application 对 Provider 的服务进行评价
+1. Application 发送 ASK 给 Relay。
+2. Relay 将 ASK 广播给 Provider。
+3. Provider 将 Bid 返回给 Relay。
+4. Relay 将 Bid 返回给 Application。
+5. Application 根据 Bid 和 Provider 的 Reputation 进行挑选，并完成付款。
+6. Provider 为 Application 提供服务。
+7. Application 对 Provider 的服务进行评价。
 
 电商生态就是基于这个框架建立的，它是被证明过可以在真实场景被大规模采用的。
 
-更多详情可以了解 [Snowinning Protocol](../snowinning/overview.md) 和 [Otmoic Protocol](./otmoic.md)。
+更多详情可以了解 [Snowinning Protocol](../../developer/contribute/snowinning/overview.md) 和 [Otmoic Protocol](./otmoic.md)。
 
 ### 价值分配
 
@@ -161,9 +162,9 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 ## Terminus 准备的协议
 
-[Snowinning Protocol](../snowinning/overview.md) 是一个为去中心化身份和公开透明信誉体系准备的协议，也是 Terminus BEC 架构的三个组件之一。
+[Snowinning Protocol](../../developer/contribute/snowinning/overview.md) 是一个为去中心化身份和公开透明信誉体系准备的协议，也是 Terminus BEC 架构的三个组件之一。
 
-[Otmoic Protocol](./otmoic.md) 是一个无需第三方信任的，为 Depin，AI Agent，Crypto Trading 打造的自动化价值交换网络
+[Otmoic Protocol](./otmoic.md) 是一个无需第三方信任的，为 Depin，AI Agent，Crypto Trading 打造的自动化价值交换网络。
 
 [Market Protocol](./market.md) 是一个为解决应用的无许可分发问题创建的协议，它的核心是规定了 TAC 结构。
 

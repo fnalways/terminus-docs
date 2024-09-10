@@ -60,7 +60,7 @@ Terminus 系统中存在三种类型的域名：
 
 基于 [VC Service](vc.md)，我们设计了发行者和验证者流程，帮助用户申请 Terminus Name：
 
-![alt text](../../../public/images/overview/snowinning/image1.jpeg)
+![alt text](/images/overview/snowinning/image1.jpeg)
 
 ### Gmail 发行者服务
 
@@ -96,4 +96,4 @@ Alice 现在可以将发行的 VC 存储到 TermiPass。
 
 ## 组织 Terminus Name
 
-使用 **组织 Terminus Name** 本质上与使用 **个人 Terminus Name** 相同。唯一的区别是管理员需要首先[申请自定义 Domain](../../../how-to/space/domain/host-domain.md)。更多详情，请参考 [入门](../../../overview/introduction/getting-started/)。
+使用 **组织 Terminus Name** 本质上与使用 **个人 Terminus Name** 相同。唯一的区别是管理员需要首先[申请自定义 Domain](../../../how-to/space/domain/host-domain.md)。更多详情，请参考[快速开始](../../../overview/introduction/getting-started/)。

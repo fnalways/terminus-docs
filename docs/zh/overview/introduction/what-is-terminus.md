@@ -6,11 +6,15 @@ outline: [2, 3]
 
 Terminus 的使命是“让人们再次拥有自己的数据”。
 
-它提供了一个基于 [BEC](./bec/) 架构的下一代去中心化互联网框架，由三个核心组件和一系列协议组成：
+Terminus is a free, self-hosted operating system built on Kubernetes. It converts your edge device into a true home cloud, providing powerful cloud-level capabilities while maintaining ease of use and privacy. By securely storing your data and accessing your self-hosted services from anywhere via Terminus, you gain complete control over your digital life. 
+
+Terminus is dedicated to advancing technological and AI equality by democratizing capabilities previously accessible only to large companies, making them available to every user.
+
+Terminus consists of three core components and a series of protocols.
 
 **核心组件**：
 
-- [Snowinning Protocol](../snowinning/overview.md)，一个遵循了 W3C 标准，用户自主拥有，基于区块链智能合约的身份和信誉协议
+- [Snowinning Protocol](../../developer/contribute/snowinning/overview)，一个遵循了 W3C 标准，用户自主拥有，基于区块链智能合约的身份和信誉协议
 - [Terminus OS](../terminus/overview.md)，一个运行在用户自己拥有的边缘设备上的基于 Kubernetes 改进的 source-available 的云原生操作系统
 - [TermiPass](../../how-to/termipass/overview.md)，一个帮助用户管理链上身份和边缘设备的客户端软件
 
@@ -22,32 +26,18 @@ Terminus 的使命是“让人们再次拥有自己的数据”。
 - [Market Protocol](../protocol/market.md)，一个无许可的应用分发协议，在新世界里，不再有苹果的审核和抽成
 - [Recommend Protocol](../protocol/recommend.md)，一个去中心化和隐私保护的信息分发协议，期待将你从信息茧房中抽离出来
 
-我们期望找到更多志同道合的伙伴，打造出更多的协议。让人们能重新获得自己的数字主权。
-
-Terminus 是阿西莫夫《基地》这本书中，一个在银河尽头的行星，科学家在这里编写《大百科全书》，希望记录全人类过去千年所有的知识。
-
-这和我们的愿景相吻合，我们期望“未来每个人，每个家庭和每个企业都能通过自己的 Terminus 来记录各自独有的旅程”。
-
 ## Use Cases
 
-- **Self-Hosted**
+- **Self-Hosted**: Terminus serves as a one-stop self-hosted solution where users can host and manage their data, operations, and digital life effectively, with full data ownership.
 
-  我们希望将 Terminus 打造成一个一站式的 Self-Hosted 解决方案。
+- **Local AI**: With the [AI Framework](../terminus/ai.md) provided by Terminus, users can host and run world-class open-source AI models locally, including large language models, image generation, and speech recognition. This allows the capability to create custom AI assistants that integrate seamlessly with personal data and applications, all while ensuring enhanced privacy and control.
 
-  过去 2 年，我一直在 [`/r/SelfHosted/`](https://www.reddit.com/r/selfhosted/) 汲取灵感，Terminus 就是献给你们的礼物。
+- **Personal data repository**: Securely store, sync, and manage your photos, documents, and important files in a unified storage and access anywhere. 
 
-- **Local AI**
+- **Self-hosted workspace**: Create a free, powerful workspace for your team or family with open source selfhosted alternatives. 
 
-  在人们对隐私越发关注的当下，Terminus 提供的 [AI Framework](../terminus/ai.md) 帮助用户无需编写代码就可以在本地搭建 Agent。
+- **Private media server**: Host your own streaming services with your personal media collections. 
 
-  通过和本地数据以及应用的集成，我们希望 Terminus 在未来能成为用户的第二大脑。
+- **Smart Home Hub**: Create a central control point for your IoT devices and home automation.  
 
-- **去中心化社交媒体**
-
-  用户可以在 Terminus 上一键安装 Mastodon，Ghost，Wordpress 等应用，打造自己的个人品牌，直接跟用户互动，不用担心被平台封禁，也不再被平台抽成。
-
-- **DePin**
-
-  Terminus 提供了对集群从计算，存储到网络全面的管理，项目方可以在 Terminus 上开发矿工程序。用户可以将闲置的物理资源共享给全网获得报酬。
-
-  虽然物理世界有效的工作量证明很难找到，但我们坚信通过 [Snowinning Protocol](../snowinning/overview.md) 和 [Otmoic Protocol](../protocol/otmoic.md) 的组合，一定能打造出真正让用户日常使用的 DePin 网络
+- **User-owned decentralized social media**: Easily install decentralized social media apps such as Mastodon, Ghost, and WordPress on Terminus OS, allowing you to build a personal brand without the risk of being banned or paying platform commissions. 

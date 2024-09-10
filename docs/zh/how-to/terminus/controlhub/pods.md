@@ -32,7 +32,7 @@
 
 ## Resources
 
-Resources是从Pod角度对当前和历史的系统物理资源的用量的统计图表。您可以查看所有节点上运行的Pod的资源消耗汇总，也可以在页面右上角，选择特定节点，单独查看其上面运行的Pod消耗的系统物理资源。
+Resources是从Pod角度对当前和历史的系统物理资源的用量的统计图表。你可以查看所有节点上运行的Pod的资源消耗汇总，也可以在页面右上角，选择特定节点，单独查看其上面运行的Pod消耗的系统物理资源。
 
 ![resources](/images/how-to/terminus/controlhub/pods/04.jpg)
 

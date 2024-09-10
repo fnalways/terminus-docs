@@ -24,7 +24,9 @@ postgres:
 
 ## NoSQL
 
-Terminus 部署的 NoSQL 集群，采用了最常用的 MongoDB。并且使用[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator)对 MongoDB 集群进行管理。用户可以对 MongoDB Cluster 进行横向的副本扩展，以及数据库的备份和还原。
+The NoSQL cluster is not deployed by default in Terminus, but it can be easily installed from the Market. To set up a NoSQL cluster, the administrator needs to install the [**MongoDB**](https://market.jointerminus.com/middleware/mongodb) middleware. Once installed, the [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) automatically manages the **MongoDB** cluster. 用户可以对 MongoDB Cluster 进行横向的副本扩展，以及数据库的备份和还原。
+
+You can specify detailed configuration for MongoDB in [TerminusManifest.yaml](../package/manifest.md#middleware) as follows:
 
 ```yaml
 middleware:
@@ -33,6 +35,14 @@ middleware:
     databases:
       - name: db0
       - name: db1
+options:
+  dependencies:
+  - name: terminus
+    type: system
+    version: '>=1.6.0-0'
+  - name: mongodb
+    version: ">=6.0.0-0"
+    type: middleware      
 ```
 
 ## Cache

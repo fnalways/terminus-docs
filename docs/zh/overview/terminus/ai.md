@@ -2,27 +2,28 @@
 outline: [2, 3]
 ---
 
-# AI Framework
+# AI 框架
 
-## Motivation
+## 动机
 
-AI 在过去 2 年里获得了长足的进步，但中心化的 AI 服务在隐私，费用和可组合性方面收到了一定的挑战，开源社区也涌现了很多帮助用户在本地搭建 AI 服务的项目。
+AI 在过去两年里获得了长足的进步，但中心化的 AI 服务在隐私、费用和可组合性方面收到了一定的挑战，开源社区也涌现了很多帮助用户在本地搭建 AI 服务的项目。
 
 旨在让用户重新拥有数据，并能够对硬件和软件进行管理的 Terminus OS 正是为这个时代而生。Terminus OS 作为用户的身份化身或第二大脑的优势在于：
 
 对于用户：
 
-- 用户的数据真正收到了保护
-- 在数据收到保护的同事，Agent 可以基于您本地的文档，照片，视频，聊天记录，健康记录等私有数据回答问题
-- 通过 UI（[Dify.ai](../../how-to/terminus/dify.md)）和 [Market](../../how-to/terminus/market/index.md)，用户无需编码即可搭建和使用 Agent
-- 通过和 Agent 和 [TermiPass](../../how-to/termipass/overview.md) 高度集成，用户随时随地可以触达服务
-- 低成本，用户自己购买 GPU 而不是租用云厂商的 GPU
+- 用户的数据真正收到了保护。
+- 在数据收到保护的同事，Agent 可以基于你本地的文档，照片，视频，聊天记录，健康记录等私有数据回答问题。
+- 通过 UI（[Dify.ai](../../how-to/terminus/dify.md)）和 [Market](../../how-to/terminus/market/index.md)，用户无需编码即可搭建和使用 Agent。
+- 通过和 Agent 和 [TermiPass](../../how-to/termipass/overview.md) 高度集成，用户随时随地可以触达服务。
+- 低成本，用户自己购买 GPU 而不是租用云厂商的 GPU。
 
 对于开发者：
 
-- 基于 Kubernetes，Terminus OS 对 AI 服务链条上的不同模块有良好的编排能力，包括内外部的模型，知识库，向量数据库，RUG 系统，从而达到不同模块间的可组合
-- Terminus OS 内置了账户系统，网页抓取，内容抽取，秘密管理等功能，组件不用再自己去实现类似功能
-- 通过和 [Snowinning Protocol](../snowinning/overview.md) 和 [Otmoic Protocol](../protocol/otmoic.md) 相结合，探索将 Agent，硬件资源服务化和货币化
+- 基于 Kubernetes，Terminus OS 对 AI 服务链条上的不同模块有良好的编排能力，包括内外部的模型、知识库、向量数据库、RUG 系统，从而达到不同模块间的可组合。
+- Terminus OS 内置了账户系统，网页抓取，内容抽取，秘密管理等功能，组件不用再自己去实现类似功能。
+- 通过和 [Snowinning Protocol](../../developer/contribute/snowinning/overview.md)和 [Otmoic Protocol](../protocol/otmoic.md) 相结合，探索将 Agent，硬件资源服务化和货币化。
+
 
 ## GPU 管理
 
@@ -38,7 +39,7 @@ Terminus 在安装时，用户可根据节点机器的情况 [设置是否启用
 
 ## 模型管理
 
-用户和开发者可以在本地环境中无缝集成开源的 LLM、Imagine、Vision 和 Speech 模型。
+用户和开发者可以在本地环境中无缝集成开源的 LLM、Image、Vision 和 Speech 模型。
 
 用户可以通过 [Market](../../how-to/terminus/market/index.md) 安装模型，模型在本地通过 [Nitro](https://nitro.jan.ai/) 进行管理。
 

@@ -12,25 +12,25 @@ outline: [2, 3]
 
 如果输入的域名，尚未被它人绑定，就可以创建成功。接下来就到了设置域名的步骤。
 
-注意：请确保您登录的账号处于 DID 状态（即尚未绑定 Terminus Name 的状态），了解更多详情，请参考[为何不能绑定新域名？](./index.md#为何不能绑定新域名)
+注意：请确保你登录的账号处于 DID 状态（即尚未绑定 Terminus Name 的状态），了解更多详情，请参考[为何不能绑定新域名？](./index.md#为何不能绑定新域名)
 
 ### TXT 步骤
 
 ![alt text](/images/how-to/space/txt.jpg)
 
-为域名添加 TXT 信息以验证其所有权，请按提示在您的域名设置中添加 txt 记录。添加完成后，请等待我们的验证，验证完成之后，域名状态将自动更新。
+为域名添加 TXT 信息以验证其所有权，请按提示在你的域名设置中添加 txt 记录。添加完成后，请等待我们的验证，验证完成之后，域名状态将自动更新。
 
 ### NS 步骤
 
 ![alt text](/images/how-to/space/ns.jpg)
 
-为域名添加 NS 信息，以便让 Terminus Space 享有 DNS 配置权限。请按提示在您的域名设置中添加 NS 记录。添加完成后，请等待我们的验证，验证完成之后，域名状态将自动更新。
+为域名添加 NS 信息，以便让 Terminus Space 享有 DNS 配置权限。请按提示在你的域名设置中添加 NS 记录。添加完成后，请等待我们的验证，验证完成之后，域名状态将自动更新。
 
 ### Awaiting domain's Verifiable Credential
 
 ![alt text](/images/how-to/space/awaiting_domain.jpg)
 
-在 TermiPass 手机 APP 上申请域名的 Verifiable Credential，确保您的 Terminus Name 对此域名拥有最终的控制权。
+在 TermiPass 手机 APP 上申请域名的 Verifiable Credential，确保你的 Terminus Name 对此域名拥有最终的控制权。
 
 提交上链完成后，即可配置域名邮箱规则
 
@@ -40,7 +40,7 @@ outline: [2, 3]
 
 ## Domain status and processing
 
-您提交了域名之后，还需要几个步骤，以完成我们对您输入的域名的合法性认证。
+你提交了域名之后，还需要几个步骤，以完成我们对你输入的域名的合法性认证。
 
 为了方便用户理解域名的不同状态和需要进行的相应设置，我们通过以下表格进行了整理。
 | 状态 | 处理方式 |

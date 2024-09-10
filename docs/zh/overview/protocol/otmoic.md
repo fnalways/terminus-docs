@@ -12,17 +12,17 @@ Otmoic 是一个基于 Snowinning Protocol 的，无需第三方信任的，为 
 
 Otmoic Protocol 在设计时有以下的特色：
 
-- 为 Trader 和 Liquidity Provider 提供了链上的 [Reputation](../snowinning/concepts.md#reputation)机制，解决 Free Mint 问题
-- 支持基于 [Verifiable Credential](../snowinning/concepts.md#verifiable-credential) 的 [KYC](#kyc)
-- 价格发现基于 RFQ
-- 链上的交易基于原子交换
-- 通过在 Terminus OS 里安装应用，支持 Liquidity Provider 自动做市
+- 为 Trader 和 Liquidity Provider 提供了链上的 [Reputation](../../developer/contribute/snowinning/concepts.md#reputation)机制，解决 Free Mint 问题。
+- 支持基于 [Verifiable Credential](../../developer/contribute/snowinning/concepts.md#verifiable-credential) 的 [KYC](#kyc)。
+- 价格发现基于 RFQ。
+- 链上的交易基于原子交换。
+- 通过在 Terminus OS 里安装应用，支持 Liquidity Provider 自动做市。
 
-通过上述设计，可以让 Otmoic Protocol 广泛应用于 DePin，AI Bot，Creator Economy，Crypto Trading，Crypto Crossing Chain，Fiat And Crypto Gateway 等场景。
+通过上述设计，可以让 Otmoic Protocol 广泛应用于 DePin，AI Bot，Creator Economy，Crypto Trading，Crypto Cross-Chain，Fiat and Crypto Gateway 等场景。
 
 ## 开源项目
 
-您可以在这里查看协议的代码：
+你可以在这里查看协议的代码：
 :::info 代码仓库
 
 - 合约
@@ -151,42 +151,42 @@ Otmoic Protocol 在设计时有以下的特色：
 | append_information     | String |                       |                           |                         | 附加信息                             |
 
 > [!NOTE]
-> dst_amount_need dst_native_amount_need 由 relay 基于本次交换的信息计算得出
-> system_fee_dst system_fee_src 由 relay 从链上获取
+> `dst_amount_need`和`dst_native_amount_need`由 relay 基于本次交换的信息计算得出
+> `system_fee_dst`和`system_fee_src`由 relay 从链上获取
 >
-> 上述四条信息均非交换流程的必要参数, 目的仅为降低后续流程及其他模块的实现难度
+> 上述四条信息均非交换流程的必要参数, 目的仅为降低后续流程及其他模块的实现难度。
 
-- 关于每一步的操作时间限制
-  - transferOut: agreement_reached_time + 1 \* step_time_lock 之前调用，否则调用失败
-  - transferIn: agreement_reached_time + 2 \* step_time_lock 之前调用，否则调用失败
+- **关于每一步的操作时间限制**
+  - transferOut: `agreement_reached_time + 1 \* step_time_lock`之前调用，否则调用失败。
+  - transferIn: `agreement_reached_time + 2 \* step_time_lock`之前调用，否则调用失败。
   - confirmTransferOut:
-    - 使用交易发起者提供的 hashlock 进行验证时, agreement_reached_time + 3 \* step_time_lock 之前调用，否则调用失败
-    - 使用 relay 提供的 hashlock 进行验证时, agreement_reached_time + 6 \* step_time_lock 之前调用，否则调用失败
-  - confirmTransferIn: agreement_reached_time + 5 \* step_time_lock 之前调用，否则调用失败
-  - refundTransferOut: agreement_reached_time + 7 \* step_time_lock 之后调用，否则调用失败
-  - refundTransferIn: agreement_reached_time + 7 \* step_time_lock 之后调用，否则调用失败
+    - 使用交易发起者提供的 hashlock 进行验证时, `agreement_reached_time + 3 \* step_time_lock`之前调用，否则调用失败。
+    - 使用 relay 提供的 hashlock 进行验证时, `agreement_reached_time + 6 \* step_time_lock`之前调用，否则调用失败。
+  - confirmTransferIn: `agreement_reached_time + 5 \* step_time_lock`之前调用，否则调用失败。
+  - refundTransferOut: `agreement_reached_time + 7 \* step_time_lock`之后调用，否则调用失败。
+  - refundTransferIn: `agreement_reached_time + 7 \* step_time_lock`之后调用，否则调用失败。
 
 > [!NOTE]
-> 预期的正常操作流程和时间限制是
+> 预期的正常操作流程和时间限制是：
 >
-> - transferOut: 1 \* step_time_lock
-> - transferIn: 2 \* step_time_lock
-> - confirmTransferOut: 3 \* step_time_lock
-> - confirmTransferIn: 4 \* step_time_lock
+> - transferOut: `1 \* step_time_lock`
+> - transferIn: `2 \* step_time_lock`
+> - confirmTransferOut: `3 \* step_time_lock`
+> - confirmTransferIn: `4 \* step_time_lock`
 >
-> 但是, 考虑到交换双方可能出现的作弊行为, 所以 confirmTransferOut,confirmTransferIn 的时间限制需要调整,
+> 但是, 考虑到交换双方可能出现的作弊行为, 所以`confirmTransferOut`和`confirmTransferIn`的时间限制需要调整。
 >
-> - 4 _ step_time_lock 时间到达后, lp 未进行 confirmTransferIn 操作, 此时 relay 会主动介入, 进行 confirmTransferIn 操作, 所以 4 _ step_time_lock ~ 5 \* step_time_lock 的时间段是留给 relay 进行防作弊操作的时间
-> - transferIn 所使用的 hashlock 由交换发起者提供, 如果交易发起者在 5 _ step_time_lock 的时间边界直接操作 confirmTransferIn, 则 relay 会在此时介入, 使用 relay 提供的 hashlock 进行 所以 confirmTransferOut, 5 _ step_time_lock ~ 6 \* step_time_lock 的时间段就是此流程的执行时间
+> - 如果`4 * step_time_lock`时间到达后, LP 未进行`ConfirmTransferIn`操作, 此时 relay 会主动介入, 进行`ConfirmTransferIn`操作, 所以`4 * step_time_lock ~ 5 * step_time_lock`的时间段是留给 relay 进行防作弊操作的时间。
+> - `TransferIn`所使用的 hashlock 由交换发起者提供, 如果交易发起者在`5 * step_time_lock`的时间边界直接操作`ConfirmTransferIn`, 则 relay 会在此时介入, 使用 relay 提供的 hashlock 进行`ConfirmTransferOut`, `5 * step_time_lock ~ 6 * step_time_lock`的时间段就是此流程的执行时间。
 
-- 关于交易签名
+- **关于交易签名**
 
-交易发起方需要使用 requestor 对交易信息进行签名, 签名后的结果填入 user_sign 字段
-lp 则需要使用已在 DID 合约中认证过的地址对交易进行签名, 签名后的结果填入 lp_sign 字段
+交易发起方需要使用`requestor`对交易信息进行签名, 签名后的结果填入`user_sign`字段
+lp 则需要使用已在 DID 合约中认证过的地址对交易进行签名, 签名后的结果填入`lp_sign`字段
 
 > [!NOTE]
-> 在 evm 类型的链中, 签名遵循 EIP712 进行
-> 其他类型的链, 签名遵循链上支持的类似协议进行
+> 在 evm 类型的链中, 签名遵循 EIP712 进行。
+> 其他类型的链, 签名遵循链上支持的类似协议进行。
 
 - EIP712 Types
 

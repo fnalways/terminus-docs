@@ -22,7 +22,7 @@ Admin 才能看到这个页面
 
 1. 确认 Terminus Name
 
-   - 确认新用户的 Terminus Name，如果他还没有 Terminus Name，请让他参考 [Getting Started](../../../overview/introduction/getting-started.md#member) 进行申请
+   - 确认新用户的 Terminus Name，如果他还没有 Terminus Name，请让他参考 [Getting Started](../../../overview/introduction/getting-started/index.md)进行申请
      :::info
      请确保用户的 Terminus Name 的 Domain 和这台 Terminus 的 Domain 一致
      :::
@@ -46,7 +46,7 @@ Admin 才能看到这个页面
 
 1. 将 Wizard URL 和首次登录 One Time Password 发送给用户
 
-   - 创建成功之后收到一个弹窗，里面显示了用户的 Terminus Name、初始密码、以及 Wizard 引导激活链接。您可以复制这些信息，发送给新用户去激活这个账号。
+   - 创建成功之后收到一个弹窗，里面显示了用户的 Terminus Name、初始密码、以及 Wizard 引导激活链接。你可以复制这些信息，发送给新用户去激活这个账号。
      :::info
      如果用户没记住激活链接或者初始密码，请在这个未激活的账号详情页底部查看激活链接，以及重置初始密码
      :::
@@ -67,7 +67,7 @@ Admin 才能看到这个页面
 
 ### Reset User Password
 
-如果您的成员用户不小心忘记了密码，您可以在此帮助他重置密码。重置密码是一串随机字符。
+如果你的成员用户不小心忘记了密码，你可以在此帮助他重置密码。重置密码是一串随机字符。
 
 - 如果成员用户尚未激活，请收到重置密码之后，请立即访问激活 url 地址，[立即激活](../setup/wizard.md)。
 
@@ -75,7 +75,7 @@ Admin 才能看到这个页面
 
 ### Set Resource Limit
 
-您可以在此调整和配置这个用户的 CPU、内存的使用额度。
+你可以在此调整和配置这个用户的 CPU、内存的使用额度。
 
 请注意单个用户的 CPU、内存的使用额度，不得超过集群的 CPU、内存的上限。
 

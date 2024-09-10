@@ -23,7 +23,7 @@ Home 是用户的安全中心。
 
 ### Change Password
 
-在安全设置中，您可以修改 Terminus 的登录密码。
+在安全设置中，你可以修改 Terminus 的登录密码。
 
 ### Forcing VPN access to private entrance (Only VPN Mode)
 
@@ -31,7 +31,7 @@ Home 是用户的安全中心。
 
 需要注意的是，我们要求满足至少 2 台装有 TermiPass 的设备启用了 VPN，才能激活这个开关。典型的场景是，电脑和手机都安装了 TermiPass 并激活了 VPN 访问。
 
-您可以在 [HeadScale 连接状态](#headscale-的连接状态) 查看启用了 VPN 功能的 TermiPass 列表。<br>
+你可以在 [HeadScale 连接状态](#headscale-的连接状态) 查看启用了 VPN 功能的 TermiPass 列表。<br>
 
 了解如何在 TermiPass 客户端使用 VPN 连接，请查看这里 [VPN connection](../../termipass/manage-terminus.md#vpn-connection)。
 
@@ -64,7 +64,7 @@ Home 是用户的安全中心。
 
 显示了 Account 系统内，当前所有的有效令牌，这些令牌可能是通过 [Login](../setup/login.md) 登录获取的，也可能是通过 TermiPass 登录获取的。
 
-您可以在这里对令牌进行撤销。令牌撤销后，持有令牌的设备需要重新输入登录密码和二次验证码才能再次访问 Terminus。
+你可以在这里对令牌进行撤销。令牌撤销后，持有令牌的设备需要重新输入登录密码和二次验证码才能再次访问 Terminus。
 
 ![alt text](/images/how-to/terminus/list_of_sso_authorization_tokens.png)
 

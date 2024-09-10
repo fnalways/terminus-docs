@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Management Domain
 
-请先完成[创建 Domain](../../space/domain/host-domain.md)。完成之后您就可以「设置组织成员的邮箱邀请规则」，通过邮箱来邀请成员绑定属于自己的组织 Terminus Name 了。
+请先完成[创建 Domain](../../space/domain/host-domain.md)。完成之后你就可以「设置组织成员的邮箱邀请规则」，通过邮箱来邀请成员绑定属于自己的组织 Terminus Name 了。
 
 ## Set Rule
 
@@ -28,10 +28,10 @@ outline: [2, 3]
 
 ### Add Member
 
-在域名管理的详情页面，您可以手动添加组织的成员。只需要输入他的邮箱地址即可。
+在域名管理的详情页面，你可以手动添加组织的成员。只需要输入他的邮箱地址即可。
 
 添加完成之后，请通知此用户使用他的邮箱地址来[绑定为组织 Terminus Name](../../termipass/account/index.md#organization-terminus-name)。
 
 ### Remove Member
 
-您可以在列表中删除未绑定 Terminus Name 的邮箱。如果这名成员已经完成了组织 Terminus Name 的绑定，则无法再删除。
+你可以在列表中删除未绑定 Terminus Name 的邮箱。如果这名成员已经完成了组织 Terminus Name 的绑定，则无法再删除。

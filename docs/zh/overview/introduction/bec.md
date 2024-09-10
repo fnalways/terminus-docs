@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# BEC - Let people own their data again
+# BEC - 让人们重新拥有自己的数据
 
 ## Web 2.0 面对的问题
 
@@ -16,7 +16,7 @@ outline: [2, 3]
 
 这就是我们所处的互联网，寡头公司利用用户数据获得垄断地位和巨额利润。
 
-而作为用户，我们的隐私权，言论自由权，数字财产权，在受到严重威胁。要想改变当前寡头垄断的互联网世界，我们需要“让人们再次拥有自己的数据”。
+而作为用户，我们的隐私权，言论自由权，数字财产权，在受到严重威胁。要想改变当前寡头垄断的互联网世界，我们需要“让人们重新拥有自己的数据”。
 
 这就是 Terminus 的使命。
 
@@ -24,9 +24,9 @@ outline: [2, 3]
 
 在当前互联网 Client/Server 的系统架构下，所有数据都存放在寡头公司的中⼼化服务器上。
 
-而以“让人们再次拥有自己的数据”为目标的我们，则需要回答：在这些数据离开中心化服务器后，应该存放在哪里？
+而以“让人们重新拥有自己的数据”为目标的我们，则需要回答：在这些数据离开中心化服务器后，应该存放在哪里？
 
-### Blockchain
+### 区块链
 
 最自然的想法是区块链。
 
@@ -40,23 +40,23 @@ outline: [2, 3]
 
 与之相对的事，全球有 48 亿的 PC ⽤⼾，52 亿的⼿机⽤⼾。他们每天在⽹络上花费 6.85 个⼩时，每个⽉产⽣ 400ZB 的流量。每秒有上亿次的服务器调用和数据读写产生。区块链离满足用户需求有着几个数量级的差距。
 
-导致这个局面的一个重要原因是，在大部分使用场景，我们仍然没有找到 [Useful Proof of Work](../faq.md#useful-proof-of-work)，这使得我们无法在全球范围内将利己的个体协调成一个网络。
+导致这个局面的一个重要原因是，在大部分使用场景，我们仍然没有找到 [Useful Proof of Work](./faq.md#useful-proof-of-work)，这使得我们无法在全球范围内将利己的个体协调成一个网络。
 
 简而言之，短期内在区块链上存储大量用户数据，并基于这些数据构建服务是很有挑战的。
 
-### Local
+### 本地
 
 另一个复古但在极客圈流行的想法是“本地”。 我们可以从 [Local First Software: You own Your Data，in spite of the cloud](https://martin.kleppmann.com/papers/local-first.pdf) 一文中了解这种思潮。
 
 > 云计算给了我们协作，但老式的应用程序给了我们所有权。
 >
-> 我们既希望有云应用提供的方便的跨设备访问和实时协作，也希望有 “老式”软件体现的对你自己数据的拥有权。
+> 我们既希望有云应用提供的方便的跨设备访问和实时协作，也希望有“老式”软件体现的对你自己数据的拥有权。
 
 这个理念在笔记软件领域尤为流行，比如 [Obsidian](https://obsidian.md/)，[Logseq](https://logseq.com/) 等等。用户的笔记以 `Markdown` 的形式存储在用户的电脑和手机上，通过 iCloud，Seafile 等第三方工具同步。
 
-数据存放在 Local 设备的问题是：
+数据存放在本地设备的问题是：
 
-1. 受制于电池和网络环境，Local 设备无法保证高可用性。这导致 Local First 软件在处理同步时，有天生的短板。
+1. 受制于电池和网络环境，本地设备无法保证高可用性。这导致“本地优先”软件在处理同步时，有天生的短板。
 
 2. 虽然 [CRDT](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) 可以在文档领域有效的解决客户端数据同步的问题。但过去 20 年，开源社区积累的大部分项目都是无法通过 CRDT 进行简单改造的。这导致 Local First 社区要从头搭建整个开发者生态。
 
@@ -80,16 +80,16 @@ outline: [2, 3]
 
    虽然当下区块链无法处理海量的数据和交易，但如果只有账号注册，资产转移信息需要上链，数据和交易规模可能会被缩小 3 到 4 个数量级，当下的区块链就可以支持。
 
-   我们认为未来只有跟 [DID](../../snowinning/concepts.md#decentralized-identifier) 和资产相关的数据/交易会存储在区块链中（类比于网站注册和网银转账），剩余的数据都存储在 Edge 节点，Edge 节点间进行 P2P 传输。
+   我们认为未来只有跟 [DID](../../developer/contribute/snowinning/concepts.md#decentralized-identifier) 和资产相关的数据/交易会存储在区块链中（类比于网站注册和网银转账），剩余的数据都存储在 Edge 节点，Edge 节点间进行 P2P 传输。
 
 3. Client - 用户希望私钥在手边
 
-   在最初的设计里，我们将控制 [DID](../../snowinning/concepts.md#decentralized-identifier) 的私钥存储在 Edge 上，因为这样可以极大的降低软件开发的复杂度。
+   在最初的设计里，我们将控制 [DID](../../developer/contribute/snowinning/concepts.md#decentralized-identifier) 的私钥存储在 Edge 上，因为这样可以极大的降低软件开发的复杂度。
 
    但经过几次用户访谈后，我们发现，大家更希望将私钥存在身边，例如手机或浏览器插件里，这样会更有安全感。区块链钱包就是一个例子。
 
 这三个想法在开发过程中被持续打磨和进化，最后形成了 Terminus 的 3 个核心组件：
 
-- [Terminus OS](../../terminus/overview.md)，一个运行在 Edge 上的云原生操作系统
-- [Snowinning Protocol](../../snowinning/overview.md)，一个去中心化的身份和信誉系统，实现了在无信任第三方下，信息和价值的交换
-- [TermiPass](../../../how-to/termipass/overview.md)，一个全平台的客户端软件，来存储用户的私钥，并统一管理用户在不同 Edge 上的身份和数据
+- [Terminus OS](../terminus/overview.md)，一个运行在 Edge 上的云原生操作系统
+- [Snowinning Protocol](../../developer/contribute/snowinning/overview.md)，一个去中心化的身份和信誉系统，实现了在无信任第三方下，信息和价值的交换
+- [TermiPass](../../how-to/termipass/overview.md)，一个全平台的客户端软件，来存储用户的私钥，并统一管理用户在不同 Edge 上的身份和数据

@@ -26,7 +26,7 @@
 - 已创建 [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name)
 
 :::info 信息
-了解[为什么需要 Terminus Name](../../terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
+了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
 ## 1. 安装 Terminus 
