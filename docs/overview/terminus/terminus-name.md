@@ -27,24 +27,6 @@ By simply replacing the "@" in your Terminus Name with a ".", you get your corre
 
 Creating a Terminus Name is your starting point of using Terminus. It involves creating a Terminus Account and binding it to a Terminus Name on the mobile version of TermiPass.
 
-1. Create a new Terminus account.
-    1. Launch TermiPass on your mobile. If you haven't created a local unlocking password yet, you will be required to set one.
-    2. Click **Create a Terminus Name**. You can also choose to import an existing one.
-2. Bind Terminus Name
-    - **Bind Individual Terminus Name (for personal use)**
-        * Select **Individual Terminus Name**.
-        * Bind a personal Verifiable Credential (VC) to create your Terminus Name using the authentication service by Google's Gmail. Follow the prompts to log in with your Google account and complete the binding process.
-    - **Bind Organization Terminus Name** (for organizational use)
-        * Select **Organization Terminus Name.**
-        * Join an existing organization or create a new one through Terminus Space.
-        * Enter your organization's domain name.
-        * Bind your organization email. Currently, only Gmail and Google Workspace email are supported.
-        * Upon completion, you will receive an Organization Terminus Name.
-3. Backup mnemonic phrase.
-
-    The mnemonic phrase is the ONLY way to recover your DID and Terminus Name. Make sure you [backup your Terminus Name](../../how-to/termipass/account/#backup-mnemonic-phrase)'s mnemonic phrase securely!
-
-
 Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-terminus-name) for detailed steps.
 
 
