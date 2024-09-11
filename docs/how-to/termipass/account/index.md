@@ -4,7 +4,7 @@ outline: [2, 4]
 
 # Manage Accounts with TermiPass
 
-Managing Terminus Accounts is a core function of TermiPass. If you are new to Terminus, you can start by creating a Terminus Name. This guide walks you through the process.
+Managing Terminus Accounts is a core function of TermiPass. If you are new to Terminus, you can start by creating a Terminus Name. This guide walks you through the process, and other commonly used account operations as well.
 
 ## Create a Terminus Name
 
@@ -14,7 +14,7 @@ Before you start, ensure you have downloaded the [TermiPass](../overview.md#down
 
 In TermiPass app, tap **Create a Terminus Name** to start creating your Terminus account. Depending on your personal preference, you can choose to create a Terminus Name with or without binding a Verifiable Credential (VC).
 
-### Create Terminus Name fast without binding VC (default mode)
+### Create without VC binding (default mode)
 
 To create a Terminus Name fast without binding VC:
 
@@ -25,7 +25,7 @@ To create a Terminus Name fast without binding VC:
 
 After you get your Terminus Name, wait for [Terminus installation](../../terminus/setup/install/) to complete, then proceed with [activation](../../terminus/setup/wizard.md).
 
-### Create Terminus Name with VC (advanced mode)
+### Create with VC (advanced mode)
 
 To create a unique, unrestricted individual Terminus Name, you need to bind a Verifiable Credential (VC) using the advanced mode. To enter this mode:
  
@@ -42,7 +42,7 @@ We currently provide Verifiable Credentials (VC) via Google Gmail. For details, 
 
 ![Terminus Name VC](/images/how-to/termipass/terminus-name-vc.png)
 
-1. Click the VC card to open the Google account interface.
+1. Click the VC card to access your Google account.
 2. Log into TermiPass with your Google account and click **Continue**.
 3. Wait for the binding to complete, then click **Continue** to view your Terminus Name information.
 
@@ -66,21 +66,18 @@ To bind an **Organization Terminus Name**:
 
 Upon completion, you will receive an **Organization Terminus Name**.
 
-### Import an existing account
+## Import an existing account
 
-You can also create an account by importing from an existing one:
+You can also set up an account by importing an existing Terminus Name:
 
-1. Launch TermiPass app, and tap the I**mport a Terminus Name** option.
-2. Enter the mnemonic phrase of 12 words to import your account.
+1. In TermiPass app, tap **Import a Terminus Name**.
+2. Enter the 12-word mnemonic phrase to import your Terminus Name.
 
 ::: tip
 
-Incorrect mnemonic phrases will prevent importing.
-Accounts without a bound Terminus Name cannot be imported.
-Accounts with a bound Terminus Name can be imported to any TermiPass.
-:::
+If your account is bound to a Terminus Name, you can freely import it into any TermiPass device. 
 
-### Backup mnemonic phrase
+## Backup mnemonic phrase
 
 In a decentralized account system, the mnemonic phrase is the **ONLY** way to recover your DID and Terminus Name. **Make sure you store your Terminus Name's mnemonic phrase securely!**
 
