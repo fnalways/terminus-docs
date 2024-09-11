@@ -26,8 +26,8 @@ By simply replacing the "@" in your Terminus Name with a ".", you get your corre
 ## How to get a Terminus Name?
 
 Creating a Terminus Name is your starting point of using Terminus. This process includes setting up your Terminus account and binding it to a Terminus Name. Depending on your preference, you can choose from two creation modes:
-  - [Fast creation (default mode)](../../how-to/termipass/account/index.md#create-terminus-name-fast-without-binding-vc-default-mode): Recommended for individual users who prefer a quick setup without binding a verification credential (VC). 
-  - [Advanced creation](../../how-to/termipass/account/index.md#create-terminus-name-with-vc-advanced-mode): Recommended for individual and organizational users that require enhanced security through VC binding.
+  - [Fast creation (default mode)](../../how-to/termipass/account/index.md#create-without-vc-binding-default-mode): Recommended for individual users who prefer a quick setup without binding a verification credential (VC). 
+  - [Advanced creation](../../how-to/termipass/account/index.md#create-with-vc-advanced-mode): Recommended for individual and organizational users that require enhanced security through VC binding. 
 
 Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-terminus-name) for detailed steps.
 
