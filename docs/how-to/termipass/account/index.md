@@ -38,7 +38,7 @@ Depending on how you use Terminus, you can choose to bind an Individual Terminus
 
 #### Bind an individual Terminus Name
 
-We currently provide Verifiable Credentials (VC) via Google Gmail. For details, refer to the [Gmail Issuer Service](../../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service). To create your individual Terminus Name with Gmail VC:
+We currently provide VC via Google Gmail. For details, refer to the [Gmail Issuer Service](../../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service). To create your individual Terminus Name with Gmail VC:
 
 ![Terminus Name VC](/images/how-to/termipass/individual_terminus_name_vc.png)
 
