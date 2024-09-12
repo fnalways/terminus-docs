@@ -36,7 +36,7 @@ Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-termi
 A Decentralized Identifier (DID) is a unique, cryptographically verifiable identifier that doesn't rely on any centralized authority. While DIDs solve the issue of identity in a decentralized network, they are typically difficult for humans to remember or use in daily situations. 
 
 Terminus Name acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
-Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus Account](../../how-to/termipass/account/#stage-of-account).
+Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus Account](../../how-to/termipass/account/#understand-the-stage-of-account).
 
 
 ## Learn more
