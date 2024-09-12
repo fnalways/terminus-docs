@@ -6,7 +6,7 @@
 ## 开始之前
 
 - 确保你的 Linux 设备符合[硬件与系统要求](../getting-started/index.md#硬件与系统要求)。
-- 手机上已安装 [TermiPass](../../../how-to/termipass/overview.md#download-termipass) 应用。
+- 手机上已安装 [TermiPass](../../../how-to/termipass/overview.md#download) 应用。
 
 ## 1. 创建 Terminus Name
 
@@ -14,7 +14,7 @@
 
 :::info 信息
 Terminus Name 是你在 Terminus 中的唯一身份标识。
-了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
+了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
 :::
 
 ## 2. 安装 Terminus
@@ -63,11 +63,11 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 在向导页面，用新设置的密码登录 Terminus，并通过 TermiPass 完成双重验证。更多登录详情，参见[登录帮助文档](../../../how-to/terminus/setup/login.md)。
 
 :::warning 警告
-为保障账户和数据安全，别忘了[备份你的助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase.md)。
+为保障账户和数据安全，别忘了[备份你的助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
 :::
 
 ## 下一步
-- [探索 Terminus 的各种任务](../../../how-to/terminus/)
-- [安装更多应用](../../../how-to/terminus/market/index.md#install-applications)
+- [探索 Terminus 的各种任务](../../../how-to/terminus/index.md)
+- [安装更多应用](../../../how-to/terminus/market/index.md#install-application)
 - [如何卸载 Terminus](../../../developer/develop/advanced/cli.md#terminus-uninstallation-script)
 - [如何解决 IP 地址变更的问题](../../../developer/develop/advanced/cli.md#resolve-ip-change-issue)

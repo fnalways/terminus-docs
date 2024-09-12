@@ -9,8 +9,8 @@
   - [TerminusManifest.yaml](./package/manifest.md) 的配置和字段说明
   - [Terminus 对 Helm 进行的字段扩展](./package/extension.md)
 
-- [了解我们准备的一些教程](./tutorial/)
+- [了解我们准备的一些教程](./tutorial/index.md)
   - [了解 Terminus 的开发工具 Devbox](./tutorial/devbox.md)
-  - [开发第一个应用](./tutorial/note/)
-- [了解一些进阶的技巧](./advanced/)
-- [提交应用到应用市场](./submit/)
+  - [开发第一个应用](./tutorial/note/index.md)
+- [了解一些进阶的技巧](./advanced/index.md)
+- [提交应用到应用市场](./submit/index.md)

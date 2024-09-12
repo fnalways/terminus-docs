@@ -5,7 +5,7 @@ outline: [2, 3]
 # 用户管理
 
 :::info
-Admin 才能看到这个页面
+Admin 才能看到这个页面。
 :::
 
 可以在列表中查看用户属于 Admin 还是 Member。
@@ -27,7 +27,7 @@ Admin 才能看到这个页面
      请确保用户的 Terminus Name 的 Domain 和这台 Terminus 的 Domain 一致
      :::
 
-1. 创建账号
+2. 创建账号
 
    - 点击“创建用户”按钮
    - 输入新用户的 Terminus Name
@@ -44,7 +44,7 @@ Admin 才能看到这个页面
      我们推荐 CPU 最小设置为 1，内存最小设置为 3Gi
      :::
 
-1. 将 Wizard URL 和首次登录 One Time Password 发送给用户
+3. 将 Wizard URL 和首次登录 One Time Password 发送给用户
 
    - 创建成功之后收到一个弹窗，里面显示了用户的 Terminus Name、初始密码、以及 Wizard 引导激活链接。你可以复制这些信息，发送给新用户去激活这个账号。
      :::info

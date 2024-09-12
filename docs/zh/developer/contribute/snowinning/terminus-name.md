@@ -37,7 +37,7 @@ Terminus 系统中存在三种类型的域名：
 
 根据 DID 的定义，DID 可以代表任何实体，如人、组织、物体、数据模型、抽象实体等。对于无法归类为个人或组织的实体，如电影、应用程序、自动化市场制造商，我们为这些实体设计了实体域名。
 
-实体域名主要用于帮助协议构建[声誉系统](concepts.md#reputation)，期望看到更多的协议使用实体域名来创建类似 IMDb、Yelp、LinkedIn 的 Web3 版本。
+实体域名主要用于帮助协议构建[声誉系统](concepts.md#声誉)，期望看到更多的协议使用实体域名来创建类似 IMDb、Yelp、LinkedIn 的 Web3 版本。
 
 目前，实体域名的注册需经 Terminus 团队批准，申请人负责后续管理。
 
@@ -96,4 +96,4 @@ Alice 现在可以将发行的 VC 存储到 TermiPass。
 
 ## 组织 Terminus Name
 
-使用 **组织 Terminus Name** 本质上与使用 **个人 Terminus Name** 相同。唯一的区别是管理员需要首先[申请自定义 Domain](../../../how-to/space/domain/host-domain.md)。更多详情，请参考[快速开始](../../../overview/introduction/getting-started/)。
+使用 **组织 Terminus Name** 本质上与使用 **个人 Terminus Name** 相同。唯一的区别是管理员需要首先[申请自定义 Domain](../../../how-to/space/domain/host-domain.md)。更多详情，请参考[快速开始](../../../overview/introduction/getting-started/index.md)。

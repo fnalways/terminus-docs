@@ -4,7 +4,7 @@ Terminus 作为一个云端系统，存在很多将本地文件上传到云端�
 
 ## 如何安装
 
-APP 只要在 TAC 的 [TerminusManifest.yaml](../package/manifest.md#file-upload) 中申明
+APP 只要在 TAC 的 [TerminusManifest.yaml](../package/manifest.md#upload) 中申明
 
 ```yaml
 upload:
@@ -43,8 +43,8 @@ upload:
   - file_type：文件类型，类型为字符串。
   - file_size：文件大小，类型为整数。
   - storage_path：文件在服务器上的存储路径，类型为字符串。
-    示例
-    请求
+
+示例请求
 
 ```sh
 curl --location 'http://host:40030/upload/' \

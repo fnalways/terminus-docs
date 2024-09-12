@@ -9,7 +9,7 @@ Terminus 系统中为所有 APP 提供了三种最流行的数据存储集群，
 - 单机模式的 PostgreSQL，提供最常用的 RDS 数据库层的功能。
 - 分布式 PostgreSQL 扩展，Citus。提供数据库的分布式横向扩展能力。
 
-APP 在设置数据库申请的时候，可以方便的指定说要采用数据库类型。
+APP 在设置数据库申请的时候，可以方便地指定说要采用数据库类型。
 
 ```yaml
 middleware:
@@ -24,9 +24,9 @@ postgres:
 
 ## NoSQL
 
-The NoSQL cluster is not deployed by default in Terminus, but it can be easily installed from the Market. To set up a NoSQL cluster, the administrator needs to install the [**MongoDB**](https://market.jointerminus.com/middleware/mongodb) middleware. Once installed, the [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) automatically manages the **MongoDB** cluster. 用户可以对 MongoDB Cluster 进行横向的副本扩展，以及数据库的备份和还原。
+Terminus 默认不部署 NoSQL 集群，但可以从 Market 轻松安装。要建立 NoSQL 集群，管理员需要安装 [**MongoDB**](https://market.jointerminus.com/middleware/mongodb) 中间件。安装后，[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) 会自动管理 **MongoDB** 集群。用户可以对 MongoDB Cluster 进行横向的副本扩展，以及数据库的备份和还原。
 
-You can specify detailed configuration for MongoDB in [TerminusManifest.yaml](../package/manifest.md#middleware) as follows:
+你可以在 [TerminusManifest.yaml](../package/manifest.md#middleware) 中按如下方式指定 MongoDB 的详细配置：
 
 ```yaml
 middleware:

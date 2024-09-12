@@ -12,25 +12,24 @@ outline: [2, 4]
 
 ## 介绍
 
-在 [VC](concepts.md#verifiable-credential) 一节中，我们介绍了 VC 申请的基本流程。
+在 [VC](concepts.md#可验证凭证) 一节中，我们介绍了 VC 申请的基本流程。
 
 在实际的 Wallet，Verifier 和 Issuer 的沟通过程中，会接触到更多名词，我们在这里梳理下：
 
-| Term                    | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Holder                  | Holders are entities that have one or more verifiable credentials in their possession. Holders are also the entities that submit proofs to Verifiers to satisfy the requirements described in a Presentation Definition.                                                                                                                                                                                                                                                                                                        |
-| Issuer                  | A role an entity can perform by asserting claims about one or more subjects, creating a verifiable credential from these claims, and transmitting the verifiable credential to a holder.                                                                                                                                                                                                                                                                                                                                        |
-| Verifier                | Verifiers are entities that define what proofs they require from a Holder (via a Presentation Definition) in order to proceed with an interaction.                                                                                                                                                                                                                                                                                                                                                                              |
-| Verifiable Credential   | Is a tamper-evident credential that has authorship that can be cryptographically verified. Verifiable credentials can be used to build Verifiable Presentations, which can also be cryptographically verified. The claims in a credential can be about different subjects. PEX accepts Verifiable credential in 3 forms: 1. JSON_LD which is know in our system as IVerifiableCredential, 2. JWT-Wrapped VC which is known in our system as JwtWrappedVerifiableCredential or string which is a valid Verifiable credential jwt |
-| Verifiable Presentation | s a tamper-evident presentation encoded in such a way that authorship of the data can be trusted after a process of cryptographic verification.                                                                                                                                                                                                                                                                                                                                                                                 |
-| Manifest                | Credential Manifests are used to describe which credentials are available for issuance.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Application             | Holder 提交给 Issuer 的格式，里面包含了                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Presentation Definition | Presentation Definitions are objects that articulate what proofs a Verifier requires.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Presentation            | Data derived from one or more verifiable credentials, issued by one or more issuers                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Submission              | 待续                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Definition              | 待续                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Schema                  | 不同的 Manifest，Application，Credential，Presentation，Definition 都需用通过 JSON 格式定义 Schema。服务通过 Schema 来校验提交的数据格式是否正确。之后才会进入业务流程。                                                                                                                                                                                                                                                                                                                                                        |
-
+| 术语                      | 定义                                                                                                                                                                                                                                                                                   |
+| ------------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Holder                    | Holder 是拥有一个或多个 Verifiable Credential 的实体。同时，Holder 也是向 Verifier 提交证明以满足 Presentation Definition 描述要求的实体。                                                                                                                                                                            |
+| Issuer                    | Issuer 是一个实体的角色，通过对一个或多个主题断言声明，创建 Verifiable Credential，并将其传递给 Holder。                                                                                                                                                                                                               |
+| Verifier                  | Verifier 是定义他们从 Holder 需要哪些证明（通过 Presentation Definition）以继续进行交互的实体。                                                                                                                                                                                                                 |
+| Verifiable Credential     | 是一种防篡改的凭证，其作者身份可以通过加密方式验证。Verifiable Credential 可用于构建 Verifiable Presentation，后者同样可以通过加密验证。凭证中的声明可以关于不同的主题。PEX 接受三种形式的 Verifiable Credential：1. 系统中称为 IVerifiableCredential 的 JSON_LD，2. 系统中称为 JwtWrappedVerifiableCredential 的 JWT-Wrapped VC，3. 有效的 Verifiable Credential JWT 字符串。 |
+| Verifiable Presentation   | 是一种防篡改的展示，其数据的作者身份在经过加密验证过程后可以被信任。                                                                                                                                                                                                                                                   |
+| Manifest                  | Credential Manifest 用于描述哪些凭证可供发行。                                                                                                                                                                                                                                                    |
+| Application               | Holder 向 Issuer 提交的格式，里面包含了必要的信息以申请 Verifiable Credential。                                                                                                                                                                                                                           |
+| Presentation Definition   | Presentation Definition 是定义 Verifier 所需证明的对象。                                                                                                                                                                                                                                        |
+| Presentation              | 来自一个或多个 Issuer 发行的一个或多个 Verifiable Credential 派生的数据。                                                                                                                                                                                                                                 |
+| Submission                | -                                                                                                                                                                                                                                                                                    |
+| Definition                | -                                                                                                                                                                                                                                                                                    |
+| Schema                    | 不同的 Manifest、Application、Credential、Presentation、Definition 都需通过 JSON 格式定义的 Schema。系统通过这些 Schema 来验证提交的数据格式是否正确，确保数据处理符合业务流程要求。                                                                                                                                                      |
 ## Issuer Service
 
 ![alt text](image-1.png)
@@ -390,24 +389,24 @@ TODO
 
 以下引用来自 [SSI SDK](https://github.com/TBD54566975/ssi-sdk) 项目
 
-### Specifications
+### 规范
 
-Here are a set of references to specifications that this library currently supports. It is a dynamic set that will change as the library evolves.
+以下是本库目前支持的一系列标准规范。随着库的发展，这些支持的标准可能会有所变化。
 
-- [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/) W3C Proposed Recommendation 03 August 2021
-- [Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/) W3C Recommendation 09 November 2021
-  - Supports [Linked Data Proof](https://www.w3.org/TR/vc-data-model/#data-integrity-proofs) formats.
-  - Supports [VC-JWT and VP-JWT](https://www.w3.org/TR/vc-data-model/#json-web-token) formats.
-- [Verifiable Credentials JSON Schema Specification](https://w3c-ccg.github.io/vc-json-schemas/v2/index.html) Draft Community Group Report, 21 September 2021
-- [Presentation Exchange 2.0.0](https://identity.foundation/presentation-exchange/) Working Group Draft, March 2022
-- [Wallet Rendering Strawman](https://identity.foundation/wallet-rendering/), June 2022
-- [Credential Manifest](https://identity.foundation/credential-manifest/) Strawman, June 2022
-- [Status List 2021](https://w3c-ccg.github.io/vc-status-list-2021/) Draft Community Group Report 04 April 2022
+- [分布式标识符 (DIDs) v1.0](https://www.w3.org/TR/did-core/) - W3C 建议标准，2021年8月3日
+- [可验证凭证数据模型 v1.1](https://www.w3.org/TR/vc-data-model/) - W3C 推荐标准，2021年11月9日
+  - 支持 [链接数据证明](https://www.w3.org/TR/vc-data-model/#data-integrity-proofs) 格式。
+  - 支持 [VC-JWT 及 VP-JWT](https://www.w3.org/TR/vc-data-model/#json-web-token) 格式。
+- [可验证凭证 JSON 架构规范](https://w3c-ccg.github.io/vc-json-schemas/v2/index.html) - 草案社区小组报告，2021年9月21日
+- [展示交换 2.0.0](https://identity.foundation/presentation-exchange/) - 工作组草案，2022年3月
+- [钱包渲染草案](https://identity.foundation/wallet-rendering/)，2022年6月
+- [凭证清单](https://identity.foundation/credential-manifest/) - 草案，2022年6月
+- [状态列表 2021](https://w3c-ccg.github.io/vc-status-list-2021/) - 草案社区小组报告，2022年4月4日
 
-### Signing Methods
+### 签名方法
 
-> - [Data Integrity 1.0](https://w3c.github.io/vc-data-integrity/) Draft Community Group Report
-> - [Linked Data Cryptographic Suite Registry](https://w3c-ccg.github.io/ld-cryptosuite-registry/) Draft Community Group Report 29 December 2020
-> - [JSON Web Signature 2020](https://w3c-ccg.github.io/lds-jws2020/) Draft Community Group Report 09 February 2022
->   - [VC Proof Formats Test Suite, VC Data Model with JSON Web Signatures](https://identity.foundation/JWS-Test-Suite/) Unofficial Draft 09 March 2022 This implementation's compliance with the JWS Test Suite can be found here.
->   - Supports both JWT and Linked Data proof formats with [JOSE compliance](https://jose.readthedocs.io/en/latest/).
+> - [数据完整性 1.0](https://w3c.github.io/vc-data-integrity/) - 草案社区小组报告
+> - [链接数据加密套件注册处](https://w3c-ccg.github.io/ld-cryptosuite-registry/) - 草案社区小组报告，2020年12月29日
+> - [JSON Web 签名 2020](https://w3c-ccg.github.io/lds-jws2020/) - 草案社区小组报告，2022年2月9日
+> - [VC 证明格式测试套件，带 JSON Web 签名的 VC 数据模型](https://identity.foundation/JWS-Test-Suite/) - 非正式草案，2022年3月9日 此实现与 JWS 测试套件的兼容性可以在此处找到。
+>  - 支持 JWT 和链接数据证明格式，符合 [JOSE 标准](https://jose.readthedocs.io/en/latest/)。

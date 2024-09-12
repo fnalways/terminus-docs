@@ -24,8 +24,8 @@
   - 支持的系统：
      - Windows 10 或 11
      - Linux（在 WSL2 上）：Ubuntu 20.04 LTS 或更高版本；Debian 11 或更高版本
-- 手机上已安装 [TermiPass](../../../termipass/overview.md#download-termipass)
-- 已创建 [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name)
+- 手机上已安装 [TermiPass](../../../termipass/overview.md#download)
+- 已创建 [Terminus Name](../../../termipass/account/index.md#create-terminus-name)
   
 :::info 信息
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。

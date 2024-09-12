@@ -158,12 +158,12 @@ TermiPass 桌面端支持多文件下载，一次性提交的下载任务都将�
 
 我们支持以下几种文件的预览
 
-| 文件类型 | 文件格式                                              |
-| -------- | ----------------------------------------------------- |
-| 图片     | JPG、JPEG、PNG、BMP、WEBP、SVG                        |
-| 视频     | MP4、MKV、AVI、MOV、MPEG、MTS、TS、WMV、WEBM、RM、3GP |
-| 音频     | MP3、WMA、WAV、OGG、AAC、M4A、APE、FlAC               |
-| 文本     | PDF、TXT、JS、MD、CSS、XML、YAML、HTML                |
+| 文件类型 | 文件格式                                        |
+|------|---------------------------------------------|
+| 图片   | JPG、JPEG、PNG、BMP、WEBP、SVG                   |
+| 视频   | MP4、MKV、AVI、MOV、MPEG、MTS、TS、WMV、WEBM、RM、3GP |
+| 音频   | MP3、WMA、WAV、OGG、AAC、M4A、APE、FlAC            |
+| 文本   | PDF、TXT、JS、MD、CSS、XML、YAML、HTML             |
 
 - Text File Edit
 

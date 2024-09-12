@@ -63,4 +63,4 @@ Terminus 希望给用户提供类似 TimeMachine 的体验，在后台自动的�
 
 ## Restore from Backup
 
-请查看 [Terminus Space Backup & Restore](/how-to/space/backup.md)
+请查看 [Terminus Space Backup & Restore](/how-to/space/backup.md)。

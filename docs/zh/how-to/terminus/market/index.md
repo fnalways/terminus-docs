@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Market
 
-Market 建立在去中心化和无许可的[应用分发协议](/overview/protocol/market.html)之上. 这是一个开放的应用市场，你可以在这里一键安装来自 Terminus 和第三方开发者的各类应用程序、内容推荐算法、大语言模型等等。
+Market 建立在去中心化和无许可的[应用分发协议](/overview/protocol/market.md)之上. 这是一个开放的应用市场，你可以在这里一键安装来自 Terminus 和第三方开发者的各类应用程序、内容推荐算法、大语言模型等等。
 
 ![Discover](/images/how-to/terminus/market/discover.jpg)
 
@@ -59,7 +59,7 @@ Market 建立在去中心化和无许可的[应用分发协议](/overview/protoc
 - 开发者：应用程序的开发者。
 - 语言：应用 UI 支持的语言。
 - 资源需求：安装应用所需的内存、硬盘、CPU、GPU 资源
-- 应用类型：[集群应用](/overview/terminus/application.html#cluster-application)会在此处有额外的类型标识。
+- 应用类型：[集群应用](/overview/terminus/application.md#cluster-application)会在此处有额外的类型标识。
 
 ### Operation Button
 
@@ -87,21 +87,21 @@ Market 建立在去中心化和无许可的[应用分发协议](/overview/protoc
 
 你可以权限板块看到应用所需的系统权限。应用所需的权限共分为以下几类：
 
-| 权限类型            | 说明                                                                                                                                                                                                                          |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Files               | 应用的目录访问权限                                                                                                                                                                                                            |
-| Internet            | 应用安装和运行时是否需要连接互联网                                                                                                                                                                                            |
+| 权限类型                | 说明                                                                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Files               | 应用的目录访问权限                                                                                                                                |
+| Internet            | 应用安装和运行时是否需要连接互联网                                                                                                                        |
 | Entrance            | 统计应用不同类型入口的个数。<br> - 可见入口指在 Terminus 桌面上显示图标的入口<br> - 不可见入口指在后台运行的接口，通常被用于和其他应用协作 <br> - 公共入口可被互联网上的任何人访问 <br> - 私有入口需要激活 tailscale 才能访问 |
-| Notifications       | 应用是否可以向你发送通知                                                                                                                                                                                                      |
-| Analytics           | 应用是否开启了[网页分析功能](/developer/develop/advanced/analytic.html)                                                                                                                                                       |
-| Websocket           | 应用是否使用了 [Websocket 功能](/developer/develop/advanced/websocket.html)                                                                                                                                                   |
-| Secret              | 应用是否使用 Terminus 的[秘密管理功能](/overview/terminus/secret.html)来保存其敏感信息                                                                                                                                        |
-| Knowledgebase       | 应用是否会使用你[本地的知识库](/how-to/terminus/settings/knowledge.html)来增强使用体验。                                                                                                                                      |
-| Search              | 应用是否使用 Terminus 系统的 [Zinc 中间件](/overview/terminus/data.md#es-zincsearch)进行全文搜索                                                                                                                              |
-| Relational Database | 应用是否使用 Terminus 系统的 [PostgreSQL 中间件](/overview/terminus/data.md#postgresql)作为关系型数据库                                                                                                                       |
-| Document Database   | 应用是否使用 Terminus 系统的 [MongoDB 中间件](/overview/terminus/data.md#mongodb)作为文档型数据库                                                                                                                             |
-| Key-Value Database  | 应用是否使用 Terminus 系统的 [Redis 中间件](/overview/terminus/data.md#redis)作为 KV 数据库                                                                                                                                   |
-| Cluster App         | 应用是否为集群应用                                                                                                                                                                                                            |
+| Notifications       | 应用是否可以向你发送通知                                                                                                                             |
+| Analytics           | 应用是否开启了[网页分析功能](/developer/develop/advanced/analytic.md)                                                                                 |
+| Websocket           | 应用是否使用了 [Websocket 功能](/developer/develop/advanced/websocket.md)                                                                         |
+| Secret              | 应用是否使用 Terminus 的[秘密管理功能](/overview/terminus/secret.md)来保存其敏感信息                                                                          |
+| Knowledgebase       | 应用是否会使用你[本地的知识库](/how-to/terminus/settings/knowledge.md)来增强使用体验。                                                                         |
+| Search              | 应用是否使用 Terminus 系统的 [Zinc 中间件](/overview/terminus/data.md#es-zincsearch)进行全文搜索                                                           |
+| Relational Database | 应用是否使用 Terminus 系统的 [PostgreSQL 中间件](/overview/terminus/data.md#postgresql)作为关系型数据库                                                      |
+| Document Database   | 应用是否使用 Terminus 系统的 [MongoDB 中间件](/overview/terminus/data.md#mongodb)作为文档型数据库                                                            |
+| Key-Value Database  | 应用是否使用 Terminus 系统的 [Redis 中间件](/overview/terminus/data.md#redis)作为 KV 数据库                                                               |
+| Cluster App         | 应用是否为集群应用                                                                                                                                |
 
 ### Information
 
@@ -121,7 +121,7 @@ Market 建立在去中心化和无许可的[应用分发协议](/overview/protoc
 
 ### Reference App
 
-[集群应用](/overview/terminus/application.html#cluster-application)常常会授权一些可信任的客户端 APP，对其有网络访问连通权限。如果想要使用一个集群应用，你可以安装该列表中的 App。
+[集群应用](/overview/terminus/application.md#cluster-application)常常会授权一些可信任的客户端 APP，对其有网络访问连通权限。如果想要使用一个集群应用，你可以安装该列表中的 App。
 
 ### Unable to Install Issues
 
@@ -170,7 +170,7 @@ Market 可能因为以下情况而无法安装某些应用
 
 要**卸载模型**时，你只需在 MyTerminus 页面上点击模型按钮上的扩展箭头，在下拉菜单中选择卸载。
 
-> 你可以[在此](/overview/terminus/ai.html)了解更多在 Terminus 中使用 AI 的细节
+> 你可以[在此](/overview/terminus/ai.md)了解更多在 Terminus 中使用 AI 的细节
 
 ## Update Application
 
@@ -219,4 +219,4 @@ Custom 应用的管理与从 Market 安装的应用一致。你可以参考[Mana
 
 1.  **应用安装超时**：这表示应用的容器无法在时限内完成初始化。这通常是由于无法连接镜像服务或下载镜像网速较慢导致的，你可以在确认镜像服务的可用性和网络稳定性后再尝试安装。
 2.  **资源不足**：这表示应用在安装时，集群资源不足以完成容器的初始化。你可以尝试释放占用的资源、扩容集群资源或增加资源配额后再尝试安装。
-3.  **配置错误**：这表示应用的配置文件存在一定问题，Terminus 无法正确的安装应用。你可以在社区向应用提交者反馈错误信息，请求开发人员及时修复配置文件问题。
+3.  **配置错误**：这表示应用的配置文件存在一定问题，Terminus 无法正确安装应用。你可以在社区向应用提交者反馈错误信息，请求开发人员及时修复配置文件问题。

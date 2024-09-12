@@ -22,7 +22,7 @@ outline: [2, 3]
 :::info
 当你首次登录时，请注意输入在激活时在 TermiPass 上 [重新设置的登录密码](./wizard.md#reset-password)
 
-你可以在 [Settings](../settings/home.md#change-password) 里更换密码
+你可以在 [Settings](../settings/home.md#修改密码) 里更换密码
 
 如果你忘记了登录密码，可以联系你的管理员重置密码
 :::

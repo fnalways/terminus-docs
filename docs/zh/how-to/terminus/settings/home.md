@@ -21,7 +21,7 @@ Home 是用户的安全中心。
 
 ![alt text](/images/how-to/terminus/home02.png)
 
-### Change Password
+### 修改密码
 
 在安全设置中，你可以修改 Terminus 的登录密码。
 
@@ -31,7 +31,7 @@ Home 是用户的安全中心。
 
 需要注意的是，我们要求满足至少 2 台装有 TermiPass 的设备启用了 VPN，才能激活这个开关。典型的场景是，电脑和手机都安装了 TermiPass 并激活了 VPN 访问。
 
-你可以在 [HeadScale 连接状态](#headscale-的连接状态) 查看启用了 VPN 功能的 TermiPass 列表。<br>
+你可以在 [HeadScale 连接状态](#headscale-connection-status) 查看启用了 VPN 功能的 TermiPass 列表。<br>
 
 了解如何在 TermiPass 客户端使用 VPN 连接，请查看这里 [VPN connection](../../termipass/manage-terminus.md#vpn-connection)。
 

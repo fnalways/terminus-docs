@@ -211,20 +211,20 @@ Student s;
 
 1. 在 TName 上定义 Tag，即设置 Tag 名字，类型
 
-- 官方 Tag：operator 拥有权限
-- 其他 Tag：TName 的 owner 拥有权限
-  下列情况会定义 Tag 失败：
-- TName 上某个 Tag 名字只能定义一次，不能重复定义
-- Tag 名字和 tuple 的字段名必须符合这个标准：以 a~z 开头，只能包括 a~z, A~Z, 0~9
-- Tag 类型编译后的 bytes 长度不能超过 31
-- Tag 类型必须符合 ABI 库中定义的类型要求
-- tuple 中的 fieldNames 赋值必须跟 tuple 类型定义相符
-- tuple 中属性名字在同一节点下不能重复
+   - 官方 Tag：operator 拥有权限
+   - 其他 Tag：TName 的 owner 拥有权限
+     下列情况会定义 Tag 失败：
+   - TName 上某个 Tag 名字只能定义一次，不能重复定义
+   - Tag 名字和 tuple 的字段名必须符合这个标准：以 a~z 开头，只能包括 a~z, A~Z, 0~9
+   - Tag 类型编译后的 bytes 长度不能超过 31
+   - Tag 类型必须符合 ABI 库中定义的类型要求
+   - tuple 中的 fieldNames 赋值必须跟 tuple 类型定义相符
+   - tuple 中属性名字在同一节点下不能重复
 
 2. 设置 Tagger
 
-- 官方 Tag：operator 拥有权限
-- 其他 Tag：TName 的 owner 拥有权限
+   - 官方 Tag：operator 拥有权限
+   - 其他 Tag：TName 的 owner 拥有权限
 
 3. 设置 Tag
    具体 Tag 设置的权限控制让渡给了 Tagger。后面介绍几个官方 Tagger 的具体情况。

@@ -4,17 +4,17 @@ outline: [2, 3]
 
 # 如何开发一个应用
 
-## Install and Launch DevBox
+## 安装并启动 DevBox
 
-1. Install [DevBox](https://market.jointerminus.com/app/devbox) from the Terminus Market. 
-2. Find the the **DevBox** icon in the launcher panel on the **Terminus Desktop**.
-3. Click on the icon to launch the application.
+1. 从 Terminus 市场安装 [DevBox](https://market.jointerminus.com/app/devbox)。
+2. 在 **Terminus Desktop** 的启动面板中找到 **DevBox** 图标。
+3. 点击图标以启动应用程序。
 
 ![main screen](/images/developer/develop/tutorial/create/home.jpg)
 
 ## Create Your App
 
-  点击 Create a new application按钮，可以从模版创建一个空白的Terminus应用。
+  点击 Create a new application 按钮，可以从模版创建一个空白的 Terminus 应用。
   - 在 name 一栏，输入你的应用名称
   - 设置 APP 类型为`app`
   - 修改你的 APP 入口的端口

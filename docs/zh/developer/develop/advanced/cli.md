@@ -14,32 +14,32 @@ export LOCAL_GPU_SHARE=1                        # 启用 GPU 共享
 curl -fsSL https://terminus.sh |  bash -
 
 ```
-## Terminus Uninstallation Script
+## Terminus 卸载脚本
 
-- For Terminus installed on Linux, Raspberry Pie, and Windows (Windows Subsystem for Linux):
+- 对于安装在 Linux、Raspberry Pie 和 Windows（Windows 子系统 Linux）上的 Terminus：
 
   ```sh
   cd install-wizard && bash uninstall_cmd.sh
   ```
 
-- For Terminus Installed on Mac:
+- 对于安装在 Mac 上的 Terminus：
 
   ```sh
   bash uninstall_macos.sh
   ```
 
-## Resolve IP Change Issue
+## 解决 IP 变更问题
 
-Services within the Kubernetes cluster rely on stable IPs and DNS resolution provided by the cluster's internal DNS. When you change the location of your Terminus, its IP address changes. This can disrupt proper DNS resolution for your cluster and make Terminus inaccessible.
+Kubernetes 集群内的服务依赖于稳定的 IP 和由集群内部 DNS 提供的 DNS 解析。当你更改 Terminus 的位置时，其 IP 地址会发生变化。这可能会破坏集群的正确 DNS 解析，并使 Terminus 无法访问。
 
-To resolve this issue, run the following command in Ubuntu in your new network environment:
+要解决此问题，请在新网络环境中的 Ubuntu 上运行以下命令：
 
 ```sh
 cd install-wizard && bash change_ip.sh
 ```
 
 :::info
-This command is not applicable to Terminus on macOS yet.
+此命令尚不适用于 macOS 上的 Terminus。
 :::
 
 ## 在本地增加一个新的 Terminus 节点
@@ -140,7 +140,7 @@ bash scale_minio.sh -a node -v /terminus/data/minio/vol{1...4} \
 
 当你需要调试的程序涉及到 Terminus 启动时的行为时，就需要在本地构建一个临时的 Terminus 版本，并替换掉你需要调试的服务
 
-在其它场景下，你可以优先考虑使用 [ControlHub](../../../how-to/terminus/controlhub/) 或 kubectl 来更新服务
+在其它场景下，你可以优先考虑使用 [ControlHub](../../../how-to/terminus/controlhub/index.md) 或 kubectl 来更新服务
 
 ```sh
 # Clone

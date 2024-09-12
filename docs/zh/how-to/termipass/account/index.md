@@ -58,7 +58,7 @@ outline: [2, 4]
 
 点击「Create a Terminus Name」 开始创建账号。
 
-点击之后将先生成 DID，再完成 [绑定 Terminus Name](#bind-terminus-name.md) 。
+点击之后将先生成 DID，再完成 [绑定 Terminus Name](#bind-terminus-name) 。
 
 #### Import an account
 
@@ -151,7 +151,7 @@ outline: [2, 4]
 
 ## Stage Of Account
 
-TermiPass 通过 [一个本地的密码](#setup-local-password.md)，让用户可以同时管理多个`Account`，不同 `Account` 是互相独立的。每个 `Account` 有三个阶段：
+TermiPass 通过 [一个本地的密码](#setup-local-password)，让用户可以同时管理多个`Account`，不同 `Account` 是互相独立的。每个 `Account` 有三个阶段：
 
 ![account](/images/how-to/termipass/account.png)
 

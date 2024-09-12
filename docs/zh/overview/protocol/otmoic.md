@@ -12,8 +12,8 @@ Otmoic 是一个基于 Snowinning Protocol 的，无需第三方信任的，为 
 
 Otmoic Protocol 在设计时有以下的特色：
 
-- 为 Trader 和 Liquidity Provider 提供了链上的 [Reputation](../../developer/contribute/snowinning/concepts.md#reputation)机制，解决 Free Mint 问题。
-- 支持基于 [Verifiable Credential](../../developer/contribute/snowinning/concepts.md#verifiable-credential) 的 [KYC](#kyc)。
+- 为 Trader 和 Liquidity Provider 提供了链上的 [Reputation](../../developer/contribute/snowinning/concepts.md#声誉)机制，解决 Free Mint 问题。
+- 支持基于 [Verifiable Credential](../../developer/contribute/snowinning/concepts.md#可验证凭证) 的 [KYC](#kyc)。
 - 价格发现基于 RFQ。
 - 链上的交易基于原子交换。
 - 通过在 Terminus OS 里安装应用，支持 Liquidity Provider 自动做市。
@@ -62,34 +62,34 @@ Otmoic Protocol 在设计时有以下的特色：
 - BridgeInfo
 
 | name         | type   | required | description                                           |
-| ------------ | ------ | -------- | ----------------------------------------------------- |
-| src_chain_id | uint   | ✔        | 用户换出代币的链码，遵循 bip44 中的链码               |
-| dst_chain_id | uint   | ✔        | 用户换入代币的链码，遵循 bip44 中的链码               |
-| src_token    | String | ✔        | 用户换出的 token                                      |
-| dst_token    | String | ✔        | 用户换入的 token                                      |
+|--------------|--------|----------|-------------------------------------------------------|
+| src_chain_id | uint   | ✔        | 用户换出代币的链码，遵循 bip44 中的链码                               |
+| dst_chain_id | uint   | ✔        | 用户换入代币的链码，遵循 bip44 中的链码                               |
+| src_token    | String | ✔        | 用户换出的 token                                           |
+| dst_token    | String | ✔        | 用户换入的 token                                           |
 | bridge_name  | String | ✔        | <src_chain_id>-<src_token>-<dst_chain_id>-<dst_token> |
 
 - QuoteBase
 
-| name               | type       | required: amm -> lpnode | required: lpnode -> relay | required: ask reply: amm -> lpnode | required: ask reply: lpnode -> relay | description                                                   |
-| ------------------ | ---------- | ----------------------- | ------------------------- | ---------------------------------- | ------------------------------------ | ------------------------------------------------------------- |
-| bridge             | BridgeInfo |                         | ✔                         |                                    | ✔                                    | 此次报价所属的交易对信息                                      |
-| lp_bridge_address  | String     |                         |                           |                                    | ✔                                    | lp 的收款地址                                                 |
-| lp_node_uri        | String     |                         |                           |                                    | ✔                                    | lp 程序的公网访问地址, relay 依赖此地址与 lpnode 通信         |
-| quote_hash         | String     |                         |                           | ✔                                  | ✔                                    | 本次报价的 hash, 作用报价的唯一标识                           |
-| price              | String     |                         |                           | ✔                                  | ✔                                    | 兑换价格, 以 token 的整数位为单位进行报价                     |
+| name               | type       | required: amm -> lpnode | required: lpnode -> relay | required: ask reply: amm -> lpnode | required: ask reply: lpnode -> relay | description                                |
+|--------------------|------------|-------------------------|---------------------------|------------------------------------|--------------------------------------|--------------------------------------------|
+| bridge             | BridgeInfo |                         | ✔                         |                                    | ✔                                    | 此次报价所属的交易对信息                               |
+| lp_bridge_address  | String     |                         |                           |                                    | ✔                                    | lp 的收款地址                                   |
+| lp_node_uri        | String     |                         |                           |                                    | ✔                                    | lp 程序的公网访问地址, relay 依赖此地址与 lpnode 通信       |
+| quote_hash         | String     |                         |                           | ✔                                  | ✔                                    | 本次报价的 hash, 作用报价的唯一标识                      |
+| price              | String     |                         |                           | ✔                                  | ✔                                    | 兑换价格, 以 token 的整数位为单位进行报价                  |
 | native_token_price | String     |                         |                           | ✔                                  | ✔                                    | 兑换 native token 的价格, 同样以 token 的整数位为单位进行报价 |
-| native_token_max   | String     |                         |                           | ✔                                  | ✔                                    | 本次最多可以兑换多少 native token                             |
-| native_token_min   | String     |                         |                           | ✔                                  | ✔                                    | 如果要兑换 native token, 最少需要兑换多少                     |
+| native_token_max   | String     |                         |                           | ✔                                  | ✔                                    | 本次最多可以兑换多少 native token                    |
+| native_token_min   | String     |                         |                           | ✔                                  | ✔                                    | 如果要兑换 native token, 最少需要兑换多少               |
 
 - QuoteAuthenticationLimiter
 
-| name               | type   | required | description                             |
-| ------------------ | ------ | -------- | --------------------------------------- |
+| name               | type   | required | description                |
+|--------------------|--------|----------|----------------------------|
 | limiter_state      | String | ✔        | 是否开启限制器, “on”为开启, “off”为关闭 |
-| country_white_list | String |          | 按国家进行限制,白名单列表,以“,”分割     |
-| country_black_list | String |          | 按国家进行限制,黑名单列表,以“,”分割     |
-| min_age            | String |          | 可以进行交易的最小年纪                  |
+| country_white_list | String |          | 按国家进行限制,白名单列表,以“,”分割       |
+| country_black_list | String |          | 按国家进行限制,黑名单列表,以“,”分割       |
+| min_age            | String |          | 可以进行交易的最小年纪                |
 
 > [!NOTE]
 >
@@ -99,11 +99,11 @@ Otmoic Protocol 在设计时有以下的特色：
 
 - LPInfo
 
-| name         | type   | required | description                            |
-| ------------ | ------ | -------- | -------------------------------------- |
+| name         | type   | required | description                  |
+|--------------|--------|----------|------------------------------|
 | name         | String | ✔        | lp 的名字, 此名字必须使用 TerminusName |
-| profile      | String | ✔        | lp 的对外介绍信息, 内容无限制          |
-| credit_score | uint   | ✔        | lp 在当前 relay 中的信用分             |
+| profile      | String | ✔        | lp 的对外介绍信息, 内容无限制            |
+| credit_score | uint   | ✔        | lp 在当前 relay 中的信用分           |
 
 > [!NOTE]
 >
@@ -113,42 +113,42 @@ Otmoic Protocol 在设计时有以下的特色：
 
 - Quote
 
-| name                   | type                       | required | description      |
-| ---------------------- | -------------------------- | -------- | ---------------- |
-| quote_base             | QuoteBase                  | ✔        | 报价信息         |
-| authentication_limiter | QuoteAuthenticationLimiter | ✔        | 此次报价的限制器 |
-| lp_info                | LPInfo                     | ✔        | lp 信息          |
-| timestamp              | Long                       | ✔        | 此次报价的时间戳 |
+| name                   | type                       | required | description |
+|------------------------|----------------------------|----------|-------------|
+| quote_base             | QuoteBase                  | ✔        | 报价信息        |
+| authentication_limiter | QuoteAuthenticationLimiter | ✔        | 此次报价的限制器    |
+| lp_info                | LPInfo                     | ✔        | lp 信息       |
+| timestamp              | Long                       | ✔        | 此次报价的时间戳    |
 
 - Ask
 
-| name   | type   | required | description                                      |
-| ------ | ------ | -------- | ------------------------------------------------ |
+| name   | type   | required | description                           |
+|--------|--------|----------|---------------------------------------|
 | bridge | String | ✔        | 交易对的名字,与 BridgeInfo 中的 bridge_name 相同 |
-| amount | String | ✔        | 期望换出的 token 数量                            |
+| amount | String | ✔        | 期望换出的 token 数量                        |
 
 - SwapAssetInformation
 
-| name                   | type   | required: FE -> relay | required: relay -> lpnode | required: lpnode -> amm | description                          |
-| ---------------------- | ------ | --------------------- | ------------------------- | ----------------------- | ------------------------------------ |
-| bridge_name            | String | ✔                     | ✔                         | ✔                       | 交易对的名字                         |
-| lp_id                  | String | ✔                     | ✔                         | ✔                       | lp 的名字                            |
-| sender                 | String | ✔                     | ✔                         | ✔                       | 执行换出 token 的钱包地址            |
-| amount                 | String | ✔                     | ✔                         | ✔                       | 换出的 token 数量                    |
-| dst_address            | String | ✔                     | ✔                         | ✔                       | 换入 token 的接收地址                |
-| dst_amount             | String | ✔                     | ✔                         | ✔                       | 换入 token 的数量                    |
+| name                   | type   | required: FE -> relay | required: relay -> lpnode | required: lpnode -> amm | description               |
+|------------------------|--------|-----------------------|---------------------------|-------------------------|---------------------------|
+| bridge_name            | String | ✔                     | ✔                         | ✔                       | 交易对的名字                    |
+| lp_id                  | String | ✔                     | ✔                         | ✔                       | lp 的名字                    |
+| sender                 | String | ✔                     | ✔                         | ✔                       | 执行换出 token 的钱包地址          |
+| amount                 | String | ✔                     | ✔                         | ✔                       | 换出的 token 数量              |
+| dst_address            | String | ✔                     | ✔                         | ✔                       | 换入 token 的接收地址            |
+| dst_amount             | String | ✔                     | ✔                         | ✔                       | 换入 token 的数量              |
 | dst_native_amount      | String | ✔                     | ✔                         | ✔                       | 换入操作附带交换的 native token 数量 |
-| step_time_lock         | Long   | ✔                     | ✔                         | ✔                       | 每一步操作的限制时间                 |
-| agreement_reached_time | Long   | ✔                     | ✔                         | ✔                       | 双方达成交易的时间                   |
-| requestor              | String | ✔                     | ✔                         | ✔                       | 交换发起方的身份认证地址             |
+| step_time_lock         | Long   | ✔                     | ✔                         | ✔                       | 每一步操作的限制时间                |
+| agreement_reached_time | Long   | ✔                     | ✔                         | ✔                       | 双方达成交易的时间                 |
+| requestor              | String | ✔                     | ✔                         | ✔                       | 交换发起方的身份认证地址              |
 | user_sign              | String | ✔                     | ✔                         | ✔                       | 用户对于交易信息的签名               |
-| lp_sign                | String |                       |                           |                         | lp 对于交易信息的签名                |
+| lp_sign                | String |                       |                           |                         | lp 对于交易信息的签名              |
 | quote                  | Quote  | ✔                     | ✔                         | ✔                       | 交易发起方所选择的报价               |
-| system_fee_src         | uint   |                       | ✔                         | ✔                       | 系统当前合约所收取的手续费-换出链    |
-| system_fee_dst         | uint   |                       | ✔                         | ✔                       | 系统当前合约所收取的手续费-换入链    |
-| dst_amount_need        | String |                       | ✔                         | ✔                       | 是否交换 token                       |
-| dst_native_amount_need | String |                       | ✔                         | ✔                       | 是否交换 native token                |
-| append_information     | String |                       |                           |                         | 附加信息                             |
+| system_fee_src         | uint   |                       | ✔                         | ✔                       | 系统当前合约所收取的手续费-换出链         |
+| system_fee_dst         | uint   |                       | ✔                         | ✔                       | 系统当前合约所收取的手续费-换入链         |
+| dst_amount_need        | String |                       | ✔                         | ✔                       | 是否交换 token                |
+| dst_native_amount_need | String |                       | ✔                         | ✔                       | 是否交换 native token         |
+| append_information     | String |                       |                           |                         | 附加信息                      |
 
 > [!NOTE]
 > `dst_amount_need`和`dst_native_amount_need`由 relay 基于本次交换的信息计算得出
@@ -239,14 +239,14 @@ sha3(
 
 - PreBusiness
 
-| name                   | type                 | required: relay -> lpnode | required: lpnode -> amm | required: relay -> FE | description                               |
-| ---------------------- | -------------------- | ------------------------- | ----------------------- | --------------------- | ----------------------------------------- |
-| swap_asset_information | SwapAssetInformation | ✔                         | ✔                       |                       | 交换信息                                  |
-| hash                   | String               | ✔                         | ✔                       |                       | 交换中主要信息生成的 hash                 |
-| relay_hashlock         | String               |                           |                         | ✔                     | relay 提供的 hashlock                     |
+| name                   | type                 | required: relay -> lpnode | required: lpnode -> amm | required: relay -> FE | description                |
+|------------------------|----------------------|---------------------------|-------------------------|-----------------------|----------------------------|
+| swap_asset_information | SwapAssetInformation | ✔                         | ✔                       |                       | 交换信息                       |
+| hash                   | String               | ✔                         | ✔                       |                       | 交换中主要信息生成的 hash            |
+| relay_hashlock         | String               |                           |                         | ✔                     | relay 提供的 hashlock         |
 | is_kyc                 | Boolean              | ✔                         | ✔                       |                       | 交换发起者是否在 relay 的系统中进行了 kyc |
-| kyc_info               | KycInfo              |                           |                         |                       | 交易发起者的完整 kyc 信息                 |
-| locked                 | Boolean              |                           |                         | ✔                     | 交易是否达成的状态位                      |
+| kyc_info               | KycInfo              |                           |                         |                       | 交易发起者的完整 kyc 信息            |
+| locked                 | Boolean              |                           |                         | ✔                     | 交易是否达成的状态位                 |
 
 - 关于 KYC Info
 
@@ -267,26 +267,26 @@ sha3(
 
 此结构为合约方法调用参数
 
-| name                 | type    | required | description                                                         |
-| -------------------- | ------- | -------- | ------------------------------------------------------------------- |
-| sender               | address | ✔        | 本操作的发起者, 大多数情况下与 requestor 相同, 但并无必须相同的限制 |
-| bridge               | address | ✔        | QuoteBase 中 lp_bridge_address                                      |
-| token                | address | ✔        | BridgeInfo 中 src_token                                             |
-| amount               | uint256 | ✔        | SwapAssetInformation 中 amount                                      |
-| hashlock             | bytes32 | ✔        | 交换发起方生成的锁                                                  |
-| relayHashlock        | bytes32 | ✔        | PreBusiness 中 relay_hashlock                                       |
-| stepTimelock         | uint64  | ✔        | SwapAssetInformation 中 step_time_lock                              |
-| dstChainId           | uint64  | ✔        | BridgeInfo 中 dst_chain_id                                          |
-| dstAddress           | uint256 | ✔        | SwapAssetInformation 中 dst_address                                 |
-| bidId                | bytes32 | ✔        | PreBusiness 中 hash                                                 |
-| tokenDst             | uint256 | ✔        | BridgeInfo 中 dst_token                                             |
-| amountDst            | uint256 | ✔        | SwapAssetInformation 中 dst_amount                                  |
-| nativeAmountDst      | uint256 | ✔        | SwapAssetInformation 中 dst_native_amount                           |
-| agreementReachedTime | uint64  | ✔        | SwapAssetInformation 中 agreement_reached_time                      |
-| requestor            | string  | ✔        | SwapAssetInformation 中 requestor                                   |
-| lpId                 | string  | ✔        | SwapAssetInformation 中 lp_id                                       |
-| userSign             | string  | ✔        | SwapAssetInformation 中 userSign                                    |
-| lpSign               | string  | ✔        | SwapAssetInformation 中 lpSign                                      |
+| name                 | type    | required | description                                   |
+|----------------------|---------|----------|-----------------------------------------------|
+| sender               | address | ✔        | 本操作的发起者, 大多数情况下与 requestor 相同, 但并无必须相同的限制     |
+| bridge               | address | ✔        | QuoteBase 中 lp_bridge_address                 |
+| token                | address | ✔        | BridgeInfo 中 src_token                        |
+| amount               | uint256 | ✔        | SwapAssetInformation 中 amount                 |
+| hashlock             | bytes32 | ✔        | 交换发起方生成的锁                                     |
+| relayHashlock        | bytes32 | ✔        | PreBusiness 中 relay_hashlock                  |
+| stepTimelock         | uint64  | ✔        | SwapAssetInformation 中 step_time_lock         |
+| dstChainId           | uint64  | ✔        | BridgeInfo 中 dst_chain_id                     |
+| dstAddress           | uint256 | ✔        | SwapAssetInformation 中 dst_address            |
+| bidId                | bytes32 | ✔        | PreBusiness 中 hash                            |
+| tokenDst             | uint256 | ✔        | BridgeInfo 中 dst_token                        |
+| amountDst            | uint256 | ✔        | SwapAssetInformation 中 dst_amount             |
+| nativeAmountDst      | uint256 | ✔        | SwapAssetInformation 中 dst_native_amount      |
+| agreementReachedTime | uint64  | ✔        | SwapAssetInformation 中 agreement_reached_time |
+| requestor            | string  | ✔        | SwapAssetInformation 中 requestor              |
+| lpId                 | string  | ✔        | SwapAssetInformation 中 lp_id                  |
+| userSign             | string  | ✔        | SwapAssetInformation 中 userSign               |
+| lpSign               | string  | ✔        | SwapAssetInformation 中 lpSign                 |
 
 关于 hashlock
 
@@ -298,9 +298,9 @@ sha3(
 
 - EventTransferOut-EVM
 
-| name                   | type    | required | description              |
-| ---------------------- | ------- | -------- | ------------------------ |
-| transfer_id            | bytes32 | ✔        | 本次操作的 id            |
+| name                   | type    | required | description        |
+|------------------------|---------|----------|--------------------|
+| transfer_id            | bytes32 | ✔        | 本次操作的 id           |
 | sender                 | address | ✔        | TransferOut 中的对应数据 |
 | bridge                 | address | ✔        | TransferOut 中的对应数据 |
 | token                  | address | ✔        | TransferOut 中的对应数据 |
@@ -324,9 +324,9 @@ sha3(
 
 此结构为合约方法调用参数
 
-| name                   | type    | required | description                                    |
-| ---------------------- | ------- | -------- | ---------------------------------------------- |
-| sender                 | address | ✔        | 本操作的发起者                                 |
+| name                   | type    | required | description                                   |
+|------------------------|---------|----------|-----------------------------------------------|
+| sender                 | address | ✔        | 本操作的发起者                                       |
 | dst_address            | address | ✔        | SwapAssetInformation 中 dst_address            |
 | token                  | address | ✔        | BridgeInfo 中 dst_token                        |
 | token_amount           | uint256 | ✔        | SwapAssetInformation 中 dst_amount             |
@@ -339,9 +339,9 @@ sha3(
 
 - EventTransferIn-EVM
 
-| name                   | type    | required | description             |
-| ---------------------- | ------- | -------- | ----------------------- |
-| transfer_id            | bytes32 | ✔        | 本次操作的 id           |
+| name                   | type    | required | description       |
+|------------------------|---------|----------|-------------------|
+| transfer_id            | bytes32 | ✔        | 本次操作的 id          |
 | sender                 | address | ✔        | TransferIn 中的对应数据 |
 | receiver               | address | ✔        | TransferIn 中的对应数据 |
 | token                  | address | ✔        | TransferIn 中的对应数据 |
@@ -357,47 +357,47 @@ sha3(
 
 此结构为合约方法调用参数
 
-| name                   | type    | required | description                      |
-| ---------------------- | ------- | -------- | -------------------------------- |
-| sender                 | address | ✔        | TransferOut 中的对应数据         |
-| receiver               | address | ✔        | TransferOut 中的对应数据         |
-| token                  | address | ✔        | TransferOut 中的对应数据         |
-| token_amount           | uint256 | ✔        | TransferOut 中的对应数据         |
-| eth_amount             | uint256 | ✔        | TransferOut 中的对应数据         |
-| hashlock               | bytes32 | ✔        | TransferOut 中的对应数据         |
-| relay_hashlock         | bytes32 | ✔        | TransferOut 中的对应数据         |
-| step_time_lock         | uint64  | ✔        | TransferOut 中的对应数据         |
+| name                   | type    | required | description              |
+|------------------------|---------|----------|--------------------------|
+| sender                 | address | ✔        | TransferOut 中的对应数据       |
+| receiver               | address | ✔        | TransferOut 中的对应数据       |
+| token                  | address | ✔        | TransferOut 中的对应数据       |
+| token_amount           | uint256 | ✔        | TransferOut 中的对应数据       |
+| eth_amount             | uint256 | ✔        | TransferOut 中的对应数据       |
+| hashlock               | bytes32 | ✔        | TransferOut 中的对应数据       |
+| relay_hashlock         | bytes32 | ✔        | TransferOut 中的对应数据       |
+| step_time_lock         | uint64  | ✔        | TransferOut 中的对应数据       |
 | preimage               | bytes32 | ✔        | 可以计算出 hashlock 的原项       |
 | relay_preimage         | bytes32 | ✔        | 可以计算出 relay_hashlock 的原项 |
-| agreement_reached_time | uint64  | ✔        | TransferOut 中的对应数据         |
+| agreement_reached_time | uint64  | ✔        | TransferOut 中的对应数据       |
 
 - EventConfirmTransferOut-EVM
 
-| name        | type    | required | description                       |
-| ----------- | ------- | -------- | --------------------------------- |
+| name        | type    | required | description                     |
+|-------------|---------|----------|---------------------------------|
 | transfer_id | bytes32 | ✔        | EventTransferOut 中的 transfer_id |
-| preimage    | bytes32 | ✔        | ConfirmTransferOut 中的对应数据   |
+| preimage    | bytes32 | ✔        | ConfirmTransferOut 中的对应数据       |
 
 - ConfirmTransferIn-EVM
 
 此结构为合约方法调用参数
 
-| name                   | type    | required | description                           |
-| ---------------------- | ------- | -------- | ------------------------------------- |
-| sender                 | address | ✔        | TransferIn 中的对应数据               |
-| dst_address            | address | ✔        | TransferIn 中的对应数据               |
-| token                  | address | ✔        | TransferIn 中的对应数据               |
-| token_amount           | uint256 | ✔        | TransferIn 中的对应数据               |
-| eth_amount             | uint256 | ✔        | TransferIn 中的对应数据               |
-| hashlock               | bytes32 | ✔        | TransferIn 中的对应数据               |
-| step_time_lock         | uint64  | ✔        | TransferIn 中的对应数据               |
+| name                   | type    | required | description                         |
+|------------------------|---------|----------|-------------------------------------|
+| sender                 | address | ✔        | TransferIn 中的对应数据                   |
+| dst_address            | address | ✔        | TransferIn 中的对应数据                   |
+| token                  | address | ✔        | TransferIn 中的对应数据                   |
+| token_amount           | uint256 | ✔        | TransferIn 中的对应数据                   |
+| eth_amount             | uint256 | ✔        | TransferIn 中的对应数据                   |
+| hashlock               | bytes32 | ✔        | TransferIn 中的对应数据                   |
+| step_time_lock         | uint64  | ✔        | TransferIn 中的对应数据                   |
 | preimage               | bytes32 | ✔        | EventConfirmTransferOut 中的 preimage |
-| agreement_reached_time | uint64  | ✔        | TransferIn 中的对应数据               |
+| agreement_reached_time | uint64  | ✔        | TransferIn 中的对应数据                   |
 
 - EventConfirmTransferIn-EVM
 
-| name        | type    | required | description                    |
-| ----------- | ------- | -------- | ------------------------------ |
+| name        | type    | required | description                   |
+|-------------|---------|----------|-------------------------------|
 | transfer_id | bytes32 | ✔        | EventTransferIn 中 transfer_id |
 | preimage    | bytes32 | ✔        | ConfirmTransferIn 中 preimage  |
 
@@ -405,8 +405,8 @@ sha3(
 
 此结构为合约方法调用参数
 
-| name                   | type    | required | description              |
-| ---------------------- | ------- | -------- | ------------------------ |
+| name                   | type    | required | description        |
+|------------------------|---------|----------|--------------------|
 | sender                 | address | ✔        | TransferOut 中的对应数据 |
 | receiver               | address | ✔        | TransferOut 中的对应数据 |
 | token                  | address | ✔        | TransferOut 中的对应数据 |
@@ -419,16 +419,16 @@ sha3(
 
 - EventRefundTransferOut-EVM
 
-| name        | type    | required | descript                          |
-| ----------- | ------- | -------- | --------------------------------- |
+| name        | type    | required | descript                        |
+|-------------|---------|----------|---------------------------------|
 | transfer_id | bytes32 | ✔        | EventTransferOut 中的 transfer_id |
 
 - RefundTransferIn-EVM
 
 此结构为合约方法调用参数
 
-| name                   | type    | required | description             |
-| ---------------------- | ------- | -------- | ----------------------- |
+| name                   | type    | required | description       |
+|------------------------|---------|----------|-------------------|
 | sender                 | address | ✔        | TransferIn 中的对应数据 |
 | dst_address            | address | ✔        | TransferIn 中的对应数据 |
 | token                  | address | ✔        | TransferIn 中的对应数据 |
@@ -440,15 +440,15 @@ sha3(
 
 - EventRefundTransferIn-EVM
 
-| name        | type    | required | descript                       |
-| ----------- | ------- | -------- | ------------------------------ |
+| name        | type    | required | descript                      |
+|-------------|---------|----------|-------------------------------|
 | transfer_id | bytes32 | ✔        | EventTransferIn 中 transfer_id |
 
 - Business
 
-| name          | type   | required | description         |
-| ------------- | ------ | -------- | ------------------- |
-| step          | uint   | ✔        | 交换流程当前的进度  |
+| name          | type   | required | description        |
+|---------------|--------|----------|--------------------|
+| step          | uint   | ✔        | 交换流程当前的进度          |
 | business_hash | String | ✔        | PreBusiness 中 hash |
 
 > [!NOTE]
@@ -467,7 +467,7 @@ sha3(
 已产生的数据的完整包装
 
 | ame                        | type                    | required | description |
-| -------------------------- | ----------------------- | -------- | ----------- |
+|----------------------------|-------------------------|----------|-------------|
 | pre_business               | PreBusiness             | ✔        |             |
 | business                   | Business                | ✔        |             |
 | event_transfer_out         | EventTransferOut        |          |             |
@@ -483,31 +483,31 @@ sha3(
 
 - structure
 
-| parameter name | type   | description    |
-| -------------- | ------ | -------------- |
-| cmd            | String | 本次命令的类型 |
-| cid            | String | 本次命令的 id  |
-| others         |        |                |
+| parameter name | type   | description |
+|----------------|--------|-------------|
+| cmd            | String | 本次命令的类型     |
+| cid            | String | 本次命令的 id    |
+| others         |        |             |
 
 - type
 
-| name                       | description                                                             |
-| -------------------------- | ----------------------------------------------------------------------- |
-| CMD_UPDATE_QUOTE           | amm 发送给 lpnode, 通知 lpnode 向 relay 发送 bridge 存活消息            |
+| name                       | description                                        |
+|----------------------------|----------------------------------------------------|
+| CMD_UPDATE_QUOTE           | amm 发送给 lpnode, 通知 lpnode 向 relay 发送 bridge 存活消息   |
 | EVENT_QUOTE_REMOVER        | lpnode 发送给 amm, 长时间未发送存活消息, bridge 已被 relay 移出可用列表 |
-| CMD_ASK_QUOTE              | lpnode 发送给 amm, 询问报价                                             |
-| EVENT_ASK_REPLY            | amm 发送给 lpnode, 进行实时报价                                         |
-| EVENT_LOCK_QUOTE           | lpnode 发送给 amm, 有新的交换请求                                       |
-| CALLBACK_LOCK_QUOTE        | amm 发送给 lpnode, 告知 lpnode 是否同意此笔交易                         |
-| EVENT_TRANSFER_OUT         | lpnode 发送给 amm, 交换发起方已在合约中锁定 token                       |
-| CMD_TRANSFER_IN            | amm 发送给 lpnode, 通知 lpnode 执行 TransferIn 操作                     |
-| EVENT_TRANSFER_OUT_CONFIRM | lpnode 发送给 amm, 交换发起方已在合约中释放锁定的 token                 |
-| CMD_TRANSFER_IN_CONFIRM    | amm 发送给 lpnode, 通知 lpnode 执行 ConfirmTransferIn 操作              |
-| EVENT_TRANSFER_OUT_REFUND  | lpnode 发送给 amm, 交换发起方已在合约中退款                             |
-| CMD_TRANSFER_IN_REFUND     | amm 发送给 lpnode, 通知 lpnode 执行 RefundTransferIn 操作               |
-| EVENT_TRANSFER_IN          | lpnode 发送给 amm, lpnode 已在合约中锁定 token                          |
-| EVENT_TRANSFER_IN_CONFIRM  | lpnode 发送给 amm, lpnode 已在合约中释放锁定的 token                    |
-| EVENT_TRANSFER_IN_REFUND   | lpnode 发送给 amm, lpnode 已在合约中退款                                |
+| CMD_ASK_QUOTE              | lpnode 发送给 amm, 询问报价                               |
+| EVENT_ASK_REPLY            | amm 发送给 lpnode, 进行实时报价                             |
+| EVENT_LOCK_QUOTE           | lpnode 发送给 amm, 有新的交换请求                            |
+| CALLBACK_LOCK_QUOTE        | amm 发送给 lpnode, 告知 lpnode 是否同意此笔交易                 |
+| EVENT_TRANSFER_OUT         | lpnode 发送给 amm, 交换发起方已在合约中锁定 token                 |
+| CMD_TRANSFER_IN            | amm 发送给 lpnode, 通知 lpnode 执行 TransferIn 操作         |
+| EVENT_TRANSFER_OUT_CONFIRM | lpnode 发送给 amm, 交换发起方已在合约中释放锁定的 token              |
+| CMD_TRANSFER_IN_CONFIRM    | amm 发送给 lpnode, 通知 lpnode 执行 ConfirmTransferIn 操作  |
+| EVENT_TRANSFER_OUT_REFUND  | lpnode 发送给 amm, 交换发起方已在合约中退款                       |
+| CMD_TRANSFER_IN_REFUND     | amm 发送给 lpnode, 通知 lpnode 执行 RefundTransferIn 操作   |
+| EVENT_TRANSFER_IN          | lpnode 发送给 amm, lpnode 已在合约中锁定 token               |
+| EVENT_TRANSFER_IN_CONFIRM  | lpnode 发送给 amm, lpnode 已在合约中释放锁定的 token            |
+| EVENT_TRANSFER_IN_REFUND   | lpnode 发送给 amm, lpnode 已在合约中退款                     |
 
 :::
 
@@ -528,7 +528,7 @@ Flow Direction
 Data
 
 | flow            | data                            |
-| --------------- | ------------------------------- |
+|-----------------|---------------------------------|
 | amm -> lpnode   | `LpnodeEventCommand<QuoteBase>` |
 | lpnode -> relay | `QuoteBase`                     |
 
@@ -545,7 +545,7 @@ Flow Direction
 Data
 
 | flow               | data                      |
-| ------------------ | ------------------------- |
+|--------------------|---------------------------|
 | front end -> relay | `Ask`                     |
 | relay -> lpnode    | `Ask`                     |
 | lpnode -> amm      | `LpnodeEventCommand<Ask>` |
@@ -563,7 +563,7 @@ Flow Direction
 Data
 
 | flow               | data                            |
-| ------------------ | ------------------------------- |
+|--------------------|---------------------------------|
 | amm -> lpnode      | `LpnodeEventCommand<QuoteBase>` |
 | lpnode -> relay    | `QuoteBase`                     |
 | relay -> front end | `Quote`                         |
@@ -595,7 +595,7 @@ Flow Direction
 Data
 
 | flow                                | data                              |
-| ----------------------------------- | --------------------------------- |
+|-------------------------------------|-----------------------------------|
 | Confirm Quotation - FE -> relay     | `SwapAssetInformation`            |
 | Confirm Quotation - relay -> lpnode | `PreBusiness`                     |
 | Confirm Quotation - lpnode -> amm   | `LpnodeEventCommand<PreBusiness>` |
@@ -628,7 +628,7 @@ Flow Direction
 Data
 
 | flow                             | data                                   |
-| -------------------------------- | -------------------------------------- |
+|----------------------------------|----------------------------------------|
 | TransferOut                      | `TransferOut`                          |
 | EventTransferOut                 | `EventTransferOut`                     |
 | BusinessUpdate - relay -> FE     | `Business`                             |
@@ -659,7 +659,7 @@ Flow Direction
 Data
 
 | flow               | data                                   |
-| ------------------ | -------------------------------------- |
+|--------------------|----------------------------------------|
 | DoTransferIn       | `LpnodeEventCommand<BusinessFullData>` |
 | TransferIn         | `TransferIn`                           |
 | EventTransferIn    | `EventTransferIn`                      |
@@ -691,7 +691,7 @@ Flow Direction
 Data
 
 | flow                             | data                                   |
-| -------------------------------- | -------------------------------------- |
+|----------------------------------|----------------------------------------|
 | ConfirmTransferOut               | `ConfirmTransferOut`                   |
 | EventConfirmTransferOut          | `EventConfirmTransferOut`              |
 | BusinessUpdate - relay -> FE     | `Business`                             |
@@ -722,7 +722,7 @@ Flow Direction
 Data
 
 | flow                      | data                                   |
-| ------------------------- | -------------------------------------- |
+|---------------------------|----------------------------------------|
 | DoTransferIn              | `LpnodeEventCommand<BusinessFullData>` |
 | TransferIn                | `ConfirmTransferIn`                    |
 | EventTransferIn           | `EventConfirmTransferIn`               |
@@ -737,21 +737,21 @@ Data
 
 :::info KYC 中的主要信息
 
-| name             | description                            |
-| ---------------- | -------------------------------------- |
-| address          | 现实中的住址                           |
-| address_on_chain | 钱包地址,使用“,”隔开                   |
-| birthday         | 生日, 会跟 限制器 进行匹配             |
-| country          | 国家, 会跟 限制器 进行匹配             |
-| email            | 邮箱                                   |
-| first_name       | 姓名                                   |
-| last_name        | 姓名                                   |
-| gender           | 性别                                   |
-| id_number        | 身份证件号码                           |
-| id_type          | 身份证件类型                           |
-| phone            | 电话                                   |
-| id_end_image     | 身份证件背面照片                       |
-| id_front_image   | 身份证件正面照片                       |
+| name             | description           |
+|------------------|-----------------------|
+| address          | 现实中的住址                |
+| address_on_chain | 钱包地址,使用“,”隔开          |
+| birthday         | 生日, 会跟 限制器 进行匹配       |
+| country          | 国家, 会跟 限制器 进行匹配       |
+| email            | 邮箱                    |
+| first_name       | 姓名                    |
+| last_name        | 姓名                    |
+| gender           | 性别                    |
+| id_number        | 身份证件号码                |
+| id_type          | 身份证件类型                |
+| phone            | 电话                    |
+| id_end_image     | 身份证件背面照片              |
+| id_front_image   | 身份证件正面照片              |
 | image1           | 其他身份认证资料(如: 住址生活缴费账单) |
 | image2           | 其他身份认证资料(如: 住址生活缴费账单) |
 

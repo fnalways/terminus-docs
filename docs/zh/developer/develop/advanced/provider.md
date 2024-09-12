@@ -14,17 +14,17 @@ metadata:
   # provider registry需要安装到user-system下面
   namespace: user-system-{{ .Values.bfl.username}}
 spec:
-  version: v2   #The latest version is v2, but the system remains compatible with v1.
+  version: v2   # 最新版本为 v2，但系统仍与 v1 兼容。
 
-  # provider 的 dataType, it is recommended to add app name to prevent duplication.
+  # provider 的 dataType, 建议添加应用名称以避免重复
   dataType: legacy_{{ .Release.Name }}
   deployment: {{ .Release.Name }}
   description: {{ .Release.Name }} legacy api v2
 
-  # provider 的可访问service. Usually it is <appServiceName>.<appNameSpace>:<servicePort>
+  # provider 的可访问service。通常是 <appServiceName>.<appNameSpace>:<servicePort>
   endpoint: {{ .Release.Name }}-svc.{{ .Release.Namespace }}:1234
 
-  # provider 的 group; it is recommended to add the app name to prevent duplication.
+  # provider 的 group，建议添加应用名称以避免重复
   group: api.{{ .Release.Name }}
   kind: provider
   namespace: "{{ .Release.Namespace }}"
@@ -43,18 +43,18 @@ status:
 
 ```Yaml
 sysData:
-- appName: providerapp  # The appname of the api provider. Required for ProviderRegistry v2. 
-  port: 8888  # The port of the provider service
+- appName: providerapp  # provider 的应用名称，ProviderRegistry v2 必填
+  port: 8888  # provider 服务的端口
 
-  # The default domain of provider is <appName>-svc.<appName>-<username>:<port>, if the service name and app namespace is not in default format, you can specify it in following field  
-  svc: app-svc  # Name of the service. Optional for ProviderRegistry v2.
-  namespace: ns # Namespace of the app. Optional for ProviderRegistry v2.
+  # 如果服务名称和应用命名空间不是默认格式，可以在以下字段指定 provider 默认域名为 <appName>-svc.<appName>-<username>:<port>
+  svc: app-svc  # 服务名称，ProviderRegistry v2 可选
+  namespace: ns # 应用的命名空间，ProviderRegistry v2 可选
 
-  version: v2   # version of the ProviderRegistry
-  dataType: legacy_{{ .Release.Name }}  # dataType defined in ProviderRegistry
-  group: api.{{ .Release.Name }}   # group defined in ProviderRegistry
+  version: v2   # ProviderRegistry 的版本
+  dataType: legacy_{{ .Release.Name }}  # 在 ProviderRegistry 中定义的 dataType
+  group: api.{{ .Release.Name }}   # 在 ProviderRegistry 中定义的 group
   ops:
-  - AppApi   # name of opApis defined in ProviderRegistry
+  - AppApi   # 在 ProviderRegistry 中定义的 opApis 的名称
 ```
 
 配置后，在 TAC 的 templates 中可引用系统在安装时将为其注入的授权使用的 `access key` 和 `access secret`

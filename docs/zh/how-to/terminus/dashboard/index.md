@@ -8,11 +8,11 @@ Dashboard 的定位类似于 Windows 的资源管理器。这里集中展示了�
 
 ## Overview
 
-Dashboard 提供了你的 Terminus 系统的概览。你可以在这里看到你 Terminus 所在的集群的[物理资源使用情况](#physic-resources)，你剩余的[用户资源配额](#user-usage)，资源消耗最最多的[应用榜单](#application-usage-ranking), 以及[网络流量分析](#analytics)。
+Dashboard 提供了你的 Terminus 系统的概览。你可以在这里看到你 Terminus 所在的集群的[物理资源使用情况](#physic-resources)，你剩余的[用户资源配额](#user-usage)，资源消耗最最多的[应用榜单](#application-usage), 以及[网络流量分析](#analytics)。
 
 ### Physic Resources
 
-[Terminus OS](/overview/terminus/overview.html) 以 Kubernetes 为底层基础来管理各类物理资源，这使你可以使用多个虚拟机或物理机组成一个集群来运行 Terminus OS。通过 Dashboard 的物理资源监控功能，你可以总览你的设备集群运行情况，并建立常规资源消耗和集群性能的标准。
+[Terminus OS](/overview/terminus/overview.md) 以 Kubernetes 为底层基础来管理各类物理资源，这使你可以使用多个虚拟机或物理机组成一个集群来运行 Terminus OS。通过 Dashboard 的物理资源监控功能，你可以总览你的设备集群运行情况，并建立常规资源消耗和集群性能的标准。
 
 你可以在 Overview 页面上看到 4 项最重要的物理资源的当前和历史用量: CPU 、内存、磁盘和容器组。下方的曲线图内容展示了最近 10 分钟的资源变化趋势。点击资源卡片，可以切换曲线图内容。
 
@@ -58,7 +58,7 @@ IOPS 的全称为 Input/Output Operations Per Second，用于表示磁盘每秒�
 
 ### User Usage
 
-Terminus 支持多人共用一个集群的物理资源，由集群管理员为每个人[分配资源配额](/how-to/terminus/settings/account.html#set-resource-limit)。
+Terminus 支持多人共用一个集群的物理资源，由集群管理员为每个人[分配资源配额](/how-to/terminus/settings/account.md#set-resource-limit)。
 
 在 Overview 页面上，你可以查看你名下资源的当前和历史用量。当你的用户资源配额不足时，你的 Terminus 可能运行缓慢，无法安装新的应用，甚至一些运行中的高资源开销应用也会被 Suspended。
 因此，除了集群资源外，你还需定期关注你的个人资源配额使用情况。
@@ -67,7 +67,7 @@ Terminus 支持多人共用一个集群的物理资源，由集群管理员为�
 
 ### Application Usage
 
-在 Overview 页面上，你可以看到当前 CPU 和内存用量最高的 5 个应用，从而快速定位大量消耗资源的应用程序。点击 More 可以查看完整的[应用用量列表](#application)。
+在 Overview 页面上，你可以看到当前 CPU 和内存用量最高的 5 个应用，从而快速定位大量消耗资源的应用程序。点击 More 可以查看完整的应用用量列表。
 
 ![alt text](/images/how-to/terminus/dashboard/usage-ranking.jpg)
 

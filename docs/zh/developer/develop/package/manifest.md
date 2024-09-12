@@ -75,8 +75,7 @@ options:
 - Type: `string`
 - Accepted Value: `app`, `recommend`, `model`, `middleware`
 
-Terminus currently supports four types of applications, each requiring different fields. This document uses `app` as an example to explain each field. For information on other types, please refer to the corresponding configuration guide.
-
+Terminus 目前支持四种类型的应用程序，每种应用程序需要不同的字段。本文档以 `app` 为例，解释每个字段的含义。关于其他类型的信息，请参考相应的配置指南。
 - [recommend 配置指南](recommend.md)
 - [model 配置指南](model.md)
 
@@ -130,26 +129,27 @@ metadata:
 - Type: `string`
 - Accepted Value: `[a-z][a-z0-9]?`
 
-App’s namespace in Terminus system, lowercase alphanumeric characters only.不超过 30 个字符.需要与 FolderName、Chart.yaml-name 一致
+Terminus 系统中的应用命名空间，仅限小写字母和数字。不超过 30 个字符。需要与 FolderName、Chart.yaml-name 保持一致。
 
 ### title
 
 - Type: `string`
 
-Your app title that appears in the app market.长度不超过 30 个字符.
+应用市场中显示的应用标题。长度不超过 30 个字符。
 
 ### description
 
 - Type: `string`
 
-A short description appears below app title in the app market.
+应用市场中应用标题下显示的简短描述。
 
 ### icon
 
 - Type: `url`
 
-Your app icon that appears in the app market.
-The app's icon must be a PNG or WEBP format file, up to 512 KB, with a size of 256x256 px.
+应用市场中显示的应用图标。
+
+应用图标必须为 PNG 或 WEBP 格式，最大 512 KB，尺寸为 256x256 像素。
 
 ### version
 
@@ -162,11 +162,11 @@ The app's icon must be a PNG or WEBP format file, up to 512 KB, with a size of 2
 - Type: `list<string>`
 - Accepted Value: `Blockchain`,`Utilities`,`Social Network`,`Entertainment`,`Productivity`
 
-Used to display your app on different categoiry page in app market
+用于在应用市场的不同类别页面显示你的应用。
 
 ## Entrances
 
-Specify how to access this app, at least 1 required.每个应用至少需要 1 个入口，至多 10 个
+指定如何访问此应用。每个应用至少需要 1 个入口，至多 10 个。
 
 配置示例
 ```Yaml
@@ -187,6 +187,7 @@ entrances:
 
 - Type: `string`
 - Accepted Value: `[a-z]([-a-z0-9]*[a-z0-9])?`
+
   entrance 的名称,长度不超过 63 个字符.一个应用内不能重复.
 
 ### port
@@ -198,20 +199,21 @@ entrances:
 
 - Type: `string`
 - Accepted Value: `[a-z]([-a-z0-9]*[a-z0-9])?`
-  Ingress name of current entrance., 只包含小写字母和数字和中划线`-`,长度不超过 63 个字符
+
+  当前入口的 Ingress 名称。 只包含小写字母和数字和中划线`-`,长度不超过 63 个字符
 
 ### title
 
 - Type: `string`
 
-Title that appears in the Terminus desktop after installed. 长度不超过 30 个字符.
+安装后在 Terminus 桌面上显示的标题。长度不超过 30 个字符.
 
 ### icon
 
 - Type: `url`
 - Optional
 
-Icon that appears in the Terminus desktop after installed. The app's icon must be a PNG or WEBP format file, up to 512 KB, with a size of 256x256 px.
+安装后在 Terminus 桌面上显示的图标。应用图标必须为 PNG 或 WEBP 格式，大小不超过 512 KB，尺寸为 256x256 像素。
 
 ### authLevel
 
@@ -220,7 +222,7 @@ Icon that appears in the Terminus desktop after installed. The app's icon must b
 - Default: `private`
 - Optional
 
-Auth level of current entrance. Private entrance requires activating tailscale to access. 应用的 entrance 默认为 private.
+当前入口的授权级别。私有入口需要激活 tailscale 才能访问。应用的 entrance 默认为 private。
 
 ### invisible
 
@@ -245,9 +247,9 @@ Entrance 在 [Desktop](../../../how-to/terminus/desktop.md) 中窗口的打开�
 - Default: `false`
 - Optional
 
-When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser‘s same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
+当在桌面上的 iframe 中嵌入应用时，应用的 URL 可能会动态变化。由于浏览器的同源策略，桌面（父窗口）无法直接检测 iframe 中的 URL 变化。因此，如果重新打开应用标签页，它将显示初始 URL 而不是更新后的 URL。
 
-To ensure a seamless user experience, you can enable this option by setting it to true. This action prompts the gateway to automatically inject the following code into the iframe. This code sends an event to the parent window (desktop) whenever the iframe's URL changes. As a result, the desktop can track URL changes and open the correct page.
+为确保无缝的用户体验，您可以通过将此选项设置为 true 来启用此功能。此操作会提示网关自动将以下代码注入到 iframe 中。此代码会在 iframe 的 URL 发生变化时向父窗口（桌面）发送事件，从而使桌面能够跟踪 URL 变化并打开正确的页面。
 
 配置示例
 ```Javascript
@@ -319,7 +321,7 @@ permission:
 - Type: `list<map>`
 - Optional
 
-Declare the list of APIs that this app needs to access.
+声明此应用需要访问的 API 列表。
 
 配置示例
 ```Yaml
@@ -339,20 +341,21 @@ Declare the list of APIs that this app needs to access.
 ```
 
 API 需要的系统数据权限，数据权限列表如下
-| Group | version | dataType | ops |
-| ----------- | ----------- | ----------- | ----------- |
-| service.appstore | v1 | app | InstallDevApp, UninstallDevApp
-| message-disptahcer.system-server | v1 | event | Create, List
-| service.desktop | v1 | ai_message | AIMessage
-| service.did | v1 | did | ResolveByDID, ResolveByName, Verify
-| api.intent | v1 | legacy_api | POST
-| service.intent | v1 | intent | RegisterIntentFilter, UnregisterIntentFilter, SendIntent, QueryIntent, ListDefaultChoice, CreateDefaultChoice, RemoveDefaultChoice, ReplaceDefaultChoice
-| service.message | v1 | message | GetContactLogs, GetMessages, Message
-| service.notification | v1 | message | Create
-| service.notification | v1 | token | Create
-| service.search | v1 | search | Input, Delete, InputRSS, DeleteRSS, QueryRSS, QuestionAI
-| secret.infisical | v1 | secret | CreateSecret, RetrieveSecret
-| secret.vault | v1 | key | List, Info, Sign
+
+| Group                            | version | dataType   | ops                                                                                                                                                      |
+|----------------------------------|---------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| service.appstore                 | v1      | app        | InstallDevApp, UninstallDevApp                                                                                                                           |
+| message-disptahcer.system-server | v1      | event      | Create, List                                                                                                                                             |
+| service.desktop                  | v1      | ai_message | AIMessage                                                                                                                                                |
+| service.did                      | v1      | did        | ResolveByDID, ResolveByName, Verify                                                                                                                      |
+| api.intent                       | v1      | legacy_api | POST                                                                                                                                                     |
+| service.intent                   | v1      | intent     | RegisterIntentFilter, UnregisterIntentFilter, SendIntent, QueryIntent, ListDefaultChoice, CreateDefaultChoice, RemoveDefaultChoice, ReplaceDefaultChoice |
+| service.message                  | v1      | message    | GetContactLogs, GetMessages, Message                                                                                                                     |
+| service.notification             | v1      | message    | Create                                                                                                                                                   |
+| service.notification             | v1      | token      | Create                                                                                                                                                   |
+| service.search                   | v1      | search     | Input, Delete, InputRSS, DeleteRSS, QueryRSS, QuestionAI                                                                                                 |
+| secret.infisical                 | v1      | secret     | CreateSecret, RetrieveSecret                                                                                                                             |
+| secret.vault                     | v1      | key        | List, Info, Sign                                                                                                                                         |
 
 ## spec
 > 记录额外的应用信息，主要用于应用商店的展示。
@@ -418,7 +421,7 @@ spec:
 
 系统提供了高可用的中间件服务，开发者无需重复安装中间件，只需在此填写对应的中间件信息即可。
 
-Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
+使用 `scripts` 字段指定在数据库创建后应执行的脚本。此外，使用 `extension` 字段在数据库中添加相应的扩展。
 
 配置示例
 ```Yaml
@@ -488,7 +491,7 @@ password --> "{{ .Values.redis.password }}"
 - Optional
 - Type: `map`
 
-Define detailed access control for subdomains of the app.
+为应用的子域定义详细的访问控制。
 
 配置示例
 ```yaml
@@ -506,7 +509,7 @@ options:
 - Optional
 - Type: `map`
 
-Whether this app is installed for all users in a Terminus cluster.
+确定此应用是否为 Terminus 集群中的所有用户安装。
 
 Server 配置示例
 ```yaml
@@ -539,7 +542,7 @@ options:
 - Optional
 - Type: `map`
 
-Enable website analytics for the app.
+为应用启用网站分析功能。
 
 配置示例
 ```yaml
@@ -552,7 +555,7 @@ options:
 
 - Type: `list<map>`
 
-Specify the dependencies and requirements for your application. It includes other applications that your app depends on, as well as any specific operating system (OS) version requirements.
+指定应用的依赖和要求。包括应用依赖的其他应用，以及任何特定的操作系统（OS）版本要求。
 
 配置示例
 ```yaml
@@ -571,7 +574,7 @@ options:
 - Optional
 - Type: `map`
 
-Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information.
+为应用启用 websocket。更多信息请参考 [websocket](../advanced/websocket.md)。
 
 配置示例
 ```yaml
@@ -586,7 +589,7 @@ options:
 - Optional
 - Type: `map`
 
-If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information。
+如果应用需要使用 cookies，请启用此功能。更多信息请参考 [cookie](../advanced/cookie.md)。
 
 配置示例
 ```yaml
@@ -600,7 +603,7 @@ options:
 - Optional
 - Type: `map`
 
-The Terminus Application Runtime (TAPR) includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
+Terminus 应用运行时（TAPR）包含一个内置的文件上传组件，旨在简化应用中的文件上传过程。更多信息请参考 [upload](../advanced/file-upload.md)。
 
 配置示例
 ```yaml
@@ -620,7 +623,7 @@ upload:
 - Type: `boolean`
 - Default: `false`
 
-Determine whether the application is compatible with mobile web browsers and can be displayed on the mobile version of Terminus Desktop. Enable this option if the app is optimized for mobile web browsers. This will make the app visible and accessible on the mobile version of Terminus Desktop.
+确定应用是否与移动 Web 浏览器兼容，并能够在 Terminus 桌面的移动版本上显示。如果应用针对移动 Web 浏览器进行了优化，请启用此选项。这将使应用在 Terminus 桌面的移动版本上可见并可访问。
 
 配置示例
 ```yaml
@@ -632,7 +635,7 @@ mobileSupported: true
 - Optional
 - Type: `map`
 
-The Terminus OS includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
+Terminus OS 包含一个内置的 OpenID Connect 身份验证组件，用于简化用户的身份验证。启用此选项以在你的应用中使用 OpenID。
 ```yaml
 # OpenID related varibles in yaml
 {{ .Values.oidc.client.id }}
@@ -652,7 +655,7 @@ oidc:
 - Optional
 - Type: `int`
 
-Specifies the timeout limit for API providers in seconds. The default value is `15`. Use `0` to allow an unlimited API connection.
+指定 API 提供者的超时限制，以秒为单位。默认值为 `15`。使用 `0` 可允许无限制的 API 连接。
 
 配置示例
 ```yaml

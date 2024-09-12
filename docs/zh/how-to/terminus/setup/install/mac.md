@@ -22,8 +22,8 @@
 ::: tip 提示
 建议通过 `homebrew` 安装 MiniKube。
 :::
-- 手机上已安装 [TermiPass](../../../termipass/overview.md#download-termipass)
-- 已创建 [Terminus Name](../../../termipass/account/index.md#create-a-terminus-name)
+- 手机上已安装 [TermiPass](../../../termipass/overview.md#download)
+- 已创建 [Terminus Name](../../../termipass/account/index.md#create-terminus-name)
 
 :::info 信息
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。

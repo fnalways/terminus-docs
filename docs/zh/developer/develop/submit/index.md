@@ -33,7 +33,15 @@ outline: [2, 3]
   - 机器人通过 PR 的标题来判断你的 PR 操作，因此请参照以下规范填写你的 PR 标题
     :::warning 注意
     请务必按照标准的 PR Title 格式撰写你的标题，否则可能导致 PR 被自动关闭
-    ::: - 标题格式：[PR Type][FolderName][version]Other Content - PR Type 包括： - NEW：代表提交一个新应用 - UPDATE：代表更新一个已经合并成功应用 - REMOVE：代表下架一个已经合并成功应用 - SUSPEND：代表暂停一个已经合并成功应用通过应用商店分发 - PR 标题样例：[NEW][myapp][0.0.1]for example - FolderName 需遵照应用目录格式规范 中的 Chart 包命名要求
+    :::
+  - 标题格式：`[PR Type][FolderName][version]Other Content` 
+  - PR Type 包括： 
+    - NEW：代表提交一个新应用 
+    - UPDATE：代表更新一个已经合并成功应用 
+    - REMOVE：代表下架一个已经合并成功应用
+    - SUSPEND：代表暂停一个已经合并成功应用通过应用商店分发 
+  - PR 标题样例：`[NEW][myapp][0.0.1]for example` 
+  - FolderName 需遵照应用目录格式规范 中的 Chart 包命名要求
   - 未按照规范填写的标题会导致机器人无法正确解析你的 PR。你在修改标题后，机器人会尝试重新解析你的 PR。
   - 你还需要注意以下事项，以免你的 PR 被关闭或者被要求修改
     - 你的 PR 标题中必须有且仅有一个 PR Type、FolderName、version
@@ -41,7 +49,7 @@ outline: [2, 3]
     - 一次 PR 中只能增加或修改一个 FolderName 下的内容，并且所有 Commit 的修改范围仅限于 PR Title 中的 Folder Name
     - 同一个 FolderName 下，只能有一个 Open 的 PR 或 Draft PR。
     - 你需要有 FolderName 所指目录的所有权才能提交更新、移除、暂停该应用的 PR。目录的所有权由目录下的 OWNERS 文件定义。如果你新提交一个应用，则提交者应包含在 OWNERS 文件中。
-  - 当你的应用被正确打上 PR 类型标签后，即代表你已成功提交了一个有效 PR。此后请勿修改 PR 的[PR Type][FolderName]信息。如果确实需修改，你可以关闭当前 PR 后重新提交一个 PR。
+  - 当你的应用被正确打上 PR 类型标签后，即代表你已成功提交了一个有效 PR。此后请勿修改 PR 的`[PR Type][FolderName]`信息。如果确实需修改，你可以关闭当前 PR 后重新提交一个 PR。
   - 如果你的 PR 被关闭了则意味着该 PR 检查流程的终止，请勿 Reopen 该 PR。你可以重新提交 PR 来发起新的检查流程。
   - 不同 PR 类型的要求
 

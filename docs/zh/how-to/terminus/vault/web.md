@@ -24,4 +24,4 @@
 
 在这里，你只能绑定已经和这台 Terminus 绑定了的 Terminus Name 账号。如果你忘记了助记词，请在登录了 Terminus 的 TermiPass 移动客户端中查找。
 
-具体请参考[助记词丢了怎么办？](../../../overview/introduction/faq.md#助记词丢了怎么办)，以及如何在 TermiPass 上[Backup Mnemonic Phrase](../../termipass/account/index.md#backup-mnemonic-phrase.md)，
+具体请参考[助记词丢了怎么办？](../../../overview/introduction/faq.md#助记词丢了怎么办)，以及如何在 TermiPass 上[Backup Mnemonic Phrase](../../termipass/account/index.md#backup-mnemonic-phrase)，

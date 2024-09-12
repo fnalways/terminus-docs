@@ -42,15 +42,15 @@ Terminus Name 是 Terminus 生态系统中的独一无二的标识符，它是�
         * 完成后，你将获得组织 Terminus Name。
 3. 备份助记词。
 
-    助记词是恢复你的 DID 和 Terminus Name 的唯一方式。请确保安全地[备份你的助记词](../../how-to/termipass/account/#backup-mnemonic-phrase)。
+    助记词是恢复你的 DID 和 Terminus Name 的唯一方式。请确保安全地[备份你的助记词](../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
 
-有关详细步骤，请参阅[创建 Terminus Name](../../how-to/termipass/account/#create-a-terminus-name)。
+有关详细步骤，请参阅[创建 Terminus Name](../../how-to/termipass/account/index.md#create-terminus-name)。
 
 ## 更多信息
 
-* [使用 TermiPass 管理账户](../../how-to/termipass/account/#create-terminus-name)
+* [使用 TermiPass 管理账户](../../how-to/termipass/account/index.md#create-terminus-name)
 * [Snowinning 协议](../../developer/contribute/snowinning/overview.md)
 * [了解去中心化标识符 (DID)](../../developer/contribute/snowinning/concepts.md)
-* [域名类型](../../developer/contribute/snowinning/terminus-name.md#domain)
+* [域名类型](../../developer/contribute/snowinning/terminus-name.md#域名类型)
 * [Gmail 发行者服务](../../developer/contribute/snowinning/terminus-name.md#gmail-发行者服务)
-* [Terminus 账户阶段](../../how-to/termipass/account/#stage-of-account)
+* [Terminus 账户阶段](../../how-to/termipass/account/index.md#stage-of-account)

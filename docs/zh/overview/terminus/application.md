@@ -20,7 +20,7 @@ outline: [2, 3]
 
 - Community Application 和系统间的[调用机制](#service-provider)
 - Community Application 间的[通讯机制](#service-provider)
-- 不同用户使用同一个 Community Application 时的[协作机制](#cluster-application)
+- 不同用户使用同一个 Community Application 时的[协作机制](#cluster-scoped-application)
 
 ## 应用标识符
 
@@ -82,13 +82,13 @@ user-space-'Local Name'
 **user-space**
 
 `user-space`命名空间安装了用户日常使用的系统应用，例如：
-- [Files](../../how-to/terminus/files/)
-- [Settings](../../how-to/terminus/settings/)
-- [Control Hub](../../how-to/terminus/controlhub/)
-- [Dashboard](../../how-to/terminus/dashboard/)
-- [Market](../../how-to/terminus/market/)
+- [Files](../../how-to/terminus/files/index.md)
+- [Settings](../../how-to/terminus/settings/index.md)
+- [Control Hub](../../how-to/terminus/controlhub/index.md)
+- [Dashboard](../../how-to/terminus/dashboard/index.md)
+- [Market](../../how-to/terminus/market/index.md)
 - [Profile](../../how-to/terminus/profile.md)
-- [Vault](../../how-to/terminus/vault/)
+- [Vault](../../how-to/terminus/vault/index.md)
 
 我们把这些应用放到一个特殊 namespace 里的原因是：
 
@@ -104,7 +104,7 @@ user-space-'Local Name'
 
 ### Community Application
 
-Community Application 的 namespace 由两部分组成，[Application Name](#application-name) 和用户的 [Local Name](../../../developer/contribute/snowinning/terminus-name.md)，例如：
+Community Application 的 namespace 由两部分组成，[Application Name](#应用名) 和用户的 [Local Name](../../../developer/contribute/snowinning/terminus-name.md)，例如：
 
 ```
 n8n-alice
@@ -113,7 +113,7 @@ gitlab-client-bob
 
 Terminus OS 完整继承了现有 Web 软件生态：开发应用所需的技术栈和传统 Web 软件完全一致。因此，开发者不仅可以开发全新的应用，还可以将现有的 Web 软件稍加修改集成进 Terminus OS。
 
-开发者可以参考[开发者文档](../../developer/develop/index.md) 开发应用，再按照[协议](../protocol/market.md)制定的标准[提交](../../developer/develop/submit/index.md) 后，其它用户就可以通过[应用市场](../../how-to/terminus/market/) 查看并安装。
+开发者可以参考[开发者文档](../../developer/develop/index.md) 开发应用，再按照[协议](../protocol/market.md)制定的标准[提交](../../developer/develop/submit/index.md) 后，其它用户就可以通过[应用市场](../../how-to/terminus/market/index.md) 查看并安装。
 
 同开发者一起打造 Terminus 生态，会一直是我们最重要的事。
 
@@ -128,7 +128,7 @@ Terminus OS 完整继承了现有 Web 软件生态：开发应用所需的技术
 通常`Cluster Scoped Application`会：
 
 1. 监听[用户事件回调](../../developer/develop/advanced/account.md)，来同步系统中的用户。
-2. 实现 [Auth Server](./account.md#unified-account)，让用户不用额外登录。
+2. 实现 [Auth Server](./account.md#统一的账号)，让用户不用额外登录。
 
 你可以参考 Terminus 团队做的一些移植：
 - [Gitlab Fusion Client](https://github.com/beclab/apps/tree/main/gitlabfusionclient)
@@ -150,13 +150,13 @@ Terminus OS 完整继承了现有 Web 软件生态：开发应用所需的技术
 
 ## 应用市场
 
-在 Terminus 的[应用市场](../../how-to/terminus/market/) 中，不仅可以安装应用，同时也包含了丰富的智能推荐、AI 模型供用户选择。
+在 Terminus 的[应用市场](../../how-to/terminus/market/index.md) 中，不仅可以安装应用，同时也包含了丰富的智能推荐、AI 模型供用户选择。
 
 在 Market 中，无论是安装应用、智能推荐还是 AI 模型，其安装体验完全一致。用户都只需要在 Market 中，点击`Get`,等待系统完成安装，就可以打开使用。而系统在处理这些安装，都基于 Helm 的安装 [Chart](../../developer/develop/package/chart.md) 包进行扩展，实现完全统一的安装流程。
 
 对于开发者来说，提交三方的`应用` `智能推荐` `AI 模型`到 Terminus 的应用市场，也都采用相同的[提交审核流程](../../developer/develop/submit/index.md)。
 
-对于系统的深度用户，应用市场提供了自定义安装的入口。用户完全可以参照我们的[ TAC 格式](../../developer/develop/package/chart.html)，自行打包任意一个应用手动上传到系统中。
+对于系统的深度用户，应用市场提供了自定义安装的入口。用户完全可以参照我们的[ TAC 格式](../../developer/develop/package/chart.md)，自行打包任意一个应用手动上传到系统中。
 
 ## 应用状态
 

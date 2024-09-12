@@ -52,7 +52,7 @@ Terminus 在立项之初，市场上就已经有了 [Synology](https://www.synol
 
 可以，参见 [如何添加一个节点](../../developer/develop/advanced/cli.md)。
 
-添加完成后，你就可以通过[面板](../../how-to/terminus/dashboard/) 和 [ControlHub](../../how-to/terminus/controlhub/) 来管理集群。
+添加完成后，你就可以通过[面板](../../how-to/terminus/dashboard/index.md) 和 [ControlHub](../../how-to/terminus/controlhub/index.md) 来管理集群。
 
 多节点集群的体验是我们未来几个月的工作重点。
 

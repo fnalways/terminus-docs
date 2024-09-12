@@ -14,7 +14,7 @@ outline: [2, 3]
 
 如果你是 Admin，根据 Terminus 不同的安装方式，可以在各自对应的地方找到 Wizard URL 和 首次登录 One Time Password:
 
-- [自有服务器](./install/)，请参考文档中的提示，确认是否使用的事内网的 Wizard URL
+- [自有服务器](./install/index.md)，请参考文档中的提示，确认是否使用的是内网的 Wizard URL
 - [Host on Terminus Space](../../space/host/create-terminus.md#one-time-password)
 
 ### Member

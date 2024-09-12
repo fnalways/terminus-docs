@@ -25,7 +25,7 @@ Entrance 是应用的入口，用户需要通过 Entrance 访问应用。
 
 定位是提供对外公开的服务。例如博客，社交媒体等。
 
-访问 Public Entrance 的流量无需经过 [鉴权](./account.md#mfa)。我们通过让 Public Entrance 的流量经过 Cloudflare 获得基本的安全保障。
+访问 Public Entrance 的流量无需经过 [鉴权](./account.md#多因素验证)。我们通过让 Public Entrance 的流量经过 Cloudflare 获得基本的安全保障。
 
 - 当 Terminus 有 public IP，流量经过 Cloudflare 进入 Terminus。
 - 当 Terminus 没有 public IP 时，有两种方式：
@@ -36,7 +36,7 @@ Entrance 是应用的入口，用户需要通过 Entrance 访问应用。
 
 定位是提供只有用户自己访问的服务，例如博客管理后台、[Desktop](../../how-to/terminus/desktop.md) 等。
 
-访问 Private Entrance 的流量需要经过[鉴权](./account.md#mfa)。Private Entrance 的流量路由会取决于用户是否在设置中启用了[Only VPN](../../how-to/terminus/settings/home.md#forcing-vpn-access-to-private-entrance-only-vpn-mode)模式：
+访问 Private Entrance 的流量需要经过[鉴权](./account.md#多因素验证)。Private Entrance 的流量路由会取决于用户是否在设置中启用了[Only VPN](../../how-to/terminus/settings/home.md#forcing-vpn-access-to-private-entrance-only-vpn-mode)模式：
 
 - **Only VPN 模式未启用**：
   - 如果用户在 TermiPass 中[启用VPN连接](../../how-to/termipass/manage-terminus.md#vpn-connection)，所有网络流量将通过 VPN（TailScale）转发。
@@ -53,11 +53,11 @@ Entrance 是应用的入口，用户需要通过 Entrance 访问应用。
 
     - 为了方便记忆，我们给所有预装的系统应用设置了容易记忆的 RouteID。例如`desktop`和`market`。
 
-    - 其它应用采用[应用 ID](./application.md#application-id) + Entrance Index 的组合。这是一个由小写英文字母和数字组成的 10 位字符串。例如应用 ID为`92d76a11`，Entrance Index 为`1`，则 RouteID 为`92d76a1101`。
+    - 其它应用采用[应用 ID](./application.md#应用-id) + Entrance Index 的组合。这是一个由小写英文字母和数字组成的 10 位字符串。例如应用 ID为`92d76a11`，Entrance Index 为`1`，则 RouteID 为`92d76a1101`。
 
-  - 用户可以在设置里[自定义 RouteID](../../how-to/terminus/settings/application.md#custom-routeid)。
+  - 用户可以在设置里[自定义 RouteID](../../how-to/terminus/settings/application.md#setup-custom-route-id)。
 
-- 也可以给 Entrance [设置第三方域名](../../how-to/terminus/settings/application.md#custom-domain)。
+- 也可以给 Entrance [设置第三方域名](../../how-to/terminus/settings/application.md#setup-custom-domain)。
 
 :::info
 DomainName 是由 [Terminus Name 变化而来](../../../developer/contribute/snowinning/terminus-name.md#domainname)。
@@ -131,7 +131,7 @@ Terminus 系统在网关架构上采用了多层代理路由设计。从`集群`
 
 - 用户
 
-  使用设置[管理 Entrance](../../how-to/terminus/settings/)
+  使用设置[管理 Entrance](../../how-to/terminus/settings/index.md)
 
 - 开发者
 

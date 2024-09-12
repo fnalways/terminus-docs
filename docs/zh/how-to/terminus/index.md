@@ -19,16 +19,16 @@ Terminus OS 一个运行在用户自己拥有的边缘设备上的基于 Kuberne
 **日常功能**
 
 - [Desktop](./desktop.md)
-- [Vault](./vault/)
-- [Files](./files/)
-- [Market](./market/)
-- [Wise](./wise/)
-- [Dashboard](./dashboard/)
-- [Settings](./settings/)
+- [Vault](./vault/index.md)
+- [Files](./files/index.md)
+- [Market](./market/index.md)
+- [Wise](./wise/index.md)
+- [Dashboard](./dashboard/index.md)
+- [Settings](./settings/index.md)
 - [Profile](./profile.md)
 
 **开发者工具**
 
 - [Devbox](../../developer/develop/tutorial/index.md)
-- [ControlHub](./controlhub/)
+- [ControlHub](./controlhub/index.md)
 - [Dify.ai](./dify.md)

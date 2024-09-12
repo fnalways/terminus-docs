@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Create Terminus
 
-要创建 Terminus，请先确认你的账号状态，请点击[ account](../account.md#账号类型)了解更多账号信息。
+要创建 Terminus，请先确认你的账号状态，请点击[ account](../account.md#account-type)了解更多账号信息。
 
 需要提醒的是，由于我们的 Host Service 目前在邀请内测中，所以并不是所有满足基本条件的账号都可以创建云上 Terminus。
 
@@ -24,9 +24,9 @@ outline: [2, 3]
 
 2. 选择实例的硬件配置
 
-:::tip
-如果想体验 Stable Diffusion，请选择阿里云香港区。目前只有该区开放了共享 GPU 服务
-:::
+    :::tip
+    如果想体验 Stable Diffusion，请选择阿里云香港区。目前只有该区开放了共享 GPU 服务
+    :::
 
 3. 选择需要安装的 Terminus 版本和 Kubernetes/K3S 方案。
 
@@ -64,25 +64,25 @@ outline: [2, 3]
 
 我们罗列了系统的状态情况，如下：
 
-| 状态 | 说明 |
-| --- | --- |
-| Unpaid | 已创建等待付款。可以取消。 |
-| Fetching | 已付款等待创建资源。 |
-| Queuing | 已提交创建资源请求。 |
-| Pending | 创建资源成功，等待OS安装。 |
-| Installing | OS安装中。 |
-| Restoring | OS还原中。 |
-| Restore_error | OS还原失败(目前只有输入快照密码错误一种情况)，可以重设密码继续还原。 |
-| Restarting | OS重启中。 |
-| Stopping | OS机器停机中。 |
-| Starting | OS机器开机中。 |
-| Running | OS正常运行中。可以销毁，重启，停止。 |
-| Stopped | OS机器停机中。可以销毁、开机。 |
-| Errored | 错误，可能是创建资源错误，也可能是安装错误。可以销毁。 |
-| Destroying | 销毁中。 |
-| Destroyed | 已销毁。 |
-| Canceled | 已取消，未支付的时候可以主动取消，首期账单超时未支付会自动取消。 |
-| Pending activation | 待激活，激活完成后就进入正常运行状态。 |
+| 状态                 | 说明                                   |
+|--------------------|--------------------------------------|
+| Unpaid             | 已创建等待付款。可以取消。                        |
+| Fetching           | 已付款等待创建资源。                           |
+| Queuing            | 已提交创建资源请求。                           |
+| Pending            | 创建资源成功，等待OS安装。                       |
+| Installing         | OS安装中。                               |
+| Restoring          | OS还原中。                               |
+| Restore_error      | OS还原失败(目前只有输入快照密码错误一种情况)，可以重设密码继续还原。 |
+| Restarting         | OS重启中。                               |
+| Stopping           | OS机器停机中。                             |
+| Starting           | OS机器开机中。                             |
+| Running            | OS正常运行中。可以销毁，重启，停止。                  |
+| Stopped            | OS机器停机中。可以销毁、开机。                     |
+| Errored            | 错误，可能是创建资源错误，也可能是安装错误。可以销毁。          |
+| Destroying         | 销毁中。                                 |
+| Destroyed          | 已销毁。                                 |
+| Canceled           | 已取消，未支付的时候可以主动取消，首期账单超时未支付会自动取消。     |
+| Pending activation | 待激活，激活完成后就进入正常运行状态。                  |
 
 ### Log
 

@@ -59,7 +59,7 @@ DNS 记录生效后，Status 将会变成 Activated，此时设置就完成了�
 
 每个应用可以更细致的为应用内的每个访问路径设置访问策略。
 
-比如，对某些敏感操作，要求调用时再次输入 [One Time Password](../../../overview/terminus/account.md#multi-factor-authentication)。
+比如，对某些敏感操作，要求调用时再次输入 [One Time Password](../../../overview/terminus/account.md#多因素验证)。
 
 #### AuthLevel
 
@@ -70,11 +70,11 @@ DNS 记录生效后，Status 将会变成 Activated，此时设置就完成了�
 如果应用设置 Auth Level 为 Private，那么可以进行下面两项的设置：
 
 - One time<br>
-  True：已经在[Login](../setup/login.md)登录通过的情况下，访问该应用，是否还需要输入一次 [One Time Password](../../../overview/terminus/account.md#multi-factor-authentication)<br>
+  True：已经在[Login](../setup/login.md)登录通过的情况下，访问该应用，是否还需要输入一次 [One Time Password](../../../overview/terminus/account.md#多因素验证)<br>
   False：已经在[Login](../setup/login.md)登录通过的情况下，可以直接访问该应用
 
 - Valid duration<br>
-  当 One Time 为 True 时，输入一次 [One Time Password](../../../overview/terminus/account.md#multi-factor-authentication) 的有效期。有效期内，不需要重复输入。该值为 0 时，代表每次访问都需要输入。
+  当 One Time 为 True 时，输入一次 [One Time Password](../../../overview/terminus/account.md#多因素验证) 的有效期。有效期内，不需要重复输入。该值为 0 时，代表每次访问都需要输入。
 
 #### Policies
 

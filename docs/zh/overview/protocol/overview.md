@@ -8,7 +8,7 @@ outline: deep
 
 大概 5 年前，MIKE MASNICK 发表了一篇文章 [Protocols, Not Platforms: A Technological Approach to Free Speech](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech), 向我们阐述了协议对于未来的重要性。
 
-我们欣喜的看到，有识之士们已经意识到这点，越来越多基于协议的应用被开发出来，例如：
+我们欣喜地看到，有识之士们已经意识到这点，越来越多基于协议的应用被开发出来，例如：
 
 - 基于 ActivityPub 开发的 Mastodon
 - 基于 Matrix 开发的 Element，
@@ -64,7 +64,7 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 去中心化的产品通常并不比他们的中心化同类好。互联网 20 年的历史，就是一部从去中心化软件到中心化平台过渡的历史。（讽刺的是，这个潮流符合上述的不等式。）
 
-如果你有软件开发的背景，就可以比较容易的理解，在相同资源投入的情况下，中心化系统往往比去中心化系统的体验更容易优化。
+如果你有软件开发的背景，就容易理解，在相同资源投入的情况下，中心化系统往往比去中心化系统的体验更容易优化。
 
 时至今日，去中心化系统只存在于 CDN，区块链 等极少数场景。
 
@@ -151,7 +151,7 @@ Protocol 生态是在和 已有的 Web2 Platform，对用户有限的注意力�
 
 我们希望给 Public goods with a fair price。
 
-我认为 Tokenized 化协议不能解决公平分配的问题。因为 Tokenized 的前提是，能找到一种 [Useful Proof of Work](../introduction/faq.md#useful-proof-of-work) 的方式，但绝大部分场景并不存在一个 [Useful Proof of Work](../introduction/faq.md#useful-proof-of-work)。
+我认为 Tokenized 化协议不能解决公平分配的问题。因为 Tokenized 的前提是，能找到一种[工作量证明](../introduction/faq.md#什么是工作量证明)的方式，但绝大部分场景并不存在一个[工作量证明](../introduction/faq.md#什么是工作量证明)。
 
 我认为持续且通用的协议经济体系有以下几个特点：
 
