@@ -75,8 +75,8 @@ You can also set up an account by importing an existing Terminus Name:
 2. Enter the 12-word mnemonic phrase to import your Terminus Name.
 
 ::: tip
-
 If your account is bound to a Terminus Name, you can freely import it into any TermiPass device. 
+:::
 
 ## Backup mnemonic phrase
 
