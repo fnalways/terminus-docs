@@ -21,7 +21,7 @@ To create a Terminus Name fast without binding VC:
 1. Enter your desired Terminus Name. It must be at least 8 characters long and contain only lowercase letters and numbers.
 2. Click **Continue** to finish the creation process.
 
-![Fast creation](/images/how-to/termipass/fast-creation.png)
+![Fast creation](/images/how-to/termipass/fast-mode.jpg)
 
 After you get your Terminus Name, wait for [Terminus installation](../../terminus/setup/install/) to complete, then proceed with [activation](../../terminus/setup/wizard.md).
 
@@ -40,7 +40,7 @@ Depending on how you use Terminus, you can choose to bind an Individual Terminus
 
 We currently provide Verifiable Credentials (VC) via Google Gmail. For details, refer to the [Gmail Issuer Service](../../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service). To create your individual Terminus Name with Gmail VC:
 
-![Terminus Name VC](/images/how-to/termipass/terminus-name-vc.png)
+![Terminus Name VC](/images/how-to/termipass/individual_terminus_name.jpg)
 
 1. Click the VC card to access your Google account.
 2. Log into TermiPass with your Google account and click **Continue**.
@@ -54,11 +54,12 @@ If you encounter errors while binding, check if your account is already bound to
 
 To bind an **Organization Terminus Name**:
 
-![Terminus Name for Org](/images/how-to/termipass/organization_terminus_name.png)
-
 1. Choose to join an existing organization or create a new one:
    - If your organization doesn't exist yet, scan the QR code to log in to Terminus Space and [bind a custom domain](https://docs.jointerminus.com/how-to/space/domain/#using-a-custom-domain-with-terminus). 
    - If your organization already has a verified domain name, you can choose to join an existing organization.
+
+   ![Terminus Name for Org](/images/how-to/termipass/organization_terminus_name.jpg)
+
 
 2. Enter your organization's domain name and click **Continue**. Recheck whether your domain name has been verified and configured if an error occurs.   
 
