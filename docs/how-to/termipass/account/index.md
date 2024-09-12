@@ -27,7 +27,7 @@ After you get your Terminus Name, wait for [Terminus installation](../../terminu
 
 ### Create with VC (advanced mode)
 
-To create a unique, unrestricted individual Terminus Name, you need to bind a Verifiable Credential (VC) using the advanced mode. To enter this mode:
+To create a unique, unrestricted individual Terminus Name, you need to bind a VC through your preferred social account in advanced mode. Your Terminus Name will be identical to your social account name. To enter this mode:
  
 1. In the TermiPass app, tap **Create a Terminus Name**.
 2. Tap the button in the top right corner of the Terminus Name creation page.
