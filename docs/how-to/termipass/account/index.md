@@ -10,7 +10,7 @@ Managing Terminus Accounts is a core function of TermiPass. If you are new to Te
 
 Before you start, ensure you have downloaded the [TermiPass](../overview.md#download-termipass) app on your phone. You can choose to either create a new Terminus Name or import an existing one.
 
-![Create terminus name](/images/how-to/termipass/create-terminus-name.png)
+![Create terminus name](/images/how-to/termipass/create_an_account.png)
 
 In TermiPass app, tap **Create a Terminus Name** to start creating your Terminus account. Depending on your personal preference, you can choose to create a Terminus Name with or without binding a Verifiable Credential (VC).
 
@@ -21,7 +21,7 @@ To create a Terminus Name fast without binding VC:
 1. Enter your desired Terminus Name. It must be at least 8 characters long and contain only lowercase letters and numbers.
 2. Click **Continue** to finish the creation process.
 
-![Fast creation](/images/how-to/termipass/fast-mode.jpg)
+![Fast creation](/images/how-to/termipass/individual_terminus_name_fast.png)
 
 After you get your Terminus Name, wait for [Terminus installation](../../terminus/setup/install/) to complete, then proceed with [activation](../../terminus/setup/wizard.md).
 
@@ -32,7 +32,7 @@ To create a unique, unrestricted individual Terminus Name, you need to bind a VC
 1. In the TermiPass app, tap **Create a Terminus Name**.
 2. Tap the button in the top right corner of the Terminus Name creation page.
 
-![Advanced mode](/images/how-to/termipass/advanced-mode.jpg)
+![Advanced mode](/images/how-to/termipass/terminus_name_advanced.png)
 
 Depending on how you use Terminus, you can choose to bind an Individual Terminus Name or an Organization Terminus Name to your account. 
 
@@ -40,7 +40,7 @@ Depending on how you use Terminus, you can choose to bind an Individual Terminus
 
 We currently provide Verifiable Credentials (VC) via Google Gmail. For details, refer to the [Gmail Issuer Service](../../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service). To create your individual Terminus Name with Gmail VC:
 
-![Terminus Name VC](/images/how-to/termipass/individual_terminus_name.jpg)
+![Terminus Name VC](/images/how-to/termipass/individual_terminus_name_vc.png)
 
 1. Click the VC card to access your Google account.
 2. Log into TermiPass with your Google account and click **Continue**.
@@ -58,7 +58,7 @@ To bind an **Organization Terminus Name**:
    - If your organization doesn't exist yet, scan the QR code to log in to Terminus Space and [bind a custom domain](https://docs.jointerminus.com/how-to/space/domain/#using-a-custom-domain-with-terminus). 
    - If your organization already has a verified domain name, you can choose to join an existing organization.
 
-   ![Terminus Name for Org](/images/how-to/termipass/organization_terminus_name.jpg)
+   ![Terminus Name for Org](/images/how-to/termipass/organization_terminus_name.png)
 
 
 2. Enter your organization's domain name and click **Continue**. Recheck whether your domain name has been verified and configured if an error occurs.   
@@ -101,8 +101,6 @@ Clicking the **Copy** button will save the 12 mnemonic phrase to the clipboard. 
 ## Understand the stage of account
 
 Each account has three stages:
-
-![account](/images/how-to/termipass/account.png)
 
 1. **Not bound to a Terminus Name**
 
