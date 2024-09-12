@@ -25,27 +25,18 @@ By simply replacing the "@" in your Terminus Name with a ".", you get your corre
 
 ## How to get a Terminus Name?
 
-Creating a Terminus Name is your starting point of using Terminus. It involves creating a Terminus Account and binding it to a Terminus Name on the mobile version of TermiPass.
-
-1. Create a new Terminus account.
-    1. Launch TermiPass on your mobile. If you haven't created a local unlocking password yet, you will be required to set one.
-    2. Click **Create a Terminus Name**. You can also choose to import an existing one.
-2. Bind Terminus Name
-    - **Bind Individual Terminus Name (for personal use)**
-        * Select **Individual Terminus Name**.
-        * Bind a personal Verifiable Credential (VC) to create your Terminus Name using the authentication service by Google's Gmail. Follow the prompts to log in with your Google account and complete the binding process.
-    - **Bind Organization Terminus Name** (for organizational use)
-        * Select **Organization Terminus Name.**
-        * Join an existing organization or create a new one through Terminus Space.
-        * Enter your organization's domain name.
-        * Bind your organization email. Currently, only Gmail and Google Workspace email are supported.
-        * Upon completion, you will receive an Organization Terminus Name.
-3. Backup mnemonic phrase.
-
-    The mnemonic phrase is the ONLY way to recover your DID and Terminus Name. Make sure you [backup your Terminus Name](../../how-to/termipass/account/#backup-mnemonic-phrase)'s mnemonic phrase securely!
-
+Creating a Terminus Name is your starting point of using Terminus. This process includes setting up your Terminus account and binding it to a Terminus Name. Depending on your preference, you can choose from two creation modes:
+  - [Fast creation (default mode)](../../how-to/termipass/account/index.md#create-without-vc-binding-default-mode): Recommended for individual users who prefer a quick setup without binding a verification credential (VC). 
+  - [Advanced creation](../../how-to/termipass/account/index.md#create-with-vc-advanced-mode): Recommended for individual and organizational users that require enhanced security and more distinctive names through VC binding. 
 
 Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-terminus-name) for detailed steps.
+
+## What's Terminus Name's relationship with DID
+
+A Decentralized Identifier (DID) is a unique, cryptographically verifiable identifier that doesn't rely on any centralized authority. While DIDs solve the issue of identity in a decentralized network, they are typically difficult for humans to remember or use in daily situations. 
+
+Terminus Name acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
+Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus Account](../../how-to/termipass/account/#stage-of-account).
 
 
 ## Learn more
@@ -55,4 +46,3 @@ Refer to [Create a Terminus Name](../../how-to/termipass/account/#create-a-termi
 * [Understanding Decentralized Identifier (DID)](../../developer/contribute/snowinning/concepts.md)
 * [Types of domains](../../developer/contribute/snowinning/terminus-name.md#domain)
 * [Gmail Issuer Service](../../developer/contribute/snowinning/terminus-name.md#gmail-issuer-service)
-* [Stage of Terminus Account](../../how-to/termipass/account/#stage-of-account)

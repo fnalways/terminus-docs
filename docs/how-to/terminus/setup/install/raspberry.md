@@ -1,6 +1,6 @@
-# Install Terminus on Raspberry Pie
+# Install Terminus on Raspberry Pi
 
-This guide covers the detailed steps to install Terminus on your Raspberry Pie. 
+This guide covers the detailed steps to install Terminus on your Raspberry Pi. 
 
 ## Prerequisites
 
