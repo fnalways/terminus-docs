@@ -129,8 +129,6 @@ TermiPass uses [one local password](#setup-local-password.md) to allow users to 
 
 Each account has three stages:
 
-![account](/images/how-to/termipass/account.png)
-
 1. **Not bound to a Terminus Name**
 
    - Account created locally with mnemonic phrase, private key, DID, but no Terminus Name 
