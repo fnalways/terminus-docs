@@ -4,171 +4,124 @@ outline: [2, 4]
 
 # 使用 TermiPass 管理账户
 
-当你首次使用 TermiPass 时，可以直接尝试 [Create Terminus Name](#create-terminus-name)
+TermiPass 的主要功能之一是管理 Terminus 账户。如果你刚开始使用 Terminus，可以先创建一个 Terminus Name。本文档将介绍如何创建账户以及其他常见操作。
 
-在使用一段时间后，你可以尝试了解：
+## 创建 Terminus Name
 
-- [Account 账号的状态](#stage-of-account)
-- [Terminus Name 是同步的](#account-同步)
+在开始前，请确保你的手机上已安装 [TermiPass](../overview.md#download-termipass) 应用。你可以选择新建 Terminus Name 或者导入已有的 Terminus Name。
 
-## Create Terminus Name
+![创建 Terminus Name](/images/how-to/termipass/create_an_account.png)
 
-以下是申请 Terminus Name 的流程：
+打开 TermiPass 应用，点击 **创建 Terminus Name** 设置你的 Terminus 账户。创建之前，你可以根据需求选择是否绑定可验证凭证（VC）。
 
-1. [下载手机版 TermiPass](../overview.md#download)
-2. [设置本地密码](#setup-local-password)
-3. [创建本地账户](#create-an-account)，对第一次使用 Terminus 的用户，选择"Create“而不是“Import”
-4. [申请 Terminus Name](#bind-terminus-name)
+### 默认模式（不绑定 VC）
 
-### Setup Local Password
+如果不绑定 VC，你可以快速创建 Terminus Name：
 
-![alt text](/images/how-to/termipass/setup_local_password.png)
+1. 输入你想要的 Terminus Name。名称至少需要 8 个字符，且只能包含小写字母和数字。
+2. 点击 **继续** 完成创建。
 
-首次运行，需要设置一个 TermiPass 的本机解锁密码。
+![快速创建](/images/how-to/termipass/individual_terminus_name_fast.png)
 
-#### Setup Password
+获取你的 Terminus Name 后，等待 [Terminus 安装](../../terminus/setup/install/) 完成，进行[激活](../../terminus/setup/wizard.md)操作。
 
-为了保证密码的健壮与安全，我们的密码规则如下：
+### 高级模式（绑定 VC）
 
-- 长度 8-32 个字符
-- 包含小写字母
-- 包含大写字母
-- 包含数字
-- 包含符号
+如果你想创建一个独一无二的 Terminus Name，可以在高级模式下通过社交账户绑定 VC。这样，你的 Terminus Name 将与你的社交账户名称相同：
 
-如果你输入了不符合规则的密码，将无法完成密码设置步骤。
+1. 在 TermiPass 应用中，点击 **创建 Terminus Name**。
+2. 在创建页面，点击右上角的按钮。
 
-:::tip
+![高级模式](/images/how-to/termipass/terminus_name_advanced.png)
 
-- 这个 TermiPass 下所有的 Terminus Name 都共享一个解锁密码
-- 不同设备安装的 TermiPass 的解锁密码是存储在本地，并互相独立的
-  :::
+根据你的需求，你可以选择为个人账户或组织账户绑定 Terminus Name。
 
-#### Biometric Unlock
+#### 绑定个人 Terminus Name
 
-设置完成之后，可以选择开启生物特征解锁，以使用人脸、指纹等更安全便捷的解锁方式。
+目前我们通过 Google Gmail 提供 VC 服务。具体信息请查看 [Gmail 发行者服务](../../../developer/contribute/snowinning/terminus-name.md#gmail-发行者服务)。使用 Gmail VC 创建个人 Terminus Name 的步骤如下：
 
-如果你在这里选择不开启生物特征解锁，后续你还可以在 TermiPass 的设置 中随时开启或关闭。
+![Terminus Name VC](/images/how-to/termipass/individual_terminus_name_vc.png)
 
-### New an account
+1. 点击 VC 卡，登录你的 Google 账户。
+2. 登录后在 TermiPass 点击 **继续**。
+3. 绑定完成后，再次点击 **继续** 查看你的 Terminus Name。
 
-![alt text](/images/how-to/termipass/create_an_account.png)
+:::info
+如果绑定时遇到问题，请检查你的账户是否已绑有 Terminus Name。
+:::
 
-#### Create an account
+#### 绑定组织 Terminus Name
 
-点击「Create a Terminus Name」 开始创建账号。
+绑定 **组织 Terminus Name** 的步骤如下：
 
-点击之后将先生成 DID，再完成 [绑定 Terminus Name](#bind-terminus-name) 。
+1. 选择加入已有的组织或创建新组织：
+   - 如果你的组织还未创建，扫描二维码登录 Terminus Space 并[绑定自定义域名](https://docs.jointerminus.com/how-to/space/domain/#using-a-custom-domain-with-terminus)。
+   - 如果组织已有认证的域名，可以直接加入。
 
-#### Import an account
+   ![组织 Terminus Name](/images/how-to/termipass/organization_terminus_name.png)
 
-点击「Import a Terminus Name」进行导入账号。
 
-请输入 12 个助记词，来完成账号导入。
+2. 输入组织的域名并点击 **继续**。如果出错，请检查域名是否已经被验证和配置。
 
-请注意以下几种情况：
+3. 绑定组织邮箱。目前支持 Gmail 和 Google Workspace 邮箱。绑定过程与绑定个人 Terminus Name 类似。
 
-1. 如果你输入错误的助记词，无法进行导入操作
+完成以上步骤后，你将获得一个 **组织 Terminus Name**。
 
-2. 如果你输入的助记词对应的账号还没有绑定 Terminus Name，它无法导入到 TermiPass 客户端。
+## 导入现有账户
 
-3. 如果你输入的助记词对应的账号已经绑定 Terminus Name，那么它可以导入到任意 TermiPass 客户端。
+你也可以通过导入已有的 Terminus Name 来设置账户：
 
-### Bind Terminus Name
+1. 在 TermiPass 应用中，点击 **导入 Terminus Name**。
+2. 输入 12 个单词的助记词来导入你的 Terminus Name。
 
-![alt text](/images/how-to/termipass/choose_terminus_name_type.png)
+::: tip
+如果你的账户已绑定 Terminus Name，可以随意将其导入任何 TermiPass 设备。
+:::
 
-如果你是个人用户，点击 Individual Terminus Name，来绑定一个仅供个人使用的 Terminus Name。
+## 备份助记词
 
-如果你是组织用户，不管你是否管理员，请都点击 Organization Terminus Name 来绑定一个组织的 Terminus Name。
+在去中心化的账户系统中，助记词是你找回 DID 和 Terminus Name 的**唯一**方式。**务必确保安全保管你的 Terminus Name 助记词！**
 
-#### Individual Terminus Name
+:::info
+每个 TermiPass 都会保存你导入的所有 Terminus Name 助记词。这些助记词由手机设备安全存储。通常，只有在你丢失了所有安装了 Terminus 的设备时，才会丢失助记词。
+:::
 
-![alt text](/images/how-to/termipass/individual_terminus_name.png)
-
-如果你是个人用户，那么通常你将选择绑定个人 VC 来创建成为一个个人的 Terminus Name
-
-我们提供了 Google Gmail VC 验证方式。详细的技术方案请参考：[Gmail 发行者服务](../../../developer/contribute/snowinning/terminus-name.md)
-
-1. 点击 VC 卡片后，将调起 Google 账号界面
-2. 选择要绑定的账号
-
-   a. 如果你的账号已经登录，则可以直接在这里选择要绑定的账号
-
-   b. 如果你需要绑定新的账号，则选择再添加一个账号。添加完成之后，将回到 Google 账号界面，你可以选择要绑定的账号
-
-3. 点击之后将提示你将使用 Google 账号登录 TermiPass，请点击「继续」
-4. 等待绑定成功，在绑定成功的页面，点击「继续」
-5. 进入 Terminus Name 落地页
-
-如果绑定过程中，提示错误信息，请检查你的账号是否已经绑定过 Terminus Name，如果确认未曾绑定但还是无法完成绑定操作，请联系我们。
-
-当你看到以上界面的时候，请等待 [ Terminus 设备的安装](../../terminus/setup/install/index.md) 完成，以继续完成 [激活流程](../../terminus/setup/wizard.md) 即可。
-
-#### Organization Terminus Name
-
-![alt text](/images/how-to/termipass/organization_terminus_name.png)
-
-绑定 Organization Terminus Name 需要以下几步骤：
-
-1. 你将看到一个有关 Organization Terminus Name 说明页面，请认真阅读后，点击「Got it」继续
-
-2. 请选择加入已有组织，或者创建一个新组织
-
-   a. 如果你的组织还没有完成创建，请扫码登录 Terminus Space 以完成[创建 Domain](../../space/domain/host-domain.md)
-
-   b. 如果你的组织已经创建了组织域名并完成验证和配置流程，请选择加入已有组织。
-
-3. 输入组织的域名，点击「继续」，请确认你的组织域名。如果输入的域名尚未完成验证和配置流程，则会报错，无法继续。如果你不慎输入了其它组织的域名，请返回此页面，确认域名的正确性。
-
-4. 绑定你的组织邮箱。目前我们仅支持 Gmail 或 Google Workspace 的邮箱地址。绑定流程 请参考 Individual Terminus Name 的[Google 验证流程](#individual-terminus-name)
-
-5. 绑定完成，你将获得一个组织 Terminus Name。
-
-### Backup Mnemonic Phrase
-
-请你务必了解，在去中心化账号的系统中，助记词是你找回 DID/Terminus Name 的唯一方式。请务必妥善保管你的 Terminus Name 的助记词。
-
-如果忘记了助记词，你将会丢失 DID/Terminus Name ，以及 Vault 里存储的数据控制权。我们强烈建议你采用离线的方式备份助记词。
-
-提醒：目前，Terminus Name 的助记词会保存在所有已导入的 TermiPass 上，助记词是由手机的秘钥存储，一般情况下，你只有在同时丢失所有装有 TermiPass 的手机和电脑后，才会丢失助记词。
-
-#### Standardize Process
+备份你的助记词：
 
 ![alt text](/images/how-to/termipass/mnemonic_phrase.png)
 
-备份助记词时，我们有一个规范流程，如下：
-
-- 第一步，输入密码，在此页面上，单击最底部的「Export Mnemonic Phrase」进入备份助记词界面。你需要输入 TermiPass 的本机解锁密码后才能查看到助记词。
-
-- 第二步，把助记词抄到纸上，妥善保存它。
+1. 输入你的 TermiPass 本地密码并点击**导出助记词短语**。TermiPass 将显示 12个单词构成的助记词。
+2. 请手动记录这些助记词，并将其存放在安全的地方。
+3. 在下一页按正确顺序输入助记词。如果输入正确，即表示助记词备份成功。
 
 :::warning
-点击 **Copy** 按钮会将 12 个助记词保存到剪切板。请妥善保存助记词。我们强烈建议你采用离线的方式备份助记词。
+点击**复制**按钮会将助记词复制到剪贴板，但这可能存在安全风险。为了更安全地保管助记词，我们强烈建议进行**离线**备份。
 :::
 
-- 第三步，在页面上按完整的顺序填入 12 个单词。如填写正确，则代表你已经成功备份了助记词。
+## 账户的阶段
 
-## Stage Of Account
+从创建 Terminus 账户，到绑定并激活 Terminus，会经历三个阶段：
 
-TermiPass 通过 [一个本地的密码](#setup-local-password)，让用户可以同时管理多个`Account`，不同 `Account` 是互相独立的。每个 `Account` 有三个阶段：
+1. **未绑定 Terminus Name**
 
-![account](/images/how-to/termipass/account.png)
+   - 账户已在本地通过助记词、私钥和 DID 创建，但尚未绑定 Terminus Name。
+   - 助记词可被导出和备份。
+   - 可登录 **Terminus Space** 申请组织域名。
+   - 不能通过助记词将账户导入至其他 TermiPass 客户端。
 
-1. 没绑定 Terminus Name，用户在 TermiPass 选择 [Create an Account](#create-an-account) 后，就生成了一个 Account，它还没有绑定 Terminus Name，有以下几个特点：
-   1. 账户是本地创建的，有助记词，私钥和 DID，但没有 Terminus Name
-   2. 可以导出助记词
-   3. 可以用来登录 Terminus Space（在申请企业域名时会用到）
-   4. 输入助记词也无法导入 TermiPass，参考 [Import an Account](#import-an-account)
-2. 绑定了 Terminus Name，不管是申请了 Individual 还是 Organization 的 Terminus Name
-   1. Terminus Name 和 DID 的映射关系被记录在了区块链上
-   2. 用户可以使用这个 Terminus Name 申请和激活 Terminus
-   3. 助记词被导出后，可以导入到其它设备上的 TermiPass 中，参考 [Import an Account](#import-an-account)
-3. 绑定过 Terminus
-   - 绑定了 Terminus即可正常进入 TermiPass 首页，正常使用 TermiPass 的各项功能。
-## Account 同步
+2. **已绑定 Terminus Name**
 
-TermiPass 和 Terminus，Terminus Space 是如何保持一致的呢？
+   - Terminus Name 与 DID 的对应关系已在区块链上记录。
+   - 可在**Terminus Space**申请并激活 Terminus。
+   - 助记词一旦导出，便可在其他设备上的 TermiPass 中导入。
 
-- Terminus 在创建的时候需要输入 Terminus Name，之后需要使用用友该 Terminus Name 的 TermiPass 进行激活。[了解更多](../../terminus/setup/wizard.md)
-- Terminus Space 的账户，通过 TermiPass 扫码 [登录 Terminus Space](../../space/account.md)
+3. **已绑定 Terminus**
+
+   绑定并激活 Terminus 后，便可以完全访问 TermiPass 上的所有功能。
+
+## 账户同步
+
+TermiPass、Terminus 和 Terminus Space 中的账户保持同步，具体如下：
+
+- 创建 Terminus 时，你需要提供 Terminus Name，并使用已登录该 Terminus Name 的 TermiPass 进行激活。详见[激活向导](../../terminus/setup/wizard.md)。
+- 要登录 Terminus Space，你需要用 TermiPass 扫描显示的二维码。详见[登录 Terminus Space](../../space/account.md)。

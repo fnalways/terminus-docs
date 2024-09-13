@@ -23,34 +23,24 @@ Terminus Name 是 Terminus 生态系统中的独一无二的标识符，它是�
 * **Terminus Name**：`alice@myterminus.com`
 * **域名**：`alice.myterminus.com`
 
-## 如何获取 Terminus Name？
+## 如何创建 Terminus Name？
 
-创建 Terminus Name 是使用 Terminus 的第一步。你需要在 TermiPass 应用上创建并绑定 Terminus 账户。
+创建 Terminus Name 是使用 Terminus 的第一步。这个过程涉及到设置你的 Terminus 账户，并将其与一个 Terminus Name 关联。根据需求，你可以选择以下两种方式：
 
-1. 创建新的 Terminus 账户。
-    1. 在手机上打开 TermiPass 应用。如果你未设置本地解锁密码，请先行设置。
-    2. 点击 **创建 Terminus Name**。你也可以选择导入已有的名称。
-2. 绑定 Terminus Name。
-    - **个人用户**
-        * 选择 **个人 Terminus Name**。
-        * 使用 Google 的 Gmail 身份验证服务绑定个人可验证凭证（VC），进而创建 Terminus Name。按照提示使用 Google 账户登录并完成绑定。
-    - **组织用户**
-        * 选择 **组织 Terminus Name**。
-        * 加入现有的组织或通过 Terminus Space 创建新组织。
-        * 输入组织的域名。
-        * 绑定组织邮箱。当前支持 Gmail 和 Google Workspace 邮箱。
-        * 完成后，你将获得组织 Terminus Name。
-3. 备份助记词。
+   - [快速创建（默认模式）](../../how-to/termipass/account/index.md#默认模式不绑定-vc)：适用于不打算绑定可验证凭证且希望尽快开始使用的用户。
+   - [高级创建](../../how-to/termipass/account/index.md#高级模式绑定-vc)：适用于追求额外安全保障或需要个性化 Terminus Name 的用户或组织。此方式需绑定可验证凭证。
 
-    助记词是恢复你的 DID 和 Terminus Name 的唯一方式。请确保安全地[备份你的助记词](../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
+## Terminus Name 和 DID 有什么关系？
 
-有关详细步骤，请参阅[创建 Terminus Name](../../how-to/termipass/account/index.md#create-terminus-name)。
+去中心化标识符（DID）是一个独一无二的标识符，可以通过密码学方式验证，不需要依赖任何中心化机构。虽然 DID 在去中心化网络中解决了身份验证问题，但通常这些标识符不便于人们记忆或日常使用。
 
+Terminus Name 则让 DID 变得更亲切，它提供了一个类似电子邮件地址的格式，既容易记忆也好用，同时保留了 DID 的安全性和强大功能。
+
+每个 Terminus Name 都连接着一个具体的 DID。在 Terminus 创建账户时，相应的 DID 也会被创建。要详细了解它们如何协作，可以查看[Terminus 账户的阶段](../../how-to/termipass/account/index.md#账户的阶段)。
 ## 更多信息
 
-* [使用 TermiPass 管理账户](../../how-to/termipass/account/index.md#create-terminus-name)
-* [Snowinning 协议](../../developer/contribute/snowinning/overview.md)
-* [了解去中心化标识符 (DID)](../../developer/contribute/snowinning/concepts.md)
-* [域名类型](../../developer/contribute/snowinning/terminus-name.md#域名类型)
+* [使用 TermiPass 管理账户](../../how-to/termipass/account/index.md#创建-terminus-name)
+* [Snowinning 协议简介](../../developer/contribute/snowinning/overview.md)
+* [深入了解去中心化标识符（DID）](../../developer/contribute/snowinning/concepts.md)
+* [域名类型介绍](../../developer/contribute/snowinning/terminus-name.md#域名类型)
 * [Gmail 发行者服务](../../developer/contribute/snowinning/terminus-name.md#gmail-发行者服务)
-* [Terminus 账户阶段](../../how-to/termipass/account/index.md#stage-of-account)
