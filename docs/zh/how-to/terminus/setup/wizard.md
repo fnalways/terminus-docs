@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Wizard
+# 激活向导
 
 ## Open Wizard in Browser
 

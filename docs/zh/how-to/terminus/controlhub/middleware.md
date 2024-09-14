@@ -1,6 +1,6 @@
-# Middleware
+# 中间件
 
-Middleware 展示的是 Terminus OS 中部署的中间件的管理界面。
+中间件展示的是 Terminus OS 中部署的中间件的管理界面。
 
 :::tip
 只有管理员可以查看中间件的管理界面。

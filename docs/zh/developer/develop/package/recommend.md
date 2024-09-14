@@ -1,4 +1,4 @@
-# recommend
+# 配置推荐算法
 
 主要需要配置templates/文件夹下面四个文件
 embedding.yaml, prerank.yaml, rank.yaml, train.yaml 

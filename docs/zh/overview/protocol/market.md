@@ -17,7 +17,7 @@ The application market in Terminus is built on the Open Application Distribution
 
 - 应用沙盒
 
-  Terminus OS 提供了[Community Application 模式](../terminus/application.md#community-application)，让恶意软件的影响范围尽可能的小。
+  Terminus OS 提供了[社区应用模式](../terminus/application.md#社区应用)，让恶意软件的影响范围尽可能的小。
 
 - 去中心化的应用评价体系
 

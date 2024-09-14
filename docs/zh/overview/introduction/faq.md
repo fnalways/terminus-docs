@@ -15,42 +15,42 @@ Terminus 由一系列项目组成，采用了分层授权的方式，基本原�
 
 Terminus 在主项目的协议选择上深受 [fair code](https://faircode.io/) 启发。[Terminus License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) 直接复制了 [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) 的内容，同样遵循以下 4 点原则：
 
-> - is generally free to use and can be distributed by anybody
-> - has its source code openly available
-> - can be extended by anybody in public and private communities
-> - is commercially restricted by its authors
+> - 通常可以免费使用，并且任何人都可以分发
+> - 其源代码是公开可获取的
+> - 任何人都可以在公共和私有社区中进行扩展
+> - 其商业使用受到作者的限制
 
 ## 助记词丢了怎么办？
 
-你将会丢失：
+丢失助记词意味着：
 
-- 对 [DID](../../developer/contribute/snowinning/concepts.md#去中心化标识符-did) 和 [Terminus Name](../../../developer/contribute/snowinning/terminus-name.md) 的所有权。
+- 丢失对 [DID](../../developer/contribute/snowinning/concepts.md#去中心化标识符-did) 和 [Terminus Name](../../../developer/contribute/snowinning/terminus-name.md) 的所有权。
 - 丢失 [Vault](../../how-to/terminus/vault/index.md) 里存储的数据。
 
 我们强烈建议你采用离线的方式备份助记词。
 
-从 1Password 的 MasterKey 到 Crypto 钱包的助记词。十几年来，助记词的存储的问题一直没有很好的被解决。
+从 1Password 的 MasterKey 到加密钱包的助记词，十几年来，安全存储助记词一直是个棘手的问题。
 
-Terminus 的助记词会加密保存在所有安装了 TermiPass 的设备上，一般情况下，你只有在同时丢失所有装有 TermiPass 的设备后，才会丢失助记词。
+Terminus 通过在所有安装了 TermiPass 的设备上加密保存助记词来解决这一问题。通常情况下，只有在同时丢失所有装有 TermiPass 的设备时，你才会面临失去助记词的风险。
 
-安全是我们设计系统最重要的原则，我们会在未来持续改进，给大家更好的兼顾便捷和安全性的方案。
+安全性是我们设计系统时考虑的最重要的原则。未来，我们将持续进行改进，为大家提供更便捷同时也更安全的解决方案。
 
 ## Terminus 和现在 NAS 上运行的操作系统有什么区别？
 
-Terminus 在立项之初，市场上就已经有了 [Synology](https://www.synology.com/en-global/dsm/packages)，[CasaOS](https://github.com/IceWhaleTech/CasaOS) 和 [Umbrel](https://github.com/getumbrel/umbrel) 这样优秀的运行在 NAS 上的`操作系统`，给了我们很大的启发。
+在立项之初，Terminus 团队已经关注到市场上诸如 [Synology](https://www.synology.com/en-global/dsm/packages)，[CasaOS](https://github.com/IceWhaleTech/CasaOS) 和 [Umbrel](https://github.com/getumbrel/umbrel) 这样到优秀 NAS 上的操作系统，并从中获得了很多启发。
 
-但我们认为未来运行在 Edge 端的操作系统：
+然而，我们认为未来运行在 Edge 端的操作系统需要具备以下特性：
 
 - 需要能够对对多个硬件进行资源调度
 - 能对软件进行沙盒化管理
 
-这是上述基于 Docker Compose 构建的`操作系统`比较难做到的。
+目前基于 Docker Compose 的操作系统在这些方面存在一定的局限性。
 
-同时 Terminus 希望提供一个一站式的 Self-Hosted 解决方案，也是一般 NAS `操作系统`不考虑的。
+此外，Terminus 还希望提供一个一站式的自托管解决方案，这是当前一般的 NAS 操作系统所未涵盖的。
 
 ## 我有几台服务器，可以用 Terminus 统一管理吗？
 
-可以，参见 [如何添加一个节点](../../developer/develop/advanced/cli.md)。
+可以，参见[如何添加一个节点](../../developer/develop/advanced/cli.md)。
 
 添加完成后，你就可以通过[面板](../../how-to/terminus/dashboard/index.md) 和 [ControlHub](../../how-to/terminus/controlhub/index.md) 来管理集群。
 
@@ -66,7 +66,7 @@ Terminus 在立项之初，市场上就已经有了 [Synology](https://www.synol
 
   我们在 Terminus Space 上为每个 Terminus Name 提供了 10G 的免费备份额度。当存档大小超过这个额度后，我们会向大家收取一定的费用，以应对云厂商的账单。
 
-  你可以在[修改备份设置](../../how-to/terminus/settings/backup.md) ，关闭备份或将数据备份到本地硬盘或 S3 上来规避这部分费用。
+  你可以在[修改备份设置](../../how-to/terminus/settings/backup.md)，关闭备份或将数据备份到本地硬盘或 S3 上来规避这部分费用。
 
 - 公网访问
 
@@ -88,7 +88,7 @@ Terminus 在立项之初，市场上就已经有了 [Synology](https://www.synol
 
 ## 什么时候支持其他语言？
 
-目前我们只支持英语。我们期望在 2024 年 Q2 开始多语言支持。
+目前我们只支持英语，并逐步完善对简体中文的支持。我们期望在 2024 年 Q2 开始多语言支持。
 
 事实上，我们已经在所有前端项目完成了 i18n 替换，但我们并没有通过开源社区维护一个持续迭代的复杂项目的翻译资源的经验。我们还在学习中。
 
@@ -110,7 +110,7 @@ Terminus 在立项之初，市场上就已经有了 [Synology](https://www.synol
 我们目前在两种场景下使用 Terminus 这个词：
 
 1. 描述整个项目时。指代包含了 3 个核心组件和扩展协议的完整架构。
-2. 描述运行了 Terminus OS 的硬件设备。从一个树莓派到云上多台机器组成的集群，都叫 Terminus
+2. 描述运行了 Terminus OS 的硬件设备。从一个树莓派到云上多台机器组成的集群，都叫 Terminus。
 
 ## 如何区分各种“密码”？
 
@@ -128,7 +128,7 @@ Terminus 的确会用到各种密码来保障安全，包括：
 
 ## 什么是工作量证明？
 
-工作量证明（Proof of Useful Work， PoUW）有两个特点：
+工作量证明（Proof of Useful Work，PoUW）有两个特点：
 
 1. 生产成本远远高于验证成本
 2. 任何第三方可以验证
@@ -144,6 +144,6 @@ Terminus 的确会用到各种密码来保障安全，包括：
 取决于你是想用这个应用对外提供服务，还是对内让 Terminus 的用户使用。
 
 - 对外提供服务，用户可以将访问应用的 Entrance 选择为 [Public](../terminus/network.md#public-entrance)。这样可以由应用自己管理本身的用户注册和鉴权。
-- 对内提供协同，用户可以在 Terminus 上部署这类产品的 [Cluster Scoped](../terminus/application.md#cluster-scoped-application) 版本
+- 对内提供协同，用户可以在 Terminus 上部署这类产品的[集群](../terminus/application.md#集群应用) 版本
 
 对于 Gitlab 来说，我们同时提供了两种版本的移植，[Gitlab Pure](https://github.com/beclab/apps/tree/main/gitlabpure) 和 [Gitlab Fusion](https://github.com/beclab/apps/tree/main/gitlabfusion)。

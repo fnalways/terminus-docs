@@ -2,7 +2,7 @@
 outline: [2, 4]
 ---
 
-# Account
+# 使用 TermiPass 管理账户
 
 当你首次使用 TermiPass 时，可以直接尝试 [Create Terminus Name](#create-terminus-name)
 
@@ -17,7 +17,7 @@ outline: [2, 4]
 
 1. [下载手机版 TermiPass](../overview.md#download)
 2. [设置本地密码](#setup-local-password)
-3. [创建本地账户](#create-an-account)，对第一次使用 Terminus 的用户，选择"Create“而不是 ”Import“
+3. [创建本地账户](#create-an-account)，对第一次使用 Terminus 的用户，选择"Create“而不是“Import”
 4. [申请 Terminus Name](#bind-terminus-name)
 
 ### Setup Local Password
@@ -52,7 +52,7 @@ outline: [2, 4]
 
 ### New an account
 
-![alt text](/images/how-to/termipass/new_an_account.png)
+![alt text](/images/how-to/termipass/create_an_account.png)
 
 #### Create an account
 
@@ -144,7 +144,7 @@ outline: [2, 4]
 - 第二步，把助记词抄到纸上，妥善保存它。
 
 :::warning
-单击「Copy」 按钮会将 12 个助记词保存到剪切板。请妥善保存助记词。我们强烈建议你采用离线的方式备份助记词。
+点击 **Copy** 按钮会将 12 个助记词保存到剪切板。请妥善保存助记词。我们强烈建议你采用离线的方式备份助记词。
 :::
 
 - 第三步，在页面上按完整的顺序填入 12 个单词。如填写正确，则代表你已经成功备份了助记词。

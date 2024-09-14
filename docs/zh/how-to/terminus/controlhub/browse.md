@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Browse
+# 浏览
 
 
 ![alt text](/images/how-to/terminus/controlhub/browse/01.jpg)

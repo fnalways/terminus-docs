@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Submit Application
+# 发布应用
 
 ## 应用发布流程概览
 

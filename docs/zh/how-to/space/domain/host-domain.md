@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Host Domain
+# 创建域名
 
 ## How to set a domain
 

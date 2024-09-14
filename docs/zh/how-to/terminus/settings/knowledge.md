@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Knowledge Base
+# 知识库
 
 你可以在这里进行知识库的配置。
 

@@ -1,9 +1,9 @@
 
-# 在 Mac
+# 在 Mac 上开始
 
 本文档将介绍如何在 Mac 系统上快速部署和启动 Terminus。只需遵循以下几个简单的步骤，你就可以创建账户、安装 Terminus 并开始探索其丰富的功能。
 
-::: tip 注意
+::: tip
 目前在 Mac 上使用 Terminus 有一些限制，包括：
 - 不支持分布式存储
 - 无法添加本地节点
@@ -59,11 +59,11 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 
 在向导页面，用新设置的密码登录 Terminus，并通过 TermiPass 完成双重验证。更多登录详情，参见[登录帮助文档](../../../how-to/terminus/setup/login.md)。
 
-:::warning 警告
-为保障账户和数据安全，别忘了[备份你的助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
+:::warning
+为保障账户和数据安全，请务必[备份助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
 :::
 
 ## 下一步
 - [探索 Terminus 的各种任务](../../../how-to/terminus/index.md)
 - [安装更多应用](../../../how-to/terminus/market/index.md#install-application)
-- [如何卸载 Terminus](../../../developer/develop/advanced/cli.md#terminus-uninstallation-script)
+- [如何卸载 Terminus](../../../developer/develop/advanced/cli.md#terminus-卸载脚本)

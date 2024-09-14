@@ -2,21 +2,21 @@
 outline: [2, 4]
 ---
 
-# Application
+# 应用
 
 你可以在这里对已经安装的应用进行管理。在列表中，你可以看到：
 
-- [用户系统应用](../../../overview/terminus/application.md#user-system-application)
-- [Community Application](../../../overview/terminus/application.md#community-application)
-- 如果你是 Admin， 还会看到 [Cluster Scoped Application](../../../overview/terminus/application.md#cluster-scoped-application)
+- [用户系统应用](../../../overview/terminus/application.md#用户系统应用)
+- [社区应用](../../../overview/terminus/application.md#社区应用)
+- 如果你是 Admin， 还会看到[集群应用](../../../overview/terminus/application.md#集群应用)
 
 ![alt text](/images/how-to/terminus/application.png)
 
 ## App Management
 
-你可以在这里查看常见的 [应用状态](../../../overview/terminus/application.md#应用状态)
+你可以在这里查看常见的[应用状态](../../../overview/terminus/application.md#应用状态)
 :::info
-[Community Application](../../../overview/terminus/application.md#community-application)可以被 Suspend，以释放资源。
+[社区应用](../../../overview/terminus/application.md#社区应用)可以被 Suspend，以释放资源。
 :::
 
 ![alt text](/images/how-to/terminus/application_details.png)

@@ -1,4 +1,4 @@
-# Database
+# 数据库
 
 Terminus 系统中为所有 APP 提供了三种最流行的数据存储集群，覆盖 RDS、NoSQL、Cache 三种数据存储场景。
 

@@ -1,4 +1,4 @@
-# Manage Terminus
+# 管理 Terminus
 
 ## Resource Consumption of the Terminus
 

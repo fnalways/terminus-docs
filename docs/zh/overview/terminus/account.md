@@ -9,7 +9,7 @@ outline: [2, 3]
 Terminus 在研发之初是一个逻辑上的单用户系统，这样每个用户的 Terminus 在物理上都是独立的，每个人都拥有自己的数据。但随着研发推进，我们很快发现这么做的劣势：
 
 - 硬件资源开销大，并且会随着用户数的增长而线性增长。因为每个用户都需要独立的部署重复的系统软件和中间件，这些软件几乎没有负载，但占据大量的内存。
-- 无法处理需要协同的场景。由于单用户系统的应用不支持 [Cluster Scoped Application](./application.md#cluster-scoped-application)，这会导致放弃过去开源社区里大量协同软件的积累。
+- 无法处理需要协同的场景。由于单用户系统的应用不支持[集群应用](./application.md#集群应用)，这会导致放弃过去开源社区里大量协同软件的积累。
 
 其次，我们期望用户只需要在桌面登录一次，就可以访问系统里所有的应用。对比之下，手机里每一个应用都需要我们单独登录。
 
@@ -23,11 +23,11 @@ Terminus 在研发之初是一个逻辑上的单用户系统，这样每个用�
 
 我们设计了多用户体系下的应用鉴权流程，上图是流程示意图：
 
-1. 用户在[登录页面](../../how-to/terminus/setup/login.md) 完成登录后，后续的所有请求都会自动附带鉴权信息。
+1. 用户在[登录页面](../../how-to/terminus/setup/login.md)完成登录后，后续的所有请求都会自动附带鉴权信息。
 2. 用户每次发送请求，请求都会首先经过 Authelia 服务进行鉴权。
 3. 请求附带的的鉴权信息如果没有通过，应用会自动跳转到[登录页面](../../how-to/terminus/setup/login.md)，用户需要重新登录获取验证信息。
 4. 对于通过 Authelia 的请求，[BFL](https://github.com/beclab/bfl) 会附带上用户的基本信息后，将它转发给应用，应用无需自己处理鉴权。
-5. 对于 [Cluster Scoped Application](./application.md#cluster-scoped-application) 需要开发者额外开发 `Auth Server` 将应用的账号和 BFL 的账号绑定。
+5. 对于[集群应用](./application.md#集群应用) 需要开发者额外开发 `Auth Server` 将应用的账号和 BFL 的账号绑定。
 
 :::info
 你可以参考 Terminus 团队开发的一些`Auth Server`：
@@ -57,11 +57,11 @@ Terminus 在研发之初是一个逻辑上的单用户系统，这样每个用�
 
 在 Terminus OS 中存在两种角色：
 
-- **Admin**： 创建 Terminus 的用户会自动成为 Admin，拥有以下权限：
+- **Admin**：创建 Terminus 的用户会自动成为 Admin，拥有以下权限：
   - [管理用户](../../how-to/terminus/settings/account.md)
-  - [管理 Cluster 应用](./application.md#cluster-scoped-application)
+  - [管理集群应用](./application.md#集群应用)
   - 管理硬件
-- **Member**： 除 Admin 外的用户。
+- **Member**：除 Admin 外的用户。
 
 :::info
 Admin 拥有查看和修改所有账户资源使用情况的权利，但无法查看其他账户的数据。
@@ -83,7 +83,7 @@ Terminus OS 在创建新用户时，需要给每个用户分配 CPU 和内存资
 
 如果新用户使用过程中，实时消耗资源超过了分配资源的 90%，Terminus OS 将启动保护机制，暂停用户消耗资源最高的两个 Community Application。
 
-在用户的实时消耗资源下降到合理水平之后，可以手动在 [Control Hub](../../how-to/terminus/controlhub/browse.md#修改部署运行状态)中，重启被暂停的应用。
+在用户的实时消耗资源下降到合理水平之后，可以手动在 [Control Hub](../../how-to/terminus/controlhub/browse.md#修改部署运行状态) 中，重启被暂停的应用。
 
 ## 更多
 

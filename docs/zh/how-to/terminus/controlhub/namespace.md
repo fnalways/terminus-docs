@@ -1,4 +1,4 @@
-# Namespace
+# 命名空间
 
 Control Hub 的 Namespace 功能，是提供用户以 Namespace 出发，观测 Terminus OS 上的资源占用和负载情况。
 

@@ -1,4 +1,4 @@
-# Secret
+# 密钥
 
 在 APP 中经常需要保存用户的一些重要信息，比如，密码、某个外部系统的 Access Token，等等。Terminus 基于 Infisical，为 APP 提供了一个统一的安全保存各种密钥的金库。
 

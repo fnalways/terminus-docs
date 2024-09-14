@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Integration
+# 集成
 
 这里集成了 Terminus Space Account 和互联网上第三方服务的账号，方便你完成 Terminus 和其他账号之间的数据调用与同步。
 

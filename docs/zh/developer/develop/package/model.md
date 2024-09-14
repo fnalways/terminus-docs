@@ -1,4 +1,4 @@
-# Configuration Guideline for model
+# 配置模型
 
 每一个 LLM 的 Chart 根目录下都必须有一个 modelConfig.yaml 文件，且该文件名必须是`modelConfig.yaml`。
 modelConfig.yaml描述了一个LLM所需要的基本信息

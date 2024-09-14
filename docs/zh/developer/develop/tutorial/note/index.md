@@ -1,4 +1,4 @@
-# Create your first Terminus app
+# 创建你的首个应用
 
 你可以通过本教程学习如何使用 Terminus OS 的 DevBox 开发一个 Terminus App。
 

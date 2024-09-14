@@ -59,7 +59,7 @@ outline: [2, 3]
 
 除了”窗口“模式，我们还提供了“Tab”模式，来打开应用，该模式将在浏览器新建一个 Tab 打开应用，而不是通过 iframe 在桌面打开一个“窗口”。
 
-开发者可以通过[Entrance](../../developer/develop/package/manifest.md#entrances)的 openMethod 属性进行设置，对于部分禁止了前端 iframe 方式访问的[Community Application](../../overview/terminus/application.md#community-application)，建议使用设置属性。
+开发者可以通过[Entrance](../../developer/develop/package/manifest.md#entrances)的 openMethod 属性进行设置，对于部分禁止了前端 iframe 方式访问的[社区应用](../../overview/terminus/application.md#社区应用)，建议使用设置属性。
 :::
 
 ### 更换壁纸

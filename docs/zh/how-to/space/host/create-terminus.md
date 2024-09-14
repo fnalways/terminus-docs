@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Create Terminus
+# 创建 Terminus
 
 要创建 Terminus，请先确认你的账号状态，请点击[ account](../account.md#account-type)了解更多账号信息。
 
