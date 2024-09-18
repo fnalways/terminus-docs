@@ -4,7 +4,7 @@ outline: [2, 4]
 
 # Otmoic
 
-Otmoic 系统的使用介绍将会以两个不同的视角进行讲述, 分别是 LP 视角和 User 视角
+Otmoic 系统的使用介绍将会以两个不同的视角进行讲述, 分别是 LP 视角和 User 视角。
 
 ## For LP
 

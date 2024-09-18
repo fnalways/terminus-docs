@@ -37,12 +37,12 @@ const side = {
         { text: "AI 框架", link: "/zh/overview/terminus/ai" },
       ],
     },
-    {
+     {
       text: "协议",
       items: [
-        { text: "协议的复兴", link: "/zh/overview/protocol/overview" },
+        { text: "概述", link: "/zh/overview/protocol/overview" },
         { text: "Otmoic", link: "/zh/overview/protocol/otmoic" },
-        { text: "Open Application Distribution Protocol", link: "/zh/overview/protocol/market" },
+        { text: "开放应用分发协议", link: "/zh/overview/protocol/market" },
         { text: "推荐算法", link: "/zh/overview/protocol/recommend" },
       ],
     },
@@ -171,7 +171,7 @@ const side = {
     {
       text: "TermiPass",
       items: [
-        { text: "介绍", link: "/zh/how-to/termipass/overview" },
+        { text: "概述", link: "/zh/how-to/termipass/overview" },
         {
           text: "账户",
           link: "/zh/how-to/termipass/account/index.md",
@@ -233,7 +233,7 @@ const side = {
       text: "Otmoic",
       items: [
         {
-          text: "如何使用",
+          text: "概述",
           link: "/zh/how-to/otmoic/",
         },
       ],

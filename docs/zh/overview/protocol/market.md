@@ -1,8 +1,8 @@
-# Open Application Distribution Protocol
+# 开放应用分发协议
 
 ## 动机
 
-The application market in Terminus is built on the Open Application Distribution Protocol，致力于：
+Terminus 中的应用市场基于开放应用分发协议构建，致力于：
 
 - 打造一个无许可的应用分发生态
 - 用户的付费全部归开发者所有
@@ -23,7 +23,7 @@ The application market in Terminus is built on the Open Application Distribution
 
   Terminus 支持 [Application Reputation](../../developer/contribute/snowinning/smart-contract.md#application-reputation)，帮助用户进行购买决策，以及识别有信誉的开发者。 
 
-- Flexible Indexer Services for Market
+- 灵活的 Indexer 服务
   
   用户可以自由为 Market 选择 Indexer 服务，下图是 Developer、Indexer 和 Market 的关系。
 

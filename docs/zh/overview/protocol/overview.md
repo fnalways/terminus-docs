@@ -4,7 +4,7 @@ outline: deep
 
 ---
 
-# 协议的复兴
+# 概述
 
 大概 5 年前，MIKE MASNICK 发表了一篇文章 [Protocols, Not Platforms: A Technological Approach to Free Speech](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech), 向我们阐述了协议对于未来的重要性。
 
