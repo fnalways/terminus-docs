@@ -2,7 +2,7 @@
 
 本文档将介绍如何在 Windows 系统上快速部署和启动 Terminus。只需遵循以下几个简单的步骤，你就可以创建账户、安装 Terminus 并开始探索其丰富的功能。
 
-::: tip 注意
+::: tip
 目前在 Windows 上使用 Terminus 有一些限制，包括：
 - 不支持分布式存储
 - 无法添加本地节点
@@ -19,14 +19,14 @@
 
 在手机上打开 TermiPass，按照界面指示[创建 Terminus Name](../../../how-to/termipass/account/index.md#create-terminus-name)。
 
-:::info 信息
+:::info
 Terminus Name 是你在 Terminus 中的唯一身份标识。
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
 :::
 
 ## 2. 安装 Terminus
 
-1. 导航至你的 Windows 用户目录，（通常是 `C:\Users\YourUsername\`），创建一个名为`.wslconfig`的新文件。
+1. 导航至你的 Windows 用户目录（通常是 `C:\Users\YourUsername\`），创建一个名为`.wslconfig`的新文件。
    
 2. 将以下内容复制粘贴到`.wslconfig`文件中。
    
@@ -43,7 +43,7 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
    wsl --update
    ```
 
-   :::info 信息
+   :::info
    如果是首次安装 WSL，可能需要重启计算机。
    ::: 
 
@@ -73,13 +73,13 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
       # 用WSL 的 IP 地址替换 <addr for hostname>。
       ```
 
-6.  配置 Ubuntu 环境。
+6. 配置 Ubuntu 环境。
 
    a. 打开**开始**菜单，搜索`Ubuntu-22.04`，点击 Ubuntu 图标打开 Ubuntu 终端。
-   
+
    b. 在 Ubuntu 中，修改`/etc/wsl.conf`文件。
 
-      ::: tip 提示
+      :::tip
       使用 sudo 命令编辑文件。
       :::
 
@@ -106,11 +106,11 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
       $(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') $(hostname)\" > /etc/hosts && \
       echo \"nameserver 1.1.1.1\nnameserver 1.0.0.1\" > /etc/resolv.conf"
       ```
-      :::info  信息
+      :::info
       此命令将 Ubuntu 的本地 IP 与主机名绑定，并配置 DNS 解析以使用 Cloudflare 的公共 DNS 服务器。
       :::
     
-7. 安装 Terminus。
+6. 安装 Terminus。
    
    a. 在 Ubantu 中，运行以下命令来安装 Terminus 的最新版本：
 
@@ -122,7 +122,7 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 
     ![输入 Windows 主机 IP 地址](/images/overview/terminus/install-windows-ip.jpeg)
 
-8. 安装完成后，请记下 Terminus 激活向导的网址和你的初始登录密码。
+7. 安装完成后，请记下 Terminus 激活向导的网址和你的初始登录密码。
 
 详细的安装步骤，请参考 [在 Windows 上安装 Terminus](../../../how-to/terminus/setup/install/windows.md)。
 
@@ -138,8 +138,8 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 
 在向导页面，用新设置的密码登录 Terminus，并通过 TermiPass 完成双重验证。更多登录详情，参见[登录帮助文档](../../../how-to/terminus/setup/login.md)。
 
-:::warning 警告
-为保障账户和数据安全，别忘了[备份你的助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
+:::warning
+为保障账户和数据安全，请务必[备份助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
 :::
 
 ## 下一步

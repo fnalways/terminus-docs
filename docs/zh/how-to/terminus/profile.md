@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Profile
+# 个人主页
 
 你可以通过 Profile 给自己设置个人主页。Profile 包含两个主要页面：
 

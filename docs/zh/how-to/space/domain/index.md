@@ -1,4 +1,4 @@
-# Domain
+# 组织域名
 
 ## Using a Custom Domain with Terminus
 

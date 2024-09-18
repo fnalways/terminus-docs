@@ -2,42 +2,36 @@
 outline: [2, 3]
 ---
 
-# What is Terminus?
+# 什么是 Terminus?
 
-Terminus 的使命是“让人们再次拥有自己的数据”。
+Terminus 的使命是“让人们重新拥有自己的数据”。
 
-Terminus is a free, self-hosted operating system built on Kubernetes. It converts your edge device into a true home cloud, providing powerful cloud-level capabilities while maintaining ease of use and privacy. By securely storing your data and accessing your self-hosted services from anywhere via Terminus, you gain complete control over your digital life. 
+Terminus 是一个免费的自托管操作系统，基于 Kubernetes 构建。它能够将你的边缘设备转变为一个真正的家庭云，提供强大的云计算功能，同时保持使用便捷和隐私安全。通过 Terminus，你可以安全地存储数据，并随时随地访问自己的服务，从而全面掌控自己的数字生活。
 
-Terminus is dedicated to advancing technological and AI equality by democratizing capabilities previously accessible only to large companies, making them available to every user.
+Terminus 致力于推动技术与人工智能领域的均衡发展，通过普及原本只有大型企业才能使用的技术，使每个用户都能享受到这些先进功能。
 
-Terminus consists of three core components and a series of protocols.
+该系统由三个核心组件及一系列协议组成，构筑了其强大且灵活的框架。
 
-**核心组件**：
+## 核心组件
 
-- [Snowinning Protocol](../../developer/contribute/snowinning/overview)，一个遵循了 W3C 标准，用户自主拥有，基于区块链智能合约的身份和信誉协议
-- [Terminus OS](../terminus/overview.md)，一个运行在用户自己拥有的边缘设备上的基于 Kubernetes 改进的 source-available 的云原生操作系统
-- [TermiPass](../../how-to/termipass/overview.md)，一个帮助用户管理链上身份和边缘设备的客户端软件
+- [Snowinning Protocol](../../developer/contribute/snowinning/overview)：一种去中心化的身份和信用系统，为信息和价值的安全无信任交换提供框架。
+- [Terminus OS](../terminus/overview.md)：一款云原生、源代码可获取的操作系统，基于 Kubernetes 开发，运行在用户拥有的边缘设备上。
+- [TermiPass](../../how-to/termipass/overview.md)：一款客户端软件，能够安全地连接用户与其在各种设备上的 Terminus 系统。
 
-**协议**：
+## 协议
 
 我们相信，在未来的去中心化的世界里，平台不再，而协议永存。除了 Snowinning Protocol 外，我们还提供了 3 个协议原型：
 
-- [Otmoic Protocol](../protocol/otmoic.md)，一个基于 RFQ 和链上信誉，为公共物品提供价格，交换价值的协议
-- [Market Protocol](../protocol/market.md)，一个无许可的应用分发协议，在新世界里，不再有苹果的审核和抽成
-- [Recommend Protocol](../protocol/recommend.md)，一个去中心化和隐私保护的信息分发协议，期待将你从信息茧房中抽离出来
+- [Otmoic Protocol](../protocol/otmoic.md)：一种基于报价请求（RFQ）和链上声誉的协议，用于为公共产品提供定价和价值交换。
+- [Market Protocol](../protocol/market.md)：一个无需许可的应用分发协议，通过消除苹果等中介机构严格的审查和佣金要求，简化应用分发过程。
+- [Recommend Protocol](../protocol/recommend.md)：一种去中心化且保护隐私的信息分发协议，旨在帮助用户摆脱信息茧房，自由获取信息。
 
-## Use Cases
+## 应用场景
 
-- **Self-Hosted**: Terminus serves as a one-stop self-hosted solution where users can host and manage their data, operations, and digital life effectively, with full data ownership.
-
-- **Local AI**: With the [AI Framework](../terminus/ai.md) provided by Terminus, users can host and run world-class open-source AI models locally, including large language models, image generation, and speech recognition. This allows the capability to create custom AI assistants that integrate seamlessly with personal data and applications, all while ensuring enhanced privacy and control.
-
-- **Personal data repository**: Securely store, sync, and manage your photos, documents, and important files in a unified storage and access anywhere. 
-
-- **Self-hosted workspace**: Create a free, powerful workspace for your team or family with open source selfhosted alternatives. 
-
-- **Private media server**: Host your own streaming services with your personal media collections. 
-
-- **Smart Home Hub**: Create a central control point for your IoT devices and home automation.  
-
-- **User-owned decentralized social media**: Easily install decentralized social media apps such as Mastodon, Ghost, and WordPress on Terminus OS, allowing you to build a personal brand without the risk of being banned or paying platform commissions. 
+* **自托管解决方案**：Terminus 提供全面的一站式自托管服务。用户可以在此平台管理自己的数据、业务操作和数字生活，完全拥有数据的所有权。
+* **本地人工智能**：Terminus 提供的 [AI 框架](../terminus/ai.md)支持用户在本地部署并运行世界级的开源 AI 模型，包括大型语言模型、图像生成和语音识别等。用户可以自主创建与个人数据和应用程序无缝集成的定制AI助手，确保数据隐私和控制权得到加强。
+* **个人数据仓库**：在一个统一的系统中安全地存储、同步和管理您的照片、文件和重要资料，实现随时随地的访问。
+* **自托管工作空间**：为您的团队或家庭创建一个功能强大的免费工作空间，采用开源的自托管替代产品。
+* **影音娱乐中心**：利用您的个人媒体收藏搭建专属的流媒体服务。
+* **智能家居中心**：为您的物联网设备和家庭自动化建立一个中心控制点。
+* **去中心化社交媒体**：在 Terminus OS 上轻松安装去中心化的社交媒体应用，例如 Mastodon、Ghost 和 WordPress，无忧构建和维护个人品牌。

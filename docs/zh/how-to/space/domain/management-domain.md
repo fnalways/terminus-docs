@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Management Domain
+# 管理域名
 
 请先完成[创建 Domain](../../space/domain/host-domain.md)。完成之后你就可以「设置组织成员的邮箱邀请规则」，通过邮箱来邀请成员绑定属于自己的组织 Terminus Name 了。
 

@@ -1,7 +1,7 @@
-# Local File Sync
+# 同步本地文件
 
 :::info
-只有 Windows 和 Mac 版本支持该功能
+只有 Windows 和 Mac 版本支持该功能。
 :::
 
 ## Library Creation and Management

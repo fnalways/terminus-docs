@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Backup Management
+# 备份
 
 你可以在这里进行 Terminus 的备份和快照的管理。
 

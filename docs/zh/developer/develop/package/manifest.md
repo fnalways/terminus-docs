@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Configuration Guideline for Apps
+# 配置应用
 
 每一个 Terminus App 的 Chart 根目录下都必须有一个 TerminusManifest.yaml 文件，且该文件名必须是`TerminusManifest.yaml`。TerminusManifest.yaml 描述了一个 Terminus App 的所有基本信息，Terminus Market 协议和 Terminus 系统依赖这些关键信息来正确的分发和安装应用。
 

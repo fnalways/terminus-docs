@@ -1,4 +1,4 @@
-# File Upload
+# 文件上传
 
 Terminus 作为一个云端系统，存在很多将本地文件上传到云端的场景。`TAPR（Terminus Application Runtime）`提供了一个通用的 file-upload 组件。简化 APP 对文件上传需求的开发。同时，file-upload 组件还提供了断点续传功能。
 

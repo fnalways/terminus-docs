@@ -87,7 +87,7 @@ MongoDB 作为 NoSQL 的代表，有其广泛的应用场景。Terminus OS 在�
 
 ## [Redis](../../developer/develop/advanced/database.md#cache)
 
-毋庸置疑，Redis 可以算是当前最流行的内存 Cache 软件。其有丰富的指令，在 Key-Value 数据的基础上衍生出多种多样的数据类型。很多系统甚至把它作为了 KV 数据存储。Terminus OS 同样在系统中部署了定制化的[Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator)，提供了云原生版本的 Redis Cluster。
+毋庸置疑，Redis 可以算是当前最流行的内存 Cache 软件。其有丰富的指令，在 Key-Value 数据的基础上衍生出多种多样的数据类型。很多系统甚至把它作为了 KV 数据存储。Terminus OS 同样在系统中部署了定制化的 [Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator)，提供了云原生版本的 Redis Cluster。
 
 Terminus 也同样接管了 Redis Cluster 的备份与还原。无需用户单独再对 Redis Cluster 提供任何运维操作。
 

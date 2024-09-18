@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Market
+# 应用市场
 
-Market 建立在去中心化和无许可的[应用分发协议](/overview/protocol/market.md)之上. 这是一个开放的应用市场，你可以在这里一键安装来自 Terminus 和第三方开发者的各类应用程序、内容推荐算法、大语言模型等等。
+应用市场建立在去中心化和无许可的[应用分发协议](/overview/protocol/market.md)之上。这是一个开放的应用平台，你可以在这里一键安装来自 Terminus 和第三方开发者的各类应用程序、内容推荐算法、大语言模型等等。
 
 ![Discover](/images/how-to/terminus/market/discover.jpg)
 

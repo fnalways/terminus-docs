@@ -6,7 +6,7 @@ outline: [2, 3]
 
 本节提供了在不同环境下安装 Terminus 的详细步骤，包括 Linux、树莓派、Mac 和 Windows。开始之前，请确保查看对应指南中的“前提条件”部分。
 
-:::info 信息
+:::info
 - 本文档主要介绍 Terminus 的自托管方式安装。如果想尝试云服务版本，请查看 [Terminus Space 文档](../../../space/host/create-terminus.md)。
 :::
 

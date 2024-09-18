@@ -8,8 +8,8 @@ outline: [2, 3]
 
 服务器的网络配置一直是一件极为繁琐的事，它体现在：
 
-- 外部而言，需要处理域名，证书，反向代理，内网穿透等问题。
-- 内部而言，需要管理各个应用独立的路由，域名和安全策略。
+- 外部而言，需要处理域名、证书、反向代理、内网穿透等问题。
+- 内部而言，需要管理各个应用独立的路由、域名和安全策略。
 
 目前，市面上还没有一款产品可以同时兼顾安全和易用性。
 
@@ -25,7 +25,7 @@ Entrance 是应用的入口，用户需要通过 Entrance 访问应用。
 
 定位是提供对外公开的服务。例如博客，社交媒体等。
 
-访问 Public Entrance 的流量无需经过 [鉴权](./account.md#多因素验证)。我们通过让 Public Entrance 的流量经过 Cloudflare 获得基本的安全保障。
+访问 Public Entrance 的流量无需经过[鉴权](./account.md#多因素验证)。我们通过让 Public Entrance 的流量经过 Cloudflare 获得基本的安全保障。
 
 - 当 Terminus 有 public IP，流量经过 Cloudflare 进入 Terminus。
 - 当 Terminus 没有 public IP 时，有两种方式：
@@ -39,9 +39,9 @@ Entrance 是应用的入口，用户需要通过 Entrance 访问应用。
 访问 Private Entrance 的流量需要经过[鉴权](./account.md#多因素验证)。Private Entrance 的流量路由会取决于用户是否在设置中启用了[Only VPN](../../how-to/terminus/settings/home.md#forcing-vpn-access-to-private-entrance-only-vpn-mode)模式：
 
 - **Only VPN 模式未启用**：
-  - 如果用户在 TermiPass 中[启用VPN连接](../../how-to/termipass/manage-terminus.md#vpn-connection)，所有网络流量将通过 VPN（TailScale）转发。
+  - 如果用户在 TermiPass 中[启用 VPN 连接](../../how-to/termipass/manage-terminus.md#vpn-connection)，所有网络流量将通过 VPN（TailScale）转发。
   - 如果没有启用，网络流量的处理方式与 Public Entrance 相同。
-- **Only VPN 模式已启用**：只有通过 VPN(TailScale) 的流量才能访问 Private Entrance。
+- **Only VPN 模式已启用**：只有通过 VPN (TailScale) 的流量才能访问 Private Entrance。
 
 ### Endpoint
 
@@ -67,7 +67,7 @@ Entrance Index 是指 Entrance 在 [TerminusManifest.yaml](../../developer/devel
 
 ## Setup Domain
 
-Terminus Space 会在 Terminus [激活](../../how-to/terminus/setup/wizard.md) 时，协助用户完成 [DomainName](../../developer/contribute/snowinning/terminus-name.md#domainname) 的设置。
+Terminus Space 会在 Terminus [激活](../../how-to/terminus/setup/wizard.md)时，协助用户完成 [DomainName](../../developer/contribute/snowinning/terminus-name.md#domainname) 的设置。
 
 ### DNS
 
@@ -83,7 +83,7 @@ Terminus Space 会在 Terminus [激活](../../how-to/terminus/setup/wizard.md) �
 
 同时为了提升访问 Terminus 的速度及安全性，我们使用 Cloudflare 对 Terminus 进行 7 层加速，对应的 SSL 证书由 Google 签发并由 Cloudflare 进行管理。
 
-### Setup Reverse Proxy
+### 设置反向代理
 
 对于没有 public IP 的 Terminus 用户，需要在激活时设置反向代理，目前有两种方式：
 

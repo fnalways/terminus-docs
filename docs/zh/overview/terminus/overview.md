@@ -4,14 +4,14 @@ Terminus OS 是一个基于 Kubernetes 的面向个人和企业的免费且 sour
 
 在这个瞬息万变的时代，Terminus OS 致力于推动技术和 AI 平权，把过往只有大公司才掌握的能力交到每个用户手上。
 
-你可以通过 [GitHub 仓库](https://github.com/beclab/terminus) 来了解系统的全貌。
+你可以通过 [GitHub 仓库](https://github.com/beclab/terminus)来了解系统的全貌。
 
-## 介绍
+## 概述
 随着 AI 的发展，人们越来越关注自身的隐私。
 
 Terminus OS 能够帮助个人和企业，管理好自己的数据，业务和生活
 
-- 对于用户，我们希望 人们可以像使用手机一样使用 Terminus OS
+- 对于用户，我们希望人们可以像使用手机一样使用 Terminus OS
 - 对于开发者，我们希望 Terminus OS 能提供给他们和公有云一致的体验
 
 我们深知要达到这个目标非常困难，但近 10 年来，随着以 Kubernetes 为代表的云原生技术的发展，让个人用户管理一个小型服务器集群所需的时间和技能变得不再遥不可及。

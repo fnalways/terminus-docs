@@ -12,7 +12,7 @@
 - 手机上已安装 [TermiPass](../../../termipass/overview.md#download)
 - 已创建 [Terminus Name](../../../termipass/account/index.md#create-terminus-name)
 
-:::info 信息
+:::info
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
@@ -52,7 +52,7 @@
    curl -fsSL https://terminus.sh |  bash -
    ```
 
-   :::info 信息
+   :::info
    - 如果安装过程中出现错误，使用以下命令先卸载 Terminus OS：
 
    ```bash
@@ -71,7 +71,7 @@
 
 - 如果你的 Terminus 名称是 "alice@helloworld.com"，输入 `helloworld.com` 作为域名，然后输入 `alice` 作为 Terminus 名称。
 
-:::info 信息
+:::info
 若需使用自定义域名，请确保已按照 [创建域名](../../../space/domain/host-domain.md) 中的描述完成域名配置。
 :::
 
@@ -90,7 +90,7 @@
 
 通常情况下，如果你的计算机和 Terminus 处于同一网络，请使用内部网络 URL。如果不在同一网络，使用公共网络 URL。
 
-:::tip 提示
+:::tip
 使用内部网络 URL 时，请注意：
 - 在激活过程中，你可能需要设置反向代理。
 - 如果你通过扫描 QR 码激活 TermiPass，请确保你的手机和 Terminus 处于同一网络。

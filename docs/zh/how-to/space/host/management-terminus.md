@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Management Terminus
+# 管理 Terminus
 
 ## View Panel Data
 

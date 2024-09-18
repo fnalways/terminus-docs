@@ -12,7 +12,7 @@
 
 在手机上打开 TermiPass，按照界面指示[创建 Terminus Name](../../../how-to/termipass/account/index.md#create-terminus-name)。
 
-:::info 信息
+:::info
 Terminus Name 是你在 Terminus 中的唯一身份标识。
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#why-do-you-need-a-terminus-name)。
 :::
@@ -55,7 +55,7 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 
 5. 安装完成后，请记下 Terminus 激活向导的网址和你的初始登录密码。
 
-详细的安装步骤，请参考 [在树莓派上安装 Terminus](../../../how-to/terminus/setup/install/raspberry.md)。
+   详细的安装步骤，请参考[在树莓派上安装 Terminus](../../../how-to/terminus/setup/install/raspberry.md)。
 
 ## 3. 激活 Terminus
 
@@ -69,14 +69,14 @@ Terminus Name 是你在 Terminus 中的唯一身份标识。
 
 在向导页面，用新设置的密码登录 Terminus，并通过 TermiPass 完成双重验证。更多登录详情，参见[登录帮助文档](../../../how-to/terminus/setup/login.md)。
 
-:::warning 警告
-为保障账户和数据安全，别忘了[备份你的助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
+:::warning
+为保障账户和数据安全，请务必[备份助记词](../../../how-to/termipass/account/index.md#backup-mnemonic-phrase)。
 :::
 
 ## 下一步
 - [探索 Terminus 的各种任务](../../../how-to/terminus/index.md)
 - [安装更多应用](../../../how-to/terminus/market/index.md#install-application)
-- [如何卸载 Terminus](../../../developer/develop/advanced/cli.md#terminus-uninstallation-script)
-- [如何解决 IP 地址变更的问题](../../../developer/develop/advanced/cli.md#resolve-ip-change-issue)
+- [如何卸载 Terminus](../../../developer/develop/advanced/cli.md#terminus-卸载脚本)
+- [如何解决 IP 地址变更的问题](../../../developer/develop/advanced/cli.md#解决-ip-变更问题)
 
 

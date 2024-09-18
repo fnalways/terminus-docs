@@ -20,7 +20,7 @@ Vault 在架构上分为两个部分：
 
   在我们撰写安全白皮书前，你可以先可以参考 [Padloc Security Whitepaper](https://docs.padloc.app/docs/security/)
 
-  Vault 同时是一个 [Cluster Scoped Application](../../../overview/terminus/application.md#cluster-scoped-application)。这样可以做到同一台 Terminus 上的不同用户间可以通过 Shared Vault 共享数据。
+  Vault 同时是一个[集群应用](../../../overview/terminus/application.md#集群应用)。这样可以做到同一台 Terminus 上的不同用户间可以通过 Shared Vault 共享数据。
 
 - 客户端：
 

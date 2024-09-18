@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Wallpaper
+# 壁纸
 
 你可以在这里给 [Desktop](../desktop.md) 和 [Login](../setup/login.md) 设置背景图片。
 
