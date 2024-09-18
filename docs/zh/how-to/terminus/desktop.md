@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Desktop
+# 桌面
 
 你可以通过 Desktop 使用和管理在 Terminus OS 里安装的应用。
 

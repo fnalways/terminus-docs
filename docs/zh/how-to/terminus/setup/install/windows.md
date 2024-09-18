@@ -6,7 +6,7 @@
 - 符合以下条件的 Windows 机器：
 
 
-::: tip 注意
+::: tip
 目前在 Windows 上使用 Terminus 有一些限制，包括：
 - 不支持分布式存储
 - 无法添加本地节点
@@ -27,7 +27,7 @@
 - 手机上已安装 [TermiPass](../../../termipass/overview.md#download)
 - 已创建 [Terminus Name](../../../termipass/account/index.md#create-terminus-name)
   
-:::info 信息
+:::info
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
@@ -82,14 +82,14 @@
 
 6.  配置 Ubuntu 环境。
 
-   a. 打开**开始**菜单，搜索`Ubuntu-22.04`，点击 Ubuntu 图标打开 Ubuntu 终端。
-   
-   b. 在 Ubuntu 中，修改`/etc/wsl.conf`文件。
-
-      ::: tip 提示
+    a. 打开**开始**菜单，搜索`Ubuntu-22.04`，点击 Ubuntu 图标打开 Ubuntu 终端。
+    
+    b. 在 Ubuntu 中，修改`/etc/wsl.conf`文件。
+    
+      ::: tip
       使用 sudo 命令编辑文件。
       :::
-
+    
       ```bash
       [boot] 
       systemd=true  
@@ -99,21 +99,21 @@
       generateResolvConf = false # 允许手动管理主机文件和 DNS 设置
       hostname=terminus # 为 WSL 实例设置主机名
       ```
-
-   c. 关闭 Ubuntu 使变更生效。
-
+    
+    c. 关闭 Ubuntu 使变更生效。
+    
       ```PowerShell
       wsl --shutdown Ubuntu-22.04
       ```
-
-   d. 重新启动 Ubuntu，修改`/etc/hosts`和`/etc/resolv.conf`文件。
-   
+    
+    d. 重新启动 Ubuntu，修改`/etc/hosts`和`/etc/resolv.conf`文件。
+    
       ```bash
       sudo sh -c "echo \"127.0.0.1 localhost\n \
       $(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') $(hostname)\" > /etc/hosts && \
       echo \"nameserver 1.1.1.1\nnameserver 1.0.0.1\" > /etc/resolv.conf"
       ```
-      :::info  信息
+      :::info
       此命令将 Ubuntu 的本地 IP 与主机名绑定，并配置 DNS 解析以使用 Cloudflare 的公共 DNS 服务器。
       :::
     
@@ -129,7 +129,7 @@
 
     ![输入 Windows 主机 IP 地址](/images/overview/terminus/install-windows-ip.jpeg)
 
-   :::info 信息
+   :::info
    - 如果安装过程中出现错误，使用以下命令先卸载 Terminus OS：
 
         ```bash
@@ -148,7 +148,7 @@
 
 - 如果你的 Terminus 名称是 "alice@helloworld.com"，输入 `helloworld.com` 作为域名，然后输入 `alice` 作为 Terminus 名称。
 
-:::info 信息
+:::info
 若需使用自定义域名，请确保已按照 [创建域名](../../../space/domain/host-domain.md) 中的描述完成域名配置。
 :::
 
@@ -167,7 +167,7 @@
 
 通常情况下，如果你的计算机和 Terminus 处于同一网络，请使用内部网络 URL。如果不在同一网络，使用公共网络 URL。
 
-:::tip 提示
+:::tip
 使用内部网络 URL 时，请注意：
 - 在激活过程中，你可能需要设置反向代理。
 - 如果你通过扫描 QR 码激活 TermiPass，请确保你的手机和 Terminus 处于同一网络。

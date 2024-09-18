@@ -15,7 +15,7 @@
 - 手机上已安装 [TermiPass](../../../termipass/overview.md#download)
 - 已创建 [Terminus Name](../../../termipass/account/index.md#create-terminus-name)
 
-:::info 信息
+:::info
 了解[为什么需要 Terminus Name](../../../../overview/terminus/terminus-name.md#为什么需要-terminus-name)。
 :::
 
@@ -56,7 +56,7 @@
        curl -sSfL https://github.com/beclab/Terminus/releases/download/${VERSION}/install.sh | bash -
        ```
 
-      :::info 信息
+      :::info
       - 将`${version}`替换为当前每日构建版本号。详见 [Terminus 仓库](https://github.com/beclab/terminus)。
       - 如果安装过程中出现错误，使用以下命令先卸载 Terminus OS：
 
@@ -95,7 +95,7 @@
 
 通常情况下，如果你的计算机和 Terminus 处于同一网络，请使用内部网络 URL。如果不在同一网络，使用公共网络 URL。
 
-:::tip 提示
+:::tip
 使用内部网络 URL 时，请注意：
 - 在激活过程中，你可能需要设置反向代理。
 - 如果你通过扫描 QR 码激活 TermiPass，请确保你的手机和 Terminus 处于同一网络。
