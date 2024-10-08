@@ -227,10 +227,10 @@ Icon that appears in the **Terminus** desktop after installed. The app's icon mu
 - Default: `private`
 - Optional
 
-Specify the auth level of the entrance.
+Specify the authentication level of the entrance.
 - **Public**: Accessible by anyone on the Internet without restrictions.
-- **Private**: Requires authorization from both inside and outside the local network. A Terminus login token is needed to access this entrance.
-- **Internal**: Requires authorization from outside the network, like Private. However, no authorization is needed when visiting within the internal network (LAN/VPN).
+- **Private**: Requires authorization for access from both internal and external networks.
+- **Internal**: Requires authorization for access from external networks. No authentication is required when accessing from within the internal network (via LAN/VPN).
 
 ### invisible
 
@@ -428,7 +428,13 @@ requiredMemory: 256Mi
 
 ### i18n 
 
-To add multi-language support for your app in Terminus Market, create an i18n folder in the TAC root directory, and then make separate directories for each locale. The Market will display the contents of the corresponding TerminusManifest.yaml in the i18n directory based on the user's locale information.
+To add multi-language support for your app in Terminus Market:
+
+1. Create an `i18n` folder in the Terminus Application Container (TAC) root directory.
+2. In the `i18n` folder, create separate subdirectories for each supported locale.
+3. In each locale subdirectory, place a localized version of the `TerminusManifest.yaml` file.
+
+Terminus Market will automatically display the content of the corresponding "TerminusManifest.yaml" file based on users' locale settings.
 :::info Example
 ```
 .
