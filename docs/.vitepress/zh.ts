@@ -83,7 +83,7 @@ const side = {
           ],
         },
         {
-          text: "文件管理器",
+          text: "文件管理",
           link: "/zh/how-to/terminus/files/",
         },
         {
