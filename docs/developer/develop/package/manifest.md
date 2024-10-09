@@ -430,7 +430,7 @@ requiredMemory: 256Mi
 
 To add multi-language support for your app in Terminus Market:
 
-1. Create an `i18n` folder in the Terminus Application Container (TAC) root directory.
+1. Create an `i18n` folder in the Terminus Application Chart (TAC) root directory.
 2. In the `i18n` folder, create separate subdirectories for each supported locale.
 3. In each locale subdirectory, place a localized version of the `TerminusManifest.yaml` file.
 
