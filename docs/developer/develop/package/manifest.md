@@ -69,6 +69,15 @@ options:
 
 :::
 
+:::info NOTE
+Terminus Manifest Version: `0.7.1`
+
+Changelog:
+- Add new `authLevel` vaule `internal`
+- Change `spec`>`language` to `spec`>`locale` and support i18n
+:::
+
+
 ## terminusManifest.type
 
 - Type: `string`
@@ -93,10 +102,6 @@ As **Terminus** evolves, the configuration specification of `TerminusManifest.ya
 - An increase in the **first digit** indicates the introduction of incompatible configuration items. Applications that haven't updated their `TerminusManifest.yaml` will be unable to distribute or install.
 - An increase in the **second digit** signifies changes in the mandatory fields for distribution and installation. However, the **Terminus OS** remains compatible with the application distribution and installation of previous configuration versions. We recommend developers to promptly update and upgrade the application's `TerminusManifest.yaml` file.
 - A change in the **third digit** does not affect the application's distribution and installation.
-
-:::info NOTE
-The current `terminusManifest.version` is `0.7.0`. 
-:::
 
 Developers can use 1-3 digit version numbers to indicate the application's configuration version. Here are some examples of valid versions:
 ```Yaml
@@ -218,11 +223,14 @@ Icon that appears in the **Terminus** desktop after installed. The app's icon mu
 ### authLevel
 
 - Type: `string`
-- Accepted Value: `public`, `private`
+- Accepted Value: `public`, `private`, `internal`
 - Default: `private`
 - Optional
 
-Auth level of current entrance. Private entrance requires activating tailscale to access.
+Specify the authentication level of the entrance.
+- **Public**: Accessible by anyone on the Internet without restrictions.
+- **Private**: Requires authorization for access from both internal and external networks.
+- **Internal**: Requires authorization for access from external networks. No authentication is required when accessing from within the internal network (via LAN/VPN).
 
 ### invisible
 
@@ -389,10 +397,12 @@ spec:
   doc: https://jellyfin.org/docs/
   sourceCode: https://github.com/jellyfin/jellyfin
   submitter: Terminus
-  language:
-  - en
+  locale:
+  - en-US
+  - zh-CN
+  # List languages and regions supported by this app
 
-  requiredMemory: 256Mi
+requiredMemory: 256Mi
   requiredDisk: 128Mi
   requiredCpu: 0.5
   # Specifies the minimum resources required to install and run the application. Once the app is installed, the system will reserve these resources to ensure optimal performance.
@@ -415,6 +425,44 @@ spec:
   - ios: https://apps.apple.com/us/app/jellyfin-mobile/id1480192618
 ```
 :::
+
+### i18n 
+
+To add multi-language support for your app in Terminus Market:
+
+1. Create an `i18n` folder in the Terminus Application Chart (TAC) root directory.
+2. In the `i18n` folder, create separate subdirectories for each supported locale.
+3. In each locale subdirectory, place a localized version of the `TerminusManifest.yaml` file.
+
+Terminus Market will automatically display the content of the corresponding "TerminusManifest.yaml" file based on users' locale settings.
+:::info Example
+```
+.
+├── Chart.yaml
+├── README.md
+├── TerminusManifest.yaml
+├── i18n
+│   ├── en-US
+│   │   └── TerminusManifest.yaml
+│   └── zh-CN
+│       └── TerminusManifest.yaml
+├── owners
+├── templates
+│   └── deployment.yaml
+└── values.yaml
+```
+:::
+Currently, you can add i18n content for the following fields:
+```Yaml
+metadata:
+  description:
+  title:
+spec:
+  fullDescription:
+  upgradeDescription:
+```
+
+
 
 ## middleware
 
