@@ -2,7 +2,7 @@
 outline: [2, 4]
 ---
 
-# 文件
+# 文件管理
 
 ![alt text](/images/how-to/terminus/files.jpg)
 

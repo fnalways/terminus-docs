@@ -83,7 +83,7 @@ const side = {
           ],
         },
         {
-          text: "文件",
+          text: "文件管理",
           link: "/zh/how-to/terminus/files/",
         },
         {
@@ -133,13 +133,13 @@ const side = {
             },
           ],
         },
-        { text: "个人主页", link: "/zh/how-to/terminus/profile" },
+        { text: "Profile", link: "/zh/how-to/terminus/profile" },
         {
-          text: "面板",
+          text: "仪表盘",
           link: "/zh/how-to/terminus/dashboard/",
         },
         {
-          text: "ControlHub",
+          text: "控制面板",
           collapsed: true,
           link: "/zh/how-to/terminus/controlhub/",
           items: [

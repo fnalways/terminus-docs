@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# ControlHub
+# 控制面板
 
 Control Hub 是 Terminus OS 的系统控制台。
 
