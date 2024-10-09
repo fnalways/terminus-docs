@@ -12,7 +12,7 @@ TermiPass 的主要功能之一是管理 Terminus 账户。如果你刚开始使
 
 ![创建 Terminus Name](/images/how-to/termipass/create_an_account.png)
 
-打开 TermiPass 应用，点击 **创建 Terminus Name** 设置你的 Terminus 账户。创建之前，你可以根据需求选择是否绑定可验证凭证（VC）。
+打开 TermiPass 应用，点击 **创建账户** 设置你的 Terminus 账户。创建之前，你可以根据需求选择是否绑定可验证凭证（VC）。
 
 ### 默认模式（不绑定 VC）
 
@@ -71,7 +71,7 @@ TermiPass 的主要功能之一是管理 Terminus 账户。如果你刚开始使
 
 你也可以通过导入已有的 Terminus Name 来设置账户：
 
-1. 在 TermiPass 应用中，点击 **导入 Terminus Name**。
+1. 在 TermiPass 应用中，点击**导入账户**。
 2. 输入 12 个单词的助记词来导入你的 Terminus Name。
 
 ::: tip
@@ -90,7 +90,7 @@ TermiPass 的主要功能之一是管理 Terminus 账户。如果你刚开始使
 
 ![alt text](/images/how-to/termipass/mnemonic_phrase.png)
 
-1. 输入你的 TermiPass 本地密码并点击**导出助记词短语**。TermiPass 将显示 12个单词构成的助记词。
+1. 输入你的 TermiPass 本地密码并点击**导出助记词**。TermiPass 将显示 12个单词构成的助记词。
 2. 请手动记录这些助记词，并将其存放在安全的地方。
 3. 在下一页按正确顺序输入助记词。如果输入正确，即表示助记词备份成功。
 
