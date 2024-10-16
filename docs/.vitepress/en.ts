@@ -3,10 +3,19 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 const side = {
   "/manual/": [
     { text: "Docs home", link: "/manual/docs-home" },
-    { text: "Feature overview", link: "/manual/feature-overview" },
-    { text: "Release notes", link: "/manual/release-notes" },
+    { text: "Feature overview",
+      collapsed: true,
+      link: "/manual/feature-overview",
+       items: [
+       { text: "Why Terminus",
+         link: "/manual/why-terminus"},
+       { text: "Feature comparison",
+        link: "/manual/feature-comparison"},
+       { text: "Release notes", link: "/manual/release-notes" },
+       ],
+     },
     {
-      text: "Get Started",
+      text: "Get started",
       link: "/manual/get-started/",
       collapsed: true,
       items: [
@@ -28,7 +37,7 @@ const side = {
       items: [],
     },
     {
-      text: "Tasks",
+      text: "How-to",
       collapsed: true,
       link: "/manual/tasks/",
       items: [

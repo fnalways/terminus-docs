@@ -1,7 +1,24 @@
-# Docs home
+# Documentation
 
+Terminus is a free, source-available, cloud-native operating system built on Kubernetes. It transforms your edge device into a powerful home cloud, offering cloud-level capabilities while prioritizing ease of use and privacy.
 
-<div style="display: flex; gap: 1rem; margin-top: 3rem; ">
+For a comprehensive overview of the system, visit our [GitHub repository](https://github.com/beclab/terminus).
+
+## New to Terminus?
+
+The getting-started guide covers creating a Terminus Name and setting up Terminus on your local machine. 
+
+<div class="terminus-cta">
+  <a href="./get-started/">
+    <div class="content">
+      <h3>Get Started with Terminus</h3>
+      <p>Navigate your personal cloud</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+</div>
+
+<div style="display: flex; gap: 1rem; margin-top: 2rem; ">
   <a href="./use-cases/" style="flex: 1; padding: 1rem; text-decoration: none;">
     <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
       Explore use cases
@@ -27,3 +44,10 @@
     </p>
   </a>
 </div>
+
+
+## Other resources
+
+- [Develop Terminus apps](../developer/develop)
+- [Join our community on Discord](https://discord.com/invite/BzfqrgQPDK)
+- [Check out Terminus blogs](https://jointerminus.medium.com/)
