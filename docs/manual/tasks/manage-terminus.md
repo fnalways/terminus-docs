@@ -1,3 +1,2 @@
-# Manage Terminus
+# Manage Terminus with TermiPass
 
-Text

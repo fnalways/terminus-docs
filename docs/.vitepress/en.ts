@@ -32,25 +32,29 @@ const side = {
       collapsed: true,
       link: "/manual/tasks/",
       items: [
-        {
-          text: "Manage Terminus with TermiPass",
-          link: "/manual/tasks/manage-terminus",
-        },
+       // {
+       //   text: "Manage Terminus with TermiPass",
+       //   link: "/manual/tasks/manage-terminus",
+       // },
         {
           text: "Personalization",
           collapsed: true,
           items: [
             {
-              text: "Design Terminus Profile",
+              text: "Design Terminus profile",
               link: "/manual/tasks/profile",
             },
             {
-              text: "Set Language and Appearance",
+              text: "Set language and appearance",
               link: "/manual/tasks/language-appearance",
             },
             {
-              text: "Add Integrations",
+              text: "Add integrations",
               link: "/manual/tasks/integrations",
+            },
+            {
+              text: "Use NFT images",
+              link: "/manual/tasks/nft-image",
             },
           ],
         },
