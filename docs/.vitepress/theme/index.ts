@@ -1,13 +1,13 @@
 // docs/.vitepress/theme/index.ts
 import DefaultTheme from "vitepress/theme";
-import './custom.css';
+import "./styles/index.css";
 import { useRoute } from "vitepress";
-import Layout from "./Layout.vue";
+import Layout from "./components/Layout.vue";
 import { injectSpeedInsights } from "@vercel/speed-insights";
 import { inject } from "@vercel/analytics";
-import { App } from 'vue'
-import Tabs from './tabs.vue';
-import LaunchCard from './LaunchCard.vue';
+import { App } from "vue";
+import Tabs from "./components/tabs.vue";
+import LaunchCard from "./components/LaunchCard.vue";
 import { onMounted, watch, nextTick } from "vue";
 import mediumZoom from "medium-zoom";
 
@@ -15,8 +15,8 @@ export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }: { app: App }) {
-   app.component('Tabs', Tabs);
-   app.component('LaunchCard', LaunchCard);
+    app.component("Tabs", Tabs);
+    app.component("LaunchCard", LaunchCard);
   },
   setup() {
     const route = useRoute();

@@ -22,22 +22,22 @@ export default {
     return {
       activeTab: null,
       tabLabels: [],
-      tabSlots: {}
-    }
+      tabSlots: {},
+    };
   },
   mounted() {
     // Map slot names to display labels
-    const slots = Object.keys(this.$slots).filter(slot => slot !== 'default');
+    const slots = Object.keys(this.$slots).filter((slot) => slot !== "default");
     this.tabSlots = slots.reduce((map, slot) => {
-      const label = slot.replace(/-/g, ' '); // Replace hyphens with spaces
+      const label = slot.replace(/-/g, " "); // Replace hyphens with spaces
       map[label] = slot;
       return map;
     }, {});
 
     this.tabLabels = Object.keys(this.tabSlots);
     this.activeTab = this.tabLabels[0];
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -69,7 +69,6 @@ export default {
 }
 
 div[style] {
-  padding: 1rem;
   color: var(--vp-c-text-primary);
 }
 </style>
