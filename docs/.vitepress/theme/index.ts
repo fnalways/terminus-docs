@@ -5,13 +5,19 @@ import { useRoute } from "vitepress";
 import Layout from "./Layout.vue";
 import { injectSpeedInsights } from "@vercel/speed-insights";
 import { inject } from "@vercel/analytics";
-
+import { App } from 'vue'
+import Tabs from './tabs.vue';
+import LaunchCard from './LaunchCard.vue';
 import { onMounted, watch, nextTick } from "vue";
 import mediumZoom from "medium-zoom";
 
 export default {
   extends: DefaultTheme,
   Layout,
+  enhanceApp({ app }: { app: App }) {
+   app.component('Tabs', Tabs);
+   app.component('LaunchCard', LaunchCard);
+  },
   setup() {
     const route = useRoute();
     const initZoom = () => {

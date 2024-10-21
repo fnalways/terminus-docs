@@ -19,14 +19,26 @@ const side = {
       link: "/manual/get-started/",
       collapsed: true,
       items: [
-        { text: "Quick start", link: "/manual/get-started/quick-start" },
+       // { text: "Quick start", link: "/manual/get-started/quick-start" },
         {
           text: "Create a Terminus Name",
           link: "/manual/get-started/create-terminus-name",
         },
         {
-          text: "Deploy Terminus manually",
-          link: "/manual/get-started/deploy-terminus-manually",
+          text: "Install Terminus",
+          link: "/manual/get-started/install-terminus",
+        },
+        {
+          text: "Activate Terminus",
+          link: "/manual/get-started/activate-terminus",
+        },
+        {
+          text: "Log in to Terminus",
+          link: "/manual/get-started/log-in-to-terminus",
+        },
+        {
+          text: "Next steps",
+          link: "/manual/get-started/next-steps",
         },
       ],
     },

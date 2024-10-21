@@ -1,3 +1,0 @@
-# Deploy Terminus manually
-
-Text
