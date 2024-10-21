@@ -24,3 +24,8 @@ If you open an application in Terminus without system authorization or if your a
    After three incorrect attempts, your account will be temporarily locked for 5 minutes for security.
    :::
 Once you've completed both steps, you'll be directed to the Terminus desktop.
+
+## Next step
+
+You're almost set! Before you start using Terminus, it's crucial to make sure your Terminus Name is safely protected:
+- [Back up your mnemonic phrase](./back-up-mnemonics.md)

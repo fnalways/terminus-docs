@@ -37,6 +37,10 @@ const side = {
           link: "/manual/get-started/log-in-to-terminus",
         },
         {
+          text: "Back up mnemonics",
+          link: "/manual/get-started/back-up-mnemonics",
+        },
+        {
           text: "Next steps",
           link: "/manual/get-started/next-steps",
         },
