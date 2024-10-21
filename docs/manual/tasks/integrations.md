@@ -31,7 +31,7 @@ Once you've authorized Terminus Space, you can also verify the integration statu
 ### Step 3. Associate Terminus Name
 Associating your Terminus Name allows you to import a blockchain wallet, which is necessary for using NFT images as unique avatars in your profile.
 
-1. Open the Settings app from the Dock or launch pad.
+1. Open the Settings app from the Dock or Launchpad.
 2. Select **Integration** from the left sidebar.
 3. Click on the Terminus Space card on the right to view details.
 4. Click **Bind**. This will trigger a confirmation prompt in TermiPass app.

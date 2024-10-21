@@ -63,19 +63,19 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Install, Uninstall and Update",
+              text: "Install, uninstall & update",
               link: "/manual/tasks/install-uninstall-update",
             },
             {
-              text: "Access Settings",
+              text: "Customize URLs",
               link: "/manual/tasks/access-settings",
             },
             {
-              text: "Optimize GPU Resource",
+              text: "Manage GPU usage",
               link: "/manual/tasks/gpu-resource",
             },
             {
-              text: "Access via Private Network",
+              text: "Access via VPN",
               link: "/manual/tasks/private-network",
             },
           ],

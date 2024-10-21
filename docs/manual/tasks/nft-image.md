@@ -10,7 +10,7 @@ Before you begin, [connect your Terminus with Terminus Space](./integrations).
 3. Follow the on-screen instructions to set up your MetaMask wallet.
 
 ## Step 2. Import blockchain wallet
-1. In Terminus, open the Settings app from the Dock or launch pad.
+1. In Terminus, open the Settings app from the Dock or Launchpad.
 2. Select **Integration** from the left sidebar, and click on the Terminus Space card on the right.
 3. Click **Import**, and follow the on-screen instructions to connect your MetaMask wallet.
 

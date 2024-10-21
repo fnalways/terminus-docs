@@ -26,6 +26,6 @@ Terminus offers multiple ways to share your personal homepage:
 ## Track your homepage analytics
 Monitor your homepage's performance with built-in analytics. This feature helps you understand your audience and optimize your content for better engagement.
 
-1. Open the Dashboard from the Dock or launch pad in Terminus.
+1. Open the Dashboard from the Dock or Launchpad in Terminus.
 2. Navigate to the **Analytics** page and click on the **Profile** app card.
 3. View detailed visit statistics, including total views, unique visitors, average time spent, peak visit times, and visitor device types.
