@@ -1,34 +1,35 @@
 # Get started
-
-Welcome to Terminus! This guide will help you quickly get Terminus up and running on your preferred platform.
+Welcome to Terminus! This guide will help you quickly set up and start using Terminus on your preferred platform.
 ::: tip
-To try out the cloud version of Terminus instead of self-hosting, refer to the [Terminus Space documentation](../terminus-space/).
+If you prefer to try the cloud version of Terminus instead of self-hosting, refer to the [Terminus Space documentation](../terminus-space/).
 :::
 
-<div style="display: flex; gap: 1rem; margin-top: 3rem; ">
-  <a href="./create-terminus-name/" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      First time using Terminus?
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Learn how to create a Terminus Name, and get your Terminus up and running.
-    </p>
-  </a>
-  <a href="../tasks/" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      Already have a Terminus?
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Directly check out the how-to guide covering every aspect of Terminus in detail.
-    </p>
-  </a>
-  <a href="../tasks/team" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      Team up in Terminus?
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Grasp the fundamental principles and architecture behind Terminus.
-    </p>
+<div class="terminus-cta">
+  <a href="./get-started/">
+    <div class="content">
+      <h3>First time using Terminus?</h3>
+      <p>Learn how to create a Terminus Name, and get your Terminus up and running.</p>
+    </div>
+    <div class="arrow">→</div>
   </a>
 </div>
 
+<div class="terminus-cta">
+  <a href="./get-started/">
+    <div class="content">
+      <h3>Already have a Terminus?</h3>
+      <p>Explore our comprehensive how-to guide covering every aspect of Terminus。</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+</div>
+
+<div class="terminus-cta">
+  <a href="./get-started/">
+    <div class="content">
+      <h3>Team up in Terminus?</h3>
+      <p>Discover how to leverage Terminus for collaborative work and team management.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+</div>

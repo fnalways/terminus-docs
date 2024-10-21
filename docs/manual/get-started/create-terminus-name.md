@@ -10,14 +10,14 @@ A Terminus Name consists of a local name and a domain. For example, in `alice123
 
 To get started with Terminus, you'll need to download TermiPass on your mobile device. TermiPass is available for both Android and iOS platforms:
 
-* For Android users: Install TermiPass from the Google Play Store.
-* For iOS users: Download TermiPass from the App Store.
+* **For Android users**: Install TermiPass from the Google Play Store.
+* **For iOS users**: Download TermiPass from the App Store.
 
 ## Create a Terminus Name
 
 Depending on your personal preference, choose how to create a Terminus Name:
-- Create without VC (default): Recommended for individual users who prefer a quick setup without binding a verification credential (VC).
-- Create with VC: Recommended for individual and organizational users that require enhanced security and more distinctive names through VC binding.
+- **Create without VC (default)**: Recommended for individual users who prefer a quick setup without binding a verification credential (VC).
+- **Create with VC**: Recommended for individual and organizational users that require enhanced security and more distinctive names through VC binding.
 
 <Tabs>
 <template #Create-without-VC-(default)>

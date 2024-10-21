@@ -2,9 +2,9 @@
 
 In today's digital world, we're facing significant challenges that Terminus aims to address:
 
-- Data ownership: Large tech companies often control and profit from user data, compromising individual privacy and digital rights.
-- Technological inequality: Advanced technologies, particularly in AI, have been primarily accessible to large corporations, creating a digital divide.
-- Privacy concerns: The rapid advancement of AI has intensified worries about data privacy and sovereignty, issues that traditional platforms struggle to address adequately.
+- **Data ownership**: Large tech companies often control and profit from user data, compromising individual privacy and digital rights.
+- **Technological inequality**: Advanced technologies, particularly in AI, have been primarily accessible to large corporations, creating a digital divide.
+- **Privacy concerns**: The rapid advancement of AI has intensified worries about data privacy and sovereignty, issues that traditional platforms struggle to address adequately.
 
 Trying to take control of your digital life feels like solving a Rubik's cube blindfolded. It's time for a simpler solution.
 

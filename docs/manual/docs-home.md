@@ -11,37 +11,29 @@ The getting-started guide covers creating a Terminus Name and setting up Terminu
 <div class="terminus-cta">
   <a href="./get-started/">
     <div class="content">
-      <h3>Get Started with Terminus</h3>
+      <h3>Get started with Terminus</h3>
       <p>Navigate your personal cloud</p>
     </div>
     <div class="arrow">→</div>
   </a>
 </div>
 
-<div style="display: flex; gap: 1rem; margin-top: 2rem; ">
-  <a href="./use-cases/" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      Explore use cases
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Discover real-world applications and see how Terminus solves common challenges.
-    </p>
+## Pick your path
+
+Before you roll up your sleeves and get your hands dirty with Terminus, feel free to take a quick tour. Here are some alternative paths to get a feel for what Terminus can do.
+
+<div class="cta-container">
+  <a href="./use-cases/" class="cta-link">
+    <p class="cta-title">Explore use cases</p>
+    <p class="cta-description">Discover real-world applications and see how Terminus solves common challenges.</p>
   </a>
-  <a href="./tasks/" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      In-depth Terminus guide
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Comprehensive documentation covering every aspect of Terminus in detail.
-    </p>
+  <a href="./tasks/" class="cta-link">
+    <p class="cta-title">Read Terminus how-tos</p>
+    <p class="cta-description">Comprehensive documentation covering every aspect of Terminus in detail.</p>
   </a>
-  <a href="./concepts/" style="flex: 1; padding: 1rem; text-decoration: none;">
-    <p style="font-size: 20px; line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 0.75em; color: #ec5b68;">
-      Understand Terminus
-    </p>
-    <p style="margin-bottom: 0; color: #757575;">
-      Grasp the fundamental principles and architecture behind Terminus.
-    </p>
+  <a href="./concepts/" class="cta-link">
+    <p class="cta-title">Understand Terminus</p>
+    <p class="cta-description">Grasp the fundamental principles and architecture behind Terminus.</p>
   </a>
 </div>
 
