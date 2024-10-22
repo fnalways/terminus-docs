@@ -1,3 +1,0 @@
-# Sync across devices
-
-Text

@@ -104,19 +104,20 @@ const side = {
         {
           text: "Manage Files",
           collapsed: true,
+          link: "/manual/tasks/files",
           items: [
             {
-              text: "Add, Edit, and Download",
+              text: "Add, edit & download",
               link: "/manual/tasks/add-edit-download",
             },
             {
-              text: "Sync Across Devices",
-              link: "/manual/tasks/sync-across-devices",
+              text: "Sync and share",
+              link: "/manual/tasks/sync-share",
             },
-            {
-              text: "Sharing and Collaboration",
-              link: "/manual/tasks/sharing-collaboration",
-            },
+            //{
+            //  text: "Sharing and collaboration",
+            //  link: "/manual/tasks/sharing-collaboration",
+           // },
           ],
         },
         {
