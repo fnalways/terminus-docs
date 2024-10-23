@@ -1,3 +1,3 @@
-# strong passwords
+# Generate strong passwords
 
 Text
