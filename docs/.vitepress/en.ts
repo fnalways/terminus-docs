@@ -123,25 +123,26 @@ const side = {
         {
           text: "Secure Sensitive Data",
           collapsed: true,
+          link: "/manual/tasks/vault",
           items: [
             {
-              text: "Vault Items",
+              text: "Vault basics",
               link: "/manual/tasks/vault-items",
             },
             {
-              text: "Share Vault Items",
+              text: "Share vault items",
               link: "/manual/tasks/share-vault-items",
             },
+            //{
+            //  text: "Generate strong passwords",
+            //  link: "/manual/tasks/strong-passwords",
+            //},
             {
-              text: "Suggest Strong Passwords",
-              link: "/manual/tasks/strong-passwords",
-            },
-            {
-              text: "Set Up Two-Factor Verification",
+              text: "Set up 2FA",
               link: "/manual/tasks/two-factor-verification",
             },
             {
-              text: "Use Autofill",
+              text: "Use autofill",
               link: "/manual/tasks/autofill",
             },
           ],
