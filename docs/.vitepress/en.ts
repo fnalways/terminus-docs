@@ -148,21 +148,26 @@ const side = {
           ],
         },
         {
-          text: "Curate Information Hub",
+          text: "Curate information hub",
           collapsed: true,
+          link: "/manual/tasks/wise/",
           items: [
+              {
+                text: "Wise basics",
+                link: "/manual/tasks/wise-basics",
+              },
             {
-              text: "Discover Themed Content",
+              text: "Discover",
               link: "/manual/tasks/recommend",
             },
             {
-              text: "Collect Content from Web",
-              link: "/manual/tasks/collect",
-            },
-            {
-              text: "Subscribe to an RSS Feed",
+              text: "Subscribe",
               link: "/manual/tasks/subscribe",
             },
+            //{
+            //  text: "Subscribe to an RSS feed",
+            //  link: "/manual/tasks/subscribe",
+            //},
           ],
         },
         {
