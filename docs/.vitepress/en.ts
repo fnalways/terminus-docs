@@ -152,39 +152,45 @@ const side = {
           ],
         },
         {
-          text: "Curate Information Hub",
+          text: "Curate information hub",
           collapsed: true,
+          link: "/manual/tasks/wise/",
           items: [
+              {
+                text: "Wise basics",
+                link: "/manual/tasks/wise-basics",
+              },
             {
-              text: "Discover Themed Content",
+              text: "Discover",
               link: "/manual/tasks/recommend",
             },
             {
-              text: "Collect Content from Web",
-              link: "/manual/tasks/collect",
-            },
-            {
-              text: "Subscribe to an RSS Feed",
+              text: "Subscribe",
               link: "/manual/tasks/subscribe",
             },
+            //{
+            //  text: "Subscribe to an RSS feed",
+            //  link: "/manual/tasks/subscribe",
+            //},
           ],
         },
         {
-          text: "Start a Team",
+          text: "Start a team",
+          link: "/manual/tasks/team",
           collapsed: true,
           items: [
             {
-              text: "User Roles and Permissions",
+              text: "User roles",
               link: "/manual/tasks/roles-permissions",
             },
             {
-              text: "Manage Your Team",
+              text: "Manage your team",
               link: "/manual/tasks/manage-team",
             },
-            {
-              text: "Manage Users",
-              link: "/manual/tasks/manage-users",
-            },
+           {
+             text: "Collaborate",
+             link: "/manual/tasks/collaborate",
+           },
           ],
         },
         {
