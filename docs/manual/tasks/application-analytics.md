@@ -1,3 +1,3 @@
-# Application analytics
+# Analyze applications
 
 Text

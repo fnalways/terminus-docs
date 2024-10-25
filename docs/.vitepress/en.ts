@@ -84,7 +84,7 @@ const side = {
           ],
         },
         {
-          text: "Manage Applications",
+          text: "Manage applications",
           collapsed: true,
           items: [
             {
@@ -106,7 +106,7 @@ const side = {
           ],
         },
         {
-          text: "Manage Files",
+          text: "Manage files",
           collapsed: true,
           link: "/manual/tasks/files",
           items: [
@@ -125,7 +125,7 @@ const side = {
           ],
         },
         {
-          text: "Secure Sensitive Data",
+          text: "Secure sensitive data",
           collapsed: true,
           link: "/manual/tasks/vault",
           items: [
@@ -194,29 +194,29 @@ const side = {
           ],
         },
         {
-          text: "Administration & Maintenance",
+          text: "Maintain",
           collapsed: true,
           items: [
             {
-              text: "Monitor Resources Usage",
+              text: "Monitor system and apps",
               link: "/manual/tasks/resources-usage",
             },
+            //{
+            //  text: "Analyze applications",
+            //  link: "/manual/tasks/application-analytics",
+            //},
             {
-              text: "Application Analytics",
-              link: "/manual/tasks/application-analytics",
+              text: "Update Terminus",
+              link: "/manual/tasks/update",
             },
-            {
-              text: "Restart and Update",
-              link: "/manual/tasks/restart-update",
-            },
-            {
-              text: "Debug Cluster Issues",
-              link: "/manual/tasks/debug",
-            },
-            {
-              text: "Configure Application Parameters",
-              link: "/manual/tasks/application-parameters",
-            },
+            //{
+            //  text: "Debug cluster issues",
+            //  link: "/manual/tasks/debug",
+            //},
+            //{
+            //  text: "Configure application parameters",
+            //  link: "/manual/tasks/application-parameters",
+            //},
           ],
         },
       ],

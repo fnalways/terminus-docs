@@ -10,7 +10,7 @@ Make sure you have TermiPass mobile clients or Chrome extension installed on you
 For different download options of TermiPass, visit the [official website](https://www.jointerminus.com/termipass).
 :::
 
-## Enable autofill service in TermiPass
+## Enable autofill service
 <tabs>
 <template #Android>
 
@@ -27,7 +27,7 @@ Due to iOS system restrictions, you have to manually enable autofill for TermiPa
 3. Ensure the Autofill service is on, then activate TermiPass as an autofill provider.
 
 </template>
-<template #TermiPass-browser-extension>
+<template #Chrome-extension>
 
 Autofill is automatically enabled upon logging in with the browser extension.
 </template>
@@ -64,7 +64,7 @@ On iOS, passwords cannot be automatically saved. You can manually add a vault it
    :::
 5. Select the matching vault item to autofill your login details.
 </template>
-<template #TermiPass-browser-extension>
+<template #Chrome-extension>
 
 1. Open a website where you aren't logged in.
 2. Click the TermiPass icon in the text field.

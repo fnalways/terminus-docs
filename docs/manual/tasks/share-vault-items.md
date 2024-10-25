@@ -36,7 +36,7 @@ All administrators and users of a Terminus cluster are automatically included in
 3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Suspend**.
 4. To reactivate a member, select **Unsuspend**.
 
-:::note
+:::info
 Suspended members retain their role but won't receive updates or make changes. Reactivation requires reverification for security.
 :::
 
