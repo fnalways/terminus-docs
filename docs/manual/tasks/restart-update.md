@@ -1,3 +1,0 @@
-# Restart and update
-
-Text
