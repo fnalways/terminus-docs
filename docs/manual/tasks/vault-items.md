@@ -124,7 +124,7 @@ To edit a vault item:
 ### Favorite
 Important items can be marked as favorites for quick access.
 <tabs>
-<template #Web-(Terminus))>
+<template #Terminus>
 
 1. In Vault, click the vault item to open its details window on the right.
 2. Click <i class="material-icons">star_border</i> in the top right corner to mark this item as favorite.

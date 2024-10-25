@@ -80,7 +80,7 @@ const side = {
           ],
         },
         {
-          text: "Manage Applications",
+          text: "Manage applications",
           collapsed: true,
           items: [
             {
@@ -102,7 +102,7 @@ const side = {
           ],
         },
         {
-          text: "Manage Files",
+          text: "Manage files",
           collapsed: true,
           link: "/manual/tasks/files",
           items: [
@@ -121,7 +121,7 @@ const side = {
           ],
         },
         {
-          text: "Secure Sensitive Data",
+          text: "Secure sensitive data",
           collapsed: true,
           link: "/manual/tasks/vault",
           items: [

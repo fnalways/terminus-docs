@@ -104,6 +104,10 @@ Currently, Terminus on Windows has certain limitations including:
 We recommend using it only for development or testing purposes.
 :::
 
+:::info
+Before installation, ensure Windows Defender Firewall is disabled temporarily during the installation process. You can re-enable it after installation is complete. This is required for proper WSL communication and initial Terminus setup.
+:::
+
 1. Make sure your Windows meets the following requirements.
     - CPU: 4 cores or above
     - RAM: 16 or above (available memory)
