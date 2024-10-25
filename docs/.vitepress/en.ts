@@ -171,21 +171,22 @@ const side = {
           ],
         },
         {
-          text: "Start a Team",
+          text: "Start a team",
+          link: "/manual/tasks/team",
           collapsed: true,
           items: [
             {
-              text: "User Roles and Permissions",
+              text: "User roles",
               link: "/manual/tasks/roles-permissions",
             },
             {
-              text: "Manage Your Team",
+              text: "Manage your team",
               link: "/manual/tasks/manage-team",
             },
-            {
-              text: "Manage Users",
-              link: "/manual/tasks/manage-users",
-            },
+           {
+             text: "Collaborate",
+             link: "/manual/tasks/collaborate",
+           },
           ],
         },
         {
