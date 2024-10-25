@@ -282,20 +282,6 @@ Upon completion of the installation, the initial system information, including t
 
 ![alt text](/images/how-to/terminus/one_time_password.png)
 
-### Wizard URL
-
-There are two Wizard URLs as shown the screenshot:
-
-- The upper one is for internal network access.
-- The lower one is for public network access.
-
-Generally speaking, if your computer and Terminus are on the same network, use the internal network URL. If not, use the public network URL.
-
-### Initial Login Password
-
-Please take note of the initial one-time password in the lower red square. You will need it in the Wizard page.
-
 ## Next step
 
-Congratulations on successfully installing Terminus! You've taken a significant step towards digital independence. Pay close attention to the initial system information displayed on your screen, including the Wizard URL and initial login password. These are crucial for the next phase:
 - [Activate Terminus](./activate-terminus.md)
