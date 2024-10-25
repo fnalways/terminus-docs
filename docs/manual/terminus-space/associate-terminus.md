@@ -1,3 +1,0 @@
-# Associate Terminus
-
-Text

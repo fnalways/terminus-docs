@@ -226,16 +226,41 @@ const side = {
       link: "/manual/terminus-space/",
       collapsed: true,
       items: [
-        {
-          text: "Associate Terminus",
-          link: "/manual/terminus-space/associate-terminus",
-        },
-        {
-          text: "Backup and Restore",
-          link: "/manual/terminus-space/backup-restore",
-        },
-        { text: "Billing", link: "/manual/terminus-space/billing" },
-      ],
+          { text: "Manage Accounts", link: "/manual/terminus-space/manage-accounts" },
+          {
+              text: "Host Olares",
+              collapsed: true,
+              items: [
+                  {
+                      text: "Create Olares",
+                      link: "/manual/terminus-space/create-olares"
+                  },
+                  {
+                      text: "Manage Olares",
+                      link: "/manual/terminus-space/manage-olares"
+                  }
+              ]
+          },
+          {
+              text: "Host Domains",
+              collapsed: true,
+              items: [
+                  {
+                      text: "Bind a Domain",
+                      link: "/manual/terminus-space/host-domain"
+                  },
+                  {
+                      text: "Manage a Domain",
+                      link: "/manual/terminus-space/manage-domain"
+                  }
+              ]
+          },
+          {
+              text: "Backup and Restore",
+              link: "/manual/terminus-space/backup-restore"
+          },
+          { text: "Billing", link: "/manual/terminus-space/billing" }
+      ]
     },
     {
       text: "References",

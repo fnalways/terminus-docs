@@ -19,14 +19,18 @@ Depending on your personal preference, choose how to create a Terminus Name:
 - **Create without VC (default)**: Recommended for individual users who prefer a quick setup without binding a verification credential (VC).
 - **Create with VC**: Recommended for individual and organizational users that require enhanced security and more distinctive names through VC binding.
 
+::: tip NOTE
+This section focuses on creating individual Terminus Names. If you want to create a Terminus Name for organizational uses, refer to [Create a Organization Terminus Name](../terminus-space/org-terminus-name.md).
+:::
+
 <Tabs>
 <template #Create-without-VC-(default)>
 
 1. In the Terminus app, tap **Create an account**.
 2. Enter your desired Terminus Name. It must meet the following requirements:
-    * never be registered before
-    * at least 8 characters long
-    * only lowercase letters and numbers
+   * never be registered before
+   * at least 8 characters long
+   * only lowercase letters and numbers
 3. Click **Continue** to finish the creation process.
 
 ![Fast creation](/images/how-to/termipass/individual_terminus_name_fast.png)
@@ -37,11 +41,12 @@ Depending on your personal preference, choose how to create a Terminus Name:
 
 To create a unique, unrestricted individual Terminus Name, you need to bind a VC through your preferred social account in advanced mode. Your Terminus Name will be identical to your social account name.
 
-1. In the TermiPass app, tap **Create an account**.
+1. In the TermiPass app, tap **Create a Terminus Name**.
 2. Tap the button in the top right corner of the Terminus Name creation page.
-3. Tap the VC card to access your Google account.
-4. Log into TermiPass with your Google account and click **Continue**.
-5. Wait for the binding to complete, then click **Continue** to view your Terminus Name information.
+3. Select the **Individual Terminus Name** option.
+4. Tap the VC option (Currently Gmail) to add VC.
+5. Log into your Google account via OAuth in TermiPass and click **Continue**.
+6. Wait for the binding to complete, then click **Continue** to view your Terminus Name information.
 
 ![Advanced mode](/images/how-to/termipass/terminus_name_advanced.png)
 
