@@ -63,6 +63,7 @@ export default {
 
 .card-content h2 {
   border: none;
+  margin-top: 0;
 }
 
 .anchor-link {

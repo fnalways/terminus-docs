@@ -1,4 +1,4 @@
-# Next steps
+# What's next
 
 Congratulations! You're now ready to dive into Terminus's powerful features. You will find it easy to get things done in Terminus. 
 
@@ -10,37 +10,37 @@ Here are some suggested next steps:
     description="Discover the various ways you can leverage Terminus in daily life."
     :links="[
     { text: 'Stable Diffusion', 
-    href: 'placeholder' }, 
-    { text: 'ComfyUI', 
-    href: 'placeholder' }, 
+    href: '../use-cases/stable-diffusion' }, 
+    { text: 'Use ComfyUI in Krita', 
+    href: '../use-cases/comfyui-for-krita' }, 
     { text: 'Open WebUI', 
-    href: 'placeholder' }, 
+    href: '../use-cases/openwebui' }, 
     { text: 'Perplexica', 
-    href: 'placeholder' },
+    href: '../use-cases/perplexica' },
     { text: 'Dify',
-    href: 'placeholder' }]"
+    href: '../use-cases/dify' }]"
     buttonText="Learn more"
     buttonLink="../use-cases/"
   />
     <LaunchCard
-    title="Navigate Terminus apps"
-    description="Familiarize yourself with the pre-installed applications on Terminus."
+    title="Try Terminus apps"
+    description="Familiarize yourself with the system applications on Terminus."
     :links="[
     { text: 'Profile', 
-    href: 'placeholder' }, 
+    href: '../tasks/profile' }, 
     { text: 'Market', 
-    href: 'placeholder' }, 
+    href: '../tasks/install-uninstall-update' }, 
     { text: 'Files', 
-    href: 'placeholder' }, 
+    href: '../tasks/files' }, 
     { text: 'Vault', 
-    href: 'placeholder' },
+    href: '../tasks/vault' },
     { text: 'Wise',
-    href: 'placeholder' }]"
+    href: '../tasks/wise' }]"
     buttonText="Learn more"
     buttonLink="../tasks/"
   />
     <LaunchCard
-    title="Learn Terminus"
+    title="Understand Terminus"
     description="Deepen your understanding of Terminus."
     :links="[
     { text: 'Terminus core components', 

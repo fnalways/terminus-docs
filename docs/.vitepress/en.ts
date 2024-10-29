@@ -40,7 +40,7 @@ const side = {
           link: "/manual/get-started/back-up-mnemonics",
         },
         {
-          text: "Next steps",
+          text: "What's next",
           link: "/manual/get-started/next-steps",
         },
       ],
