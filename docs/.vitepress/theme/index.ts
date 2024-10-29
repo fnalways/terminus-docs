@@ -8,6 +8,7 @@ import { inject } from "@vercel/analytics";
 import { App } from "vue";
 import Tabs from "./components/tabs.vue";
 import LaunchCard from "./components/LaunchCard.vue";
+import FilterableList from "./components/FilterableList.vue";
 import { onMounted, watch, nextTick } from "vue";
 import mediumZoom from "medium-zoom";
 
@@ -17,6 +18,7 @@ export default {
   enhanceApp({ app }: { app: App }) {
     app.component("Tabs", Tabs);
     app.component("LaunchCard", LaunchCard);
+    app.component("FilterableList", FilterableList);
   },
   setup() {
     const route = useRoute();

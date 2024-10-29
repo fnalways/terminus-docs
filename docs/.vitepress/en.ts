@@ -3,23 +3,22 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 const side = {
   "/manual/": [
     { text: "Docs home", link: "/manual/docs-home" },
-    { text: "Feature overview",
+    {
+      text: "Feature overview",
       collapsed: true,
       link: "/manual/feature-overview",
-       items: [
-       { text: "Why Terminus",
-         link: "/manual/why-terminus"},
-       { text: "Feature comparison",
-        link: "/manual/feature-comparison"},
-       { text: "Release notes", link: "/manual/release-notes" },
-       ],
-     },
+      items: [
+        { text: "Why Terminus", link: "/manual/why-terminus" },
+        { text: "Feature comparison", link: "/manual/feature-comparison" },
+        { text: "Release notes", link: "/manual/release-notes" },
+      ],
+    },
     {
       text: "Get started",
       link: "/manual/get-started/",
       collapsed: true,
       items: [
-       // { text: "Quick start", link: "/manual/get-started/quick-start" },
+        // { text: "Quick start", link: "/manual/get-started/quick-start" },
         {
           text: "Create a Terminus Name",
           link: "/manual/get-started/create-terminus-name",
@@ -50,17 +49,46 @@ const side = {
       text: "Use cases",
       collapsed: true,
       link: "/manual/use-cases/",
-      items: [],
+      items: [
+        {
+          text: "Stable Diffusion",
+          link: "/manual/use-cases/stable-diffusion",
+        },
+        {
+          text: "ComfyUI",
+          link: "/manual/use-cases/comfyui",
+        },
+        {
+          text: "Open WebUI",
+          link: "/manual/use-cases/openwebui",
+        },
+        {
+          text: "Perplexica",
+          link: "/manual/use-cases/perplexica",
+        },
+        {
+          text: "Dify",
+          link: "/manual/use-cases/dify",
+        },
+        {
+          text: "Use ComfyUI in Krita",
+          link: "/manual/use-cases/comfyui-for-krita",
+        },
+        {
+          text: "Stream videos",
+          link: "/manual/use-cases/stream-media",
+        },
+      ],
     },
     {
       text: "How-to",
       collapsed: true,
       link: "/manual/tasks/",
       items: [
-       // {
-       //   text: "Manage Terminus with TermiPass",
-       //   link: "/manual/tasks/manage-terminus",
-       // },
+        // {
+        //   text: "Manage Terminus with TermiPass",
+        //   link: "/manual/tasks/manage-terminus",
+        // },
         {
           text: "Personalization",
           collapsed: true,
@@ -121,7 +149,7 @@ const side = {
             //{
             //  text: "Sharing and collaboration",
             //  link: "/manual/tasks/sharing-collaboration",
-           // },
+            // },
           ],
         },
         {
@@ -156,10 +184,10 @@ const side = {
           collapsed: true,
           link: "/manual/tasks/wise/",
           items: [
-              {
-                text: "Wise basics",
-                link: "/manual/tasks/wise-basics",
-              },
+            {
+              text: "Wise basics",
+              link: "/manual/tasks/wise-basics",
+            },
             {
               text: "Discover",
               link: "/manual/tasks/recommend",
@@ -187,10 +215,10 @@ const side = {
               text: "Manage your team",
               link: "/manual/tasks/manage-team",
             },
-           {
-             text: "Collaborate",
-             link: "/manual/tasks/collaborate",
-           },
+            {
+              text: "Collaborate",
+              link: "/manual/tasks/collaborate",
+            },
           ],
         },
         {
@@ -226,41 +254,44 @@ const side = {
       link: "/manual/terminus-space/",
       collapsed: true,
       items: [
-          { text: "Manage Accounts", link: "/manual/terminus-space/manage-accounts" },
-          {
-              text: "Host Olares",
-              collapsed: true,
-              items: [
-                  {
-                      text: "Create Olares",
-                      link: "/manual/terminus-space/create-olares"
-                  },
-                  {
-                      text: "Manage Olares",
-                      link: "/manual/terminus-space/manage-olares"
-                  }
-              ]
-          },
-          {
-              text: "Host Domains",
-              collapsed: true,
-              items: [
-                  {
-                      text: "Bind a Domain",
-                      link: "/manual/terminus-space/host-domain"
-                  },
-                  {
-                      text: "Manage a Domain",
-                      link: "/manual/terminus-space/manage-domain"
-                  }
-              ]
-          },
-          {
-              text: "Backup and Restore",
-              link: "/manual/terminus-space/backup-restore"
-          },
-          { text: "Billing", link: "/manual/terminus-space/billing" }
-      ]
+        {
+          text: "Manage Accounts",
+          link: "/manual/terminus-space/manage-accounts",
+        },
+        {
+          text: "Host Olares",
+          collapsed: true,
+          items: [
+            {
+              text: "Create Olares",
+              link: "/manual/terminus-space/create-olares",
+            },
+            {
+              text: "Manage Olares",
+              link: "/manual/terminus-space/manage-olares",
+            },
+          ],
+        },
+        {
+          text: "Host Domains",
+          collapsed: true,
+          items: [
+            {
+              text: "Bind a Domain",
+              link: "/manual/terminus-space/host-domain",
+            },
+            {
+              text: "Manage a Domain",
+              link: "/manual/terminus-space/manage-domain",
+            },
+          ],
+        },
+        {
+          text: "Backup and Restore",
+          link: "/manual/terminus-space/backup-restore",
+        },
+        { text: "Billing", link: "/manual/terminus-space/billing" },
+      ],
     },
     {
       text: "References",
