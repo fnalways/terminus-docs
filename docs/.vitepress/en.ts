@@ -283,18 +283,8 @@ const side = {
       collapsed: true,
       link: "/manual/concepts/",
       items: [
-        {
-          text: "Overview",
-          collapsed: true,
-          items: [
-            {
-              text: "Core components",
-              link: "/manual/concepts/core-components",
-            },
-            { text: "Protocols", link: "/manual/concepts/protocols" },
-          ],
-        },
-        { text: "Terminus Name", link: "/manual/concepts/terminus-name" },
+        { text: "Architecture", link: "/manual/concepts/architecture",},
+        { text: "Olares ID", link: "/manual/concepts/olares-id" },
         { text: "Account", link: "/manual/concepts/account" },
         { text: "Application", link: "/manual/concepts/application" },
         { text: "Network", link: "/manual/concepts/network" },

@@ -4,6 +4,7 @@ You can access Terminus applications anytime, anywhere, whether you're accessing
 - Allow public access without authentication
 
 ## Customize domain name for application
+
 Terminus provides two methods to optimize application access addresses:
 * Custom Route ID
 * Custom Domain Name

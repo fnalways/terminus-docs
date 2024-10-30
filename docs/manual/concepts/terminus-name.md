@@ -1,3 +1,0 @@
-# Terminus Name
-
-Text
