@@ -12,7 +12,7 @@ An Olares ID is a unique identifier within the Olares ecosystem, serving as your
 
 Olares ID consists of a local name and a domain. For example, in `alice@myterminus.com`, *alice* is the Local Name, and *myterminus.com* is the domain.
 
-## Why do you need  an Olares ID?
+## Why do you need an Olares ID?
 
 Your Terminus Name corresponds to a **unique domain name**, offering several key benefits:
 

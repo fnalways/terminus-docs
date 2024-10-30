@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Host Your Domain
+# Host your domain
 
 Whether you're an organizational user wanting employees to use a company-specific domain for login, or you simply wish to use a domain that you own, Olares Space allows you to set up and bind a custom domain for easy access.
 
@@ -63,7 +63,7 @@ Now that your organization has a verified domain name,  you or other members you
 
 Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Orales](../get-started/activate-olares.md)
 
-## Domain Status and Processing
+## Domain status and processing
 
 After submitting a domain name, several steps are necessary to validate the entered domain.
 

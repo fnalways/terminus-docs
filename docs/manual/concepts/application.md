@@ -6,7 +6,7 @@ outline: [2, 3]
  
 This documents covers essential concepts for managing application identifiers, types, permissions, and Market integrations within Terminus. 
 
-## Application Identifier
+## Application identifier
 
 In Terminus, each application is assigned two identifiers: an application name and an application ID.
 
@@ -57,11 +57,11 @@ Terminus supports multiple users and provides two distinct namespaces for system
 
 - **user-system-{Local Name}**
 
-System applications and user-built applications are generally restricted from direct access by third-party applications. However, if the database cluster and built-in applications offer [Service Provider](../../developer/develop/advanced/provider.md) for certain interfaces, then community applications can access these services by [declaring these access permissions](../../developer/develop/package/manifest.md#sysdata).
-
- However, if built-in applications or database clusters make specific service interfaces available through a Service Provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
-
-In this case, the system provides network proxies for these resources under the namespace of `user-system` and authenticates network request calls from third-party applications.
+  System applications and user-built applications are generally restricted from direct access by third-party applications. However, if the database cluster and built-in applications offer [Service Provider](../../developer/develop/advanced/provider.md) for certain interfaces, then community applications can access these services by [declaring these access permissions](../../developer/develop/package/manifest.md#sysdata).
+  
+   However, if built-in applications or database clusters make specific service interfaces available through a Service Provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
+  
+  In this case, the system provides network proxies for these resources under the namespace of `user-system` and authenticates network request calls from third-party applications.
 
 ### Community application
 
@@ -74,7 +74,7 @@ n8n-alice
 gitlab-client-bob
 ```
 
-### Cluster-Scoped application
+### Cluster-Scoped applications
 
 Cluster-scoped applications are special community applications designed to share resources or services across the entire Olares cluster. They run continuously as service providers, with the following operating rules:
 

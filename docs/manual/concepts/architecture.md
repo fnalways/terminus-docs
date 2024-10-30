@@ -1,4 +1,4 @@
-# Architectural components of Olares
+# Architectural components
 
 Olares provides a next-generation decentralized Internet framework based on a 
 Blockchain-Edge-Client (BEC) architecture and a few protocols.

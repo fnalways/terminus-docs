@@ -1,4 +1,4 @@
-# Olares Space Overview
+# Olares Space overview
 
 Olares Space is the fully managed offering of Olares on public clouds. It provides two categories of services:
 

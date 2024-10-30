@@ -25,7 +25,7 @@ For **self-hosted Olares** users, it’s important to monitor
 and **Storage usage** for backup services. These services may incur charges based on usage.
 :::
 
-## Add Worker Nodes
+## Add worker nodes
 
 For cloud Olares users, you can improve performance by adding **Worker Nodes**. Here’s how:
 
