@@ -10,7 +10,11 @@ This document gets you familiar with Olares ID, why do you need it, and how to c
 
 An Olares ID is a unique identifier within the Olares ecosystem, serving as your digital identity and gateway to various services and features. Each Olares account corresponds to an Olares ID.
 
-Olares ID consists of a local name and a domain. For example, in `alice@myterminus.com`, *alice* is the Local Name, and *myterminus.com* is the domain.
+## Format of Olares ID
+
+An Olares ID consists of two parts: a local name (prefix) and a domain name (suffix). Currently, Olares provides the default domain name `olares.com` for individual users. For example, in `alice@olares.com`, *alice* is the Local Name, and *olares.com* is the domain.
+
+Local names are unique within each domain, ensuring that each Olares ID is unique.
 
 ## Why do you need an Olares ID?
 
