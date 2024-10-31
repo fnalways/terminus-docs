@@ -13,7 +13,7 @@ In the list, navigate to the app you wish to replace (in this case, **desktop-no
 
 ## Vite configuration
 
-If your frontend project uses **Vite**, you need to add an **HMR** configuration. In development mode, **Vite** initiates a **WebSocket** to receive code reload notifications from the server. The default **WebSocket** port matches the server's startup port. However, if the development app uses an **Nginx proxy** it will operate on the default port 443. Therefore some modifications are required.
+If your frontend project uses **Vite**, you need to add an **HMR** configuration. In development mode, **Vite** initiates a **WebSocket** to receive code reload notifications from the server. The default **WebSocket** port matches the server's startup port. However, if the development app uses an **Nginx proxy** it will operate on the default port 443. Therefore, some modifications are required.
 
 If you are using **Quasar** + **Vite**, add the following in the `quasar.config.js`:
 

@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Subscribe and manage feeds
 Wise offers flexible subscription options to help you follow your favorite content sources, including articles, blogs, podcasts, and video channels. This guide explains how to add and manage your subscriptions.
 

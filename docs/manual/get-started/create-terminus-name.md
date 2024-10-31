@@ -62,5 +62,5 @@ Keep your newly created Terminus Name and TermiPass app handy – you'll need th
 To install and activate Terminus as an administrator:
 - [Install Terminus](./install-terminus.md)
 
-If your team already has Terminus and you're joining as a member:
+If your team already has Terminus, and you're joining as a member:
 - [Activate Terminus](./activate-terminus.md)

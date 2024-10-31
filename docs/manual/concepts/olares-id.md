@@ -20,16 +20,16 @@ Local names are unique within each domain, ensuring that each Olares ID is uniqu
 Within Terminus, there are three types of Domains:
 
 ### Individual
-Intended for individual use, similar to email addresses with suffixes like gmail.com.
+Intended for individual use, similar to email addresses with suffixes like `gmail.com`.
 
-Currently, Terminus uses myterminus.com as the suffix for Individual Domains.
+Currently, Terminus uses `myterminus.com` as the suffix for Individual Domains.
 
 ### Organization
 Intended for organizational use, like corporate emails.
 
 When users join an organization, they can apply for a Terminus Name under the organization. When they leave, the administrator can reclaim the Terminus Name.
 
-Organization administrators can apply for the organization's Domain through a Web2 domain, with the specific process detailed in: Create Organization Domain.
+Organization administrators can apply for the organization's Domain through a Web2 domain.
 
 Once the Domain is registered, manage users under the organization.
 

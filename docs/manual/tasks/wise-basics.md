@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Wise basics
 
 Wise helps you curate and organize your reading materials with flexible options for collecting, reading, and managing content. This page covers the essential tasks to get you started with Wise.

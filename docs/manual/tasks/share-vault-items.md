@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Share vault items
 A shared vault is an effective method for organizing, managing, and securely sharing data among users within the same Terminus cluster. Whether you're managing family accounts or enterprise-level data, Team Vault provides the perfect balance of security and collaboration.
 

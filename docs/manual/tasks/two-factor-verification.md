@@ -10,7 +10,7 @@ This guide explains how to set up and manage two-factor authentication (2FA) cod
 If the service provides recovery codes, store them securely. They are crucial to account recovery if you lose access to Vault.
 :::
 
-## Create a authenticator in Vault
+## Create an authenticator in Vault
 :::tip
 Visit the [official page](https://www.jointerminus.com/termipass) for download options.
 :::

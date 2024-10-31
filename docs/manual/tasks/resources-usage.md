@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Monitor system and application status
 The Dashboard app in Terminus works similarly to Windows Explorer, providing a centralized view of your system's status without requiring technical expertise. From the main dashboard, you can view resource usage patterns and detailed metrics.
 :::info

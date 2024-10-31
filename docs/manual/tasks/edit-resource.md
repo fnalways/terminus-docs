@@ -29,7 +29,7 @@ Many applications in Terminus OS do not support multi-replica mode. Increasing t
 :::
 
 
-### View container status
+## View container status
 The Pods page provides a comprehensive view of all Pods in your Terminus environment, allowing you to manage them at the smallest granularity offered by Kubernetes.
 Click on a Pod in the list takes you to the Pod details page, where you can:
 - View container logs.

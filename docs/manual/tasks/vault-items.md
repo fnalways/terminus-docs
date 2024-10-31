@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Vault basics
 This guide will walk you through the fundamentals of using Vault, from setting up your first vault to organizing your sensitive data efficiently.
 

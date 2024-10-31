@@ -1,15 +1,19 @@
+---
+outline: [2, 3]
+---
+
 # Install, uninstall and update
 This guide helps users understand how to install, update, and uninstall applications through the Market. We'll also cover how to install custom applications.
 
 ## Before you start
 Before you start, it is recommended to familiarize yourself with a few concepts for Terminus applications:
 
-- System application
-- Community application
-- Cluster-scoped application
-- Authorized application
-- Dependant application
-- Entrance
+- [System application](../concepts/application.md#system-applications)
+- [Community application](../concepts/application.md#community-applications)
+- [Cluster-scoped application](../concepts/application.md#cluster-scoped-applications)
+- [Authorized application](../concepts/application.md#authorized-applications)
+- [Dependencies](../concepts/application.md#dependencies)
+- [Entrance](../concepts/network.md#entrance)
 
 ## Find applications
 The Terminus Market offers various ways to discover and browse applications:

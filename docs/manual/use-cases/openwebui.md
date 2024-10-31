@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Open WebUI
 
 Open WebUI provides an intuitive interface for managing Large Language Models (LLMs) that supports both Ollama and OpenAI-compatible APIs. This page helps you set up and configure Open WebUI in Terminus for:
@@ -38,7 +42,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 1. Install Faster Whisper from Market based on your role:
    - Admin: Install both Faster Whisper For Cluster and Faster Whisper.
    - Team members: Ensure that Faster Whisper For Cluster is already installed by Terminus admin, and install Faster Whisper only.
-2. Open Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
+2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select **OpenAI** as the speech-to-text engine, with the following configurations:
    - API Base URL: `http://whisper.whisper-{admin's Terminus Name}:8000/v1`. For example: `http://whisper.whisper-alice123:8000/v1`.
    - API key: enter any character.

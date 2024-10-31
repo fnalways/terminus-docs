@@ -177,6 +177,6 @@ cd install_wizard && tar zxvf ../install-wizard-${VERSION}.tar.gz
 bash publicRestoreInstaller.sh
 ```
 
-If you backup your data to the **Terminus Space**, you can directly download the restoration script from **Terminus Space**.
+If you back up your data to the **Terminus Space**, you can directly download the restoration script from **Terminus Space**.
 
 ![restore](images/restore.jpg)

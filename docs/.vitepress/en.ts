@@ -292,7 +292,7 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Bind a domain",
+              text: "Set up a custom domain",
               link: "/manual/terminus-space/host-domain",
             },
             {
@@ -424,10 +424,6 @@ const side = {
           text: "Advanced",
           collapsed: true,
           items: [
-            {
-              text: "CLI",
-              link: "/developer/develop/advanced/cli",
-            },
             {
               text: "Terminus Info",
               link: "/developer/develop/advanced/terminus-info",

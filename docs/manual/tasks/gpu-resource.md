@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Manage GPU usage
 :::info
 Only Terminus admin can change GPU usage mode. This ensures optimal resource management across the system and prevents conflicts between users' resource needs.

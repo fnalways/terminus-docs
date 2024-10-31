@@ -1,7 +1,17 @@
+---
+outline: [2, 3]
+---
+
 # Customize application URLs
 You can access Terminus applications anytime, anywhere, whether you're accessing from home or remotely. This guide will help you:
 - Personalize domain name for your applications
 - Allow public access without authentication
+
+## Before you start
+Before you start, it is recommended to familiarize yourself with a few concepts for Terminus applications:
+
+- [Endpoints](../concepts/network.md#endpoints)
+- [Route ID](../concepts/network.md#route-id)
 
 ## Customize domain name for application
 
@@ -14,8 +24,7 @@ Route ID is a crucial component in accessing your Terminus applications. It form
 
 `https://{routeID}.{TerminusDomainName}`
 
-For convenience, Terminus uses easy-to-remember Route IDs for pre-installed system applications. For instance, you might access the desktop application using "desktop" as the RouteID, or the marketplace using "market".
-
+For convenience, Terminus uses easy-to-remember route IDs for pre-installed system applications.
 For community applications, you can quickly obtain a simple and memorable access address by changing the route ID. To use Jellyfin as an example:
 
 1. Open the Settings app from the Dock or Launchpad.

@@ -1,17 +1,21 @@
+---
+outline: [2, 3]
+---
+
 # Access Terminus applications on other devices via VPN
 Terminus provides built-in VPN services using TailScale and HeadScale, enabling secure remote access to your applications from various devices. This feature allows you to interact with your Terminus applications as if they were running directly on your device, even when you're away from your local network.
 
 ## Understand connection status
 TermiPass displays the connection status between your account and Terminus, helping you understand or diagnose your current network connection.
 
-| Status       | Description |
-|--------------|-------------|
-| Internet     | Connected to Terminus via the public internet |
-| Intranet     | Connected to Terminus via the local network |
-| FRP          | Connected to Terminus via FRP |
-| DERP         | Connected to Terminus via VPN using DERP relay |
+| Status       | Description                                        |
+|--------------|----------------------------------------------------|
+| Internet     | Connected to Terminus via the public internet      |
+| Intranet     | Connected to Terminus via the local network        |
+| FRP          | Connected to Terminus via FRP                      |
+| DERP         | Connected to Terminus via VPN using DERP relay     |
 | P2P          | Connected to Terminus via VPN using P2P connection |
-| Offline mode | Currently offline, unable to connect to Terminus |
+| Offline mode | Currently offline, unable to connect to Terminus   |
 
 :::info
 When accessing private entrances from an external environment through VPN, if the status shows "DERP", it indicates that the VPN cannot directly connect to Terminus via P2P and must use Tailscale's relay servers. This status may affect connection quality. If you consistently encounter this situation, please contact Terminus support for assistance.

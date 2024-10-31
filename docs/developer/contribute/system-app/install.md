@@ -22,7 +22,7 @@ There is no need to bind in this case.
     apt install gh
     ```
 
-- Log in to Github
+- Log in to GitHub
 
     ```shell
     gh auth login

@@ -33,9 +33,7 @@ bash uninstall_macos.sh
 </template>
 </tabs>
 
-## Network management
-
-### Update IP address
+## Update IP address
 After changing networks, run this command to update cluster DNS resolution (Linux/WSL only):
 
 ```sh
@@ -57,7 +55,7 @@ cd install_wizard && tar zxvf ../install-wizard-${VERSION}.tar.gz
 bash ./publicAddnode.sh
 ```
 
-## Add a local drive locally
+## Add a hard drive locally
 Prerequisites:
 * Connect and insert the hard drive, format it with a filesystem. (XFS is recommended.)
 * Create a new empty directory that follows your existing data directory structure. For example, if your current directory is `/terminus/data/minio/vol1`, create `/terminus/data/minio/vol2`.

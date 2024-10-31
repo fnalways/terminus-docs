@@ -23,13 +23,13 @@ The roles and permissions described here are specific to file sharing and Librar
 
 | Operation                  | Owner | Member |
 |----------------------------|-------|--------|
-| Create Library           | ✅     | ✅      |
+| Create Library             | ✅     | ✅      |
 | Manage Library permissions | ✅     | ❌      |
 | Invite other members       | ✅     | ❌      |
 | Share and rename Library   | ✅     | ❌      |
 | Remove members             | ✅     | ❌      |
 | Delete Library             | ✅     | ❌      |
-| Exit Library             | ❌     | ✅      |
+| Exit Library               | ❌     | ✅      |
 
 Permission levels:
 - **Read-only**: Users can view Library contents but cannot modify them.

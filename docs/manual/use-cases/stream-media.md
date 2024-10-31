@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Stream your media library from anywhere with Terminus
 Want to enjoy your movies and TV shows from anywhere? Here's how to access your personal media library remotely through Terminus.
 
@@ -42,7 +46,7 @@ For advanced media management features like subtitle support and multi-channel a
 3. Launch Jellyfin and complete first-time setup:
    - Set administrator password.
    - Configure media library directories.
-6. Wait for Jellyfin to scan and index your media library. It will automatically fetch metadata including:
+4. Wait for Jellyfin to scan and index your media library. It will automatically fetch metadata including:
    - Movie posters 
    - Descriptions 
    - Cast information

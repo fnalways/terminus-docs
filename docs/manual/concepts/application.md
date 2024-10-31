@@ -20,11 +20,11 @@ The application ID is derived as the first eight characters of the MD5 hash of t
 
 ## Application types
 
-There are multiple types of Applications in Terminus. You can distinguish a specific application type according to the `namespace` shown in Control Hub.
+There are multiple types of applications in Terminus. You can distinguish a specific application type according to the namespace shown in Control Hub.
 
 ### System applications
 
-System applications encompass Kubernetes, Kubesphere, Terminus components, and essential hardware drivers. The system application `namespaces` include:
+System applications encompass Kubernetes, Kubesphere, Terminus components, and essential hardware drivers. The system-level namespaces include:
 
 ```
 os-system
@@ -59,11 +59,11 @@ Terminus supports multiple users and provides two distinct namespaces for system
 
   System applications and user-built applications are generally restricted from direct access by third-party applications. However, if the database cluster and built-in applications offer [Service Provider](../../developer/develop/advanced/provider.md) for certain interfaces, then community applications can access these services by [declaring these access permissions](../../developer/develop/package/manifest.md#sysdata).
   
-   However, if built-in applications or database clusters make specific service interfaces available through a Service Provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
+   However, if built-in applications or database clusters make specific service interfaces available through a service provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
   
   In this case, the system provides network proxies for these resources under the namespace of `user-system` and authenticates network request calls from third-party applications.
 
-### Community application
+### Community applications
 
 Community applications are applications created and maintained by third-party developers. They encompass a wide range of purposes, from productivity tools and entertainment applications to data analysis utilities.
 
@@ -74,14 +74,14 @@ n8n-alice
 gitlab-client-bob
 ```
 
-### Cluster-Scoped applications
+### Cluster-scoped applications
 
 Cluster-scoped applications are special community applications designed to share resources or services across the entire Olares cluster. They run continuously as service providers, with the following operating rules:
 
 - Only one instance is permitted per cluster.
 - Only administrators can install and manage cluster-scoped applications.
 - They are identifiable by their "for Cluster" suffix and a "Cluster-scoped" label in the Olares app market. 
-- Users need to access a `Cluster Scoped Application` through its `Authorized Applications`.For example, "ComfyUI for Cluster" provides cluster-wide services that users access through its authorized client application "ComfyUI".
+- Users need to access a cluster-scoped application through its authorized applications. For example, "ComfyUI for Cluster" provides cluster-wide services that users access through its authorized client application "ComfyUI".
 
 ### Authorized applications
 Authorized applications serve as client-side interfaces for cluster-scoped applications. Both administrators and regular members can install these applications.

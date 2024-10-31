@@ -1,5 +1,5 @@
 
-# Develop System Applciation for Terminus
+# Develop System Application for Terminus
 
 ::: tip Prerequisites Knowledge
 - Debugging third-party applications with **DevBox**

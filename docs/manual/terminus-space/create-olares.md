@@ -4,21 +4,21 @@ outline: [2, 3]
 
 # Create a cloud-based Olares
 
-Cloud-based Olares offer a convenient deployment option, enabling you to set up a Olares environment without managing hardware directly.
+Cloud-based Olares offer a convenient deployment option, enabling you to set up an Olares environment without managing hardware directly.
 This section provides a step-by-step guide to creating and managing your cloud-based **Olares**. 
 
 ::: tip NOTE
 - The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Terminus, contact us for an invitation.
-- If you are looking for information about setting up a Self-Hosted Terminus, please refer to the [Getting Started Guide](../get-started/index.md).
+- If you are looking for information about setting up a self-hosted Terminus, refer to the [Getting Started Guide](../get-started/index.md).
 :::
 
 ## Prerequisites
 
-Ensure you get an Orales ID to log in to Orales Space and activate the Orales instance.
+Ensure you get an Olares ID to log in to Olares Space and activate the Olares instance.
 
 ## Create an Olares
 
-1. Log in to [Orales Space](https://space.jointerminus.com/) by scanning the QR code using **LarePass**.
+1. Log in to [Olares Space](https://space.jointerminus.com/) by scanning the QR code using LarePass.
 2. Navigate to the **Cluster** page and select the second option to start creating.
 
     ![Basic Configuration](/images/how-to/space/basic_configuration.jpg)
@@ -28,59 +28,59 @@ Ensure you get an Orales ID to log in to Orales Space and activate the Orales in
    - **Olares Version & Kubernetes Setup**: Choose the appropriate version of Terminus and the Kubernetes/K3S solution to be installed.
 
     :::tip
-    If you intend to host large language models (LLMs), select the **Alibaba Cloud Hong Kong** region. Currently it is the only region that offers instances with shared GPU services.
+    If you intend to host large language models (LLMs), select the **Alibaba Cloud Hong Kong** region. Currently, it is the only region that offers instances with shared GPU services.
     :::
 
-4. Review our fees for storage and traffic. 
+4. Review the fees for storage and traffic. 
 
     ![Storage and Network Fees](/images/how-to/space/storage_and_network.jpg)
 
     ::: tip NOTE
-    Each instance comes with a set amount of free storage and bandwidth. If your usage exceeds these quotas, additional fees will apply based on your cloud provider’s pricing. 
+    Each instance comes with a set amount of free storage and bandwidth. If your usage exceeds these quotas, additional fees will apply based on your cloud provider's pricing. 
     :::
 5. Review your order details, including instance configuration, selected options, and fees.
 6. Complete the payment to initiate the installation process.
 
 ## Monitor installation
 
-The creation and installation of your cloud-based Terminus typically take around **10 minutes**. During this time, you can monitor the progress and logs in real-time.
+The creation and installation of your cloud-based Terminus typically take around 10 minutes. During this time, you can monitor the progress and logs in real-time.
 
 ### System statuses
 
 The installation follows several key stages, represented by different statuses:
 
-| Status             | Description                                                   |
-|--------------------|---------------------------------------------------------------|
-| **Unpaid**         | Instance created, awaiting payment. Can be canceled.           |
-| **Fetching**       | Payment confirmed, waiting to create resources.                |
-| **Queuing**        | Resource creation request has been submitted.                  |
-| **Pending**        | Resources created, waiting for OS installation.                |
-| **Installing**     | OS installation in progress.                                   |
-| **Restoring**      | OS restoration in progress (if using a backup).                |
-| **Restore_error**  | Restoration failed, possibly due to an incorrect snapshot password. |
-| **Restarting**     | OS is restarting.                                              |
-| **Stopping**       | Shutting down the OS machine.                                  |
-| **Starting**       | Starting the OS machine.                                       |
-| **Running**        | OS is running normally. Can be restarted, stopped, or destroyed.|
-| **Stopped**        | OS machine is stopped. Can be restarted or destroyed.          |
-| **Errored**        | An error occurred during resource creation or installation.    |
-| **Destroying**     | Instance is being destroyed.                                   |
-| **Destroyed**      | Instance has been destroyed.                                   |
-| **Canceled**       | Instance canceled, either actively or due to unpaid bills.     |
-| **Pending Activation** | Waiting for activation. OS will run once activated.         |
+| Status                 | Description                                                                   |
+|------------------------|-------------------------------------------------------------------------------|
+| **Unpaid**             | 	Instance created but pending payment. Can be canceled.                       |
+| **Fetching**           | 	Payment confirmed. System is creating resources.                             |
+| **Queuing**            | Resource creation request has been submitted.                                 |
+| **Pending**            | Resources created. Waiting for OS installation.                               |
+| **Installing**         | OS installation is in progress.                                               |
+| **Restoring**          | OS restoration is in progress from backup.                                    |
+| **Restore_error**      | Restoration failed because of incorrect snapshot password.                    |
+| **Restarting**         | 	System is restarting.                                                        |
+| **Stopping**           | 	System is shutting down.                                                     |
+| **Starting**           | System is starting up.                                                        |
+| **Running**            | System is operating normally. You can restart, stop, or destroy the instance. |
+| **Stopped**            | System is not running. You can restart or destroy the instance.               |
+| **Errored**            | System encountered an error during resource creation or installation.         |
+| **Destroying**         | Instance is being destroyed.                                                  |
+| **Destroyed**          | Instance has been destroyed.                                                  |
+| **Canceled**           | 	Instance is terminated due to cancellation or payment issues.                |
+| **Pending Activation** | 	System is waiting for activation. Will start after activations.              |
 
 ### Real-time logs
 
-Click on **Log** to view detailed logs and monitor the installation process in real time.
+Click **Log** to view detailed logs and monitor the installation process in real time.
 
-## Activate Orales  
+## Activate Olares  
 
-When the installation enters the **Pending Activation** state, activate Orales as described below:
+When the installation enters the **Pending Activation** state, activate Olares:
 
-1. Click the **Activation** button. A pop-up window will display the **Orales ID**, **one-time password**, and a **Wizard URL**.
+1. Click **Activation**. A pop-up window will display Olares ID, one-time password, and a wizard URL.
 
     ![One Time Password](/images/how-to/space/one_time_password.jpg)
 
 2. Access the wizard URL in your browser, and use the one-time password to log into Olares for the first time. 
-3. Change the Orales password via **TermiPass** when prompted. 
+3. Change the Olares password via TermiPass when prompted. 
 4. Follow the on-screen instructions to finish the rest of activation process. 

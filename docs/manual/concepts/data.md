@@ -1,21 +1,21 @@
 ---
-outline: [2, 4]
+outline: [2, 3]
 ---
 
 # Data
 
 User data is usually stored in file systems and databases. Of the two, databases are built based on file systems. Here are our design philosophies with them:
 
-For file systems:
+**For file systems**:
 
 - Olares is designed for multi-node clusters. Therefore, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
 
-For databases:
+**For databases**:
 
 - For common databases, developers only need to modify the configuration to complete the integration.
 - Different users and applications can share physical database instances to save resource overhead.
 
-For both:
+**For both**:
 
 - Data between different users and different applications are isolated from each other.
 - Scalable and highly available.
@@ -29,11 +29,11 @@ Olares OS uses [JuiceFS](https://juicefs.com) as the underlying multi-physical n
 
 As for the back-end object storage solution of JuiceFS, we also provide two solutions: S3 and MinIO.
 
-By default, Olares OS uses MinIO as object storage when installed locally. Initial installation starts with [Single Node Single Driver (SNSD)](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html) mode. At the same time, we provide the Scale tool in the installation package, which allows you to freely [expand your MinIO storage](../../developer/develop/advanced/cli.md#Add-a-new-hard-disk-locally).
+By default, Olares OS uses MinIO as object storage when installed locally. Initial installation starts with [Single Node Single Driver (SNSD)](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html) mode. At the same time, we provide the Scale tool in the installation package, which allows you to freely [expand your MinIO storage](../reference/cli-operations#add-a-hard-drive-locally).
 
-### Local Disk
+### Local disk
 
-In some application systems, intensive file system read and write operations may occur. These intensive file system read and write operations are often fragmented random reads and writes. In various existing distributed storage cluster solutions, for such intensive fragmented random read and write operations, it is very likely that I/O or CPU consumption will be too high (usually due to high I/O Wait). Condition.
+In some application systems, intensive file system read and write operations may occur. These intensive file system read and write operations are often fragmented random reads and writes. In various existing distributed storage cluster solutions, for such intensive fragmented random read and write operations, it is very likely that I/O or CPU consumption will be too high (usually due to high I/O Wait).
 
 The best practice provided by Olares is to make full use of the node's local hard disk as a file buffer. Although the local hard disk of the node has limited capacity, it has high-speed read and write performance because it basically uses SSD hard disk. If the application reads and writes files, it will be buffered on the local hard disk of the node, and then written asynchronously to the distributed file system in batches. This can turn most of the fragmented random reads and writes into a few sequential reads and writes. This greatly improves system I/O efficiency.
 
@@ -45,7 +45,7 @@ For applications, there are 3 different storage paths to deal with different usa
 
 The `UserData` storage path stores files that change infrequently but require cross-application access, such as documents, photos, and videos.
 
-Applications can obtain access permissions to a directory under the Home directory by applying for [UserData](../../developer/develop/package/manifest.md#userdata) permissions in `OlaresManifest.yaml`. For example, you can request permissions to the Picture directory for [PhotoPrism](https://market.olares.com/app/photoprism), and permissions to the Downloads directory for [qBittorrent](https://market.olares.com/app/qbittorrent) and [Jefflyn](https://market.olares.com/app/jellyfins).
+Applications can obtain access permissions to a directory under the Home directory by applying for [UserData](../../developer/develop/package/manifest.md#userdata) permissions in `OlaresManifest.yaml`. For example, you can request permissions to the Picture directory for PhotoPrism, and permissions to the Downloads directory for qBittorrent and Jellyfin.
 
 ### AppData
 
@@ -61,7 +61,7 @@ Applications can apply for [AppCache](../../developer/develop/package/manifest.m
 
 ## [PostgreSQL](../../developer/develop/advanced/database.md#rds)
 
-As one of the most popular open-source relational databases, PostgreSQL has excellent performance and rich plug-in functions. Olares OS deploys PostgreSQL on the system along with the popular Citus distributed database plug-in. At the same time, its cluster is managed through the PG Operator in the TAPR component. Users can easily expand the number of PostgreSQL nodes. And can back up and restore data along with the entire Olares system.
+As one of the most popular open-source relational databases, PostgreSQL has excellent performance and rich plug-in functions. Olares OS deploys PostgreSQL on the system along with the popular Citus distributed database plug-in. At the same time, its cluster is managed through the PG Operator in the TAPR component. Users can easily expand the number of PostgreSQL nodes, and back up or restore data along with the entire Olares system.
 
 If the PostgreSQL database application declared by the developer in the application is Distributed, then Olares will build its database on Citus, allowing the application to fully utilize the capabilities of the distributed PG database.
 
@@ -71,7 +71,7 @@ If the PostgreSQL database application declared by the developer in the applicat
 
 MongoDB, as a representative of NoSQL, has a wide range of application scenarios in the Internet of Things field. By deploying [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator), developers have a cloud-native version of MongoDB cluster in Olares.
 
-Like PostgreSQL, Olares also manages MongoDB backup and restore in a unified manner. System users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
+Like PostgreSQL, Olares also manages MongoDB backup and restore in a unified manner. Users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
 
 - Version: `6.0.4`
 
@@ -86,7 +86,7 @@ In addition, since Redis Cluster itself lacks a data isolation mechanism, Olares
 - Version: `6.2.13`
 
 :::tip
-The system uses the Redis Cluster version, which is different from the stand-alone version of Redis. Developers need to carefully understand the official Redis documentation.
+The system uses the Redis Cluster version, which is different from the stand-alone version of Redis. It is recommended to read the official Redis documentation for reference.
 :::
 
 

@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Design Your Terminus profile
 
 You can create a distinctive personal homepage that showcases your digital identity.

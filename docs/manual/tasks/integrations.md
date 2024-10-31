@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Add and manage integrations
 
 Terminus allows you to integrate Terminus Space to enhance functionality and personalize your experience. The integration helps you synchronize data, manage devices, and customize your profile.
