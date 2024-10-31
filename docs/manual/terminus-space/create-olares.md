@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Create a Cloud-based Olares
+# Create a cloud-based Olares
 
 Cloud-based Olares offer a convenient deployment option, enabling you to set up a Olares environment without managing hardware directly.
 This section provides a step-by-step guide to creating and managing your cloud-based **Olares**. 

@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Manage Your Domain
+# Manage your domain
 
 You must [create a domain](host-domain.md) before managing it. Once your domain is set up, you can **configure email invitation rules for organization members** and invite members to bind their own organization **Olares ID** via email.
 
