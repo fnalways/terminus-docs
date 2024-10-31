@@ -313,7 +313,7 @@ const side = {
       // link: "/manual/reference/",
       collapsed: true,
       items: [
-        { text: "CLI operations", link: "/manual/reference/cli-syntax" },
+        { text: "CLI operations", link: "/manual/reference/cli-operations" },
         //{
         //  text: "Dashboard Metrics",
        //   link: "/manual/reference/dashboard-metrics",
@@ -348,21 +348,21 @@ const side = {
         { text: "Secrets", link: "/manual/concepts/secrets" },
       ],
     },
-    {
-      text: "Help and Support",
-      collapsed: true,
-      items: [
+    //{
+    //  text: "Help and Support",
+    //  collapsed: true,
+   //   items: [
         { text: "FAQs", link: "/manual/help/faqs" },
-        {
-          text: "Troubleshooting Guide",
-          link: "/manual/help/troubleshooting-guide",
-        },
-        {
-          text: "Request Technical Support",
-          link: "/manual/help/request-technical-support",
-        },
-      ],
-    },
+   //     {
+   //       text: "Troubleshooting Guide",
+   //       link: "/manual/help/troubleshooting-guide",
+   //     },
+   //     {
+   //       text: "Request Technical Support",
+   //       link: "/manual/help/request-technical-support",
+   //     },
+   //   ],
+   // },
     { text: "Glossary", link: "/manual/glossary" },
   ],
 
