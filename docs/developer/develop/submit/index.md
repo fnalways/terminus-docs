@@ -19,7 +19,7 @@ outline: [2, 3]
 
 Before submitting an application, please ensure that it has been thoroughly tested on your Terminus OS.
 - Use DevBox's dev-container to test and debug your applciation in a real online environment. [Learn more about DevBox](../tutorial/devbox.md).
-- Use the [custom installation](../../../how-to/terminus/market/index.md#custom-application) in the Market app for user testing.
+- Use the [custom installation](../../../manual/tasks/install-uninstall-update#install-custom-applications) in the Market app for user testing.
 
 ### 2. Submit an application
 The submission of the application needs to be completed through a **Pull Request**. Here's how:

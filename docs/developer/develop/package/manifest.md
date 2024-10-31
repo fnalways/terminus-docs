@@ -247,7 +247,7 @@ When `invisible` is `true`, the entrance will not be displayed on the **Terminus
 - Default: `default`
 - Optional
 
-Explicity defines how to open this entrance in [Desktop](../../../how-to/terminus/desktop.md)
+Explicity defines how to open this entrance in Desktop.
 
 The `iframe` creates a new window within the desktop window through an iframe. The `window` opens a new tab in the browser. The `default` follows the system setting, which is `iframe` by default.
 

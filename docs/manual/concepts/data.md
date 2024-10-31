@@ -39,7 +39,7 @@ The best practice provided by Olares is to make full use of the node's local har
 
 ## Application Storage Path
 
-For applications, there are 3 different storage paths to deal with different usage scenarios. Accessible via [Files](../../how-to/olares/files/index.md#introduction)
+For applications, there are 3 different storage paths to deal with different usage scenarios.
 
 ### UserData
 

@@ -10,7 +10,7 @@ Olares Space account is associated with your Olares IDs or DIDs. You can log in 
 This section walks you through usages of Olares Space, covering:
 
 - [Log in to/off Olares Space](manage-accounts.md)
-- [Host Olares](create-orales.md)
+- [Host Olares](create-olares.md)
 - [Manage Olares](manage-olares.md)
 - [Host custom domains](host-domain.md)
 - [Manage organization domains](manage-domain.md)

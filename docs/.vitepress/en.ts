@@ -270,7 +270,7 @@ const side = {
       collapsed: true,
       items: [
         {
-          text: "Manage Accounts",
+          text: "Manage accounts",
           link: "/manual/terminus-space/manage-accounts",
         },
         {
@@ -288,21 +288,21 @@ const side = {
           ],
         },
         {
-          text: "Host Domains",
+          text: "Host domains",
           collapsed: true,
           items: [
             {
-              text: "Bind a Domain",
+              text: "Bind a domain",
               link: "/manual/terminus-space/host-domain",
             },
             {
-              text: "Manage a Domain",
+              text: "Manage a domain",
               link: "/manual/terminus-space/manage-domain",
             },
           ],
         },
         {
-          text: "Backup and Restore",
+          text: "Backup and restore",
           link: "/manual/terminus-space/backup-restore",
         },
         { text: "Billing", link: "/manual/terminus-space/billing" },
@@ -501,48 +501,6 @@ const side = {
           link: "/developer/contribute/terminus-os",
         },
         {
-          text: "Snowinning Protocol",
-          collapsed: true,
-
-          items: [
-            {
-              text: "Overview",
-              link: "/developer/contribute/snowinning/overview",
-            },
-            {
-              text: "Concepts",
-              link: "/developer/contribute/snowinning/concepts",
-            },
-            {
-              text: "Terminus Name",
-              link: "/developer/contribute/snowinning/terminus-name",
-            },
-            {
-              text: "Contract",
-              collapsed: true,
-              link: "/developer/contribute/snowinning/contract-overview",
-              items: [
-                {
-                  text: "TerminusDID",
-                  link: "/developer/contribute/snowinning/contract-tdid",
-                },
-                {
-                  text: "Reputation",
-                  link: "/developer/contribute/snowinning/contract-reputation",
-                },
-                {
-                  text: "Manager",
-                  link: "/developer/contribute/snowinning/contract-manager",
-                },
-              ],
-            },
-            {
-              text: "VC Service",
-              link: "/developer/contribute/snowinning/vc",
-            },
-          ],
-        },
-        {
           text: "Develop System App",
           collapsed: true,
 
@@ -552,11 +510,11 @@ const side = {
               link: "/developer/contribute/system-app/overview",
             },
             {
-              text: "deyploment.yaml",
+              text: "`deployment.yaml`",
               link: "/developer/contribute/system-app/deployment",
             },
             {
-              text: "TerminusManifest.yaml",
+              text: "`TerminusManifest.yaml`",
               link: "/developer/contribute/system-app/terminus-manifest",
             },
             {

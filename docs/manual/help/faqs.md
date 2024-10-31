@@ -67,7 +67,7 @@ But for the following two features, we may introduce reasonable charges due to t
 
   If you need to provide service via the public Internet, we will charge you for the additional traffic generated with reference to the bills from cloud providers.
 
-Meanwhile, we believe that cold backup and CDN are resource types that are relatively easy to DePinize, and we look forward to solutions based on [Otmoic Protocol](../protocol/otmoic.md).
+Meanwhile, we believe that cold backup and CDN are resource types that are relatively easy to DePinize, and we look forward to solutions based on Otmoic Protocol.
 
 ## Do I need to pay to operate on a blockchain?
 

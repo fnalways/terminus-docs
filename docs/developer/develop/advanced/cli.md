@@ -125,7 +125,7 @@ bash scale_minio.sh -a node -v /terminus/data/minio/vol{1...4} \
 
 To debug a program that involves the startup process of Terminus, you may need to build a temporary local version of Terminus and replace the service you're debugging.
 
-In other scenarios, consider using [ControlHub](../../../how-to/terminus/controlhub/) or kubectl to update services.
+In other scenarios, consider using Control Hub or kubectl to update services.
 
 ```sh
 # Clone

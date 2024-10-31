@@ -55,13 +55,13 @@ So far you have successfully bound your domain to your DID. You can now continue
 
 Now that your organization has a verified domain name,  you or other members you invite can create an Olares ID using this domain.
 
-![org-olares-id](images/how-to/termipass/organization_terminus_name.png)
+![org-olares-id](/images/how-to/termipass/organization_terminus_name.png)
  
 1. In LarePass app, navigate to **Organization Terminus Name** > **Join an existing organization**.
 2. Enter your organization's domain name and click **Continue**. Recheck whether your domain name has been verified and configured if an error occurs.
 3. Bind the VC via your email accounts. Currently, only Gmail and Google Workspace email are supported.
 
-Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Orales](../get-started/activate-olares.md)
+Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Orales](../get-started/activate-terminus.md)
 
 ## Domain status and processing
 

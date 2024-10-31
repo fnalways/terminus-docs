@@ -22,7 +22,7 @@ Depending on your personal preference, choose how to create a Terminus Name:
 - **Create with VC**: Recommended for individual and organizational users that require enhanced security and more distinctive names through VC binding.
 
 ::: tip NOTE
-This section focuses on creating individual Terminus Names. If you want to create a Terminus Name for organizational uses, refer to [Create a Organization Terminus Name](../terminus-space/org-terminus-name.md).
+This section focuses on creating individual Terminus Names. If you want to create a Terminus Name for organizational uses, refer to [Create an Organization Terminus Name](../terminus-space/host-domain.md).
 :::
 
 <Tabs>

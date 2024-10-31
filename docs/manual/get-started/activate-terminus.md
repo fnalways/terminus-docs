@@ -23,7 +23,7 @@ Use the Wizard URL and initial one-time password to activate. This process conne
 
    ![alt text](/images/how-to/terminus/reset_password.png)
 
-After successful setup, the TermiPass app will automatically go to the home screen, and the Wizard will redirect you to the [login page](../setup/login.md).
+After successful setup, the TermiPass app will automatically go to the home screen, and the Wizard will redirect you to the login page.
 
 ## Next step
 

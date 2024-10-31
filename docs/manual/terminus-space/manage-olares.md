@@ -17,8 +17,6 @@ You can monitor the system status of Olares through **Olares Space**:
 
 ![System Panel](/images/how-to/space/my_terminus.jpg)
 
-For additional information, refer to the [View Integration](../../olares/setup/integration.md) guide.
-
 :::info
 For **self-hosted Olares** users, it’s important to monitor
 **Traffic statistics** for intranet penetration services,

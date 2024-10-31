@@ -15,6 +15,6 @@ Understand Olares with the following concepts:
 - [Application](./application.md)
 - [Network](./network.md)
 - [Data](./data.md)
-- [Secret Management](./secret.md)
+- [Secret Management](./secrets.md)
 
 

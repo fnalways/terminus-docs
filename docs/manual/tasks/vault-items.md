@@ -40,7 +40,7 @@ When use Vault in Terminus for the first time, you will be prompted to set a loc
 After setting up, you also need to import the Terminus Name that's already linked to your Terminus server using mnemonic phrase. 
 
 :::info
-If you don't know where to find the mnemonic phrase, see [back up mnemonic phrase](../get-started/back-up-mnemonic).
+If you don't know where to find the mnemonic phrase, see [back up mnemonic phrase](../get-started/back-up-mnemonics).
 :::
 
 ## Manage vault items

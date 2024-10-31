@@ -40,6 +40,6 @@ Before you roll up your sleeves and get your hands dirty with Terminus, feel fre
 
 ## Other resources
 
-- [Develop Terminus apps](../developer/develop)
+- [Develop Terminus apps](../developer/develop/)
 - [Join our community on Discord](https://discord.com/invite/BzfqrgQPDK)
 - [Check out Terminus blogs](https://jointerminus.medium.com/)

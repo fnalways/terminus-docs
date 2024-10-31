@@ -175,4 +175,4 @@ bash publicRestoreInstaller.sh
 
 For Terminus Space backups, download the restoration script directly from Terminus Space.
 
-![restore](images/restore.jpg)
+![restore](/images/developer/develop/restore.jpg)
