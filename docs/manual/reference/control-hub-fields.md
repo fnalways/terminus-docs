@@ -1,3 +1,0 @@
-# Control Hub fields
-
-Text

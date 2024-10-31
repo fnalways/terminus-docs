@@ -245,6 +245,21 @@ const side = {
             //  text: "Configure application parameters",
             //  link: "/manual/tasks/application-parameters",
             //},
+            {
+               text: "Navigate Control Hub",
+               link: "/manual/tasks/navigate-control-hub",
+               collapsed: true,
+               items: [
+               {
+               text: "Edit system resource",
+               link: "/manual/tasks/edit-resource",
+               },
+               {
+               text: "View database status",
+               link: "/manual/tasks/view-database-status",
+               },
+               ],
+            },
           ],
         },
       ],
@@ -295,18 +310,18 @@ const side = {
     },
     {
       text: "References",
-      link: "/manual/reference/",
+      // link: "/manual/reference/",
       collapsed: true,
       items: [
-        { text: "CLI Syntax", link: "/manual/reference/cli-syntax" },
-        {
-          text: "Dashboard Metrics",
-          link: "/manual/reference/dashboard-metrics",
-        },
-        {
-          text: "Control Hub Fields",
-          link: "/manual/reference/control-hub-fields",
-        },
+        { text: "CLI operations", link: "/manual/reference/cli-syntax" },
+        //{
+        //  text: "Dashboard Metrics",
+       //   link: "/manual/reference/dashboard-metrics",
+       // },
+       // {
+       //   text: "Control Hub console",
+       //   link: "/manual/reference/control-hub-fields",
+      //  },
       ],
     },
     {
