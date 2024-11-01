@@ -6,8 +6,9 @@ A Terminus Name consists of a local name and a domain. For example, in `alice123
 - `alice123`: Local name
 - `myterminus.com`: Domain name
 
-Learn more in [Olares ID](../concepts/olares-id.md).
-
+:::tip
+To understand why you need an Olares ID, see [Olares ID](../concepts/olares-id.md).
+:::
 ## Download and install TermiPass app
 
 To get started with Terminus, you'll need to download TermiPass on your mobile device. TermiPass is available for both Android and iOS platforms:

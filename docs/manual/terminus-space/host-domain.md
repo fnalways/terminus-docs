@@ -6,7 +6,7 @@ outline: [2, 3]
 
 Whether you're an organizational user wanting employees to use a company-specific domain for login, or you simply wish to use a domain that you own, Olares Space allows you to set up a custom domain for easy access.
 
-This guide walks you through binding your own domain for your Olares system on Olares Space.
+This guide walks you through adding your own domain for your Olares system on Olares Space.
 
 ## Prerequisites
 

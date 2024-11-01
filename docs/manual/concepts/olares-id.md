@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Olares ID
 
-This document gets you familiar with Olares ID, why do you need it, and how to create one for your Terminus.
+This document gets you familiar with Olares ID.
 
 ## What is an Olares ID?
 
@@ -64,7 +64,7 @@ By simply replacing the "@" in your Terminus Name with a ".", you get your corre
 A Decentralized Identifier (DID) is a unique, cryptographically verifiable identifier that doesn't rely on any centralized authority. While DIDs solve the issue of identity in a decentralized network, they are typically difficult for humans to remember or use in daily situations.
 
 Terminus Name acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
-Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus Account](./account#understand-the-stage-of-account).
+Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus account](./account#understand-the-stage-of-account).
 
 
 ## See also

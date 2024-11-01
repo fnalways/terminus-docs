@@ -43,7 +43,7 @@ Meanwhile, Terminus aims to provide a one-stop self-hosted solution, which goes 
 
 ## I have several servers. Can I use Terminus to manage them one-stop?
 
-Yes. You can refer to [How to add a node](../reference/cli-operations#add-a-terminus-node-locally).
+Yes. You can refer to [How to add a node](../../developer/develop/advanced/cli#add-a-terminus-node-locally).
 
 After you add the node, you can manage the cluster via [Dashboard](../tasks/resources-usage) and [Control Hub](../tasks/navigate-control-hub).
 

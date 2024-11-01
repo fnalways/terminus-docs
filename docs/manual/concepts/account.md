@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Olares account
 
-Each Olares Account corresponds to an [Olares ID](olares-id.md), which consists of a local name and a domain name. At the same time, each Olares belongs to one Domain. Therefore, Olares users such as `alice@olares.com` will use the local name, `alice`, in the Olares OS.
+Each Olares account corresponds to an [Olares ID](olares-id.md), which consists of a local name and a domain name. At the same time, each Olares belongs to one Domain. Therefore, Olares users such as `alice@olares.com` will use the local name, `alice`, in the Olares OS.
 
 This document covers concepts and designs related to account system in Olares.
 
@@ -46,9 +46,9 @@ Olares supports unified authentication for a multi-user system.
 
 4. If authentication succeeds, the [Backend for Launcher (BFL)](https://github.com/beclab/bfl) attaches the user's basic information and forwards the request to the application service. This relieves the application from handling the authentication itself.
 
-5. For [cluster-scoped applications](./application.md#cluster-scoped-application), developers need to build an additional `Auth Server` to connect the application's account with the BFL account.
+5. For [cluster-scoped applications](./application.md#cluster-scoped-applications), developers need to build an additional `Auth Server` to connect the application's account with the BFL account.
 
-## Multi-Factor Authentication (MFA)
+## Multi-factor authentication (MFA)
 
 Olares integrates a variety of authentication factors with different security levels to ensure the security of user identity authentication in the system.
 

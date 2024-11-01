@@ -67,7 +67,7 @@ Terminus supports multiple users and provides two distinct namespaces for system
 
 Community applications are applications created and maintained by third-party developers. They encompass a wide range of purposes, from productivity tools and entertainment applications to data analysis utilities.
 
-The namespace of community applications consists of two parts: [Application Name](#application-name) and the user's [Local Name](olares-id.md#what-is-an-olares-id), for example:
+The namespace of community applications consists of two parts: application name and the user's [local name](olares-id.md#what-is-an-olares-id), for example:
 
 ```
 n8n-alice
@@ -97,7 +97,7 @@ The Service Provider mechanism enables community applications to interact with s
 
 The mechanism consists of three procedures：
 
-1. Provider declaration: Developers must [declare their application as a Provider](../../developer/develop/advanced/provider#define-provider) for specific service interfaces.
+1. Provider declaration: Developers must [declare their application as a provider](../../developer/develop/advanced/provider#define-provider) for specific service interfaces.
   The system includes built-in Providers.
 
 2. Permission request: Applications seeking to use a service interface must explicitly [request provider access permissions](../../developer/develop/advanced/provider#request-permission-to-call-provider). 

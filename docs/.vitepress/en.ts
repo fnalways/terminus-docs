@@ -2,17 +2,15 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 
 const side = {
   "/manual/": [
-    { text: "Docs home", link: "/manual/docs-home" },
-    {
-      text: "Feature overview",
-      collapsed: true,
-      link: "/manual/feature-overview",
+    { text: "Docs home",
+      link: "/manual/docs-home",
       items: [
-        { text: "Why Terminus", link: "/manual/why-terminus" },
-        { text: "Feature comparison", link: "/manual/feature-comparison" },
-        { text: "Release notes", link: "/manual/release-notes" },
+      { text: "Why Terminus", link: "/manual/why-terminus" },
+      { text: "Features",
+            link: "/manual/feature-overview",
+      },
       ],
-    },
+      },
     {
       text: "Get started",
       link: "/manual/get-started/",
@@ -85,10 +83,6 @@ const side = {
       collapsed: true,
       link: "/manual/tasks/",
       items: [
-        // {
-        //   text: "Manage Terminus with TermiPass",
-        //   link: "/manual/tasks/manage-terminus",
-        // },
         {
           text: "Personalization",
           collapsed: true,
@@ -229,22 +223,10 @@ const side = {
               text: "Monitor system and apps",
               link: "/manual/tasks/resources-usage",
             },
-            //{
-            //  text: "Analyze applications",
-            //  link: "/manual/tasks/application-analytics",
-            //},
             {
               text: "Update Terminus",
               link: "/manual/tasks/update",
             },
-            //{
-            //  text: "Debug cluster issues",
-            //  link: "/manual/tasks/debug",
-            //},
-            //{
-            //  text: "Configure application parameters",
-            //  link: "/manual/tasks/application-parameters",
-            //},
             {
                text: "Navigate Control Hub",
                link: "/manual/tasks/navigate-control-hub",
@@ -302,26 +284,10 @@ const side = {
           ],
         },
         {
-          text: "Backup and restore",
+          text: "Back up and restore",
           link: "/manual/terminus-space/backup-restore",
         },
         { text: "Billing", link: "/manual/terminus-space/billing" },
-      ],
-    },
-    {
-      text: "References",
-      // link: "/manual/reference/",
-      collapsed: true,
-      items: [
-        { text: "CLI operations", link: "/manual/reference/cli-operations" },
-        //{
-        //  text: "Dashboard Metrics",
-       //   link: "/manual/reference/dashboard-metrics",
-       // },
-       // {
-       //   text: "Control Hub console",
-       //   link: "/manual/reference/control-hub-fields",
-      //  },
       ],
     },
     {

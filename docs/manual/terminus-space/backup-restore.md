@@ -1,4 +1,4 @@
-# Backup and restore
+# Back up and restore
 
 Olares Space is the official solution to back up snapshots for your Olares instances. You can restore a Terminus to its most recent state whenever needed. This section provides instructions for managing backups and restores in Olares Space. 
 
@@ -55,7 +55,7 @@ To avoid conflicts or other unforeseeable problem, you must return the existing 
 To restore a backup to a local Terminus:
 
 1. Click **Restore to Local**. The **Restoration Guide** page opens.
-2. Follow the instructions in the pop-up for restoration. For more details, see [Restore Terminus from a snapshot](../reference/cli-operations#restore-terminus-from-a-snapshot).
+2. Follow the instructions in the pop-up for restoration. For more details, see [Restore Terminus from a snapshot](../../developer/develop/advanced/cli#restore-terminus-from-a-snapshot).
 
 :::info NOTE
 You need to enter the backup password in the command line window to continue with the restoration. If you enter the wrong backup password, follow the instructions to retry.
