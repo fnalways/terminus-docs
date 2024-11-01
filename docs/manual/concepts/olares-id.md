@@ -1,7 +1,3 @@
----
-outline: [2, 3]
----
-
 # Olares ID
 
 This document gets you familiar with Olares ID.
@@ -10,41 +6,38 @@ This document gets you familiar with Olares ID.
 
 An Olares ID is a unique identifier within the Olares ecosystem, serving as your digital identity and gateway to various services and features. Each Olares account corresponds to an Olares ID.
 
-## Format of Olares ID
+## Olares ID structure
 
-An Olares ID consists of two parts: a local name (prefix) and a domain name (suffix). Currently, Olares provides the default domain name `olares.com` for individual users. For example, in `alice@olares.com`, *alice* is the Local Name, and *olares.com* is the domain.
+An Olares ID consists of two parts: 
+- A local name (prefix) 
+- A domain name (suffix)
+
+For example, in `alice@olares.com`, *alice* is the local name, and *olares.com* is the domain.
 
 Local names are unique within each domain, ensuring that each Olares ID is unique.
 
-## Types of domain
+### Domain types
 Within Terminus, there are three types of Domains:
 
-### Individual
-Intended for individual use, similar to email addresses with suffixes like `gmail.com`.
+* Individual domains provide personal identification spaces. Currently, Olares provides the default domain name `olares.com` for individual users.
+* Organization domains enable institutional identity management.
+* Entity domains represent non-human entities like applications.
 
-Currently, Terminus uses `myterminus.com` as the suffix for Individual Domains.
+### Identify verification for individuals
 
-### Organization
-Intended for organizational use, like corporate emails.
+Olares offers two approaches to create your individual identity:
+- **Basic identity creation**<br>You can create an Olares ID by choosing an available name that meets the requirements.
+- **Verified identity creation**<br>
+This approach uses Verification Credentials (VC) to connect an existing trusted identity (such as email accounts) with the Olares ID. 
+When creating a verified identity, Olares:
+   * Authenticates the user through established OAuth providers
+   * Creates cryptographic links between the social identity and Olares DID
 
-When users join an organization, they can apply for a Terminus Name under the organization. When they leave, the administrator can reclaim the Terminus Name.
+:::tip
+To create an individual Olares ID with VC, on the creation page in LarePass, click <i class="material-icons">display_settings</i>, then select **Individual Olares ID**. 
 
-Organization administrators can apply for the organization's Domain through a Web2 domain.
-
-Once the Domain is registered, manage users under the organization.
-
-### Entity
-Let's revisit the definition of DID:
-
-> A DID refers to any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) as determined by the controller of the DID.
-
-Abstract entities, like a movie, cannot be categorized under Individual or Organization. However, they still require a DID to represent them, for which we designed the Entity Domain.
-
-For example, Movie, Application, Otmoic Market Maker are different types of Entity Domains.
-
-The main use case of the Entity Domain is to help protocols build reputation. We hope to see more protocols utilizing the Entity Domain to build the Web3 versions of IMDb, Yelp, LinkedIn, and more.
-
-Currently, the registration of Entity Domains is approved by the Terminus team, with the applicant responsible for subsequent management.
+Currently, verification is available through Google OAuth.
+:::
 
 ## Why do you need an Olares ID?
 
@@ -65,6 +58,7 @@ A Decentralized Identifier (DID) is a unique, cryptographically verifiable ident
 
 Terminus Name acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
 Each Terminus Name is bound to a DID. When a user creates an account using Terminus, a DID is created at the same time. Learn more about their relationship in [Stage of Terminus account](./account#understand-the-stage-of-account).
+
 
 
 ## See also

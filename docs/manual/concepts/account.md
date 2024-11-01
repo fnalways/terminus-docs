@@ -4,8 +4,6 @@ outline: [2, 3]
 
 # Olares account
 
-Each Olares account corresponds to an [Olares ID](olares-id.md), which consists of a local name and a domain name. At the same time, each Olares belongs to one Domain. Therefore, Olares users such as `alice@olares.com` will use the local name, `alice`, in the Olares OS.
-
 This document covers concepts and designs related to account system in Olares.
 
 ## Account synchronization
