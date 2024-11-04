@@ -1,6 +1,6 @@
 # Secure sensitive data
 
-Vault is a password manager in Terminus, designed for secure storage and management of sensitive data. With Vault, you can safely store and organize private keys and passwords, digital identities (DIDs) and Terminus Names, one-time passwords (OTPs), and other confidential data.
+Vault is a password manager in Olares, designed for secure storage and management of sensitive data. With Vault, you can safely store and organize private keys and passwords, digital identities (DIDs) and Olares IDs, one-time passwords (OTPs), and other confidential data.
 
 Key features of Vault include:
 * End-to-end encryption for maximum security
@@ -11,10 +11,10 @@ Key features of Vault include:
 * Two-factor authentication (2FA) support with OTP management
 
 ## Clients
-Vault's server component runs on Terminus OS, synchronizing data across multiple client devices of a single user. Data is encrypted with a private key during transmission and storage to ensure security.
-You can access Vault in Terminus, or through TermiPass on mobile, desktop, and browser extensions for a consistent user experience across platforms.
+Vault's server component runs on Olares, synchronizing data across multiple client devices of a single user. Data is encrypted with a private key during transmission and storage to ensure security.
+You can access Vault in Olares, or through LarePass on mobile, desktop, and browser extensions for a consistent user experience across platforms.
 
-Visit the [official page](https://www.jointerminus.com/termipass) for TermiPass details and download options.
+Visit the [official page](https://www.olares.com/termipass) for LarePass details and download options.
 
 ---
 <div>
@@ -33,7 +33,7 @@ Learn how to generate and store 2FA codes for enhanced security.
 </div>
 
 <div>
-<h4><a href="./autofill/">Use autofill with TermiPass</a></h4>
-Learn how to set up and use autofill for logins with different TermiPass clients.
+<h4><a href="./autofill/">Use autofill with LarePass</a></h4>
+Learn how to set up and use autofill for logins with different LarePass clients.
 </div>
 

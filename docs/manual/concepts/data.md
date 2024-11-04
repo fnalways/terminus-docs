@@ -111,7 +111,7 @@ The Backup component also has data restoration capabilities. You can download a 
 - User
 
   [File management](../tasks/files.md)<br>
-  [Backup & Restore](../terminus-space/backup-restore.md) 
+  [Backup & Restore](../space/backup-restore.md) 
 
 - Developer
 

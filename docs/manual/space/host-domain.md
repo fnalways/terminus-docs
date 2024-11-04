@@ -32,7 +32,6 @@ When you have everything ready, take the steps below to add your domain in Olare
 
     ![alt text](/images/how-to/space/submit_a_domain.jpg)
 
-
 2. Add a TXT record for your domain to confirm your domain ownership. The system will verify your configuration. Once verified, the domain setup status will update automatically to **Await NS Record for Your Domain**.
 
     ![alt text](/images/how-to/space/txt.jpg)
@@ -45,7 +44,7 @@ When you have everything ready, take the steps below to add your domain in Olare
 
    ![alt text](/images/how-to/space/awaiting_domain.jpg)
 
-4. Launch your LarePass app, and navigate to **Organization Terminus Name** > **Create an Organization**. You should see your domain listed. 
+4. Launch your LarePass app, and navigate to **Organization Olares ID** > **Create an Organization**. You should see your domain listed. 
 
 5. Click on the domain name to store the domain name on blockchain. When it's done, the domain setup status should change to **Awaiting rule configuration** on Olares Space. 
 
@@ -55,13 +54,13 @@ So far you have successfully associated your domain with your DID. You can now c
 
 Now that your organization has a verified domain name, you or other members you invite can create an Olares ID using this domain.
 
-![org-olares-id](/images/how-to/termipass/organization_terminus_name.png)
+![org-olares-id](/images/how-to/larepass/organization_olares_id.png)
  
-1. In LarePass app, navigate to **Organization Terminus Name** > **Join an existing organization**.
+1. In LarePass app, navigate to **Organization Olares ID** > **Join an existing organization**.
 2. Enter your organization's domain name and click **Continue**. Recheck whether your domain name has been verified and configured if an error occurs.
 3. Bind the VC via your email accounts. Currently, only Gmail and Google Workspace email are supported.
 
-Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Olares](../get-started/activate-terminus.md)
+Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Olares](../get-started/activate-olares)
 
 ## Domain status and processing
 

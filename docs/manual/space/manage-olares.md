@@ -15,7 +15,7 @@ You can monitor the system status of Olares through **Olares Space**:
 3. Log into [**Olares Space**](https://space.jointolares.com/).
 4. On the **Olares** page, view **Storage usage** and **Traffic consumption** in the system panel.
 
-![System Panel](/images/how-to/space/my_terminus.jpg)
+![System Panel](/images/how-to/space/my_olares.jpg)
 
 :::info
 For self-hosted Olares users, it's important to monitor **Traffic statistics** for intranet penetration services, and **Storage usage** for backup services. These services may incur charges based on usage.

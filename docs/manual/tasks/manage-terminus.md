@@ -1,2 +1,2 @@
-# Manage Terminus with TermiPass
+# Manage Olares with LarePass
 

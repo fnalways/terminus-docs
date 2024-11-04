@@ -16,12 +16,12 @@ Organize your reading flow with two collections:
 * **Read Later**: Your backlog for content to revisit in the future.
 
 While browsing the title or reading, click **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** to save content to either collection.
-### Save web pages via TermiPass
+### Save web pages via LarePass
 :::tip
-TermiPass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.jointerminus.com/termipass).
+LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.com/termipass).
 :::
 
-1. Open the TermiPass browser extension and click **Collect**.
+1. Open the LarePass browser extension and click **Collect**.
 2. In the **Pages** section, click <i class="material-symbols-outlined">add_box</i> to save the current page to your Wise library.
 
 Once collected, you can find it in page **Library** > **Articles** in Wise.
@@ -38,7 +38,7 @@ Wise supports various content types including videos, audio, PDFs, and eBooks:
 5. Enter the URL in the popup, and click **Confirm** to retrieve the resource.
 
 ## Automatic download
-Wise automatically creates download tasks for new audio or video content, saving media files to Terminus for convenient offline access.
+Wise automatically creates download tasks for new audio or video content, saving media files to Olares for convenient offline access.
 
 This feature:
 

@@ -1,9 +1,9 @@
 # Set language and appearance
 
-Personalizing your Terminus experience is easy. You can set your preferred language, choose between light and dark themes, and select custom wallpapers for your desktop and login screen.
+Personalizing your Olares experience is easy. You can set your preferred language, choose between light and dark themes, and select custom wallpapers for your desktop and login screen.
 
 ## System Language
-Terminus is currently available in the following languages:
+Olares is currently available in the following languages:
 - English
 - Chinese (simplified)
 

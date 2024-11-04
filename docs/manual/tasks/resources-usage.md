@@ -3,9 +3,9 @@ outline: [2, 3]
 ---
 
 # Monitor system and application status
-The Dashboard app in Terminus works similarly to Windows Explorer, providing a centralized view of your system's status without requiring technical expertise. From the main dashboard, you can view resource usage patterns and detailed metrics.
+The Dashboard app in Olares works similarly to Windows Explorer, providing a centralized view of your system's status without requiring technical expertise. From the main dashboard, you can view resource usage patterns and detailed metrics.
 :::info
-When applications in your Terminus are exposed to the public internet, they generate FRP traffic costs from external access. To monitor these costs and traffic, see [Monitor traffic usage](../terminus-space/).
+When applications in your Olares are exposed to the public internet, they generate FRP traffic costs from external access. To monitor these costs and traffic, see [Monitor traffic usage](../space/).
 :::
 
 ## Access monitoring dashboards
@@ -81,10 +81,10 @@ For applications supporting multiple access points, each application card displa
 
 ## Analytics
 
-Terminus features powerful built-in analytic, helping you understand application usage patterns, optimize user experience, and make data-driven decisions. The **Analytics** dashboard displays key metrics for each application spanning up to one year, including page views, unique visitors, and average visit time.
+Olares features powerful built-in analytic, helping you understand application usage patterns, optimize user experience, and make data-driven decisions. The **Analytics** dashboard displays key metrics for each application spanning up to one year, including page views, unique visitors, and average visit time.
 
 :::info
-Analytics data is only available for applications that have declared the analytics function in their `TerminusManifest.yaml` file.
+Analytics data is only available for applications that have declared the analytics function in their `OlaresManifest.yaml` file.
 :::
 
 Key metrics include:
@@ -94,5 +94,5 @@ Key metrics include:
 | Views              | Total webpage accesses, counted individually even for the same user           |
 | Visitors           | Unique individuals accessing your site (multiple visits count as one visitor) |
 | Average visit time | Time spent per user session                                                   |
-| Referrer           | Previous webpage before reaching your Terminus application                    |
+| Referrer           | Previous webpage before reaching your Olares application                      |
 | Visitor info       | Device, browser, OS, and location data                                        |

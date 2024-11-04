@@ -22,9 +22,9 @@ Each Olares application can have one or more entrances that serve as access poin
 
 ## Endpoints
 
-  An endpoint is the access address or point where users interact with an application. Simply put, it's the URL you enter in your browser's address bar to access a specific Terminus application or its features. 
+  An endpoint is the access address or point where users interact with an application. Simply put, it's the URL you enter in your browser's address bar to access a specific Olares application or its features. 
 
-  A typical Terminus application endpoint follows this format:
+  A typical Olares application endpoint follows this format:
 
     https://{routeID}.{domain}
 
@@ -43,11 +43,11 @@ A route ID is a unique identifier used to identify specific applications or appl
 - Community applications 
   - Use an 8-character random string + entrance index (starting from 0)
   - Example: For an application with Route ID 92d76a13 and two entrances:<br>
-    First entrance: `92d76a130`, and the access URL is `92d76a130.bob.myterminus.com`
+    First entrance: `92d76a130`, and the access URL is `92d76a130.bob.olares.com`
 
 ::: tip NOTE
-- DomainName is derived from Terminus Name.
-- Entrance index refers to the position of entrance in multiple entrances defined in [`TerminusManifest.yaml`](../../developer/develop/package/manifest.md).
+- DomainName is derived from Olares ID.
+- Entrance index refers to the position of entrance in multiple entrances defined in [`OlaresManifest.yaml`](../../developer/develop/package/manifest.md).
 :::
 
 ## Olares internal network
@@ -56,7 +56,7 @@ Olares implements a layered proxy routing design in its gateway architecture. Tr
 
 `cluster` -> `user` -> `application` -> `service component`.
 
-![alt text](/images/overview/terminus/image4.jpeg)
+![alt text](/images/overview/olares/image4.jpeg)
 
 Inside the application, Olares has multiple layers of security.
 

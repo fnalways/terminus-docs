@@ -3,9 +3,9 @@ outline: [2, 3]
 ---
 
 # Navigate Control Hub
-ControlHub is the console for Terminus OS, providing developers and users with precise control over system operations and the underlying environment. This guide helps you understand Control Hub's interface and efficiently monitor your resources.
+ControlHub is the console for Olares, providing developers and users with precise control over system operations and the underlying environment. This guide helps you understand Control Hub's interface and efficiently monitor your resources.
 ## Navigation
-### Terminus
+### Olares
 Monitor the status of applications in three different views:
 - **Browse** (Application-centric view): Navigate through resource usage related to specific applications using a three-column layout for efficient resource location.
 - **Namespace** (User-centric view): Access detailed insights into per-user application resource consumption, with sorting and filtering capabilities.
@@ -15,25 +15,25 @@ View and manage Kubernetes system resources.
 - **Networks**: Monitor network security policies implemented in the system and the network connectivity of each namespace.
 - **CRDs**: Manages various custom resource declarations in the system.
 ### Middleware
-View the usage of various middleware services in Terminus.
+View the usage of various middleware services in Olares.
 
 ## Browse
 
 The **Browse** section organizes resources into two main namespace categories:
 
-- User projects include each Terminus user's independent namespace.
+- User projects include each Olares user's independent namespace.
   - `user-space-*`: Built-in user applications
   - `user-system-*`: User-related system programs including TAPR components, schedulers, proxies for cross-application interaction
-- System projects include core applications of Terminus's cluster, along with system-level service programs.
+- System projects include core applications of Olares's cluster, along with system-level service programs.
 
 :::info
-Terminus members can only access their own namespaces, while Terminus admin can access all user and system namespaces.
+Olares members can only access their own namespaces, while Olares admin can access all user and system namespaces.
 :::
 
 You can view all resource types within the namespace in the second column.
 
 ### Workloads
-In Terminus, Workloads represent applications running on your Terminus cluster. They correspond to three primary resource types in Kubernetes.
+In Olares, Workloads represent applications running on your Olares cluster. They correspond to three primary resource types in Kubernetes.
 
 - **Deployment**
   - The most common workload type in Kubernetes.
@@ -48,13 +48,13 @@ In Terminus, Workloads represent applications running on your Terminus cluster. 
   - Used for node-specific hardware operations.
 
 ### Workloads details
-![alt text](/images/how-to/terminus/controlhub/browse/02.jpg)
+![alt text](/images/how-to/olares/controlhub/browse/02.jpg)
 You can view the following information for a workload resource:
 - **Details**: The general information of the resource.
 - **Pods**: The general information of Pods.
 - **Ports**: All exposed port collections from the workload's Pod containers.
 - **Environment Variables**: Environment variables defined at the workload level in the Pod template.
-- **Labels**: Configured in the `workload` metadata. Used for controller management coordination in Terminus. Can also act as indexes for filtering and selecting resources in Kubernetes.
+- **Labels**: Configured in the `workload` metadata. Used for controller management coordination in Olares. Can also act as indexes for filtering and selecting resources in Kubernetes.
 - **Annotations**: Similar to labels but more flexible and character range. Serve as a tool for controllers to manage workloads.
 - **Events**: Log of events related to the workload within the latest one hour, often showing Pod scheduling status.
 
@@ -66,13 +66,13 @@ You can view the following information for a Pod:
 - **Environment Variables**: Environment variables defined for the Pod.
 - **Events**: Chronological log of events related to the Pod.
 
-![containers](/images/how-to/terminus/controlhub/browse/04.jpg)
+![containers](/images/how-to/olares/controlhub/browse/04.jpg)
 
 ### Secrets
 
 The **Secrets** section stores sensitive data like passwords, credentials, and key configurations. In Kubernetes, this data is Base64 encoded by default.
 
-![secrets](/images/how-to/terminus/controlhub/browse/11.jpg)
+![secrets](/images/how-to/olares/controlhub/browse/11.jpg)
 
 Expand the **Secrets** section in the second column to see the all secrets under the application's namespace.
 
@@ -89,7 +89,7 @@ The **Data Value** shown by default is the `Base64` encoded. You can click the *
 
 The **ConfigMap** section has a structure similar to **Secrets**. However, the content stored in the **ConfigMap** is saved in plaintext.
 
-![configmaps](/images/how-to/terminus/controlhub/browse/12.jpg)
+![configmaps](/images/how-to/olares/controlhub/browse/12.jpg)
 
 Expand the **ConfigMaps** section in the second column to view the details of the **ConfigMaps** under the application's namespace.
 
@@ -104,7 +104,7 @@ You can view the following information for the configmap:
 
 Each **Service Account** is linked to a **Secret**. This **Secret** includes the **Service Account's** `CA certificate`, `Namespace`, and `Token`.
 
-![Service accounts](/images/how-to/terminus/controlhub/browse/13.jpg)
+![Service accounts](/images/how-to/olares/controlhub/browse/13.jpg)
 
 Expand the second column on the **Service Accounts** section to view all the **Service Accounts** under the application's namespace.
 
@@ -120,7 +120,7 @@ You can view the following information for the service account:
 
 A Selector uses Labels to filter and select Pods. Essentially, a Service acts as a virtual IP (VIP) that directs traffic to a single Pod or a group of Pods.
 
-![service1](/images/how-to/terminus/controlhub/browse/14.jpg)
+![service1](/images/how-to/olares/controlhub/browse/14.jpg)
 
 Expand the **Services** section in the second column to view all the Services` under the namespace of the current application.
 
@@ -136,15 +136,15 @@ You can view the following information for the service:
 
 ## Namespace
 
-The **Namespace** section in ControlHub provides a user-centric view of resource consumption and workload conditions on your Terminus.
+The **Namespace** section in ControlHub provides a user-centric view of resource consumption and workload conditions on your Olares.
 
-![namespace](/images/how-to/terminus/controlhub/namespace/01.jpg)
+![namespace](/images/how-to/olares/controlhub/namespace/01.jpg)
 
 ### Usage Ranking
 
 **Usage Ranking** organizes system resource consumption by namespace.
 
-![namespace list](/images/how-to/terminus/controlhub/namespace/02.jpg)
+![namespace list](/images/how-to/olares/controlhub/namespace/02.jpg)
 
 You can view the following information for the namespace:
 - **Quota**: System resource usage percentage of this namespace.
@@ -156,26 +156,26 @@ The **Resources** section displays a chart of current and historical resource ut
 
 You can view the total resource usage by all users. Alternatively, select a specific user from the dropdown box to view individual resource consumption.
 
-![resources](/images/how-to/terminus/controlhub/namespace/04.jpg)
+![resources](/images/how-to/olares/controlhub/namespace/04.jpg)
 
 ## Pods
 
-The **Pods** section page provides a comprehensive view of all Pods in your Terminus environment, allowing you to manage them at the smallest granularity offered by Kubernetes.
+The **Pods** section page provides a comprehensive view of all Pods in your Olares environment, allowing you to manage them at the smallest granularity offered by Kubernetes.
 
 You can view the following information:
-- **Pod List**: All Pods within your Terminus.
+- **Pod List**: All Pods within your Olares.
 - **Resource**: A visual representation of the physical resources consumed by your Pods. This view helps you understand how your cluster's resources are being utilized.
-![resources](/images/how-to/terminus/controlhub/pods/04.jpg)
+![resources](/images/how-to/olares/controlhub/pods/04.jpg)
 
 ## Resource
 
-The **Resource** section includes resources related to both software and hardware in Terminus. For software, it encompasses cluster descriptions, feature definitions, and declarations of cluster states, etc. For hardware, it contains details about networks, storage, devices, etc.
+The **Resource** section includes resources related to both software and hardware in Olares. For software, it encompasses cluster descriptions, feature definitions, and declarations of cluster states, etc. For hardware, it contains details about networks, storage, devices, etc.
 
 ### Network
 
-![networks](/images/how-to/terminus/controlhub/resources/01.jpg)
+![networks](/images/how-to/olares/controlhub/resources/01.jpg)
 
-**Network Policies** is one of the most important network resource in Terminus. They define how the network connects. The system utilizes a **sandbox mechanism** for network policies, which restricts interactions based on the namespace. This provides isolation between the networks of different users and applications.
+**Network Policies** is one of the most important network resource in Olares. They define how the network connects. The system utilizes a **sandbox mechanism** for network policies, which restricts interactions based on the namespace. This provides isolation between the networks of different users and applications.
 
 #### Ingress Rule
   Shows a list of rules that specify which `incoming traffic` is allowed into a Namespace:
@@ -188,9 +188,9 @@ The **Resource** section includes resources related to both software and hardwar
 
 ### CRDs
 
-![CRDs](/images/how-to/terminus/controlhub/resources/02.jpg)
+![CRDs](/images/how-to/olares/controlhub/resources/02.jpg)
 
-CRDs list all the Kubernetes-based Custom Resource Definitions (CRDs) in Terminus. Many cloud-native features of Terminus depend on these CRDs.
+CRDs list all the Kubernetes-based Custom Resource Definitions (CRDs) in Olares. Many cloud-native features of Olares depend on these CRDs.
 You can see the following information for the CRDs:
 - **Details**: Shows the name, group, scope level, and creation time of the CRD. There are two types of CRD scopes:
 
@@ -202,7 +202,7 @@ You can see the following information for the CRDs:
 
 ## Middleware
 
-The **Middleware** section allows you to manage middleware in Terminus.
+The **Middleware** section allows you to manage middleware in Olares.
 
 :::tip
 Only administrators can access the **Middleware** page.
@@ -210,6 +210,6 @@ Only administrators can access the **Middleware** page.
 
 You can see the following information for the middleware:
 - **Details**: Cluster data, including cluster name, deployment namespace, access address, and administrator password.
-- **Database**: An overview of the databases utilized by different applications within Terminus, including database name, user, and passwords.
+- **Database**: An overview of the databases utilized by different applications within Olares, including database name, user, and passwords.
 
-![postgres](/images/how-to/terminus/controlhub/middleware/01.jpg)
+![postgres](/images/how-to/olares/controlhub/middleware/01.jpg)

@@ -3,7 +3,7 @@ Operations in Files are essentially the same as in other file managers. This pag
 
 ## Upload files
 
-1. Open the Files app from the Dock or launch pad on Terminus.
+1. Open the Files app from the Dock or launch pad on Olares.
 2. Upload multiple files or folders using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
    - Click <i class="material-icons">drive_folder_upload</i> in the top right corner. 
@@ -14,16 +14,16 @@ Files supports resumable uploads. If an upload is interrupted, it will automatic
 :::
 
 ## Download files
-When downloading multiple files, the behavior differs between the Files in Terminus and TermiPass desktop application:
-* **Files in Terminus (web interface)**: Automatically packages files into a zip file for download, requiring manual extraction.
-* **TermiPass desktop**: Downloads are queued, allowing you to pause, resume, or cancel tasks, and easily locate downloaded files.
+When downloading multiple files, the behavior differs between the Files in Olares and LarePass desktop application:
+* **Files in Olares (web interface)**: Automatically packages files into a zip file for download, requiring manual extraction.
+* **LarePass desktop**: Downloads are queued, allowing you to pause, resume, or cancel tasks, and easily locate downloaded files.
 
-1. Open the Files app from the Dock or launch pad on Terminus.
+1. Open the Files app from the Dock or launch pad on Olares.
 2. Select any file, right-click to open the context menu, and select **Download**.
 3. Select the save location in the popup window.
 
 :::tip
-For large files or multiple downloads, it's recommended to use the TermiPass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.jointerminus.com/termipass) for details and download options.
+For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.olares.com/termipass) for details and download options.
 :::
 
 ## Preview and edit files
@@ -49,7 +49,7 @@ Full-text search is available for the `/Documents/` directory in **Drive**, allo
 :::warning
 Deleted files cannot be recovered.
 :::
-1. Open the Files application from the Dock or launch pad on Terminus.
+1. Open the Files application from the Dock or launch pad on Olares.
 2. Select the file(s) you want to delete and choose one of these methods:
    - Right-click and select **Delete** from the context menu.
    - Click <i class="material-icons">more_horiz</i> in the top right corner and select **Delete**.

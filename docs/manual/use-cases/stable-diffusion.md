@@ -1,9 +1,9 @@
 # Stable Diffusion
 Stable Diffusion represents a groundbreaking implementation of latent diffusion models (LDMs) in AI image synthesis. This deep learning architecture operates by decomposing the image generation process into a lower-dimensional latent space, significantly reducing computational requirements while maintaining high-fidelity output.
 
-Terminus simplifies the deployment and management of Stable Diffusion. Unlike traditional deployments that require manual configuration of file systems and databases, Terminus shields developers from these infrastructure complexities, allowing you to focus solely on using the model for image generation.
+Olares simplifies the deployment and management of Stable Diffusion. Unlike traditional deployments that require manual configuration of file systems and databases, Olares shields developers from these infrastructure complexities, allowing you to focus solely on using the model for image generation.
 
-With Terminus's multi-user support, team members can share a single Stable Diffusion deployment while maintaining individual data privacy. This approach eliminates the need for redundant system installations that would otherwise consume excessive hardware resources.
+With Olares's multi-user support, team members can share a single Stable Diffusion deployment while maintaining individual data privacy. This approach eliminates the need for redundant system installations that would otherwise consume excessive hardware resources.
 ## What can Stable Diffusion do?
 Whether you're an artist looking to expand your creative toolkit, a developer integrating AI imaging into your workflow, or simply curious about AI art generation, Stable Diffusion offers:
 
@@ -37,7 +37,7 @@ While this optimization allows for higher resolution image generation, it comes 
 If you need to remove `--xformers`:
 
 :::info
-Only Terminus admin can adjust system parameters through the Control Hub app.
+Only Olares admin can adjust system parameters through the Control Hub app.
 :::
 
 1. Open Control Hub, and navigate to **Browse**.

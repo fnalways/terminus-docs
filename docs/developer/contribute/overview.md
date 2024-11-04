@@ -1,6 +1,6 @@
-# Contributing To Terminus
+# Contributing To Olares
 
-## Terminus OS
+## Olares
 
 ## TermiPass
 

@@ -12,10 +12,10 @@ If the service provides recovery codes, store them securely. They are crucial to
 
 ## Create an authenticator in Vault
 :::tip
-Visit the [official page](https://www.jointerminus.com/termipass) for download options.
+Visit the [official page](https://www.olares.com/termipass) for download options.
 :::
 <tabs>
-<template #Terminus,-TermiPass-desktop,-or-browser-extension>
+<template #Olares,-LarePass-desktop,-or-browser-extension>
 
 1. In Vault, click <i class="material-icons">add</i> in the top right corner.
 2. Select **Authenticator** as the item type, and click **Create**.
@@ -25,9 +25,9 @@ Visit the [official page](https://www.jointerminus.com/termipass) for download o
 4. Click **Save**.
 </template>
 
-<template #TermiPass-mobile>
+<template #LarePass-mobile>
 
-1. Open TermiPass on your device, and navigate to the **Vault** page within the app.
+1. Open LarePass on your device, and navigate to the **Vault** page within the app.
 2. Click <i class="material-icons">add</i> in the top right corner.
 3. Select **Authenticator** as the item type, and click **Create**.
 4. Fill in the required fields:

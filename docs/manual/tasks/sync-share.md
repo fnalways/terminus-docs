@@ -1,5 +1,5 @@
 # Sync and share files
-TermiPass is a powerful tool not only ensures your Files content remains consistent and accessible, but also facilitates seamless collaboration within your Terminus server.
+LarePass is a powerful tool not only ensures your Files content remains consistent and accessible, but also facilitates seamless collaboration within your Olares server.
 
 This page will mainly cover:
 - How to sync files across devices
@@ -7,7 +7,7 @@ This page will mainly cover:
 
 ## Understand Sync and Library
 ### Sync
-Sync in the Files app is similar to cloud storage services like iCloud, where you can keep your most important information up to date, and available across all your devices. Sync also makes it easy to share files with other members within a Terminus server.
+Sync in the Files app is similar to cloud storage services like iCloud, where you can keep your most important information up to date, and available across all your devices. Sync also makes it easy to share files with other members within an Olares server.
 
 ### Library
 Library is the fundamental unit for organizing, syncing, and sharing your digital content. It is more than just a folder. It's a versatile container designed to meet various data synchronization and sharing needs:
@@ -18,7 +18,7 @@ Library is the fundamental unit for organizing, syncing, and sharing your digita
 
 ### Roles and permissions
 :::info
-The roles and permissions described here are specific to file sharing and Library management within Files. These are distinct from the overall Terminus user roles and system-wide permissions.
+The roles and permissions described here are specific to file sharing and Library management within Files. These are distinct from the overall Olares user roles and system-wide permissions.
 :::
 
 | Operation                  | Owner | Member |
@@ -36,7 +36,7 @@ Permission levels:
 - **Read-write**: Users can add, delete, and modify Library contents.
 
 ## Before you begin
-Make sure you have installed the TermiPass desktop client from the [official website](https://www.jointerminus.com/termipass), and logged in using your Terminus Name.
+Make sure you have installed the LarePass desktop client from the [official website](https://www.olares.com/termipass), and logged in using your Olares ID.
 
 :::info
 Currently, local file sync is available for Windows and Mac users. We'll use the Mac version for our examples.
@@ -50,7 +50,7 @@ Each user is automatically provided with their own personal Library as a startin
 
 ## Sync Library files to local
 
-1. Open TermiPass on your Mac.
+1. Open LarePass on your Mac.
 2. Locate your desired Library and click <i class="material-icons">more_horiz</i> > **Sync to local**.
 3. Select your preferred local directory, and click **Complete**.
 4. To initiate the sync, click <i class="material-icons">more_horiz</i> > **Sync now**.
@@ -62,24 +62,24 @@ Once synchronized, your libraries will display a green icon, indicating active t
 If your permission to the Library is read-only, you cannot sync changes from the local folder to the Library. Your newly added and modified files will be read-only, indicated by a gray disabled icon <i class="material-icons">remove</i>.
 :::
 
-To sync an existing local folder on your Mac, simply create a matching Library in TermiPass and move your files into the designated sync directory.
+To sync an existing local folder on your Mac, simply create a matching Library in LarePass and move your files into the designated sync directory.
 
-This approach allows you to maintain your current folder structure while benefiting from TermiPass's synchronization capabilities.
+This approach allows you to maintain your current folder structure while benefiting from LarePass's synchronization capabilities.
 
 ## Managing sync settings
 If you need to pause or stop synchronization for a specific Library:
 
-1. Locate the Library in TermiPass.
+1. Locate the Library in LarePass.
 2. Click <i class="material-icons">more_horiz</i> > **Unsynchronized**.
 
 Rest assured, this action won't delete your local files. It simply halts the two-way synchronization process.
 
 ## Share a Library
 :::tip
-To add a member in Terminus, see [manage users](./manage-users.md).
+To add a member in Olares, see [manage users](./manage-users.md).
 :::
 
-You can share a Library with other members within a Terminus server:
+You can share a Library with other members within an Olares server:
 
 1. Select a Library, and click <i class="material-icons">more_horiz</i> > **Share with**.
 2. In the dialog, select users from the dropdown menu, and click **Share to user**.
@@ -109,10 +109,10 @@ Invited users will see the shared Library in their Sync content list. To revoke 
 
 ## Handle sync conflicts
 
-In the rare event of a sync conflict, TermiPass has you covered. When multiple devices edit the same file simultaneously:
+In the rare event of a sync conflict, LarePass has you covered. When multiple devices edit the same file simultaneously:
 
 * The first completed edit is saved to the Library.
-* A backup of the conflicting version is created with a unique filename, including the editor's Terminus Name and timestamp: `test.txt(SFConflict name 2024-04-17-12-12-12)`.
+* A backup of the conflicting version is created with a unique filename, including the editor's Olares ID and timestamp: `test.txt(SFConflict name 2024-04-17-12-12-12)`.
 
 ## See also
 - [Manage users](./manage-users.md)

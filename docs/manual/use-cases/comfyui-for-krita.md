@@ -1,16 +1,16 @@
 # AI art creation with ComfyUI and Krita
-Create stunning AI-powered artwork by connecting ComfyUI's advanced AI capabilities with Krita's professional digital art tools. This guide shows you how to set up your complete AI art workflow with Terminus.
+Create stunning AI-powered artwork by connecting ComfyUI's advanced AI capabilities with Krita's professional digital art tools. This guide shows you how to set up your complete AI art workflow with Olares.
 ## Understanding the components
 Your AI art studio consists of three key pieces working together:
 
-* **ComfyUI**: The AI engine running in your Terminus environment that powers image generation.
+* **ComfyUI**: The AI engine running in your Olares environment that powers image generation.
 * **Krita**: Professional-grade digital art software where you'll create and edit your artwork.
 * **Krita AI Diffusion Plugin**: The connector that enables seamless communication between Krita and ComfyUI.
 
 ## What you'll need
 Before starting, ensure you have:
-* A working Terminus installation with internet access
-* A computer connected to the same local network as Terminus
+* A working Olares installation with internet access
+* A computer connected to the same local network as Olares
 * Sufficient system resources (recommended: 16GB RAM for optimal performance)
 
 ## Set up ComfyUI
@@ -55,10 +55,10 @@ Establish a secure connection between Krita and ComfyUI:
    b. Click **Connect** to verify the connection. A green "Connected" indicator confirms successful connection.
    :::info
    If connection fails:
-   - Verify network connectivity between your computer and Terminus.
+   - Verify network connectivity between your computer and Olares.
    - Confirm ComfyUI's authentication level is set to "Internal".
    - Check for and disable any interfering proxy services.
-   - Ensure ComfyUI is running correctly on your Terminus.
+   - Ensure ComfyUI is running correctly on your Olares.
    :::
 5. Adjust ComfyUI settings.
    a. In **Styles**, configure your preferred style templates and select appropriate model checkpoints.

@@ -5,7 +5,7 @@ const side = {
     { text: "Docs home",
       link: "/manual/docs-home",
       items: [
-      { text: "Why Terminus", link: "/manual/why-terminus" },
+      { text: "Why Olares", link: "/manual/why-olares" },
       { text: "Features",
             link: "/manual/feature-overview",
       },
@@ -18,20 +18,20 @@ const side = {
       items: [
         // { text: "Quick start", link: "/manual/get-started/quick-start" },
         {
-          text: "Create a Terminus Name",
-          link: "/manual/get-started/create-terminus-name",
+          text: "Create an Olares ID",
+          link: "/manual/get-started/create-olares-id",
         },
         {
-          text: "Install Terminus",
-          link: "/manual/get-started/install-terminus",
+          text: "Install Olares",
+          link: "/manual/get-started/install-olares",
         },
         {
-          text: "Activate Terminus",
-          link: "/manual/get-started/activate-terminus",
+          text: "Activate Olares",
+          link: "/manual/get-started/activate-olares",
         },
         {
-          text: "Log in to Terminus",
-          link: "/manual/get-started/log-in-to-terminus",
+          text: "Log in to Olares",
+          link: "/manual/get-started/log-in-to-olares",
         },
         {
           text: "Back up mnemonics",
@@ -88,7 +88,7 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Design Terminus profile",
+              text: "Design Olares profile",
               link: "/manual/tasks/profile",
             },
             {
@@ -224,7 +224,7 @@ const side = {
               link: "/manual/tasks/resources-usage",
             },
             {
-              text: "Update Terminus",
+              text: "Update Olares",
               link: "/manual/tasks/update",
             },
             {
@@ -247,13 +247,13 @@ const side = {
       ],
     },
     {
-      text: "Terminus Space",
-      link: "/manual/terminus-space/",
+      text: "Olares Space",
+      link: "/manual/space/",
       collapsed: true,
       items: [
         {
           text: "Manage accounts",
-          link: "/manual/terminus-space/manage-accounts",
+          link: "/manual/space/manage-accounts",
         },
         {
           text: "Host Olares",
@@ -261,11 +261,11 @@ const side = {
           items: [
             {
               text: "Create Olares",
-              link: "/manual/terminus-space/create-olares",
+              link: "/manual/space/create-olares",
             },
             {
               text: "Manage Olares",
-              link: "/manual/terminus-space/manage-olares",
+              link: "/manual/space/manage-olares",
             },
           ],
         },
@@ -275,19 +275,19 @@ const side = {
           items: [
             {
               text: "Set up a custom domain",
-              link: "/manual/terminus-space/host-domain",
+              link: "/manual/space/host-domain",
             },
             {
               text: "Manage a domain",
-              link: "/manual/terminus-space/manage-domain",
+              link: "/manual/space/manage-domain",
             },
           ],
         },
         {
           text: "Back up and restore",
-          link: "/manual/terminus-space/backup-restore",
+          link: "/manual/space/backup-restore",
         },
-        { text: "Billing", link: "/manual/terminus-space/billing" },
+        { text: "Billing", link: "/manual/billing" },
       ],
     },
     {
@@ -324,7 +324,7 @@ const side = {
 
   "/developer/": [
     {
-      text: "Developing Terminus App",
+      text: "Developing Olares App",
       items: [
         {
           text: "Overview",
@@ -369,7 +369,7 @@ const side = {
               link: "/developer/develop/package/chart",
             },
             {
-              text: "TerminusManifest",
+              text: "OlaresManifest",
               link: "/developer/develop/package/manifest",
             },
             {
@@ -391,8 +391,8 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Terminus Info",
-              link: "/developer/develop/advanced/terminus-info",
+              text: "Olares Info",
+              link: "/developer/develop/advanced/olares-info",
             },
             {
               text: "Service Provider",
@@ -456,11 +456,11 @@ const side = {
     },
 
     {
-      text: "Contributing To Terminus",
+      text: "Contributing To Olares",
       items: [
         {
-          text: "Terminus OS",
-          link: "/developer/contribute/terminus-os",
+          text: "Olares",
+          link: "/developer/contribute/olares",
         },
         {
           text: "Develop System App",
@@ -476,8 +476,8 @@ const side = {
               link: "/developer/contribute/system-app/deployment",
             },
             {
-              text: "`TerminusManifest.yaml`",
-              link: "/developer/contribute/system-app/terminus-manifest",
+              text: "`OlaresManifest.yaml`",
+              link: "/developer/contribute/system-app/olares-manifest",
             },
             {
               text: "Install",

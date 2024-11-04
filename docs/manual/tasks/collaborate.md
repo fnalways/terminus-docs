@@ -1,5 +1,5 @@
-# Collaborate in Terminus
-Terminus helps teams work together efficiently while maintaining data privacy. Set up your collaborative workspace with some essential features.
+# Collaborate in Olares
+Olares helps teams work together efficiently while maintaining data privacy. Set up your collaborative workspace with some essential features.
 
 ## Access and share files in Files
 
@@ -29,12 +29,12 @@ Give your team flexible ways to access applications through public and private e
 
 For details, see [Customize application URLs](./access-settings).
 ## Simplify remote access with VPN
-When your team works remotely, accessing Terminus usually requires going through public networks - which means using services like Cloudflare and dealing with complex network setups. Terminus's built-in VPN offers a simpler way:
+When your team works remotely, accessing Olares usually requires going through public networks - which means using services like Cloudflare and dealing with complex network setups. Olares's built-in VPN offers a simpler way:
 
 * All team members can access applications on different devices using simple local addresses.
 * Instead of going through public networks, connections stay within internal network, making it faster and reducing your public network usage costs.
 
-For details, see [Access Terminus applications on other devices via VPN](./private-network).
+For details, see [Access Olares applications on other devices via VPN](./private-network).
 
 
 

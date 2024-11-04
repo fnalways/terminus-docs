@@ -1,10 +1,10 @@
 # User roles and permissions
 
-Terminus supports multi-user operations, allowing multiple users to access the system simultaneously. Each user can securely access resources based on their assigned role and permissions.
+Olares supports multi-user operations, allowing multiple users to access the system simultaneously. Each user can securely access resources based on their assigned role and permissions.
 
 ## Role types
-Terminus has two default user roles:
-- **Admin**: Automatically assigned to the first user who activates and logs into Terminus
+Olares has two default user roles:
+- **Admin**: Automatically assigned to the first user who activates and logs into Olares
 - **Member**: Standard user role with limited permissions
 
 <table>
@@ -18,7 +18,7 @@ Terminus has two default user roles:
             <ul>
                 <li>Use system apps: Files, Vault, Wise, Profile, Dashboard, and Control Hub</li>
                 <li>Enable VPN for private entrances</li>
-                <li>Connect to Terminus Space</li>
+                <li>Connect to Olares Space</li>
                 <li>Customize app entrances</li>
                 <li>Install regular apps in Market</li>
                 <li>Access shared vaults with assigned read/write permissions</li>
@@ -36,7 +36,7 @@ Terminus has two default user roles:
                 <li>Install and manage cluster-scoped applications</li>
                 <li>Monitor and manage system resources</li>
                 <li>Set GPU usage mode</li>
-                <li>Update Terminus</li>
+                <li>Update Olares</li>
             </ul>
         </td>
     </tr>

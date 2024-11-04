@@ -2,12 +2,12 @@
 outline: [2, 3]
 ---
 
-# Design Your Terminus profile
+# Design Your Olares profile
 
 You can create a distinctive personal homepage that showcases your digital identity.
 
 ## Access your homepage
-Your personal homepage's default URL is `{Local name}.myterminus.com`.
+Your personal homepage's default URL is `{Local name}.olares.com`.
 
 ## Customize your homepage
 
@@ -21,7 +21,7 @@ Enhance your online presence by adding social media links. Visitors can easily a
 Fine-tune your homepage's appearance by adjusting the layout style and background scheme in the appearance section.
 
 ## Share your homepage
-Terminus offers multiple ways to share your personal homepage:
+Olares offers multiple ways to share your personal homepage:
 
 * **Share via Social Platforms**: Directly share your homepage on popular social media platforms like X, Meta, and LinkedIn.
 * **Share via QR Code**: Generate a QR code for your homepage, which you can download and share.
@@ -30,6 +30,6 @@ Terminus offers multiple ways to share your personal homepage:
 ## Track your homepage analytics
 Monitor your homepage's performance with built-in analytics. This feature helps you understand your audience and optimize your content for better engagement.
 
-1. Open the Dashboard from the Dock or Launchpad in Terminus.
+1. Open the Dashboard from the Dock or Launchpad in Olares.
 2. Navigate to the **Analytics** page and click on the **Profile** app card.
 3. View detailed visit statistics, including total views, unique visitors, average time spent, peak visit times, and visitor device types.

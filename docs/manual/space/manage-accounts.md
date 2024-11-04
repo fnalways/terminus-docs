@@ -4,16 +4,16 @@ This guide walks you through common account operations with Olares Space, includ
 
 ## Log in to Olares Space
 
-Olares Space uses a decentralized ID (DID) or Terminus Name for authentication. Make sure you already have obtained your credentials on your LarePass. 
+Olares Space uses a decentralized ID (DID) or Olares ID for authentication. Make sure you already have obtained your credentials on your LarePass. 
 
-1. In LarePass app, select the DID or Terminus Name you wish to use to log in. 
-2. Open https://space.jointerminus.com/ in your browser. 
+1. In LarePass app, select the DID or Olares ID you wish to use to log in. 
+2. Open https://space.olares/ in your browser. 
 3. Scan the QR code using LarePass.  
 
 ::: tip NOTE
-The features and services available on Olares Space vary depending on whether you use a DID or Terminus Name for login. 
+The features and services available on Olares Space vary depending on whether you use a DID or Olares ID for login. 
 - **Logging in with a DID** allows you to set your own domain since no domain is associated to the account. However, you must bind the DID to an Olares ID before you can activate an Olares device.
-- **Logging in with a Terminus Name** enables you to create a Terminus, provided the name isn't already linked to another Terminus device. However, you cannot use your custom domain since your Terminus Name already corresponds to a unique domain.
+- **Logging in with an Olares ID** enables you to create an Olares, provided the name isn't already linked to another Olares device. However, you cannot use your custom domain since your Olares ID already corresponds to a unique domain.
 :::
 
 
