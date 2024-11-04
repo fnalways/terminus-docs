@@ -5,9 +5,9 @@
 
 ```sh
 # Environment variable
-export KUBE_TYPE="k8s"                          # Choose between k8s / k3s, k3s being the default.
-export REGISTRY_MIRRORS="http://dockermirror/"  # Set the Docker registry mirror URL
-export LOCAL_GPU_ENABLE=1                       # Install local GPU to the cluster if GPU is installed on the node
+export KUBE_TYPE="k8s"                          # k8s or k3s (k3s is default)
+export REGISTRY_MIRRORS="http://dockermirror/"  # Docker registry mirror URL
+export LOCAL_GPU_ENABLE=1                       # Enable local GPU support if hardware is installed on the node
 export LOCAL_GPU_SHARE=1                        # Enable GPU sharing
 
 # Execute installation
@@ -42,7 +42,7 @@ cd install-wizard && bash change_ip.sh
 This command is not applicable to Terminus on macOS yet.
 :::
 
-## Add a Terminus Node Locally
+## Add a Terminus node locally
 
 **Before Install**
 - Get the `internal IP address` of the **Master** node.
@@ -60,7 +60,7 @@ bash ./publicAddnode.sh
 
 During the installation process, you will be asked to enter relevant information about the **Master node**. Please input as instructed.
 
-## Add a Hard Drive Locally
+## Add a hard drive locally
 
 **Before Install**
 - Insert the hard drive, then format it and create a filesystem in the operating system. The recommended filesystem is `XFS`.
@@ -125,7 +125,7 @@ bash scale_minio.sh -a node -v /terminus/data/minio/vol{1...4} \
 
 To debug a program that involves the startup process of Terminus, you may need to build a temporary local version of Terminus and replace the service you're debugging.
 
-In other scenarios, consider using [ControlHub](../../../how-to/terminus/controlhub/) or kubectl to update services.
+In other scenarios, consider using Control Hub or kubectl to update services.
 
 ```sh
 # Clone
@@ -177,6 +177,6 @@ cd install_wizard && tar zxvf ../install-wizard-${VERSION}.tar.gz
 bash publicRestoreInstaller.sh
 ```
 
-If you backup your data to the **Terminus Space**, you can directly download the restoration script from **Terminus Space**.
+If you back up your data to the **Terminus Space**, you can directly download the restoration script from **Terminus Space**.
 
 ![restore](images/restore.jpg)

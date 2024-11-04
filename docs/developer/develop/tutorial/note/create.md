@@ -7,7 +7,7 @@ outline: [2, 3]
 ## Install and Launch DevBox
 
 1. Install [DevBox](https://market.jointerminus.com/app/devbox) from the Terminus Market. 
-2. Find the the **DevBox** icon in the launcher panel on the **Terminus Desktop**.
+2. Find the **DevBox** icon in the launcher panel on the **Terminus Desktop**.
 3. Click on the icon to launch the application.
 
 ![main screen](/images/developer/develop/tutorial/create/home.jpg)

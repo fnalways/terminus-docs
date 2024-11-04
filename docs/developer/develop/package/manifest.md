@@ -73,7 +73,7 @@ options:
 Terminus Manifest Version: `0.7.1`
 
 Changelog:
-- Add new `authLevel` vaule `internal`
+- Add new `authLevel` value `internal`
 - Change `spec`>`language` to `spec`>`locale` and support i18n
 :::
 
@@ -166,7 +166,7 @@ The **Chart Version** of the application. It should be incremented each time the
 - Type: `list<string>`
 - Accepted Value: `Blockchain`, `Utilities`, `Social Network`, `Entertainment`, `Productivity`
 
-Used to display your app on different categoiry page in **Terminus Market**.
+Used to display your app on different category page in **Terminus Market**.
 
 ## Entrances
 
@@ -247,7 +247,7 @@ When `invisible` is `true`, the entrance will not be displayed on the **Terminus
 - Default: `default`
 - Optional
 
-Explicity defines how to open this entrance in [Desktop](../../../how-to/terminus/desktop.md)
+Explicitly defines how to open this entrance in Desktop.
 
 The `iframe` creates a new window within the desktop window through an iframe. The `window` opens a new tab in the browser. The `default` follows the system setting, which is `iframe` by default.
 
@@ -256,7 +256,7 @@ The `iframe` creates a new window within the desktop window through an iframe. T
 - Default: `false`
 - Optional
 
-When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser‘s same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
+When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser's same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
 
 To ensure a seamless user experience, you can enable this option by setting it to true. This action prompts the gateway to automatically inject the following code into the iframe. This code sends an event to the parent window (desktop) whenever the iframe's URL changes. As a result, the desktop can track URL changes and open the correct page.
 
@@ -323,7 +323,7 @@ Whether the app requires read and write permission to the `Data` folder. If `.Va
 - Type: `list<string>`
 - Optional
 
-Whether the app requires read and write permission to user's `Home` folder. List all directories that the application needs to access under the user's `Home`. All `userData` directory configued in the deployment YAML, must be included here.
+Whether the app requires read and write permission to user's `Home` folder. List all directories that the application needs to access under the user's `Home`. All `userData` directory configured in the deployment YAML, must be included here.
 
 ### sysData
 
@@ -354,7 +354,7 @@ All system API [providers](../advanced/provider.md) are list below:
 | Group | version | dataType | ops |
 | ----------- | ----------- | ----------- | ----------- |
 | service.appstore | v1 | app | InstallDevApp, UninstallDevApp
-| message-disptahcer.system-server | v1 | event | Create, List
+| message-dispatcher.system-server | v1 | event | Create, List
 | service.desktop | v1 | ai_message | AIMessage
 | service.did | v1 | did | ResolveByDID, ResolveByName, Verify
 | api.intent | v1 | legacy_api | POST
@@ -469,7 +469,7 @@ spec:
 - Optional
 - Type: `map`
 
-The **Terminus OS** provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add requried middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
+The **Terminus OS** provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add required middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
 
 Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
 

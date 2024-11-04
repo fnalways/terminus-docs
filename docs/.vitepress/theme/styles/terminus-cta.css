@@ -1,0 +1,71 @@
+.terminus-cta {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.terminus-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.terminus-cta a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+}
+
+.terminus-cta a:hover {
+  color: #333; /* 保持颜色不变 /
+    text-decoration: none; / 移除可能的下划线 */
+}
+
+.terminus-cta .content {
+  flex-grow: 1;
+}
+
+.terminus-cta h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.terminus-cta p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.terminus-cta .arrow {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: #666;
+}
+
+.terminus-cta a:hover .arrow {
+  color: #666; /* 保持箭头颜色不变 */
+}
+
+:root.dark {
+  .terminus-cta a {
+    background-color: #222;
+    color: #f5f5f5;
+  }
+  .terminus-cta a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  .terminus-cta .arrow {
+    color: #ccc;
+  }
+  .terminus-cta a:hover .arrow {
+    color: #fff;
+  }
+}

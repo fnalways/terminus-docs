@@ -13,7 +13,7 @@ hero:
       text: Get Started
       link: /overview/introduction/
     - theme: alt
-      text: Github
+      text: GitHub
       link: https://github.com/beclab/terminus
 features:
   - icon: 📝

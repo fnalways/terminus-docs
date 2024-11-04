@@ -18,8 +18,8 @@ outline: [2, 3]
 ### 1. Develop and test your application
 
 Before submitting an application, please ensure that it has been thoroughly tested on your Terminus OS.
-- Use DevBox's dev-container to test and debug your applciation in a real online environment. [Learn more about DevBox](../tutorial/devbox.md).
-- Use the [custom installation](../../../how-to/terminus/market/index.md#custom-application) in the Market app for user testing.
+- Use DevBox's dev-container to test and debug your application in a real online environment. [Learn more about DevBox](../tutorial/devbox.md).
+- Use the [custom installation](../../../manual/tasks/install-uninstall-update#install-custom-applications) in the Market app for user testing.
 
 ### 2. Submit an application
 The submission of the application needs to be completed through a **Pull Request**. Here's how:
@@ -70,7 +70,7 @@ The title and content of the PR are crucial for **GitBot**. Please adhere to the
 
 You can continue managing and maintaining your application by creating a Pull Request to `beclab/apps:main`. You can upgrade your application, modify its availability, or completely remove it from the **Terminus Market**.
 
-The process of managing applications is similar to submission.You create a specific type of Pull Request, and GitBot takes care of the rest. Terminus uses **special control files** in the root directory of TAC to manage the application's status. These **special control files** are empty files wiht specific suffix, such as `.suspend` and `.remove`
+The process of managing applications is similar to submission.You create a specific type of Pull Request, and GitBot takes care of the rest. Terminus uses **special control files** in the root directory of TAC to manage the application's status. These **special control files** are empty files with specific suffix, such as `.suspend` and `.remove`
 
 :::info NOTE
 No ".suspend" or ".remove" files should be included in the initial submission.
@@ -103,7 +103,7 @@ If for any reason you want to remove your application from the **Terminus Market
 **Please note:**
 - Completely empty the files in the current application directory and add a `.remove` file to the root directory.
 - Once the remove PR passes check and merges, the application store will remove your application.
-- You will not be able to reuse the same directory or **TAC** name in the future..
+- You will not be able to reuse the same directory or **TAC** name in the future.
 - Users who have already downloaded and installed the application can continue to use it after removal.
 
 ## Promoting Your Application

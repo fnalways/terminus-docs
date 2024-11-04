@@ -1,244 +1,327 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 
 const side = {
-  "/overview/": [
-    {
-      text: "Introduction",
+  "/manual/": [
+    { text: "Docs home",
+      link: "/manual/docs-home",
       items: [
+      { text: "Why Terminus", link: "/manual/why-terminus" },
+      { text: "Features",
+            link: "/manual/feature-overview",
+      },
+      ],
+      },
+    {
+      text: "Get started",
+      link: "/manual/get-started/",
+      collapsed: true,
+      items: [
+        // { text: "Quick start", link: "/manual/get-started/quick-start" },
         {
-          text: "What is Terminus?",
-          link: "/overview/introduction/what-is-terminus",
+          text: "Create a Terminus Name",
+          link: "/manual/get-started/create-terminus-name",
         },
         {
-          text: "Getting Started",
-          link: "/overview/introduction/getting-started/",
-          collapsed: true,
-          items: [
-            { text: "Linux", link: "/overview/introduction/getting-started/linux" },
-            { text: "Raspberry Pi", link: "/overview/introduction/getting-started/raspberry" },
-            { text: "MacOS", link: "/overview/introduction/getting-started/mac" },
-            { text: "Windows", link: "/overview/introduction/getting-started/windows" },
-          ]
+          text: "Install Terminus",
+          link: "/manual/get-started/install-terminus",
         },
-        // { text: "BEC Architecture", link: "/overview/introduction/bec" },
-        { text: "FAQ", link: "/overview/introduction/faq" },
+        {
+          text: "Activate Terminus",
+          link: "/manual/get-started/activate-terminus",
+        },
+        {
+          text: "Log in to Terminus",
+          link: "/manual/get-started/log-in-to-terminus",
+        },
+        {
+          text: "Back up mnemonics",
+          link: "/manual/get-started/back-up-mnemonics",
+        },
+        {
+          text: "What's next",
+          link: "/manual/get-started/next-steps",
+        },
       ],
     },
     {
-      text: "Terminus OS",
+      text: "Use cases",
+      collapsed: true,
+      link: "/manual/use-cases/",
       items: [
-        { text: "Overview", link: "/overview/terminus/overview" },
-        { text: "Account", link: "/overview/terminus/account" },
-        { text: "Terminus Name", link: "/overview/terminus/terminus-name" },
-        { text: "Application", link: "/overview/terminus/application" },
-        { text: "Network", link: "/overview/terminus/network" },
-        { text: "Data", link: "/overview/terminus/data" },
-        { text: "Secret", link: "/overview/terminus/secret" },
-        { text: "AI Framework", link: "/overview/terminus/ai" },
+        {
+          text: "Stable Diffusion",
+          link: "/manual/use-cases/stable-diffusion",
+        },
+        {
+          text: "ComfyUI",
+          link: "/manual/use-cases/comfyui",
+        },
+        {
+          text: "Open WebUI",
+          link: "/manual/use-cases/openwebui",
+        },
+        {
+          text: "Perplexica",
+          link: "/manual/use-cases/perplexica",
+        },
+        {
+          text: "Dify",
+          link: "/manual/use-cases/dify",
+        },
+        {
+          text: "Use ComfyUI in Krita",
+          link: "/manual/use-cases/comfyui-for-krita",
+        },
+        {
+          text: "Stream videos",
+          link: "/manual/use-cases/stream-media",
+        },
       ],
     },
     {
-      text: "Protocol",
+      text: "How-to",
+      collapsed: true,
+      link: "/manual/tasks/",
       items: [
-        { text: "Overview", link: "/overview/protocol/overview" },
-        { text: "Otmoic", link: "/overview/protocol/otmoic" },
-        { text: "Market", link: "/overview/protocol/market" },
-        { text: "Recommend", link: "/overview/protocol/recommend" },
-      ],
-    },
-  ],
-  "/how-to/": [
-    {
-      text: "Terminus OS",
-      items: [
-        { text: "Overview", link: "/how-to/terminus/" },
         {
-          text: "Setup",
+          text: "Personalization",
           collapsed: true,
           items: [
-            { 
-              text: "Install",
-              link: "/how-to/terminus/setup/install/", 
-              collapsed: true, 
-              items: [
-                { text: "Linux", link: "/how-to/terminus/setup/install/linux" },
-                { text: "Raspberry Pi", link: "/how-to/terminus/setup/install/raspberry" },
-                { text: "MacOS", link: "/how-to/terminus/setup/install/mac" },
-                { text: "Windows", link: "/how-to/terminus/setup/install/windows" },
-              ]
-            }, 
-            { text: "Wizard", link: "/how-to/terminus/setup/wizard" },
-            { text: "Login", link: "/how-to/terminus/setup/login" },
-          ],
-        },
-        { text: "Desktop", link: "/how-to/terminus/desktop" },
-        {
-          text: "Vault",
-          link: "/how-to/terminus/vault/",
-          collapsed: true,
-          items: [
-            { text: "Web", link: "/how-to/terminus/vault/web" },
-            { text: "Vault & Item", link: "/how-to/terminus/vault/vault" },
-            { text: "Team", link: "/how-to/terminus/vault/team" },
+            {
+              text: "Design Terminus profile",
+              link: "/manual/tasks/profile",
+            },
+            {
+              text: "Set language and appearance",
+              link: "/manual/tasks/language-appearance",
+            },
+            {
+              text: "Add integrations",
+              link: "/manual/tasks/integrations",
+            },
+            {
+              text: "Use NFT images",
+              link: "/manual/tasks/nft-image",
+            },
           ],
         },
         {
-          text: "Files",
-          link: "/how-to/terminus/files/",
-        },
-        {
-          text: "Market",
-          link: "/how-to/terminus/market/",
-        },
-        {
-          text: "Wise",
-          link: "/how-to/terminus/wise/",
-        },
-        {
-          text: "Settings",
+          text: "Manage applications",
           collapsed: true,
-          link: "/how-to/terminus/settings/",
           items: [
             {
-              text: "Home",
-              link: "/how-to/terminus/settings/home",
+              text: "Install, uninstall & update",
+              link: "/manual/tasks/install-uninstall-update",
             },
             {
-              text: "Account",
-              link: "/how-to/terminus/settings/account",
+              text: "Customize URLs",
+              link: "/manual/tasks/access-settings",
             },
             {
-              text: "Application",
-              link: "/how-to/terminus/settings/application",
+              text: "Manage GPU usage",
+              link: "/manual/tasks/gpu-resource",
             },
             {
-              text: "Integration",
-              link: "/how-to/terminus/settings/integration",
-            },
-            {
-              text: "Wallpaper",
-              link: "/how-to/terminus/settings/wallpaper",
-            },
-            {
-              text: "Knowledge Base",
-              link: "/how-to/terminus/settings/knowledge",
-            },
-            {
-              text: "Backup",
-              link: "/how-to/terminus/settings/backup",
-            },
-            {
-              text: "Upgrade",
-              link: "/how-to/terminus/settings/upgrade",
+              text: "Access via VPN",
+              link: "/manual/tasks/private-network",
             },
           ],
         },
-        { text: "Profile", link: "/how-to/terminus/profile" },
         {
-          text: "Dashboard",
-          link: "/how-to/terminus/dashboard/",
-        },
-        {
-          text: "ControlHub",
+          text: "Manage files",
           collapsed: true,
-          link: "/how-to/terminus/controlhub/",
+          link: "/manual/tasks/files",
           items: [
             {
-              text: "Browse",
-              link: "/how-to/terminus/controlhub/browse",
+              text: "Add, edit & download",
+              link: "/manual/tasks/add-edit-download",
             },
             {
-              text: "Namespace",
-              link: "/how-to/terminus/controlhub/namespace",
+              text: "Sync and share",
+              link: "/manual/tasks/sync-share",
+            },
+            //{
+            //  text: "Sharing and collaboration",
+            //  link: "/manual/tasks/sharing-collaboration",
+            // },
+          ],
+        },
+        {
+          text: "Secure sensitive data",
+          collapsed: true,
+          link: "/manual/tasks/vault",
+          items: [
+            {
+              text: "Vault basics",
+              link: "/manual/tasks/vault-items",
             },
             {
-              text: "Pods",
-              link: "/how-to/terminus/controlhub/pods",
+              text: "Share vault items",
+              link: "/manual/tasks/share-vault-items",
+            },
+            //{
+            //  text: "Generate strong passwords",
+            //  link: "/manual/tasks/strong-passwords",
+            //},
+            {
+              text: "Set up 2FA",
+              link: "/manual/tasks/two-factor-verification",
             },
             {
-              text: "Resource",
-              link: "/how-to/terminus/controlhub/resource",
-            },
-            {
-              text: "Middleware",
-              link: "/how-to/terminus/controlhub/middleware",
+              text: "Use autofill",
+              link: "/manual/tasks/autofill",
             },
           ],
         },
-        { text: "Dify.ai", link: "/how-to/terminus/dify" },
-      ],
-    },
-    {
-      text: "TerimPass",
-      items: [
-        { text: "Overview", link: "/how-to/termipass/overview" },
         {
-          text: "Account",
-          link: "/how-to/termipass/account/",
+          text: "Curate information hub",
+          collapsed: true,
+          link: "/manual/tasks/wise/",
+          items: [
+            {
+              text: "Wise basics",
+              link: "/manual/tasks/wise-basics",
+            },
+            {
+              text: "Discover",
+              link: "/manual/tasks/recommend",
+            },
+            {
+              text: "Subscribe",
+              link: "/manual/tasks/subscribe",
+            },
+            //{
+            //  text: "Subscribe to an RSS feed",
+            //  link: "/manual/tasks/subscribe",
+            //},
+          ],
         },
         {
-          text: "Manage Terminus",
-          link: "/how-to/termipass/manage-terminus",
+          text: "Start a team",
+          link: "/manual/tasks/team",
+          collapsed: true,
+          items: [
+            {
+              text: "User roles",
+              link: "/manual/tasks/roles-permissions",
+            },
+            {
+              text: "Manage your team",
+              link: "/manual/tasks/manage-team",
+            },
+            {
+              text: "Collaborate",
+              link: "/manual/tasks/collaborate",
+            },
+          ],
         },
         {
-          text: "Password Autofill",
-          link: "/how-to/termipass/password-autofill",
-        },
-        {
-          text: "Local File Sync",
-          link: "/how-to/termipass/local-file-sync",
+          text: "Maintain",
+          collapsed: true,
+          items: [
+            {
+              text: "Monitor system and apps",
+              link: "/manual/tasks/resources-usage",
+            },
+            {
+              text: "Update Terminus",
+              link: "/manual/tasks/update",
+            },
+            {
+               text: "Navigate Control Hub",
+               link: "/manual/tasks/navigate-control-hub",
+               collapsed: true,
+               items: [
+               {
+               text: "Edit system resource",
+               link: "/manual/tasks/edit-resource",
+               },
+               {
+               text: "View database status",
+               link: "/manual/tasks/view-database-status",
+               },
+               ],
+            },
+          ],
         },
       ],
     },
     {
       text: "Terminus Space",
+      link: "/manual/terminus-space/",
+      collapsed: true,
       items: [
-        { text: "Quick Start", link: "/how-to/space/" },
-        { text: "Account", link: "/how-to/space/account" },
         {
-          text: "Host Terminus",
+          text: "Manage accounts",
+          link: "/manual/terminus-space/manage-accounts",
+        },
+        {
+          text: "Host Olares",
           collapsed: true,
-          link: "/how-to/space/host/",
           items: [
             {
-              text: "Create Terminus",
-              link: "/how-to/space/host/create-terminus",
+              text: "Create Olares",
+              link: "/manual/terminus-space/create-olares",
             },
             {
-              text: "Management Terminus",
-              link: "/how-to/space/host/management-terminus",
+              text: "Manage Olares",
+              link: "/manual/terminus-space/manage-olares",
             },
           ],
         },
         {
-          text: "Organization Domain",
+          text: "Host domains",
           collapsed: true,
-          link: "/how-to/space/domain/",
           items: [
             {
-              text: "Host Domain",
-              link: "/how-to/space/domain/host-domain",
+              text: "Set up a custom domain",
+              link: "/manual/terminus-space/host-domain",
             },
             {
-              text: "Management Domain",
-              link: "/how-to/space/domain/management-domain",
+              text: "Manage a domain",
+              link: "/manual/terminus-space/manage-domain",
             },
           ],
         },
-        { text: "Backup & Restore", link: "/how-to/space/backup" },
-        { text: "Bill", link: "/how-to/space/bill" },
+        {
+          text: "Back up and restore",
+          link: "/manual/terminus-space/backup-restore",
+        },
+        { text: "Billing", link: "/manual/terminus-space/billing" },
       ],
     },
     {
-      text: "Otmoic",
+      text: "Concepts",
+      collapsed: true,
+      link: "/manual/concepts/",
       items: [
-        {
-          text: "How to use",
-          link: "/how-to/otmoic/",
-        },
+        { text: "Architecture", link: "/manual/concepts/architecture",},
+        { text: "Olares ID", link: "/manual/concepts/olares-id" },
+        { text: "Account", link: "/manual/concepts/account" },
+        { text: "Application", link: "/manual/concepts/application" },
+        { text: "Network", link: "/manual/concepts/network" },
+        { text: "Data", link: "/manual/concepts/data" },
+        { text: "Secrets", link: "/manual/concepts/secrets" },
       ],
     },
+    //{
+    //  text: "Help and Support",
+    //  collapsed: true,
+   //   items: [
+        { text: "FAQs", link: "/manual/help/faqs" },
+   //     {
+   //       text: "Troubleshooting Guide",
+   //       link: "/manual/help/troubleshooting-guide",
+   //     },
+   //     {
+   //       text: "Request Technical Support",
+   //       link: "/manual/help/request-technical-support",
+   //     },
+   //   ],
+   // },
+    { text: "Glossary", link: "/manual/glossary" },
   ],
+
   "/developer/": [
     {
       text: "Developing Terminus App",
@@ -307,10 +390,6 @@ const side = {
           text: "Advanced",
           collapsed: true,
           items: [
-            {
-              text: "CLI",
-              link: "/developer/develop/advanced/cli",
-            },
             {
               text: "Terminus Info",
               link: "/developer/develop/advanced/terminus-info",
@@ -383,52 +462,6 @@ const side = {
           text: "Terminus OS",
           link: "/developer/contribute/terminus-os",
         },
-        // {
-        //   text: "TermiPass",
-        //   link: "/developer/contribute/termipass",
-        // },
-        {
-          text: "Snowinning Protocol",
-          collapsed: true,
-
-          items: [
-            {
-              text: "Overview",
-              link: "/developer/contribute/snowinning/overview",
-            },
-            {
-              text: "Concepts",
-              link: "/developer/contribute/snowinning/concepts",
-            },
-            {
-              text: "Terminus Name",
-              link: "/developer/contribute/snowinning/terminus-name",
-            },
-            {
-              text: "Contract",
-              collapsed: true,
-              link: "/developer/contribute/snowinning/contract-overview",
-              items: [
-                {
-                  text: "TerminusDID",
-                  link: "/developer/contribute/snowinning/contract-tdid",
-                },
-                {
-                  text: "Reputation",
-                  link: "/developer/contribute/snowinning/contract-reputation",
-                },
-                {
-                  text: "Manager",
-                  link: "/developer/contribute/snowinning/contract-manager",
-                },
-              ],
-            },
-            {
-              text: "VC Service",
-              link: "/developer/contribute/snowinning/vc",
-            },
-          ],
-        },
         {
           text: "Develop System App",
           collapsed: true,
@@ -439,11 +472,11 @@ const side = {
               link: "/developer/contribute/system-app/overview",
             },
             {
-              text: "deyploment.yaml",
+              text: "`deployment.yaml`",
               link: "/developer/contribute/system-app/deployment",
             },
             {
-              text: "TerminusManifest.yaml",
+              text: "`TerminusManifest.yaml`",
               link: "/developer/contribute/system-app/terminus-manifest",
             },
             {
@@ -464,13 +497,11 @@ const side = {
 export const en = defineConfig({
   lang: "/",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: "/icon.png",
     socialLinks: [{ icon: "github", link: "https://github.com/beclab" }],
 
     nav: [
-      { text: "Overview", link: "/overview/introduction/what-is-terminus" },
-      { text: "How To Use", link: "/how-to/terminus/" },
+      { text: "Manual", link: "/manual/docs-home" },
       { text: "Developer", link: "/developer/develop/" },
     ],
 

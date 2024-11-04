@@ -5,7 +5,7 @@ During installation, **Terminus** injects extended field into the APP, using the
 The information from these extended fields can be directly referenced in the template without being defined in values.yaml. If there are definitions in values.yaml with the same name, the system value will overwrite them.
 
 
-- User Infomation
+- User Information
 
   | Value             | Type   | Description         |
   | -------------------- | ------ | --------------------- |
@@ -28,7 +28,7 @@ The information from these extended fields can be directly referenced in the tem
 - Cluster Information
   | Value       | Type               | Description 
   | -------------- | ------------------ | ---------------------------------------------------- |
-  | .Values.cluster.arch | String | Cluster CPU archtecture   |
+  | .Values.cluster.arch | String | Cluster CPU architecture   |
 
   Multi-platform (AMD64 and ARM) cluster is not supported for now.
 
