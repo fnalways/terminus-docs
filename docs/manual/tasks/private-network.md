@@ -23,7 +23,7 @@ When accessing private entrances from an external environment through VPN, if th
 
 ## Set up VPN access
 :::tip
-For different LarePass download options, visit [the official page](https://www.olares.com/larepass).
+For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
 ### On Olares mobile client

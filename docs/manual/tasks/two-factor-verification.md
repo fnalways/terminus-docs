@@ -12,7 +12,7 @@ If the service provides recovery codes, store them securely. They are crucial to
 
 ## Create an authenticator in Vault
 :::tip
-Visit the [official page](https://www.olares.com/larepass) for download options.
+Visit the [official page](https://www.olares.xyz/larepass) for download options.
 :::
 <tabs>
 <template #Olares,-LarePass-desktop,-or-browser-extension>

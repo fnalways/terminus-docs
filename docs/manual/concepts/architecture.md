@@ -9,7 +9,7 @@ The BEC architecture comprises the following components:
 
 - [**Snowinning protocol**](https://docs.snowinning.com/protocol/overview.html): A decentralized identity and credit system which provides a framework for secure, trustless exchanges of information and value. It integrates decentralized identifiers (DIDs), verifiable credentials (VCs), and reputation data.
 - [**Olares**](https://github.com/beclab/Olares): A cloud-native, self-hosted operating system based on Kubernetes. It transforms your home edge device into a personal cloud, giving you complete control over your data and applications.
-- [**LarePass**](https://www.olares.com/larepass): A comprehensive client software that securely bridges users to their Olares systems. It offers remote access, identity and device management, data storage, and productivity tools, providing a seamless interface for all Olares interactions.
+- [**LarePass**](https://www.olares.xyz/larepass): A comprehensive client software that securely bridges users to their Olares systems. It offers remote access, identity and device management, data storage, and productivity tools, providing a seamless interface for all Olares interactions.
 
 ##  Protocols
 

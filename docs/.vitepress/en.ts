@@ -176,7 +176,7 @@ const side = {
         {
           text: "Curate information hub",
           collapsed: true,
-          link: "/manual/tasks/wise/",
+          link: "/manual/tasks/wise",
           items: [
             {
               text: "Wise basics",

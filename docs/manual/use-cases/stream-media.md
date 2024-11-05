@@ -8,7 +8,7 @@ Want to enjoy your movies and TV shows from anywhere? Here's how to access your 
 ## Enable Olares VPN connection
 To achieve smooth streaming over external networks, enable the Olares VPN connection in LarePass. This ensures all traffic from devices with LarePass installed routes through the dedicated network, providing LAN-like speed and performance.
 :::tip
-For different LarePass download options, visit [the official page](https://www.olares.com/larepass).
+For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
 ### On Olares mobile client

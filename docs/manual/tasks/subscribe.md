@@ -28,7 +28,7 @@ When browsing recommended content on the **For You** page, you can subscribe to 
 
 ### Use LarePass for web subscriptions
 :::tip
-LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.com/larepass).
+LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
 :::
 1. Open the LarePass browser extension, and click **Collect**.
 2. For the current webpage, check available subscriptions in the **RSS** section.
