@@ -81,7 +81,7 @@ There is no doubt that Redis can be regarded as the most popular memory cache so
 
 Olares also takes over the backup and restore of Redis Cluster. There is no need for users to provide any separate operation and maintenance operations for Redis Cluster.
 
-In addition, since Redis Cluster itself lacks a data isolation mechanism, Olares OS has also developed a proxy layer tool to implement the `namespace` mechanism of data. This isolation mechanism is completely transparent to developers. Developers do not need to do any special processing of data keys in their code. Data isolation between multiple applications and multiple users can be achieved with simple configuration in TAC.
+In addition, since Redis Cluster itself lacks a data isolation mechanism, Olares OS has also developed a proxy layer tool to implement the `namespace` mechanism of data. This isolation mechanism is completely transparent to developers. Developers do not need to do any special processing of data keys in their code. Data isolation between multiple applications and multiple users can be achieved with simple configuration in application chart.
 
 - Version: `6.2.13`
 

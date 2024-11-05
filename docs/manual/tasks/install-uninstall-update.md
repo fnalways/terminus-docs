@@ -65,10 +65,10 @@ After installation, users can access the cluster-scoped application's services b
 
 ### Install custom applications
 
-1. Prepare an Olares Application Chart (TAC) file (in `.zip`, `.tgz`, `.tar`, or `.gz` format).
+1. Prepare an Olares Application Chart file (in `.zip`, `.tgz`, `.tar`, or `.gz` format).
 2. Open the Market app from the Dock or Launchpad.
 3. Click **My Olares** > **Custom** to see all custom applications.
-4. Click **Upload custom chart** and select your TAC file.
+4. Click **Upload custom chart** and select chart files.
 
 ## Update applications
 1. Open the Market app from the Dock or Launchpad.

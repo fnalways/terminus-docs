@@ -1,6 +1,6 @@
 # Olares Application Chart Structure
 
-The **Olares Application Chart (TAC)** is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard **TAC** should contain the following files:
+The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart should contain the following files:
 ```
 |-- Chart.yaml                   # chart metadata
 |-- OlaresManifest.yaml        # Olares Application configuration
@@ -12,7 +12,7 @@ The **Olares Application Chart (TAC)** is built upon the structure of **Helm Cha
 To make the templates directory easier to understand, you can split the deployment into several files.
 :::
 
-- A typical **TAC** for `App`:
+- A typical application chart for `App`:
 ```
 AppName
 |-- Chart.yaml                # Required: YAML file containing chart metadata
@@ -27,7 +27,7 @@ AppName
 |-- README.md                 # Optional: readable README file
 ```
 
-- A typical **TAC** for `Recommend`:
+- A typical application chart for `Recommend`:
 
 ```
 RecommendName
@@ -44,7 +44,7 @@ RecommendName
 |-- README.md                 # Optional: readable README file
 ```
 
-- A typical **TAC** for `Large Language Model`:
+- A typical application chart for `Large Language Model`:
 
 ```
 ModelName
@@ -52,7 +52,7 @@ ModelName
 |-- OlaresManifest.yaml     # Required: containing LLM configuration
 |-- values.yaml               # Required: default configuration values of the chart
 ├── modelConfig.yaml          # Required: containing model configuration
-|-- templates                 # Required: template directory, it is usually empty in TAC for Model.
+|-- templates                 # Required: template directory, it is usually empty for Model.
 |-- LICENSE                   # Optional: plain text file containing the chart license
 └── README.md                 # Optional: readable README file
 ```

@@ -16,7 +16,7 @@ To prevent cookie conflicts, **no application** (whether it's a built-in system 
 
 Every application in **Olares** operates under two domains: <`app id>.<username>.olares.com` and `<app id>.local.<username>.olares.com`. As a result, Olares incorporates a cookie-setting `rewrite` mechanism within the `TAPR (Olares Application Runtime)`. This ensures that the application automatically assigns cookies for both domains in the Set-`Cookie` field of the **HTTP response**.
 
-To use this feature, you just need to define it in the TAC's [OlaresManifest.yaml](../package/manifest.md#resetcookie)
+To use this feature, you just need to define it in the application chart's [OlaresManifest.yaml](../package/manifest.md#resetcookie)
 
 ```yaml
 options:

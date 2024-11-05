@@ -430,7 +430,7 @@ requiredMemory: 256Mi
 
 To add multi-language support for your app in Olares Market:
 
-1. Create an `i18n` folder in the Olares Application Chart (TAC) root directory.
+1. Create an `i18n` folder in the Olares Application Chart root directory.
 2. In the `i18n` folder, create separate subdirectories for each supported locale.
 3. In each locale subdirectory, place a localized version of the `OlaresManifest.yaml` file.
 

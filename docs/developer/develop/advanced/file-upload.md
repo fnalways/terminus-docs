@@ -8,7 +8,7 @@ There are many situations where you might need to upload local files to your edg
 
 ## How to install
 
-To use this feature, simply add the following configuration to the [OlaresManifest.yaml](../package/manifest.md#upload) file in TAC.
+To use this feature, simply add the following configuration to the [OlaresManifest.yaml](../package/manifest.md#upload) file in the application chart.
 ```yaml
 upload:
   fileType:

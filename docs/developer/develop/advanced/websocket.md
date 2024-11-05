@@ -160,7 +160,7 @@ Cookie: .... // New feature in version v1.0.3
 
 ## Deploy WebSocket Service in App
 
-To use this feature, simply add the `websocket configuration` to the [OlaresManifest.yaml](../package/manifest.md#websocket) file in TAC.
+To use this feature, simply add the `websocket configuration` to the [OlaresManifest.yaml](../package/manifest.md#websocket) file in the application chart.
 ```yaml
 options:
   websocket:

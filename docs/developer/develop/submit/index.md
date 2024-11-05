@@ -9,8 +9,8 @@ outline: [2, 3]
 
 :::info **Brief Overview**
 
-1. Test your application on Olares, create the Olares Application Chart(TAC) according to [guideline](../package/chart.md).
-2. Fork the official [application repository of Olares Market](https://github.com/beclab/apps). Add your application's **TAC**. Create a **PR** to `beclab/apps:main`.
+1. Test your application on Olares, create the Olares Application Chart according to [guideline](../package/chart.md).
+2. Fork the official [application repository of Olares Market](https://github.com/beclab/apps). Add your application's chart. Create a **PR** to `beclab/apps:main`.
 3. Wait for **GitBot** to check your PR. If needed, modify PR until it passes.
 4. Once the PR is merged, your application is ready to launch.
 :::
@@ -23,7 +23,7 @@ Before submitting an application, please ensure that it has been thoroughly test
 
 ### 2. Submit an application
 The submission of the application needs to be completed through a **Pull Request**. Here's how:
-- Fork the official [application repository of Olares Market](https://github.com/beclab/apps) and add your application's **TAC** in your forked repository.
+- Fork the official [application repository of Olares Market](https://github.com/beclab/apps) and add your application's chart in your forked repository.
 - Create a `Draft PR` pointing to `beclab/apps:main`.
 - Please edit your PR title and text according to the template.
     - **PR Title** must in this format: [PR Type][FolderName][version]Title Content
@@ -32,8 +32,8 @@ The submission of the application needs to be completed through a **Pull Request
         - UPDATE: Update an already successfully merged application
         - REMOVE: Remove an already successfully merged application
         - SUSPEND: Suspend an already successfully merged application from distribution through the application store
-    - `FolderName` is your Olares Application Chart name. It must adhere to the naming requirements in [TAC specification](../package/chart.md).
-    - `version` refers to your **TAC**'s `Chart Version`, which needs to be consistent with the `version` field in `Chart.yaml` and metadata section of `OlaresManifest.yaml`
+    - `FolderName` is your Olares Application Chart name. It must adhere to the naming requirements in [chart specification](../package/chart.md).
+    - `version` refers to your application chart's `Chart Version`, which needs to be consistent with the `version` field in `Chart.yaml` and metadata section of `OlaresManifest.yaml`
 - To prevent your PR from being incorrectly parsed or closed, please adhere to the following rules:
     - Your PR title must contain only one `PR Type`, `FolderName`, and `version`.
     - Your `PR Type` must be one of the predefined types.
@@ -58,9 +58,9 @@ The title and content of the PR are crucial for **GitBot**. Please adhere to the
 
 - If **GitBot** automatically closes your PR, please **do not reopen** it. This implies that the PR has irreparable issues, and **GitBot** had to terminate the check process. You can submit a new PR after making necessary modifications.
 
-- When the PR is in `waiting to submit` state, you can continue to submit Commits to modify your PR. After submitting the Commit, GitBot will recheck your submitted **TAC** file and update the PR status.
+- When the PR is in `waiting to submit` state, you can continue to submit Commits to modify your PR. After submitting the Commit, GitBot will recheck your submitted application chart files and update the PR status.
 
-- During the `waiting to submit` state, you can continue to submit commits to modify your **TAC**. **GitBot** will recheck the **TAC** file and update the PR status upon receiving a new commit.
+- During the `waiting to submit` state, you can continue to submit commits to modify your application chart. **GitBot** will recheck the application chart files and update the PR status upon receiving a new commit.
 
 - Once your PR passes all checks, it will be automatically merged into the `beclab/apps:main`. The application will be listed on **Olares Market** after a while.
 
@@ -70,7 +70,7 @@ The title and content of the PR are crucial for **GitBot**. Please adhere to the
 
 You can continue managing and maintaining your application by creating a Pull Request to `beclab/apps:main`. You can upgrade your application, modify its availability, or completely remove it from the **Olares Market**.
 
-The process of managing applications is similar to submission.You create a specific type of Pull Request, and GitBot takes care of the rest. Olares uses **special control files** in the root directory of TAC to manage the application's status. These **special control files** are empty files with specific suffix, such as `.suspend` and `.remove`
+The process of managing applications is similar to submission.You create a specific type of Pull Request, and GitBot takes care of the rest. Olares uses **special control files** in the root directory of application chart to manage the application's status. These **special control files** are empty files with specific suffix, such as `.suspend` and `.remove`
 
 :::info NOTE
 No ".suspend" or ".remove" files should be included in the initial submission.
@@ -81,9 +81,9 @@ No ".suspend" or ".remove" files should be included in the initial submission.
 When you need to update a published application, you need to create an `UPDATE` PR. 
 
 **Please note:**
-- Whenever you make changes to your **TAC**, such as upgrade the program, update metadata, or change owner list, be sure to upgrade your chart version.
-- The chart version in the updated **TAC** must be ***greater than*** the current version in the repository.
-- No `.suspend` or `.remove` files included in the root directory of updated **TAC**.
+- Whenever you make changes to your application chart, such as upgrade the program, update metadata, or change owner list, be sure to upgrade your chart version.
+- The chart version in the updated application chart must be ***greater than*** the current version in the repository.
+- No `.suspend` or `.remove` files included in the root directory of updated application chart.
 - The **Olares Market** does not offer version rollback. If there are any issues with your application, you need to submit a new version to fix it.
 - To avoid potential conflicts, we recommend syncing your fork and rebase the commits of PR to the latest main branch.
 
@@ -92,7 +92,7 @@ When you need to update a published application, you need to create an `UPDATE` 
 If for any reason you want to temporarily disable your application's download and installation from the **Olares Market**, submit a `SUSPEND` PR.
 
 **Please note:**
-- The chart version in the submitted **TAC** must ***match*** the current version in the repository.
+- The chart version in the submitted application chart must ***match*** the current version in the repository.
 - The root directory you submit should contain the `.suspend` file and should not contain the `.remove` file.
 - Once the suspend PR passes check and merges, the application store will stop listing your application.
 - Users who have already downloaded and installed the application can continue to use it after suspension.
@@ -103,7 +103,7 @@ If for any reason you want to remove your application from the **Olares Market**
 **Please note:**
 - Completely empty the files in the current application directory and add a `.remove` file to the root directory.
 - Once the remove PR passes check and merges, the application store will remove your application.
-- You will not be able to reuse the same directory or **TAC** name in the future.
+- You will not be able to reuse the same directory or application chart name in the future.
 - Users who have already downloaded and installed the application can continue to use it after removal.
 
 ## Promoting Your Application
