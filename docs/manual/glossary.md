@@ -13,7 +13,7 @@
 
 ## C
 ### CNAME Record
-A CNAME (Canonical Name) record is a type of DNS (Domain Name System) record that maps your custom domain name to a Terminus-provided address, enabling domain-to-application mapping.
+A CNAME (Canonical Name) record is a type of DNS (Domain Name System) record that maps your custom domain name to an Olares-provided address, enabling domain-to-application mapping.
 
 ## D
 ### DID
@@ -24,10 +24,7 @@ A Decentralized Identifier (DID) is a unique digital identification method that 
 Fast Reverse Proxy (FRP) is a high-performance reverse proxy application designed for internal network penetration scenarios. It enables servers behind NAT or firewalls to provide services externally, even without public IP addresses. FRP helps users easily expose internal services to the public network.
 
 ## T
-### TAC
-Terminus Application Chart (TAC) is a Helm Chart extension specifically designed for the Terminus platform. It's used to describe, configure, and deploy applications running on the platform. It contains a series of configuration files and templates organized in a structured directory, making application deployment and management more standardized and automated.
-
-#### TOTP
+### TOTP
 Time-Based One-Time Password (TOTP) is a time-based algorithm for generating one-time passwords, widely used in two-factor authentication (2FA). It generates single-use passwords using a shared key and current time to enhance account security. Each password is valid for a brief period (typically 30 or 60 seconds) before a new one is generated.
 
 ## V

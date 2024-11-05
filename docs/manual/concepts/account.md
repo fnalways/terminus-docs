@@ -19,17 +19,17 @@ Each account has three stages:
 
 - **Not bound to an Olares ID**<br>
 An unbound account represents the initial stage where you have basic credentials created locally.
-This includes your mnemonic phrase, private key, and DID, but no Terminus Name yet. 
-During this stage, you can export and back up your mnemonic phrase and access Terminus Space to request an organization domain name. 
-However, importing to other TermiPass clients isn't possible at this point.
+This includes your mnemonic phrase, private key, and DID, but no Olares ID yet. 
+During this stage, you can export and back up your mnemonic phrase and access Olares Space to request an organization domain name. 
+However, importing to other LarePass clients isn't possible at this point.
 
 - **Bound to an Olares ID**<br>
-When your account is bound to an Olares ID, the system records the connection between your Terminus Name and DID on the blockchain.
-This enables you to request and activate a Terminus through Terminus Space. 
+When your account is bound to an Olares ID, the system records the connection between your Olares ID and DID on the blockchain.
+This enables you to request and activate an Olares through Olares Space. 
 At this stage, you gain the ability to import your account to other devices using your exported mnemonic phrase, supporting unified authentication across applications.
 
 - **Bound to an Olares**<br>
-The final stage occurs when your account is linked to an Olares device. You can fully participate in the Terminus ecosystem.
+The final stage occurs when your account is linked to an Olares device. You can fully participate in the Olares ecosystem.
 
 
 ## Unified account system
@@ -62,7 +62,7 @@ When users perform sensitive operations such as login, Olares requires users to 
 
 ### Users
 
-- [Manage Olares accounts](../get-started/create-terminus-name.md)
+- [Manage Olares accounts](../get-started/create-olares-id)
 - [Users and roles](../tasks/roles-permissions.md)
 
 ### Developers

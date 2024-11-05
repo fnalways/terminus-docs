@@ -1,8 +1,8 @@
-# Update Terminus
-Terminus regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
+# Update Olares
+Olares regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
 
 :::info
-Only Terminus admin can perform system updates. Updates will apply to all members within the same Terminus team.
+Only Olares admin can perform system updates. Updates will apply to all members within the same Olares team.
 :::
 
 ## Check and install updates

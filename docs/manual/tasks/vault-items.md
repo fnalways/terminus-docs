@@ -8,10 +8,10 @@ This guide will walk you through the fundamentals of using Vault, from setting u
 ## Understand Vault components
 
 ### Types of vault
-Terminus Vault offers two main types of vaults for users:
+Olares Vault offers two main types of vaults for users:
 
 * Main vault (**My vault**): Automatically created upon account activation, serving as the user's private vault. It's encrypted with the user's mnemonic for maximum security.
-* Shared vault (**Team vault**): These are collaborative vaults within Terminus, allowing secure information sharing among team members or family.
+* Shared vault (**Team vault**): These are collaborative vaults within Olares, allowing secure information sharing among team members or family.
 
 ### Vault items
 Think of vault items as individual secure containers for your sensitive information. Each vault item consists of several components:
@@ -39,9 +39,9 @@ Fields are the core component of Vault Items, allowing storage of various data t
 * One-time password (OTP)
 
 ## Protect Vault with password
-When use Vault in Terminus for the first time, you will be prompted to set a local password. This password should not be the same as your Terminus login password.
+When use Vault in Olares for the first time, you will be prompted to set a local password. This password should not be the same as your Olares login password.
 
-After setting up, you also need to import the Terminus Name that's already linked to your Terminus server using mnemonic phrase. 
+After setting up, you also need to import the Olares ID that's already linked to your Olares server using mnemonic phrase. 
 
 :::info
 If you don't know where to find the mnemonic phrase, see [back up mnemonic phrase](../get-started/back-up-mnemonics).
@@ -55,7 +55,7 @@ Keep your vault organized from the start by using descriptive names and relevant
 ### Add
 To add a vault item:
 <tabs>
-<template #Terminus>
+<template #Olares>
 
 1. Open the Vault app from the Dock or Launchpad.
 2. Click <i class="material-icons">add</i> in the top right corner.
@@ -63,24 +63,24 @@ To add a vault item:
 4. Fill in the required fields like item name, Username, Password, and URL.
 5. Click **Save** to create the new vault item.
 </template>
-<template #TermiPass-desktop-or-mobile>
+<template #LarePass-desktop-or-mobile>
 
-1. Open TermiPass on your device, and navigate to the **Vault** page within the app.
+1. Open LarePass on your device, and navigate to the **Vault** page within the app.
 2. Click <i class="material-icons">add</i> in the top right corner.
 3. Select a type, such as **Website / App** for storing account details, and click **Create**.
 4. Fill in the required fields like item name, Username, Password, and URL.
 5. Click **Save** to create the new vault item.
 </template>
 
-<template #TermiPass-browser-extension>
+<template #LarePass-browser-extension>
 
 :::info
-The TermiPass browser extension is currently only available for Google Chrome. Visit the [official page](https://www.jointerminus.com/termipass) to download the extension.
+The LarePass browser extension is currently only available for Google Chrome. Visit the [official page](https://www.olares.xyz/larepass) to download the extension.
 :::
 :::tip
-To easily access TermiPass, you can pin the extension to your toolbar.
+To easily access LarePass, you can pin the extension to your toolbar.
 :::
-1. Click the TermiPass icon in your toolbar or extension menu to open TermiPass on the right side of your browser window.
+1. Click the LarePass icon in your toolbar or extension menu to open LarePass on the right side of your browser window.
 2. Navigate to the **Vault** page within the extension.
 3. Click <i class="material-icons">add</i> in the top right corner.
 4. Select a type, such as **Website / App** for storing account details, and click **Create**.
@@ -110,7 +110,7 @@ Now that a new item is saved in your vault, you can improve its security by repl
 
 ### Edit
 :::info
-The TermiPass browser extension does not support editing vault items. For full editing capabilities, please use the Vault app in Terminus, the mobile, or desktop versions of TermiPass.
+The LarePass browser extension does not support editing vault items. For full editing capabilities, please use the Vault app in Olares, the mobile, or desktop versions of LarePass.
 :::
 In the edit mode, you can:
 - Update required fields.
@@ -128,14 +128,14 @@ To edit a vault item:
 ### Favorite
 Important items can be marked as favorites for quick access.
 <tabs>
-<template #Terminus>
+<template #Olares>
 
 1. In Vault, click the vault item to open its details window on the right.
 2. Click <i class="material-icons">star_border</i> in the top right corner to mark this item as favorite.
 </template>
-<template #TermiPass-desktop-or-mobile>
+<template #LarePass-desktop-or-mobile>
 
-1. Open TermiPass on your device, and navigate to the **Vault** page within the app.
+1. Open LarePass on your device, and navigate to the **Vault** page within the app.
 2. Click the vault item to navigate to its details page.
 3. Click <i class="material-icons">star_border</i> in the top right corner to mark this item as favorite.
 </template>

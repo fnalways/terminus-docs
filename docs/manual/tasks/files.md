@@ -1,8 +1,8 @@
 # Manage files
 
-Terminus's built-in Files app offers users a secure and efficient solution for file storage and synchronization, allowing access to various file types from any device or browser. It has the following advantages:
+Olares's built-in Files app offers users a secure and efficient solution for file storage and synchronization, allowing access to various file types from any device or browser. It has the following advantages:
 
-* **Access anywhere**: View, download, or share files stored in Terminus from any location using any device or browser.
+* **Access anywhere**: View, download, or share files stored in Olares from any location using any device or browser.
 * **Seamless synchronization**: Ensures data remains up-to-date across all your devices.
 * **Centralized storage**: Simplifies information retrieval and integration, making it easier to access, manage, and update your data, whether personal documents or team-shared materials.
 
@@ -17,12 +17,12 @@ It consists of three main components:
 ---
 <div>
 <h4><a href="./add-edit-download/">Add, edit, and download files</a></h4>
-Learn the fundamentals of file management in Terminus.
+Learn the fundamentals of file management in Olares.
 </div>
 
 <div>
 <h4><a href="./sync-share/">Sync and share files</a></h4>
-Learn how to keep files updated across devices, and how to share files with other Terminus member.
+Learn how to keep files updated across devices, and how to share files with other Olares member.
 </div>
 
 

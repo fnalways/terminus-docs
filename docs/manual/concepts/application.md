@@ -4,15 +4,15 @@ outline: [2, 3]
 
 # Applications
  
-This documents covers essential concepts for managing application identifiers, types, permissions, and Market integrations within Terminus. 
+This documents covers essential concepts for managing application identifiers, types, permissions, and Market integrations within Olares. 
 
 ## Application identifier
 
-In Terminus, each application is assigned two identifiers: an application name and an application ID.
+In Olares, each application is assigned two identifiers: an application name and an application ID.
 
 ### Application name
 
-Application names are assigned by Indexers. The official Indexer address maintained by Terminus is [apps](https://github.com/beclab/apps). The directory name of an application within this repository serves as the application name.
+Application names are assigned by Indexers. The official Indexer address maintained by Olares is [apps](https://github.com/beclab/apps). The directory name of an application within this repository serves as the application name.
 
 ### Application ID
 
@@ -20,11 +20,11 @@ The application ID is derived as the first eight characters of the MD5 hash of t
 
 ## Application types
 
-There are multiple types of applications in Terminus. You can distinguish a specific application type according to the namespace shown in Control Hub.
+There are multiple types of applications in Olares. You can distinguish a specific application type according to the namespace shown in Control Hub.
 
 ### System applications
 
-System applications encompass Kubernetes, Kubesphere, Terminus components, and essential hardware drivers. The system-level namespaces include:
+System applications encompass Kubernetes, Kubesphere, Olares components, and essential hardware drivers. The system-level namespaces include:
 
 ```
 os-system
@@ -42,7 +42,7 @@ gpu-system
 
 ### User system applications
 
-Terminus supports multiple users and provides two distinct namespaces for system applications accessible to Admin and Member users:
+Olares supports multiple users and provides two distinct namespaces for system applications accessible to Admin and Member users:
 
 - **user-space-{Local Name}**
 
@@ -93,7 +93,7 @@ Dependencies are prerequisite applications that must be present for certain appl
 
 The Service Provider mechanism enables community applications to interact with system applications and services from other community applications.
 
-![Service Provider](/images/overview/terminus/image3.jpeg)
+![Service Provider](/images/overview/olares/image3.jpeg)
 
 The mechanism consists of three procedures：
 
@@ -113,4 +113,4 @@ The mechanism consists of three procedures：
 
 - Developer
 
-  [Learn to develop applications on Terminus](../../developer/develop/index.md)<br>
+  [Learn to develop applications on Olares](../../developer/develop/index.md)<br>

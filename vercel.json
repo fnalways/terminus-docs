@@ -14,7 +14,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/overview/introduction/what-is-terminus.html",
+      "destination": "/manual/docs-home.html",
       "permanent": true
     }
   ]

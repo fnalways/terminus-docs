@@ -8,8 +8,8 @@ Cloud-based Olares offer a convenient deployment option, enabling you to set up 
 This section provides a step-by-step guide to creating and managing your cloud-based **Olares**. 
 
 ::: tip NOTE
-- The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Terminus, contact us for an invitation.
-- If you are looking for information about setting up a self-hosted Terminus, refer to the [Getting Started Guide](../get-started/index.md).
+- The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Olares, contact us for an invitation.
+- If you are looking for information about setting up a self-hosted Olares, refer to the [Getting Started Guide](../get-started/index.md).
 :::
 
 ## Prerequisites
@@ -18,14 +18,14 @@ Ensure you get an Olares ID to log in to Olares Space and activate the Olares in
 
 ## Create an Olares
 
-1. Log in to [Olares Space](https://space.jointerminus.com/) by scanning the QR code using LarePass.
+1. Log in to [Olares Space](https://space.olares.xyz/) by scanning the QR code using LarePass.
 2. Navigate to the **Cluster** page and select the second option to start creating.
 
     ![Basic Configuration](/images/how-to/space/basic_configuration.jpg)
 3. Configure the environment for installation as below:
    - **Select Cloud Provider**: Choose a cloud service provider and the data center location closest to your users or workloads.
    - **Hardware Configuration**: Select the instance's CPU, RAM, and storage resources.
-   - **Olares Version & Kubernetes Setup**: Choose the appropriate version of Terminus and the Kubernetes/K3S solution to be installed.
+   - **Olares Version & Kubernetes Setup**: Choose the appropriate version of Olares and the Kubernetes/K3S solution to be installed.
 
     :::tip
     If you intend to host large language models (LLMs), select the **Alibaba Cloud Hong Kong** region. Currently, it is the only region that offers instances with shared GPU services.
@@ -43,7 +43,7 @@ Ensure you get an Olares ID to log in to Olares Space and activate the Olares in
 
 ## Monitor installation
 
-The creation and installation of your cloud-based Terminus typically take around 10 minutes. During this time, you can monitor the progress and logs in real-time.
+The creation and installation of your cloud-based Olares typically take around 10 minutes. During this time, you can monitor the progress and logs in real-time.
 
 ### System statuses
 
@@ -82,5 +82,5 @@ When the installation enters the **Pending Activation** state, activate Olares:
     ![One Time Password](/images/how-to/space/one_time_password.jpg)
 
 2. Access the wizard URL in your browser, and use the one-time password to log into Olares for the first time. 
-3. Change the Olares password via TermiPass when prompted. 
+3. Change the Olares password via LarePass when prompted. 
 4. Follow the on-screen instructions to finish the rest of activation process. 

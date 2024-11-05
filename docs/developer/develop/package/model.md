@@ -1,6 +1,6 @@
 # Configuration Guideline for Model
 
-Every **TAC** for `LLM` should include a `modelConfig.yaml` file in the root directory. This file provides the essential information required by an LLM.
+Every application chart for `LLM` should include a `modelConfig.yaml` file in the root directory. This file provides the essential information required by an LLM.
 
 Here's an example of what a modelConfig.yaml file might look like:
 ::: details modelConfig.yaml Example

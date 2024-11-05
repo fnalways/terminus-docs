@@ -1,8 +1,8 @@
-# TerminusManifest.yaml
+# OlaresManifest.yaml
 
 ## Permission
 
-If you need to access the interface of `provider`, you can add following content in the `permissions` section of the `TerminusManifest.yaml` file.
+If you need to access the interface of `provider`, you can add following content in the `permissions` section of the `OlaresManifest.yaml` file.
 ```Yaml
 permission:
   sysData:
@@ -28,10 +28,10 @@ env:
 ```
 
 ---
-:::details Example of a complete `TerminusManifest.yaml` file
+:::details Example of a complete `OlaresManifest.yaml` file
 ```Yaml
-terminusManifest.version: 1
-terminusManifest.type: app
+olaresManifest.version: 1
+olaresManifest.type: app
 metadata:
   name: desktop
   icon: https://file.bttcdn.com/appstore/default/defaulticon.webp
@@ -92,7 +92,7 @@ options:
   resetCookie:
     enabled: false
   dependencies:
-  - name: terminus
+  - name: olares
     version: '>=0.1.0'
     type: system
   appScope:

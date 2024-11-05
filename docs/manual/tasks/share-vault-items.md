@@ -3,11 +3,11 @@ outline: [2, 3]
 ---
 
 # Share vault items
-A shared vault is an effective method for organizing, managing, and securely sharing data among users within the same Terminus cluster. Whether you're managing family accounts or enterprise-level data, Team Vault provides the perfect balance of security and collaboration.
+A shared vault is an effective method for organizing, managing, and securely sharing data among users within the same Olares cluster. Whether you're managing family accounts or enterprise-level data, Team Vault provides the perfect balance of security and collaboration.
 
 ## Understand team roles
 :::info
-The Terminus admin automatically becomes the shared vault owner.
+The Olares admin automatically becomes the shared vault owner.
 :::
 | Role                             | Owner | Administrator | Member |
 |----------------------------------|-------|---------------|--------|
@@ -18,7 +18,7 @@ The Terminus admin automatically becomes the shared vault owner.
 
 ## Get started with team access
 ### Confirm membership
-All administrators and users of a Terminus cluster are automatically included in one vault team. However, for security reasons, each new member must be verified before accessing team vault items.
+All administrators and users of an Olares cluster are automatically included in one vault team. However, for security reasons, each new member must be verified before accessing team vault items.
 
 1. In Vault, navigate to the page **My Team** > **Invites**.
 2. Click on the member's account name to view the invitation code.
@@ -45,7 +45,7 @@ Suspended members retain their role but won't receive updates or make changes. R
 :::
 
 ## Work with shared vaults
-Shared vaults are designed for sharing data among multiple Terminus users. By default, they must be created by Terminus admin.
+Shared vaults are designed for sharing data among multiple Olares users. By default, they must be created by Olares admin.
 ### Create a shared vault
 1. In Vault, navigate to the page **My team** > **Vaults**.
 2. Click <i class="material-icons">add</i> in the top right corner, and enter vault name.

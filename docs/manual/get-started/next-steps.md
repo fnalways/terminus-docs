@@ -1,13 +1,13 @@
 # What's next
 
-Congratulations! You're now ready to dive into Terminus's powerful features. You will find it easy to get things done in Terminus. 
+Congratulations! You're now ready to dive into Olares's powerful features. You will find it easy to get things done in Olares. 
 
 Here are some suggested next steps:
 
 <div class="launch-card-container">
   <LaunchCard
     title="Explore use cases"
-    description="Discover the various ways you can leverage Terminus in daily life."
+    description="Discover the various ways you can leverage Olares in daily life."
     :links="[
     { text: 'Stable Diffusion', 
     href: '../use-cases/stable-diffusion' }, 
@@ -23,8 +23,8 @@ Here are some suggested next steps:
     buttonLink="../use-cases/"
   />
     <LaunchCard
-    title="Try Terminus apps"
-    description="Familiarize yourself with the system applications on Terminus."
+    title="Try Olares apps"
+    description="Familiarize yourself with the system applications on Olares."
     :links="[
     { text: 'Profile', 
     href: '../tasks/profile' }, 
@@ -40,12 +40,12 @@ Here are some suggested next steps:
     buttonLink="../tasks/"
   />
     <LaunchCard
-    title="Understand Terminus"
-    description="Deepen your understanding of Terminus."
+    title="Understand Olares"
+    description="Deepen your understanding of Olares."
     :links="[
-    { text: 'Terminus core components', 
+    { text: 'Olares core components', 
     href: 'placeholder' }, 
-    { text: 'Terminus Name', 
+    { text: 'Olares ID', 
     href: 'placeholder' }, 
     { text: 'Application', 
     href: 'placeholder' }, 

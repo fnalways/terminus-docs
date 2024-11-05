@@ -1,9 +1,9 @@
-# Terminus Application Chart Structure
+# Olares Application Chart Structure
 
-The **Terminus Application Chart (TAC)** is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Terminus** information. A standard **TAC** should contain the following files:
+The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart should contain the following files:
 ```
 |-- Chart.yaml                   # chart metadata
-|-- TerminusManifest.yaml        # Terminus Application configuration
+|-- OlaresManifest.yaml        # Olares Application configuration
 |-- templates                    # chart deployment template files
 |   |-- deployment.yaml          # APP deployment script
 |-- values.yaml                  # chart deployment parameters
@@ -12,11 +12,11 @@ The **Terminus Application Chart (TAC)** is built upon the structure of **Helm C
 To make the templates directory easier to understand, you can split the deployment into several files.
 :::
 
-- A typical **TAC** for `App`:
+- A typical application chart for `App`:
 ```
 AppName
 |-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- TerminusManifest.yaml     # Required: containing App configuration
+|-- OlaresManifest.yaml     # Required: containing App configuration
 |-- values.yaml               # Required: default configuration values of the chart
 |-- templates                 # Required: template directory, when combined with values, it can generate valid Kubernetes manifest files
 |   |-- NOTES.txt             # Optional: plain text file containing brief usage instructions
@@ -27,12 +27,12 @@ AppName
 |-- README.md                 # Optional: readable README file
 ```
 
-- A typical **TAC** for `Recommend`:
+- A typical application chart for `Recommend`:
 
 ```
 RecommendName
 |-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- TerminusManifest.yaml     # Required: containing Recommend configuration
+|-- OlaresManifest.yaml     # Required: containing Recommend configuration
 |-- values.yaml               # Required: default configuration values of the chart
 |-- templates                 # Required: template directory, when combined with values, it can generate valid Kubernetes manifest files
 |   |-- NOTES.txt             # Optional: plain text file containing brief usage instructions
@@ -44,15 +44,15 @@ RecommendName
 |-- README.md                 # Optional: readable README file
 ```
 
-- A typical **TAC** for `Large Language Model`:
+- A typical application chart for `Large Language Model`:
 
 ```
 ModelName
 |-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- TerminusManifest.yaml     # Required: containing LLM configuration
+|-- OlaresManifest.yaml     # Required: containing LLM configuration
 |-- values.yaml               # Required: default configuration values of the chart
 ├── modelConfig.yaml          # Required: containing model configuration
-|-- templates                 # Required: template directory, it is usually empty in TAC for Model.
+|-- templates                 # Required: template directory, it is usually empty for Model.
 |-- LICENSE                   # Optional: plain text file containing the chart license
 └── README.md                 # Optional: readable README file
 ```

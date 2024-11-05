@@ -4,10 +4,10 @@ outline: [2, 3]
 
 # Manage GPU usage
 :::info
-Only Terminus admin can change GPU usage mode. This ensures optimal resource management across the system and prevents conflicts between users' resource needs.
+Only Olares admin can change GPU usage mode. This ensures optimal resource management across the system and prevents conflicts between users' resource needs.
 :::
 
-Terminus offers flexible GPU memory management to support resource-intensive tasks like image generation and large language models. Users can choose between two modes to best suit their needs: **shared mode** and **standalone mode**.
+Olares offers flexible GPU memory management to support resource-intensive tasks like image generation and large language models. Users can choose between two modes to best suit their needs: **shared mode** and **standalone mode**.
 
 ## GPU usage modes
 :::tip
@@ -16,7 +16,7 @@ Use shared mode when running multiple lightweight tasks or when you want to ensu
 
 ### Shared mode (default)
 
-In shared mode, Terminus intelligently allocates GPU memory across multiple applications:
+In shared mode, Olares intelligently allocates GPU memory across multiple applications:
 
 * Applications share up to the maximum GPU memory available on your hardware.
 * Tasks are executed in order of request, ensuring fair resource distribution.
@@ -41,4 +41,4 @@ This means that the GPU mode settings described here do not directly affect auth
 3. In the dropdown **VRAM mode**, select the required GPU usage mode.
 
 ## See also
-- [Monitor GPU usage in Terminus](./resources-usage.md)
+- [Monitor GPU usage in Olares](./resources-usage.md)

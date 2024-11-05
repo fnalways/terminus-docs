@@ -1,6 +1,6 @@
 # Service Provider
 
-App developers can define the `ProviderRegistry` in **TAC** or request permission to call other providers.
+App developers can define the `ProviderRegistry` in the application chart or request permission to call other providers.
 
 ## Define Provider
 
@@ -39,7 +39,7 @@ status:
 
 ## Request Permission to Call Provider
 
-You can configure it in the [TerminusManifest.yaml](../package/manifest.md#sysdata) as follows:
+You can configure it in the [OlaresManifest.yaml](../package/manifest.md#sysdata) as follows:
 
 ```Yaml
 sysData:
@@ -57,7 +57,7 @@ sysData:
   - AppApi   # name of opApis defined in ProviderRegistry
 ```
 
-Once configured, you can add the `access key` and `access secret` to the templates in **TAC**. They will be injected during installation for authorized usage.
+Once configured, you can add the `access key` and `access secret` to the templates in the application chart. They will be injected during installation for authorized usage.
 
 ```yaml
 env:
@@ -65,7 +65,7 @@ env:
     value: system-server.user-system-{{ .Values.bfl.username }}
   - name: OS_APP_SECRET
 
-    # The appname is defined in the TAC
+    # The appname is defined in the application chart
     value: "{{ .Values.os.<appnane>.appSecret }}"
   - name: OS_APP_KEY
     value: "{{ .Values.os.<appname>.appKey }}"

@@ -7,7 +7,7 @@ Wise offers flexible subscription options to help you follow your favorite conte
 
 ## Subscribe methods
 :::tip
-When you subscribe to podcast or video channels in Wise, new episodes automatically download to your Terminus storage. This ensures your media content is always available—even offline—and protected from source deletion or unavailability.
+When you subscribe to podcast or video channels in Wise, new episodes automatically download to your Olares storage. This ensures your media content is always available—even offline—and protected from source deletion or unavailability.
 :::
 
 ### Add subscriptions from For You
@@ -26,11 +26,11 @@ When browsing recommended content on the **For You** page, you can subscribe to 
     * Direct RSS link
 3. Click **Add** to complete the subscription.
 
-### Use TermiPass for web subscriptions
+### Use LarePass for web subscriptions
 :::tip
-TermiPass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.jointerminus.com/termipass).
+LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
 :::
-1. Open the TermiPass browser extension, and click **Collect**.
+1. Open the LarePass browser extension, and click **Collect**.
 2. For the current webpage, check available subscriptions in the **RSS** section.
    :::info
    The **RSS** option appears only when feeds are detected on the current page.
@@ -41,7 +41,7 @@ TermiPass extension is currently available for Chrome browsers only. Download it
 Some websites require cookies for accessing content.
 
 1. Log in to the target website.
-2. Open the TermiPass browser extension, and click **Collect** > **Cookie**.
+2. Open the LarePass browser extension, and click **Collect** > **Cookie**.
 3. Click **Upload** to apply changes or enable **Auto Sync**.
 
 You can hover over cookies to view details.
@@ -65,7 +65,7 @@ You can unsubscribe from content sources in several ways:
 
 * From the **Info** column
 * Through the reading page toolbar
-* Via the TermiPass browser extension
+* Via the LarePass browser extension
 * On the **RSS Feeds management** page 
 
 

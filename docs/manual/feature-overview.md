@@ -1,11 +1,11 @@
 # Feature overview
 
-Terminus offers a wide array of features designed to enhance security, ease of use, and development flexibility:
+Olares offers a wide array of features designed to enhance security, ease of use, and development flexibility:
 
 - **Enterprise-grade security**: Simplified network configuration using Tailscale, Headscale, Cloudflare Tunnel, and FRP.
 - **Secure and permissionless application ecosystem**: Sandboxing ensures application isolation and security.
 - **Unified file system and database**: Automated scaling, backups, and high availability.
-- **Single sign-on**: Log in once to access all applications within Terminus with a shared authentication service.
+- **Single sign-on**: Log in once to access all applications within Olares with a shared authentication service.
 - **AI capabilities**: Comprehensive solution for GPU management, local AI model hosting, and private knowledge bases while maintaining data privacy.
 - **Built-in applications**: Includes file manager, sync drive, vault, reader, app market, settings, and dashboard.
 - **Seamless anywhere access**: Access your devices from anywhere using dedicated clients for mobile, desktop, and browsers.
@@ -19,7 +19,7 @@ Terminus offers a wide array of features designed to enhance security, ease of u
 - ✖️:  **No**, indicates that the feature is not supported.
 :::
 
-|                           | Terminus                                                                                                   | Synology                                    | TrueNAS                                     | CasaOS                  | Unraid                                        |
+|                           | Olares                                                                                                     | Synology                                    | TrueNAS                                     | CasaOS                  | Unraid                                        |
 |---------------------------|------------------------------------------------------------------------------------------------------------|---------------------------------------------|---------------------------------------------|-------------------------|-----------------------------------------------|
 | Multi-node                | ✅                                                                                                          | ✖️                                          | ✅                                           | ✖️                      | ✖️                                            |
 | Build-in apps             | ✅ (Rich desktop apps)                                                                                      | ✅ (Rich desktop apps)                       | ✖️ (CLI)                                    | ✅ (Simple desktop apps) | ✅ (Dashboard)                                 |

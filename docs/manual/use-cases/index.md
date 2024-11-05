@@ -1,5 +1,5 @@
 # Use cases
-While other guides tell you "what" and "how," these use cases reveal the full potential of Terminus - from running AI models to creating seamless workflows across your self-hosted services.
+While other guides tell you "what" and "how," these use cases reveal the full potential of Olares - from running AI models to creating seamless workflows across your self-hosted services.
 
 <FilterableList :items="[
   { title: 'Stable Diffusion', link: './stable-diffusion', tags: ['ai'] },

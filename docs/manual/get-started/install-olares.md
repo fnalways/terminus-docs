@@ -1,6 +1,6 @@
-# Install Terminus
+# Install Olares
 
-Terminus is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
 
 ## Set up system environment
 
@@ -72,7 +72,7 @@ Terminus is designed to run on Linux-based systems. However, you can also instal
 <template #macOS>
 
 :::info
-Currently, Terminus on Mac has certain limitations including:
+Currently, Olares on Mac has certain limitations including:
 - Lack of distributed storage support
 - Inability to add local nodes. 
 We recommend using it only for development or testing purposes.
@@ -97,7 +97,7 @@ We recommend using it only for development or testing purposes.
 <template #Windows>
 
 :::info
-Currently, Terminus on Windows has certain limitations including:
+Currently, Olares on Windows has certain limitations including:
 - Lack of distributed storage support
 - Inability to add local nodes.
 
@@ -105,7 +105,7 @@ We recommend using it only for development or testing purposes.
 :::
 
 :::info
-Before installation, ensure Windows Defender Firewall is disabled temporarily during the installation process. You can re-enable it after installation is complete. This is required for proper WSL communication and initial Terminus setup.
+Before installation, ensure Windows Defender Firewall is disabled temporarily during the installation process. You can re-enable it after installation is complete. This is required for proper WSL communication and initial Olares setup.
 :::
 
 1. Make sure your Windows meets the following requirements.
@@ -140,7 +140,7 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
    netsh interface ipv4 show addresses
    ```
 
-   Note the IP Address of your WLAN or Ethernet interface. It should start with `192.xxx`. You will need it when installing Terminus.
+   Note the IP Address of your WLAN or Ethernet interface. It should start with `192.xxx`. You will need it when installing Olares.
 
 5. Set up port forwarding for your WSL server.
 
@@ -181,7 +181,7 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
       [network]
       generateHosts = false
       generateResolvConf = false # Allow manually managing hosts file and DNS settings
-      hostname=terminus # Set the hostname for the WSL instance
+      hostname=olares # Set the hostname for the WSL instance
       ```
 
    c. Shut down Ubuntu in PowerShell and restart it.
@@ -202,7 +202,7 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
 </template>
 </Tabs>
 
-## Install Terminus
+## Install Olares
 
 <Tabs>
 <template #Linux-and-Raspberry-Pi>
@@ -212,13 +212,13 @@ Run the following command:
 - To install the latest version:
 
     ```bash
-    curl -fsSL https://terminus.sh |  bash -
+    curl -fsSL https://olares.sh |  bash -
     ```
 
 - To install a specific version:
 
     ```bash       
-    curl -sSfL https://github.com/beclab/Terminus/releases/download/${VERSION}/install.sh | bash -
+    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
     ```
 </template>
 <template #macOS>
@@ -228,13 +228,13 @@ In terminal, run the following command:
 - To install the latest version:
 
     ```bash
-    curl -fsSL https://terminus.sh |  bash -
+    curl -fsSL https://olares.sh |  bash -
     ```
 
 - To install a specific version:
 
     ```bash       
-    curl -sSfL https://github.com/beclab/Terminus/releases/download/${VERSION}/install.sh | bash -
+    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
     ```
 </template>
 <template #Windows>
@@ -244,25 +244,25 @@ In terminal, run the following command:
     - To install the latest version:
 
     ```bash
-    curl -fsSL https://terminus.sh |  bash -
+    curl -fsSL https://olares.sh |  bash -
     ```
 
     - To install a specific version:
 
     ```bash       
-    curl -sSfL https://github.com/beclab/Terminus/releases/download/${VERSION}/install.sh | bash -
+    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
     ```
 
 2. During installation, enter the Windows host IP (`192.168.xxx.xxx`) you obtained earlier.
 3. press **Enter** to proceed.
 
-![Install Windows IP](/images/overview/terminus/install-windows-ip.jpeg)
+![Install Windows IP](/images/overview/olares/install-windows-ip.jpeg)
 
 </template>
 </Tabs>
 
 :::info
-Replace `${version}` with the current daily build version number. Check the [Terminus repository](https://github.com/beclab/terminus) for the latest version.
+Replace `${version}` with the current daily build version number. Check the [Olares repository](https://github.com/beclab/olares) for the latest version.
 :::
 
 :::info
@@ -273,19 +273,19 @@ bash uninstall_cmd.sh
 After uninstalling, retry the installation by running the original installation command.
 :::
 
-## Enter Terminus Name
+## Enter Olares ID
 
-At the end of the installation process, you will be prompted to enter domain name and Terminus Name.
+At the end of the installation process, you will be prompted to enter domain name and Olares ID.
 
-![alt text](/images/how-to/terminus/enter_terminus_name.png)
-For example, if your full Terminus Name is `alice123@myterminus.com`:
-- **Domain name**: Press `Enter` to use the default domain name or type `myterminus.com`.
-- **Terminus Name**: Enter the prefix of your Terminus Name. In this example, enter `alice123`.
+![alt text](/images/how-to/olares/enter_olares_id.png)
+For example, if your full Olares ID is `alice123@olares.com`:
+- **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
+- **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
 
 Upon completion of the installation, the initial system information, including the Wizard URL and the initial login password, will appear on the screen. You will need them later in the activation stage.
 
-![alt text](/images/how-to/terminus/one_time_password.png)
+![alt text](/images/how-to/olares/one_time_password.png)
 
 ## Next step
 
-- [Activate Terminus](./activate-terminus.md)
+- [Activate Olares](./activate-olares)

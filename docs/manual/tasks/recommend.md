@@ -4,7 +4,7 @@ Most digital platforms control what content you see through centralized recommen
 Content recommendation in Wise happens in two distinct stages:
 
 1. Content providers collect and package global content in the cloud.
-2. Your Terminus device downloads this content and processes it locally using your chosen recommendation algorithms.
+2. Your Olares device downloads this content and processes it locally using your chosen recommendation algorithms.
 
 Since every device receives the same content data and processes recommendations offline, your reading preferences and interaction data remain completely private. You can monitor these recommendation workflows through a visual interface that shows exactly how your content is being processed.
 
@@ -34,10 +34,10 @@ The workflow visualization shows each step of the recommendation process. You ca
 ## Remove a recommendation algorithm
 To uninstall a recommendation algorithm:
 
-1. In Market, go to the page **My Terminus**.
+1. In Market, go to the page **My Olares**.
 2. Click <i class="material-icons">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
 
 ## FAQ
 
 ### Why can't I see recommended content after installation?
-If you've just installed a recommendation algorithm, you'll need to wait briefly while it completes the local recommendation workflow on your Terminus. This ensures all processing happens locally to protect your privacy.
+If you've just installed a recommendation algorithm, you'll need to wait briefly while it completes the local recommendation workflow on your Olares. This ensures all processing happens locally to protect your privacy.
