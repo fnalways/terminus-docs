@@ -18,7 +18,7 @@ Organize your reading flow with two collections:
 While browsing the title or reading, click **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** to save content to either collection.
 ### Save web pages via LarePass
 :::tip
-LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.com/termipass).
+LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.com/larepass).
 :::
 
 1. Open the LarePass browser extension and click **Collect**.

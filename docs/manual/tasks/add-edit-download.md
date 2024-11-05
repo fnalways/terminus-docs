@@ -23,7 +23,7 @@ When downloading multiple files, the behavior differs between the Files in Olare
 3. Select the save location in the popup window.
 
 :::tip
-For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.olares.com/termipass) for details and download options.
+For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.olares.com/larepass) for details and download options.
 :::
 
 ## Preview and edit files
