@@ -6,7 +6,7 @@ outline: [2, 3]
 
 ## Install and Launch DevBox
 
-1. Install [DevBox](https://market.olares.com/app/devbox) from the Olares Market. 
+1. Install [DevBox](https://market.olares.xyz/app/devbox) from the Olares Market. 
 2. Find the **DevBox** icon in the launcher panel on the **Olares Desktop**.
 3. Click on the icon to launch the application.
 
