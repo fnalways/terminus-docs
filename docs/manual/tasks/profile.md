@@ -23,9 +23,9 @@ Fine-tune your homepage's appearance by adjusting the layout style and backgroun
 ## Share your homepage
 Olares offers multiple ways to share your personal homepage:
 
-* **Share via Social Platforms**: Directly share your homepage on popular social media platforms like X, Meta, and LinkedIn.
-* **Share via QR Code**: Generate a QR code for your homepage, which you can download and share.
-* **Share as a digital business Card**: Create a stylish digital business card featuring your homepage URL, perfect for networking.
+* **Share via social platforms**: Directly share your homepage on popular social media platforms like X, Meta, and LinkedIn.
+* **Share via QR code**: Generate a QR code for your homepage, which you can download and share.
+* **Share as a digital business card**: Create a stylish digital business card featuring your homepage URL, perfect for networking.
 
 ## Track your homepage analytics
 Monitor your homepage's performance with built-in analytics. This feature helps you understand your audience and optimize your content for better engagement.

@@ -7,7 +7,7 @@ You can access Olares applications anytime, anywhere, whether you're accessing f
 - Personalize domain name for your applications
 - Allow public access without authentication
 
-## Before you start
+## Before you begin
 Before you start, it is recommended to familiarize yourself with a few concepts for Olares applications:
 
 - [Endpoints](../concepts/network.md#endpoints)

@@ -1,6 +1,6 @@
 # Tutorial
 
-Welcome to the Olares developer guides. These detailed tutorials offer a step-by-step guide on building a Olares Application from scratch.
+Welcome to the Olares developer guides. These detailed tutorials offer a step-by-step guide on building an Olares Application from scratch.
 
 To get started, you can learn some basic concepts of Olares, such as:
 - [Olares architectural components](../../../manual/concepts/architecture)

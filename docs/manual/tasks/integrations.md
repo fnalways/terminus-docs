@@ -27,7 +27,7 @@ Olares Space is a cloud hosting service for Olares that shares the same account 
 
 ### Step 2. Authorize Olares Space
 
-1. In LarePass app, go to **Settings** > **Integration**.
+1. In the LarePass app, go to **Settings** > **Integration**.
 2. Tap <i class="material-icons">add</i> in the top-right corner and select **Space** to add your Olares Space account. 
 
 Once you've authorized Olares Space, you can also verify the integration status in Olares.

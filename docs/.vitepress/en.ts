@@ -287,7 +287,7 @@ const side = {
           text: "Back up and restore",
           link: "/manual/space/backup-restore",
         },
-        { text: "Billing", link: "/manual/billing" },
+        { text: "Billing", link: "/manual/space/billing" },
       ],
     },
     {
@@ -497,7 +497,7 @@ const side = {
 export const en = defineConfig({
   lang: "/",
   themeConfig: {
-    logo: "/icon.png",
+    //logo: "/icon.png",
     socialLinks: [{ icon: "github", link: "https://github.com/beclab" }],
 
     nav: [

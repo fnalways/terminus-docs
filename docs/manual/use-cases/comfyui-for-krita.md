@@ -27,9 +27,9 @@ Before starting, ensure you have:
 3. Launch ComfyUI from your desktop, and verify the installation by generating a sample image.
 4. Copy the address of ComfyUI for next steps.
 :::tip
-For security, you should always run AI applications within your local network. Your ComfyUI URL should contain `.local` when accessing through local network.
+For security, you should always run AI applications within your local network. When properly configured, your ComfyUI URL should contain `.local`.
 
-If `.local` is missing, verify your network configuration and proxy settings.
+If `.local` is missing, check your local network environment and make sure no external network proxy service is enabled.
 :::
 
 ## Set up Krita
@@ -61,7 +61,9 @@ Establish a secure connection between Krita and ComfyUI:
    - Ensure ComfyUI is running correctly on your Olares.
    :::
 5. Adjust ComfyUI settings.
+
    a. In **Styles**, configure your preferred style templates and select appropriate model checkpoints.
+
    b. Keep default values for other settings unless you need specific optimizations.
 
 ## Create AI art with text prompts

@@ -6,7 +6,7 @@ This guide walks you through common account operations with Olares Space, includ
 
 Olares Space uses a decentralized ID (DID) or Olares ID for authentication. Make sure you already have obtained your credentials on your LarePass. 
 
-1. In LarePass app, select the DID or Olares ID you wish to use to log in. 
+1. In the LarePass app, select the DID or Olares ID you wish to use to log in. 
 2. Open https://space.olares.xyz/ in your browser. 
 3. Scan the QR code using LarePass.  
 

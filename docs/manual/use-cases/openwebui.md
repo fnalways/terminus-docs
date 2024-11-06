@@ -44,7 +44,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
    - Team members: Ensure that Faster Whisper For Cluster is already installed by Olares admin, and install Faster Whisper only.
 2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select **OpenAI** as the speech-to-text engine, with the following configurations:
-   - API Base URL: `http://whisper.whisper-{admin's Olares ID}:8000/v1`. For example: `http://whisper.whisper-alice123:8000/v1`.
+   - API Base URL: `http://whisper.whisper-{admin's local name}:8000/v1`. For example: `http://whisper.whisper-alice123:8000/v1`.
    - API key: enter any character.
 4. Enter a model variant (default: `whisper-1`). You can select from the following:
    - `tiny.en`
@@ -77,7 +77,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
    OpenedAI Speech is a cluster-scoped application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed OpenedAI Speech.
 2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select OpenAI as the text-to-speech engine, with the following configurations:
-    - API Base URL: `http://openedaispeech.openedaispeech-{admin's Olares ID}:8000/v1`. For example: `http://openedaispeech.openedaispeech-alice123:8000/v1`.
+    - API Base URL: `http://openedaispeech.openedaispeech-{admin's local name}:8000/v1`. For example: `http://openedaispeech.openedaispeech-alice123:8000/v1`.
     - API key: enter any character.
 4. Click **Save**.
 
@@ -85,7 +85,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 With SD Web UI For Cluster installed in your Olares environment, you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
 
 1. Open Open WebUI, and navigate to **Admin Panel** > **Settings** > **Images**.
-2. Select **Automatic1111** as the image generation engine, with the base URL:  `http://sdwebui.sdwebui--{admin's Olares ID}:7860`. For example: `http://sdwebui.sdwebui-alice123:7860`.
+2. Select **Automatic1111** as the image generation engine, with the base URL:  `http://sdwebui.sdwebui--{admin's local name}:7860`. For example: `http://sdwebui.sdwebui-alice123:7860`.
 3. Click <i class="material-symbols-outlined">cached</i> to verify the connection.
 4. Turn on **Image Generation (Experimental)**, and select your preferred text-to-image model checkpoint.
 5. Click **Save**.

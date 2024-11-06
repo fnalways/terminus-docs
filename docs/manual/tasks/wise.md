@@ -10,16 +10,16 @@ Key features include:
 
 ---
 <div>
-<h4><a href="./wise-basics/">Wise basics</a></h4>
+<h4><a href="./wise-basics">Wise basics</a></h4>
 Learn the essential tasks for collecting, reading, and managing your content library in Wise.
 </div>
 
 <div>
-<h4><a href="./recommend/">Discover themed content</a></h4>
+<h4><a href="./recommend">Discover themed content</a></h4>
 Learn how self-hosted recommendation algorithms work in Wise.
 </div>
 
 <div>
-<h4><a href="./subscribe/">Subscribe and manage feeds</a></h4>
+<h4><a href="./subscribe">Subscribe and manage feeds</a></h4>
 Set up and organize your content sources through RSS feeds, manual subscriptions, and the LarePass browser extension.
 </div>

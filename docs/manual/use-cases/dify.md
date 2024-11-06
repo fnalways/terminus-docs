@@ -18,8 +18,8 @@ To use local AI models, ensure you have:
 
 ## Install
 Install Dify from Market based on your role:
-* Admin: Install both "Dify For Cluster" and "Dify".
-* Team members: Ensure your admin has installed "Dify For Cluster", and install "Dify" only.
+* **For admin**: Install both "Dify For Cluster" and "Dify".
+* **For team members**: Ensure your admin has installed "Dify For Cluster", and install "Dify" only.
 
 ## Add Ollama as model provider
 1. Open Dify, and navigate to **Settings** > **Model Provider**.

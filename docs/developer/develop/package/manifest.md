@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # OlaresManifest Specification
 
-Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about a Olares App. Both the **Olares Market protocol** and the **Olares** depend on this information to distribute and install applications.
+Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the **Olares** depend on this information to distribute and install applications.
 
 Here's an example of what a `OlaresManifest.yaml` file might look like:
 

@@ -1,6 +1,6 @@
 # What's next
 
-Congratulations! You're now ready to dive into Olares's powerful features. You will find it easy to get things done in Olares. 
+You're now ready to dive into Olares's powerful features. You will find it easy to get things done in Olares. 
 
 Here are some suggested next steps:
 
@@ -44,13 +44,13 @@ Here are some suggested next steps:
     description="Deepen your understanding of Olares."
     :links="[
     { text: 'Olares core components', 
-    href: 'placeholder' }, 
+    href: '../concepts/architecture' }, 
     { text: 'Olares ID', 
-    href: 'placeholder' }, 
+    href: '../concepts/olares-id' }, 
+    { text: 'Account', 
+    href: '../concepts/account' }, 
     { text: 'Application', 
-    href: 'placeholder' }, 
-    { text: 'Recommend', 
-    href: 'placeholder' }]"
+    href: '../concepts/application' },]"
     buttonText="Learn more"
     buttonLink="../concepts/"
   />

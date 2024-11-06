@@ -28,7 +28,7 @@ The system application need to be installed under the `user-space` namespace. Th
      applications.app.bytetrade.io/owner: {{ .Values.bfl.username }}
      applications.app.bytetrade.io/author: bytetrade.io
    annotations:
-     applications.app.bytetrade.io/icon: https://docs-dev.olares.com/icon. png
+     applications.app.bytetrade.io/icon: https://docs-dev.olares.xyz/icon. png
      applications.app.bytetrade.io/title: Desktop-dev
      applications.app.bytetrade.io/version: '0.0.1'
 
@@ -123,7 +123,7 @@ metadata:
     applications.app.bytetrade.io/owner: {{ .Values.bfl.username }}
     applications.app.bytetrade.io/author: bytetrade.io
   annotations:
-    applications.app.bytetrade.io/icon: https://docs-dev.olares.com/icon.png
+    applications.app.bytetrade.io/icon: https://docs-dev.olares.xyz/icon.png
     applications.app.bytetrade.io/title: Desktop-dev
     applications.app.bytetrade.io/version: '0.0.1'
     applications.app.bytetrade.io/entrances: '[{"name":"desktop-frontend-dev", "host":"desktop-svc-dev", "port":80,"title":"Desktop-dev"}]'

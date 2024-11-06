@@ -26,11 +26,11 @@ When accessing private entrances from an external environment through VPN, if th
 For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
-### On Olares mobile client
+### On LarePass mobile client
 1. Open LarePass, go to **Settings** > **Account**.
 2. Turn on the VPN switch.
 
-### On Olares desktop client
+### On LarePass desktop client
 1. Open LarePass, click on the avatar area in the top left corner of the main interface.
 2. Turn on the switch for **Enable VPN connection** in the pop-up panel.
 

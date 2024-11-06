@@ -59,7 +59,7 @@ To stream your media on various devices:
    a. Open Settings, and navigate to **Applications** > **Jellyfin** > **Entrances**.
 
    b. Set **Authentication level** to **Internal**.
-2. Download and install [Jellyfin's official clients](https://jellyfin.org/downloads/).
+2. Download and install [Jellyfin's official client](https://jellyfin.org/downloads/).
 3. Connect clients to your Jellyfin server in Olares. 
 
    a. In your Jellyfin client, auto-discovery should locate your server for devices on the same network.

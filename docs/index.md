@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: What is Olares?
-      link: /overview/introduction/what-is-olares
+      link: /manual/feature-overview.html
     - theme: alt
       text: Get Started
-      link: /overview/introduction/
+      link: /manual/get-started/
     - theme: alt
       text: GitHub
       link: https://github.com/beclab/olares

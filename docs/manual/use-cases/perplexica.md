@@ -19,8 +19,8 @@ Before getting started, ensure you have:
   :::
 ## Set up Perplexica
 1. Install SearXNG from Market based on your role:
-    - Admin: Install both "SearXNG For Cluster" and "SearXNG".
-    - Team members: Ensure your admin has installed "SearXNG For Cluster", and install "SearXNG" only.
+    - **For admin**: Install both "SearXNG For Cluster" and "SearXNG".
+    - **For team members**: Ensure your admin has installed "SearXNG For Cluster", and install "SearXNG" only.
 2. Install Perplexica from Market.
 3. Launch Perplexica, and click <i class="material-symbols-outlined">settings</i> in the bottom left corner to open the settings window.
 4. Configure your search environment with the following settings (using `gemma2` as an example):
