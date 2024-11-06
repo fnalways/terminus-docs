@@ -32,7 +32,7 @@ Before you roll up your sleeves and get your hands dirty with Olares, feel free 
     <p class="cta-description">Discover real-world applications and see how Olares solves common challenges.</p>
   </a>
   <a href="./tasks/" class="cta-link">
-    <p class="cta-title">Read Olares how-tos</p>
+    <p class="cta-title">Read how-tos</p>
     <p class="cta-description">Comprehensive documentation covering every aspect of Olares in detail.</p>
   </a>
   <a href="./concepts/" class="cta-link">
