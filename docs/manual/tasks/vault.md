@@ -18,22 +18,22 @@ Visit the [official page](https://www.olares.xyz/larepass) for LarePass details 
 
 ---
 <div>
-<h4><a href="./vault-items/">Vault basics</a></h4>
+<h4><a href="./vault-items">Vault basics</a></h4>
 Understand vault items, and learn how to securely store and manage your sensitive data in Vault.
 </div>
 
 <div>
-<h4><a href="./share-vault-items/">Share vault items</a></h4>
+<h4><a href="./share-vault-items">Share vault items</a></h4>
 Learn how to manage team vault access, and work with shared vaults.
 </div>
 
 <div>
-<h4><a href="./two-factor-verification/">Set up two-factor authentication codes</a></h4>
+<h4><a href="./two-factor-verification">Set up two-factor authentication codes</a></h4>
 Learn how to generate and store 2FA codes for enhanced security.
 </div>
 
 <div>
-<h4><a href="./autofill/">Use autofill with LarePass</a></h4>
+<h4><a href="./autofill">Use autofill with LarePass</a></h4>
 Learn how to set up and use autofill for logins with different LarePass clients.
 </div>
 

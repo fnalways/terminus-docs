@@ -16,12 +16,12 @@ It consists of three main components:
 
 ---
 <div>
-<h4><a href="./add-edit-download/">Add, edit, and download files</a></h4>
+<h4><a href="./add-edit-download">Add, edit, and download files</a></h4>
 Learn the fundamentals of file management in Olares.
 </div>
 
 <div>
-<h4><a href="./sync-share/">Sync and share files</a></h4>
+<h4><a href="./sync-share">Sync and share files</a></h4>
 Learn how to keep files updated across devices, and how to share files with other Olares member.
 </div>
 

@@ -7,7 +7,7 @@ The tutorial shows how to make a simple [Note](https://github.com/beclab/olares-
 The tutorial includes three parts:
 
 1. [Create an App](./create.md)<br>
-   This section provides a step-by-step guide on how to create a Olares App and set up the initial development environment.
+   This section provides a step-by-step guide on how to create an Olares App and set up the initial development environment.
 
 2. [Backend Development](./backend.md)<br>
    In this section, you'll learn how to use DevBox's IDE to develop the backend programs in `Golang` and provide API interfaces for the frontend.

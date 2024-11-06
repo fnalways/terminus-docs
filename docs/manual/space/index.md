@@ -14,7 +14,7 @@ This section walks you through usages of Olares Space, covering:
 - [Manage Olares](manage-olares.md)
 - [Host custom domains](host-domain.md)
 - [Manage organization domains](manage-domain.md)
-- [Backup & Restore Olares](backup-restore.md)
+- [Back up & Restore Olares](backup-restore.md)
 - [Usage and Billing](billing.md)
 
 

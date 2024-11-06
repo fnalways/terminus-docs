@@ -287,5 +287,5 @@ Upon completion of the installation, the initial system information, including t
 ![alt text](/images/how-to/olares/one_time_password.png)
 
 ## Next step
-
+Now that you have installed Olares, the next step is to activate your system for use, similar to setting up a new smartphone:
 - [Activate Olares](./activate-olares)

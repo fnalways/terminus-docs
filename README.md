@@ -1,4 +1,4 @@
-# Terminus Docs
+# Olares Docs
 
 ## Run
 

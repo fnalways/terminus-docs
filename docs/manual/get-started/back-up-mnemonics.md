@@ -25,7 +25,7 @@ After setting up, you can choose to enable biometric unlock for more secure and 
 6. Securely record the mnemonic phrase and store it in a safe place.
 7. Click **Next**.
    :::warning
-   While clicking Copy will save the mnemonic phrase to your clipboard, this poses a security risk. For maximum security, we strongly recommend backing up your mnemonic phrase offline.   :::
+   While clicking **Copy** will save the mnemonic phrase to your clipboard, this poses a security risk. For maximum security, we strongly recommend backing up your mnemonic phrase offline.
    :::
 8. Verify your backup by arranging the mnemonic phrase in the correct order.
 9. Click **Completed**. 
@@ -48,4 +48,4 @@ If you encounter a password error, it may be because you haven't set a local pas
 
 ## Congratulations!
 And now you're ready to discover Olares further:
-- [Next steps](./next-steps.md)
+- [What's next](./next-steps.md)

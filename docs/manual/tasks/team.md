@@ -25,17 +25,17 @@ As an Olares administrator, you'll mainly be responsible for:
 ---
 
 <div>
-<h4><a href="./roles-permissions/">User roles and permissions</a></h4>
+<h4><a href="./roles-permissions">User roles and permissions</a></h4>
 Understand different roles in Olares.
 </div>
 
 <div>
-<h4><a href="./manage-team/">Manage your team</a></h4>
+<h4><a href="./manage-team">Manage your team</a></h4>
 Set up accounts for your team members.
 </div>
 
 <div>
-<h4><a href="./collaborate/">Collaborate in Olares</a></h4>
+<h4><a href="./collaborate">Collaborate in Olares</a></h4>
 Learn how to invite and interact with team members.
 </div>
 

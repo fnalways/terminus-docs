@@ -4,6 +4,10 @@ Olares (formerly Terminus) is a free, source-available, cloud-native operating s
 
 For a comprehensive overview of the system, visit our [GitHub repository](https://github.com/beclab/olares).
 
+:::info Note
+Screenshots are being updated to reflect our new branding. Screenshots may differ slightly from UI elements referred.
+:::
+
 ## New to Olares?
 
 The getting-started guide covers creating an Olares ID and setting up Olares on your local machine. 

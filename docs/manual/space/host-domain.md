@@ -56,11 +56,11 @@ Now that your organization has a verified domain name, you or other members you 
 
 ![org-olares-id](/images/how-to/larepass/organization_olares_id.png)
  
-1. In LarePass app, navigate to **Organization Olares ID** > **Join an existing organization**.
+1. In the LarePass app, navigate to **Organization Olares ID** > **Join an existing organization**.
 2. Enter your organization's domain name and click **Continue**. Recheck whether your domain name has been verified and configured if an error occurs.
 3. Bind the VC via your email accounts. Currently, only Gmail and Google Workspace email are supported.
 
-Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Olares](../get-started/activate-olares)
+Upon completion, you will receive an Organization Olares ID. Now you can go ahead to [Activate Olares](../get-started/activate-olares).
 
 ## Domain status and processing
 

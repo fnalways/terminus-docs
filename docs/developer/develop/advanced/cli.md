@@ -42,7 +42,7 @@ cd install-wizard && bash change_ip.sh
 This command is not applicable to Olares on macOS yet.
 :::
 
-## Add a Olares node locally
+## Add an Olares node locally
 
 **Before Install**
 - Get the `internal IP address` of the **Master** node.

@@ -14,7 +14,7 @@ Before you begin, [connect your Olares with Olares Space](./integrations).
 2. Select **Integration** from the left sidebar, and click on the Olares Space card on the right.
 3. Click **Import**, and follow the on-screen instructions to connect your MetaMask wallet.
 
-After importing your wallet, yhe page will refresh to display wallet details.
+After importing your wallet, the page will refresh to display wallet details.
 
 ## Step 3. Associate Olares ID
 

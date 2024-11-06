@@ -2,7 +2,7 @@
 
 Personalizing your Olares experience is easy. You can set your preferred language, choose between light and dark themes, and select custom wallpapers for your desktop and login screen.
 
-## System Language
+## System language
 Olares is currently available in the following languages:
 - English
 - Chinese (simplified)
@@ -29,8 +29,8 @@ To customize your desktop or login screen background:
 4. To use a built-in wallpaper, browse and select from the provided images.
 5. To add a custom wallpaper:
 
-   a. Click <i class="material-icons">add_photo_alternate</i> and navigate to the target folder on your computer. 
+   a. Click <i class="material-symbols-outlined">add_photo_alternate</i> and navigate to the target folder on your computer. 
    
-   b. select your desired image file.
+   b. Select your desired image file.
 
    c. Click **Confirm** or **Open** to set it as your wallpaper.

@@ -6,7 +6,7 @@ Olares consists of a series of projects using a hierarchical authorization appro
 
 - Projects running on blockchain use Apache 2.0, such as [Snowinning Protocol](https://github.com/beclab/olaresdid-contract-system).
 - Projects related to protocols use Apache 2.0, such as [r4](https://github.com/beclab/r4).
-- Projects around [Olares](https://github.com/beclab/olares) and [LarePass](https://github.com/beclab/LarePass) use the [Olares License](https://github.com/beclab/Olares/blob/main/LICENSE.md).
+- Projects around Olares and LarePass use the [Olares License](https://github.com/beclab/Olares/blob/main/LICENSE.md).
 - For third-party applications running on Olares, it is up to the developer to decide whether they want them open source or not and choose the license accordingly.
 
 For more details, visit our projects on [GitHub](https://github.com/beclab).
@@ -43,7 +43,7 @@ Meanwhile, Olares aims to provide a one-stop self-hosted solution, which goes be
 
 ## I have several servers. Can I use Olares to manage them one-stop?
 
-Yes. You can refer to [How to add a node](../../developer/develop/advanced/cli#add-a-olares-node-locally).
+Yes. You can refer to [How to add a node](../../developer/develop/advanced/cli#add-an-olares-node-locally).
 
 After you add the node, you can manage the cluster via [Dashboard](../tasks/resources-usage) and [Control Hub](../tasks/navigate-control-hub).
 
@@ -100,7 +100,7 @@ However, there are chances that applications developed through this method canno
 
 We use the term Olares under two scenarios:
 
-- Describing the entire project and the OS. Specifically, it refers to the complete architecture including 3 core components and extension protocols.
+- Describing the entire project and the operating system. Specifically, it refers to the complete architecture including 3 core components and extension protocols.
 - Describing the hardware devices running Olares. Be it a Raspberry Pi or a cluster of multiple machines on the cloud, all can be called Olares.
 
 
