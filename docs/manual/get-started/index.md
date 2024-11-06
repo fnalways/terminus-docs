@@ -5,7 +5,7 @@ If you prefer to try the cloud version of Olares instead of self-hosting, refer 
 :::
 
 <div class="cta">
-  <a href="../create-olares-id">
+  <a href="./create-olares-id">
     <div class="content">
       <h3>First time using Olares?</h3>
       <p>Learn how to create an Olares ID, and get your Olares up and running.</p>
@@ -15,7 +15,7 @@ If you prefer to try the cloud version of Olares instead of self-hosting, refer 
 </div>
 
 <div class="cta">
-  <a href="../../tasks/">
+  <a href="../tasks/">
     <div class="content">
       <h3>Already have an Olares?</h3>
       <p>Explore our comprehensive how-to guide covering every aspect of Olares.</p>
@@ -25,7 +25,7 @@ If you prefer to try the cloud version of Olares instead of self-hosting, refer 
 </div>
 
 <div class="cta">
-  <a href="../../../tasks/team">
+  <a href="../tasks/team">
     <div class="content">
       <h3>Team up in Olares?</h3>
       <p>Discover how to leverage Olares for collaborative work and team management.</p>
