@@ -5,23 +5,17 @@ Use the Wizard URL and initial one-time password to activate. This process conne
 ## Complete initial setup for Olares
 
 1. Enter the Wizard URL in your browser. You will be directed to the welcome page. Press any key to continue.
-   ![alt text](/images/how-to/olares/open_wizard_in_browser.jpg)
+   ![Open wizard](/images/manual/get-started/open-wizard.png)
 2. Enter the one-time password and click **Continue**.
-   ![alt text](/images/how-to/olares/enter_password.png)
+   ![Enter password](/images/manual/get-started/wizard-enter-password.png)
 3. Select the system language.
-   ![alt text](/images/how-to/olares/select_language.png)
-4. Select a reverse proxy.
-    - If you are using an **internal network Wizard URL**, the Cloudflare Tunnel will be enabled by default.
-    - If you are using a **public Wizard URL**, you can skip setting up a reverse proxy.
+   ![Select language](/images/manual/get-started/select-language.png)
+4. Select a reverse proxy. Use the default option.
 5. Activate Olares using LarePass app.
 
-   a. Open LarePass app.
-
-   b. Tap **Scan the QR code** to scan the QR code on the Wizard page and complete the activation.
-
-   c. Reset the login password for Olares by following the on-screen instructions on LarePass app.
-
-   ![alt text](/images/how-to/olares/reset_password.png)
+   a. Open LarePass app, and tap **Scan QR code** to scan the QR code on the Wizard page and complete the activation.
+   ![Activate Olares](/images/manual/get-started/activate-olares.png)
+   b. Reset the login password for Olares by following the on-screen instructions on LarePass app.
 
 After successful setup, the LarePass app will automatically go to the home screen, and the Wizard will redirect you to the login page.
 

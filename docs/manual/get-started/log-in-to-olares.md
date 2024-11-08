@@ -10,16 +10,16 @@ If you open an application in Olares without system authorization or if your aut
 
 1. On the login page, enter your Olares login password.
 
-   ![alt text](/images/how-to/olares/enter_password.jpg)
+   ![Log in](/images/manual/get-started/log-in.png)
 2. You will be prompted to complete the two-factor verification. You can:
     - Confirm login via LarePass:
       - a. Open LarePass app. 
       - b. Click **Confirm** in the pop-up dialog.
-        ![alt text](/images/how-to/olares/second_confirmation.jpg)
+        ![Confirm](/images/manual/get-started/second-confirmation.png)
     - Manually enter 6-digit code:
       - a. Open LarePass app, and go to **Settings**. 
       - b. Check the 6-digit verification code in the upper section, and enter it in the login page.
-        ![alt text](/images/how-to/olares/6-digit_one-time_password.jpg)
+        ![One-time password](/images/manual/get-started/OTP.png)
    ::: info
    After three incorrect attempts, your account will be temporarily locked for 5 minutes for security.
    :::

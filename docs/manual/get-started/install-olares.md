@@ -73,8 +73,9 @@ Olares is designed to run on Linux-based systems. However, you can also install 
 
 :::info
 Currently, Olares on Mac has certain limitations including:
-- Lack of distributed storage support
+- Lack of distributed storage support.
 - Inability to add local nodes. 
+
 We recommend using it only for development or testing purposes.
 :::
 
@@ -209,48 +210,24 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
 
 Run the following command:
 
-- To install the latest version:
+ ```bash
+ curl -fsSL https://olares.sh |  bash -
+ ```
 
-    ```bash
-    curl -fsSL https://olares.sh |  bash -
-    ```
-
-- To install a specific version:
-
-    ```bash       
-    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
-    ```
 </template>
 <template #macOS>
 
 In terminal, run the following command:
 
-- To install the latest version:
-
-    ```bash
-    curl -fsSL https://olares.sh |  bash -
-    ```
-
-- To install a specific version:
-
-    ```bash       
-    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
-    ```
+ ```bash
+ curl -fsSL https://olares.sh |  bash -
+ ```
 </template>
 <template #Windows>
 
 1. Within the WSL Ubuntu environment, run the following command:
-
-    - To install the latest version:
-
     ```bash
     curl -fsSL https://olares.sh |  bash -
-    ```
-
-    - To install a specific version:
-
-    ```bash       
-    curl -sSfL https://github.com/beclab/Olares/releases/download/${VERSION}/install.sh | bash -
     ```
 
 2. During installation, enter the Windows host IP (`192.168.xxx.xxx`) you obtained earlier.
@@ -262,29 +239,53 @@ In terminal, run the following command:
 </Tabs>
 
 :::info
-Replace `${version}` with the current daily build version number. Check the [Olares repository](https://github.com/beclab/olares) for the latest version.
-:::
-
-:::info
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
-bash uninstall_cmd.sh
+bash olares.uninstall.sh
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
 
 ## Enter Olares ID
 
-At the end of the installation process, you will be prompted to enter domain name and Olares ID.
+At the end of the installation process, you will be prompted to enter domain name and Olares ID:
+<Tabs>
+<template #Linux-and-Raspberry-Pi>
 
-![alt text](/images/how-to/olares/enter_olares_id.png)
+1. Enter the root user password.
+   ![Enter password](/images/manual/get-started/enter-password.png)
+2. Enter your domain name and Olares ID.
+   ![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+
+   For example, if your full Olares ID is `alice123@olares.com`:
+   - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
+   - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
+</template>
+<template #macOS>
+
+1. Enter the macOS host IP.
+2. Enter your domain name and Olares ID.
+   ![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+
+   For example, if your full Olares ID is `alice123@olares.com`:
+   - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
+   - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
+
+</template>
+
+<template #Windows>
+
+Enter your domain name and Olares ID.
 For example, if your full Olares ID is `alice123@olares.com`:
-- **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
-- **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
+   - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
+   - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
+
+</template>
+</Tabs>
 
 Upon completion of the installation, the initial system information, including the Wizard URL and the initial login password, will appear on the screen. You will need them later in the activation stage.
 
-![alt text](/images/how-to/olares/one_time_password.png)
+![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
 
 ## Next step
 Now that you have installed Olares, the next step is to activate your system for use, similar to setting up a new smartphone:
