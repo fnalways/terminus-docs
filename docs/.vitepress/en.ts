@@ -498,7 +498,7 @@ export const en = defineConfig({
   lang: "/",
   themeConfig: {
     //logo: "/icon.png",
-    socialLinks: [{ icon: "github", link: "https://github.com/beclab" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/beclab/olares" }],
 
     nav: [
       { text: "Manual", link: "/manual/docs-home" },
