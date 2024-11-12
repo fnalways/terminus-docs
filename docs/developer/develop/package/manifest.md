@@ -11,7 +11,7 @@ Here's an example of what a `OlaresManifest.yaml` file might look like:
 ::: details OlaresManifest.yaml Example
 
 ```Yaml
-olaresManifest.version: '0.7.0'
+olaresManifest.version: '0.8.0'
 olaresManifest.type: app
 metadata:
   name: helloworld
@@ -66,17 +66,17 @@ options:
     type: system
     version: '>=0.1.0'
 ```
-
 :::
 
 :::info NOTE
-Olares Manifest Version: `0.7.1`
-
-Changelog:
-- Add new `authLevel` value `internal`
-- Change `spec`>`language` to `spec`>`locale` and support i18n
+Latest Olares Manifest Version: `0.8.1`
+  - Add new `ports` section to specify exposed ports for UDP and TCP protocol
 :::
-
+:::details Changelog
+  `0.7.1`
+  - Add new `authLevel` value `internal`
+  - Change `spec`>`language` to `spec`>`locale` and support i18n
+:::
 
 ## olaresManifest.type
 
@@ -284,7 +284,31 @@ To ensure a seamless user experience, you can enable this option by setting it t
 ```
 :::
 
-## permission
+## Ports
+Specify exposed ports
+:::info Example
+```Yaml
+ports:
+- name: aaa          # Name of entrance that provide udp service
+  host: udp          # Ingress name of entrance that provide udp service
+  port: 8899         # Port of entrance that provide udp service
+  protocol: udp      # udp/tcp
+- name: bbb
+  host: udp
+  port: 8090
+  protocol: tcp
+```
+:::
+
+Olares OS will generate a random exposed port between 33333 and 36789. These ports can be accessed through the app entrance domain with the port on the local network. For example: `84864c1f.local.your_olares_id.olares.com:33805`.
+
+
+:::info NOTE
+The exposed ports can only be accessed on the local network or through a VPN.
+:::
+
+
+## Permission
 
 :::info Example
 ```Yaml
