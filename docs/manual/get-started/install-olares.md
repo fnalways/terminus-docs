@@ -199,7 +199,14 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
       echo \"nameserver 1.1.1.1\nnameserver 1.0.0.1\" > /etc/resolv.conf"
       ```
    This command binds Ubuntu's local IP with the host name, and configures DNS resolution to use Cloudflare's public DNS servers.
+7. Set the execution policy for the current user.
 
+   a. Open PowerShell as Administrator, then run the following command:
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+    ```
+   b. Enter `A` and press **Enter** to change execution policy.
+   ![Change execution policy](/images/manual/get-started/change-execution-policy.png)
 </template>
 </Tabs>
 
@@ -225,16 +232,12 @@ In terminal, run the following command:
 </template>
 <template #Windows>
 
-1. Within the WSL Ubuntu environment, run the following command:
-    ```bash
-    curl -fsSL https://olares.sh |  bash -
-    ```
-
-2. During installation, enter the Windows host IP (`192.168.xxx.xxx`) you obtained earlier.
-3. press **Enter** to proceed.
-
-![Install Windows IP](/images/overview/olares/install-windows-ip.jpeg)
-
+1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`. The download will start automatically.
+2. Once downloaded, double-click the `publicInstall.latest.ps1` file or right-click and select **Run with PowerShell**.
+3. When prompted, click **Open** to proceed.
+4. Type `R` and press **Enter** to run the script.
+   ![Run installation script](/images/manual/get-started/run-installation-script.png)
+The script will then start installing Olares.
 </template>
 </Tabs>
 
@@ -276,6 +279,8 @@ At the end of the installation process, you will be prompted to enter domain nam
 <template #Windows>
 
 Enter your domain name and Olares ID.
+![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+
 For example, if your full Olares ID is `alice123@olares.com`:
    - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
    - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
