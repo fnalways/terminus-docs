@@ -45,7 +45,7 @@ Currently, local file sync is available for Windows and Mac users. We'll use the
 ## Create a Library
 Each user is automatically provided with their own personal Library as a starting point. To create a new Library:
 
-1. In the left sidebar under **Sync**, click the <i class="material-icons">add_circle</i> to open the **New library** dialog.
+1. In the left sidebar under **Sync**, click the <i class="material-symbols-outlined">add_circle</i> to open the **New library** dialog.
 2. Enter a name for the Library and click **Create**.
 
 ## Sync Library files to local
@@ -86,10 +86,12 @@ You can share a Library with other members within an Olares server:
 3. Set file permissions for each user: **Read-write** or **Read-only**.
 4. Click **Close**.
 
+   ![Share library](/images/manual/tasks/share-library.png#bordered){width="50%"}
+
 Invited users will see the shared Library in their Sync content list. To revoke sharing permissions, simply remove the user from the sharing window.
 
 ## Exit or delete a Library
-
+If you don't want to share a Library, you could exit sharing or delete it.
 - **Exit sharing**: Any member can exit a shared Library. When an owner exits, the Library will appear in their personal Library list.
 - **Delete**: Only the owner can delete a shared Library.
    :::warning

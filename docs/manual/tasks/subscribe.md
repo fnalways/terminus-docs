@@ -10,8 +10,8 @@ Wise offers flexible subscription options to help you follow your favorite conte
 When you subscribe to podcast or video channels in Wise, new episodes automatically download to your Olares storage. This ensures your media content is always available—even offline—and protected from source deletion or unavailability.
 :::
 
-### Add subscriptions from For You
-When browsing recommended content on the **For You** page, you can subscribe to content sources using the following options:
+### Add subscriptions from For you
+When browsing recommended content on the **For you** page, you can subscribe to content sources using the following options:
 
 * Click **Subscribe this Feed** in the **Info** column
 * Click <i class="material-symbols-outlined">bookmark_add</i> in the toolbar

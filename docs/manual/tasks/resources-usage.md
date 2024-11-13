@@ -24,6 +24,7 @@ Monitor four fundamental metrics directly from **Overview**:
 - Disk usage
 - Pod status
 
+![Dashboard overview](/images/manual/tasks/dashboard-overview.png)
 ### Access detailed metrics
 
 For deeper analysis, click **More details** to view comprehensive monitoring data for the past 7 days.
@@ -32,20 +33,23 @@ Use the dropdown menu in the top right to change the time range, or click <i cla
 
 The following metrics help you maintain optimal system performance:
 
-| Metric            | Description                        | Impact                                        |
-|-------------------|------------------------------------|-----------------------------------------------|
-| CPU Usage         | Percentage of CPU resources used   | Prolonged spikes can slow down the system     |
-| Memory Usage      | Percentage of memory in use        | Impacts application performance and stability |
-| Average CPU Load  | Average number of active processes | High load indicates system overload           |
-| Disk Usage        | Percentage of disk space used      | Crucial for data reliability, prevent overuse |
-| Inode Usage       | Percentage of inodes used          | Exhaustion prevents new file creation         |
-| Disk Throughput   | Data transfer rate (MB/s)          | Important for large file transfers            |
-| IOPS              | Input/Output Operations Per Second | Critical for small file or random data access |
-| Network Bandwidth | Network usage (Mbps)               | Reflects network speed and quality            |
-| Pod Status        | Count of pods by state             | Reflects application health                   |
+| Metric           | Description                        | Impact                                        |
+|------------------|------------------------------------|-----------------------------------------------|
+| CPU usage        | Percentage of CPU resources used   | Prolonged spikes can slow down the system     |
+| Memory usage     | Percentage of memory in use        | Impacts application performance and stability |
+| Average CPU load | Average number of active processes | High load indicates system overload           |
+| Disk usage       | Percentage of disk space used      | Crucial for data reliability, prevent overuse |
+| Inode usage      | Percentage of inodes used          | Exhaustion prevents new file creation         |
+| Disk throughput  | Data transfer rate (MB/s)          | Important for large file transfers            |
+| IOPS             | Input/Output Operations Per Second | Critical for small file or random data access |
+| Network traffic  | Network usage (Mbps)               | Reflects network speed and quality            |
+| Pod status       | Count of pods by state             | Reflects application health                   |
 
+![Physical resource monitoring](/images/manual/tasks/physical-resource-monitoring.png)
 ### Check resource quota
-You can view your current and historical resource usage on the Overview page. The system shows both real-time consumption and usage trends for your allocated quota.
+You can view your resource quota allocated by the Olares admin.
+
+![Resource quota](/images/manual/tasks/resource-quota.png)
 
 :::warning
 When your resource quota runs low, you may experience:
@@ -55,11 +59,15 @@ When your resource quota runs low, you may experience:
 * Automatic suspension of resource-intensive applications.
 :::
 
+
 ### Track application performance
 The **Usage ranking** section displays the top 5 applications consuming CPU and memory resources. To access the complete list of application resource usage, click **More**.
 
-The **Analytics** section shows application view traffic for the past 24 hours. For detailed analytics of individual applications, click **More**.
+![Usage ranking](/images/manual/tasks/usage-ranking.png)
 
+The **Analytics** section shows view traffic for all applications within the last 24 hours. For detailed analytics of individual applications, click **More**.
+
+![Analytics](/images/manual/tasks/overview-analytics.png)
 ## Applications
 
 The **Applications** dashboard helps you monitor resource usage patterns across your applications through various sorting and filtering options.
@@ -69,6 +77,8 @@ Use the dropdown menu in the upper right corner to sort applications based on th
 - Memory usage
 - Inbound traffic
 - Outbound traffic
+
+![Applications](/images/manual/tasks/applications.png)
 
 Toggle between ascending and descending order to identify which applications are consuming the most or least resources.
 
@@ -86,6 +96,8 @@ Olares features powerful built-in analytic, helping you understand application u
 :::info
 Analytics data is only available for applications that have declared the analytics function in their `OlaresManifest.yaml` file.
 :::
+
+![Analytics](/images/manual/tasks/analytics.png)
 
 Key metrics include:
 
