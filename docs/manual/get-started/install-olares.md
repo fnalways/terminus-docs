@@ -253,9 +253,9 @@ At the end of the installation process, you will be prompted to enter domain nam
 <template #Linux-and-Raspberry-Pi>
 
 1. Enter the root user password.
-   ![Enter password](/images/manual/get-started/enter-password.png)
+   ![Enter password](/images/manual/get-started/enter-root-user-password.png)
 2. Enter your domain name and Olares ID.
-   ![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+   ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
    For example, if your full Olares ID is `alice123@olares.com`:
    - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
@@ -265,7 +265,7 @@ At the end of the installation process, you will be prompted to enter domain nam
 
 1. Enter the macOS host IP.
 2. Enter your domain name and Olares ID.
-   ![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+   ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
    For example, if your full Olares ID is `alice123@olares.com`:
    - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.

@@ -23,7 +23,7 @@ Before starting, ensure you have:
    a. Open Settings, navigate to **Applications** > **ComfyUI** > **Entrances**.
 
    b. Set the **Authentication level** to **Internal**.
-
+   ![ComfyUI authentication level](/images/manual/use-cases/comfyui-authentication-level.png#bordered){width=70%}
 3. Launch ComfyUI from your desktop, and verify the installation by generating a sample image.
 4. Copy the address of ComfyUI for next steps.
 :::tip
@@ -36,10 +36,11 @@ If `.local` is missing, check your local network environment and make sure no ex
 
 1. Download [Krita](https://krita.org/en/download/).
 2. Download the [Krita AI Diffusion plugin](https://github.com/Acly/krita-ai-diffusion/releases).
-3. Launch Krita, and navigate to **Tools** > **Scripts** > **Import Python Plugin from File**, and select the downloaded ZIP package. 
+3. Launch Krita, and navigate to **Tools** > **Scripts** > **Import Python Plugin from File**, and select the downloaded ZIP package.
+   ![Import AI plugin](/images/manual/use-cases/krita-import-plugin.png#bordered){width=70%}
 4. Confirm the plugin activation and restart Krita.
 5. Open Krita, and verify the installation in **Settings** > **Configure Krita** > **Python Plugin Manager**.
-
+   ![Verify AI plugin](/images/manual/use-cases/krita-verify-plugin.png)
 ## Connect Krita to ComfyUI
 Establish a secure connection between Krita and ComfyUI:
 1. Create a new document in Krita.
@@ -47,12 +48,15 @@ Establish a secure connection between Krita and ComfyUI:
    Start with a 512 x 512 pixel canvas to optimize performance and manage graphics memory efficiently.
    :::
 2. Click **Settings** > **Dockers** > **AI Image Generation** to enable the plugin. You could position the panel to where it's convenient.
+   ![Enable AI plugin](/images/manual/use-cases/krita-enable-plugin.png)
 3. Click **Configure** to access the plugin settings.
+   ![Configure AI plugin](/images/manual/use-cases/krita-configure-plugin.png#bordered){width=70%}
 4. Set up ComfyUI connection.
 
    a. In **Connection**, select **Custom Server**, and paste your ComfyUI URL.
    
    b. Click **Connect** to verify the connection. A green "Connected" indicator confirms successful connection.
+   ![Connect ComfyUI](/images/manual/use-cases/krita-comfyui-connected.png)
    :::info
    If connection fails:
    - Verify network connectivity between your computer and Olares.
@@ -72,6 +76,7 @@ Now comes the exciting part - creating AI-generated artwork using natural langua
 1. Enter your prompts in the text box, and click **Generate**. 
 2. Browse through the generated image variations.
 3. Select a preferred result, and click **Apply** to save it to the canvas.
+   ![Generate AI art](/images/manual/use-cases/krita-generate-ai-art.png)
 :::tip
 If the results aren't quite what you want, you could:
 - Create additional variations with new generations.

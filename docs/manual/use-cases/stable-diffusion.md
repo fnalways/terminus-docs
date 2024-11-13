@@ -23,8 +23,9 @@ Launch SD Web UI from your desktop, and voilà - unleash your creativity and sta
 ## Prevent conflicts among members
 In SD Web UI, checkpoint settings are globally applied to all users by default. When one user switches to a different checkpoint, all subsequent image generations by other users will also use this newly selected checkpoint. To prevent workflow disruptions in multi-user environments, you could specify checkpoints for individual tasks.
 
-- Global checkpoint
-- Per-task checkpoint
+![Checkpoint settings](/images/manual/use-cases/sd-checkpoint.png)
+1. Global checkpoint
+2. Per-task checkpoint
 
 ## Adjust system settings
 When launching SD Web UI, the `--xformers` flag is enabled by default to:
@@ -44,6 +45,27 @@ Only Olares admin can adjust system parameters through the Control Hub app.
 2. Locate **sdwebui** under the admin's namespace.
 3. Under **Deployments**, click **sdwebui**.
 4. Click <i class="material-symbols-outlined">more_vert</i> in the top right corner, and click **Edit YAML**.
-5. In the YAML editor, locate `--xformers` and remove it.
+5. In the YAML editor, locate `--xformers` and remove it. The default YAML file should look similar to the following.
+
+    ```yaml {5}
+    env:
+      - name: CLI_ARGS
+        value: >-
+          --allow-code --enable-insecure-extension-access --api
+          --no-hashing --gradio-queue --xformers
+     ```
+
 6. Click **OK** to apply the system settings.
 
+## Gallery
+
+<table>
+  <tr>
+    <td><img src="/images/manual/use-cases/sd-example1.png" alt="Image 1" width="200" /></td>
+    <td><img src="/images/manual/use-cases/sd-example2.png" alt="Image 2" width="200" /></td>
+  </tr>
+  <tr>
+    <td><img src="/images/manual/use-cases/sd-example3.png" alt="Image 3" width="200" /></td>
+    <td><img src="/images/manual/use-cases/sd-example4.png" alt="Image 4" width="200" /></td>
+  </tr>
+</table>

@@ -29,7 +29,7 @@ This section focuses on creating individual Olares IDs. If you want to create an
    * only lowercase letters and numbers
 3. Click **Continue** to finish the creation process.
 
-![Fast creation](/images/how-to/larepass/individual_olares_id_fast.png)
+![Fast creation](/images/manual/get-started/create-olares-id.png)
 
 ## Next step
 

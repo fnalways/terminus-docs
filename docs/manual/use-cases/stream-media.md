@@ -11,13 +11,14 @@ To achieve smooth streaming over external networks, enable the Olares VPN connec
 For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
-### On Olares mobile client
+### On LarePass mobile client
 1. Open LarePass, go to **Settings** > **Account**.
 2. Turn on the VPN switch.
-
-### On Olares desktop client
+   ![Enable VPN on LarePass mobile](/images/manual/use-cases/vpn-mobile.png)
+### On LarePass desktop client
 1. Open LarePass, click on the avatar area in the top left corner of the main interface.
-2. Turn on the switch for **Enable VPN connection** in the pop-up panel.
+2. Turn on the switch for **VPN connection** in the pop-up panel.
+   ![Enable VPN on LarePass desktop](/images/manual/use-cases/vpn-desktop.png)
 
 Once enabled, you can also access your applications using the format: `https://[RouteID].local.[OlaresDomainName]`.
 
@@ -49,8 +50,9 @@ For advanced media management features like subtitle support and multi-channel a
 4. Wait for Jellyfin to scan and index your media library. It will automatically fetch metadata including:
    - Movie posters 
    - Descriptions 
-   - Cast information
+   - Cast information 
 
+![Jellyfin](/images/manual/use-cases/jellyfin.png)
 ## Access your media library through Jellyfin clients
 To stream your media on various devices:
 

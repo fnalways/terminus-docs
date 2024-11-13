@@ -23,6 +23,16 @@ Think of vault items as individual secure containers for your sensitive informat
 * **Attachments**: For adding related files
 * **Expiration**: Set an expiry date for time-sensitive information
 
+Currently, Vault supports various default types for a vault item:
+- Website/App
+- Computer
+- Credit card
+- Bank account
+- Wi-Fi Password
+- Passport
+- Authenticator
+- Document
+
 ### Fields
 Fields are the core component of Vault Items, allowing storage of various data types, including:
 
@@ -41,7 +51,10 @@ Fields are the core component of Vault Items, allowing storage of various data t
 ## Protect Vault with password
 When use Vault in Olares for the first time, you will be prompted to set a local password. This password should not be the same as your Olares login password.
 
-After setting up, you also need to import the Olares ID that's already linked to your Olares server using mnemonic phrase. 
+1. Set the local password for Vault.
+2. Import the Olares ID that's already linked to your Olares server using mnemonic phrase. 
+
+![Vault password](/images/manual/tasks/vault-local-password.png)
 
 :::info
 If you don't know where to find the mnemonic phrase, see [back up mnemonic phrase](../get-started/back-up-mnemonics).
@@ -60,7 +73,11 @@ To add a vault item:
 1. Open the Vault app from the Dock or Launchpad.
 2. Click <i class="material-icons">add</i> in the top right corner.
 3. Select a type, such as **Website / App** for storing account details, and click **Create**.
+
+   ![Add vault item](/images/manual/tasks/add-vault-item.png)
 4. Fill in the required fields like item name, Username, Password, and URL.
+
+   ![Fill item fields](/images/manual/tasks/fill-item-fields.png)
 5. Click **Save** to create the new vault item.
 </template>
 <template #LarePass-desktop-or-mobile>

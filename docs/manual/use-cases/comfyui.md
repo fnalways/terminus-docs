@@ -22,3 +22,4 @@ Based on your role:
 
 Once installed, launch ComfyUI from your desktop.
 
+![ComfyUI](/images/manual/use-cases/comfyui.png)
