@@ -72,8 +72,8 @@ Use the dropdown menu in the upper right corner to sort applications based on th
 
 Toggle between ascending and descending order to identify which applications are consuming the most or least resources.
 
-For applications supporting multiple access points, each application card displays either a **public** or **private** tag that you can click to switch between different entrance types and view their corresponding resource metrics.
-
+For applications supporting multiple entrances (such as Wordpress), you can click icons to switch between different entrance types and view their corresponding resource metrics.
+![Multiple entrances](/images/manual/tasks/multiple-entrances.png#bordered){width=40%}
 :::tip
 * When your application list grows large, quickly locate specific applications by typing their names in the search box at the top of the page.
 * Regularly checking resource consumption patterns helps you identify applications that might need optimization or attention.

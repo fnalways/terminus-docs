@@ -2,14 +2,14 @@
 
 Olares offers a wide array of features designed to enhance security, ease of use, and development flexibility:
 
-- **Enterprise-grade security**: Simplified network configuration using Tailscale, Headscale, Cloudflare Tunnel, and FRP.
-- **Secure and permissionless application ecosystem**: Sandboxing ensures application isolation and security. [See what Olares Market has to offer](https://market.olares.xyz/).
-- **Unified file system and database**: Automated scaling, backups, and high availability.
+- **Enterprise-grade security**: Secure your self-hosted cloud with simplified network configuration using Tailscale, Headscale, Cloudflare Tunnel, and FRP.
+- **Secure and permissionless application ecosystem**: Access nearly 100 free applications in a secure, sandboxed environment. [See what Olares Market has to offer](https://market.olares.xyz/).
+- **Unified file system and database**: Support automated scaling, backups, and high availability.
 - **Single sign-on**: Log in once to access all applications within Olares with a shared authentication service.
-- **AI capabilities**: Comprehensive solution for GPU management, local AI model hosting, and private knowledge bases while maintaining data privacy.
-- **Built-in applications**: Includes file manager, sync drive, vault, reader, app market, settings, and dashboard.
+- **AI capabilities**: Manage GPU resources, host AI models locally, and build private knowledge bases with complete privacy.
+- **Built-in applications**: Get started with essential pre-installed applications such as Files, Vault, Wise, Profile and Dashboard.
 - **Seamless anywhere access**: Access your devices from anywhere using dedicated clients for mobile, desktop, and browsers.
-- **Development tools**: Comprehensive development tools for effortless application development and porting.
+- **Development tools**: Build and port applications easily with comprehensive development tools.
 
 ## Feature comparison
 :::tip Legend

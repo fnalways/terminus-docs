@@ -1,6 +1,6 @@
 # Documentation
 
-Olares (formerly Terminus) is a free, source-available, cloud-native operating system built on Kubernetes. It transforms your edge device into a powerful home cloud, offering cloud-level capabilities while prioritizing ease of use and privacy.
+Olares (formerly Terminus) is an open-source, self-hosted alternative to public clouds. It transforms your edge device into a sovereign cloud environment, offering cloud-level capabilities while prioritizing ease of use and privacy.
 
 For a comprehensive overview of the system, visit our [GitHub repository](https://github.com/beclab/olares).
 
@@ -10,13 +10,11 @@ We're updating our documentation to reflect the rebranding. While you may see di
 
 ## New to Olares?
 
-The getting-started guide covers creating an Olares ID and setting up Olares on your local machine. 
-
 <div class="cta">
   <a href="./get-started/">
     <div class="content">
       <h3>Get started with Olares</h3>
-      <p>Navigate your personal cloud</p>
+      <p>Check out the get-started guide to set up Olares on your local machine</p>
     </div>
     <div class="arrow">→</div>
   </a>
@@ -40,7 +38,6 @@ Before you roll up your sleeves and get your hands dirty with Olares, feel free 
     <p class="cta-description">Grasp the fundamental principles and architecture behind Olares.</p>
   </a>
 </div>
-
 
 ## Other resources
 

@@ -10,6 +10,7 @@ Keep your mnemonic phrase safe and secret, and never share it with anyone. It is
 When exporting or backing up your mnemonic phrase for the first time, you may be prompted to set a local password for LarePass. This password is only used to unlock LarePass services on the current device.
 
 After setting up, you can choose to enable biometric unlock for more secure and convenient access using face recognition or fingerprint.
+![Set up local password](/images/manual/get-started/set-up-local-password.png)
 
 :::info
 * All Olares IDs on the same device share one local password in the LarePass app.
@@ -17,20 +18,19 @@ After setting up, you can choose to enable biometric unlock for more secure and 
 :::
 
 ## Reveal and back up your mnemonic phrase
-1. Open the LarePass app.
-2. Go to **Settings** > **Account** and click **Backup now**.
+1. Open the LarePass app, and go to **Settings** > **Account** page. 
+2. click **Backup now**.
 3. Read the risk warning about losing your mnemonic phrase and click **Start**. 
-4. Click to view the 12-word mnemonic phrase and enter your local password for identity verification. 
-5. Click **Unlock**.
-6. Securely record the mnemonic phrase and store it in a safe place.
-7. Click **Next**.
+4. Click to view the 12-word mnemonic phrase, and enter your local password for identity verification.
+5. Securely record the mnemonic phrase and store it in a safe place.
+6. Click **Next**.
    :::warning
    While clicking **Copy** will save the mnemonic phrase to your clipboard, this poses a security risk. For maximum security, we strongly recommend backing up your mnemonic phrase offline.
    :::
-8. Verify your backup by arranging the mnemonic phrase in the correct order.
-9. Click **Completed**. 
+7. Verify your backup by arranging the mnemonic phrase in the correct order.
+8. Click **Completed**. 
    If arranged correctly, you have successfully backed up your mnemonic phrase.
-
+   ![Back up mnemonic phrase](/images/manual/get-started/backup-mnemonic-phrase.png)
 ## FAQ
 ### What happens if I lose my mnemonic phrase?
 Losing your mnemonic phrase will result in serious consequences:

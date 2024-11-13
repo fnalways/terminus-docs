@@ -15,7 +15,7 @@ Use the Wizard URL and initial one-time password to activate. This process conne
 
    a. Open LarePass app, and tap **Scan QR code** to scan the QR code on the Wizard page and complete the activation.
    ![Activate Olares](/images/manual/get-started/activate-olares.png)
-   b. Reset the login password for Olares by following the on-screen instructions on LarePass app.
+   b. Reset the login password for Olares by following the on-screen instructions on LarePass.
 
 After successful setup, the LarePass app will automatically go to the home screen, and the Wizard will redirect you to the login page.
 
