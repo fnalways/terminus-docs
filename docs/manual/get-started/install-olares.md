@@ -116,96 +116,15 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
     - Supported Systems:
         - Windows 10 or 11
         - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
-2. Create a `.wslconfig` file in your Windows user directory (typically `C:\Users\{YourUsername}\`) with the following content:
 
-   ```bash
-   [wsl2]
-   memory=16GB 
-   swap=0GB
-   ```
-
-3. Open PowerShell as Administrator and run the following commands to install Ubuntu in your WSL environment:
-
-   ```PowerShell
-   wsl --install -d Ubuntu-22.04
-   wsl --update
-   ```
-
-   :::info
-   You may need to restart your system after Ubuntu is installed if it's the first time installing WSL.
-   :::
-
-4. In PowerShell, run the following command to obtain Windows host IP:
-
-   ```PowerShell
-   netsh interface ipv4 show addresses
-   ```
-
-   Note the IP Address of your WLAN or Ethernet interface. It should start with `192.xxx`. You will need it when installing Olares.
-
-5. Set up port forwarding for your WSL server.
-
-   a. Get the IP address of the WSL server.
-
-      ```PowerShell
-      wsl ip address show eth0 `| grep inet `| grep -v inet6 `| cut -d ' ' -f 6 `| cut -d '/' -f 1
-      # This typically returns an IP address in format of "172.xx.xx.xx"
-      ```
-   b. Set up port forwarding rules:
-
-      ```PowerShell
-      netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=<addr for hostname>
-      netsh interface portproxy add v4tov4 listenport=443 listenaddress=0.0.0.0 connectport=443 connectaddress=<addr for hostname>
-      netsh interface portproxy add v4tov4 listenport=30180 listenaddress=0.0.0.0 connectport=30180 connectaddress=<addr for hostname>
-      
-      # Replace <addr for hostname> with the IP address you get from step a.
-      ```
-
-6. Configure the Ubuntu environment.
-
-   a. Open the Start menu and search for `Ubuntu-22.04`, and click on the Ubuntu icon to launch your Linux environment.
-
-      ```PowerShell
-      wsl -d Ubuntu-22.04
-      ```
-
-   b. In Ubuntu, modify the `/etc/wsl.conf` file as specified below.
-
-   ::: tip NOTE
-   Make sure you open the file with sudo privileges.
-   :::
-
-      ```bash {3,6,7}
-      [boot] 
-      systemd=true  
-      command="mount --make-rshared /"   # Add this line
-      [network]
-      generateHosts = false
-      generateResolvConf = false # Allow manually managing hosts file and DNS settings
-      hostname=olares # Set the hostname for the WSL instance
-      ```
-
-   c. Shut down Ubuntu in PowerShell and restart it.
-
-      ```PowerShell
-      wsl --shutdown Ubuntu-22.04
-      ```
-
-   d. In Ubuntu, modify the hosts file and the `resolv.conf` file:
-
-      ```bash
-      sudo sh -c "echo \"127.0.0.1 localhost\n \
-      $(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}') $(hostname)\" > /etc/hosts && \
-      echo \"nameserver 1.1.1.1\nnameserver 1.0.0.1\" > /etc/resolv.conf"
-      ```
-   This command binds Ubuntu's local IP with the host name, and configures DNS resolution to use Cloudflare's public DNS servers.
-7. Set the execution policy for the current user.
+2. Set the execution policy for the current user.
 
    a. Open PowerShell as Administrator, then run the following command:
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
     ```
-   b. Enter `A` and press **Enter** to change execution policy.
+   b. Type `A` and press **Enter** to change the execution policy.
+
    ![Change execution policy](/images/manual/get-started/change-execution-policy.png)
 </template>
 </Tabs>
@@ -236,7 +155,9 @@ In terminal, run the following command:
 2. Once downloaded, double-click the `publicInstall.latest.ps1` file or right-click and select **Run with PowerShell**.
 3. When prompted, click **Open** to proceed.
 4. Type `R` and press **Enter** to run the script.
+
    ![Run installation script](/images/manual/get-started/run-installation-script.png)
+
 The script will then start installing Olares.
 </template>
 </Tabs>
@@ -256,8 +177,10 @@ At the end of the installation process, you will be prompted to enter domain nam
 <template #Linux-and-Raspberry-Pi>
 
 1. Enter the root user password.
+
    ![Enter password](/images/manual/get-started/enter-root-user-password.png)
 2. Enter your domain name and Olares ID.
+
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
    For example, if your full Olares ID is `alice123@olares.com`:
@@ -268,6 +191,7 @@ At the end of the installation process, you will be prompted to enter domain nam
 
 1. Enter the macOS host IP.
 2. Enter your domain name and Olares ID.
+
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
    For example, if your full Olares ID is `alice123@olares.com`:
@@ -279,7 +203,8 @@ At the end of the installation process, you will be prompted to enter domain nam
 <template #Windows>
 
 Enter your domain name and Olares ID.
-![Enter domain name and Olares ID](/images/manual/get-started/enter-domain-name-and-olares-id.png)
+
+![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
 For example, if your full Olares ID is `alice123@olares.com`:
    - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
