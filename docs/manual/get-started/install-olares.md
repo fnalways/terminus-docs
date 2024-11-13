@@ -151,7 +151,7 @@ In terminal, run the following command:
 </template>
 <template #Windows>
 
-1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`. The download will start automatically.
+1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`.
 2. Once downloaded, double-click the `publicInstall.latest.ps1` file or right-click and select **Run with PowerShell**.
 3. When prompted, click **Open** to proceed.
 4. Type `R` and press **Enter** to run the script.
