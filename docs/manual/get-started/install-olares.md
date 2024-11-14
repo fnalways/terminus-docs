@@ -148,6 +148,7 @@ In terminal, run the following command:
  ```bash
  curl -fsSL https://olares.sh |  bash -
  ```
+
 </template>
 <template #Windows>
 
@@ -165,7 +166,7 @@ The script will then start installing Olares.
 :::info
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
-bash olares.uninstall.sh
+bash olares-uninstall.sh
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
@@ -189,7 +190,7 @@ At the end of the installation process, you will be prompted to enter domain nam
 </template>
 <template #macOS>
 
-1. Enter the macOS host IP.
+1. Enter the IP address of your Mac.
 2. Enter your domain name and Olares ID.
 
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
