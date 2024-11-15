@@ -1,6 +1,6 @@
 # Olares Application Chart Structure
 
-The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart may contain the following files:
+The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart contains the following files:
 ```
 |-- Chart.yaml                   # A YAML file containing metadata information about the chart
 |-- OlaresManifest.yaml        # Olares Application configuration
