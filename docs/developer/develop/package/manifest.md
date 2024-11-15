@@ -70,7 +70,7 @@ options:
 
 :::info NOTE
 Latest Olares Manifest Version: `0.8.1`
-  - Add new `ports` section to specify exposed ports for UDP and TCP protocol
+  - Add a `ports` section to specify exposed ports for the UDP or TCP protocol
 :::
 :::details Changelog
   `0.7.1`
