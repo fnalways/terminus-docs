@@ -289,10 +289,10 @@ Specify exposed ports
 :::info Example
 ```Yaml
 ports:
-- name: aaa          # Name of entrance that provide udp service
-  host: udp          # Ingress name of entrance that provide udp service
-  port: 8899         # Port of entrance that provide udp service
-  protocol: udp      # udp/tcp
+- name: aaa          # Name of the entrance that provides UDP service
+  host: udp          # Ingress name of the entrance that provides UDP service
+  port: 8899         # Port of the entrance that provides UDP service
+  protocol: udp      # Protocol type. {udp/tcp}
 - name: bbb
   host: udp
   port: 8090
