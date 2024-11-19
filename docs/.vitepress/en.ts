@@ -5,6 +5,7 @@ const side = {
     { text: "Docs home",
       link: "/manual/docs-home",
       items: [
+      { text: "What is Olares", link: "/manual/what-is-olares" },
       { text: "Why Olares", link: "/manual/why-olares" },
       { text: "Features",
             link: "/manual/feature-overview",
@@ -295,7 +296,6 @@ const side = {
       collapsed: true,
       link: "/manual/concepts/",
       items: [
-        { text: "Architecture", link: "/manual/concepts/architecture",},
         { text: "Olares ID", link: "/manual/concepts/olares-id" },
         { text: "Account", link: "/manual/concepts/account" },
         { text: "Application", link: "/manual/concepts/application" },
