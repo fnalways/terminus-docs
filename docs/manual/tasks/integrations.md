@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Add and manage integrations
 
-Olares allows you to integrate Olares Space to enhance functionality and personalize your experience. The integration helps you synchronize data, manage devices, and customize your profile.
+Olares allows you to integrate Olares Space and other third-party services to enhance functionality and personalize your experience. The integration helps you synchronize data, manage devices, and customize your profile.
 
 :::info
 We're working on adding support for third-party account integrations. This feature will allow you to connect various external services to your Olares account.

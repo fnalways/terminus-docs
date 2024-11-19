@@ -1,7 +1,7 @@
-# Set up two-factor authentication codes
+# Generate two-factor authentication codes
 Two-factor authentication (2FA) requires both your password and an authentication code when signing in. These codes are generated using Time-Based One-Time Password (TOTP), which creates temporary codes that refresh automatically. Similar to Google Authenticator or Microsoft Authenticator, Vault can generate secure 2FA codes for your online accounts.
 
-This guide explains how to set up and manage two-factor authentication (2FA) codes in Vault.
+This guide explains how to generate two-factor authentication (2FA) codes in Vault.
 ## Prepare your target service
 1. Log in to the website where you want to enable 2FA (e.g., GitHub or OpenAI).
 2. Navigate to the security settings page and enable two-factor authentication using authenticator app.

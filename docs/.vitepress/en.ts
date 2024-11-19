@@ -85,7 +85,7 @@ const side = {
       link: "/manual/tasks/",
       items: [
         {
-          text: "Personalization",
+          text: "Personalize Olares",
           collapsed: true,
           items: [
             {
