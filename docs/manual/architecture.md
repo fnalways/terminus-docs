@@ -4,8 +4,8 @@ Olares introduces a next-generation decentralized Internet framework through its
 
 ![BEC](/images/overview/snowinning/network-topology.jpeg)
 
-- **Edge**: The decentralized web node for users, hosting personal data such as documents, chat logs, and photos on private edge servers. Data remains within the user’s control on the edge, ensuring privacy and local data sovereignty.
 - **Blockchain**: Storage of high-value data, including decentralized identifiers (DIDs) and transactions on the blockchain via smart contracts. This enables transparency, immutability, and enhanced discoverability of data.
+- **Edge**: The decentralized web node for users, hosting personal data such as documents, chat logs, and photos on private edge servers. Data remains within the user’s control on the edge, ensuring privacy and local data sovereignty.
 - **Client**: The identity wallet app that ensures users can securely manage their identities and interact with their self-hosted systems while maintaining ownership and privacy over their digital credentials.
 
 ## Core components of Olares

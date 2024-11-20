@@ -6,6 +6,8 @@ outline: [2, 3]
 
 You can create a distinctive personal homepage that showcases your digital identity.
 
+![Profile](/images/manual/tasks/profile.png)
+
 ## Access your homepage
 Your personal homepage's default URL is `{Local name}.olares.com`.
 

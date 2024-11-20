@@ -36,10 +36,9 @@ iOS or macOS versions of LarePass will require adding a VPN configuration file t
 ## Enforce access using VPN
 For maximum security, Olares allows you to enforce VPN mode and ensure that all connections to your private Olares applications go through the VPN, regardless of the device or network you're using.
 
-### Enable enforced VPN mode
-
+To enable enforced VPN mode:
 1. Enable VPN connections on at least two devices (typically a computer and a mobile phone) with LarePass installed. See [Set up VPN access on LarePass](#set-up-vpn-access-on-larepass).
-2. Open the **Settings** app from the Dock or Launchpad.
+2. Open the Settings app from the Dock or Launchpad.
 3. Click on your profile picture in the top-left corner, and scroll down to **Security** settings.
 4. Turn on the switch for **Enforce VPN access to private entrance**.
 
