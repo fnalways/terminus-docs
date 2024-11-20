@@ -6,6 +6,7 @@ const side = {
       link: "/manual/docs-home",
       items: [
       { text: "What is Olares", link: "/manual/what-is-olares" },
+     { text: "Architecture", link: "/manual/architecture" },
       { text: "Why Olares", link: "/manual/why-olares" },
       { text: "Features",
             link: "/manual/feature-overview",
