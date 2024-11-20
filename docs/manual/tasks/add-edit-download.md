@@ -3,7 +3,7 @@ Operations in Files are essentially the same as in other file managers. This pag
 
 ## Upload files
 
-1. Open the Files app from the Dock or launch pad on Olares.
+1. Open the Files app from the Dock or Launchpad on Olares.
 2. Upload multiple files or folders using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
    - Click <i class="material-icons">drive_folder_upload</i> in the top right corner. 
@@ -20,13 +20,10 @@ When downloading multiple files, the behavior differs between the Files in Olare
 :::tip
 For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.olares.xyz/larepass) for details and download options.
 :::
-### Download via Files
-1. Open the Files app from the Dock or launch pad on Olares.
+
+1. Open the Files app from the Dock or Launchpad on Olares.
 2. Select any file, right-click to open the context menu, and select **Download**.
 3. Select the save location in the popup window.
-
-### Download via LarePass desktop
-
 
 ## Preview and edit files
 Double-click a file to open its preview. The Files app supports previewing the following file formats:
@@ -53,7 +50,7 @@ Full-text search is available for the `/Documents/` directory in **Drive**, allo
 :::warning
 Deleted files cannot be recovered.
 :::
-1. Open the Files application from the Dock or launch pad on Olares.
+1. Open the Files application from the Dock or Launchpad on Olares.
 2. Select the file(s) you want to delete and choose one of these methods:
    - Right-click and select **Delete** from the context menu.
    - Click <i class="material-icons">more_horiz</i> in the top right corner and select **Delete**.

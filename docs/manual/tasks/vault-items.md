@@ -106,25 +106,6 @@ To easily access LarePass, you can pin the extension to your toolbar.
 </template>
 </tabs>
 
-
-### Generate strong password
-Now that a new item is saved in your vault, you can improve its security by replacing the existing password with a stronger one:
-
-1. In Vault, select the item you want to secure, click the URL to copy.
-2. Open the corresponding website, and log in.
-3. On that website, navigate to the settings or account page where you can change your password.
-4. Generate strong password.
-
-    a. Return to Vault, navigate to the page **Tools** > **Password generators**.
-    
-    b. Set up the generator following the password requirements. You can choose to generate a passphrase, or a random string.
-
-    c. Click **Copy** to copy your new password.
-
-    d. Update the password in Vault. See [Edit](#edit).
-5. Return to the other website, and paste your strong password in the field **New password** and **Confirm new password**.
-6. Save your changes.
-
 ### Edit
 :::info
 The LarePass browser extension does not support editing vault items. For full editing capabilities, please use the Vault app in Olares, the mobile, or desktop versions of LarePass.
