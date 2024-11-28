@@ -12,7 +12,7 @@ Olares is designed to run on Linux-based systems. However, you can also install 
     - RAM: 8GB or above (available memory)
     - Storage: 64GB or above (available disk space)
     - Supported Systems:
-        - Ubuntu 20.04 LTS or later
+        - Ubuntu 22.04 LTS or later
         - Debian 11 or later
 2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
