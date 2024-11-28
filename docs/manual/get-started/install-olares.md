@@ -12,7 +12,7 @@ Olares is designed to run on Linux-based systems. However, you can also install 
     - RAM: 8GB or above (available memory)
     - Storage: 64GB or above (available disk space)
     - Supported Systems:
-        - Ubuntu 20.04 LTS or later
+        - Ubuntu 22.04 LTS or later
         - Debian 11 or later
 2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
@@ -107,10 +107,6 @@ Currently, Olares on Windows has certain limitations including:
 We recommend using it only for development or testing purposes.
 :::
 
-:::info
-Before installation, ensure Windows Defender Firewall is disabled temporarily during the installation process. You can re-enable it after installation is complete. This is required for proper WSL communication and initial Olares setup.
-:::
-
 1. Make sure your Windows meets the following requirements.
     - CPU: 4 cores or above
     - RAM: 16 or above (available memory)
@@ -119,7 +115,11 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
         - Windows 10 or 11
         - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 
-2. Set the execution policy for the current user.
+2. Enable Hyper-V, which is required for virtualization. See [Install Hyper-V on Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+
+3. Temporarily disable Windows Defender Firewall. You can re-enable it after installation is complete. See [Turn Microsoft Defender Firewall on or off](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f).
+
+4. Set the execution policy for the current user.
 
    a. Open PowerShell as Administrator, then run the following command:
     ```powershell
