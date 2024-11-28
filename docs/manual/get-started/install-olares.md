@@ -81,18 +81,20 @@ We recommend using it only for development or testing purposes.
 
 1. Make sure your Mac meets the following requirements.
     - Architecture: X86-64 or ARM64
-    - RAM: 8GB or above (available memory)
-    - Storage: 64GB or above (available disk space)
+    - RAM: 8 GB or above (available memory)
+    - Storage: 90 GB or above (available disk space)
     - MacOS: Monterey (12) or later
     - [Docker](https://www.docker.com/products/docker-desktop/) and [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew) installed
       ::: tip
       For MiniKube, it's recommended to install via `homebrew`.
       :::
 2. In Docker Desktop, navigate to **Settings** > **Resources**, and configure as below:
-    - CPU limit: Set to at least 4 CPUs
-    - Memory limit: Set to at least 9 GB
-
-3. Click **Apply & Restart** to implement the changes.
+    - **CPU limit**: Set to at least 4 CPUs
+    - **Memory limit**: Set to at least 9 GB
+    - **Virtual disk limit**: Set to at least 80 GB
+   
+     ![Update resource settings (example)](/images/manual/get-started/docker-resources-settings.png)
+3. Click **Apply & restart** to implement the changes.
 </template>
 
 <template #Windows>
@@ -112,7 +114,7 @@ Before installation, ensure Windows Defender Firewall is disabled temporarily du
 1. Make sure your Windows meets the following requirements.
     - CPU: 4 cores or above
     - RAM: 16 or above (available memory)
-    - Storage: 64GB or above (available disk space)
+    - Storage: 64 GB or above (available disk space)
     - Supported Systems:
         - Windows 10 or 11
         - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
