@@ -194,7 +194,7 @@ At the end of the installation process, you will be prompted to enter domain nam
 
 1. When prompted, enter your Mac's IP address for the network gateway (e.g., 192.168.x.x).
 ::: tip
-Find your IP in **System Preferences** > **Network**.
+Find your IP in **System Settings** > **Network**.
 :::
 2. Enter your domain name and Olares ID.
 
