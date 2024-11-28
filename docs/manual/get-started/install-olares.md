@@ -192,7 +192,7 @@ At the end of the installation process, you will be prompted to enter domain nam
 </template>
 <template #macOS>
 
-1. When prompted, enter your Mac's IP address for the network gateway (e.g., 192.168.x.x).
+1. When prompted, enter your Mac's IP address for the network gateway (e.g., `192.168.x.x`).
 ::: tip
 Find your IP in **System Settings** > **Network**.
 :::
