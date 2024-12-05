@@ -23,7 +23,7 @@
    onMounted(() => {
       setTimeout(() => {
          randomKey.value = Math.random()
-      }, 300)
+      }, 0)
    })
    
 
