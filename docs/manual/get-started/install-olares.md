@@ -18,9 +18,11 @@
 
    function tabChange(tab, index) {
       tabActiveIndex.value = index
+      document.title = `${title.value} | Olares`;
    }
 
    onMounted(() => {
+      document.title = `${title.value} | Olares`;
       setTimeout(() => {
          randomKey.value = Math.random()
       }, 0)
