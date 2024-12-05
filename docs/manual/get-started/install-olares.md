@@ -1,73 +1,39 @@
-# Install Olares on Linux
-<OSTabs
-  :tabs="[
-    { id: 'linux', label: 'Linux', href: null },
-    { id: 'raspberry-pi', label: 'Raspberry Pi', href: '/manual/get-started/install-olares-raspberry-pi' },
-    { id: 'macos', label: 'macOS', href: '/manual/get-started/install-olares-mac' },
-    { id: 'windows', label: 'Windows', href: '/manual/get-started/install-olares-windows' }
-  ]"
-  default-tab="linux"
-/>
+<script setup>
+   import { ref, computed } from 'vue'
+   import installOlaresLinux from './install-olares-linux.md'
+   import installOlaresRaspberryPi from './install-olares-raspberry-pi.md'
+   import installOlaresMac from './install-olares-mac.md'
+   import installOlaresInstallOlaresWindows from './install-olares-windows.md'
+   import { useData } from 'vitepress'
 
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+   const { isDark } = useData()
+   const tabActiveIndex = ref(0)
+   const title = computed(()=> titles[tabActiveIndex.value])
+   const titles = ['Install Olares on Linux', 'Install Olares on Raspberry Pi', 'Install Olares on Mac', 'Install Olares on Windows']
 
-## System compatibility
-Make sure your Linux device meets the following requirements.
-- CPU: 4 cores or above
-- RAM: 8GB or above (available memory)
-- Storage: 64GB or above (available disk space)
-- Supported Systems:
-    - Ubuntu 22.04 LTS or later
-    - Debian 11 or later
+   const icons = ['linux-brands-solid', 'raspberry-pi-brands-solid', 'apple-brands-solid', 'windows-brands-solid']
+   const icons_light = computed(() => icons.map(item => `/images/manual/icons/${item}.svg`))
+   const icons_dark = computed(() => icons.map(item => `/images/manual/icons/${item}-dark.svg`))
 
-## Set up system environment
-1. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+   function tabChange(tab, index) {
+      tabActiveIndex.value = index
+   }
 
-   ```bash
-   sudo apt install net-tools
-   ifconfig
-   # Get your local IP. Make sure it starts with `192.168`.
-   ```
+</script>
 
-   ```bash {2}
-   sudo nano /etc/hosts
-   192.168.xx.xx   linux  # Add this line
-   # Replace with your actual local IP and your host name.
-   ```
+# {{ title }}
 
-2. Reboot your Ubuntu to apply the change.
-
-   ```bash
-   sudo reboot
-   ```
-
-## Install Olares
-
-Run the following command:
-
-```bash
-curl -fsSL https://olares.sh |  bash -
-```
-
-## Prepare Wizard URL
-
-At the end of the installation process, you will be prompted to enter domain name and Olares ID:
-
-1. Enter the root user password.
-
-   ![Enter password](/images/manual/get-started/enter-root-user-password.png)
-2. Enter your domain name and Olares ID.
-
-   ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
-
-   For example, if your full Olares ID is `alice123@olares.com`:
-   - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
-   - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
-
-Upon completion of the installation, the initial system information, including the Wizard URL and the initial login password, will appear on the screen. You will need them later in the activation stage.
-
-![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
-
-## Next step
-Now that you have installed Olares, the next step is to activate your system for use, similar to setting up a new smartphone:
-- [Activate Olares](./activate-olares)
+<Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark">
+<template #Linux>
+<installOlaresLinux />
+</template>
+<template #Raspberry-Pi>
+<installOlaresRaspberryPi />
+</template>
+<template #macOS>
+<installOlaresMac />
+</template>
+<template #Windows>
+<installOlaresInstallOlaresWindows />
+</template>
+</Tabs>

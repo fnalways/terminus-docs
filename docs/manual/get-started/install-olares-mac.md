@@ -1,13 +1,5 @@
-# Install Olares on Mac
-<OSTabs
-  :tabs="[
-    { id: 'linux', label: 'Linux', href: '/manual/get-started/install-olares' },
-    { id: 'raspberry-pi', label: 'Raspberry Pi', href: '/manual/get-started/install-olares-raspberry-pi' },
-    { id: 'macos', label: 'macOS', href: null },
-    { id: 'windows', label: 'Windows', href: '/manual/get-started/install-olares-windows' }
-  ]"
-  default-tab="macos"
-/>
+
+
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
 
 :::info
