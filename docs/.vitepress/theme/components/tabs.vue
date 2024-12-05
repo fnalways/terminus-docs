@@ -2,28 +2,60 @@
   <div>
     <div class="tabs">
       <button
-        v-for="tab in tabLabels"
+        v-for="(tab, index) in tabLabels"
         :key="tab"
-        @click="activeTab = tab"
+        @click="clickHandler(tab, index)"
         :class="{ active: activeTab === tab }"
       >
-        {{ tab }}
+        <div class="tabs-item-wrapper">
+          <img
+            :src="iconFilter(index)"
+            class="tabs-img-wrapper"
+            alt=""
+            v-if="iconFilter(index)"
+          />
+          <span> {{ tab }}</span>
+        </div>
       </button>
     </div>
     <div v-for="tab in tabLabels" :key="tab" v-show="activeTab === tab">
-      <slot :name="tabSlots[tab]"></slot>
+      <div v-if="activeTab === tab">
+        <slot :name="tabSlots[tab]"></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    isDark: {
+      type: Boolean,
+    },
+    icons: {
+      type: Array,
+      default: [],
+    },
+  },
   data() {
     return {
       activeTab: null,
       tabLabels: [],
       tabSlots: {},
     };
+  },
+  methods: {
+    clickHandler(tab, index) {
+      this.activeTab = tab;
+      this.$emit("tab-changed", tab, index);
+    },
+    iconFilter(index) {
+      if (this.icons[index]) {
+        return this.isDark
+          ? `/images/manual/icons/${this.icons[index]}-dark.svg`
+          : `/images/manual/icons/${this.icons[index]}.svg`;
+      }
+    },
   },
   mounted() {
     // Map slot names to display labels
@@ -70,5 +102,15 @@ export default {
 
 div[style] {
   color: var(--vp-c-text-primary);
+}
+.tabs-img-wrapper {
+  width: 12px;
+  pointer-events: none;
+}
+.tabs-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 </style>

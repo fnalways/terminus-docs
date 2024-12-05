@@ -11,6 +11,7 @@ import LaunchCard from "./components/LaunchCard.vue";
 import FilterableList from "./components/FilterableList.vue";
 import { onMounted, watch, nextTick } from "vue";
 import mediumZoom from "medium-zoom";
+import OSTabs from "./components/OStabs.vue";
 
 export default {
   extends: DefaultTheme,
@@ -19,6 +20,8 @@ export default {
     app.component("Tabs", Tabs);
     app.component("LaunchCard", LaunchCard);
     app.component("FilterableList", FilterableList);
+    app.component("OSTabs", OSTabs);
+
   },
   setup() {
     const route = useRoute();
