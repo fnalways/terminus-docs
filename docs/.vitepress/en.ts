@@ -15,8 +15,8 @@ const side = {
       },
     {
       text: "Get started",
+      collapsed: false,
       link: "/manual/get-started/",
-      collapsed: true,
       items: [
         // { text: "Quick start", link: "/manual/get-started/quick-start" },
         {
@@ -26,6 +26,7 @@ const side = {
         {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
+          activeMatch: "/manual/get-started/install/",
         },
         {
           text: "Activate Olares",
@@ -509,3 +510,4 @@ export const en = defineConfig({
     sidebar: side,
   },
 });
+

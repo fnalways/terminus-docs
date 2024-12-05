@@ -1,27 +1,30 @@
-# Install Olares on Linux
+# Install Olares on Raspberry Pi
 <OSTabs
   :tabs="[
-    { id: 'linux', label: 'Linux', href: null },
-    { id: 'raspberry-pi', label: 'Raspberry Pi', href: '/manual/get-started/install-olares-raspberry-pi' },
+    { id: 'linux', label: 'Linux', href: '/manual/get-started/install-olares' },
+    { id: 'raspberry-pi', label: 'Raspberry Pi', href: null },
     { id: 'macos', label: 'macOS', href: '/manual/get-started/install-olares-mac' },
     { id: 'windows', label: 'Windows', href: '/manual/get-started/install-olares-windows' }
   ]"
-  default-tab="linux"
+  default-tab="raspberry-pi"
 />
-
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
 
 ## System compatibility
-Make sure your Linux device meets the following requirements.
-- CPU: 4 cores or above
-- RAM: 8GB or above (available memory)
-- Storage: 64GB or above (available disk space)
-- Supported Systems:
-    - Ubuntu 22.04 LTS or later
-    - Debian 11 or later
+Make sure your Raspbian device meets the following requirements.
+- Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
+- Operating System: Raspbian 12
+- Storage: 64GB (SSD Recommended)
 
 ## Set up system environment
-1. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
+1. Configure the Raspbian environment to enable necessary features:
+
+      ```bash
+      echo "$(head -1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee /boot/firmware/cmdline.txt
+
+      echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
+      ```
+2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
    ```bash
    sudo apt install net-tools
@@ -31,26 +34,30 @@ Make sure your Linux device meets the following requirements.
 
    ```bash {2}
    sudo nano /etc/hosts
-   192.168.xx.xx   linux  # Add this line
+   192.168.xx.xx   raspberrypi  # Add this line
    # Replace with your actual local IP and your host name.
    ```
 
-2. Reboot your Ubuntu to apply the change.
+3. Reboot your Raspbian device to apply the change.
 
    ```bash
    sudo reboot
    ```
-
 ## Install Olares
-
 Run the following command:
 
+ ```bash
+ curl -fsSL https://olares.sh |  bash -
+ ```
+
+:::info
+If an error occurs during installation, use the following command to uninstall first:
 ```bash
-curl -fsSL https://olares.sh |  bash -
+bash olares-uninstall.sh
 ```
-
+After uninstalling, retry the installation by running the original installation command.
+:::
 ## Prepare Wizard URL
-
 At the end of the installation process, you will be prompted to enter domain name and Olares ID:
 
 1. Enter the root user password.
@@ -67,7 +74,6 @@ At the end of the installation process, you will be prompted to enter domain nam
 Upon completion of the installation, the initial system information, including the Wizard URL and the initial login password, will appear on the screen. You will need them later in the activation stage.
 
 ![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
-
 ## Next step
 Now that you have installed Olares, the next step is to activate your system for use, similar to setting up a new smartphone:
 - [Activate Olares](./activate-olares)
