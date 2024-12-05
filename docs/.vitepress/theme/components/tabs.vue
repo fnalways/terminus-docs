@@ -19,7 +19,9 @@
       </button>
     </div>
     <div v-for="tab in tabLabels" :key="tab" v-show="activeTab === tab">
-      <slot :name="tabSlots[tab]"></slot>
+      <div v-if="activeTab === tab">
+        <slot :name="tabSlots[tab]"></slot>
+      </div>
     </div>
   </div>
 </template>

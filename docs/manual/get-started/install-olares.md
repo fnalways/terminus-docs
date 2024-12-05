@@ -1,5 +1,5 @@
 <script setup>
-   import { ref, computed } from 'vue'
+   import { ref, computed, onMounted } from 'vue'
    import installOlaresLinux from './install-olares-linux.md'
    import installOlaresRaspberryPi from './install-olares-raspberry-pi.md'
    import installOlaresMac from './install-olares-mac.md'
@@ -8,6 +8,7 @@
 
    const { isDark } = useData()
    const tabActiveIndex = ref(0)
+   const randomKey = ref('RandomKey')
    const title = computed(()=> titles[tabActiveIndex.value])
    const titles = ['Install Olares on Linux', 'Install Olares on Raspberry Pi', 'Install Olares on Mac', 'Install Olares on Windows']
 
@@ -19,13 +20,22 @@
       tabActiveIndex.value = index
    }
 
+   onMounted(() => {
+      setTimeout(() => {
+         randomKey.value = Math.random()
+      }, 300)
+   })
+   
+
 </script>
 
 # {{ title }}
 
-<Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark">
+<span style="display:none;opacity: 0;">{{randomKey}}</span>
+
+<Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark" >
 <template #Linux>
-<installOlaresLinux />
+<installOlaresLinux/>
 </template>
 <template #Raspberry-Pi>
 <installOlaresRaspberryPi />
