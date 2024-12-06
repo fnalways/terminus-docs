@@ -55,7 +55,7 @@ To avoid conflicts or other unforeseeable problem, you must return the existing 
 To restore a backup to a local Olares:
 
 1. Click **Restore to Local**. The **Restoration Guide** page opens.
-2. Follow the instructions in the pop-up for restoration. For more details, see [Restore Olares from a snapshot](../../developer/develop/advanced/cli#restore-olares-from-a-snapshot).
+2. Follow the instructions in the pop-up for restoration. For more details, see [Restore Olares from a snapshot](../../developer/develop/advanced/cli/cli#restore-olares-from-a-snapshot).
 
 :::info NOTE
 You need to enter the backup password in the command line window to continue with the restoration. If you enter the wrong backup password, follow the instructions to retry.
