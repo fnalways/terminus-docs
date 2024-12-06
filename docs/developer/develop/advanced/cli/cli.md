@@ -179,4 +179,4 @@ bash publicRestoreInstaller.sh
 
 If you back up your data to the **Olares Space**, you can directly download the restoration script from **Olares Space**.
 
-![restore](images/restore.jpg)
+![restore](../images/restore.jpg)
