@@ -1,10 +1,6 @@
 # `olares change-ip`
-:::warning When manually changing IP address is required
-- **macOS**: Olares runs in containers and relies on stable IPs. If your Mac's network settings change (e.g., switching Wi-Fi), Olares won't adjust the IP automatically, which may disrupt DNS resolution. You will need to manually update the IP.
-
-- **Windows (WSL)**: Olares runs in WSL, and while the CLI can manage IP changes for Linux, the virtualized system may experience IP changes. In such cases, manual IP updates are needed.
-
-- **Linux**: IP changes are automatically handled. Manual IP updates are generally not required.
+:::warning When manually updating IP address is required
+When Olares is deployed _inside_ a virtualized environment, such as macOS (via Minikube) or Windows (via WSL), a change in the host system's IP address (e.g., due to switching Wi-Fi networks) may cause Olares to become inaccessible. This happens because the NAT gateway and DNS configuration no longer match the new IP. In such cases, you need to manually update the IP address to ensure that Olares can route traffic correctly.
   :::
 
 ## Synopsis
@@ -16,22 +12,22 @@ olares-cli olares change-ip [option]
 
 ## Options
 
-| Name             | Shorthand | Usage                                                                                                                                                                                                                                                   |
-|------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--base-dir`     | `-b`      | Set the base directory for the Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                 |
-| `--distribution` | `-d`      | Set the WSL distribution name. Only applicable on Windows. <br> Defaults to `Ubuntu`.                                                                                                                                                                   |
-| `--help`         | `-h`      | Display help information.                                                                                                                                                                                                                               |
-| `--profile`      | `-p`      | Set the Minikube profile name. Only applicable on macOS. <br> Defaults to `olares-0`.                                                                                                                                                                   |
-| `--version`      | `-v`      | Specify the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
+| Name             | Shorthand | Usage                                                                                                                                                                                                                                                     |
+|------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--base-dir`     | `-b`      | Sets the base directory for the Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                  |
+| `--distribution` | `-d`      | Sets the WSL distribution name. Only applicable on Windows. <br> Defaults to `Ubuntu`.                                                                                                                                                                    |
+| `--help`         | `-h`      | Displays help information.                                                                                                                                                                                                                                |
+| `--profile`      | `-p`      | Sets the Minikube profile name. Only applicable on macOS. <br> Defaults to `olares-0`.                                                                                                                                                                    |
+| `--version`      | `-v`      | Specifies the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
 
 ## Examples
 - For macOS (after network changes):
 ```bash
-# Specify the Minikube profile name and change the IP
+# Specify the Minikube profile name and change the IP.
 olares-cli olares change-ip --profile olares-0
 ```
 - For Windows WSL (after virtual IP changes)
 ```bash
-# Specify the Linux distribution in WSL and change the IP
+# Specify the Linux distribution in WSL and change the IP.
 olares-cli olares change-ip --distribution Ubuntu
 ```
