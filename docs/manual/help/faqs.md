@@ -41,14 +41,6 @@ This is difficult to achieve with the above-mentioned NAS operating systems buil
 
 Meanwhile, Olares aims to provide a one-stop self-hosted solution, which goes beyond the scope of general NAS operating systems.
 
-## I have several servers. Can I use Olares to manage them one-stop?
-
-Yes. You can refer to [How to add a node](../../developer/develop/advanced/cli/cli#add-an-olares-node-locally).
-
-After you add the node, you can manage the cluster via [Dashboard](../tasks/resources-usage) and [Control Hub](../tasks/navigate-control-hub).
-
-The experience of multi-node clusters is a focus of our work in the next few months.
-
 ## Do I need to pay for Olares?
 
 When you're self-hosting, you can essentially use Olares for free.

@@ -47,16 +47,3 @@ During the installation process, Olares will verify the backup password. If it i
 :::info NOTE
 To avoid conflicts or other unforeseeable problem, you must return the existing Olares that uses the same name before restoring to a cloud-based Olares.
 :::
-
-## Restore backup to local
-
-![alt text](/images/how-to/space/restore_backup_to_local.jpg)
-
-To restore a backup to a local Olares:
-
-1. Click **Restore to Local**. The **Restoration Guide** page opens.
-2. Follow the instructions in the pop-up for restoration. For more details, see [Restore Olares from a snapshot](../../developer/develop/advanced/cli/cli#restore-olares-from-a-snapshot).
-
-:::info NOTE
-You need to enter the backup password in the command line window to continue with the restoration. If you enter the wrong backup password, follow the instructions to retry.
-:::
