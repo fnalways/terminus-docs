@@ -1,18 +1,21 @@
 # Olares Application Chart Structure
 
-The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart should contain the following files:
+The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart contains the following files:
 ```
-|-- Chart.yaml                   # chart metadata
+|-- Chart.yaml                   # A YAML file containing metadata information about the chart
 |-- OlaresManifest.yaml        # Olares Application configuration
-|-- templates                    # chart deployment template files
+|-- template/                    # A directory of templates that, when combined with values, will generate valid Kubernetes manifest files.
 |   |-- deployment.yaml          # APP deployment script
-|-- values.yaml                  # chart deployment parameters
+|-- crds/                        # OPTIONAL: Custom Resource Definitions
+|-- values.yaml                  # OPTIONAL: The default deployment parameters for this chart
+|-- values.schema.json           # OPTIONAL: A JSON Schema for imposing a structure on the values.yaml file
+|-- README.md                    # OPTIONAL: A human-readable README file
 ```
 :::info NOTE
 To make the templates directory easier to understand, you can split the deployment into several files.
 :::
 
-- A typical application chart for `App`:
+- A typical application chart for `App` and `Middleware`:
 ```
 AppName
 |-- Chart.yaml                # Required: YAML file containing chart metadata
