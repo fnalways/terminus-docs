@@ -16,7 +16,7 @@ While the initial script handles downloading `olares-cli`, the tool itself is re
 This page explains the Olares CLI syntax and describes the command operations.
 
 :::info Root privileges required
-Most olares-cli commands require root privileges. Use the root user or prepend commands with `sudo`.
+Most `olares-cli` commands require root privileges. Use the root user or prepend commands with `sudo`.
 :::
 
 ## Syntax
@@ -37,15 +37,15 @@ To get detailed help for any command, run `olares-cli help`.
 
 ## Available CLI commands
 
-| Operation          | Syntax                                             | Description                                                                                                                 |
-|--------------------|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `olares info`      | `olares-cli olares info [option]`                  | Display general information about the downloaded Olares OS.                                                                 |
-| `olares download`  | `olares-cli olares download [subcommand] [option]` | Download specific resources.                                                                                                |
-| `olares prepare`   | `olares-cli olares prepare [option]`               | Prepare the environment for the installation process, including setting up essential services and configurations of Olares. |
-| `olares install`   | `olares-cli olares install [option]`               | Deploy system-level and user-level components of Olares.                                                                    |
-| `olares change-ip` | `olares-cli olares change-ip [option]`             | Change the IP address of the Olares OS.                                                                                     |
-| `olares release`   | `olares-cli olares release [option]`               | Package Olares installation resources for distribution or deployment.                                                       |
-| `olares uninstall` | `olares-cli olares uninstall [option]`             | Uninstall Olares completely, or roll back the installation to a specific phase.                                             |
+| Operation          | Syntax                                             | Description                                                                                                                  |
+|--------------------|----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `olares info`      | `olares-cli olares info [option]`                  | Displays general information about the downloaded Olares OS.                                                                 |
+| `olares download`  | `olares-cli olares download [subcommand] [option]` | Downloads specific resources.                                                                                                |
+| `olares prepare`   | `olares-cli olares prepare [option]`               | Prepares the environment for the installation process, including setting up essential services and configurations of Olares. |
+| `olares install`   | `olares-cli olares install [option]`               | Deploys system-level and user-level components of Olares.                                                                    |
+| `olares change-ip` | `olares-cli olares change-ip [option]`             | Changes the IP address of the Olares OS.                                                                                     |
+| `olares release`   | `olares-cli olares release [option]`               | Packages Olares installation resources for distribution or deployment.                                                       |
+| `olares uninstall` | `olares-cli olares uninstall [option]`             | Uninstalls Olares completely, or roll back the installation to a specific phase.                                             |
 
 
 
