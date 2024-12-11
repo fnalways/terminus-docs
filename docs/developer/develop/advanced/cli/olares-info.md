@@ -1,7 +1,7 @@
 # `olares info`
 
 ## Synopsis
-Display relevant information about the current Olares version.
+The `olares info` command displays general information about the installed Olares version.
 
 ```bash
 olares-cli olares info
