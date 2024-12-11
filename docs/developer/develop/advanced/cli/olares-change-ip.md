@@ -11,20 +11,20 @@
 Change the local IP address for all Olares components.
 
 ```bash
-olares-cli olares change-ip [flags]
+olares-cli olares change-ip [option]
 ```
 
-## Flags
+## Options
 
-| Name             | Shorthand | Usage                                                                            |
-|------------------|-----------|----------------------------------------------------------------------------------|
-| `--base-dir`     | `-b`      | Set the base directory for the Olares package. Defaults to `$HOME/.olares`.      |
-| `--distribution` | `-d`      | Set the WSL distribution name. Only applicable on Windows. Defaults to `Ubuntu`. |
-| `--help`         | `-h`      | Display help information.                                                        |
-| `--profile`      | `-p`      | Set the Minikube profile name. Only applicable on macOS. Defaults to `olares-0`. |
-| `--version`      | `-v`      | Specify the Olares version (e.g., `1.10.0` or `1.10.0-20241109`.                 |
+| Name             | Shorthand | Usage                                                                                                                                                                                                                                                   |
+|------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--base-dir`     | `-b`      | Set the base directory for the Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                 |
+| `--distribution` | `-d`      | Set the WSL distribution name. Only applicable on Windows. <br> Defaults to `Ubuntu`.                                                                                                                                                                   |
+| `--help`         | `-h`      | Display help information.                                                                                                                                                                                                                               |
+| `--profile`      | `-p`      | Set the Minikube profile name. Only applicable on macOS. <br> Defaults to `olares-0`.                                                                                                                                                                   |
+| `--version`      | `-v`      | Specify the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
 
-## Example
+## Examples
 - For macOS (after network changes):
 ```bash
 # Specify the Minikube profile name and change the IP
