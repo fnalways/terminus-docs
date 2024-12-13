@@ -13,28 +13,6 @@ Make sure your Linux device meets the following requirements.
   - Ubuntu 22.04 LTS or later
   - Debian 11 or later
 
-## Set up system environment
-
-1. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
-
-   ```bash
-   sudo apt install net-tools
-   ifconfig
-   # Get your local IP. Make sure it starts with `192.168`.
-   ```
-
-   ```bash {2}
-   sudo nano /etc/hosts
-   192.168.xx.xx   linux  # Add this line
-   # Replace with your actual local IP and your host name.
-   ```
-
-2. Reboot your Ubuntu to apply the change.
-
-   ```bash
-   sudo reboot
-   ```
-
 ## Install Olares
 
 Run the following command:
