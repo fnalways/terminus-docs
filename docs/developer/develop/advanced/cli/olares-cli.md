@@ -5,7 +5,7 @@ outline: [2, 3]
 
 Olares provides Olares CLI, a command-line tool for developers and system administrators to customize or troubleshoot the Olares installation process.
 
-The recommended [one-liner installation command](../../../../manual/get-started/install-olares.md#install-olares) retrieves a shell script from https://olares.sh/ that downloads and installs Olares CLI. Once installed, the CLI orchestrates the remainder of the setup.
+The recommended [one-liner installation command](../../../../manual/get-started/install-olares.md) retrieves a shell script from https://olares.sh/ that downloads and installs Olares CLI. Once installed, the CLI orchestrates the remainder of the setup.
 
 In general, Olares CLI manages installation through three main phases:
 1. **Download**: Olares CLI fetches the necessary components.
@@ -45,7 +45,6 @@ To get detailed help for any command, run `olares-cli help`.
 | `olares change-ip` | `olares-cli olares change-ip [option]`             | Changes the IP address of the Olares OS.                                                                                     |
 | `olares release`   | `olares-cli olares release [option]`               | Packages Olares installation resources for distribution or deployment.                                                       |
 | `olares uninstall` | `olares-cli olares uninstall [option]`             | Uninstalls Olares completely, or roll back the installation to a specific phase.                                             |
-
 
 
 

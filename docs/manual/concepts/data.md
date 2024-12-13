@@ -29,7 +29,7 @@ Olares OS uses [JuiceFS](https://juicefs.com) as the underlying multi-physical n
 
 As for the back-end object storage solution of JuiceFS, we also provide two solutions: S3 and MinIO.
 
-By default, Olares OS uses MinIO as object storage when installed locally. Initial installation starts with [Single Node Single Driver (SNSD)](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html) mode.
+By default, Olares uses the local file system (FS) when installed locally. To enable JuiceFS, specify the `--with-juicefs=true` option when running the `olares prepare` command. For details, refer to [`olares prepare`](../../developer/develop/advanced/cli/olares-prepare.md).
 
 ### Local disk
 
