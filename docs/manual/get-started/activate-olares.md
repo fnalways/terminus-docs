@@ -21,8 +21,3 @@ Use the Wizard URL and initial one-time password to activate. This process conne
    b. Reset the login password for Olares by following the on-screen instructions on LarePass.
 
 After successful setup, the LarePass app will automatically go to the home screen, and the Wizard will redirect you to the login page.
-
-## Next step
-
-You've now set up your own Olares. It's time to explore your new digital domain. Use the login information you received during installation and proceed:
-- [Log in to Olares](./log-in-to-olares)
