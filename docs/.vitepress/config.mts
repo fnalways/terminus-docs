@@ -20,11 +20,11 @@ export default withMermaid({
   },
   themeConfig: {
     search: {
-      provider: "algolia",
+      provider: "local",
       options: {
-        appId: "0614S1555J",
-        apiKey: "cbf4702e9d6bfb5a0ae85bf0d486a591",
-        indexName: "jointerminus",
+        //appId: "0614S1555J",
+        //apiKey: "cbf4702e9d6bfb5a0ae85bf0d486a591",
+        //indexName: "jointerminus",
         locales: {
           zh: {
             placeholder: "搜索文档",
