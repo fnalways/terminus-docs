@@ -3,12 +3,11 @@ outline: [2, 3]
 ---
 # Olares CLI
 
-Olares provides a command line tool called Olares CLI. It is designed for developers or system administrators to customize or troubleshoot the installation process of Olares.
+Olares provides Olares CLI, a command-line tool for developers and system administrators to customize or troubleshoot the Olares installation process.
 
-The one-liner command used to download Olares fetches a shell script from https://olares.sh. This script automatically downloads and installs Olares CLI, which is then used to manage the rest of the installation process.
+The recommended [one-liner installation command](../../../../manual/get-started/install-olares.md#install-olares) retrieves a shell script from https://olares.sh/ that downloads and installs Olares CLI. Once installed, the CLI orchestrates the remainder of the setup.
 
-While the initial script handles downloading `olares-cli`, the tool itself is responsible for the actual installation and configuration of Olares. The process typically involves the following phases:
-
+In general, Olares CLI manages installation through three main phases:
 1. **Download**: Olares CLI fetches the necessary components.
 2. **Prepare**: Olares CLI prepares the environment for installation.
 3. **Install**: Olares CLI installs the core services of Olares.
@@ -31,7 +30,7 @@ where
 
 Olares CLI allows you to temporarily override certain Olares default settings. Each option applies only to the command in which it is used.
 
-For example, if you use the `--base-dir` option with `olares-cli olares download`, it will only affect the download process and will not change the base directory for other commands, such as during the "install" phase.
+For example, if you use the `--base-dir` option with `olares-cli olares download wizard`, it will only affect the wizard downloading process and will not change the base directory for other commands, such as during the "install" phase.
 
 To get detailed help for any command, run `olares-cli help`.
 

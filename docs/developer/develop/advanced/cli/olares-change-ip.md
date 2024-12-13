@@ -21,12 +21,12 @@ olares-cli olares change-ip [option]
 | `--version`      | `-v`      | Specifies the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
 
 ## Examples
-- For macOS (after network changes):
+- For macOS:
 ```bash
 # Specify the Minikube profile name and change the IP.
 olares-cli olares change-ip --profile olares-0
 ```
-- For Windows WSL (after virtual IP changes)
+- For Windows WSL:
 ```bash
 # Specify the Linux distribution in WSL and change the IP.
 olares-cli olares change-ip --distribution Ubuntu
