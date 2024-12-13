@@ -29,7 +29,7 @@ Olares OS uses [JuiceFS](https://juicefs.com) as the underlying multi-physical n
 
 As for the back-end object storage solution of JuiceFS, we also provide two solutions: S3 and MinIO.
 
-By default, Olares uses the local file system (FS) when installed locally. To enable JuiceFS, specify the `--with-juicefs=true` option when running the `olares prepare` command. For details, refer to [`olares prepare`](../../developer/develop/advanced/cli/olares-prepare.md).
+By default, Olares uses the local file system (FS) when installed locally. However, if the `--with-juicefs=true` option is specified when running the [`olares prepare`](../../developer/develop/advanced/cli/olares-prepare.md) command, JuiceFS will be installed and used. Additionally, a MinIO instance will be set up as the backend storage.
 
 ### Local disk
 
