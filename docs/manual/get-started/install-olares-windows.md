@@ -47,7 +47,8 @@ bash olares-uninstall.sh
 After uninstalling, retry the installation by running the original installation command.
 :::
 ## Prepare Wizard URL
-At the end of the installation process, you will be prompted to enter domain name and Olares ID:
+At the end of the installation process, you will need to provide some information:
+
 Enter your domain name and Olares ID.
 
 ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)

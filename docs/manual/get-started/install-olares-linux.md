@@ -30,7 +30,7 @@ After uninstalling, retry the installation by running the original installation 
 :::
 ## Prepare Wizard URL
 
-At the end of the installation process, you will be prompted to enter domain name and Olares ID:
+At the end of the installation process, you will need to provide some information:
 
 1. Enter the root user password.
 

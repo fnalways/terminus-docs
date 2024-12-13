@@ -46,10 +46,12 @@ bash olares-uninstall.sh
 After uninstalling, retry the installation by running the original installation command.
 :::
 ## Prepare Wizard URL
-At the end of the installation process, you will be prompted to enter domain name and Olares ID:
-1. When prompted, enter your Mac's IP address for the network gateway (e.g., `192.168.x.x`).
+At the end of the installation process, you will need to provide some information:
+1. Check your Mac's IP address for the network gateway (e.g., `192.168.x.x`). 
+
+   If the automatically retrieved IP address is correct, press `Y`. To enter a different one, press `R` and provide the correct address.
    ::: tip
-   Find your IP in **System Settings** > **Network**.
+   Check your IP address in **System Settings** > **Network**.
    :::
 2. Enter your domain name and Olares ID.
 
