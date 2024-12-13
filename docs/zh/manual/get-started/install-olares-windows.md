@@ -67,7 +67,47 @@ bash olares-uninstall.sh
 
 ![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
 
-## 下一步
-完成安装后，接下来需要激活系统才能开始使用，这个过程类似于新手机的首次设置：
+# 激活 Olares
 
-- [激活 Olares](./activate-olares)
+使用向导 URL 和初始一次性密码进行激活。此过程通过 LarePass 将 Olares 与你的 Olares ID 关联，确保你能安全访问个人云空间。
+
+## 完成 Olares 初始化设置
+
+1. 在浏览器中输入向导 URL。进入欢迎页面后，按任意键继续。
+   ![打开向导](/images/manual/get-started/open-wizard.png)
+2. 输入一次性密码，点击**继续**。
+   ![输入密码](/images/manual/get-started/wizard-enter-password.png)
+3. 选择系统语言。
+   ![选择语言](/images/manual/get-started/select-language.png)
+4. 使用 LarePass 应用激活 Olares。
+
+   a. 打开 LarePass 应用，点击**扫描二维码**，扫描向导页面上的二维码完成激活。
+   ![激活 Olares](/images/manual/get-started/activate-olares.png)
+   b. 按照 LarePass 上的提示重置 Olares 的登录密码。
+
+设置成功后，LarePass 应用会自动返回主界面，向导页面则会跳转到登录界面。
+
+## 登录流程
+
+1. 在登录页面输入 Olares 登录密码。
+
+   ![登录](/images/manual/get-started/log-in.png)
+2. 系统会要求完成双重验证。你可以选择：
+    - 通过 LarePass 确认登录：
+        - a. 点击手机上的 LarePass 登录通知。
+        - b. 在弹出的对话框中点击**确认**。
+          ![确认](/images/manual/get-started/second-confirmation.png)
+    - 手动输入 6 位验证码：
+        - a. 打开 LarePass 应用，进入**设置** > **验证器**。
+        - b. 点击验证器生成 6 位验证码。
+        - c. 在登录页面输入验证码。
+          ![一次性密码](/images/manual/get-started/OTP.png)
+          ::: info
+          验证码有时效限制，请在过期前完成输入。如果验证码过期，需要重新生成。
+          :::
+
+完成这两个步骤后，就会进入 Olares 桌面。
+
+## 后续步骤
+快要大功告成了！在开始使用 Olares 之前，还需要确保你的 Olares ID 得到安全保护：
+- [备份助记词](./back-up-mnemonics.md)

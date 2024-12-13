@@ -6,7 +6,6 @@ const side = {
       link: "/zh/manual/docs-home",
       items: [
       { text: "什么是 Olares", link: "/zh/manual/what-is-olares" },
-     { text: "架构", link: "/zh/manual/architecture" },
       { text: "为什么选择 Olares", link: "/zh/manual/why-olares" },
       { text: "功能",
             link: "/zh/manual/feature-overview",
@@ -24,17 +23,9 @@ const side = {
           link: "/zh/manual/get-started/create-olares-id",
         },
         {
-          text: "安装",
+          text: "安装激活",
           link: "/zh/manual/get-started/install-olares",
           activeMatch: "/zh/manual/get-started/install/",
-        },
-        {
-          text: "激活",
-          link: "/zh/manual/get-started/activate-olares",
-        },
-        {
-          text: "登录",
-          link: "/zh/manual/get-started/log-in-to-olares",
         },
         {
           text: "备份助记词",
@@ -298,6 +289,7 @@ const side = {
       collapsed: true,
       link: "/zh/manual/concepts/",
       items: [
+        { text: "架构", link: "/zh/manual/architecture" },
         { text: "Olares ID", link: "/zh/manual/concepts/olares-id" },
         { text: "账户", link: "/zh/manual/concepts/account" },
         { text: "应用", link: "/zh/manual/concepts/application" },
