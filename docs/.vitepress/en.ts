@@ -6,7 +6,6 @@ const side = {
       link: "/manual/docs-home",
       items: [
       { text: "What is Olares", link: "/manual/what-is-olares" },
-     { text: "Architecture", link: "/manual/architecture" },
       { text: "Why Olares", link: "/manual/why-olares" },
       { text: "Features",
             link: "/manual/feature-overview",
@@ -27,14 +26,6 @@ const side = {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
           activeMatch: "/manual/get-started/install/",
-        },
-        {
-          text: "Activate Olares",
-          link: "/manual/get-started/activate-olares",
-        },
-        {
-          text: "Log in to Olares",
-          link: "/manual/get-started/log-in-to-olares",
         },
         {
           text: "Back up mnemonics",
@@ -298,6 +289,7 @@ const side = {
       collapsed: true,
       link: "/manual/concepts/",
       items: [
+        { text: "Architecture", link: "/manual/architecture" },
         { text: "Olares ID", link: "/manual/concepts/olares-id" },
         { text: "Account", link: "/manual/concepts/account" },
         { text: "Application", link: "/manual/concepts/application" },

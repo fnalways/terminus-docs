@@ -28,7 +28,7 @@ You can verify whether they have completed the activation in the **Accounts** pa
 
 :::tip
 New members can activate their account through the wizard without installing Olares locally.
-For detailed instructions, see [Activate Olares](../get-started/activate-olares).
+For detailed instructions, see [Activate Olares](../get-started/install-olares-linux.md#activate-olares).
 :::
 
 ## Remove a member
