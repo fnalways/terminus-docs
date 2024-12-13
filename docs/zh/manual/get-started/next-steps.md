@@ -11,9 +11,9 @@
     :links="[
     { text: 'Stable Diffusion', 
     href: '../use-cases/stable-diffusion' }, 
-    { text: '在 Krita 中使用 ComfyUI', 
+    { text: 'Krita + ComfyUI 实时绘画', 
     href: '../use-cases/comfyui-for-krita' }, 
-    { text: '使用 WebUI', 
+    { text: '使用 Open WebUI', 
     href: '../use-cases/openwebui' }, 
     { text: 'Perplexica', 
     href: '../use-cases/perplexica' },
@@ -26,13 +26,13 @@
     title="体验 Olares 应用"
     description="熟悉 Olares 上的系统应用。"
     :links="[
-    { text: '个人资料', 
+    { text: 'Profile', 
     href: '../tasks/profile' }, 
-    { text: '市场', 
+    { text: '应用市场', 
     href: '../tasks/install-uninstall-update' }, 
-    { text: '文件', 
+    { text: '文件管理器', 
     href: '../tasks/files' }, 
-    { text: '保险库', 
+    { text: 'Vault', 
     href: '../tasks/vault' },
     { text: 'Wise',
     href: '../tasks/wise' }]"
@@ -43,8 +43,6 @@
     title="深入了解 Olares"
     description="加深对 Olares 的理解。"
     :links="[
-    { text: 'Olares 核心组件', 
-    href: '../concepts/architecture' }, 
     { text: 'Olares ID', 
     href: '../concepts/olares-id' }, 
     { text: '账号', 

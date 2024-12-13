@@ -33,7 +33,7 @@ const side = {
           link: "/zh/manual/get-started/activate-olares",
         },
         {
-          text: "登陆",
+          text: "登录",
           link: "/zh/manual/get-started/log-in-to-olares",
         },
         {

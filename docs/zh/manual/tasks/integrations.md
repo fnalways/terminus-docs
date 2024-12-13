@@ -11,7 +11,7 @@ We're working on adding support for third-party account integrations. This featu
 
 To stay updated on this and other new features:
 
-* [Follow our official blog](https://olares.medium.com/)
+* [Follow our official blog](https://blog.olares.xyz/)
 * [Join our discord channel](https://discord.com/invite/BzfqrgQPDK)
 :::
 

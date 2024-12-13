@@ -43,8 +43,6 @@ Here are some suggested next steps:
     title="Understand Olares"
     description="Deepen your understanding of Olares."
     :links="[
-    { text: 'Olares core components', 
-    href: '../concepts/architecture' }, 
     { text: 'Olares ID', 
     href: '../concepts/olares-id' }, 
     { text: 'Account', 

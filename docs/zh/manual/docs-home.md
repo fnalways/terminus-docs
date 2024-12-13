@@ -1,5 +1,5 @@
 :::warning 🚧 翻译工作进行中...
-我们正在将文档翻译成中文。如果你有意帮助提高翻译质量，请通过 GitHub 提交 Pull Request。
+我们正在将文档翻译成中文。如果你有意帮助提高翻译质量或参与翻译工作，请通过 [GitHub](https://github.com/beclab/docs) 提交 Pull Request 或 Issue。
 :::
 # 文档
 
@@ -8,7 +8,7 @@ Olares（前称 Terminus）是一个开源、自托管的公有云替代方案�
 要全面了解系统，请访问我们的 [GitHub 仓库](https://github.com/beclab/olares)。
 
 :::info 注意
-文档正在更新以反映品牌重塑。虽然截图中的界面标签可能有所不同，但所有功能和操作流程保持不变。
+我们已进行品牌升级，部分文档界面截图可能与最新版本存在差异。请放心，所有核心功能和操作步骤均保持不变。
 :::
 
 ## Olares 新手指南
@@ -34,7 +34,7 @@ Olares（前称 Terminus）是一个开源、自托管的公有云替代方案�
   </a>
   <a href="./tasks/" class="cta-link">
     <p class="cta-title">阅读操作指南</p>
-    <p class="cta-description">全面的文档，详细介绍 Olares 的各个方面。</p>
+    <p class="cta-description">全面了解 Olares 的各个应用。</p>
   </a>
   <a href="./concepts/" class="cta-link">
     <p class="cta-title">了解 Olares</p>
@@ -46,4 +46,4 @@ Olares（前称 Terminus）是一个开源、自托管的公有云替代方案�
 
 - [开发 Olares 应用](../developer/develop/)
 - [加入 Discord 社区](https://discord.com/invite/BzfqrgQPDK)
-- [查看 Olares 博客](https://olares.medium.com/)
+- [查看 Olares 博客](https://blog.olares.xyz/)

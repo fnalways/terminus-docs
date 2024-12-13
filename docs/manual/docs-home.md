@@ -43,4 +43,4 @@ Before you roll up your sleeves and get your hands dirty with Olares, feel free 
 
 - [Develop Olares apps](../developer/develop/)
 - [Join our community on Discord](https://discord.com/invite/BzfqrgQPDK)
-- [Check out Olares blogs](https://olares.medium.com/)
+- [Check out Olares blogs](https://blog.olares.xyz/)
