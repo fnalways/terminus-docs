@@ -19,10 +19,11 @@ Olares ID 由本地名称和域名两部分组成。以 `alice123@olares.com` �
 ::: tip
 本节主要介绍如何创建个人 Olares ID。如需创建用于组织用途的 Olares ID，请参阅[创建组织 Olares ID](../space/host-domain.md#create-an-org-olares-id)。
 :::
+
 :::warning `.com`域名 与 `.cn`域名
-LarePass 根据手机系统语言，默认匹配 Olares ID 的域名。如果你的手机语言为简体中文，将创建以 `olares.cn` 为域名的 Olares ID。
-Olares ID 的域名创建后无法修改。请谨慎操作。
+为了保证良好的激活和使用体验，Olares 为中国大陆境内用户设置了专属反向代理节点和对应的 `.cn` 的域名。首次创建 Olares ID 时，LarePass 会根据手机系统语言，默认分配 Olares ID 的域名。如果你的手机语言为英文，则会创建 `.com` 域名的 Olares ID, 可能会遇到 DNS 解析问题，进而影响后续的激活和使用。此时，需要你从 LarePass 的账号创建页面右上角进入高级账号创建模式，切换域名默认值为 `.cn`后再返回创建。
 :::
+
 1. 打开 LarePass 应用，点击**创建账号**。
 2. 输入想要使用的 Olares ID。需要满足以下要求：
    * 之前从未被注册过

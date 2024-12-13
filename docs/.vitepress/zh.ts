@@ -24,17 +24,9 @@ const side = {
           link: "/zh/manual/get-started/create-olares-id",
         },
         {
-          text: "安装",
+          text: "安装激活",
           link: "/zh/manual/get-started/install-olares",
           activeMatch: "/zh/manual/get-started/install/",
-        },
-        {
-          text: "激活",
-          link: "/zh/manual/get-started/activate-olares",
-        },
-        {
-          text: "登录",
-          link: "/zh/manual/get-started/log-in-to-olares",
         },
         {
           text: "备份助记词",
