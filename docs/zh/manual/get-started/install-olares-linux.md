@@ -13,26 +13,11 @@ Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows
     - Ubuntu 22.04 LTS 及更新版本
     - Debian 11 及更新版本
 
-## 预安装 Olares
-
-在 Linux 终端执行以下命令：
+## 安装 Olares
+执行以下命令：
 ```bash
 curl -fsSL https://cn.olares.sh |  bash -
 ```
-
-看到以下提示则预安装完成：
-
-```bash
-[Install]
-WantedBy=multi-user.target
-
-2024-12-12T11:30:41.936+0800	[A] GenerateOlaresdService success (23.835099ms)
-2024-12-12T11:30:43.089+0800	[A] EnableOlaresdService success (1.152940336s)
-2024-12-12T11:30:43.089+0800	[Module] PrepareFinished
-2024-12-12T11:30:43.090+0800	[A] LocalHost: PrepareFinished success (255.929µs)
-2024-12-12T11:30:43.090+0800	[Job] Prepare the System Environment execute successfully!!! (6m55.544264947s)
-```
-
 :::info
 如果安装过程中出现错误，请先执行以下命令卸载：
 
@@ -41,35 +26,44 @@ bash olares-uninstall.sh
 ```
 卸载完成后，重新运行安装命令进行安装。
 :::
+## 配置 Wizard
+安装过程结束时，系统会要求输入域名和 Olares ID：
+1. 输入 root 用户密码。
+   ![Enter password](/images/manual/get-started/enter-root-user-password.png)
+2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.cn` 为例：
+   - **Domain name**：按下回车将直接使用默认域名（olares.cn）。
+   - **Olares ID**：输入 ID 前缀，即 `alice123`。
 
-## LarePass 引导安装激活
+   ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
-:::tip NOTE
-请确保你的手机和 Olares 设备连接至同一网络。
-:::
+安装完成后，屏幕将显示初始系统信息，包括向导地址和初始登录密码。这些信息在后续激活步骤中会用到。
 
-预安装完成后，你可以使用 LarePass 应用引导后续的安装，初始配置，以及激活。 
+![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
 
-![安装激活](/images/manual/get-started/install-activate.jpeg)
+## 激活 Olares
 
-1. 打开 LarePass, 在 Olares 账户页面，点击 **发现附近的 Olares** 选项。
-2. 在 **激活 Olares** 页面，找到刚刚完成预安装的 Olares 设备，并点击**立即安装**。
-3. 等待安装进度完成后，点击**立即激活**。Olares 进入激活流程，同时自动完成系统初始化设置，网络配置等。
-4. 初始配置完成后，按照 LarePass 上的提示设置 Olares 的登录密码，并点击 **完成**。
+使用向导 URL 和初始一次性密码进行激活和 Olares 初始化配置。
 
-此刻你已经成功安装并激活了 Olares。LarePass 会自动进入 Olares 管理页面，并弹出 Olares 的访问网址。
+1. 在浏览器中输入向导 URL。进入欢迎页面后，按任意键继续。
+   ![打开向导](/images/manual/get-started/open-wizard.png)
+2. 输入一次性密码，点击**继续**。
+   ![输入密码](/images/manual/get-started/wizard-enter-password.png)
+3. 选择系统语言。
+   ![选择语言](/images/manual/get-started/select-language.png)
+4. 使用 LarePass 应用激活 Olares。
 
-![访问 URL](/images/manual/get-started/access-url.png)
+   a. 打开 LarePass 应用，点击**扫描二维码**，扫描向导页面上的二维码完成激活。
+   ![激活 Olares](/images/manual/get-started/activate-olares.png)
+   b. 按照 LarePass 上的提示重置 Olares 的登录密码。
 
-## 登陆 Olares
+设置成功后，LarePass 应用会自动返回主界面，向导页面则会跳转到登录界面。
 
-通过以下步骤访问 Olares:
+## 登录流程
 
-1. 在浏览器中输入 Olares URL。进入欢迎页面后，按任意键继续。
-2. 在登录页面输入 Olares 登录密码。
+1. 在登录页面输入 Olares 登录密码。
 
    ![登录](/images/manual/get-started/log-in.png)
-3. 系统会要求完成双重验证。你可以选择：
+2. 系统会要求完成双重验证。你可以选择：
     - 通过 LarePass 确认登录：
         - a. 点击手机上的 LarePass 登录通知。
         - b. 在弹出的对话框中点击**确认**。
@@ -84,27 +78,6 @@ bash olares-uninstall.sh
           :::
 
 完成这两个步骤后，就会进入 Olares 桌面。
-
-## 常见问题
-
-- **用 LarePass 引导安装时，无法发现待安装 Olares 设备。**
-
-   请检查你的手机网络，确保与 Olares 设备连接至同一网络。
-
-- **用 LarePass 引导安装时，发现了设备，但弹出域名解析错误窗口，无法继续。**
-
-   此报错是因为你手机语言为英语而默认创建了 `.com` 域名的 Olares ID，这与中国大陆地区设置的默认反向代理配置冲突，无法完成 DNS 解析。此时可以通过重新创建一个 `.cn` 域名的 Olares ID，并用 LarePass 重新引导安装。具体步骤如下：
-
-  ![重新创建](/images/manual/get-started/recreate-id.png)
-
-   1. 从报错页面返回至账户页面。
-   2. 点击右上角的帐户图标，在账户列表最后选择 **添加新账户**。
-   3. 在账户创建页面，点击右上角图标进入高级账号创建模式。
-   4. 设置默认域名为 `.cn`。
-   5. 返回后，创建新的 Olares ID。
-   
-   在新的账户页面用 LarePass 重新引导安装激活流程。
-
 
 ## 后续步骤
 快要大功告成了！在开始使用 Olares 之前，还需要确保你的 Olares ID 得到安全保护：

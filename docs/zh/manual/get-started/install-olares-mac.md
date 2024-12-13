@@ -43,7 +43,7 @@ Mac 设备需满足以下条件：
 在终端中运行以下命令：
 
  ```bash
- curl -fsSL https://olares.sh |  bash -
+ curl -fsSL https://cn.olares.sh |  bash -
  ```
 :::info
 如果安装过程中出现错误，请先执行以下命令卸载：
@@ -57,8 +57,8 @@ bash olares-uninstall.sh
 
 在安装过程结束时，你需要提供下列信息：
 1. 检查 Mac 的 IP 地址（例如，`192.168.x.x`）。如果自动获取的 IP 地址正确，请按 `Y` 确认。如果需要修改，请按 `R` 并输入正确的地址。
-2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.com` 为例：
-    - **Domain name**：按下回车将直接使用默认域名（olares.com）。
+2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.cn` 为例：
+    - **Domain name**：按下回车将直接使用默认域名（olares.cn）。
     - **Olares ID**：输入 ID 前缀，即 `alice123`。
 
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
@@ -67,7 +67,7 @@ bash olares-uninstall.sh
 
 ![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
 
-# 激活 Olares
+## 激活 Olares
 
 使用向导 URL 和初始一次性密码进行激活。此过程通过 LarePass 将 Olares 与你的 Olares ID 关联，确保你能安全访问个人云空间。
 
