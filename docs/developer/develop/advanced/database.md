@@ -49,7 +49,6 @@ options:
 
 In terms of the Cache cluster, Olares uses Redis Cluster. The cluster is managed by a customized [Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator) to achieve cloud nativeness. It enables us to scale replicas horizontally in a convenient and effective manner.
 
-
 To ensure **data isolation** between users and apps in the **Redis cluster**, the **Olares** system has added a **Redis cluster proxy**. It isolates data based on the `namespace`. This operation is transparent, meaning app developers typically do not need to be aware of it.
 
 Additionally, this proxy simplifies the process of connecting to clusters. It eliminates the need to switch from a **standalone Redis Client** to a **Redis Cluster client** in the app, thus simplifying app code modifications.

@@ -2,22 +2,22 @@
 
 ## Clone Code
 
-  Open the IDE of backend **Dev Container**, open **Terminal**, clone your code to the `/Code` directory
+  Open the IDE of backend Dev Container, open Terminal, clone your code to the `/Code` directory
 
   ```sh
   gh auth login
 
   cd /Code
-  git clone https://github.com/beclab/olares-app-demo.git
+  git clone https://github.com/beclab/terminus-app-demo.git
   ```
   
-  You can then open the backend code in the IDE for development
+  You can then open the backend code in the IDE for development.
   
   ![server IDE](/images/developer/develop/tutorial/backend/dev.jpg)
 
 ## Connect Database
 
-  In the **Dev Container**, you can access database details through environment variables. You can do this by adding the database parameters into the container using environment variables when you deploy it.
+  In the Dev Container, you can access database details through environment variables. You can do this by adding the database parameters into the container using environment variables when you deploy it.
 
   Take `gorm` as an example:
   ```go
@@ -62,7 +62,7 @@
 
   ![run and debug](/images/developer/develop/tutorial/backend/debug.jpg)
 
-  You can also run your code in the Terminal, for example
+  You can also run your code in the Terminal, for example:
   
   ```sh
   go run main.go

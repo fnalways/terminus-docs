@@ -4,16 +4,15 @@ outline: [2, 3]
 
 # Submit Application
 
-
 ## Submitting Your Application
 
-:::info **Brief Overview**
+**Brief Overview**
 
 1. Test your application on Olares, create the Olares Application Chart according to [guideline](../package/chart.md).
 2. Fork the official [application repository of Olares Market](https://github.com/beclab/apps). Add your application's chart. Create a **PR** to `beclab/apps:main`.
 3. Wait for **GitBot** to check your PR. If needed, modify PR until it passes.
 4. Once the PR is merged, your application is ready to launch.
-:::
+
 
 ### 1. Develop and test your application
 
@@ -58,8 +57,6 @@ The title and content of the PR are crucial for **GitBot**. Please adhere to the
 
 - If **GitBot** automatically closes your PR, please **do not reopen** it. This implies that the PR has irreparable issues, and **GitBot** had to terminate the check process. You can submit a new PR after making necessary modifications.
 
-- When the PR is in `waiting to submit` state, you can continue to submit Commits to modify your PR. After submitting the Commit, GitBot will recheck your submitted application chart files and update the PR status.
-
 - During the `waiting to submit` state, you can continue to submit commits to modify your application chart. **GitBot** will recheck the application chart files and update the PR status upon receiving a new commit.
 
 - Once your PR passes all checks, it will be automatically merged into the `beclab/apps:main`. The application will be listed on **Olares Market** after a while.
@@ -76,7 +73,6 @@ The process of managing applications is similar to submission.You create a speci
 No ".suspend" or ".remove" files should be included in the initial submission.
 :::
 
-
 ### Update
 When you need to update a published application, you need to create an `UPDATE` PR. 
 
@@ -86,7 +82,6 @@ When you need to update a published application, you need to create an `UPDATE` 
 - No `.suspend` or `.remove` files included in the root directory of updated application chart.
 - The **Olares Market** does not offer version rollback. If there are any issues with your application, you need to submit a new version to fix it.
 - To avoid potential conflicts, we recommend syncing your fork and rebase the commits of PR to the latest main branch.
-
 
 ### Suspend
 If for any reason you want to temporarily disable your application's download and installation from the **Olares Market**, submit a `SUSPEND` PR.

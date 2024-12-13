@@ -13,6 +13,3 @@ You can also [learn about DevBox](devbox.md), a built-in app that Olares provide
 
 If you're brand new to Olares development and want to jump straight into coding, start with the [**Create your first Olares app**](./note/index.md). This tutorial will step you through the process of building a small note application.
 
-
-
-

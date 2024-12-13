@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { en } from "./en";
-// import { zh } from "./zh";
+import { zh } from "./zh";
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -13,18 +13,18 @@ export default withMermaid({
       label: "English",
       ...en,
     },
-    // zh: {
-    //   label: "简体中文",
-    //   ...zh,
-    // },
+     zh: {
+       label: "简体中文",
+       ...zh,
+     },
   },
   themeConfig: {
     search: {
-      provider: "algolia",
+      provider: "local",
       options: {
-        appId: "0614S1555J",
-        apiKey: "cbf4702e9d6bfb5a0ae85bf0d486a591",
-        indexName: "jointerminus",
+        //appId: "0614S1555J",
+        //apiKey: "cbf4702e9d6bfb5a0ae85bf0d486a591",
+        //indexName: "jointerminus",
         locales: {
           zh: {
             placeholder: "搜索文档",

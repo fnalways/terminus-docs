@@ -109,7 +109,7 @@ ln -s /root/.config/default.conf
 
 nginx -s reload
 ```
-:::details Example of a complete `nginx.conf` file(Desktop as an example)
+:::details Example of a complete `nginx.conf` file (Desktop as an example)
 
 ```nginx
 server {

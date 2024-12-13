@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # File Upload
 
-There are many situations where you might need to upload local files to your edge when using **Olares**. The `Olares Application Runtime (TAPR)` provides a common file-upload component to simplify this process in app development. Moreover, this file-upload component features **resumable upload**.
+There are many situations where you might need to upload local files to your edge when using **Olares**. The `Olares Application Runtime` provides a common file-upload component to simplify this process in app development. Moreover, this file-upload component features **resumable upload**.
 
 ## How to install
 

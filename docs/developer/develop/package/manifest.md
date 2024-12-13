@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # OlaresManifest Specification
 
-Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the **Olares** depend on this information to distribute and install applications.
+Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the Olares depend on this information to distribute and install applications.
 
 Here's an example of what a `OlaresManifest.yaml` file might look like:
 
@@ -97,10 +97,10 @@ olaresManifest.type: app
 
 - Type: `string`
 
-As **Olares** evolves, the configuration specification of `OlaresManifest.yaml` may change. You can identify whether these changes will affect your application by checking the `olaresManifest.version`. The `olaresManifest.version` consists of three integers separated by periods. 
+As Olares evolves, the configuration specification of `OlaresManifest.yaml` may change. You can identify whether these changes will affect your application by checking the `olaresManifest.version`. The `olaresManifest.version` consists of three integers separated by periods. 
 
 - An increase in the **first digit** indicates the introduction of incompatible configuration items. Applications that haven't updated their `OlaresManifest.yaml` will be unable to distribute or install.
-- An increase in the **second digit** signifies changes in the mandatory fields for distribution and installation. However, the **Olares** remains compatible with the application distribution and installation of previous configuration versions. We recommend developers to promptly update and upgrade the application's `OlaresManifest.yaml` file.
+- An increase in the **second digit** signifies changes in the mandatory fields for distribution and installation. However, the Olares remains compatible with the application distribution and installation of previous configuration versions. We recommend developers to promptly update and upgrade the application's `OlaresManifest.yaml` file.
 - A change in the **third digit** does not affect the application's distribution and installation.
 
 Developers can use 1-3 digit version numbers to indicate the application's configuration version. Here are some examples of valid versions:
@@ -132,25 +132,25 @@ metadata:
 - Type: `string`
 - Accepted Value: `[a-z][a-z0-9]?`
 
-App’s namespace in **Olares**, lowercase alphanumeric characters only. It can be up to 30 characters, and needs to be consistent with `FolderName` and `name` field in `Chart.yaml`.
+App’s namespace in Olares, lowercase alphanumeric characters only. It can be up to 30 characters, and needs to be consistent with `FolderName` and `name` field in `Chart.yaml`.
 
 ### title
 
 - Type: `string`
 
-Your app title that appears in the **Olares Market**. It can be up to 30 characters.
+Your app title that appears in the Olares Market. It can be up to 30 characters.
 
 ### description
 
 - Type: `string`
 
-A short description appears below app title in the  **Olares Market**.
+A short description appears below app title in the Olares Market.
 
 ### icon
 
 - Type: `url`
 
-Your app icon that appears in the **Olares Market**.
+Your app icon that appears in the Olares Market.
 
 The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a size of `256x256 px`.
 
@@ -160,13 +160,12 @@ The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a siz
 
 The **Chart Version** of the application. It should be incremented each time the content in the **Chart** changes. It should follow the [Semantic Versioning 2.0.0](https://semver.org/) and needs to be consistent with the `version` field in `Chart.yaml`.
 
-
 ### categories
 
 - Type: `list<string>`
 - Accepted Value: `Blockchain`, `Utilities`, `Social Network`, `Entertainment`, `Productivity`
 
-Used to display your app on different category page in **Olares Market**.
+Used to display your app on different category page in Olares Market.
 
 ## Entrances
 
@@ -211,14 +210,14 @@ entrances:
 
 - Type: `string`
 
-Title that appears in the **Olares** desktop after installed. It can be up to `30` characters.
+Title that appears in the Olares desktop after installed. It can be up to `30` characters.
 
 ### icon
 
 - Type: `url`
 - Optional
 
-Icon that appears in the **Olares** desktop after installed. The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a size of `256x256 px`.
+Icon that appears in the Olares desktop after installed. The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a size of `256x256 px`.
 
 ### authLevel
 
@@ -238,7 +237,7 @@ Specify the authentication level of the entrance.
 - Default: `false`
 - Optional
 
-When `invisible` is `true`, the entrance will not be displayed on the **Olares** desktop.
+When `invisible` is `true`, the entrance will not be displayed on the Olares desktop.
 
 ### openMethod
 
@@ -391,7 +390,7 @@ All system API [providers](../advanced/provider.md) are list below:
 | secret.vault | v1 | key | List, Info, Sign
 
 ## spec
-> Additional information about the application, primarily used for display in the **Olares Market**.
+Additional information about the application, primarily used for display in the Olares Market.
 
 :::info Example
 ```Yaml
@@ -426,7 +425,7 @@ spec:
   - zh-CN
   # List languages and regions supported by this app
 
-requiredMemory: 256Mi
+  requiredMemory: 256Mi
   requiredDisk: 128Mi
   requiredCpu: 0.5
   # Specifies the minimum resources required to install and run the application. Once the app is installed, the system will reserve these resources to ensure optimal performance.
@@ -493,7 +492,7 @@ spec:
 - Optional
 - Type: `map`
 
-The **Olares** provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add required middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
+The Olares provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add required middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
 
 Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
 
@@ -512,7 +511,7 @@ middleware:
       - ALTER DATABASE $databasename SET search_path TO "$user", public, vectors;
       - ALTER SCHEMA vectors OWNER TO $dbusername;
       - COMMIT;
-      # The OS provides two variables, $databasename and $dbusername, which will be replaced by TAPR when the command is executed.
+      # The OS provides two variables, $databasename and $dbusername, which will be replaced by Olares Application Runtime when the command is executed.
   redis:
     password: password
     namespace: db0
@@ -541,7 +540,7 @@ Use the middleware information in deployment YAML
   value: {{ .Values.postgres.password }}
 
 
-# For mongodb, the corresponding value is as follow
+# For mongodb, the corresponding value is as follows
 host --> {{ .Values.mongodb.host }}
 port --> "{{ .Values.mongodb.port }}"  # The port and password in the yaml file need to be enclosed in double quotes.
 username --> {{ .Values.mongodb.username }}
@@ -549,7 +548,7 @@ password --> "{{ .Values.mongodb.password }}" # The port and password in the yam
 databases --> "{{ .Values.mongodb.databases }}" # The value type of database is a map. You can get the database using {{ .Values.mongodb.databases.<dbname> }}. The <dbname> is the name you configured in OlaresManifest, specified in middleware.mongodb.databases[i].name
 
 
-# For Redis, the corresponding value is as follow
+# For Redis, the corresponding value is as follows
 host --> {{ .Values.redis.host }}
 port --> "{{ .Values.redis.port }}"
 password --> "{{ .Values.redis.password }}"
@@ -558,7 +557,7 @@ password --> "{{ .Values.redis.password }}"
 
 ## options
 
-> Configure system-related options here
+Configure system-related options here.
 
 ### policies
 
@@ -584,7 +583,7 @@ options:
 - Optional
 - Type: `map`
 
-Whether this app is installed for all users in a **Olares** cluster.
+Whether this app is installed for all users in an Olares cluster.
 
 :::info Example For Server
 ```yaml
@@ -669,7 +668,7 @@ options:
 - Optional
 - Type: `map`
 
-If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information
+If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information.
 
 
 :::info Example
@@ -685,7 +684,7 @@ options:
 - Optional
 - Type: `map`
 
-The Olares Application Runtime (TAPR) includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
+The Olares Application Runtime includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
 
 :::info Example
 ```yaml
@@ -721,7 +720,7 @@ mobileSupported: true
 
 The Olares includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
 ```yaml
-# OpenID related varibles in yaml
+# OpenID related variables in yaml
 {{ .Values.oidc.client.id }}
 {{ .Values.oidc.client.secret }}
 {{ .Values.oidc.issuer }}

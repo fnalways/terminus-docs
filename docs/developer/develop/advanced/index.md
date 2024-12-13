@@ -1,7 +1,7 @@
 # Advanced
 
 1. [Olares CLI 安装/恢复](./cli.md)
-2. [Olares Info](./olares-info)
+2. [Olares Info](./terminus-info)
 3. [Cookie](./cookie.md)
 4. [Account](./account.md)
 5. [Database 配置](./database.md)

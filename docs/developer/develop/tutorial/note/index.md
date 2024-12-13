@@ -1,6 +1,6 @@
 # Create Your First Olares App
 
-You can learn how to develop a **Olares App** using the **DevBox** through this tutorial.
+You can learn how to develop an Olares app using DevBox through this tutorial.
 
 The tutorial shows how to make a simple [Note](https://github.com/beclab/olares-app-demo) tool. It demonstrates how to start from scratch and develop a complete Olares App.
 

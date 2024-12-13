@@ -1,20 +1,19 @@
 # Develop Frontend Program
 
 ## Preview App
-
-After installing the app, you can preview the frontend of your application using the **'Preview'** button in **DevBox**.
+After installing the app, you can preview the frontend of your application using the **Preview** button in **DevBox**.
 
 ![preview](/images/developer/develop/tutorial/frontend/preview.jpg)
 
 ## Open IDE
 
-When you open the frontend **Dev Container** IDE, you'll see the welcome page. From this point, the steps are like those for [backend development](backend.md). You can clone your frontend code using the Terminal.
+When you open the frontend **Dev Contain IDE, you'll see the welcome page. From this point, the steps are like those for [backend development](backend.md). You can clone your frontend code using the Terminal.
 
 ::: tip
 In this example, the frontend and backend use the same code directory. So, after you've cloned the code for the backend, you don't need to do it again.
 :::
 
-After cloning the code, if you are working on a **Node** project, you might need to make some configuration changes.
+After cloning the code, if you are working on a Node project, you might need to make some configuration changes.
 
 - **Vite Configuration Changes**
 
@@ -51,7 +50,6 @@ After cloning the code, if you are working on a **Node** project, you might need
   nginx -s reload
   ```
 ## Run Dev Mode
-
 After completing the **Nginx** configuration, you can start your frontend program in dev mode and preview your APP in Olares.
 
 ```sh
