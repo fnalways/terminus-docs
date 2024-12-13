@@ -30,7 +30,9 @@
    
 
 </script>
-
+:::warning Note for Mainland China users
+The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
+:::
 # {{ title }}
 
 <span style="display:none;opacity: 0;">{{randomKey}}</span>
