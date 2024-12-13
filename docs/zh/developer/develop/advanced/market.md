@@ -1,16 +1,16 @@
-# Market
+# 应用市场
 
-To install or uninstall apps in developing applications (for example, third-party Market extensions), developers can use the `install` and `uninstall` API provided by the **Market**.
+开发者可利用应用市场提供的 Provider 接口，在自己开发的应用（比如，三方 应用市场扩展）中调用安装、卸载接口来安装或卸载应用。
 
-For how to define and call provider, please refer to [Service Provider](./provider.md)
+Provider 的申请和调用方法可以详细阅读 [Service Provider](./provider.md)
 
-**Provider from Market**
+应用市场提供的 Provider
 
 | Group            | version | dataType | ops                           |
 | ---------------- | ------- | -------- | ----------------------------- |
-| service.appstore | v1      | app      | `InstallDevApp`<br>`UninstallDevApp` |
+| service.appstore | v1      | app      | InstallDevApp UninstallDevApp |
 
-## Install
+## 安装接口
 - **Request**
     - **URL**: <br>`http://$OS_SYSTEM_SERVER/system-server/v1alpha1/app/service.appstore/v1/InstallDevApp`
 
@@ -18,22 +18,22 @@ For how to define and call provider, please refer to [Service Provider](./provid
 
     - **Header**
         ```http
-        X-Authorization: token          # auth_token in cookie
-        X-Access-Token: access_token    # access token get from authorization Provider
+        X-Authorization: token          # cookie 中的 auth_token
+        X-Access-Token: access_token    # provider 授权接口获取的 access token
         ```
 
-    - **Body** (Golang struct as an example)
+    - **Body**（以 Golang struct 为例）
         ```go
         type InstallOptions struct {
-            App string `json:"appName"` //required
-            RepoUrl string `json:"repoUrl"` //required
-            CfgUrl string `json:"cfgUrl"` //optional
-            Version string `json:"version"` //required when upgrading
-            Source string `json:"source"` //required
+            App string `json:"appName"` //必须
+            RepoUrl string `json:"repoUrl"` //必须
+            CfgUrl string `json:"cfgUrl"` //可选
+            Version string `json:"version"` //升级时需要
+            Source string `json:"source"` //必须
         }
         ```
 
-- **Success Responses**
+- **请求返回**
     ```go
     type InstallationResponse struct {
         Code int `json:"code"`
@@ -46,7 +46,7 @@ For how to define and call provider, please refer to [Service Provider](./provid
     }
     ```
 
-## Uninstall
+## 卸载接口
 - **Request**
     - **URL**: <br>`http://$OS_SYSTEM_SERVER/system-server/v1alpha1/app/service.appstore/v1/UninstallDevApp`
 
@@ -54,18 +54,18 @@ For how to define and call provider, please refer to [Service Provider](./provid
 
     - **Header**
         ```http
-        X-Authorization: token          # auth_token in cookie
-        X-Access-Token: access_token    # access token get from authorization Provider
+        X-Authorization: token          # cookie 中的 auth_token
+        X-Access-Token: access_token    # provider 授权接口获取的 access token
         ```
 
-    - **Body** (Golang struct as an example)
+    - **Body**（以 Golang struct 为例）
         ```go
         type UninstallData struct {
             Name string `json:"name"` //required
         }
         ```
 
-- **Success Responses**
+- **请求返回**
     ```go
     type InstallationResponse struct {
         Code int `json:"code"`

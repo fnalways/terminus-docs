@@ -3,7 +3,7 @@
 The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart should contain the following files:
 ```
 |-- Chart.yaml                   # chart metadata
-|-- OlaresManifest.yaml        # Olares Application configuration
+|-- OlaresManifest.yaml          # Olares Application configuration
 |-- templates                    # chart deployment template files
 |   |-- deployment.yaml          # APP deployment script
 |-- values.yaml                  # chart deployment parameters

@@ -326,36 +326,36 @@ const side = {
 
   "/zh/developer/": [
     {
-      text: "Developing Olares App",
+      text: "开发 Olares 应用",
       items: [
         {
-          text: "Overview",
+          text: "简介",
           link: "/zh/developer/develop/",
         },
         {
-          text: "Tutorial",
+          text: "教程",
           collapsed: true,
           link: "/zh/developer/develop/tutorial/",
           items: [
             {
-              text: "Learn DevBox",
+              text: "了解 DevBox",
               link: "/zh/developer/develop/tutorial/devbox",
             },
             {
-              text: "Create Your First Apps",
+              text: "创建首个应用",
               collapsed: true,
               link: "/zh/developer/develop/tutorial/note/",
               items: [
                 {
-                  text: "1. Create App",
+                  text: "1. 创建应用",
                   link: "/zh/developer/develop/tutorial/note/create",
                 },
                 {
-                  text: "2. Develop Backend",
+                  text: "2. 开发后端",
                   link: "/zh/developer/develop/tutorial/note/backend",
                 },
                 {
-                  text: "3. Develop Frontend",
+                  text: "3. 开发前端",
                   link: "/zh/developer/develop/tutorial/note/frontend",
                 },
               ],
@@ -363,11 +363,11 @@ const side = {
           ],
         },
         {
-          text: "Application Package",
+          text: "应用包管理",
           collapsed: true,
           items: [
             {
-              text: "Application Chart",
+              text: "应用 Chart 包",
               link: "/zh/developer/develop/package/chart",
             },
             {
@@ -375,26 +375,26 @@ const side = {
               link: "/zh/developer/develop/package/manifest",
             },
             {
-              text: "Model",
+              text: "模型",
               link: "/zh/developer/develop/package/model",
             },
             {
-              text: "Recommend",
+              text: "推荐算法",
               link: "/zh/developer/develop/package/recommend",
             },
             {
-              text: "Helm Extension",
+              text: "Helm 扩展",
               link: "/zh/developer/develop/package/extension",
             },
           ],
         },
         {
-          text: "Advanced",
+          text: "进阶",
           collapsed: true,
           items: [
             {
-              text: "Olares Info",
-              link: "/zh/developer/develop/advanced/olares-info",
+              text: "terminus-info",
+              link: "/zh/developer/develop/advanced/terminus-info",
             },
             {
               text: "Service Provider",
@@ -405,13 +405,13 @@ const side = {
               link: "/zh/developer/develop/advanced/ai",
             },
             { text: "Cookie", link: "/zh/developer/develop/advanced/cookie" },
-            { text: "Database", link: "/zh/developer/develop/advanced/database" },
+            { text: "数据库", link: "/zh/developer/develop/advanced/database" },
             {
-              text: "Account",
+              text: "账户",
               link: "/zh/developer/develop/advanced/account",
             },
             {
-              text: "Market",
+              text: "应用市场",
               link: "/zh/developer/develop/advanced/market",
             },
             // {
@@ -423,7 +423,7 @@ const side = {
               link: "/zh/developer/develop/advanced/websocket",
             },
             {
-              text: "File Upload",
+              text: "文件上传",
               link: "/zh/developer/develop/advanced/file-upload",
             },
             // {
@@ -431,7 +431,7 @@ const side = {
             //   link: "/zh/developer/develop/advanced/rss",
             // },
             {
-              text: "Secret",
+              text: "密钥",
               link: "/zh/developer/develop/advanced/secret",
             },
             // {
@@ -450,7 +450,7 @@ const side = {
         },
 
         {
-          text: "Submit Application",
+          text: "提交应用",
           collapsed: true,
           link: "/zh/developer/develop/submit/",
         },
@@ -458,19 +458,19 @@ const side = {
     },
 
     {
-      text: "Contributing To Olares",
+      text: "参与贡献",
       items: [
         {
           text: "Olares",
           link: "/zh/developer/contribute/olares",
         },
         {
-          text: "Develop System App",
+          text: "开发系统应用",
           collapsed: true,
 
           items: [
             {
-              text: "Overview",
+              text: "概述",
               link: "/zh/developer/contribute/system-app/overview",
             },
             {
@@ -482,11 +482,11 @@ const side = {
               link: "/zh/developer/contribute/system-app/olares-manifest",
             },
             {
-              text: "Install",
+              text: "安装",
               link: "/zh/developer/contribute/system-app/install",
             },
             {
-              text: "Other",
+              text: "其他",
               link: "/zh/developer/contribute/system-app/other",
             },
           ],

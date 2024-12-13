@@ -1,10 +1,10 @@
 # Olares
 
-## Directory structure
+## 目录结构
 
 ```
 olares
-|-- apps                  # olares built-in apps
+|-- apps                  # 系统应用
 |   |-- agent
 |   |-- analytic
 |   |-- market
@@ -24,10 +24,10 @@ olares
 |   |-- system-apps
 |   |-- wise
 |   |-- wizard
-|-- build                 # olares installer
+|-- build                 # Olares installer
 |   |-- installer
 |   |-- manifest
-|-- frameworks            # system runtime frameworks
+|-- frameworks            # 系统运行时组件
 |   |-- app-service
 |   |-- backup-server
 |   |-- bfl
@@ -36,10 +36,10 @@ olares
 |   |-- osnode-init
 |   |-- system-server
 |   |-- tapr
-|-- libs                  # toolkit libs
+|-- libs                  # 工具包库
 |   |-- fs-lib
-|-- scripts               # scripts for build or package the olares installer
-|-- third-party           # third party libs or apps integrated in olares
+|-- scripts               # 用于构建或打包 olares 安装程序的脚本
+|-- third-party           # Olares 中集成的第三方库或应用程序
 |   |-- authelia
 |   |-- headscale
 |   |-- infisical
@@ -55,13 +55,13 @@ olares
 |   |-- tailscale
 ```
 
-## How to install
+## 如何安装
 
 ```
 curl -fsSL https://olares.sh |  bash -
 ```
 
-## How to build
+## 如何构建
 
 ```
 git clone https://github.com/beclab/olares
@@ -72,7 +72,7 @@ bash scripts/build.sh
 
 ```
 
-Run the above scripts, you will get the debug version installer package `install-wizard-debug.tar.gz`
+运行以上脚本，你将获得 debug 版本安装包 `install-wizard-debug.tar.gz`。
 
 ## How to install debug version
 
@@ -85,9 +85,8 @@ make install VERSION=0.0.0-DEBUG
 
 ```
 
-## How to uninstall
+## 如何卸载
 
-```
-cd /path/to/olares && make uninstall
-
+```bash
+bash olares-uninstall.sh
 ```

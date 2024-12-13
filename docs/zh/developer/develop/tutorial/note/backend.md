@@ -1,25 +1,25 @@
-# Develop Backend Program
+# 开始后端程序开发
 
-## Clone Code
+## 克隆代码
 
-  Open the IDE of backend **Dev Container**, open **Terminal**, clone your code to the `/Code` directory
+  打开后端的开发容器 IDE, 打开 Terminal，可控你的代码到 `/Code` 目录。
 
   ```sh
   gh auth login
 
   cd /Code
-  git clone https://github.com/beclab/olares-app-demo.git
+  git clone https://github.com/beclab/terminus-app-demo.git
   ```
-  
-  You can then open the backend code in the IDE for development
-  
+
+  之后便可以在 IDE 中打开后端代码进行开发。
+
   ![server IDE](/images/developer/develop/tutorial/backend/dev.jpg)
 
-## Connect Database
+## 连接数据库
 
-  In the **Dev Container**, you can access database details through environment variables. You can do this by adding the database parameters into the container using environment variables when you deploy it.
+  在开发容器中，可以通过环境变量获取数据库信息（如果你在部署的时候以环境变量的方式将数据库参数注入容器）。
 
-  Take `gorm` as an example:
+  以 gorm 为例：
   ```go
   import (
     "fmt"
@@ -56,16 +56,16 @@
   }
   ```
 
-## Debug
+## 调试
 
-  After completing the development, you can run and debug your code in the IDE.
+  完成代码开发后，便可在 IDE 中运行调试你的代码。
 
   ![run and debug](/images/developer/develop/tutorial/backend/debug.jpg)
 
-  You can also run your code in the Terminal, for example
-  
+  也可以在 Terminal 中运行你的代码，例如：
+
   ```sh
   go run main.go
   ```
-  
-  Now, you can debug your interface with your front-end program.
+
+  这时，就可以配合前端完成接口联调。

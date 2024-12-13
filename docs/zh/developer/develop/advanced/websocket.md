@@ -4,16 +4,16 @@ outline: [2, 3]
 
 # Websocket
 
-**WebSocket** is one of the most widely used technologies in modern front-end development. To simplify its use in **Olares** app development, **Olares Application Runtime (TAPR)** provides a common **WebSocket** component.
+WebSocket 是现代前端开发中使用最广泛的技术之一。为了简化 Olares 应用的使用与开发，Olares 应用程序运行时提供了一个通用的 WebSocket 组件。
 
-## Client
+## 客户端
 
-The Client is developed using `JavaScript/TypeScript` use the **ws** library.
-The application server provides the WebSocket through a URL formatted as `wss://<appid>.<username>.olares.com/ws`.
+基于 JavaScript/TypeScript 的方式开发的客户端，采用 “ws” 库。
+应用服务提供 WebSocket 的路径格式：`wss://<appid>.<username>.olares.com/ws`
 
-### Send Message
+### 发送消息
 
-An example of WebSocket messages sent from clients is outlined below (other formats are also supported):
+客户端发送 WebSocket 消息格式如下（支持其他格式）：
 ```json
 {
   "event": "...",
@@ -23,7 +23,7 @@ An example of WebSocket messages sent from clients is outlined below (other form
 
 ### Ping
 
-The client should send a 'ping' message every 30 seconds to keep the WebSocket connection alive. If the WebSocket service doesn't receive a 'ping' within the time limit, it will close the connection. The data format for the 'ping' message should adhere to the following structure:
+客户端需要定期发送 ping 包（30 秒一次），以维持 WebSocket 连接。（WebSocket 服务定期检查 ping 包，超时则会主动关闭该连接），ping 包数据格式如下（严格按照如下格式）：
 ```json
 {
   "event": "ping",
@@ -31,56 +31,56 @@ The client should send a 'ping' message every 30 seconds to keep the WebSocket c
 }
 ```
 
-## App
+## 应用
 
-The **WebSocket Service** offers multiple features:
-- It allows the server to communicate with clients either by broadcasting messages or responding to WebSocket messages sent by clients.
-- It can be used to close a WebSocket connection for a specific user or connection ID.
-- It provides the current connection list.
+WebSocket 服务提供多种功能：
+- 允许服务器通过广播消息或响应客户端发送的 WebSocket 消息与客户端进行通信。
+- 可用于关闭特定用户或连接 ID 的 WebSocket 连接。
+- 获取当前连接列表。
 
-Both the **App** and **WebSocket** are deployed in the same container, allowing direct access to the **WebSocket service** via `localhost`. The service uses port `40010`.
+因为 WebSocket 与应用是部署在一个容器中的，所以直接访问 localhost 即可调用 WebSocket 服务。端口 `40010`。
 
-### Broadcast Message
+### 广播消息
 ```json
-// URL:<http://localhost:40010/tapr/ws/conn/send>
-// Request method: POST
+// URL：http://localhost:40010/tapr/ws/conn/send
+// 请求方式：POST
 // body
 {
-"payload": {}, // Message.
-"conn_id": "<connId>", // Connection ID; used to respond to the client's single Ws request. Do not fill in connId when broadcasting to users
-"users": ["<userName-1>", "<userName-2>"], // Specify users. If this field is filled in, it is a broadcast. Do not fill in connId in broadcast situation
+"payload": {}, // 消息。
+"conn_id": "<connId>", // 连接 ID；用于响应客户端的单次 Ws 请求。按 users 广播时不要填写 connId
+"users": ["<userName-1>", "<userName-2>"], // 指定用户，如果填写该字段，则是广播。广播场景下不要填写 connId
 }
 
-// Response example
+// 响应示例
 {
 "code": 0,
 "message": "success",
 }
 ```
 
-### Close WebSocket Connection of Client
+### 关闭客户端的 WebSocket 连接
 ```json
-// URL:<http://localhost:40010/tapr/ws/conn/close>
-// Request method: POST
+// URL：http://localhost:40010/tapr/ws/conn/close
+// 请求方式：POST
 // body
 {
-"conns": ["<connId>", ...], // Close specified connections
-"users": ["<userName>", ...], // Close all connections for specified users
+"conns": ["<connId>", ...], // 关闭指定连接
+"users": ["<userName>", ...], // 关闭指定用户的所有连接
 }
 
-// Response example
+// 响应示例
 {
 "code": 0,
 "message": "success",
 }
 ```
 
-### Get Current Online Connection List
+### 获取当前在线的连接列表
 
 ```json
-// URL:<http://localhost:40010/tapr/ws/conn/list>
-// Request method: GET
-// Response example
+// URL：http://localhost:40010/tapr/ws/conn/list
+// 请求方式：GET
+// 响应示例
 {
   "code": 0,
   "message": "success",
@@ -89,7 +89,7 @@ Both the **App** and **WebSocket** are deployed in the same container, allowing 
       "name": "<userName>",
       "conns": [
         {
-          "id": "<connId>", // Connection ID
+          "id": "<connId>", // 连接 ID
           "userAgent": ""
         }
       ]
@@ -98,69 +98,71 @@ Both the **App** and **WebSocket** are deployed in the same container, allowing 
 }
 ```
 
-### Forwards Client Messages to App via WebSocket
+### WebSocket 转发客户端消息到应用
 
-There are three types of client messages that will be forward to App:
-- Establishing a client connection
-- Regular messages sent by the client
-- Client disconnected, which happens when the browser closes or network issues occur.
+将转发到应用的客户端消息分为三种类型：
+- 客户端连入
+- 客户端正常发送的消息
+- 客户端连接断开，如关闭浏览器，网络异常等。
 
-**Client connection**
+**客户端连入**
 
 ```json
-// URL:<http://localhost:3010/websocket/message>
-// Method: POST
+// URL：http://localhost:3010/websocket/message
+// 请求方式：POST
 // body
 
 {
   "data": {},
   "action": "open", // action
   "user_name": "<userName>",
-  "conn_id": "1" // WebSocket Connection ID
+  "conn_id": "1" // WebSocket 连接 ID
 }
 
-// When the app receives the "open" message, it will execute the associated processes.
+// 应用 App 接收到 open 的消息后，做相关处理。
 ```
 
-**Regular messages**
+**客户端正常发送的消息**
 
 ```json
-// URL:<http://localhost:3010/websocket/message>
-// Method: POST
-// header, the original Cookie of the client will be passed to the backend application
-Cookie: .... // New feature in version v1.0.3
+// URL：http://localhost:3010/websocket/message
+// 请求方式：POST
+// header，会传递客户端的原始 Cookie 给后端应用
+Cookie: .... // v1.0.3 版本新增功能
 
 // body
 {
-"data": { ... }, // The original data sent by the client to WSGateway, the internal structure is {"event":"", "data": {...}}
+"data": { ... }, // 客户端发到 WSGateway 的原始数据，内部结构为 {"event":"", "data": {...}}
 "action": "message", // action
 "user_name": "<userName>",
-"conn_id": "1", // WebSocket Connection ID
+"conn_id": "1", // WebSocket 连接 ID
 }
 
-// After processing, the app returns the data to the client through the "Broadcast Message" API.
+// 应用 App 处理后通过“广播消息”的接口，将数据回传给客户端
+
 ```
 
-**Client Disconnected** 
-> The WebSocket service callback the App when it receives a close message
+**客户端连接断开**
+>WebSocket 服务响应到 close 事件后回调应用
+
 ```json
-// URL:<http://localhost:3010/websocket/message>
-// Method: POST
+// URL：http://localhost:3010/websocket/message
+// 请求方式：POST
 // body
 
 {
   "data": {},
   "action": "close", // action
   "user_name": "<userName>",
-  "conn_id": "1" // WebSocket Connection ID
+  "conn_id": "1" // WebSocket 连接 ID
 }
 
-// When the app receives the "close" message, it will execute the associated processes.
+// 应用 App 接收到 close 的消息后，做相关处理。
 ```
 
-## Deploy WebSocket Service in App
+## 应用部署 WebSocket 服务
 
-To use this feature, simply add the `websocket configuration` to the [OlaresManifest.yaml](../package/manifest.md#websocket) file in the application chart.
+应用要使用这个功能只需要在应用 Chart 的 [TerminusManifest.yaml](../package/manifest.md#websocket) 中申明。
 ```yaml
 options:
   websocket:
@@ -168,4 +170,4 @@ options:
     port: 8888
 ```
 
-**WebSocket** is a component that facilitates message forwarding between the client and the App. Consequently, the App must provide an **API** for **WebSocket** to manage `ws` messages from the client. For instance, in the example above, the APP should provide an API named `/ws/message` on port `8888`.
+WebSocket 是在客户端和应用之间承载消息转发的组件，所以应用端需要提供一个 API 接口，供 WebSocket 调用转发客户端的 ws 消息。比如，按上面的申明应用应提供接口名为：`/ws/message`，端口是 `8888`。

@@ -1,11 +1,11 @@
-# Configuration Guideline for Recommend
+# 推荐算法配置指导
 
-When creating an application chart for `recommend`, you'll primarily need to configure the four files located in the `templates/` folder: `embedding.yaml`, `prerank.yaml`, `rank.yaml`, `train.yaml`
+为 `recommend` 创建应用程序图表时，主要需要配置位于 `templates/` 文件夹中的四个文件：`embedding.yaml` 、`prerank.yaml` 、`rank.yaml` 和 `train.yaml`。
 
 
 ## embedding.yaml
 
-::: details embedding.yaml Example
+::: details embedding.yaml 示例
 
 ```Yaml
 apiVersion: argoproj.io/v1alpha1
@@ -53,43 +53,43 @@ spec:
 
 :::
 
-### Field Description
-                                                                         |
-| Field                      | Description                                                                                 |
+### 字段介绍
+
+| 选项名称                   | 描述                                                                                       |
 | -------------------------- | ------------------------------------------------------------------------------------------ |
-| apiVersion                 | The API version in use.                                                                     |
-| kind                       | Defines a CronWorkflow object.                                                               |
-| metadata.name              | The name of the CronWorkflow.                                                                |
-| metadata.namespace         | The namespace that the CronWorkflow belongs to.                                               |
-| spec.schedule              | Cron expression, defines the scheduling time of the CronWorkflow.                            |
-| spec.startingDeadlineSeconds | The start deadline of the CronWorkflow, represents the maximum delay time from the scheduled time. |
-| spec.concurrencyPolicy      | Concurrency policy, specifies how to handle the currently running job when the next schedule time of the CronWorkflow arrives. |
-| spec.successfulJobsHistoryLimit | The limit of the successful job history record.                                             |
-| spec.failedJobsHistoryLimit | The limit of the failed job history record.                                                  |
-| spec.suspend               | Indicates whether to suspend the operation of the CronWorkflow.                            |
-| spec.ttlStrategy.secondsAfterSuccess | The time to live after the successful job is completed, in seconds.                   |
-| spec.ttlStrategy.secondsAfterCompletion | The time to live after the job is completed, in seconds.                        |
-| spec.ttlStrategy.secondsAfterFailure | The time to live after the failed job is completed, in seconds.                    |
-| spec.workflowSpec.entrypoint | The entry point of the Workflow.                                                            |
-| spec.workflowSpec.volumes[0].name | The definition of the volume, the name is huggingface.                                  |
-| spec.workflowSpec.volumes[0].hostPath.type | The host machine path type, specified as a directory or create a directory.    |
-| spec.workflowSpec.volumes[0].hostPath.path | The path of the host machine.                                                           |
-| spec.workflowSpec.templates[0].name | The name of the Workflow template.                                                        |
-| spec.workflowSpec.templates[0].steps[0][0].name | The definition of the step, its name.                                                |
-| spec.workflowSpec.templates[0].steps[0][0].template | The name of the referenced template.                                                  |
-| spec.workflowSpec.templates[1].name | The name of the template.                                                                |
-| spec.workflowSpec.templates[1].container.image | The image name of the container.                                                        |
-| spec.workflowSpec.templates[1].container.imagePullPolicy | The image pull policy.                                                 |
-| spec.workflowSpec.templates[1].container.env[0].name | The definition of the environment variable, its name.                               |
-| spec.workflowSpec.templates[1].container.env[0].value | The value of the environment variable.                                               |
-| spec.workflowSpec.templates[1].container.env[1].name | The definition of the environment variable, its name.                               |
-| spec.workflowSpec.templates[1].container.env[1].value | The value of the environment variable.                                               |
-| spec.workflowSpec.templates[1].container.volumeMounts[0].mountPath | The definition of the mount path.                                                  |
-| spec.workflowSpec.templates[1].container.volumeMounts[0].name | The name of the mounted volume.                                                     |
+| apiVersion                 | 使用的API版本。                                                                             |
+| kind                       | 定义了一个CronWorkflow对象。                                                                 |
+| metadata.name              | CronWorkflow的名称。                                                                        |
+| metadata.namespace         | CronWorkflow所属的命名空间。                                                                 |
+| spec.schedule              | Cron表达式，定义了CronWorkflow的调度时间。                                                   |
+| spec.startingDeadlineSeconds | CronWorkflow的启动截止时间，表示从调度时间开始的最大延迟时间。                               |
+| spec.concurrencyPolicy      | 并发策略，指定了当CronWorkflow下一次调度时间到来时，如何处理当前正在运行的作业。               |
+| spec.successfulJobsHistoryLimit | 成功作业的历史记录限制数。                                                                   |
+| spec.failedJobsHistoryLimit | 失败作业的历史记录限制数。                                                                   |
+| spec.suspend               | 指示是否暂停CronWorkflow的运行。                                                           |
+| spec.ttlStrategy.secondsAfterSuccess | 成功作业完成后的存活时间，以秒为单位。                                                 |
+| spec.ttlStrategy.secondsAfterCompletion | 作业完成后的存活时间，以秒为单位。                                             |
+| spec.ttlStrategy.secondsAfterFailure | 失败作业完成后的存活时间，以秒为单位。                                               |
+| spec.workflowSpec.entrypoint | Workflow的入口点。                                                                          |
+| spec.workflowSpec.volumes[0].name | 卷的定义，名称为huggingface。                                                          |
+| spec.workflowSpec.volumes[0].hostPath.type | 宿主机路径类型，指定为目录或创建目录。                                     |
+| spec.workflowSpec.volumes[0].hostPath.path | 宿主机路径。                                                                               |
+| spec.workflowSpec.templates[0].name | Workflow模板的名称。                                                                       |
+| spec.workflowSpec.templates[0].steps[0][0].name | 步骤的定义，名称。                                                                   |
+| spec.workflowSpec.templates[0].steps[0][0].template | 引用的模板名称。                                                                         |
+| spec.workflowSpec.templates[1].name | 模板的名称。                                                                               |
+| spec.workflowSpec.templates[1].container.image | 容器的镜像名称。                                                                           |
+| spec.workflowSpec.templates[1].container.imagePullPolicy | 镜像拉取策略。                                                          |
+| spec.workflowSpec.templates[1].container.env[0].name | 环境变量的定义，名称。                                                                 |
+| spec.workflowSpec.templates[1].container.env[0].value | 环境变量的值。                                                                            |
+| spec.workflowSpec.templates[1].container.env[1].name | 环境变量的定义，名称。                                                                 |
+| spec.workflowSpec.templates[1].container.env[1].value | 环境变量的值。                                                                            |
+| spec.workflowSpec.templates[1].container.volumeMounts[0].mountPath | 挂载路径的定义。                                                                   |
+| spec.workflowSpec.templates[1].container.volumeMounts[0].name | 挂载的卷名称。                                                                         |
 
 ## prerank.yaml
 
-::: details prerank.yaml Example
+::: details prerank.yaml 示例
 
 ```Yaml
 apiVersion: argoproj.io/v1alpha1
@@ -190,7 +190,7 @@ spec:
 
 ## rank.yaml
 
-::: details rank.yaml Example
+::: details rank.yaml 示例
 
 ```Yaml
 apiVersion: argoproj.io/v1alpha1
@@ -257,7 +257,7 @@ spec:
 
 ## train.yaml
 
-::: details train.yaml Example
+::: details train.yaml 示例
 
 ```Yaml
 apiVersion: argoproj.io/v1alpha1

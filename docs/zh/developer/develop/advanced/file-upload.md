@@ -2,13 +2,13 @@
 outline: [2, 3]
 ---
 
-# File Upload
+# 文件上传
 
-There are many situations where you might need to upload local files to your edge when using **Olares**. The `Olares Application Runtime (TAPR)` provides a common file-upload component to simplify this process in app development. Moreover, this file-upload component features **resumable upload**.
+Olares 作为一个云端系统，存在很多将本地文件上传到云端的场景。Olares 应用运行时提供了一个通用的 file-upload 组件。简化应用对文件上传需求的开发。同时，file-upload 组件还提供了断点续传功能。
 
-## How to install
+## 如何安装
 
-To use this feature, simply add the following configuration to the [OlaresManifest.yaml](../package/manifest.md#upload) file in the application chart.
+只要在应用 chart 的 [TerminusManifest.yaml](../package/manifest.md#file-upload) 中申明
 ```yaml
 upload:
   fileType:
@@ -17,17 +17,17 @@ upload:
   limitedSize: 3729747942
 ```
 
-## Frontend API
+## 前端接口对接
 
-:::info NOTE
-The limit for a single upload is 10MB. If the file is larger than 10MB, you must upload using the resumable upload API.
+:::info 注意
+单次上传大小限制为 10M，大于 10M 需要使用分片断点续传功能。
 :::
 
 
-### Upload
+## 上传
 
-This interface is used to upload files to the server and get the file id and status.
-:::details Example
+该接口用于上传文件到服务器并获取文件id和状态。
+:::details 示例
 **Request**
 ```sh
 curl --location 'http://host:40030/upload/' \
@@ -52,7 +52,6 @@ curl --location 'http://host:40030/upload/' \
 }
 ```
 :::
-
 - **Request**
 
   - **URL**: `/upload/`
@@ -61,24 +60,24 @@ curl --location 'http://host:40030/upload/' \
 
   - **Body**:
   ``` json
-    "mode": "formdata",  //The request body type must set to multipart/form-data
+    "mode": "formdata",  //请求体为 multipart/form-data 格式
     "body parameters": {
-      "storage_path": string,   //required, the storage path for the file on the server. Ensure that this folder exists.
-      "file_relative_path": string, //required, the location of file relative to the storage_path, it must include the filename. If it is a floder, end with '/'
-      "file_type": string,  //required, File type
-      "file_size": integer, //required, File size
+      "storage_path": string,   //必填，文件在服务器上的存储文件夹，该文件夹必须存在，
+      "file_relative_path": string, //必填，文件相对于 storage_path 的路径，必须包含文件名。如果为文件夹，以“/”结尾。
+      "file_type": string,  //必填，文件类型
+      "file_size": integer, //必填，文件大小
     }
   ```
 - **Success Response**
-  
-  The response body contains the following content, formatted in JSON.
-  - **Status Code** : `200 OK`
+
+  响应体为 JSON 格式，包含以下字段：
+  - **状态码** : `200 OK`
     ```json
-      "code": integer, // Response code, 0 means success, non-zero means failure.
-      "message": string, // Response message, return "success" upon success, and the corresponding error message upon failure.
-      "data":{  //Response data. Upon success, it includes the following fields (these contents is absent when uploading a folder):
-        "id": string,   // Unique identifier of the file
-        "offset": integer,  //The offset of the file uploaded
+      "code": integer, // 响应码，0 表示成功，非零表示失败。
+      "message": string, // 响应消息，成功时为 "success"，失败时为相应的错误消息。
+      "data":{  //响应数据，成功时包含以下字段（上传文件夹时无该字段）：
+        "id": string,   // 文件唯一标识符
+        "offset": integer,  // 文件上传的偏移量
         "file_relative_path": string, 
         "file_type": string,
         "file_size": integer,
@@ -86,16 +85,16 @@ curl --location 'http://host:40030/upload/' \
       }
     ```
 
-- **Error Response**
-  - **Status Code** : `400 Bad Request`
-    > The request is invalid due to illegal or missing parameters.
-  - **Status Code** : `500 Internal Server Error`
-    > An internal server error has occurred, which prevented the request from being fulfilled. This could be due to reasons such as failure to create a folder or save file information.
+- **错误情况**
+  - **状态码** : `400 Bad Request`
+    > 请求参数不合法或缺失。
+  - **状态码** : `500 Internal Server Error`
+    > 服务器内部错误，例如创建文件夹失败或保存文件信息失败。
 
-### Resumable Upload
+### 断点续传
 
-This interface is used to continue uploading the remaining part of the file.
-:::details Example
+该接口用于继续上传文件的剩余部分。
+:::details 示例
 **Request**
 ```sh
 curl --location --request PATCH 'http://host:40030/upload/b0b76f02bdb8ee3269602c983c4a2aeb' \
@@ -139,25 +138,25 @@ curl --location --request PATCH 'http://host:40030/upload/b0b76f02bdb8ee3269602c
 
   - **Body**:
   ``` json
-    "mode": "formdata",  //The request body type must set to multipart/form-data
+    "mode": "formdata",  //请求体为 multipart/form-data 格式
     "body parameters": {
-      "file": string,   //required. The file to be uploaded. Please upload the file in multipart/form-data format.
-      "upload_offset": integer,   //required. The offset refers to the size of the file that has already been uploaded.
+      "file": string,   //必填，要上传的文件。请使用 multipart/form-data 格式进行文件上传。
+      "upload_offset": integer,   //必填，文件上传的偏移量，之前已上传的文件大小。
     }
     "url parameters": {
-      "uid": string,   //required. This is the unique identifier of the file. You can obtain it from the response data of the Upload API.
+      "uid": string,   //必填，文件的唯一标识符。可以从上传 API 的 Response 数据中获取。
     }    
   ```
 - **Success Response**
-  
-  The response body contains the following content, formatted in JSON.
-  - **Status Code** : `200 OK`
+
+响应体为 JSON 格式，包含以下字段：
+  - **状态码** : `200 OK`
     ```json
-      "code": integer, // Response code, 0 means success, non-zero means failure.
-      "message": string, // Response message, return "File uploaded successfully" upon success, and the corresponding error message upon failure.
-      "data":{  //Response data. Upon success, it includes the following fields
-        "id": string,   // Unique identifier of the file
-        "offset": integer,  //The offset of the file uploaded
+      "code": integer, // 响应码，0 表示成功，非零表示失败。
+      "message": string, // 响应消息，成功时为 "File uploaded successfully"，失败时为相应的错误消息。
+      "data":{  // 响应数据，成功时包含以下字段：
+        "id": string,   // 文件唯一标识符
+        "offset": integer,  // 文件上传的偏移量
         "file_relative_path": string, 
         "file_type": string,
         "file_size": integer,
@@ -165,11 +164,11 @@ curl --location --request PATCH 'http://host:40030/upload/b0b76f02bdb8ee3269602c
       }
     ```
 
-- **Error Response**
-  - **Status Code** : `400 Bad Request`
-    > The request is invalid due to illegal or missing parameters.
+- **错误情况**
+  - **状态码** : `400 Bad Request`
+    > 请求参数不合法或缺失。
     ```json
     { "code": 1, "message": "Invalid upload ID" }
     ```
-  - **Status Code** : `500 Internal Server Error`
-    > An internal server error has occurred, which prevented the request from being fulfilled. This could be due to reasons such as failure to create a folder, save file information, or move file.
+  - **状态码** : `500 Internal Server Error`
+    > 服务器内部错误，例如创建文件夹失败、保存文件信息失败或移动文件失败。

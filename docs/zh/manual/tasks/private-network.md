@@ -11,7 +11,7 @@ Local access to such applications is supported in two ways:
 - **LAN**: When your device and Olares are on the same local network, such as being connected to the same WiFi.
 - **Private network**: By enabling Virtual Private Network (VPN) in LarePass, all traffic from the device running LarePass to Olares is routed through a secure private network, providing the same experience as intranet access.
 
-This document walks you through how to setup VPN access to Olares.
+This document walks you through how to set up VPN access to Olares.
 
 
 ## Set up VPN access on LarePass

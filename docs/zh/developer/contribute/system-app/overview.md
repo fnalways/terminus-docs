@@ -1,19 +1,19 @@
 
-# Develop System Application for Olares
+# 开发 Olares 的系统应用
 
-::: tip Prerequisites Knowledge
-- Debugging third-party applications with **DevBox**
-- Developing applications with **DevBox**
-- Understanding the architecture and mechanisms of **Olares**
-:::
+::: tip 前置知识：
+- 用 DevBox 调试第三方应用
+- 用 DevBox 开发程序
+- 了解 Olares 的架构和机制
+  :::
 
-After a year and a half of work, the Olares team now uses **DevBox** for developing system applications.
+经过一年半开发，Terminus 团队在开发系统应用时已经逐渐迁移到 DevBox 上。
 
-We will show you how to debug issues in the frontend code of **Desktop** using **DevBox**.
-1. Create an application in DevBox
-2. Configure [deployment.yaml](./deployment)
-3. Configure [OlaresManifest.yaml](./olares-manifest)
-4. Install the application
-5. Configure [nginx.conf](./install)
+下面我们将演示如何在 Devbox 里调试 Desktop 的前端代码。
+1. 在 DevBox 中创建应用
+2. 配置 [deployment.yaml](./deployment)
+3. 配置 [OlaresManifest.yaml](./olares-manifest)
+4. 安装应用
+5. 配置 [nginx.conf](./install)
 
-There are also some [other](./other) aspects to consider in development.
+还有[其它](./other)一些开发注意事项。

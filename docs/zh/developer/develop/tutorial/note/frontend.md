@@ -1,26 +1,25 @@
-# Develop Frontend Program
+# 开始前端程序开发
 
-## Preview App
-
-After installing the app, you can preview the frontend of your application using the **'Preview'** button in **DevBox**.
+## 预览应用
+应用安装完成后，可以通过 DevBox 的**预览**按钮，预览应用的前端效果。
 
 ![preview](/images/developer/develop/tutorial/frontend/preview.jpg)
 
-## Open IDE
+## 打开 IDE
 
-When you open the frontend **Dev Container** IDE, you'll see the welcome page. From this point, the steps are like those for [backend development](backend.md). You can clone your frontend code using the Terminal.
+打开前端的开发容器 IDE, 可以看见开发容器的预览欢迎页。之后的开发流程与[开发后端](backend.md)类似，在 Terminal 中克隆你的前端代码。
 
 ::: tip
-In this example, the frontend and backend use the same code directory. So, after you've cloned the code for the backend, you don't need to do it again.
+在本教程中，因为前后端共开发容器共享了代码目录，后端 clone 代码后，前端不需要再次克隆代码。
 :::
 
-After cloning the code, if you are working on a **Node** project, you might need to make some configuration changes.
+克隆完代码后，如果是 Node 项目，可能需要做配置修改。
 
-- **Vite Configuration Changes**
+- **Vite 配置修改**
 
-  If your frontend project uses **Vite**, you need to add an **HMR** configuration. In development mode, **Vite** initiates a **WebSocket** to receive code reload notifications from the server. The default **WebSocket** port matches the server's startup port. However, if the development app uses an **Nginx proxy** it will operate on the default port 443. Therefore, some modifications are required.
+  如果前端项目采用了 vite，需要增加 hmr 配置。Vite 在 dev 状态，会启动 websocket 监听服务器端发送的代码更新 reload 通知。默认 ws 端口为 server 启动的端口。而 dev app 启动了 nginx 代理，采用了标准的 443 端口。所以需要做相应修改。
   
-  Modify the `vite.config.js` file as follows:
+  按以下方式修改 vite.config.js 文件：
   ```js
   export default defineConfig({
     server: {
@@ -29,10 +28,11 @@ After cloning the code, if you are working on a **Node** project, you might need
       },
     },
   });
-  ```  
-- **Nginx Configuration Changes**
-  
-  After setting up your project's development environment, you need to modify the Nginx configuration. Open `/etc/nginx/conf.d/dev/dev.conf` and make the necessary changes:
+  ```
+- **Nginx 配置修改**
+
+  配置好项目的开发环境后，需要修改 Nginx 配置。打开 `/etc/nginx/conf.d/dev/dev.conf` 修改：
+
   ```nginx
   location / {
     proxy_pass http://127.0.0.1:9000;
@@ -46,13 +46,12 @@ After cloning the code, if you are working on a **Node** project, you might need
   }
   ```
 
-  Then, reload Nginx:
+  然后重启 Nginx：
   ```sh
   nginx -s reload
   ```
-## Run Dev Mode
-
-After completing the **Nginx** configuration, you can start your frontend program in dev mode and preview your APP in Olares.
+## 运行开发模式
+完成 Nginx 配置后，你就可以启动你的前端程序的开发模式，并在 Olares 中预览你的应用：
 
 ```sh
 npm run dev
@@ -60,17 +59,17 @@ npm run dev
 
 ![frontend preview](/images/developer/develop/tutorial/frontend/preview2.jpg)
 
-If you need to set up a backend api proxy for the frontend, you can modify the proxy configuration in **Nginx**.
+如果你需要为前端设置后端 API 代理，可以在 Nginx 中修改代理配置
 
-```nginx
-location /api/ {
-      proxy_pass http://127.0.0.1:9001;
-      proxy_set_header            Host $http_host;
-      proxy_set_header            X-real-ip $remote_addr;
-      proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection $http_connection;
-      proxy_set_header Accept-Encoding gzip;
-}
-```
+  ```nginx
+  location /api/ {
+        proxy_pass http://127.0.0.1:9001;
+        proxy_set_header            Host $http_host;
+        proxy_set_header            X-real-ip $remote_addr;
+        proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+        proxy_set_header Accept-Encoding gzip;
+  }
+  ```

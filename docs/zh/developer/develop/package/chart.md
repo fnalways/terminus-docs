@@ -1,58 +1,59 @@
-# Olares Application Chart Structure
+# Olares 应用 Chart 包的结构
 
-The Olares Application Chart is built upon the structure of **Helm Chart**, with extensions to accommodate specific **Olares** information. A standard application chart should contain the following files:
+Olares 应用 Chart 基于 Helm Chart 的基础结构，扩展 Olares 特有信息，主要为：
 ```
-|-- Chart.yaml                   # chart metadata
-|-- OlaresManifest.yaml        # Olares Application configuration
-|-- templates                    # chart deployment template files
-|   |-- deployment.yaml          # APP deployment script
-|-- values.yaml                  # chart deployment parameters
+|-- Chart.yaml                   # chart 的 metadata
+|-- OlaresManifest.yaml          # Olares 应用的配置
+|-- templates                    # chart 安装部署模版文件
+|   |-- deployment.yaml          # 应用部署脚本
+|-- values.yaml                  # chart 安装部署参数
 ```
-:::info NOTE
-To make the templates directory easier to understand, you can split the deployment into several files.
+:::info 注意
+为了使 `templates` 目录更易于理解，你可以将部署拆分为多个文件。
 :::
 
-- A typical application chart for `App`:
+- 应用 Chart 包示例：
 ```
 AppName
-|-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- OlaresManifest.yaml     # Required: containing App configuration
-|-- values.yaml               # Required: default configuration values of the chart
-|-- templates                 # Required: template directory, when combined with values, it can generate valid Kubernetes manifest files
-|   |-- NOTES.txt             # Optional: plain text file containing brief usage instructions
-|   |-- deployment.yaml       # Defines the deployment for App installation
-|   |-- service.yaml          # Defines the Service that provides the Entrance for the App
-|   |-- provider.yaml         # Optional: if you need to expose the Provider API 
-|-- LICENSE                   # Optional: plain text file containing the chart license
-|-- README.md                 # Optional: readable README file
+|-- Chart.yaml                # 必选: 包含了 chart 信息的 YAML文件
+|-- OlaresManifest.yaml       # 必选: 应用的配置文档
+|-- values.yaml               # 必选: chart 默认的配置值
+|-- templates                 # 必选: 模板目录， 当和 values 结合时，可生成有效的 Kubernetes manifest 文件
+|   |-- NOTES.txt             # 可选: 包含简要使用说明的纯文本文件
+|   |-- deployment.yaml       # 定义应用安装的 Deployment
+|   |-- service.yaml          # 定义应用提供 Entrance 的 Service
+|   |-- provider.yaml         # 可选：如果需要暴露 Provider 接口
+|-- LICENSE                   # 可选: 包含 chart 许可证的纯文本文件
+|-- README.md                 # 可选: 可读的 README 文件
 ```
 
-- A typical application chart for `Recommend`:
+- 推算算法 Chart 包示例：
 
 ```
 RecommendName
-|-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- OlaresManifest.yaml     # Required: containing Recommend configuration
-|-- values.yaml               # Required: default configuration values of the chart
-|-- templates                 # Required: template directory, when combined with values, it can generate valid Kubernetes manifest files
-|   |-- NOTES.txt             # Optional: plain text file containing brief usage instructions
-|   |-- train.yaml            # Defines the train process in recommend workflows
-|   |-- prerank.yaml          # Defines the prerank process in recommend workflows
-|   |-- rank.yaml             # Defines the rank process in recommend workflows
-|   |-- embedding.yaml        # Defines the embedding process in recommend workflows
-|-- LICENSE                   # Optional: plain text file containing the chart license
-|-- README.md                 # Optional: readable README file
-```
-
-- A typical application chart for `Large Language Model`:
+|-- Chart.yaml                # 必选: 包含了 chart 信息的 YAML 文件
+|-- OlaresManifest.yaml     # 必选: 推荐算法的配置文档
+|-- values.yaml               # 必选: chart 默认的配置值
+|-- templates                 # 必选: 模板目录， 当和 values 结合时，可生成有效的 Kubernetes manifest 文件
+|   |-- NOTES.txt             # 可选: 包含简要使用说明的纯文本文件
+|   |-- train.yaml            # 定义推荐算法 workflows 中的 train 流程
+|   |-- prerank.yaml          # 定义推荐算法 workflows 中的 prerank 流程
+|   |-- rank.yaml             # 定义推荐算法 workflows 中的 rank 流程
+|   |-- embedding.yaml        # 定义推荐算法 workflows 中的 embedding 流程
+|-- LICENSE                   # 可选: 包含 chart 许可证的纯文本文件
+|-- README.md                 # 可选: 可读的 README 文件
 
 ```
-ModelName
-|-- Chart.yaml                # Required: YAML file containing chart metadata
-|-- OlaresManifest.yaml     # Required: containing LLM configuration
-|-- values.yaml               # Required: default configuration values of the chart
-├── modelConfig.yaml          # Required: containing model configuration
-|-- templates                 # Required: template directory, it is usually empty for Model.
-|-- LICENSE                   # Optional: plain text file containing the chart license
-└── README.md                 # Optional: readable README file
+
+- LLM Chart 包示例：
+
+```
+LLMName
+|-- Chart.yaml                # 必选: 包含了 chart 信息的YAML文件
+|-- OlaresManifest.yaml     # 必选: LLM 的配置文档(通用配置)
+|-- values.yaml               # 必选: chart 默认的配置值
+├── modelConfig.yaml          # 必选: LLM 的配置文档(模型配置)
+└── README.md                 # 可选: 可读的 README 文件
+
+
 ```

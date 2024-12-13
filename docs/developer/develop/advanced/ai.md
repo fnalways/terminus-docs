@@ -13,7 +13,7 @@ outline: [2, 3]
 - **Request**
   - **URL**: `/apps`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps?page=1&limit=30&name=Ashia`
+  - **URL Parameters**: `/apps?page=1&limit=30&name=Ashia`
   :::tip
   Most of the APIs listed in this document require the `app_id`, which can be obtained from the response of this API.
   :::
@@ -309,7 +309,7 @@ outline: [2, 3]
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/completion-conversations?page=1&limit=30`
+  - **URL Parameters**: `/apps/{uuid:app_id}/completion-conversations?page=1&limit=30`
   :::tip
   the Conversations (Text Generation) APIs listed below require the `conversation_id`, which can be obtained from the response of this API.
   :::
@@ -333,7 +333,7 @@ outline: [2, 3]
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/chat-conversations?page=1&limit=30`
+  - **URL Parameters**: `/apps/{uuid:app_id}/chat-conversations?page=1&limit=30`
   :::tip
   the Conversations (Chat) APIs listed below require the `conversation_id`, which can be obtained from the response of this API.
   :::
@@ -364,7 +364,7 @@ outline: [2, 3]
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-messages`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/chat-messages?conversation_id={conversation_id}`
+  - **URL Parameters**: `/apps/{uuid:app_id}/chat-messages?conversation_id={conversation_id}`
 
 ### Message Feedback
 > Give like or dislike feedback to the message from the APP
@@ -508,40 +508,40 @@ outline: [2, 3]
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/daily-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/daily-conversations?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/daily-conversations?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### Active Users
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/daily-end-users`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/daily-end-users?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/daily-end-users?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### Token Costs
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/token-costs`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/token-costs?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/token-costs?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### Average Session Interactions
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/average-session-interactions`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/average-session-interactions?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/average-session-interactions?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### User Satisfaction
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### Average Response Time
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/average-response-time`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/average-response-time?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/average-response-time?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
 ### Token Output Speed
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/tokens-per-second`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/tokens-per-second?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/tokens-per-second?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`

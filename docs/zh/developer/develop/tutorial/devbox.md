@@ -1,14 +1,13 @@
-# Learn about DevBox
+# 了解 DevBox
 
-At Olares, we provide a development tool called **DevBox**. It helps developers create applications for **Olares**.
+在 Olares 中，我们为每个开发者提供了一个为 Olares 开发应用的开发工具，这就是 DevBox。
 
-- Why is DevBox necessary for developers?
-    
-  **Olares** has many cloud-based features that are difficult to simulate in a standalone development environment. Furthermore, the unique sandbox system of **Olares** requires a real system environment for end-to-end testing. To simplify app simulation for developers and minimize system integration efforts during development, we provide the **DevBox**. **DevBox** is a quick, automatic toolset for creating app sandboxes.
+- 开发者为什么需要 DevBox 呢？
 
-- What features does DevBox have?
+  Olares 作为一个具有诸多云原生特性的系统，有大量的系统上下文环境在开发者的单机开发环境很难模拟。同时，Olares 独有的沙盒体系也需要在真实的系统环境中才能完成 End to End 的测试。所以，为了方便开发者能够最便捷的获得真实的应用仿真体验，减少开发中的系统联调尝试，我们提供 DevBox 为开发者提供自动快速构建应用沙盒的开发工具集。
 
-  - In **DevBox**, you can build an app and generate a corresponding **Olares Application Configuration**. This deployment files can be modified, allowing you to port an existing app and deploy it to the **Olares**. During the modification process, you can continually attempt installation and resolve any issues that arise. Once the app passes your tests, you can download your TAC and submit it to the [Olares Market Repository](https://github.com/beclab/apps).
+- DevBox 提供了哪些功能？
 
+  - 在 DevBox 中，你可以创建一个应用，生成 Olares 应用的 Chart 包。接着你可以修改这个应用 Chart 的部署脚本，移植一个现有的应用，以 Olares 的方式部署到系统中。在修改过程中，你可以尝试安装，检查错误。测试通过后，可下载对应的应用 Chart，提交给 Olares 的 [Market 仓库](https://github.com/beclab/apps)。
 
-  - In addition to porting existing apps, you can also create a native **Olares** application in **DevBox**. **DevBox** provides an online development container where coders can work in a real environment, utilize other system interfaces, database clusters, and more.
+  - 除了移植现有应用，你还可以创建一个全新的应用，在 DevBox 完成整个应用的开发到上线的工作。DevBox 中提供了在线的开发容器，开发者可以在真实的环境中完成代码开发，在程序中调用系统的其他接口或者数据库集群等等。

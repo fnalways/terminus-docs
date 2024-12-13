@@ -1,26 +1,25 @@
 # Cookie
 
-**Single Sign-On (SSO)** mode is utilized for authorization and authentication across the **Olares**, including all installed apps. **SSO** authentication is non-intrusive, using cookies as the authentication credential.
+Olares 系统中采用 SSO 的模式来为整个系统（包括所有安装的应用）实现授权认证。SSO 认证模式采用无侵入设计，使用 cookie 作为认证的凭证。
 
-The system will set two cookies after login
+系统会在认证登录后设置两个 cookie：
 
 - **authelia_session**
 
-  The content of the cookie is the session id of SSO. The scope is the user's Olares domain, `<username>.olares.com`
+  cookie 内容为 SSO 的 session id。作用域为用户的 Olares domain， `<username>.olares.com`。
 
 - **auth_token**
 
-  The user authenticated authorization token. The scope is the user's Olares domain, `<username>.olares.com`
+  用户认证的 authorization token。作用域为用户的 Olares domain， `<username>.olares.com`。
 
-To prevent cookie conflicts, **no application** (whether it's a built-in system app or a third-party app) can set cookies to the user's domain. Cookies can only be set to the domain of the app.
+为避免 cookie 冲突，任何应用（包括系统的内建应用，三方应用）都不可以设置 cookie 到用户的域，只可设置到应用自己的域下面。
 
-Every application in **Olares** operates under two domains: <`app id>.<username>.olares.com` and `<app id>.local.<username>.olares.com`. As a result, Olares incorporates a cookie-setting `rewrite` mechanism within the `TAPR (Olares Application Runtime)`. This ensures that the application automatically assigns cookies for both domains in the Set-`Cookie` field of the **HTTP response**.
+由于系统的每个 APP 都存在两个域名 `<app id>.<username>.olares.com` 和 `<app id>.local.<username>.olares.com`。所以 Olares 在 Olares 应用运行时中整合了 cookie 设置 `rewrite`机制，确保应用自动为 HTTP Response 中 Set-Cookie 字段中的两个域分配 cookie。
 
-To use this feature, you just need to define it in the application chart's [OlaresManifest.yaml](../package/manifest.md#resetcookie)
+要使用这个功能只需要在应用 chart 的 [OlaresManifest.yaml](../package/manifest.md#resetcookie) 中申明：
 
 ```yaml
 options:
   resetCookie:
     enabled: true
-
 ```

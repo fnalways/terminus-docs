@@ -91,7 +91,7 @@ env:
     value: os_system_dify  # Please note, you need to add a namespace suffix when use the database name configured in the MiddlewareRequest above. For username in Postgres, you also need to replace - with _
 ```
 
-You can also concatenate the `dsn` link
+You can also concatenate the `dsn` link:
 
 ```Yaml
 postgres://dify_{{ .Values.bfl.username }}:{{ $pg_password_data }}@citus-master-svc.user-system-{{ .Values.bfl.username }}/user_space_{{ .Values.bfl.username }}_dify?sslmode=disable

@@ -43,6 +43,13 @@ Run the following command:
 curl -fsSL https://olares.sh |  bash -
 ```
 
+:::info
+If an error occurs during installation, use the following command to uninstall first:
+```bash
+bash olares-uninstall.sh
+```
+After uninstalling, retry the installation by running the original installation command.
+:::
 ## Prepare Wizard URL
 
 At the end of the installation process, you will be prompted to enter domain name and Olares ID:

@@ -2,12 +2,12 @@
 outline: [2, 3]
 ---
 
-# deployment.yaml
+# deployment.md
 
-The system application need to be installed under the `user-space` namespace. Therefore, certain modifications are required:
+由于系统应用需要安装到 `user-space` 的 namespace 下，所以需要做一些特殊修改。
 
-1. Modify the `deployment.yaml` file in the Olares Application Chart.
-2. Change the original namespace of `deployment` and `service`  to `user-space-{\\{ .Values.bfl.username }}`
+1. 修改 chart 包中的 `deployment.yaml` 文件。
+2. 先将原有的 deployment 和 service 对应的 namespace 改为 `user-space-{\{ .Values.bfl.username }}`。
    ```Yaml
    apiVersion: apps/v1
    kind: Deployment
@@ -16,7 +16,7 @@ The system application need to be installed under the `user-space` namespace. Th
      namespace: user-space-{{ .Values.bfl.username }}
    ```
 
-3. Add `annotations` and `labels` according to the configuration in the `deployment.yaml` file of the app in **Olares**.
+3. 参照 Olares 中的应用对应 `deployment.yaml` 文件配置，添加 `annotation` 和 `label`。
 
    ```Yaml
    metadata:
@@ -32,84 +32,85 @@ The system application need to be installed under the `user-space` namespace. Th
      applications.app.bytetrade.io/title: Desktop-dev
      applications.app.bytetrade.io/version: '0.0.1'
 
-     # Configuration of entrances here should be consistent with the configuration in OlaresManifest.yaml.
+    # 此处的 entrances 配置要与 OlaresManifest.yaml 中配置保持一致
      applications.app.bytetrade.io/entrances: '[{"name":"desktop-frontend-dev", "host":"desktop-svc-dev", "port":80,"title":"Desktop-dev"}]'
    ```
 
-4. Modify service
+4. 修改 service。
 
-   ```Yaml
-   ---
-   apiVersion: v1
-   kind: Service
-   metadata:
-     name: desktop-svc-dev
-     namespace: user-space-{{ .Values.bfl.username }}
-   spec:
-     selector:
-     app: desktop-dev
-     ports:
-     - protocol: TCP
-         port: 80
-         targetPort: 8080  # Please note, the port of the Node.js dev container is 8080. please switch to this port.
-   ```
+    ```Yaml
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: desktop-svc-dev
+      namespace: user-space-{{ .Values.bfl.username }}
+    spec:
+      selector:
+      app: desktop-dev
+      ports:
+      - protocol: TCP
+          port: 80
+          targetPort: 8080  # 注意，现在 nodejs 的 dev container 端口是 8080，要改成这个端口
+    ```
 
-5. Modify the section of entrances in `OlaresManifest.yaml`
+5. 修改 `OlaresManifest.yaml` 中 `entrances` 的内容。
 
-   ```Yaml
-   entrances:
-   - name: desktop-frontend-dev # Same with annotation in deployment
-     host: desktop-svc-dev # Same with the name in service
-     port: 80
-     icon: https://file.bttcdn.com/appstore/default/defaulticon.webp
-     title: Desktop-dev
-     authLevel: private
-     openMethod: default
-   ```
+    ```Yaml
+    entrances:
+    - name: desktop-frontend-dev # 与 deployment 上的 annotation 一致
+      host: desktop-svc-dev # 与上面的 service 名字一致
+      port: 80
+      icon: https://file.bttcdn.com/appstore/default/defaulticon.webp
+      title: Desktop-dev
+      authLevel: private
+      openMethod: default
+    ```
 
-6. Add service to provide `app-service` installation check
+6. 添加 service 提供 app-service 安装检查。
 
-   ```Yaml
-   # provide `app-service` installation check
-   ---
-   apiVersion: v1
-   kind: Service
-   metadata:
-     name: desktop-svc-dev  # Same with the name in original service
-     namespace: {{ .Release.Namespace }}
-   spec:
-     type: ExternalName
-     externalName: desktop-svc-dev.user-space-{{ .Values.bfl.username }}.svc.cluster.local
-     ports:
-       - protocol: TCP
-         name: desktop
-         port: 80
-         targetPort: 80
-   ```
+    ```Yaml
+    # 提供 app-service 安装检查
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: desktop-svc-dev  # 必须与原来的 service 同名
+      namespace: {{ .Release.Namespace }}
+    spec:
+      type: ExternalName
+      externalName: desktop-svc-dev.user-space-{{ .Values.bfl.username }}.svc.cluster.local
+      ports:
+        - protocol: TCP
+          name: desktop
+          port: 80
+          targetPort: 80
+    ```
 
-7. If you need to add a `local cache` or require access to the `user directory` in `JuiceFS`, you can add
+7. 如果需要添加本地 cache 或者 juicefs 用户目录的访问，可添加：
 
-   ```Yaml
-   volumes:
-     - name: appdata
-       hostPath:
-       type: DirectoryOrCreate
-       path: {{ .Values.userspace.appData }}/desktop-dev
-
-   - name: userdata
-     hostPath:
-       type: DirectoryOrCreate
-       path: {{ .Values.userspace.userData }}/desktop-dev
-
-   - name: appcache
-     hostPath:
-       type: DirectoryOrCreate
-       path: {{ .Values.userspace.appCache }}/desktop-dev
-   ```
+    ```Yaml
+    volumes:
+      - name: appdata
+        hostPath:
+        type: DirectoryOrCreate
+        path: {{ .Values.userspace.appData }}/desktop-dev
+    
+    - name: userdata
+      hostPath:
+        type: DirectoryOrCreate
+        path: {{ .Values.userspace.userData }}/desktop-dev
+    
+    - name: appcache
+      hostPath:
+        type: DirectoryOrCreate
+        path: {{ .Values.userspace.appCache }}/desktop-dev
+    
+    ```
 
 ---
 
-:::details Example of a complete `deployment.yaml` file
+:::details 完整 `deployment.yaml` 文件例子
 ```YAML
 ---
 apiVersion: apps/v1
@@ -123,7 +124,7 @@ metadata:
     applications.app.bytetrade.io/owner: {{ .Values.bfl.username }}
     applications.app.bytetrade.io/author: bytetrade.io
   annotations:
-    applications.app.bytetrade.io/icon: https://docs-dev.olares.xyz/icon.png
+    applications.app.bytetrade.io/icon: https://docs-dev.jointerminus.com/icon.png
     applications.app.bytetrade.io/title: Desktop-dev
     applications.app.bytetrade.io/version: '0.0.1'
     applications.app.bytetrade.io/entrances: '[{"name":"desktop-frontend-dev", "host":"desktop-svc-dev", "port":80,"title":"Desktop-dev"}]'
@@ -138,7 +139,7 @@ spec:
         app: desktop-dev
     spec:
       volumes:
-      - name: olares-sidecar-config
+      - name: terminus-sidecar-config
         configMap:
           name: sidecar-configs
           items:
@@ -160,7 +161,7 @@ spec:
           path: {{ .Values.userspace.appCache }}/desktop-dev
 
       initContainers:
-        - name: olares-sidecar-init
+        - name: terminus-sidecar-init
           image: openservicemesh/init:v1.2.3
           imagePullPolicy: IfNotPresent
           securityContext:
@@ -212,7 +213,7 @@ spec:
             mountPath: /opt/code
           - name: appcache
             mountPath: /root/.config
-        - name: olares-envoy-sidecar
+        - name: terminus-envoy-sidecar
           image: envoyproxy/envoy-distroless:v1.25.2
           imagePullPolicy: IfNotPresent
           securityContext:
@@ -224,7 +225,7 @@ spec:
           - name: proxy-inbound
             containerPort: 15003
           volumeMounts:
-          - name: olares-sidecar-config
+          - name: terminus-sidecar-config
             readOnly: true
             mountPath: /etc/envoy/envoy.yaml
             subPath: envoy.yaml

@@ -1,18 +1,15 @@
-# Tutorial
+# 教程
 
-Welcome to the Olares developer guides. These detailed tutorials offer a step-by-step guide on building an Olares Application from scratch.
+欢迎阅读 Olares 应用开发指南。这些详细的教程将逐步指导你从零开始构建 Olares 应用。
 
-To get started, you can learn some basic concepts of Olares, such as:
-- [Olares architectural components](../../../manual/architecture.md)
-- [Olares Application Chart](../../develop/package/chart.md)
-- [Olares Extension on Helm](../package/extension.md)
+在开始前，您可以先了解一些Terminus的基本概念，如：
+- [Olares 的组成](../../../manual/architecture.md)
+- [Olares 应用 Chart](../../develop/package/chart.md)
+- [Olares 在 Helm 上的扩展](../package/extension.md)。
 
-These fundamentals will help you grasp our development process more effectively.
+这些基础知识将帮助你更有效地掌握的开发流程。
 
-You can also [learn about DevBox](devbox.md), a built-in app that Olares provides for developers to build Olares applications.
+你还可以先了解下 [DevBox](devbox.md)，这是 Olares 为开发人员构建 Olares 应用程序提供的内置应用程序。
 
-If you're brand new to Olares development and want to jump straight into coding, start with the [**Create your first Olares app**](./note/index.md). This tutorial will step you through the process of building a small note application.
-
-
-
+如果你是 Olares 开发的新手，想直接开始编码，可以从[创建首个应用](./note/index.md)开始。本教程将指导你构建一个小型笔记应用程序。
 

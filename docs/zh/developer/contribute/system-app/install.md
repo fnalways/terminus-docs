@@ -1,59 +1,59 @@
-# Install System Application
+# 安装系统应用
 
-## Install
+## 安装
 
-Install the system app from **DevBox**. Due to the installation mechanism, the desktop may not receive proper notifications. Consequently, you might need to manually refresh the page to see the icon.
+在 DevBox 中安装系统应用。由于目前的安装方式可能无法正确通知桌面，所以需要手动刷新页面才能看到图标。
 
 ![image](/images/developer/develop/contribute/system-app/install/install.jpg)
 
-Once the application is successfully installed and in the **'Running'** state, you can access the default welcome page of VSCode. Simply click the **'Open IDE'** button on the **'Containers'** page.
+应用安装成功，进入 **Running** 状态时，在应用的 **Containers** 页面，点击 Open IDE 可以进入 vscode 的默认欢迎页面。
 
 ![ide](/images/developer/develop/contribute/system-app/install/install2.jpg)
 
 ::: tip
-There is no need to bind in this case.
+这个地方无需构建。
 :::
 
-## Clone Code
+## 克隆代码
 
-- Once you've entered the IDE, begin by installing the gh tool.
+- 进入 IDE 后，先安装 gh 工具
 
-    ```shell
-    apt install gh
-    ```
+```shell
+apt install gh
+```
 
-- Log in to GitHub
+- 登录 Github
 
-    ```shell
-    gh auth login
-    ```
+```shell
+gh auth login
+```
 
-- Clone the code after logging in.
+- 完成登录后克隆代码
 
-    ```shell
-    cd /opt/code && gh repo clone beclab/desktop
-    ```
-    :::tip
-    It's recommended to clone the code into the `/opt/code` directory. This is because the `code server` is run by the `root`, while `nginx` is run by a `non-root user`. In this example, the `/opt/code` directory has been mounted to the `application data` directory of the node. So that, the code will remain saved even if the pod is restarted.
-    :::
+  ```shell
+  cd /opt/code && gh repo clone beclab/desktop
+  ```
+  :::tip 提示
+  由于 code server 已 root 用户运行，nginx 运行在非 root 用户下，所以最好将代码 clone 到 /opt/code 目录，上面的实例已将/opt/code 挂载到节点的 application data 目录，重启 pod，代码会仍然保存。
+  :::
 
-## Run the Application
+## 运行程序
 
-Run your application in the terminal of the IDE. For example:
+在 IDE 的 Terminal 中，运行你的程序。例如：
 
 ```sh
 npm run dev
 ```
 
-## Nginx
+## nginx
 
-- Open the folder `/opt/code/desktop-v1` in **VS Code**
+- 在 vscode 中打开文件夹 `/opt/code/desktop-v1`
 
-- To run debugging, first modify the `nginx` configuration in the container.
+- 需要运行调试时，需要先修改容器里 nginx 的配置
 
-  - Use **VS Code** to open the configuration file located at `/etc/nginx/conf.d/default.conf`.
+  - 用 vscode 打开配置文件 `/etc/nginx/conf.d/default.conf`
 
-- Modify the proxies for front-end and back-end testing.
+- 修改前后端测试的代理
 
     ```nginx
     location / {
@@ -79,7 +79,7 @@ npm run dev
     }
     ```
 
-    You can also configure the proxy for other services in project, as an example.
+也可以把项目中对其他服务的代理配置进去，例如：
 
     ```nginx
     location /api/logout {
@@ -92,15 +92,15 @@ npm run dev
         add_header X-Frame-Options SAMEORIGIN;
     }
     ```
-    The configuration is exactly the same as when running in Olares, and no further modifications are required.
+ 配置与正式在 os 里运行完全一样，无需特殊修改。
 
-- Reload Nginx after modification.
+- 修改完之后 reload nginx
 
 ```shell
 nginx -s reload
 ```
 
-- If you want to keep the `default.conf` of `nginx`, you can save it in either `/root/.config` or the code repository. Then, each time you restart the pod, go to VS Code Terminal and create a new soft link.
+- 如果希望 nginx 的 default.conf 也保留，可以在/root/.config，或者代码仓库保存一个 default.conf。然后每次重启 pod 之后，进入 vscode 的 Terminal，重建一个 soft link
 
 ```shell
 cd /etc/nginx/conf.d
@@ -109,7 +109,7 @@ ln -s /root/.config/default.conf
 
 nginx -s reload
 ```
-:::details Example of a complete `nginx.conf` file(Desktop as an example)
+:::details 完整 nginx.conf 参考（以 Desktop 为例）
 
 ```nginx
 server {
@@ -226,14 +226,14 @@ server {
 ```
 :::
 
-After the nginx proxy is activated, you can initiate the front-end and back-end services in the VS Code Terminal.
+nginx 代理生效后，即可在 vscode 的 Terminal 中启动前后端服务。
 
 ::: warning
-The service cannot be started on ports 80, 8080, and 3000.
+注意，服务不能启动在 80、8080、3000，这三个端口。
 :::
 
-## Preview
+## 预览
 
-After install the application, you can preview it by clicking on the app icon on the Olares.
+启动 debug 程序后，就可以在 Olares 前端，点击应用图标预览效果。
 
 ![preview](/images/developer/develop/contribute/system-app/install/end.jpg)

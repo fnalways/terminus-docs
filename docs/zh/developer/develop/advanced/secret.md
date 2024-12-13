@@ -2,11 +2,11 @@
 outline: [2, 3]
 ---
 
-# Secret
+# 密钥
 
-In an app, it's often necessary to save some important user information, such as `passwords` and `Access Tokens` for external systems. **Olares** provides a unified **Vault**, based on **Infisical**, to securely store various keys.
+在应用中，通常需要保存一些重要的用户信息，例如外部系统的“密码”和“访问令牌”。Olares 提供了一个统一的 Vault 安全存储各种密钥（基于 Infisical）。
 
-To retrieve this information, the app only needs a simple application for API access permission. This can be done by adding a `sysData` permission to the [OlaresManifest.yaml](../package/manifest.md#sysdata) in the application chart.
+应用只需要做简单的申请，即可获得接口访问权限。申请方式是在应用 Chart 的 [OlaresManifest.yaml](../package/manifest.md#sysdata) 中添加 `sysData` 权限，例如：
 
 ```yaml
 permission:
@@ -15,20 +15,20 @@ permission:
       group: secret.infisical
       version: v1
       ops:
-        - RetrieveSecret?workspace=your-app # Each app should define its own workspace
+        - RetrieveSecret?workspace=your-app # 每个应用申明自己独立的workspace
         - CreateSecret?workspace=your-app
         - DeleteSecret?workspace=your-app
         - UpdateSecret?workspace=your-app
         - ListSecret?workspace=your-app
 ```
 
-## Call API
+## 调用接口
 
-You can call the API in the same way you would request other providers. Use the full name of ops (including the workspace parameter) as the URI.
+你可以像请求其他 Provider 一样调用 API。使用 ops 的全名（包括 workspace 参数）作为 URI。
 
-Please include this **header** in all requests.
+调用接口时需要加入 header。
 ```http
-X-Authorization: token          # auth_token in cookie
+X-Authorization: <cookie 中的 auth_token>
 ```
 
 ### RetrieveSecret

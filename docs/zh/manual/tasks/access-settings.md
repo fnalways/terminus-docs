@@ -56,6 +56,6 @@ Olares will automatically verify the DNS record activation. Once verified, the c
 
 ::: tips
 To allow public access to your custom domain without login, update the access policies as below:
-1. Navigate to **Settings**>**Application**, and click the target application'
+1. Navigate to **Settings** > **Application**, and click the target application.
 2. Under **Create access policies**, set **Authentication level** to **Public**, and click **Submit**.
 :::

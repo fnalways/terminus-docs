@@ -2,13 +2,13 @@
 outline: [2, 3]
 ---
 
-# OlaresManifest Specification
+# OlaresManifest 规范
 
-Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the **Olares** depend on this information to distribute and install applications.
+每一个 Olares 应用的 Chart 根目录下都必须有一个 `OlaresManifest.yaml` 文件，且该文件名必须是 `OlaresManifest.yaml`。`OlaresManifest.yaml` 描述了一个 Olares 应用的所有基本信息。Olares 应用市场协议和 Olares 系统依赖这些关键信息来正确的分发和安装应用。
 
-Here's an example of what a `OlaresManifest.yaml` file might look like:
+一个 `OlaresManifest.yaml` 文件的示例如下：
 
-::: details OlaresManifest.yaml Example
+::: details `OlaresManifest.yaml` 示例
 
 ```Yaml
 olaresManifest.version: '0.7.0'
@@ -69,25 +69,25 @@ options:
 
 :::
 
-:::info NOTE
-Olares Manifest Version: `0.7.1`
+:::info 注意
+Olares Manifest 版本: `0.7.1`
 
-Changelog:
-- Add new `authLevel` value `internal`
-- Change `spec`>`language` to `spec`>`locale` and support i18n
+变更日志：
+- `authLevel` 添加新的值 `internal`
+- 将 `spec`>`language` 改为 `spec`>`locale` 并支持 i18n
 :::
 
 
 ## olaresManifest.type
 
-- Type: `string`
-- Accepted Value: `app`, `recommend`, `model`, `middleware`
+- 类型：`string`
+- 可选值： `app`、`recommend`、`model`、`middleware`
 
-Olares currently supports four types of applications, each requiring different fields. This document uses `app` as an example to explain each field. For information on other types, please refer to the corresponding configuration guide.
-- [Recommend Configuration Guide](recommend.md)
-- [Model Configuration Guide](model.md)
+Olares 目前支持四种类型的应用程序，每种类型需要不同的领域。本文档以 “app” 为例来解释各个字段。其他类型请参考相应的配置指南。
+- [推荐算法配置指南](recommend.md)
+- [模型配置指南](model.md)
 
-:::info Example
+:::info 配置示例
 ```Yaml
 olaresManifest.type: app
 ```
@@ -95,15 +95,15 @@ olaresManifest.type: app
 
 ## olaresManifest.version
 
-- Type: `string`
+- 类型：`string`
 
-As **Olares** evolves, the configuration specification of `OlaresManifest.yaml` may change. You can identify whether these changes will affect your application by checking the `olaresManifest.version`. The `olaresManifest.version` consists of three integers separated by periods. 
+随着 Olares 更新，`OlaresManifest.yaml` 的配置规范可能会发生变化。你可以通过检查 `olaresManifest.version` 来确定这些更改是否会影响您的应用程序。 `olaresManifest.version` 由三个用英文句点分隔的整数组成。
 
-- An increase in the **first digit** indicates the introduction of incompatible configuration items. Applications that haven't updated their `OlaresManifest.yaml` will be unable to distribute or install.
-- An increase in the **second digit** signifies changes in the mandatory fields for distribution and installation. However, the **Olares** remains compatible with the application distribution and installation of previous configuration versions. We recommend developers to promptly update and upgrade the application's `OlaresManifest.yaml` file.
-- A change in the **third digit** does not affect the application's distribution and installation.
+- 第 1 位数字增加意味着引入了不兼容的配置项，未升级对应 `OlaresManifest.yaml` 的应用将无法分发或安装。
+- 第 2 位数字增加意味着分发和安装必须字段存在变化，但 Olares 系统仍兼容之前所有版本配置的应用分发与安装。我们建议开发者尽快更新升级应用的 `OlaresManifest.yaml` 文件。
+- 第 3 位数字的改变，不影响应用分发和安装。
 
-Developers can use 1-3 digit version numbers to indicate the application's configuration version. Here are some examples of valid versions:
+开发者可以使用 1-3 位的版本号来标识该应用遵循的配置版本。以下是有效版本的一些示例：
 ```Yaml
 OlaresManifest.yaml.version: 1
 OlaresManifest.yaml.version: 1.1.0
@@ -111,9 +111,9 @@ OlaresManifest.yaml.version: '2.2'
 OlaresManifest.yaml.version: "3.0.122"
 ```
 
-## Metadata
+## 元数据
 
-:::info Example
+:::info 配置示例
 ```Yaml
 metadata:
   name: nextcloud
@@ -125,54 +125,52 @@ metadata:
   - Utilities
   - Productivity
 ```
-:::
 
 ### name
 
-- Type: `string`
+- 类型：`string`
 - Accepted Value: `[a-z][a-z0-9]?`
 
-App’s namespace in **Olares**, lowercase alphanumeric characters only. It can be up to 30 characters, and needs to be consistent with `FolderName` and `name` field in `Chart.yaml`.
+Olares 中的应用的命名空间，仅限小写字母数字字符。最多 30 个字符，需要与 `Chart.yaml` 中的 `FolderName` 和 `name` 字段保持一致。
 
 ### title
 
-- Type: `string`
+- 类型：`string`
 
-Your app title that appears in the **Olares Market**. It can be up to 30 characters.
+在应用市场中显示的应用标题。长度不超过 30 个字符。
 
 ### description
 
-- Type: `string`
+- 类型：`string`
 
-A short description appears below app title in the  **Olares Market**.
+Olares 应用市场中的应用名称下方显示的简短说明。
 
 ### icon
 
-- Type: `url`
+- 类型：`url`
 
-Your app icon that appears in the **Olares Market**.
+应用图标。
 
-The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a size of `256x256 px`.
+图标必须是 PNG 或 WEBP 格式文件，最大为 512 KB，大小为 256x256 px。
 
 ### version
 
-- Type: `string`
+- 类型：`string`
 
-The **Chart Version** of the application. It should be incremented each time the content in the **Chart** changes. It should follow the [Semantic Versioning 2.0.0](https://semver.org/) and needs to be consistent with the `version` field in `Chart.yaml`.
-
+应用的 Chart Version，每次改变 Chart 目录里的内容时应递增。需遵循[语义化版本规范](https://semver.org/)，需要与 `Chart.yaml` 中的 `version` 字段一致。
 
 ### categories
 
-- Type: `list<string>`
-- Accepted Value: `Blockchain`, `Utilities`, `Social Network`, `Entertainment`, `Productivity`
+- 类型： `list<string>`
+- 可选值： `Blockchain`、`Utilities`、`Social Network`、`Entertainment`、`Productivity`
 
-Used to display your app on different category page in **Olares Market**.
+在应用市场的哪个类别下展示应用。
 
 ## Entrances
 
-Specify how to access this app, at least 1 required. It is up to `10`.
+指定如何访问此应用，每个应用至少需要 1 个入口，至多 10 个。
 
-:::info Example
+:::info 示例
 ```Yaml
 entrances:
 - name: a
@@ -190,77 +188,77 @@ entrances:
 
 ### name
 
-- Type: `string`
+- 类型：`string`
 - Accepted Value: `[a-z]([-a-z0-9]*[a-z0-9])?`
-  
-  Name of the Entrance. It can be up to `63` characters, and needs to be unique in an app.
+
+  入口的名称，长度不超过 63 个字符。一个应用内不能重复。
 
 ### port
 
-- Type: `int`
-- Accepted Value: `0-65535`
+- 类型： `int`
+- 可选值： `0-65535`
 
 ### host
 
-- Type: `string`
-- Accepted Value: `[a-z]([-a-z0-9]*[a-z0-9])?`
-  
-  Ingress name of current entrance, lowercase alphanumeric characters and `-` only. It can be up to `63` characters.
+- 类型：`string`
+- 可选值： `[a-z]([-a-z0-9]*[a-z0-9])?`
+
+  当前入口的 Ingress 名称，只包含小写字母和数字和中划线`-`，长度不超过 63 个字符。
 
 ### title
 
-- Type: `string`
+- 类型：`string`
 
-Title that appears in the **Olares** desktop after installed. It can be up to `30` characters.
+安装后出现在 Olares 桌面上的名称。长度不超过 30 个字符。
 
 ### icon
 
-- Type: `url`
-- Optional
+- 类型： `url`
+- 可选
 
-Icon that appears in the **Olares** desktop after installed. The app's icon must be a `PNG` or `WEBP` format file, up to `512 KB`, with a size of `256x256 px`.
+安装后出现在 Olares 桌面上的图标。应用的图标必须是 PNG 或 WEBP 格式文件，最大 512 KB，大小为 256x256 像素。
 
 ### authLevel
 
-- Type: `string`
-- Accepted Value: `public`, `private`, `internal`
-- Default: `private`
-- Optional
+- 类型：`string`
+- 可选值： `public`、`private`
+- 默认： `private`
+- 可选
 
-Specify the authentication level of the entrance.
-- **Public**: Accessible by anyone on the Internet without restrictions.
-- **Private**: Requires authorization for access from both internal and external networks.
-- **Internal**: Requires authorization for access from external networks. No authentication is required when accessing from within the internal network (via LAN/VPN).
+指定入口的认证级别。
+- **Public**：互联网上的任何人都可以不受限制地访问。
+- **Private**：需要从内部和外部网络访问的授权。
+- **Internal**：需要授权才能从外部网络访问。从内部网络（通过 LAN/VPN）访问时不需要身份验证。
 
 ### invisible
 
-- Type: `boolean`
-- Default: `false`
-- Optional
+- 类型： `boolean`
+- 默认：`false`
+- 可选
 
-When `invisible` is `true`, the entrance will not be displayed on the **Olares** desktop.
+当 invisible 为` true` 时，该入口不会显示在 Olares 桌面上。
 
 ### openMethod
 
-- Type: `string`
-- Accepted Value: `default`, `iframe`, `window`
-- Default: `default`
-- Optional
+- 类型：`string`
+- 类型： `default | iframe | window`
+- 默认： `default`
+- 可选
 
-Explicitly defines how to open this entrance in Desktop.
+显式定义了如何在桌面中打开该入口。
 
-The `iframe` creates a new window within the desktop window through an iframe. The `window` opens a new tab in the browser. The `default` follows the system setting, which is `iframe` by default.
+`iframe` 代表在桌面的窗口内通过 iframe 新建一个窗口，`window` 代表在浏览器新的 Tab 页打开。`default` 代表跟随系统的默认选择，系统默认的选择是`iframe`。
 
 ### windowPushState
-- Type: `boolean`
-- Default: `false`
-- Optional
+- 类型： `boolean`
+- 默认：`false`
+- 可选
 
-When embedding the application in an iframe on the desktop, the application's URL may change dynamically. Due to browser's same-origin policy, the desktop (parent window) cannot directly detect these changes in the iframe URL. Consequently, if you reopen the application tab, it will display the initial URL instead of the updated one.
+将应用嵌入到桌面上的 iframe 中时，应用的 URL 可能会动态更改。由于浏览器的同源策略，桌面（父窗口）无法直接检测到 iframe URL 中的这些变化。因此，如果你重新打开应用程序选项卡，它将显示初始 URL，而不是更新后的 URL。
 
-To ensure a seamless user experience, you can enable this option by setting it to true. This action prompts the gateway to automatically inject the following code into the iframe. This code sends an event to the parent window (desktop) whenever the iframe's URL changes. As a result, the desktop can track URL changes and open the correct page.
+为了确保无缝的用户体验，你可以通过将其设置为 true 来启用此选项。此操作会提示网关自动将以下代码注入到 iframe 中。每当 iframe 的 URL 发生更改时，此代码都会向父窗口（桌面）发送一个事件。因此，桌面可以跟踪 URL 更改并打开正确的页面。
 
-::: details Code
+::: details 代码
 ```Javascript
 <script>
   (function () {
@@ -286,53 +284,53 @@ To ensure a seamless user experience, you can enable this option by setting it t
 
 ## permission
 
-:::info Example
+:::info 示例
 ```Yaml
 permission:
   appCache: true
   appData: true
   userData:
-  - /Home/  
+    - /Home/
   sysData:
-  - dataType: legacy_prowlarr
-    appName: prowlarr
-    port: 9696
-    group: api.prowlarr
-    version: v2
-    ops:
-    - All
+    - dataType: legacy_prowlarr
+      appName: prowlarr
+      port: 9696
+      group: api.prowlarr
+      version: v2
+      ops:
+        - All
 ```
 :::
 
 ### appCache
 
-- Type: `boolean`
-- Optional
+- 类型： `boolean`
+- 可选
 
-Whether the app requires read and write permission to the `Cache` folder. If `.Values.userspace.appCache` is used in the deployment YAML, then `appCache` must be set to `true`.
+是否需要在 Cache 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appCache`, 则 appCache 必须为 `true`。
 
 ### appData
 
-- Type: `boolean`
-- Optional
+- 类型： `boolean`
+- 可选
 
-Whether the app requires read and write permission to the `Data` folder. If `.Values.userspace.appData` is used in the deployment YAML, then `appData` must be set to `true`.
+是否需要在 Data 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appData`, 则 appData 必须为 `true`。
 
 ### userData
 
-- Type: `list<string>`
-- Optional
+- 类型：`string`
+- 可选
 
-Whether the app requires read and write permission to user's `Home` folder. List all directories that the application needs to access under the user's `Home`. All `userData` directory configured in the deployment YAML, must be included here.
+应用是否需要对用户的 `Home` 文件夹进行读写权限。列出应用需要访问的用户 `Home` 下的所有目录。部署 YAML 中配置的所有 `userData` 目录都必须包含在此处。
 
 ### sysData
 
-- Type: `list<map>`
-- Optional
+- 类型：`list<map>`
+- 可选
 
-Declare the list of APIs that this app needs to access.
+声明该应用程序需要访问的 API 列表。
 
-:::info Example
+:::info 示例
 ```Yaml
   sysData:
   - group: service.bfl
@@ -350,11 +348,11 @@ Declare the list of APIs that this app needs to access.
 ```
 :::
 
-All system API [providers](../advanced/provider.md) are list below:
+所有系统 API [providers](../advanced/provider.md) 如下：
 | Group | version | dataType | ops |
 | ----------- | ----------- | ----------- | ----------- |
 | service.appstore | v1 | app | InstallDevApp, UninstallDevApp
-| message-dispatcher.system-server | v1 | event | Create, List
+| message-disptahcer.system-server | v1 | event | Create, List
 | service.desktop | v1 | ai_message | AIMessage
 | service.did | v1 | did | ResolveByDID, ResolveByName, Verify
 | api.intent | v1 | legacy_api | POST
@@ -367,22 +365,22 @@ All system API [providers](../advanced/provider.md) are list below:
 | secret.vault | v1 | key | List, Info, Sign
 
 ## spec
-> Additional information about the application, primarily used for display in the **Olares Market**.
+记录额外的应用信息，主要用于应用商店的展示。
 
-:::info Example
+:::info 示例
 ```Yaml
 spec:
   namespace: os-system 
-  # optional. Install the app to a specified namespace, e.g. os-system, user-space, user-system
+  # 可选。将应用安装到指定的命名空间，如 os-system、user-space 和 user-system
   
   onlyAdmin:  true 
-  # optional. When set to true, only the admin can install this app.
+  # 可选。 设置为 true 时，只有管理员可以安装此应用程序。
   
   versionName: '10.8.11' 
-  # The version of the application that this chart contains. It is recommended to enclose the version number in quotes. This value corresponds to the appVersion field in the `Chart.yaml` file. Note that it is not related to the `version` field.
+  ## 此 Chart 包含的应用程序的版本。建议将版本号括在引号中。该值对应于 Chart.yaml 文件中的 appVersion 字段。请注意，它与 version 字段无关。
 
   featuredImage: https://file.bttcdn.com/appstore/jellyfin/promote_image_1.jpg
-  # The featured image is displayed when the app is featured in the Market.
+  # 当应用在应用市场上推荐时，会显示特色图像。
 
   promoteImage:
   - https://file.bttcdn.com/appstore/jellyfin/promote_image_1.jpg
@@ -400,17 +398,17 @@ spec:
   locale:
   - en-US
   - zh-CN
-  # List languages and regions supported by this app
+  # 列出该应用支持的语言和地区
 
-requiredMemory: 256Mi
+  requiredMemory: 256Mi
   requiredDisk: 128Mi
   requiredCpu: 0.5
-  # Specifies the minimum resources required to install and run the application. Once the app is installed, the system will reserve these resources to ensure optimal performance.
+  # 指定安装和运行应用所需的最少资源。安装应用后，系统将保留这些资源以确保最佳性能。
 
   limitedDisk: 256Mi
   limitedCpu: 1
   limitedMemory: 512Mi
-  # Specifies the maximum resource limits for the application. If the app exceeds these limits, it will be temporarily suspended to prevent system overload and ensure stability.
+  # 指定应用的最大资源限制。如果应用超出这些限制，它将暂时暂停，以防止系统过载并确保稳定性。
 
   legal:
   - text: Community Standards
@@ -428,14 +426,14 @@ requiredMemory: 256Mi
 
 ### i18n 
 
-To add multi-language support for your app in Olares Market:
+要在 Olares 应用市场中为应用添加多语言支持：
 
-1. Create an `i18n` folder in the Olares Application Chart root directory.
-2. In the `i18n` folder, create separate subdirectories for each supported locale.
-3. In each locale subdirectory, place a localized version of the `OlaresManifest.yaml` file.
+1. 在 Olares Application Chart 根目录中创建一个 `i18n` 文件夹。
+2. 在 `i18n` 文件夹中，为每个支持的语言环境创建单独的子目录。
+3. 在每个语言环境子目录中，放置 `OlaresManifest.yaml` 文件的本地化版本。
 
-Olares Market will automatically display the content of the corresponding "OlaresManifest.yaml" file based on users' locale settings.
-:::info Example
+Olares 应用市场将根据用户的区域设置自动显示相应的 `OlaresManifest.yaml` 文件的内容。
+:::info 示例
 ```
 .
 ├── Chart.yaml
@@ -452,7 +450,7 @@ Olares Market will automatically display the content of the corresponding "Olare
 └── values.yaml
 ```
 :::
-Currently, you can add i18n content for the following fields:
+目前，你可以为以下字段添加 i18n 内容：
 ```Yaml
 metadata:
   description:
@@ -466,14 +464,14 @@ spec:
 
 ## middleware
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-The **Olares** provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add required middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
+系统提供了高可用的中间件服务，开发者无需重复安装中间件，只需在此填写对应的中间件信息即可，然后可以直接使用应用程序的 deployment YAML 文件中相应的中间件信息。
 
-Use the `scripts` field to specify scripts that should be executed after the database is created. Additionally, use the `extension` field to add the corresponding extension in the  database.
+使用 `scripts` 字段指定创建数据库后应执行的脚本。此外，使用 `extension` 字段在数据库中添加相应的扩展名。
 
-:::info Example
+:::info 示例
 ```Yaml
 middleware:
   postgres:
@@ -488,7 +486,7 @@ middleware:
       - ALTER DATABASE $databasename SET search_path TO "$user", public, vectors;
       - ALTER SCHEMA vectors OWNER TO $dbusername;
       - COMMIT;
-      # The OS provides two variables, $databasename and $dbusername, which will be replaced by TAPR when the command is executed.
+      # 操作系统提供了两个变量 $databasename 和 $dbusername，命令执行时会被 Olares 应用运行时替换。
   redis:
     password: password
     namespace: db0
@@ -498,14 +496,14 @@ middleware:
     - name: chromium
       script:
       - 'db.getSiblingDB("$databasename").myCollection.insertOne({ x: 111 });'
-      # Please make sure each line is a complete query.
+      # 请确保每一行都是完整的查询。
 ```
 :::
 
-Use the middleware information in deployment YAML
+使用 deployment YAML 中的中间件信息：
 
 ```yaml
-- name: DB_POSTGRESDB_DATABASE # The database name you configured in OlaresManifest, specified in middleware.postgres.databases[i].name
+- name: DB_POSTGRESDB_DATABASE # 你在 OlaresManifest 中配置的数据库名称，在 middleware.postgres.databases[i].name 中指定
   value: {{ .Values.postgres.databases.<dbname> }}
 - name: DB_POSTGRESDB_HOST
   value: {{ .Values.postgres.host }}
@@ -517,16 +515,16 @@ Use the middleware information in deployment YAML
   value: {{ .Values.postgres.password }}
 
 
-# For mongodb, the corresponding value is as follow
+# 对于mongodb来说，对应的值如下
 host --> {{ .Values.mongodb.host }}
-port --> "{{ .Values.mongodb.port }}"  # The port and password in the yaml file need to be enclosed in double quotes.
+port --> "{{ .Values.mongodb.port }}"  # yaml 文件中的端口和密码需要用双引号括起来。
 username --> {{ .Values.mongodb.username }}
-password --> "{{ .Values.mongodb.password }}" # The port and password in the yaml file need to be enclosed in double quotes.
-databases --> "{{ .Values.mongodb.databases }}" # The value type of database is a map. You can get the database using {{ .Values.mongodb.databases.<dbname> }}. The <dbname> is the name you configured in OlaresManifest, specified in middleware.mongodb.databases[i].name
+password --> "{{ .Values.mongodb.password }}" # yaml 文件中的端口和密码需要用双引号括起来。
+databases --> "{{ .Values.mongodb.databases }}" # 数据库的值类型是 map。你可以使用 {{ .Values.mongodb.databases.<dbname> }} 获取数据库。 <dbname> 是你在 OlaresManifest 中配置的名称，在 middleware.mongodb.databases[i].name 中指定
 
 
-# For Redis, the corresponding value is as follow
-host --> {{ .Values.redis.host }}
+      # 对于Redis来说，对应的值如下
+host --> {{ .Values.redis.host }}For Redis, the corresponding value is as follow
 port --> "{{ .Values.redis.port }}"
 password --> "{{ .Values.redis.password }}"
 
@@ -534,16 +532,16 @@ password --> "{{ .Values.redis.password }}"
 
 ## options
 
-> Configure system-related options here
+在此部分配置系统相关的选项。
 
 ### policies
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-Define detailed access control for subdomains of the app.
+定义应用子域的详细访问控制。
 
-:::info Example
+:::info 示例
 ```yaml
 options:
   policies:
@@ -557,12 +555,12 @@ options:
 
 ### clusterScoped
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-Whether this app is installed for all users in a **Olares** cluster.
+是否为 Olares 集群中的所有用户安装此应用程序。
 
-:::info Example For Server
+:::info 服务器端示例
 ```yaml
 metadata:
   name: gitlab
@@ -570,12 +568,12 @@ options:
   appScope:
     clusterScoped: true
     appRef:
-      - gitlabclienta #app name of clients
+      - gitlabclienta # 客户端的应用名称
       - gitlabclientb
 ```
 :::
 
-:::info Example For Client
+:::info 客户端示例
 ```yaml
 metadata:
   name: gitlabclienta
@@ -584,7 +582,7 @@ options:
     - name: olares
       version: ">=0.3.6-0"
       type: system
-    - name: gitlab #app name of server
+    - name: gitlab # 服务器端的应用名称
       version: ">=0.0.1"
       type: application
 ```
@@ -592,10 +590,10 @@ options:
 
 ### analytics
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-Enable website analytics for the app.
+为应用启用网站分析功能。
 
 :::info Example
 ```yaml
@@ -607,11 +605,11 @@ options:
 
 ### dependencies
 
-- Type: `list<map>`
+- 类型：`list<map>`
 
-Specify the dependencies and requirements for your application. It includes other applications that your app depends on, as well as any specific operating system (OS) version requirements.
+如果你的应用依赖于其他应用或需要特定操作系统版本，请在此处指定。
 
-:::info Example
+:::info 示例
 ```yaml
 options:
   dependencies:
@@ -626,12 +624,12 @@ options:
 
 ### websocket
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information.
+为应用启用 websocket。请参阅 [websocket](../advanced/websocket.md) 了解更多信息。
 
-:::info Example
+:::info 示例
 ```yaml
 options:
   websocket:
@@ -642,13 +640,12 @@ options:
 
 ### resetCookie
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information
+如果应用需要 cookie，请启用此功能。更多信息请参考 [cookie](../advanced/cookie.md)。
 
-
-:::info Example
+:::info 示例
 ```yaml
 options:
   resetCookie:
@@ -658,33 +655,33 @@ options:
 
 ### upload
 
-- Optional
-- Type: `map`
+- 可选
+- 类型： `map`
 
-The Olares Application Runtime (TAPR) includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
+Olares 应用运行时包含一个内置文件上传组件，旨在简化应用程序中的文件上传过程。请参阅 [上传](../advanced/file-upload.md) 了解更多信息。
 
 :::info Example
 ```yaml
 upload:
-  # The types of files that are allowed to be uploaded, * stands for any type, The type of the uploaded file must be in the list.
+  # 允许上传的文件类型，*为任意类型， 上传时会指定 file_type，必须在允许的文件类型中
   fileType:
     - pdf
-  # The path of 'dest' must be a mountPath
+  # dest 的路径必须为某一个 mountPath
   dest: /appdata
-  # The maximum size of file, in bytes
+  # 文件上传的最大大小，单位为字节
   limitedSize: 3729747942
 ```
 :::
 
 ### mobileSupported
 
-- Optional
-- Type: `boolean`
-- Default: `false`
+- 可选
+- 类型： `boolean`
+- 默认： `false`
 
-Determine whether the application is compatible with mobile web browsers and can be displayed on the mobile version of Olares Desktop. Enable this option if the app is optimized for mobile web browsers. This will make the app visible and accessible on the mobile version of Olares Desktop.
+确定应用是否与移动网络浏览器兼容并且可以在移动版本的 Olares 桌面上显示。如果应用程序针对移动网络浏览器进行了优化，请启用此选项。这将使该应用程序在移动版 Olares 桌面上可见并可访问。
 
-:::info Example
+:::info 示例
 ```yaml
 mobileSupported: true
 ```
@@ -692,18 +689,18 @@ mobileSupported: true
 
 ### oidc
 
-- Optional
-- Type: `map`
+- 可选
+- 类型：`map`
 
-The Olares includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
+Olares 包含内置的 OpenID Connect 身份验证组件，以简化用户的身份验证。启用此选项可在你的应用中使用 OpenID。
 ```yaml
-# OpenID related varibles in yaml
+# yaml 中 OpenID 相关变量
 {{ .Values.oidc.client.id }}
 {{ .Values.oidc.client.secret }}
 {{ .Values.oidc.issuer }}
 ```
 
-:::info Example
+:::info 示例
 ```yaml
 oidc:
   enabled: true
@@ -713,12 +710,12 @@ oidc:
 :::
 
 ### apiTimeout
-- Optional
-- Type: `int`
+- 可选
+- 类型：`int`
 
-Specifies the timeout limit for API providers in seconds. The default value is `15`. Use `0` to allow an unlimited API connection.
+指定 API 提供程序的超时限制（以秒为单位）。默认值为 `15`。使用 `0` 允许无限制的 API 连接。
 
-:::info Example
+:::info 示例
 ```yaml
 apiTimeout: 0
 ```

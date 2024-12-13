@@ -1,15 +1,15 @@
-# Database
+# 数据库
 
-The Olares system provides three most popular data storage cluster for all APPs, covering `RDS`, `NoSQL`, and `Cache` data storage use cases.
+Olares 系统中为所有应用提供了三种最流行的数据存储集群，覆盖 RDS、NoSQL、Cache 三种数据存储场景。
 
 ## RDS
 
-The system has deployed **PostgreSQL** and provides two types of databases.
+系统部署了 PostgreSQL，并且提供两种模式的数据库。
 
-- **Standalone PostgreSQL**, providing the most commonly used `RDS` database layer functions.
-- **Distributed PostgreSQL** extension, powered by **Citus**. Provides the ability to horizontally scale the database.
+- 单机模式的 PostgreSQL，提供最常用的 RDS 数据库层的功能。
+- 分布式 PostgreSQL 扩展，Citus。提供数据库的分布式横向扩展能力。
 
-When setting up a **PostgreSQL** database, you can specify the type of database to be used in [OlaresManifest.yaml](../package/manifest.md#middleware).
+应用在设置数据库申请的时候，可以快速指定要采用数据库类型。
 
 ```yaml
 middleware:
@@ -17,16 +17,16 @@ postgres:
   username: postgres
   databases:
     - name: db
-      distributed: true # Whether the database is distributed in the cluster.
+      distributed: true # 是否需要分布式数据库
 ```
 
-If you use **Citus**, **Olares** will automatically shard the database tables and perform rebalancing during the horizontal scaling of **PostgreSQL** replicas.
+当应用选用了 Citus，在系统对 PostgreSQL 做横向扩展副本时，会自动将数据库表做 sharding，并且执行 rebalance。
 
 ## NoSQL
 
-The NoSQL cluster is not deployed by default in Olares, but it can be easily installed from the Market. To set up a NoSQL cluster, the administrator needs to install the [**MongoDB**](https://market.olares.xyz/middleware/mongodb) middleware. Once installed, the [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) automatically manages the **MongoDB** cluster. Users can then horizontally scale **MongoDB** cluster replicas, as well as perform backup and restore operations on databases.
+Olares 中默认未部署 NoSQL 集群，但可以从应用市场中安装。要设置 NoSQL 集群，管理员需要安装 [**MongoDB**](https://market.olares.xyz/middleware/mongodb) 中间件。 安装后，[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) 会自动管理 **MongoDB** 集群。然后，用户可以水平扩展 **MongoDB** 集群副本，以及对数据库执行备份和恢复操作。
 
-You can specify detailed configuration for MongoDB in [OlaresManifest.yaml](../package/manifest.md#middleware) as follows:
+你可以在 [OlaresManifest.yaml](../package/manifest.md#middleware) 中指定 MongoDB 的详细配置，如下所示：
 
 ```yaml
 middleware:
@@ -47,12 +47,11 @@ options:
 
 ## Cache
 
-In terms of the Cache cluster, Olares uses Redis Cluster. The cluster is managed by a customized [Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator) to achieve cloud nativeness. It enables us to scale replicas horizontally in a convenient and effective manner.
+在 Cache 的集群方面，Olares 选用了 Redis Cluster。并通过定制化的[Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator) 对集群进行管理，实现其云原生化。可以做到很方便简单的横向副本扩展。
 
+同时，为了保证 Redis 集群数据，用户与用户之间，应用与应用之间数据隔离无干扰，系统还增加了一个 Redis 集群代理，实现数据的`命名空间`隔离，并且对应用开发者来说，完全无感知，无需关心。
 
-To ensure **data isolation** between users and apps in the **Redis cluster**, the **Olares** system has added a **Redis cluster proxy**. It isolates data based on the `namespace`. This operation is transparent, meaning app developers typically do not need to be aware of it.
-
-Additionally, this proxy simplifies the process of connecting to clusters. It eliminates the need to switch from a **standalone Redis Client** to a **Redis Cluster client** in the app, thus simplifying app code modifications.
+此外，这个集群代理还提供方便的集群连接功能，在应用中无需移植单例版的 Redis Client 到 Redis Cluster client。大大的简化了应用的代码修改工作。
 
 ```
 middleware:
@@ -60,6 +59,6 @@ middleware:
     password: password
     namespace: db0
 ```
-:::info NOTE
-Since Olares uses the Redis Cluster version, developers need to understand the usage restrictions of Redis Cluster in detail when using it.
+:::info 注意
+由于 Olares 采用的是 Redis Cluster 版本，所以开发者在使用时需详细了解 Redis Cluster 的使用限制。
 :::

@@ -2,7 +2,7 @@
 
 ## Permission
 
-If you need to access the interface of `provider`, you can add following content in the `permissions` section of the `OlaresManifest.yaml` file.
+如果需要调用 provider 的接口，可修改 OlaresManifest.yaml 文件，在 permissions 下增加:
 ```Yaml
 permission:
   sysData:
@@ -13,25 +13,25 @@ permission:
     - InstallDevApp
 ```
 
-## Reference variable in env
+## env 引用变量
 
-You can reference the variable in the `env` section of the `deployment.yaml` file.
+你可以在 `deployment.yaml` 文件的 `env` 部分引用该变量。
 
 ```Yaml
 env:
   - name: OS_APP_KEY
-    value: {{ .Values.os.appKey }}   # Please note, you need to replace it with .Values.os.desktop.appKey when submit to the install wizard.
+    value: {{ .Values.os.appKey }}   # 注意这个地方在提交 install wizard 时需要修改成 .Values.os.desktop.appKey
   - name: OS_APP_SECRET
-    value: {{ .Values.os.appSecret }} # Please note, you need to replace it with .Values.os.desktop.appSecret when submit to the install wizard.
+    value: {{ .Values.os.appSecret }} # 注意这个地方在提交 install wizard 时需要修改成 .Values.os.desktop.appSecret
   - name: OS_SYSTEM_SERVER
     value: system-server.user-system-{{ .Values.bfl.username }}
 ```
 
 ---
-:::details Example of a complete `OlaresManifest.yaml` file
+:::details 完整 OlaresManifest.yaml 例子
 ```Yaml
-olaresManifest.version: 1
-olaresManifest.type: app
+terminusManifest.version: v1
+terminusManifest.type: app
 metadata:
   name: desktop
   icon: https://file.bttcdn.com/appstore/default/defaulticon.webp

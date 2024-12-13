@@ -14,7 +14,7 @@ The system will set two cookies after login
 
 To prevent cookie conflicts, **no application** (whether it's a built-in system app or a third-party app) can set cookies to the user's domain. Cookies can only be set to the domain of the app.
 
-Every application in **Olares** operates under two domains: <`app id>.<username>.olares.com` and `<app id>.local.<username>.olares.com`. As a result, Olares incorporates a cookie-setting `rewrite` mechanism within the `TAPR (Olares Application Runtime)`. This ensures that the application automatically assigns cookies for both domains in the Set-`Cookie` field of the **HTTP response**.
+Every application in **Olares** operates under two domains: <`app id>.<username>.olares.com` and `<app id>.local.<username>.olares.com`. As a result, Olares incorporates a cookie-setting `rewrite` mechanism within the Olares Application Runtime. This ensures that the application automatically assigns cookies for both domains in the Set-`Cookie` field of the **HTTP response**.
 
 To use this feature, you just need to define it in the application chart's [OlaresManifest.yaml](../package/manifest.md#resetcookie)
 

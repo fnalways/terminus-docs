@@ -4,21 +4,21 @@ outline: [2, 3]
 
 # AI
 
-## API Prefix
+## API 前缀
 
 `agent.{username}.olares.com/api/controllers/console/api`
 
-## Basic Application Management API
-### Get App List
+## 基本应用管理 API
+### 获取 App 列表
 - **Request**
   - **URL**: `/apps`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps?page=1&limit=30&name=Ashia`
+  - **URL Parameters**: `/apps?page=1&limit=30&name=Ashia`
   :::tip
-  Most of the APIs listed in this document require the `app_id`, which can be obtained from the response of this API.
+    本文档中列出的大多数 API 都需要`app_id`，可以从该 API 的 Response 中获取该`app_id`。
   :::
 
-### Create App
+### 创建应用
 - **Request**
   - **URL**: `/apps`
   - **Method**: `POST`
@@ -33,19 +33,19 @@ outline: [2, 3]
     }
     ```
 
-### Get App Details
+### 获取应用细节
 - **Request**
   - **URL**: `/apps/{uuid:app_id}`
   - **Method**: `GET`
   - **Body Example**: `null`
 
-### Delete App
+### 删除应用
 - **Request**
   - **URL**: `/apps/{uuid:app_id}`
   - **Method**: `DELETE`
   - **Body Example**: `null`
 
-### Copy App
+### 复制应用
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/copy`
   - **Method**: `POST`
@@ -59,7 +59,7 @@ outline: [2, 3]
     }
     ```
 
-### Rename App
+### 应用重命名
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/name`
   - **Method**: `POST`
@@ -70,7 +70,7 @@ outline: [2, 3]
     }
     ```
 
-### Change App Icon
+### 修改应用图标
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/icon`
   - **Method**: `POST`
@@ -81,8 +81,8 @@ outline: [2, 3]
     }
     ```
 
-### App Web Access Control
-> Whether the app can be accessed from the site.
+### 应用网页访问控制
+> 调整应用是否可网页访问。
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/site-enable`
   - **Method**: `POST`
@@ -93,8 +93,8 @@ outline: [2, 3]
     }
     ```
 
-### App API Access Control
-> Whether the app can be accessed via API.
+### 应用 API 访问控制
+> 调整应用是否可 API 访问
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/api-enable`
   - **Method**: `POST`
@@ -105,9 +105,9 @@ outline: [2, 3]
     }
     ```
 
-## Application Function API
-### Text Generation
-> Execution interface for text generation APP
+## 应用 Function API
+### 文本生成
+> 文本生成型应用的执行接口
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-messages`
   - **Method**: `POST`
@@ -196,18 +196,18 @@ outline: [2, 3]
     ```
     :::
 
-### Stop Text Generation
-> Interruption interface for text generation APP
+## 文本生成停止
+> 文本生成型应用执行中断任务接口
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-messages/{string:task_id}/stop`
   - **Method**: `POST`
   - **Body Example**: `null`
   :::tip
-  The `task_id` required in this API can be obtained from the response (streaming) of the [Text Generation](#text-generation) API.
+  该 API 中所需的 `task_id` 可以从[文本生成](#文本生成) API 的 Response（流式传输）中获取。
   :::
 
-### Chat
-> Execution interface for chat APP
+## 聊天
+> 聊天型应用的执行接口
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-messages`
   - **Method**: `POST`
@@ -295,79 +295,79 @@ outline: [2, 3]
     :::
 
 
-### Stop Chat
-> Interruption interface for chat APP
+## 聊天停止
+> 聊天型应用执行中断任务接口
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-messages/{string:task_id}/stop`
   - **Method**: `POST`
   - **Body Example**: `null`
   :::tip
-  The `task_id` required in this API can be obtained from the response (streaming) of the [Chat](#chat) API.
+  该 API 中所需的 `task_id` 可以从[聊天](#聊天) API 的 Response（流式传输）中获取。
   :::
 
-### Get Conversations List (Text Generation) 
+### 获取会话列表（文本生成）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/completion-conversations?page=1&limit=30`
+  - **URL Parameters**: `/apps/{uuid:app_id}/completion-conversations?page=1&limit=30`
   :::tip
-  the Conversations (Text Generation) APIs listed below require the `conversation_id`, which can be obtained from the response of this API.
+  下面列出的会话（文本生成）API 需要 `conversation_id`，可以从该 API 的 Response 中获取。
   :::
 
-### Get Conversations Details (Text Generation) 
+### 获取会话细节（文本生成）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-conversations/{uuid:conversation_id}`
   - **Method**: `GET`
   - **Body Example**: `null`
   :::tip
-  The Conversations (Text Generation) APIs listed below require the `message_id`, which can be obtained from the response of this API.
+  下面列出的会话（文本生成）API 需要 `message_id`，可以从该 API 的 Response 中获取。
   :::
 
-### Delete Conversations Details (Text Generation)
+### 删除会话细节（文本生成）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/completion-conversations/{uuid:conversation_id}`
   - **Method**: `DELETE`
   - **Body Example**: `null`
 
-### Get Conversations List (Chat)
+### 获取会话列表（聊天）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/chat-conversations?page=1&limit=30`
+  - **URL Parameters**: `/apps/{uuid:app_id}/chat-conversations?page=1&limit=30`
   :::tip
-  the Conversations (Chat) APIs listed below require the `conversation_id`, which can be obtained from the response of this API.
+  下面列出的会话（聊天）API 需要 `conversation_id`，可以从该 API 的 Response 中获取。
   :::
 
-### Get Conversations Details (Chat)
+### 获取会话细节（聊天）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-conversations/{uuid:conversation_id}`
   - **Method**: `GET`
   - **Body Example**: `null`
   :::tip
-  The Conversations (Chat) APIs listed below require the `message_id`, which can be obtained from the response of this API.
+  下面列出的会话（对话）API 需要 `message_id`，可以从该 API 的 Response 中获取。
   :::
 
-### Delete Conversations Details (Chat)
+### 删除会话细节（聊天）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-conversations/{uuid:conversation_id}`
   - **Method**: `DELETE`
   - **Body Example**: `null`
 
-### Get Suggested Questions (Chat)
-> In a chat APP, get the suggested questions that can be asked after the AI gives a response
+### 推荐问题（聊天）
+> 在对话型应用中，获取 AI 给出回复后可以提出的建议问题
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-messages/{uuid:message_id}/suggested-questions`
   - **Method**: `GET`
   - **Body Example**: `null`
 
-### Get Message List (Chat)
+### 获取消息列表（聊天）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/chat-messages`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/chat-messages?conversation_id={conversation_id}`
+  - **URL Parameters**: `/apps/{uuid:app_id}/chat-messages?conversation_id={conversation_id}`
 
-### Message Feedback
-> Give like or dislike feedback to the message from the APP
+### 消息反馈
+> 对应用消息反馈喜欢或不喜欢
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/feedbacks`
   - **Method**: `POST`
@@ -378,8 +378,8 @@ outline: [2, 3]
     }
     ```
 
-### Message Annotation
-> Give annotation to the message from the APP (Text Generation)
+### 消息标注
+> 对来自应用的消息进行标注（文本生成）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/annotations`
   - **Method**: `POST`
@@ -392,23 +392,23 @@ outline: [2, 3]
     }
     ```
 
-### Count Annotation
-> Get the current number of annotations of the APP's message
+### 消息标注统计
+> 获取应用当前消息的注释条数
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/annotations/count`
   - **Method**: `GET`
   - **Body Example**: `null`
 
 
-### Get Message Details (Chat)
+### 获取消息细节（聊天）
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/messages/{uuid:message_id}`
   - **Method**: `GET`
   - **Body Example**: `null`
 
-## Advanced Application Management API
+## 高级应用管理 API
 
-### Model Config
+### 模型配置
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/model-config`
   - **Method**: `POST`
@@ -483,7 +483,7 @@ outline: [2, 3]
     ```
     :::
 
-### Change APP Basic Info
+### 修改应用基本信息
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/site`
   - **Method**: `POST`
@@ -496,52 +496,52 @@ outline: [2, 3]
       "description": "How do you do~"
     }
     ```
-### Access Token Reset
-> Regenerate the public access URL for the APP
+### 重新生成公开访问的 URL
+> 重新生成应用的公共访问 URL
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/site/access-token-reset`
   - **Method**: `POST`
   - **Body Example**: `null`
 
-## Application Statistics API    
-### All Conversations
+## 应用统计 API
+### 全部消息数统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/daily-conversations`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/daily-conversations?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/daily-conversations?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### Active Users
+### 活跃用户统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/daily-end-users`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/daily-end-users?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/daily-end-users?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### Token Costs
+### 费用消耗统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/token-costs`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/token-costs?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/token-costs?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### Average Session Interactions
+### 平均会话互动数统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/average-session-interactions`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/average-session-interactions?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/average-session-interactions?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### User Satisfaction
+### 用户满意度统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/user-satisfaction-rate?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### Average Response Time
+### 平均响应时间统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/average-response-time`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/average-response-time?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/average-response-time?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
 
-### Token Output Speed
+### Token 输出速度统计
 - **Request**
   - **URL**: `/apps/{uuid:app_id}/statistics/tokens-per-second`
   - **Method**: `GET`
-  - **Url Parameters**: `/apps/{uuid:app_id}/statistics/tokens-per-second?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`
+  - **URL Parameters**: `/apps/{uuid:app_id}/statistics/tokens-per-second?start=2024-04-19%2016%3A28&end=2024-04-26%2016%3A28`

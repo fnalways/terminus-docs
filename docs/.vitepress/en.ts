@@ -393,8 +393,8 @@ const side = {
           collapsed: true,
           items: [
             {
-              text: "Olares Info",
-              link: "/developer/develop/advanced/olares-info",
+              text: "terminus-info",
+              link: "/developer/develop/advanced/terminus-info",
             },
             {
               text: "Service Provider",
