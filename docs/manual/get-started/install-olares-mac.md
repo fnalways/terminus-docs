@@ -18,7 +18,7 @@ Make sure your Mac meets the following requirements.
 
 ## Before you begin
 Ensure you have the following installed:
-- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
     ::: tip
     It's recommended to install via `homebrew`.
