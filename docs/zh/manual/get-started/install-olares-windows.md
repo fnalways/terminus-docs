@@ -57,8 +57,8 @@ bash olares-uninstall.sh
 安装过程结束时，系统会要求输入域名和 Olares ID：
 1. 输入 root 用户密码。
    ![Enter password](/images/manual/get-started/enter-root-user-password.png)
-2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.com` 为例：
-    - **Domain name**：按下回车将直接使用默认域名（olares.com）。
+2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.cn` 为例：
+    - **Domain name**：按下回车将直接使用默认域名（olares.cn）。
     - **Olares ID**：输入 ID 前缀，即 `alice123`。
 
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)

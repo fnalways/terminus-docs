@@ -57,8 +57,8 @@ bash olares-uninstall.sh
 
 在安装过程结束时，你需要提供下列信息：
 1. 检查 Mac 的 IP 地址（例如，`192.168.x.x`）。如果自动获取的 IP 地址正确，请按 `Y` 确认。如果需要修改，请按 `R` 并输入正确的地址。
-2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.com` 为例：
-    - **Domain name**：按下回车将直接使用默认域名（olares.com）。
+2. 依次输入域名和 Olares ID。 以 Olares ID 为 `alice123@olares.cn` 为例：
+    - **Domain name**：按下回车将直接使用默认域名（olares.cn）。
     - **Olares ID**：输入 ID 前缀，即 `alice123`。
 
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
