@@ -26,7 +26,7 @@ Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows
 执行以下命令:
 
  ```bash
- curl -fsSL https://olares.sh |  bash -
+ curl -fsSL https://cn.olares.sh |  bash -
  ```
 
 :::info

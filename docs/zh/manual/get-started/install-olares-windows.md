@@ -67,7 +67,7 @@ bash olares-uninstall.sh
 
 ![Wizard URL](/images/manual/get-started/wizard-url-and-login-password.png)
 
-# 激活 Olares
+## 激活 Olares
 
 使用向导 URL 和初始一次性密码进行激活。此过程通过 LarePass 将 Olares 与你的 Olares ID 关联，确保你能安全访问个人云空间。
 
