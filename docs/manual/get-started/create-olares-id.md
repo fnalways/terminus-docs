@@ -1,3 +1,6 @@
+:::warning Note for Mainland China users
+The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
+:::
 # Create Olares ID
 
 An Olares ID is a unique identifier within the Olares ecosystem, serving as your digital identity and gateway to various services and features.
