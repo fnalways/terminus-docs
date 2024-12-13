@@ -6,7 +6,6 @@ const side = {
       link: "/zh/manual/docs-home",
       items: [
       { text: "什么是 Olares", link: "/zh/manual/what-is-olares" },
-     { text: "架构", link: "/zh/manual/architecture" },
       { text: "为什么选择 Olares", link: "/zh/manual/why-olares" },
       { text: "功能",
             link: "/zh/manual/feature-overview",
@@ -290,6 +289,7 @@ const side = {
       collapsed: true,
       link: "/zh/manual/concepts/",
       items: [
+        { text: "架构", link: "/zh/manual/architecture" },
         { text: "Olares ID", link: "/zh/manual/concepts/olares-id" },
         { text: "账户", link: "/zh/manual/concepts/account" },
         { text: "应用", link: "/zh/manual/concepts/application" },
