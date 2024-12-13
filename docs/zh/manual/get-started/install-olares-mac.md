@@ -29,7 +29,7 @@ Mac 设备需满足以下条件：
 
 ## 配置系统环境
 
-1. 打开 Docker Desktop，进入"**Settings**" > "**Resources**"，按以下要求配置资源：
+1. 打开 Docker Desktop，进入"**设置**" > "**资源**"，按以下要求配置资源：
     - "**CPU limit**"：至少设置为 4 核
     - "**Memory limit**"：至少设置为 9 GB
     - "**Virtual disk limit**"：至少设置为 80 GB
