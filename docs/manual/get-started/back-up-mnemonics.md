@@ -10,6 +10,7 @@ Keep your mnemonic phrase safe and secret, and never share it with anyone. It is
 When exporting or backing up your mnemonic phrase for the first time, you may be prompted to set a local password for LarePass. This password is only used to unlock LarePass services on the current device.
 
 After setting up, you can choose to enable biometric unlock for more secure and convenient access using face recognition or fingerprint.
+
 ![Set up local password](/images/manual/get-started/set-up-local-password.png)
 
 :::info
@@ -19,7 +20,7 @@ After setting up, you can choose to enable biometric unlock for more secure and 
 
 ## Reveal and back up your mnemonic phrase
 1. Open the LarePass app, and go to **Settings** > **Account** page. 
-2. click **Backup now**.
+2. Click **Backup now**.
 3. Read the risk warning about losing your mnemonic phrase and click **Start**. 
 4. Click to view the 12-word mnemonic phrase, and enter your local password for identity verification.
 5. Securely record the mnemonic phrase and store it in a safe place.
@@ -30,7 +31,13 @@ After setting up, you can choose to enable biometric unlock for more secure and 
 7. Verify your backup by arranging the mnemonic phrase in the correct order.
 8. Click **Completed**. 
    If arranged correctly, you have successfully backed up your mnemonic phrase.
+
    ![Back up mnemonic phrase](/images/manual/get-started/backup-mnemonic-phrase.png)
+
+## Congratulations!🎉
+And now you're ready to discover Olares further:
+- [What's next](./next-steps.md)
+
 ## FAQ
 ### What happens if I lose my mnemonic phrase?
 Losing your mnemonic phrase will result in serious consequences:
@@ -45,7 +52,3 @@ To prevent this, we strongly recommend taking these precautions:
 
 ### I've activated Olares, why do I get a password error when trying to view my mnemonic phrase in LarePass?
 If you encounter a password error, it may be because you haven't set a local password. Open the LarePass app, go to **Settings** > **Security**, and set a local password. Then try the backup process again.
-
-## Congratulations!
-And now you're ready to discover Olares further:
-- [What's next](./next-steps.md)

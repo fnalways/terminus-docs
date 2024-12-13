@@ -19,7 +19,7 @@ To get started with Olares, you'll need to download LarePass on your mobile devi
 ## Create an Olares ID
 
 ::: tip
-This section focuses on creating individual Olares IDs. If you want to create an Olares ID for organizational uses, refer to [Create an organization Olares ID](../space/host-domain.md#create-an-org-olares-id).
+This section focuses on creating individual Olares IDs. If you want to create an Olares ID for organizational uses, or use a custom domain, refer to [Set up a custom domain](../space/host-domain.md).
 :::
 
 1. In the LarePass app, tap **Create an account**.
