@@ -16,21 +16,8 @@ Make sure your Raspbian device meets the following requirements.
 
       echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
       ```
-2. Bind your local IP to your Ubuntu hostname for stable DNS resolution:
 
-   ```bash
-   sudo apt install net-tools
-   ifconfig
-   # Get your local IP. Make sure it starts with `192.168`.
-   ```
-
-   ```bash {2}
-   sudo nano /etc/hosts
-   192.168.xx.xx   raspberrypi  # Add this line
-   # Replace with your actual local IP and your host name.
-   ```
-
-3. Reboot your Raspbian device to apply the change.
+2. Reboot your Raspbian device to apply the change.
 
    ```bash
    sudo reboot
