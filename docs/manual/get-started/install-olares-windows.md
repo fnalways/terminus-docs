@@ -98,13 +98,12 @@ Securely access Olares with a two-step verification process.
      The verification code is time-sensitive. Ensure you enter it before it expires. If it does, you will need to generate a new code.
      :::
 
-   ![Comfirm login](/images/manual/get-started/confirm-login.png)
+   ![Confirm login](/images/manual/get-started/confirm-login.png)
 
-   Once you've completed both steps, you'll be directed to the Olares desktop.🎉
+   Once you've logged in, you'll be directed to the Olares desktop.🎉
 
 ## Protect your Olares ID
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
-Take a moment to complete this essential task:
 - [Back up your mnemonic phrase](./back-up-mnemonics.md)
