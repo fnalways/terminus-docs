@@ -10,6 +10,21 @@ const side = {
       { text: "Features",
             link: "/manual/feature-overview",
       },
+          {
+            text: "Help and Support",
+            collapsed: true,
+            items: [
+              { text: "FAQs", link: "/manual/help/faqs" },
+      {text: "Request support",
+      link: "/manual/help/request-technical-support",
+         },
+         //{
+         //  text: "Troubleshooting Guide",
+         //  link: "/manual/help/troubleshooting-guide",
+         // },
+            ],
+          },
+
       ],
       },
     {
@@ -298,21 +313,6 @@ const side = {
         { text: "Secrets", link: "/manual/concepts/secrets" },
       ],
     },
-    //{
-    //  text: "Help and Support",
-    //  collapsed: true,
-   //   items: [
-        { text: "FAQs", link: "/manual/help/faqs" },
-   //     {
-   //       text: "Troubleshooting Guide",
-   //       link: "/manual/help/troubleshooting-guide",
-   //     },
-   //     {
-   //       text: "Request Technical Support",
-   //       link: "/manual/help/request-technical-support",
-   //     },
-   //   ],
-   // },
     { text: "Glossary", link: "/manual/glossary" },
   ],
 

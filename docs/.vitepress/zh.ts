@@ -10,6 +10,21 @@ const side = {
       { text: "功能",
             link: "/zh/manual/feature-overview",
       },
+          {
+            text: "帮助与支持",
+            collapsed: true,
+            items: [
+              { text: "常见问题", link: "/zh/manual/help/faqs" },
+              {
+                    text: "技术支持",
+                    link: "/zh/manual/help/request-technical-support",
+                    },
+         //     {
+         //       text: "Troubleshooting Guide",
+         //       link: "/zh/manual/help/troubleshooting-guide",
+         //     },
+            ],
+          },
       ],
       },
     {
