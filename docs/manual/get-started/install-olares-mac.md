@@ -50,8 +50,10 @@ At the end of the installation process, you will need to provide some informatio
 1. Check your Mac's IP address for the network gateway (e.g., `192.168.x.x`). 
 
    If the automatically retrieved IP address is correct, press `Y`. To enter a different one, press `R` and provide the correct address.
-   ::: tip
-   Check your IP address in **System Settings** > **Network**.
+   ::: tip Identify your IP address
+   To identify the IP address of a Mac, you can use either the Graphical User Interface (GUI) or the Command Line (CLI).
+   - With GUI: Navigate to the **System Settings** (or **System Preferences**) > **Network**, and check the connection's details for the active network connection.
+   - With CLI: Open a new Terminal window and use the command `ipconfig getifaddr en0` for Wi-Fi or `ipconfig getifaddr en1` for Ethernet.
    :::
 2. Enter your domain name and Olares ID.
 
@@ -102,13 +104,12 @@ Securely access Olares with a two-step verification process.
    The verification code is time-sensitive. Ensure you enter it before it expires. If it does, you will need to generate a new code.
    :::
 
-   ![Comfirm login](/images/manual/get-started/confirm-login.png)
+   ![Confirm login](/images/manual/get-started/confirm-login.png)
 
-   Once you've completed both steps, you'll be directed to the Olares desktop.🎉
+   Once you've logged in, you'll be directed to the Olares desktop.🎉
 
 ## Protect your Olares ID
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
-Take a moment to complete this essential task:
 - [Back up your mnemonic phrase](./back-up-mnemonics.md)
