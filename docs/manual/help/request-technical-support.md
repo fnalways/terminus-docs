@@ -10,7 +10,7 @@ If you have an Olares device running, you can use a convenient one-click solutio
     - Create a new **[Issue](https://github.com/beclab/Olares/issues/new)** (for bug reports or technical problems).
 2. Provide a brief description of the issue or question to help the Olares team assist you more effectively. Include the following information if possible:
     - Steps to reproduce the issue.
-    - Any error messages or unexpected behavior.
+    - Any error messages or unexpected behaviors.
     - Details about your environment (e.g., operating system, Olares version).
 
 ## Export Olares logs
