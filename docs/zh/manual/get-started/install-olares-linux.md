@@ -10,8 +10,8 @@ Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows
 - 内存：8GB 及以上（可用内存）
 - 存储：64GB 及以上（可用磁盘空间）
 - 支持的系统版本：
-    - Ubuntu 22.04 LTS 及更新版本
-    - Debian 11 及更新版本
+    - Ubuntu 20.04 LTS 及以上
+    - Debian 11 及以上
 
 ## 安装 Olares
 执行以下命令：

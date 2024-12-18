@@ -10,7 +10,7 @@ Make sure your Linux device meets the following requirements.
 - RAM: 8GB or above (available memory)
 - Storage: 64GB or above (available disk space)
 - Supported Systems:
-  - Ubuntu 22.04 LTS or later
+  - Ubuntu 20.04 LTS or later
   - Debian 11 or later
 
 ## Install Olares
