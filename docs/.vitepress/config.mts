@@ -13,18 +13,18 @@ export default withMermaid({
       label: "English",
       ...en,
     },
-     zh: {
-       label: "简体中文",
-       ...zh,
-     },
+    zh: {
+      label: "简体中文",
+      ...zh,
+    },
   },
   themeConfig: {
     search: {
-      provider: "local",
+      provider: "algolia",
       options: {
-        //appId: "0614S1555J",
-        //apiKey: "cbf4702e9d6bfb5a0ae85bf0d486a591",
-        //indexName: "jointerminus",
+        appId: "DZ6H2FVQGO",
+        apiKey: "e5257d88b605dc0e5b82b12854aea9a5",
+        indexName: "olares",
         locales: {
           zh: {
             placeholder: "搜索文档",
