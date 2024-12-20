@@ -10,7 +10,7 @@ Additionally, you can install Olares on macOS or Windows for testing or evaluati
 <tabs>
 <template #Standard-Linux>
 
-## System requirements
+### System requirements
 
 Make sure your device meets the following requirements.
 
@@ -25,7 +25,7 @@ Make sure your device meets the following requirements.
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 ::: 
 
-## Install on standard Linux
+### Install on standard Linux
 
 
 In your terminal, run the following command:
@@ -45,7 +45,7 @@ After uninstalling, retry the installation by running the original installation 
 </template>
 <template #PVE>
 
-## System requirements
+### System requirements
 
 Make sure your device meets the following requirements.
 
@@ -58,7 +58,7 @@ Make sure your device meets the following requirements.
 While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 ::: 
 
-## Install on PVE
+### Install on PVE
 
 In PVE CLI, run the following command:
 
@@ -77,7 +77,7 @@ After uninstalling, retry the installation by running the original installation 
 </template>
 <template #LXC-on-PVE>
 
-## System requirements
+### System requirements
 
 Make sure your device meets the following requirements.
 
@@ -92,7 +92,7 @@ Make sure your device meets the following requirements.
 While the specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 ::: 
 
-## Prerequisites
+### Prerequisites
 
 -  Working directories for storing images and packages on the PVE host. You can set it using the following command:
 
@@ -102,12 +102,16 @@ While the specific versions are confirmed to work, the process may still work on
 
 - The container template (CT) for `debian-12-standard_12.7-1_amd64.tar.zst`. Download it from the [PVE image repository](http://download.proxmox.com/images/system/).
 
-## Configure the LXC environment
+### Configure the LXC environment
 
 1. Create the LXC container using the following script:
 
    ::: tip Note
-   To create a container, you need to assign it a unique Container ID. In this guide, we use `16553`, but you can replace it with any available numeric ID. Make sure to update all commands and configurations accordingly.
+   To create a container, you need to assign it a unique container ID. In this guide, we use `16553`, but you can replace it with any available numeric ID. Make sure to update all commands and configurations accordingly.
+   :::
+
+   ::: tip
+   If you want to install Olares on an existing LXC container. Skip to step 2 directly. Make sure you use the corresponding container ID.
    :::
 
    ``` bash
@@ -206,7 +210,7 @@ While the specific versions are confirmed to work, the process may still work on
    tar xvf ./6.8.4-2-pve.tar.gz
    ```
 
-## Install on LXC
+### Install on LXC
 
 Run the following installation command inside the LXC container:
 
@@ -225,7 +229,7 @@ After uninstalling, retry the installation by running the original installation 
 </template>
 <template #Raspberry-Pi>
 
-## System requirements
+### System requirements
 
 Make sure your device meets the following requirements.
 
@@ -237,7 +241,7 @@ Make sure your device meets the following requirements.
 While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 ::: 
 
-## Set up system environment
+### Set up system environment
 1. Configure the Raspbian environment to enable necessary features:
 
       ```bash
@@ -251,7 +255,7 @@ While the specific version is confirmed to work, the process may still work on o
    ```bash
    sudo reboot
    ```
-## Install on Raspberry Pi
+### Install on Raspberry Pi
 
 Run the following command:
 

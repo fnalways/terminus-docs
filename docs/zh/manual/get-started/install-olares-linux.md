@@ -3,14 +3,14 @@ Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系
 - **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
 - **虚拟化平台**：Proxmox VE（PVE，基于 Debian）、PVE LXC（PVE 上运行的 Linux 容器）。
 
-此外，您也可以在 macOS 或 Windows 上安装 Olares 用于测试或评估。
+此外，你也可以在 macOS 或 Windows 上安装 Olares 用于测试或评估。
 
 ## 安装 Olares
 
 <tabs>
 <template #Standard-Linux>
 
-## 系统要求
+### 系统要求
 
 请确保设备满足以下配置要求：
 
@@ -22,10 +22,10 @@ Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系
     - Debian 11 及以上
 
 ::: tip 注意
-虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据您的环境可能需要进行调整。如果您在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 
-## 在标准 Linux 中安装
+### 安装至标准 Linux
 
 在 Linux 命令行中，执行以下命令：
 
@@ -48,7 +48,7 @@ bash olares-uninstall.sh
 
 <template #PVE>
 
-## 系统要求
+### 系统要求
 
 请确保设备满足以下配置要求：
 
@@ -58,10 +58,10 @@ bash olares-uninstall.sh
 - 支持的系统版本：PVE 8.2.2
 
 ::: tip 注意
-虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据您的环境可能需要进行调整。如果您在这些平台安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 
-## 在 PVE 中安装
+### 安装至 PVE
 
 在 PVE 命令行中，执行以下命令：
 
@@ -84,7 +84,7 @@ bash olares-uninstall.sh
 
 <template #PVE-LXC>
 
-## 系统要求
+### 系统要求
 
 请确保设备满足以下配置要求：
 
@@ -96,10 +96,10 @@ bash olares-uninstall.sh
   - LXC 系统：Debian 12
 
 ::: tip 注意
-虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据您的环境可能需要进行调整。如果您在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 
-## 准备工作
+### 准备工作
 
 - 在 PVE 主机上创建用于存储镜像和软件包的工作目录。
   
@@ -108,13 +108,18 @@ bash olares-uninstall.sh
    ```
 -  `debian-12-standard_12.7-1_amd64.tar.zst`的容器模板（CT），可从 PVE [镜像仓库](http://download.proxmox.com/images/system/)下载。
 
-## 配置 LXC 环境
+### 配置 LXC 环境
 
 1. 使用以下命令创建 LXC 容器：
 
-   ::: tip 提示
+   ::: tip 注意
    要创建容器，必须分配一个唯一的 **容器 ID**。在本指南中，我们使用 `16553`，但你可以将其替换为任何可用的数字 ID，并在所有相关命令和配置中更新此 ID。
    :::
+
+   ::: tip 提示
+   如果你想要在 PVE 中已有 LXC 容器上安装 Olares，请直接到第二步更新 LXC 配置。要记得更新对应的容器 ID。
+   :::
+
    ```bash
    export ROOTPASS=123456 
    pct create 16553 /var/lib/vz/template/cache/debian-12-standard_12.7-1_amd64.tar.zst \
@@ -208,7 +213,7 @@ bash olares-uninstall.sh
       cd /lib/modules
       tar xvf ./6.8.4-2-pve.tar.gz
       ```
-## 安装至 LXC
+### 安装至 LXC
 
 在 LXC 容器 中运行以下安装命令：
 
@@ -232,17 +237,17 @@ bash olares-uninstall.sh
 
 <template #Raspberry-Pi>
 
-## 系统要求
+### 系统要求
 请确保设备满足以下要求：
 - 硬件：树莓派 4B 或树莓派 5（8GB 内存版本）
 - 操作系统：Raspbian 12
 - 存储空间：64GB（建议使用 SSD）
 
 ::: tip 注意
-虽然以上版本已经过验证，但其他版本也可能正常运行 O la re s。根据您的环境可能需要进行调整。如果您在这些平台上安装遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+虽然以上版本已经过验证，但其他版本也可能正常运行 O la re s。根据你的环境可能需要进行调整。如果你在这些平台上安装遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
   
-## 环境配置
+### 环境配置
 1. 配置 Raspbian 环境，启用必要功能：
 
       ```bash
@@ -256,7 +261,7 @@ bash olares-uninstall.sh
    ```bash
    sudo reboot
    ```
-## 安装 Olares
+### 安装至树莓派
 
 执行以下命令:
 
