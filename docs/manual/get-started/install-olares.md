@@ -10,9 +10,9 @@
    const tabActiveIndex = ref(0)
    const randomKey = ref('RandomKey')
    const title = computed(()=> titles[tabActiveIndex.value])
-   const titles = ['Install Olares on Linux', 'Install Olares on Raspberry Pi', 'Install Olares on Mac', 'Install Olares on Windows']
+   const titles = ['Install Olares on Linux', 'Install Olares on Mac', 'Install Olares on Windows']
 
-   const icons = ['linux-brands-solid', 'raspberry-pi-brands-solid', 'apple-brands-solid', 'windows-brands-solid']
+   const icons = ['linux-brands-solid', 'apple-brands-solid', 'windows-brands-solid']
    const icons_light = computed(() => icons.map(item => `/images/manual/icons/${item}.svg`))
    const icons_dark = computed(() => icons.map(item => `/images/manual/icons/${item}-dark.svg`))
 
@@ -40,9 +40,6 @@ The steps in this guide differ for users in Mainland China due to regional diffe
 <Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark" >
 <template #Linux>
 <installOlaresLinux/>
-</template>
-<template #Raspberry-Pi>
-<installOlaresRaspberryPi />
 </template>
 <template #macOS>
 <installOlaresMac />

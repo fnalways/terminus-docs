@@ -1,10 +1,18 @@
 
+Olares is designed to run on Linux-based systems and has been verified on the following platforms:
+- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
+- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
 
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+Additionally, you can install Olares on macOS or Windows for testing or evaluation purposes.
 
-## System compatibility
+## Install Olares
 
-Make sure your Linux device meets the following requirements.
+<tabs>
+<template #Standard-Linux>
+
+## System requirements
+
+Make sure your device meets the following requirements.
 
 - CPU: 4 cores or above
 - RAM: 8GB or above (available memory)
@@ -13,9 +21,14 @@ Make sure your Linux device meets the following requirements.
   - Ubuntu 20.04 LTS or later
   - Debian 11 or later
 
-## Install Olares
+::: tip Note
+While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+::: 
 
-Run the following command:
+## Install on standard Linux
+
+
+In your terminal, run the following command:
 
 ```bash
 curl -fsSL https://olares.sh |  bash -
@@ -28,6 +41,235 @@ bash olares-uninstall.sh
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
+
+</template>
+<template #PVE>
+
+## System requirements
+
+Make sure your device meets the following requirements.
+
+- CPU: 4 cores or above
+- RAM: 8GB or above (available memory)
+- Storage: 64GB or above (available disk space)
+- Supported Systems: PVE 8.2.2
+
+::: tip Note
+While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+::: 
+
+## Install on PVE
+
+In PVE CLI, run the following command:
+
+```bash
+curl -fsSL https://olares.sh |  bash -
+```
+
+:::info
+If an error occurs during installation, use the following command to uninstall first:
+```bash
+bash olares-uninstall.sh
+```
+After uninstalling, retry the installation by running the original installation command.
+:::
+
+</template>
+<template #LXC-on-PVE>
+
+## System requirements
+
+Make sure your device meets the following requirements.
+
+- CPU: 4 cores or above
+- RAM: 8GB or above (available memory)
+- Storage: 64GB or above (available disk space)
+- Supported Systems:
+  - PVE 8.2.2
+  - LXC system: Debian 12
+
+::: tip Note
+While the specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+::: 
+
+## Prerequisites
+
+-  Working directories for storing images and packages on the PVE host. You can set it using the following command:
+
+   ``` bash
+   mkdir -p /root/.olares/images /root/.olares/pkg
+   ```
+
+- The container template (CT) for `debian-12-standard_12.7-1_amd64.tar.zst`. Download it from the [PVE image repository](http://download.proxmox.com/images/system/).
+
+## Configure the LXC environment
+
+1. Create the LXC container using the following script:
+
+   ::: tip Note
+   To create a container, you need to assign it a unique Container ID. In this guide, we use `16553`, but you can replace it with any available numeric ID. Make sure to update all commands and configurations accordingly.
+   :::
+
+   ``` bash
+   export ROOTPASS=123456 
+   pct create 16553 /var/lib/vz/template/cache/debian-12-standard_12.7-1_amd64.tar.zst \
+   --hostname olares \
+   --ostype ubuntu \
+   --cores 4 \
+   --memory 10240 \
+   --swap 0 \
+   --net0 name=eth0,bridge=vmbr0,firewall=1,ip=dhcp,ip6=dhcp,type=veth \
+   --rootfs local-lvm:80 \
+   --unprivileged 0 \
+   --ignore-unpack-errors \
+   --mp0 "/root/.olares/images,mp=/root/.olares/images" \
+   --mp1 "/root/.olares/pkg,mp=/root/.olares/pkg" \
+   --password="$ROOTPASS"
+   ``` 
+
+2. Modify the LXC configuration. 
+   
+   a. Open the configuration file using the following command:
+
+   ``` bash
+   nano /etc/pve/lxc/16553.conf
+   ```
+
+   b. Copy and paste the following configurations into the file: 
+
+   ``` bash
+   arch: amd64
+   cores: 4
+   hostname: olares
+   memory: 10240
+   net0: name=eth0,bridge=vmbr0,firewall=1,hwaddr=BC:24:11:13:05:7C,ip=dhcp,ip6=dhcp,type=veth
+   ostype: debian
+   rootfs: local-lvm:vm-16553-disk-0,size=80G
+
+   # Storage config
+   mp0: /root/.olares/images,mp=/root/.olares/images
+   mp1: /root/.olares/pkg,mp=/root/.olares/pkg
+
+   # Permision config 
+   lxc.apparmor.profile: unconfined
+   lxc.cgroup.devices.allow: a
+   lxc.cap.drop:
+   lxc.mount.auto: "proc:rw sys:rw cgroup:rw"
+   ```
+
+   c. Save and close the file.
+
+3. Enable IP Virtual Server (IPVS) modules on the PVE host:
+
+   ``` bash
+   sudo modprobe ip_vs
+   sudo modprobe ip_vs_rr
+   sudo modprobe ip_vs_wrr
+   sudo modprobe ip_vs_sh
+   sudo modprobe overlay
+   ```
+
+4. Start the LXC container, make initial configurations, and exit:
+
+   ```bash
+
+   # Start the container
+   pct start 16553
+
+   # Enter the container
+   pct enter 16553
+
+   # Create missing directories
+   mkdir -p /lib/modules
+
+   # Update PATH environment variable
+   echo 'export PATH="/usr/local/bin:$PATH"' >> /root/.bashrc
+   source ~/.bashrc
+   
+   # exit LXC
+   exit
+   ```
+
+5. Copy PVE dependencies to the LXC container:
+
+   ``` bash
+   # Copy kernel config from PVE host to LXC container
+   pct push 16553 /boot/config-$(uname -r) /boot/config-$(uname -r)
+
+   # Package and copy kernel modules directory
+   tar cvf /lib/modules/6.8.4-2-pve.tar.gz /lib/modules/6.8.4-2-pve
+   pct push 16553 /lib/modules/6.8.4-2-pve.tar.gz /lib/modules/6.8.4-2-pve.tar.gz
+
+   # Extract the archive inside the container
+   pct enter 16553
+   cd /lib/modules
+   tar xvf ./6.8.4-2-pve.tar.gz
+   ```
+
+## Install on LXC
+
+Run the following installation command inside the LXC container:
+
+``` bash
+curl -fsSL https://olares.sh | bash -
+```
+
+:::info
+If an error occurs during installation, use the following command to uninstall first:
+```bash
+bash olares-uninstall.sh
+```
+After uninstalling, retry the installation by running the original installation command.
+:::
+
+</template>
+<template #Raspberry-Pi>
+
+## System requirements
+
+Make sure your device meets the following requirements.
+
+- Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
+- Operating System: Raspbian 12
+- Storage: 64GB (SSD Recommended)
+
+::: tip Note
+While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+::: 
+
+## Set up system environment
+1. Configure the Raspbian environment to enable necessary features:
+
+      ```bash
+      echo "$(head -1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee /boot/firmware/cmdline.txt
+
+      echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
+      ```
+
+2. Reboot your Raspbian device to apply the change.
+
+   ```bash
+   sudo reboot
+   ```
+## Install on Raspberry Pi
+
+Run the following command:
+
+ ```bash
+ curl -fsSL https://olares.sh |  bash -
+ ```
+
+:::info
+If an error occurs during installation, use the following command to uninstall first:
+```bash
+bash olares-uninstall.sh
+```
+After uninstalling, retry the installation by running the original installation command.
+:::
+
+</template>
+</tabs>
+
 ## Prepare Wizard URL
 
 At the end of the installation process, you will need to provide some information:

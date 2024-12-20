@@ -39,6 +39,7 @@ bash olares-uninstall.sh
 ```
 卸载完成后，重新运行安装命令进行安装。
 :::
+
 ## 配置 Wizard
 在安装 Olares 的核心服务之前，需要输入在 LarePass 中注册的 Olares ID 前缀。如果你的 Olares ID 为 `alice123@olares.cn`，输入 `alice123` 即可。
 
