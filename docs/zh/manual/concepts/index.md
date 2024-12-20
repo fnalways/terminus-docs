@@ -1,20 +1,20 @@
-# Overview
+# 概述
 
-The Concepts section helps you learn about the parts of the Olares system and obtain a deeper understanding of how Olares works. Read this section as needed to:
+本章节帮助你了解 Olares 系统，加深对 Olares 工作原理的理解。在以下场景中可以参考本章节：
 
-- Develop applications for Olares
-- Manage system deployments
-- Troubleshoot issues
-- Optimize system performance
+- 开发 Olares 应用
+- 管理系统部署
+- 排查故障问题
+- 优化系统性能
 
-Understand Olares with the following concepts:
+通过以下概念来理解 Olares：
 
-- [Architectural components](../architecture.md)
-- [Users](./account.md)
+- [架构](../architecture.md)
 - [Olares ID](./olares-id.md)
-- [Application](./application.md)
-- [Network](./network.md)
-- [Data](./data.md)
-- [Secret Management](./secrets.md)
+- [账户](./account.md)
+- [应用](./application.md)
+- [网络](./network.md)
+- [数据](./data.md)
+- [密钥](./secrets.md)
 
 

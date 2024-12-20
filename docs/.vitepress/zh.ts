@@ -313,21 +313,6 @@ const side = {
         { text: "密钥", link: "/zh/manual/concepts/secrets" },
       ],
     },
-    //{
-    //  text: "Help and Support",
-    //  collapsed: true,
-   //   items: [
-        { text: "常见问题", link: "/zh/manual/help/faqs" },
-   //     {
-   //       text: "Troubleshooting Guide",
-   //       link: "/zh/manual/help/troubleshooting-guide",
-   //     },
-   //     {
-   //       text: "Request Technical Support",
-   //       link: "/zh/manual/help/request-technical-support",
-   //     },
-   //   ],
-   // },
     { text: "术语", link: "/zh/manual/glossary" },
   ],
 
@@ -399,6 +384,26 @@ const side = {
           text: "进阶",
           collapsed: true,
           items: [
+          {text: "Olares CLI",
+          link: "/developer/develop/advanced/cli/olares-cli",
+          collapsed: true,
+          items: [
+          {text: "olares info",
+          link: "/developer/develop/advanced/cli/olares-info"},
+          {text: "olares download",
+          link: "/developer/develop/advanced/cli/olares-download"},
+          {text: "olares prepare",
+          link: "/developer/develop/advanced/cli/olares-prepare"},
+          {text: "olares install",
+          link: "/developer/develop/advanced/cli/olares-install"},
+          {text: "olares change-ip",
+          link: "/developer/develop/advanced/cli/olares-change-ip"},
+          {text: "olares release",
+          link: "/developer/develop/advanced/cli/olares-release"},
+          {text: "olares uninstall",
+          link: "/developer/develop/advanced/cli/olares-uninstall"},
+          ],
+          },
             {
               text: "terminus-info",
               link: "/zh/developer/develop/advanced/terminus-info",

@@ -15,35 +15,35 @@ Accounts in LarePass, Olares, and Olares Space stay synchronized as described be
 
 ## Understand the stage of account
 
-Each account has three stages:
+Each account has three stages.
 
-- **Not bound to an Olares ID**<br>
-An unbound account represents the initial stage where you have basic credentials created locally.
-This includes your mnemonic phrase, private key, and DID, but no Olares ID yet. 
+### Not bound to an Olares ID (DID stage)
+An unbound account represents the initial stage where you have basic credentials created locally. This includes your mnemonic phrase, private key, and DID, but no Olares ID yet. 
+
 During this stage, you can export and back up your mnemonic phrase and access Olares Space to request an organization domain name. 
-However, importing to other LarePass clients isn't possible at this point.
 
-- **Bound to an Olares ID**<br>
+However, importing to other LarePass clients isn't possible at this point.
+:::tip
+In the LarePass app, when you tap **Create an account**, your account enters the DID stage.
+:::
+### Bound to an Olares ID
 When your account is bound to an Olares ID, the system records the connection between your Olares ID and DID on the blockchain.
+
 This enables you to request and activate an Olares through Olares Space. 
+
 At this stage, you gain the ability to import your account to other devices using your exported mnemonic phrase, supporting unified authentication across applications.
 
-- **Bound to an Olares**<br>
-The final stage occurs when your account is linked to an Olares device. You can fully participate in the Olares ecosystem.
-
+### Bound to an Olares
+The final stage occurs when your account is linked to an Olares device. This enables full participation in the Olares ecosystem, including monitoring system resources for your device.
 
 ## Unified account system
 
 Olares supports unified authentication for a multi-user system. 
 
 1. After the user logs in on the login page, all future requests automatically include authentication details.
-
 2. Each user request first goes through the Authelia service for authentication.
-
 3. If authentication fails, the application redirects the user to the login page to re-authenticate.
-
 4. If authentication succeeds, the [Backend for Launcher (BFL)](https://github.com/beclab/bfl) attaches the user's basic information and forwards the request to the application service. This relieves the application from handling the authentication itself.
-
 5. For [cluster-scoped applications](./application.md#cluster-scoped-applications), developers need to build an additional `Auth Server` to connect the application's account with the BFL account.
 
 ## Multi-factor authentication (MFA)
@@ -58,13 +58,13 @@ When a user is first created, Olares generates a random password for initial set
 
 When users perform sensitive operations such as login, Olares requires users to enter the one-time two-factor authentication code generated in LarePass.
 
-## See also
+## Learn more
 
 ### Users
 
-- [Manage Olares accounts](../get-started/create-olares-id)
-- [Users and roles](../tasks/roles-permissions.md)
+- [Create Olares ID](../get-started/create-olares-id)
+- [User roles and permissions](../tasks/roles-permissions.md)
 
 ### Developers
 
-- [Account System Callback](../../developer/develop/advanced/account.md)
+- [Account system callback](../../developer/develop/advanced/account.md)

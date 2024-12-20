@@ -10,11 +10,11 @@ The Concepts section helps you learn about the parts of the Olares system and ob
 Understand Olares with the following concepts:
 
 - [Architectural components](../architecture.md)
-- [Users](./account.md)
 - [Olares ID](./olares-id.md)
+- [Account](./account.md)
 - [Application](./application.md)
 - [Network](./network.md)
 - [Data](./data.md)
-- [Secret Management](./secrets.md)
+- [Secrets](./secrets.md)
 
 

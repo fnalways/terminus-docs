@@ -2,117 +2,110 @@
 outline: [2, 3]
 ---
 
-# Data
+# 数据
 
-User data is usually stored in file systems and databases. Of the two, databases are built based on file systems. Here are our design philosophies with them:
+数据通常存储在文件系统和数据库中，其中数据库又是建立在文件系统之上的。以下是 Olares 在这两方面的设计理念：
 
-**For file systems**:
+**文件系统方面**：
 
-- Olares is designed for multi-node clusters. Therefore, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
+  Olares 设计用于多节点集群环境。因此在开发应用时，需要考虑程序被调度到不同节点时对文件系统的访问问题。我们致力于对开发者屏蔽这些细节。
 
-**For databases**:
+**数据库方面**：
 
-- For common databases, developers only need to modify the configuration to complete the integration.
-- Different users and applications can share physical database instances to save resource overhead.
+- 对于常用数据库，开发者只需修改配置即可完成集成。
+- 不同用户和应用可以共享物理数据库实例，以节省资源开销。
 
-**For both**:
+**共同特点**：
 
-- Data between different users and different applications are isolated from each other.
-- Scalable and highly available.
-- Capable of performing unified backup and restore at the system level.
+- 不同用户、不同应用之间的数据相互隔离。
+- 可扩展且高可用。
+- 能在系统层面进行统一的备份和恢复。
 
-## File System Type
+## 文件系统类型
 
 ### JuiceFS
 
-Olares OS uses [JuiceFS](https://juicefs.com) as the underlying multi-physical node shared file system solution. In this way, applications can obtain cross-node file access using the simplest HostPath PV method. This allows Pods to be freely scheduled in the cluster.
+Olares 采用 [JuiceFS](https://juicefs.com) 作为底层的多物理节点共享文件系统方案。这样应用可以通过最简单的 HostPath PV 方式获得跨节点的文件访问能力，使 Pod 能够在集群中自由调度。
 
-As for the back-end object storage solution of JuiceFS, we also provide two solutions: S3 and MinIO.
+针对 JuiceFS 的后端对象存储方案，我们提供了 S3 和 MinIO 两种选择。
 
-By default, Olares OS uses MinIO as object storage when installed locally. Initial installation starts with [Single Node Single Driver (SNSD)](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html) mode.
+默认情况下，Olares 在本地安装时使用本地文件系统（FS）。不过，如果在运行 [`olares prepare`](../../developer/develop/advanced/cli/olares-prepare.md) 命令时指定了 `--with-juicefs=true` 选项，系统就会安装并使用 JuiceFS，同时会搭建一个 MinIO 实例作为后端存储。
 
-### Local disk
+### 本地磁盘
 
-In some application systems, intensive file system read and write operations may occur. These intensive file system read and write operations are often fragmented random reads and writes. In various existing distributed storage cluster solutions, for such intensive fragmented random read and write operations, it is very likely that I/O or CPU consumption will be too high (usually due to high I/O Wait).
+某些应用系统中可能会出现密集的文件系统读写操作，这些密集的文件系统读写往往是碎片化的随机读写。在现有的各种分布式存储集群方案中，对于这种密集的碎片化随机读写操作，很容易造成 I/O 或 CPU 消耗过高（通常表现为较高的 I/O Wait）。
 
-The best practice provided by Olares is to make full use of the node's local hard disk as a file buffer. Although the local hard disk of the node has limited capacity, it has high-speed read and write performance because it basically uses SSD hard disk. If the application reads and writes files, it will be buffered on the local hard disk of the node, and then written asynchronously to the distributed file system in batches. This can turn most of the fragmented random reads and writes into a few sequential reads and writes. This greatly improves system I/O efficiency.
+Olares 提供的最佳实践是充分利用节点的本地硬盘作为文件缓冲区。虽然节点的本地硬盘容量有限，但由于基本采用 SSD 硬盘，具有较高的读写性能。应用读写文件时会先在节点本地硬盘上进行缓冲，然后批量异步写入分布式文件系统。这样可以将大部分碎片化的随机读写转化为少量的顺序读写，大幅提升系统 I/O 效率。
 
-## Application Storage Path
+## 应用存储路径
 
-For applications, there are 3 different storage paths to deal with different usage scenarios.
+对于应用来说，有三种不同的存储路径用于处理不同的使用场景。
 
 ### UserData
 
-The `UserData` storage path stores files that change infrequently but require cross-application access, such as documents, photos, and videos.
+`UserData` 存储路径用于存放变动不频繁但需要跨应用访问的文件，如文档、照片和视频等。
 
-Applications can obtain access permissions to a directory under the Home directory by applying for [UserData](../../developer/develop/package/manifest.md#userdata) permissions in `OlaresManifest.yaml`. For example, you can request permissions to the Picture directory for PhotoPrism, and permissions to the Downloads directory for qBittorrent and Jellyfin.
+应用可以通过在 `OlaresManifest.yaml` 中申请 [UserData](../../developer/develop/package/manifest.md#userdata) 权限来获取 `Home` 目录下某个目录的访问权限。比如 PhotoPrism 可以申请 `Picture` 目录的权限，qBittorrent 和 Jellyfin 可以申请 `Downloads` 目录的权限。
 
 ### AppData
 
-The `AppData` storage path stores data that does not change frequently but needs to span across nodes. For example, configuration files.
+`AppData` 存储路径用于存放变动不频繁但需要跨节点的数据，比如配置文件。
 
-Applications can apply for [AppData](../../developer/develop/package/manifest.md#appdata) permissions in `OlaresManifest.yaml`.
+应用可以在 `OlaresManifest.yaml` 中申请 [AppData](../../developer/develop/package/manifest.md#appdata) 权限。
 
 ### AppCache
 
-The `AppCache` storage path is allocated for applications that directly operate the disk with good performance. The disadvantage is that it cannot be accessed across nodes. For example, the system database, application log, and cache.
+`AppCache` 存储路径分配给需要直接操作磁盘且性能要求较好的应用。比如系统数据库、应用日志和缓存等。缺点是无法跨节点访问。
 
-Applications can apply for [AppCache](../../developer/develop/package/manifest.md#appcache) permissions in `OlaresManifest.yaml`.
+应用可以在 `OlaresManifest.yaml` 中申请 [AppCache](../../developer/develop/package/manifest.md#appcache) 权限。
 
 ## [PostgreSQL](../../developer/develop/advanced/database.md#rds)
 
-As one of the most popular open-source relational databases, PostgreSQL has excellent performance and rich plug-in functions. Olares OS deploys PostgreSQL on the system along with the popular Citus distributed database plug-in. At the same time, its cluster is managed through the PG Operator in the TAPR component. Users can easily expand the number of PostgreSQL nodes, and back up or restore data along with the entire Olares system.
+作为最受欢迎的开源关系型数据库之一，PostgreSQL 具有出色的性能和丰富的插件功能。Olares 在系统中部署了 PostgreSQL，同时集成了广受欢迎的 Citus 分布式数据库插件。通过 Olares 应用运行时组件中的 PG Operator 进行集群管理，用户可以轻松扩展 PostgreSQL 节点数量，并随整个 Olares 系统进行备份或恢复。
 
-If the PostgreSQL database application declared by the developer in the application is Distributed, then Olares will build its database on Citus, allowing the application to fully utilize the capabilities of the distributed PG database.
-
-- Version: `11.3.0`
+如果开发者在应用中声明的 PostgreSQL 数据库为分布式类型，那么 Olares 会在 Citus 上构建其数据库，让应用充分利用分布式 PG 数据库的能力。
 
 ## [MongoDB](../../developer/develop/advanced/database.md#nosql)
 
-MongoDB, as a representative of NoSQL, has a wide range of application scenarios in the Internet of Things field. By deploying [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator), developers have a cloud-native version of MongoDB cluster in Olares.
+MongoDB 作为 NoSQL 的代表，在物联网领域有着广泛的应用场景。通过部署 [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator)，开发者在 Olares 中就拥有了云原生版本的 MongoDB 集群。
 
-Like PostgreSQL, Olares also manages MongoDB backup and restore in a unified manner. Users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
-
-- Version: `6.0.4`
+与 PostgreSQL 一样，Olares 也统一管理 MongoDB 的备份和恢复。用户无需具备任何 DBA 技术能力，就能轻松实现定时备份、增量备份、定点恢复等功能。
 
 ## [Redis](../../developer/develop/advanced/database.md#cache)
 
-There is no doubt that Redis can be regarded as the most popular memory cache software currently. It has rich instructions and derives a variety of data types based on Key-Value data. Many systems even use it as KV data storage. Olares OS also deploys a customized [Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator) in the system, providing a cloud-native version of Redis Cluster.
+毫无疑问，Redis 可以说是目前最受欢迎的内存缓存软件。它拥有丰富的指令，并基于 Key-Value 数据衍生出多种数据类型。很多系统甚至将其作为 KV 数据存储使用。Olares 也在系统中部署了定制的 [Redis Cluster Operator](https://github.com/beclab/redis-cluster-operator)，提供云原生版本的 Redis 集群。
 
-Olares also takes over the backup and restore of Redis Cluster. There is no need for users to provide any separate operation and maintenance operations for Redis Cluster.
+Olares 同样接管了 Redis 集群的备份和恢复工作，用户无需为 Redis 集群提供任何单独的运维操作。
 
-In addition, since Redis Cluster itself lacks a data isolation mechanism, Olares OS has also developed a proxy layer tool to implement the `namespace` mechanism of data. This isolation mechanism is completely transparent to developers. Developers do not need to do any special processing of data keys in their code. Data isolation between multiple applications and multiple users can be achieved with simple configuration in application chart.
+此外，由于 Redis 集群本身缺乏数据隔离机制，Olares 还开发了代理层工具来实现数据的 `namespace` 机制。这种隔离机制对开发者来说是完全透明的，开发者无需在代码中对数据键做任何特殊处理，只需在应用 chart 中简单配置即可实现多应用、多用户之间的数据隔离。
 
-- Version: `6.2.13`
-
-:::tip
-The system uses the Redis Cluster version, which is different from the stand-alone version of Redis. It is recommended to read the official Redis documentation for reference.
+:::tip 提示
+系统使用的是 Redis 集群版本，与单机版 Redis 有所不同，建议参考 Redis 官方文档。
 :::
 
+## 备份
 
-## Backup
+备份是 Olares 的备份和恢复模块。
 
-Backup is the backup and restore module of Olares OS.
+它帮助用户将整个 Olares 备份到 Olares Space，同时也支持用户自定义存储位置。
 
-It helps users backup the entire Olares to Olares Space, and also supports user-defined storage locations.
+备份操作可以按日或按周进行。每个备份计划的第一次备份是全量备份，作为该备份计划的第一个快照。后续快照均为增量备份。
 
-Backup operations can be performed daily and weekly. The first backup of each backup plan is a full backup and serves as the first snapshot of the backup plan. Subsequent snapshots are incremental backups.
+备份对象包括：
 
-Backup objects include:
+- Kubernetes 配置数据，如用户信息、应用信息等
+- 数据库数据，如 Redis、MongoDB、PostgreSQL 等
+- 文件系统数据，如用户通过文件管理器上传的视频、图片、各类文档等
 
-- Kubernetes configuration data, such as user information, application information, etc.
-- Database data, such as Redis, MongoDB, PostgreSQL, etc.
-- File system data, such as videos, pictures, and various documents uploaded by users through the Files application
+备份组件还具备数据恢复能力。可以将备份快照下载到本地服务器或 Olares Space，通过重建 Kubernetes、数据库和用户个人信息，恢复出一个完整的 Olares。
 
-The Backup component also has data restoration capabilities. You can download a backup snapshot to a local server or Olares Space to restore a complete Olares by rebuilding Kubernetes, databases, and user personal information.
+## 了解更多
 
-## Learn More
+- 用户
 
-- User
+  [文件管理](../tasks/files.md)<br>
+  [备份与恢复](../space/backup-restore.md)
 
-  [File management](../tasks/files.md)<br>
-  [Backup & Restore](../space/backup-restore.md) 
+- 开发者
 
-- Developer
-
-  [File Upload](../../developer/develop/advanced/file-upload.md)<br>
+  [文件上传](../../developer/develop/advanced/file-upload.md)<br>
