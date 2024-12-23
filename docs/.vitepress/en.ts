@@ -5,13 +5,13 @@ const side = {
     { text: "Docs home",
       link: "/manual/docs-home",
       items: [
-      { text: "What is Olares", link: "/manual/what-is-olares" },
+      // { text: "What is Olares", link: "/manual/what-is-olares" },
       { text: "Why Olares", link: "/manual/why-olares" },
       { text: "Features",
             link: "/manual/feature-overview",
       },
           {
-            text: "Help and Support",
+            text: "Help and support",
             collapsed: true,
             items: [
               { text: "FAQs", link: "/manual/help/faqs" },

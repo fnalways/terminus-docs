@@ -1,24 +1,38 @@
-# Documentation
-
-Olares (formerly Terminus) is an open-source, self-hosted alternative to public clouds. It transforms your edge device into a sovereign cloud environment, offering cloud-level capabilities while prioritizing ease of use and privacy.
-
-For a comprehensive overview of the system, visit our [GitHub repository](https://github.com/beclab/olares).
-
+# Olares documentation
 :::info Note
-We're updating our documentation to reflect the rebranding. While you may see different interface labels in screenshots, all features and procedures remain the same.
+We're updating our documentation to reflect the rebranding. While you may see different interface labels in screenshots, all features
+and procedures remain the same.
 :::
+## What is Olares?
+Olares (formerly known as Terminus) is an open-source cloud operating system built for local AI. It turns your hardware into a private, scalable, and AI-ready environment, making it easy to host AI-powered applications, self-manage services, or collaborate securely with your team.
 
-## New to Olares?
+With Olares, self-hosting is no longer a daunting task. It simplifies complex processes like network setup, domain management, and service orchestration, enabling both beginners or experienced users to focus on what truly matters.
+
+Privacy and independence are at the core of Olares. It is perfect for individuals or teams who want to avoid relying on centralized platforms. Your data stays on your hardware, and all tasks are processed locally, so your sensitive information never leaves your control. Olares gives you complete ownership of your data and infrastructure without sacrificing performance or simplicity.
 
 <div class="cta">
   <a href="./get-started/">
     <div class="content">
-      <h3>Get started with Olares</h3>
+      <h3>New to Olares?</h3>
       <p>Check out the get-started guide to set up Olares on your local machine</p>
     </div>
     <div class="arrow">→</div>
   </a>
 </div>
+
+## Highlighted features
+
+Olares offers a wide array of features designed to enhance security, ease of use, and development flexibility:
+
+- **Enterprise-grade security**: Secure your self-hosted cloud with simplified network configuration using Tailscale, Headscale, Cloudflare Tunnel, and FRP.
+- **Secure and permissionless application ecosystem**: Access nearly 100 free applications in a secure, sandboxed environment. [See what Olares Market has to offer](https://market.olares.xyz/).
+- **Unified file system and database**: Support automated scaling, backups, and high availability.
+- **Single sign-on**: Log in once to access all applications within Olares with a shared authentication service.
+- **AI capabilities**: Manage GPU resources, host AI models locally, and build private knowledge bases with complete privacy.
+- **Built-in applications**: Get started with essential pre-installed applications such as Files, Vault, Wise, Profile and Dashboard.
+- **Seamless anywhere access**: Access your devices from anywhere using dedicated clients for mobile, desktop, and browsers.
+- **Development tools**: Build and port applications easily with comprehensive development tools.
+
 
 ## Pick your path
 
