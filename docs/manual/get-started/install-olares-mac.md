@@ -1,4 +1,4 @@
-
+# Install Olares on Mac
 
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
 

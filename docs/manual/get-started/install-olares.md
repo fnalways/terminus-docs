@@ -1,7 +1,6 @@
 <script setup>
    import { ref, computed, onMounted } from 'vue'
    import installOlaresLinux from './install-olares-linux.md'
-   import installOlaresRaspberryPi from './install-olares-raspberry-pi.md'
    import installOlaresMac from './install-olares-mac.md'
    import installOlaresInstallOlaresWindows from './install-olares-windows.md'
    import { useData } from 'vitepress'
@@ -33,12 +32,11 @@
 :::warning Note for Mainland China users
 The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
 :::
-# {{ title }}
 
 <span style="display:none;opacity: 0;">{{randomKey}}</span>
 
 <Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark" >
-<template #Linux>
+<template #Linux-based-systems>
 <installOlaresLinux/>
 </template>
 <template #macOS>

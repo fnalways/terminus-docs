@@ -1,8 +1,6 @@
 
 
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
-
-## System compatibility
+## System requirements
 Make sure your Raspbian device meets the following requirements.
 - Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
 - Operating System: Raspbian 12
