@@ -1,5 +1,5 @@
+## <span class="h2-border-none">System requirements</span>
 
-## System requirements
 
 Make sure your device meets the following requirements.
 

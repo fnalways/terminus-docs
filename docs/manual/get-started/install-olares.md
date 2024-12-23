@@ -1,8 +1,14 @@
 <script setup>
    import { ref, computed, onMounted } from 'vue'
-   import installOlaresLinux from './install-olares-linux.md'
+   import installOlaresRaspberryPi from './install-olares-raspberry-pi.md'
    import installOlaresMac from './install-olares-mac.md'
    import installOlaresInstallOlaresWindows from './install-olares-windows.md'
+
+   import installOlaresLinux from './install-olares-linux.md'
+   import installOlaresGeneralLinux from './install-olares-general-linux.md'
+   import installOlaresPVE from './install-olares-pve.md'
+   import installOlaresLXC from './install-olares-lxc.md'
+
    import { useData } from 'vitepress'
 
    const { isDark } = useData()
@@ -20,6 +26,10 @@
       document.title = `${title.value} | Olares`;
    }
 
+   function tabChange2(tab, index) {
+      randomKey.value = Math.random()
+   }
+
    onMounted(() => {
       document.title = `${title.value} | Olares`;
       setTimeout(() => {
@@ -29,6 +39,7 @@
    
 
 </script>
+
 :::warning Note for Mainland China users
 The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
 :::
@@ -36,8 +47,27 @@ The steps in this guide differ for users in Mainland China due to regional diffe
 <span style="display:none;opacity: 0;">{{randomKey}}</span>
 
 <Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark" >
-<template #Linux-based-systems>
-<installOlaresLinux/>
+<template #Linux>
+
+<Tabs @tab-changed="tabChange2" >
+
+# Install Olares on Linux-based systems
+
+<installOlaresLinux />
+<template #General-Linux>
+<installOlaresGeneralLinux/>
+</template>
+<template #PVE>
+<installOlaresPVE />
+</template>
+<template #LXC-on-PVE>
+<installOlaresLXC />
+</template>
+<template #Raspberry-Pi>
+<installOlaresRaspberryPi/>
+</template>
+</Tabs>
+
 </template>
 <template #macOS>
 <installOlaresMac />
@@ -46,3 +76,11 @@ The steps in this guide differ for users in Mainland China due to regional diffe
 <installOlaresInstallOlaresWindows />
 </template>
 </Tabs>
+
+<style>
+   h2:has(.h2-border-none) {
+    border: none !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+</style>

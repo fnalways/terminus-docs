@@ -1,6 +1,6 @@
 
 
-## System requirements
+## <span class="h2-border-none">System requirements</span>
 Make sure your Raspbian device meets the following requirements.
 - Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
 - Operating System: Raspbian 12
