@@ -1,4 +1,4 @@
-
+# 在 Mac 上安装 Olares
 
 Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows 上安装，方便测试和评估使用。
 
@@ -23,6 +23,7 @@ Mac 设备需满足以下条件：
 请确保已安装以下软件：
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
+  
   ::: tip
   推荐通过 `homebrew` 安装 minikube。
   :::

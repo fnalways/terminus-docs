@@ -32,7 +32,7 @@ While the specific versions are confirmed to work, the process may still work on
    :::
 
    ::: tip
-   If you want to install Olares on an existing LXC container. Skip to step 2 directly. Make sure you use the corresponding container ID.
+   To install Olares on an existing LXC container, skip to step 2 directly. Make sure you use the corresponding container ID.
    :::
 
    ``` bash

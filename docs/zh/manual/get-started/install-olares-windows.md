@@ -1,3 +1,4 @@
+# 在 Windows 上安装 Olares
 
 Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows 上安装，方便测试和评估使用。
 
