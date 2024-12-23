@@ -35,7 +35,7 @@
    如果缺少“`.local`”，请检查本地网络环境，确保当前设备和 Olares 处于同一网段，并且未启用外部网络代理服务。
    :::
    :::tip
-   如果你需要在外网远程使用 Olares 上的 AI 应用，可以使用 LarePass 的专用网络功能，详见[通过专有网络随时随地访问 Olares 应用](../tasks/private-network.md)。
+   如果你需要在外网远程使用 Olares 上的 AI 应用，可以使用 LarePass 的专用网络功能，详见[通过专用网络随时随地访问 Olares 应用](../tasks/private-network.md)。
    :::
 ## 配置 Krita
 
@@ -66,7 +66,7 @@
    ![连接 ComfyUI](/images/manual/use-cases/krita-comfyui-connected.png)
    :::info
    如果连接失败：
-   - 检查计算机与 Olares 主机是否处于同一网段。如果不在同一网络下，是否已成功开启专有网络功能（网络状态显示为“P2P”或“DERP”）。
+   - 检查计算机与 Olares 主机是否处于同一网段。如果不在同一网络下，是否已成功开启专用网络功能（网络状态显示为“P2P”或“DERP”）。
    - 检查 ComfyUI 的认证级别设为“内部”。
    - 检查计算机是否开启了网络代理服务。如果开启，手动关闭后再重试。
    - 检查 ComfyUI 在 Olares 主机上是否能正常生成图片。
