@@ -9,7 +9,7 @@ Make sure your device meets the following requirements.
 - Storage: 64GB or above (available disk space)
 - Supported systems:
     - PVE 8.2.2
-    - Linus container: Debian 12 (for existing LXC containers on PVE)
+    - Linux container: Debian 12 (for existing LXC containers on PVE)
 
 ::: tip Version compatibility
 While the specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).

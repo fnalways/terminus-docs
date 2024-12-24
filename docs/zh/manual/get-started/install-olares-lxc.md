@@ -9,7 +9,7 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
 - 存储：64GB 及以上（可用磁盘空间）
 - 支持的系统版本：
   - PVE: 8.2.2
-  - LXC 系统：Debian 12
+  - LXC 容器系统：Debian 12
 
 ::: tip 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
