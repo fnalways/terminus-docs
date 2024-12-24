@@ -33,7 +33,6 @@ Olares offers a wide array of features designed to enhance security, ease of use
 - **Seamless anywhere access**: Access your devices from anywhere using dedicated clients for mobile, desktop, and browsers.
 - **Development tools**: Build and port applications easily with comprehensive development tools.
 
-
 ## Pick your path
 
 Before you roll up your sleeves and get your hands dirty with Olares, feel free to take a quick tour. Here are some alternative paths to get a feel for what Olares can do.

@@ -2,12 +2,11 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 
 const side = {
   "/zh/manual/": [
-    { text: "文档站首页",
+    { text: "文档站",
       link: "/zh/manual/docs-home",
       items: [
-      { text: "什么是 Olares", link: "/zh/manual/what-is-olares" },
-      { text: "为什么选择 Olares", link: "/zh/manual/why-olares" },
-      { text: "功能",
+      { text: "应用场景", link: "/zh/manual/why-olares" },
+      { text: "功能对比",
             link: "/zh/manual/feature-overview",
       },
           {
