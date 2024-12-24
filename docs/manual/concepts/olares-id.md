@@ -61,7 +61,7 @@ Each Olares ID is bound to a DID. When a user creates an account using Olares, a
 
 
 
-## See also
+## Learn more
 
 * [Create Olares ID](../get-started/create-olares-id)
 * [Snowinning Protocol](https://docs.snowinning.com/protocol/overview.html)

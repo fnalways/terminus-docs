@@ -1,36 +1,41 @@
-# Set language and appearance
+# 设置语言和外观
 
-Personalizing your Olares experience is easy. You can set your preferred language, choose between light and dark themes, and select custom wallpapers for your desktop and login screen.
+个性化您的 Olares 使用体验十分简单。您可以设置首选语言，在浅色和深色主题之间切换，并为桌面和登录屏幕选择自定义壁纸。
 
-## System language
-Olares is currently available in the following languages:
-- English
-- Chinese (simplified)
+## 系统语言
 
-To change your display language:
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **Appearance** from the left sidebar.
-3. Click the dropdown and select your language.
+Olares 当前支持以下语言：
+- 英文
+- 中文（简体）
 
-## Theme
-Switch between light and dark themes for system applications. 
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **Appearance** from the left sidebar.
-3. In the **Theme** panel, select **Light** or **Dark**.
+更改显示语言的方法：
 
-The change applies immediately.
+1. 从 Dock 或启动板打开 **设置** 应用程序。
+2. 在左侧边栏选择 **外观**。
+3. 点击下拉菜单，选择您的语言。
 
-## Wallpaper
-To customize your desktop or login screen background:
+## 主题
 
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **Appearance** from the left sidebar.
-3. In the **Wallpaper** panel, select where to apply the wallpaper: desktop or login screen.
-4. To use a built-in wallpaper, browse and select from the provided images.
-5. To add a custom wallpaper:
+在系统应用程序中切换浅色和深色主题：
 
-   a. Click <i class="material-symbols-outlined">add_photo_alternate</i> and navigate to the target folder on your computer. 
-   
-   b. Select your desired image file.
+1. 从 Dock 或启动板打开 **设置** 应用程序。
+2. 在左侧边栏选择 **外观**。
+3. 在 **主题** 面板中，选择 **浅色** 或 **深色**。
 
-   c. Click **Confirm** or **Open** to set it as your wallpaper.
+更改会立即生效。
+
+## 壁纸
+
+自定义您的桌面或登录屏幕背景：
+
+1. 从 Dock 或启动板打开 **设置** 应用程序。
+2. 在左侧边栏选择 **外观**。
+3. 在 **壁纸** 面板中，选择要应用壁纸的位置：桌面或登录屏幕。
+4. 若要使用内置壁纸，浏览并选择提供的图片。
+5. 若要添加自定义壁纸：
+
+   a. 点击 <i class="material-symbols-outlined">add_photo_alternate</i>，导航至计算机上的目标文件夹。
+
+   b. 选择您想要的图片文件。
+
+   c. 点击 **确认** 或 **打开** 将其设置为壁纸。

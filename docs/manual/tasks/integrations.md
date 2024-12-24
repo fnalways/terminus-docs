@@ -60,6 +60,6 @@ To disconnect Olares Space from your Olares:
 2. Tap on the Olares Space card.
 3. Tap <i class="material-icons">more_horiz</i> in the top-right corner, and tap **Delete**.
 
-## See also
+## Learn more
 - [Connect your blockchain wallet](./nft-image.md)
 - [Explore how you can leverage Olares Space](../space/)

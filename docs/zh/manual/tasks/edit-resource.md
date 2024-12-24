@@ -1,43 +1,48 @@
-# Edit resources via Control Hub
-This guide shows you how to edit resource for your Olares environment.
+# 通过控制面板修改系统资源
 
-:::warning
-Modifying system resources can significantly impact system stability and performance. Only proceed with modifications under proper guidance and instructions.
-:::
-## Edit the YAML file
+本文档介绍如何编辑 Olares 环境中的资源配置。
 
-To edit the YAML file of a workload resource:
-
-1. In Control Hub, navigate to the application's **Deployments** list, and click a resource to expand its details view.
-2. In the top right corner, click **<i class="material-icons">more_vert</i>** > **Edit YAML** to open the YAML editor.
-3. Edit the YAML configuration of the workload as needed.
-4. Click **OK** to save your changes and apply them.
-
-   ![edit yaml](/images/how-to/olares/controlhub/browse/10.jpg)
-
-## Modify Pod replicas
-
-To modify the number of running Pod replicas:
-
-1. In Control Hub, navigate to a Pod's resource details page, and locate the number of Pod replicas at the top.
-2. Click **<i class="material-icons">add</i>** or **<i class="material-icons">remove</i>** to adjust the number of Pod replicas.
-
-   ![replicas](/images/how-to/olares/controlhub/browse/09.jpg)
-
-:::warning
-Many applications in Olares do not support multi-replica mode. Increasing the number of replicas for these Pods may cause exceptions. Therefore, it's important to read the documentation thoroughly and adjust the number of replicas with caution.
+:::warning 警告
+修改系统资源可能会显著影响系统的稳定性和性能。请谨慎操作，在专业指导下进行修改。
 :::
 
+## 编辑 YAML 文件
 
-## View container status
-The Pods page provides a comprehensive view of all Pods in your Olares environment, allowing you to manage them at the smallest granularity offered by Kubernetes.
-Click on a Pod in the list takes you to the Pod details page, where you can:
-- View container logs.
-- Access the container environment.
-- View container ports and environment variables.
-- Open the Pod's YAML configuration in a read-only view.
-  :::tip
-  You cannot edit the YAML configuration directly from this view. The YAML is managed by Olares through workload templates and webhooks.
+要编辑 Olares 工作负载的 YAML 配置文件：
+
+1. 在控制中心中，进入应用程序的 **部署列表**，点击资源以展开其详细信息视图。
+2. 在页面右上角，点击 **<i class="material-icons">more_vert</i>** > **编辑 YAML** 打开 YAML 编辑器。
+3. 根据需要编辑工作负载的 YAML 配置。
+4. 点击 **确认** 保存更改并应用配置。
+
+   ![编辑 YAML](/images/how-to/olares/controlhub/browse/10.jpg)
+
+## 修改 Pod 副本数
+
+要修改运行中的 Pod 副本数量：
+
+1. 在控制中心中，进入 Pod 资源详情页，查看顶部显示的 Pod 副本数量。
+2. 点击 **<i class="material-icons">add</i>** 或 **<i class="material-icons">remove</i>** 调整 Pod 副本数量。
+
+   ![副本数量](/images/how-to/olares/controlhub/browse/09.jpg)
+
+:::warning 警告
+Olares 中的许多应用程序不支持多副本模式。增加这些 Pod 的副本数量可能会导致异常。因此，请务必仔细阅读文档，并谨慎调整副本数量。
+:::
+
+## 查看容器状态
+
+Pods 页面提供了 Olares 环境中所有 Pod 的全面视图，允许你在 Kubernetes 提供的最小粒度上进行管理。
+
+点击列表中的 Pod 可进入其详情页，你可以：
+
+- 查看容器日志。
+- 访问容器环境。
+- 查看容器端口和环境变量。
+- 在只读模式下查看 Pod 的 YAML 配置。
+
+  :::tip 提示
+  无法从该视图直接编辑 YAML 配置。YAML 配置由 Olares 通过应用负载模板和 Webhook 管理。
   :::
-![pod detail](/images/how-to/olares/controlhub/pods/02.jpg)
 
+![Pod 详情](/images/how-to/olares/controlhub/pods/02.jpg)

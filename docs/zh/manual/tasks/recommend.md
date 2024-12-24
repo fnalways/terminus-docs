@@ -1,50 +1,58 @@
-# Discover themed content
-Most digital platforms control what content you see through centralized recommendation systems that collect and analyze your data. Wise offers a different approach - you choose and run recommendation algorithms directly on your device, keeping your reading preferences and interactions completely private while still enjoying personalized content discovery.
-## How self-hosted recommendation works
-Content recommendation in Wise happens in two distinct stages:
 
-1. Content providers collect and package global content in the cloud.
-2. Your Olares device downloads this content and processes it locally using your chosen recommendation algorithms.
+# 发现主题内容
 
-Since every device receives the same content data and processes recommendations offline, your reading preferences and interaction data remain completely private. You can monitor these recommendation workflows through a visual interface that shows exactly how your content is being processed.
+大多数数字平台通过集中式推荐系统控制你看到的内容，这些系统会收集并分析你的数据。Wise 提供了不同的方式——你可以直接在设备上选择并运行推荐算法，在享受个性化内容发现的同时，确保你的阅读偏好和交互完全私密。
 
-As you continue to read and bookmark content in Wise, the algorithm learns your preferences and improves its recommendation accuracy over time.
+## 自托管推荐如何工作
 
-## Install a recommendation algorithm
-To start receiving personalized content recommendations:
+Wise 中的内容推荐分为两个阶段：
 
-1. In Market, browse the **Recommendation** category for a topic that interests you.
-2. Click **Get** to install your chosen algorithm.
-3. Allow some time for the algorithm to complete its local recommendation workflow.
+1. 内容提供商在云端收集并打包全球内容。
+2. 你的 Olares 设备下载这些内容，并使用你选择的推荐算法在本地处理。
+
+由于每个设备接收相同的内容数据并离线处理推荐，你的阅读偏好和交互数据始终保持私密。你还可以通过可视化界面监控推荐工作流，清楚了解内容的处理过程。
+
+随着你在 Wise 中持续阅读和收藏内容，算法会学习你的偏好，并逐步提高推荐的准确性。
+
+## 安装推荐算法
+
+通过以下步骤接收个性化内容推荐：
+
+1. 在 Market 中浏览 **推荐** 类别，选择感兴趣的主题。
+2. 点击 **获取** 安装你选择的算法。
+3. 等待算法完成本地推荐工作流。
 
    ![Recommendation algorithm](/images/manual/tasks/install-recommendation.png)
 
-Once installed, find your recommended content on the **For you** page in Wise. This page displays results from all your installed recommendation algorithms, with separate content feeds for each. Switch between different algorithms by clicking the recommendation title at the top.
+安装完成后，你可以在 Wise 的 **为你推荐** 页面查看推荐内容。此页面显示所有已安装推荐算法的结果，并按算法分为独立内容流。点击顶部的推荐标题即可切换不同算法。
 
 ![For you](/images/manual/tasks/for-you.png)
 
-:::tip
-You can subscribe to a feed to read all content from that source in the future.
+:::tip 提示
+你可以订阅内容源，以便未来阅读该来源的所有内容。
 :::
 
-## Monitor algorithm workflow
-To track how your recommendation engine processes data and generates suggestions:
+## 监控算法工作流
 
-1. In Wise, go to the page **Manage** > **Recommendations**.
-2. Click any specific workflow to view its operation records.
-3. Click a record to see detailed information and logs.
+你可以查看推荐引擎如何处理数据并生成内容推荐：
+
+1. 在 Wise 中，进入 **管理** > **推荐** 页面。
+2. 点击任一特定工作流以查看其操作记录。
+3. 点击记录查看详细信息和日志。
 
 ![Recommendation algorithm workflow](/images/manual/tasks/recommendation-algorithm-workflow.png)
 
-The workflow visualization shows each step of the recommendation process. You can examine step summaries, container settings, and operation logs for complete transparency.
+工作流可视化显示推荐过程的每个步骤。你可以检查步骤摘要、容器设置和操作日志，确保完全透明。
 
-## Remove a recommendation algorithm
-To uninstall a recommendation algorithm:
+## 卸载推荐算法
 
-1. In Market, go to the page **My Olares**.
-2. Click <i class="material-icons">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
+卸载推荐算法的方法：
 
-## FAQ
+1. 在 Market 中进入 **我的 Olares** 页面。
+2. 点击应用操作按钮旁的 <i class="material-icons">keyboard_arrow_down</i>，选择 **卸载**。
 
-### Why can't I see recommended content after installation?
-If you've just installed a recommendation algorithm, you'll need to wait briefly while it completes the local recommendation workflow on your Olares. This ensures all processing happens locally to protect your privacy.
+## 常见问题
+
+### 为什么安装推荐算法后看不到推荐内容？
+
+如果你刚安装推荐算法，需要稍等片刻，等待算法在 Olares 上完成本地推荐工作流。这种方式确保所有处理均在本地进行，以保护你的隐私。

@@ -1,12 +1,16 @@
-# How-to
-The how-to guide focuses on practical, step-by-step instructions to answer the question "how do I ...". Rather than explaining concepts, each section walks you through concrete actions to achieve your goals.
+# 操作指导
+
+本使用指南专注于提供实用的操作步骤说明，回答“如何完成……”的问题。与解释概念不同，每个部分将引导您通过具体操作来实现目标。
+
 :::info
-This guide assumes you have installed and activated Olares. For installation instructions, see [Get started](../get-started/).
+本指南假设您已安装并激活 Olares。如需安装说明，请参阅 [快速开始](../get-started/)。
 :::
 
-## What you'll find here
-The guide covers essential operations in Olares including:
-- Working with essential Olares built-in apps
-- Personalizing your Olares experience
-- Setting up Olares to enhance efficiency
-- Managing Olares for team collaboration
+## 内容简介
+
+本指南涵盖 Olares 的核心操作，包括：
+
+- 使用 Olares 内置的关键应用程序
+- 个性化你的 Olares 使用体验
+- 设置 Olares 以提升效率
+- 管理 Olares 实现团队协作

@@ -2,71 +2,77 @@
 outline: [2, 3]
 ---
 
-# Access Olares applications anywhere via VPN
+# 通过专用网络随时随地访问 Olares
 
-For services intended for personal use, such as desktop, file management, or media players,  you can use domain names in the format `https://{routerID}.local.{OlaresDomain}` (e.g., https://vault.local.bob.olares.com) to access these applications locally.
+对于个人使用的服务（如桌面、文件管理或媒体播放器），你可以使用类似 `https://{routerID}.local.{OlaresDomain}` 的域名格式（例如，`https://vault.local.bob.olares.com`）在本地访问这些应用程序。
 
-Local access to such applications is supported in two ways:
+本地访问支持以下两种方式：
 
-- **LAN**: When your device and Olares are on the same local network, such as being connected to the same WiFi.
-- **Private network**: By enabling Virtual Private Network (VPN) in LarePass, all traffic from the device running LarePass to Olares is routed through a secure private network, providing the same experience as intranet access.
+- **局域网 (LAN)**：当你的设备与 Olares 在同一局域网内（例如连接到相同的 WiFi）。
+- **私有网络**：通过在 LarePass 中启专用网络 (VPN)，所有从运行 LarePass 的设备到 Olares 的流量都通过安全的私有网络传输，提供与内网访问相同的体验。
 
-This document walks you through how to set up VPN access to Olares.
+本文档将指导你如何设置专用网络访问 Olares。
 
+## 在 LarePass 上设置专用网络访问
 
-## Set up VPN access on LarePass
-:::tip
-For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
+:::tip 提示
+要获取 LarePass 的不同下载选项，请访问 [官方页面](https://www.olares.xyz/larepass)。
 :::
 
-### On LarePass mobile client
-1. Open LarePass, go to **Settings** > **Account**.
-2. Turn on the VPN switch.
+### LarePass 移动端
 
-### On LarePass desktop client
-1. Open LarePass, click on the avatar area in the top left corner of the main interface.
-2. Turn on the switch for **Enable VPN connection** in the pop-up panel.
+1. 打开 LarePass，进入 **设置** > **账户**。
+2. 打开**专用网络**开关。
 
-Devices with activated VPN will use the VPN connection to access Olares, whether through the LarePass client or a browser.
+### LarePass 桌面客户端
 
-:::info
-iOS or macOS versions of LarePass will require adding a VPN configuration file to the system when turning on the VPN. Follow the prompts to complete the setup.
+1. 打开 LarePass，点击主界面左上角的头像区域。
+2. 在弹出面板中打开 **启用专用网络连接** 开关。
+
+打开专用网络开关后，无论是通过 LarePass 客户端还是浏览器，你的设备将通过专用网络连接访问 Olares。
+
+:::info 提示
+在 iOS 或 macOS 版本的 LarePass 中启用专用网络时，需要将专用网络配置文件添加到系统中。请按照系统提示完成设置。
 :::
 
-## Enforce access using VPN
-For maximum security, Olares allows you to enforce VPN mode and ensure that all connections to your private Olares applications go through the VPN, regardless of the device or network you're using.
+## 强制使用专用网络访问
 
-To enable enforced VPN mode:
-1. Enable VPN connections on at least two devices (typically a computer and a mobile phone) with LarePass installed. See [Set up VPN access on LarePass](#set-up-vpn-access-on-larepass).
-2. Open the Settings app from the Dock or Launchpad.
-3. Click on your profile picture in the top-left corner, and scroll down to **Security** settings.
-4. Turn on the switch for **Enforce VPN access to private entrance**.
+为确保安全性，Olares 支持**强制启用专用网络**模式，确保所有连接到你的私有 Olares 应用程序的流量均通过专用网络，无论使用的设备或网络。
 
-When successful, you'll see a confirmation message at the bottom of the screen.
+启用强制专用网络模式的方法：
 
-## Understand connection status
-LarePass displays the connection status between your account and Olares, helping you understand or diagnose your current network connection.
+1. 在至少两台设备（通常是电脑和手机）上启用 LarePass 的专用网络连接。参见 [在 LarePass 上设置专用网络访问](#set-up-vpn-access-on-larepass)。
+2. 从 Dock 或启动台打开 **设置** 应用程序。
+3. 点击左上角的个人头像，滚动至 **安全** 设置。
+4. 打开 **强制通过专用网络访问私有入口** 开关。
 
-| Status       | Description                                      |
-|--------------|--------------------------------------------------|
-| Internet     | Connected to Olares via the public internet      |
-| Intranet     | Connected to Olares via the local network        |
-| FRP          | Connected to Olares via FRP                      |
-| DERP         | Connected to Olares via VPN using DERP relay     |
-| P2P          | Connected to Olares via VPN using P2P connection |
-| Offline mode | Currently offline, unable to connect to Olares   |
+启用成功后，屏幕底部会显示确认消息。
 
-::: info
-When accessing private entrances from an external environment through VPN, if the status shows "DERP", it indicates that the VPN cannot directly connect to Olares via P2P and must use Tailscale's relay servers. This status may affect connection quality. If you consistently encounter this situation, please contact Olares support for assistance.
+## 了解连接状态
+
+LarePass 会显示与 Olares 的连接状态，帮助你了解或诊断当前网络连接。
+
+| 状态         | 描述                                          |
+|--------------|----------------------------------------------|
+| Internet     | 通过公网连接到 Olares                        |
+| Intranet     | 通过局域网连接到 Olares                      |
+| FRP          | 通过 FRP 连接到 Olares                       |
+| DERP         | 通过使用 DERP 中继的专用网络连接到 Olares         |
+| P2P          | 通过 P2P 的专用网络连接到 Olares                 |
+| Offline mode | 当前离线，无法连接到 Olares                   |
+
+:::info 提示
+通过专用网络从外部环境访问私有入口时，如果状态显示为 “DERP”，这表明专用网络无法直接通过 P2P 连接到 Olares，而必须使用 Tailscale 的中继服务器。此状态可能会影响连接质量。如果经常遇到此情况，请联系 Olares 支持寻求帮助。
 :::
 
-## Troubleshoot connection issues
-If you encounter connection problems, LarePass will display diagnostic messages to help you resolve the issue. Here are some common scenarios and how to address them:
+## 排查连接问题
 
-| Status message                                               | Possible cause and recommended actions                                                                                                                                                                                                                                                                                                                         |
-|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Network issue detected. Please check local network settings. | **Local network issue** <br> 1. Wait for automatic reconnection. The system will detect network recovery and sync data. <br> 2. Check your local network settings if the issue persists.                                                                                                                                                                       |
-| VPN connection to Olares required.                           | **VPN not enabled** <br> Click the notification banner and follow prompts to enable VPN connection.                                                                                                                                                                                                                                                            |
-| Olares re-login required.                                    | **Session expired or authentication issue** <br> Click the notification banner and follow prompts to log in.                                                                                                                                                                                                                                                   |
-| Olares reconnection required.                                | **Connection interrupted or timed out** <br> Click the notification banner and follow prompts to log in. After re-login, Vault data will sync and merge with the server.                                                                                                                                                                                       |
-| No running Olares detected.                                  | **Temporary network issue or Olares is restarting or shutting down** <br> Wait for automatic recovery. This usually resolves shortly. <br> **Olares instance no longer exists** <br> 1. Click the notification banner and follow prompts to reactivate Olares, enable offline mode or ignore notification. <br> 2. Contact Olares Admin if the issue persists. |
+如果遇到连接问题，LarePass 会显示诊断消息帮助你解决问题。以下是一些常见问题及解决方法：
+
+| 状态消息                                               | 可能原因及建议解决方法                                                                                                                                                                                                                                                                          |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 检测到网络问题。请检查本地网络设置。                    | **本地网络问题** <br> 1. 等待自动重新连接，系统会检测网络恢复并同步数据。 <br> 2. 如果问题持续，检查你的本地网络设置。                                                                                                                                                                          |
+| 需要专用网络连接到 Olares。                               | **VPN 未启用** <br> 点击通知横幅，按照提示启用专用网络连接。                                                                                                                                                                                                                                     |
+| 需要重新登录 Olares。                                  | **会话过期或身份验证问题** <br> 点击通知横幅，按照提示重新登录。                                                                                                                                                                                                                                |
+| 需要重新连接到 Olares。                                | **连接中断或超时** <br> 点击通知横幅，按照提示重新登录。重新登录后，Vault 数据将与服务器同步并合并。                                                                                                                                                                                             |
+| 未发现运行中的 Olares。                              | **临时网络问题或 Olares 正在重启或关闭** <br> 等待自动恢复，通常会在短时间内解决。 <br> **Olares 实例不存在** <br> 1. 点击通知横幅，按照提示重新激活 Olares，启用离线模式或忽略通知。 <br> 2. 如果问题持续，请联系 Olares 管理员。                                    |

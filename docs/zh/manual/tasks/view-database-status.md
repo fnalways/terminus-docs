@@ -1,54 +1,54 @@
-# View database status in Olares
-You can use third-party applications to view database status in Olares.
+# 在 Olares 中查看数据库状态
 
-For example, Bytebase is a multipurpose middleware for working with databases. This guide uses Bytebase to demonstrate how to access database in the middleware.
+你可以使用第三方数据库中间件应用在 Olares 中查看数据库状态。本指南以 Bytebase 为例，演示如何通过中间件访问数据库。
 
-## Before you begin
-Make sure that you have installed Bytebase from Market.
+## 准备工作
 
-![bytebase](/images/how-to/olares/controlhub/middleware/07.jpg)
+确保你已从 Market 安装 Bytebase。
 
-## Add a PostgreSQL instance
+![安装bytebase](/images/how-to/olares/controlhub/middleware/07.jpg)
 
-To add a PostgreSQL instance in Bytebase:
+## 添加 PostgreSQL 实例
 
-1. In **Bytebase**, click **Add Instance**, and select **PostgreSQL**.
-2. Configure the instance:
-    - **Instance Name**: `Olares` or others.
-    - **Environment**: Choose either `PROD` or `TEST`.
-    - **HOST**, **USERNAME**, **PASSWORD**: Fill according to the information in the Control Hub's **Middleware** section.
+在 Bytebase 中添加 PostgreSQL 实例：
 
-   ![alt text](/images/how-to/olares/controlhub/middleware/09.jpg)
+1. 在 **Bytebase** 中，点击 **添加实例**，选择 **PostgreSQL**。
+2. 配置实例：
+    - **实例名称**：输入 `Olares` 或其他名称。
+    - **环境**：选择 `PROD` 或 `TEST`。
+    - **主机**、**用户名**、**密码**：根据 Control Hub 的 **中间件** 部分中的信息填写。
 
-3. Click **Create** to save the changes and connect the instance.
+   ![配置PostgreSQL](/images/how-to/olares/controlhub/middleware/09.jpg)
 
-Now you should be able to view the details of the PostgreSQL instance you just added.
+3. 点击 **创建** 保存更改并连接实例。
 
-![alt text](/images/how-to/olares/controlhub/middleware/10.jpg)
+现在，你应该能够查看刚刚添加的 PostgreSQL 实例的详细信息。
 
-## Add a MongoDB instance
-To add a MongoDB instance in Bytebase:
+![PostgreSQL信息](/images/how-to/olares/controlhub/middleware/10.jpg)
 
-1. In **Bytebase**, click **Add Instance**, and select **MongoDB**.
-2. Configure the instance.
-   - **Instance Name**: `Olares` or others.
-   :::info NOTE
-   Do not use duplicate instance names.
+## 添加 MongoDB 实例
+
+在 Bytebase 中添加 MongoDB 实例：
+
+1. 在 **Bytebase** 中，点击 **添加实例**，选择 **MongoDB**。
+2. 配置实例：
+   - **实例名称**：输入 `Olares` 或其他名称。
+   :::info 提示
+   请勿使用重复的实例名称。
    :::
-   - **Environment**: Choose either `PROD` or `TEST`.
-   - **HOST**, **USERNAME**, **PASSWORD**: Fill according to the information in the Control Hub's **Middleware** section.
+   - **环境**：选择 `PROD` 或 `TEST`。
+   - **主机**、**用户名**、**密码**：根据 Control Hub 的 **中间件** 部分中的信息填写。
 
-   ![bytebase1](/images/how-to/olares/controlhub/middleware/11.jpg)
+   ![配置MongoDB](/images/how-to/olares/controlhub/middleware/11.jpg)
 
-3. Click **Create** to save and connect the instance.
+3. 点击 **创建** 保存并连接实例。
 
-Now you should be able to view the details of the MongoDB instance you just added.
+现在，你应该能够查看刚刚添加的 MongoDB 实例的详细信息。
 
-![alt text](/images/how-to/olares/controlhub/middleware/12.jpg)
+![MongoDB 信息](/images/how-to/olares/controlhub/middleware/12.jpg)
 
-## Edit the database
+## 编辑数据库
 
-In Bytebase, click **SQL Editor** in the upper right corner to go to the **Editor** page for further operations.
+在 Bytebase 中，点击右上角的 **SQL 编辑器**，进入 **编辑器** 页面以进行进一步操作。
 
-![bytebase1](/images/how-to/olares/controlhub/middleware/13.jpg)
-
+![编辑数据库](/images/how-to/olares/controlhub/middleware/13.jpg)

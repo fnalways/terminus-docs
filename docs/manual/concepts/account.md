@@ -58,7 +58,7 @@ When a user is first created, Olares generates a random password for initial set
 
 When users perform sensitive operations such as login, Olares requires users to enter the one-time two-factor authentication code generated in LarePass.
 
-## See also
+## Learn more
 
 ### Users
 

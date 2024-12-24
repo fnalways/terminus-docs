@@ -1,47 +1,59 @@
-# Generate two-factor authentication codes
-Two-factor authentication (2FA) requires both your password and an authentication code when signing in. These codes are generated using Time-Based One-Time Password (TOTP), which creates temporary codes that refresh automatically. Similar to Google Authenticator or Microsoft Authenticator, Vault can generate secure 2FA codes for your online accounts.
+# 生成双因素身份验证（2FA）代码
 
-This guide explains how to generate two-factor authentication (2FA) codes in Vault.
-## Prepare your target service
-1. Log in to the website where you want to enable 2FA (e.g., GitHub or OpenAI).
-2. Navigate to the security settings page and enable two-factor authentication using authenticator app.
+双因素身份验证（2FA）在登录时需要你的密码和身份验证代码。这些代码由基于时间的一次性密码（TOTP）生成，自动刷新。与 Google Authenticator 或 Microsoft Authenticator 类似，Vault 可以为你的在线账户生成安全的 2FA 代码。
+
+本文档将展示如何在 Vault 中生成双因素身份验证（2FA）代码。
+
+## 准备目标服务
+
+1. 登录你希望启用 2FA 的网站或应用（例如 GitHub 或 OpenAI）。
+2. 转到安全设置页面，启用基于身份验证应用的双因素身份验证。
 
    ![Enable GitHub 2FA](/images/manual/tasks/2fa-github.png)
-3. Save the provided secret key or QR code for the next steps.
-:::tip
-If the service provides recovery codes, store them securely. They are crucial to account recovery if you lose access to Vault.
+
+3. 保存提供的密钥或二维码以备后续使用。
+
+:::tip 注意
+如果服务提供恢复代码，请安全存储。这些代码在你无法访问 Vault 时对账户恢复至关重要。
 :::
 
-## Create an authenticator in Vault
-:::tip
-Visit the [official page](https://www.olares.xyz/larepass) for download options.
+## 在 Vault 中创建身份验证器
+
+:::tip 提示
+访问 [官方页面](https://www.olares.xyz/larepass) 获取下载选项。
 :::
+
 <tabs>
-<template #Olares,-LarePass-desktop,-or-browser-extension>
+<template #Olares,-LarePass-桌面,-浏览器插件>
 
-1. In Vault, click <i class="material-icons">add</i> in the top right corner.
-2. Select **Authenticator** as the item type, and click **Create**.
-3. Fill in the required fields:
-    - Item name: enter a descriptive name or the service. For example, `GitHub`.
-    - One-time password: Paste the secret key.
-4. Click **Save**.
+1. 在 Vault 中，点击右上角的 <i class="material-icons">add</i>。
+2. 选择 **身份验证器** 作为项目类型，并点击 **创建**。
+3. 填写必填字段：
+    - 项目名称：输入服务的描述性名称，例如 `GitHub`。
+    - 一次性密码：粘贴上一步提供的密钥。
+4. 点击 **保存**。
+
 </template>
 
-<template #LarePass-mobile>
+<template #LarePass-应用>
 
-1. Open LarePass on your device, and navigate to the **Vault** page within the app.
-2. Click <i class="material-icons">add</i> in the top right corner.
-3. Select **Authenticator** as the item type, and click **Create**.
-4. Fill in the required fields:
-    - Item name: enter a descriptive name or the service. For example, `GitHub`.
-    - One-time password: Click <i class="material-icons">qr_code</i> in the text field to scan the QR code.
-5. Click **Save**.
+1. 在你的设备上打开 LarePass，并进入应用的 **Vault** 页面。
+2. 点击右上角的 <i class="material-icons">add</i>。
+3. 选择 **身份验证器** 作为项目类型，并点击 **创建**。
+4. 填写必填字段：
+    - 项目名称：输入服务的描述性名称，例如 `GitHub`。
+    - 一次性密码：点击文本字段中的 <i class="material-icons">qr_code</i> 以扫描二维码。
+5. 点击 **保存**。
+
 </template>
 </tabs>
-Once saved, your new authenticator will immediately begin generating codes.
 
-## Use your 2FA generator
- To use it:
-1. Sign in to the website with your username and password.
-2. When prompted for an authentication code, open Vault to view the current 6-digit code.
-3. Enter the code to complete login.
+保存后，新的身份验证器将立即开始生成代码。
+
+## 使用你的 2FA 生成器
+
+要使用 2FA：
+
+1. 使用你的用户名和密码登录网站。
+2. 当系统提示输入身份验证代码时，打开 Vault 查看当前的 6 位代码。
+3. 输入代码完成登录。

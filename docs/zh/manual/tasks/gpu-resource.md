@@ -2,43 +2,46 @@
 outline: [2, 3]
 ---
 
-# Manage GPU usage
+# 管理 GPU 使用
+
+:::info 注意
+只有 Olares 管理员可以更改 GPU 使用模式，以优化系统资源调配，避免资源需求冲突。
+:::
+
+Olares 提供灵活的 GPU 内存管理，支持图像生成和大型语言模型等资源密集型任务。用户可根据需求在 **共享模式** 和 **独占模式** 之间进行选择。
+
+## GPU 使用模式
+
+:::tip 提示
+在运行多个轻量级任务或需要确保资源在多用户环境下公平分配时，使用共享模式。对于复杂的 AI 模型或高分辨率图像生成等需要专用资源的任务，请切换到独占模式。
+:::
+
+### 共享模式（默认）
+
+在共享模式下，Olares 智能分配 GPU 内存，以支持多个应用程序运行：
+
+* 应用程序共享硬件的最大 GPU 内存。
+* 按请求顺序执行任务，确保资源分配公平。
+* 适合同时运行多个轻量级 GPU 任务的用户。
+
+### 独占模式
+
+对于需要专用 GPU 资源的用户，可以启用独占模式：
+
+* 应用程序可独占请求硬件的最大 GPU 内存。
+* 提高单个资源密集型任务的性能。
+* 大内存请求可能会限制后续应用程序的可用资源。
+
 :::info
-Only Olares admin can change GPU usage mode. This ensures optimal resource management across the system and prevents conflicts between users' resource needs.
+对于集群应用（如SD Web UI 和 ComfyUI），GPU 内存由集群应用本身管理，而不是其单个授权应用实例。因此，GPU 模式设置不会授权应用。
 :::
 
-Olares offers flexible GPU memory management to support resource-intensive tasks like image generation and large language models. Users can choose between two modes to best suit their needs: **shared mode** and **standalone mode**.
+## 更改应用程序的 GPU 模式
 
-## GPU usage modes
-:::tip
-Use shared mode when running multiple lightweight tasks or when you want to ensure fair resource distribution among users. Switch to standalone mode for complex AI models or high-resolution image generation tasks that require dedicated resources.
-:::
+1. 从 Dock 或启动板打开 **设置** 应用程序。
+2. 在左侧边栏选择 **系统**，然后点击右侧的 **GPU**。
+3. 在下拉列表 **VRAM 模式** 中，选择所需的 GPU 使用模式。
 
-### Shared mode (default)
+## 了解更多
 
-In shared mode, Olares intelligently allocates GPU memory across multiple applications:
-
-* Applications share up to the maximum GPU memory available on your hardware.
-* Tasks are executed in order of request, ensuring fair resource distribution.
-* Ideal for users running multiple lightweight GPU tasks simultaneously.
-
-### Standalone mode
-
-For users requiring dedicated GPU resources, standalone mode can be enabled:
-
-* Applications can request up to the maximum GPU memory available on your hardware exclusively.
-* Enhances performance for single, resource-intensive tasks. 
-* Large memory requests may limit resources available for subsequent applications.
-
-:::info
-For cluster-scoped applications, such as SD Web UI (Stable Diffusion) and ComfyUI, GPU memory is managed by the cluster-scoped application itself, not individual user instances.
-This means that the GPU mode settings described here do not directly affect authorized applications.
-:::
-
-## Change GPU mode for application
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **System** from the left sidebar, and click **GPU** on the right.
-3. In the dropdown **VRAM mode**, select the required GPU usage mode.
-
-## See also
-- [Monitor GPU usage in Olares](./resources-usage.md)
+- [监控 Olares 中的 GPU 使用情况](./resources-usage.md)
