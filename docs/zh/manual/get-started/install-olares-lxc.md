@@ -9,7 +9,7 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
 - 存储：64GB 及以上（可用磁盘空间）
 - 支持的系统版本：
   - PVE: 8.2.2
-  - LXC 容器系统：Debian 12
+  - LXC 容器系统：Debian 12（既有 LXC 环境）
 
 ::: tip 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
@@ -36,7 +36,7 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
    如果你想要在 PVE 中已有 LXC 容器上安装 Olares，请直接到第二步更新 LXC 配置。要记得更新对应的容器 ID。
    :::
 
-   ```bash
+   ```bash{2}
    export ROOTPASS=123456 
    pct create 16553 /var/lib/vz/template/cache/debian-12-standard_12.7-1_amd64.tar.zst \
    --hostname olares \
@@ -137,7 +137,7 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
 curl -fsSL https://cn.olares.sh | bash -
 ```
 
-:::tip 注意
+:::tip root 用户密码
 安装过程中，可能需要输入 root 用户密码。
 :::
 

@@ -38,7 +38,7 @@ In terminal, run the following command:
  ```bash
  curl -fsSL https://olares.sh |  bash -
  ```
-:::info
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh

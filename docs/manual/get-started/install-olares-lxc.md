@@ -100,7 +100,6 @@ To install Olares on an existing LXC container, skip to step 2 directly. Make su
 4. Start the LXC container, make initial configurations, and exit:
 
    ```bash
-
    # Start the container
    pct start 16553
 
@@ -142,11 +141,11 @@ Run the following installation command inside the LXC container:
 curl -fsSL https://olares.sh | bash -
 ```
 
-:::tip Note
+:::tip Root user password
 During the installation, you may be prompted to enter your root password.
 :::
 
-:::info
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh

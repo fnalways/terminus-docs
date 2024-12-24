@@ -21,11 +21,11 @@ In your terminal, run the following command:
 curl -fsSL https://olares.sh |  bash -
 ```
 
-:::tip Note
+:::tip Root user password
 During the installation, you may be prompted to enter your root password.
 :::
 
-:::info
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh

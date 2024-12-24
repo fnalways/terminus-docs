@@ -4,7 +4,7 @@
 Make sure your Raspbian device meets the following requirements.
 - Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
 - Operating system: Raspbian 12
-- Storage: 64GB (SSD Recommended)
+- Storage: 64GB (SSD recommended)
 
 ## Set up system environment
 1. Configure the Raspbian environment to enable necessary features:
@@ -27,11 +27,11 @@ Run the following command:
  curl -fsSL https://olares.sh |  bash -
  ```
 
-:::tip Note
+:::tip Root user password
 During the installation, you may be prompted to enter your root password.
 :::
 
-:::info
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh

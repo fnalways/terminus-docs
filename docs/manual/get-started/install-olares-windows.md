@@ -14,7 +14,7 @@ Make sure your Windows meets the following requirements.
 - CPU: 4 cores or above
 - RAM: 16 or above (available memory)
 - Storage: 64 GB or above (available disk space)
-- Supported Systems:
+- Supported systems:
     - Windows 10 or 11
     - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
@@ -24,7 +24,7 @@ Make sure your Windows meets the following requirements.
 
 3. Set the execution policy for the current user.
 
-   a. Open PowerShell as Administrator, then run the following command:
+   a. Open PowerShell as administrator, then run the following command:
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
     ```
@@ -41,11 +41,11 @@ Make sure your Windows meets the following requirements.
 
 The script will then start installing Olares.
 
-:::tip Note
+:::tip Root user password
 During the installation, you may be prompted to enter your root password.
 :::
 
-:::info
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh
