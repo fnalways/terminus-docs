@@ -4,7 +4,7 @@ We're updating our documentation to reflect the rebranding. While you may see di
 and procedures remain the same.
 :::
 ## What is Olares?
-Olares (formerly known as Terminus) is an open-source cloud operating system built for local AI. It turns your hardware into a private, scalable, and AI-ready environment, making it easy to host AI-powered applications, self-manage services, or collaborate securely with your team.
+Olares (formerly known as Terminus) is an open-source sovereign cloud operating system built for local AI. It turns your hardware into a private, scalable, and AI-ready environment, making it easy to run local AI applications, self-host services, manage files, or collaborate securely with your team.
 
 With Olares, self-hosting is no longer a daunting task. It simplifies complex processes like network setup, domain management, and service orchestration, enabling both beginners or experienced users to focus on what truly matters.
 
