@@ -1,69 +1,66 @@
 # Olares ID
 
-This document gets you familiar with Olares ID.
+本文档将帮助你了解 Olares ID 的重要性。
 
-## What is an Olares ID?
+## 什么是 Olares ID？
 
-An Olares ID is a unique identifier within the Olares ecosystem, serving as your digital identity and gateway to various services and features. Each Olares account corresponds to an Olares ID.
+Olares ID 是 Olares 生态系统中的独一无二的标识符，它是你数字身份的核心，也是你使用各种服务和功能的门户。每个 Olares 账户都会有一个对应的 Olares ID。
 
-## Olares ID structure
+## 为什么需要 Olares ID？
 
-An Olares ID consists of two parts: 
-- A local name (prefix) 
-- A domain name (suffix)
+每个 Olares ID 都会自动获得一个**专属子域名**，具有以下优势：
 
-For example, in `alice@olares.com`, *alice* is the local name, and *olares.com* is the domain.
+* **便捷访问**：系统会自动为你分配个人子域名，并配置相应的访问策略。通过这个子域名，你可以随时随地访问 Olares 上的应用和服务。
+* **免费 HTTPS 证书加持的安全性**：所有子域名都自带免费 HTTPS 证书，确保安全性。
+* **个性化且易记**：无论是 Olares ID 还是对应的子域名，都便于记忆和分享，打造你独一无二的数字身份。
 
-Local names are unique within each domain, ensuring that each Olares ID is unique.
+例如，如果你的 Olares ID 是 `alic123e@olares.cn`，系统会自动为你分配子域名 `alice.olares.cn`。基于这个子域名，你的各项服务会获得相应的访问地址：
+- `alice123.olares.cn`：用于访问个人主页。
+- `desktop.alice123.olares.cn`：用于访问个人 Olares 桌面。
+- `files.alice123.olares.cn`：用于访问文件管理器。
 
-### Domain types
-Within Olares, there are three types of Domains:
+## Olares ID 的组成
+Olares ID 的格式与电子邮件地址相同，由两部分组成：
+- 本地名称（前缀部分）
+- 域名（后缀部分）
 
-* Individual domains provide personal identification spaces. Currently, Olares provides the default domain name `olares.com` for individual users.
-* Organization domains enable institutional identity management.
-* Entity domains represent non-human entities like applications.
+例如， `alic123e@olares.cn` 中， **`alice123`** 是本地名称，**`olares.cn`** 是域名。
 
-### Identify verification for individuals
+每个域名下的本地名称都是唯一的，这确保了所有 Olares ID 都不会重复。
 
-Olares offers two approaches to create your individual identity:
-- **Basic identity creation**<br>You can create an Olares ID by choosing an available name that meets the requirements.
-- **Verified identity creation**<br>
-This approach uses Verification Credentials (VC) to connect an existing trusted identity (such as email accounts) with the Olares ID. 
-When creating a verified identity, Olares:
-   * Authenticates the user through established OAuth providers
-   * Creates cryptographic links between the social identity and Olares DID
+### 域名类型
+Olares 支持三种类型的域名：
 
-:::tip
-To create an individual Olares ID with VC, on the creation page in LarePass, click <i class="material-icons">display_settings</i>, then select **Individual Olares ID**. 
+* 个人域名：供个人使用，类似个人邮箱。目前 Olares 为个人用户提供默认域名 `olares.cn` 或 `olares.com`。
+* 组织域名：供组织使用，如公司电子邮件地址。用户加入组织后，可以申请该组织域名下的 Olares ID。离开组织后，管理员可以收回该 Olares ID。
+* 实体域名：供应用程序等无法归类为个人或组织的实体使用。
 
-Currently, verification is available through Google OAuth.
+### 个人 Olares ID 创建
+创建个人 Olares ID 有两种方式：
+- **快速创建**<br>直接选择一个未被使用的前缀，按要求完成注册即可获得 Olares ID。
+- **高级创建**<br>
+  将现有的可信身份（如邮箱账号）与 Olares ID 绑定，通过验证凭证（VC）建立关联。
+  在验证过程中，系统会：
+  * 通过认证过的 OAuth 服务商验证你的身份
+  * 在你的社交身份与 Olares DID 之间建立加密链接
+
+:::tip 如何创建带有验证凭证（VC）的 Olares ID
+打开 LarePass，在账户创建页面的右上角点击 <i class="material-icons">display_settings</i>，在“**创建带有 VC 的 Olares ID**”下，选择**个人 Olares ID**。
+
+目前支持通过 Google OAuth 进行身份验证。
 :::
 
-## Why do you need an Olares ID?
+## Olares ID 和 DID 的关系是什么？
+去中心化标识符（DID）是一种无需依赖中心化机构就能验证的唯一标识符。虽然 DID 解决了去中心化网络中的身份问题，但对普通用户来说较难记忆和使用。
 
-Your Olares ID corresponds to a **unique domain name**, offering several key benefits:
+![DID](/images/manual/concepts/DID.png){width=70%}
 
-* **Ease of access**: The system automatically provisions subdomains and access policies for your applications within Olares. You can use the domain name as your personal web address to seamlessly access Olares applications and services from anywhere.
-* **Enhanced security with free HTTPS certificate**: Olares domain name comes with a free HTTPS certificate, ensuring secure and encrypted communication for all your digital interactions.
-* **Easy to remember and personalized**: Olares ID and the corresponding domain name are easy to remember, share, and personalized for your distinct online identity.
+Olares ID 使 DID 更友好。因为使用了电子邮箱地址的熟悉格式，既方便记忆，又能充分利用 DID 的安全特性。
+每个 Olares ID 都会绑定一个 DID。用户创建 Olares 账户时，系统会同步创建对应的 DID。要深入了解两者关系，请参考[Olares 账户的状态说明](./account#账户的状态)。
 
-By simply replacing the "@" in your Olares ID with a ".", you get your corresponding domain name. For example,
+## 了解更多
 
-* **Olares ID**: `alice@olares.com`
-* **Domain Name**: `alice.olares.com`
-
-## What's Olares ID's relationship with DID
-
-A Decentralized Identifier (DID) is a unique, cryptographically verifiable identifier that doesn't rely on any centralized authority. While DIDs solve the issue of identity in a decentralized network, they are typically difficult for humans to remember or use in daily situations.
-
-Olares ID acts as a human-readable layer on top of DIDs. It provides a familiar, easy-to-remember format similar to email addresses, while still leveraging the power and security of DIDs.
-Each Olares ID is bound to a DID. When a user creates an account using Olares, a DID is created at the same time. Learn more about their relationship in [Stage of Olares account](./account#understand-the-stage-of-account).
-
-
-
-## See also
-
-* [Create Olares ID](../get-started/create-olares-id)
-* [Snowinning Protocol](https://docs.snowinning.com/protocol/overview.html)
-* [Decentralized Identifier (DID)](https://docs.snowinning.com/protocol/did.html)
-* [Gmail Issuer Service](https://docs.snowinning.com/verifiable-credential/terminus-name.html#gmail-issuer-service)
+* [创建 Olares ID](../get-started/create-olares-id)
+* [Snowinning 协议](https://docs.snowinning.com/protocol/overview.html)
+* [去中心化标识符（DID）](https://docs.snowinning.com/protocol/did.html)
+* [Gmail 签发服务](https://docs.snowinning.com/verifiable-credential/terminus-name.html#gmail-issuer-service)

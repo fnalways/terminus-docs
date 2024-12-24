@@ -2,29 +2,31 @@
 outline: [2, 3]
 ---
 
-# Applications
- 
-This documents covers essential concepts for managing application identifiers, types, permissions, and Market integrations within Olares. 
+# 应用
 
-## Application identifier
+本文介绍 Olares 中应用标识符、类型、权限以及与应用市场集成相关的核心概念。
 
-In Olares, each application is assigned two identifiers: an application name and an application ID.
+## 应用标识符
 
-### Application name
+在 Olares 中，每个应用都有两个标识符：应用名称和应用 ID。
 
-Application names are assigned by Indexers. The official Indexer address maintained by Olares is [apps](https://github.com/beclab/apps). The directory name of an application within this repository serves as the application name.
+### 应用名称
 
-### Application ID
+应用名称由 Indexer 分配。Olares 团队维护的 Indexer 仓库是 [apps](https://github.com/beclab/apps)。应用在该仓库中的目录名即为其应用名称。
 
-The application ID is derived as the first eight characters of the MD5 hash of the application name. For instance, if the application name is "hello," the application ID becomes "b1946ac9." Application IDs are utilized in various system endpoints.
+### 应用 ID
 
-## Application types
+应用 ID 是应用名 MD5 哈希值的前八个字符。例如，如果应用名称为"hello"，则其应用 ID 为"b1946ac9"。
 
-There are multiple types of applications in Olares. You can distinguish a specific application type according to the namespace shown in Control Hub.
+应用对应的端点（Endpoint）会使用该应用 ID。
 
-### System applications
+## 应用类型
 
-System applications encompass Kubernetes, Kubesphere, Olares components, and essential hardware drivers. The system-level namespaces include:
+Olares 包含多种类型的应用。你可以通过控制面板查看系统的各类应用，并通过命名空间来识别具体的应用类型。
+
+### 系统应用
+
+系统应用包括 Kubernetes、Kubesphere、Olares 组件和必要的硬件驱动。系统级命名空间包括：
 
 ```
 os-system
@@ -39,78 +41,81 @@ kube-public
 kube-node-lease
 gpu-system
 ```
+其中，`os-system` 是 Olares 开发的组件。集群级的应用以及系统提供的各种数据库中间件都安装在这个命名空间下。
 
-### User system applications
+### 用户级系统应用
 
-Olares supports multiple users and provides two distinct namespaces for system applications accessible to Admin and Member users:
+Olares 支持多用户，并为管理员和普通成员用户提供两个不同的系统应用命名空间：
 
-- **user-space-{Local Name}**
+- **user-space-{本地名称}**
 
-    The `user-space` namespace is where system applications that users interact with daily are installed. These applications include:
-    - Files
-    - Settings 
-    - Control Hub
-    - Dashboard
-    - Market
+  `user-space` 命名空间用于安装用户日常交互的系统应用，包括：
+    - 文件管理器
+    - 设置
+    - 控制面板
+    - 仪表盘
+    - 应用市场
     - Profile 
     - Vault
 
-- **user-system-{Local Name}**
+  这些应用之间存在相互调用，同时调用系统底层接口（如 Kubernetes 的 `api-server` 接口）。为了确保系统安全，Olares 将它们统一部署在独立的 `user-space` 命名空间中，通过沙盒机制隔离，防止恶意程序的攻击和非法访问。
 
-  System applications and user-built applications are generally restricted from direct access by third-party applications. However, if the database cluster and built-in applications offer [Service Provider](../../developer/develop/advanced/provider.md) for certain interfaces, then community applications can access these services by [declaring these access permissions](../../developer/develop/package/manifest.md#sysdata).
-  
-   However, if built-in applications or database clusters make specific service interfaces available through a service provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
-  
-  In this case, the system provides network proxies for these resources under the namespace of `user-system` and authenticates network request calls from third-party applications.
+- **user-system-{本地名称}**
 
-### Community applications
+  系统应用和用户的内置应用通常不允许第三方应用直接访问。
 
-Community applications are applications created and maintained by third-party developers. They encompass a wide range of purposes, from productivity tools and entertainment applications to data analysis utilities.
+  但如果数据库集群和内置应用通过[ Service Provider](../../developer/develop/advanced/provider.md) 开放了某些接口，社区应用可以通过[声明访问权限](../../developer/develop/package/manifest.md#sysdata)来使用这些服务。
 
-The namespace of community applications consists of two parts: application name and the user's [local name](olares-id.md#what-is-an-olares-id), for example:
+  在这种情况下，系统会在 `user-system` 命名空间下为这些资源提供网络代理，并对来自第三方应用的网络请求进行鉴权。
+
+### 社区应用
+
+社区应用是由第三方开发者创建和维护的应用，涵盖从生产力工具、娱乐应用到数据分析工具等多种用途。
+
+社区应用的命名空间由两部分组成：应用名称和用户的[本地名称](olares-id.md#olares-id-的组成)，例如：
 
 ```
 n8n-alice
 gitlab-client-bob
 ```
 
-### Cluster-scoped applications
+### 集群应用
 
-Cluster-scoped applications are special community applications designed to share resources or services across the entire Olares cluster. They run continuously as service providers, with the following operating rules:
+集群应用是一类特殊的社区应用，旨在为整个 Olares 集群共享资源或服务。它们作为服务提供者持续运行，遵循以下规则：
 
-- Only one instance is permitted per cluster.
-- Only administrators can install and manage cluster-scoped applications.
-- They are identifiable by their "for Cluster" suffix and a "Cluster-scoped" label in the Olares app market. 
-- Users need to access a cluster-scoped application through its authorized applications. For example, "ComfyUI for Cluster" provides cluster-wide services that users access through its authorized client application "ComfyUI".
+- 每个集群仅允许安装一个实例
+- 仅管理员可以安装和管理集群应用
+- 在 Olares 应用市场中以 "for Cluster" 后缀和 "Cluster-scoped" 标签标识
+- 用户需要通过其授权应用访问集群应用。例如，"ComfyUI for Cluster" 提供集群范围的服务，用户通过其授权客户端应用 "ComfyUI" 访问
 
-### Authorized applications
-Authorized applications serve as client-side interfaces for cluster-scoped applications. Both administrators and regular members can install these applications.
+### 授权应用
+授权应用是集群应用的客户端界面。管理员和普通成员都可以安装。
 
-### Dependencies
-Dependencies are prerequisite applications that must be present for certain applications to function properly. Before installing an application with dependencies, users must ensure all required dependencies are already installed in the cluster.
+### 依赖项
+依赖项是某些应用正常运行所必需的前置应用。安装带有依赖项的应用前，用户必须确保集群中已安装所有必需的依赖项。
 
-### Service provider
+## Service Provider
 
-The Service Provider mechanism enables community applications to interact with system applications and services from other community applications.
+Service Provider 机制使社区应用能够与系统应用、其他社区应用的服务进行交互。
 
 ![Service Provider](/images/overview/olares/image3.jpeg)
 
-The mechanism consists of three procedures：
+该机制包含三个步骤：
 
-1. Provider declaration: Developers must [declare their application as a provider](../../developer/develop/advanced/provider#define-provider) for specific service interfaces.
-  The system includes built-in Providers.
+1. Provider 声明：开发者必须[将其应用声明为特定服务接口的 Provider](../../developer/develop/advanced/provider#申明-Provider)。
+   系统包含内置的 Provider。
 
-2. Permission request: Applications seeking to use a service interface must explicitly [request provider access permissions](../../developer/develop/advanced/provider#request-permission-to-call-provider). 
+2. 权限请求：需要使用 Service 接口的应用必须明确[申请 Provider 的权限](../../developer/develop/advanced/provider#申请-Provider-的访问权限)。
 
-3. Request handling: `system-server` services under `user-system` act as an agent that handles incoming requests and performs necessary permission validations.
+3. 请求处理：调用时，`user-system` 下的 `system-server` 服务作为代理，处理传入请求并执行必要的权限验证。
 
+## 了解更多
 
-## Learn More
+- 用户
 
-- User
+  [管理应用](../tasks/install-uninstall-update.md)<br>
 
-  [Manage apps in Market](../tasks/install-uninstall-update.md)<br>
+- 开发者
 
-- Developer
+  [在 Olares 上开发应用程序](../../developer/develop/index.md)<br>
 
-  [Learn to develop applications on Olares](../../developer/develop/index.md)<br>

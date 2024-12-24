@@ -16,7 +16,9 @@ Application names are assigned by Indexers. The official Indexer address maintai
 
 ### Application ID
 
-The application ID is derived as the first eight characters of the MD5 hash of the application name. For instance, if the application name is "hello," the application ID becomes "b1946ac9." Application IDs are utilized in various system endpoints.
+The application ID is derived as the first eight characters of the MD5 hash of the application name. For instance, if the application name is "hello", the application ID becomes "b1946ac9".
+
+Application IDs are utilized in endpoints.
 
 ## Application types
 
@@ -39,6 +41,7 @@ kube-public
 kube-node-lease
 gpu-system
 ```
+`os-system` is a component developed by Olares team. Cluster-level applications and various database middleware provided by the system are installed under this namespace.
 
 ### User system applications
 
@@ -55,19 +58,21 @@ Olares supports multiple users and provides two distinct namespaces for system a
     - Profile 
     - Vault
 
+   These applications interact with each other while also calling system-level interfaces (such as Kubernetes' `api-server` interface). To ensure system security, Olares deploys them in isolated user-space namespaces and uses sandbox mechanisms to prevent malicious program attacks and unauthorized access.
+
 - **user-system-{Local Name}**
 
-  System applications and user-built applications are generally restricted from direct access by third-party applications. However, if the database cluster and built-in applications offer [Service Provider](../../developer/develop/advanced/provider.md) for certain interfaces, then community applications can access these services by [declaring these access permissions](../../developer/develop/package/manifest.md#sysdata).
+   System applications and user's built-in applications are generally restricted from direct access by third-party applications.
   
-   However, if built-in applications or database clusters make specific service interfaces available through a service provider, community applications can request access by declaring these permissions. When such access is granted, the system routes these network requests through secure proxies in the user-system namespace, ensuring proper authentication and protection of resources.
-  
-  In this case, the system provides network proxies for these resources under the namespace of `user-system` and authenticates network request calls from third-party applications.
+   However, if built-in applications or database clusters make specific service interfaces available through a [service provider](../../developer/develop/advanced/provider.md), community applications can request access by [declaring these permissions](../../developer/develop/package/manifest.md#sysdata).
+   
+   When such access is granted, the system routes these network requests through secure proxies in the `user-system` namespace, ensuring proper authentication and protection of resources.
 
 ### Community applications
 
 Community applications are applications created and maintained by third-party developers. They encompass a wide range of purposes, from productivity tools and entertainment applications to data analysis utilities.
 
-The namespace of community applications consists of two parts: application name and the user's [local name](olares-id.md#what-is-an-olares-id), for example:
+The namespace of community applications consists of two parts: application name and the user's [local name](olares-id.md#olares-id-structure), for example:
 
 ```
 n8n-alice
@@ -105,7 +110,7 @@ The mechanism consists of three procedures：
 3. Request handling: `system-server` services under `user-system` act as an agent that handles incoming requests and performs necessary permission validations.
 
 
-## Learn More
+## Learn more
 
 - User
 

@@ -1,6 +1,5 @@
 # Secrets
 
-
 Olares categorizes secrets based on usage scenarios and employs various management techniques.
 
 |             | Data Type                                                                            | Storage Location                    | Leak Risk                                                                            | Usage                                                                                                                  |

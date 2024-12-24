@@ -8,7 +8,7 @@ User data is usually stored in file systems and databases. Of the two, databases
 
 **For file systems**:
 
-- Olares is designed for multi-node clusters. Therefore, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
+  Olares is designed for multi-node clusters. Therefore, developers need to consider the access to the file system when the program is scheduled to different nodes when developing applications. We want to shield these details from developers.
 
 **For databases**:
 
@@ -65,15 +65,11 @@ As one of the most popular open-source relational databases, PostgreSQL has exce
 
 If the PostgreSQL database application declared by the developer in the application is Distributed, then Olares will build its database on Citus, allowing the application to fully utilize the capabilities of the distributed PG database.
 
-- Version: `11.3.0`
-
 ## [MongoDB](../../developer/develop/advanced/database.md#nosql)
 
 MongoDB, as a representative of NoSQL, has a wide range of application scenarios in the Internet of Things field. By deploying [Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator), developers have a cloud-native version of MongoDB cluster in Olares.
 
 Like PostgreSQL, Olares also manages MongoDB backup and restore in a unified manner. Users do not need to have any DBA technical capabilities to easily implement functions such as scheduled backup, incremental backup, and fixed-point restore.
-
-- Version: `6.0.4`
 
 ## [Redis](../../developer/develop/advanced/database.md#cache)
 
@@ -83,12 +79,9 @@ Olares also takes over the backup and restore of Redis Cluster. There is no need
 
 In addition, since Redis Cluster itself lacks a data isolation mechanism, Olares OS has also developed a proxy layer tool to implement the `namespace` mechanism of data. This isolation mechanism is completely transparent to developers. Developers do not need to do any special processing of data keys in their code. Data isolation between multiple applications and multiple users can be achieved with simple configuration in application chart.
 
-- Version: `6.2.13`
-
 :::tip
 The system uses the Redis Cluster version, which is different from the stand-alone version of Redis. It is recommended to read the official Redis documentation for reference.
 :::
-
 
 ## Backup
 
@@ -106,13 +99,13 @@ Backup objects include:
 
 The Backup component also has data restoration capabilities. You can download a backup snapshot to a local server or Olares Space to restore a complete Olares by rebuilding Kubernetes, databases, and user personal information.
 
-## Learn More
+## Learn more
 
 - User
 
-  [File management](../tasks/files.md)<br>
-  [Backup & Restore](../space/backup-restore.md) 
+  [Manage files](../tasks/files.md)<br>
+  [Back up and restore](../space/backup-restore.md) 
 
 - Developer
 
-  [File Upload](../../developer/develop/advanced/file-upload.md)<br>
+  [File upload](../../developer/develop/advanced/file-upload.md)<br>
