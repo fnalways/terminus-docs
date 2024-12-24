@@ -2,71 +2,77 @@
 outline: [2, 3]
 ---
 
-# Subscribe and manage feeds
-Wise offers flexible subscription options to help you follow your favorite content sources, including articles, blogs, podcasts, and video channels. This guide explains how to add and manage your subscriptions.
+# 订阅和管理订阅源
 
-## Subscribe methods
-:::tip
-When you subscribe to podcast or video channels in Wise, new episodes automatically download to your Olares storage. This ensures your media content is always available—even offline—and protected from source deletion or unavailability.
+Wise 提供灵活的订阅选项，帮助你关注喜爱的内容来源，包括文章、博客、播客和视频频道。本指南说明如何添加和管理你的订阅。
+
+## 订阅方法
+
+:::tip 提示
+当你在 Wise 中订阅播客或视频频道时，新剧集会自动下载到你的 Olares 存储中。这确保了你即使离线也可以随时随地可以访问媒体内容，无须受到文件来源删除不可用的影响。 
 :::
 
-### Add subscriptions from For you
-When browsing recommended content on the **For you** page, you can subscribe to content sources using the following options:
+### 从推荐内容页面订阅
 
-* Click **Subscribe this Feed** in the **Info** column
-* Click <i class="material-symbols-outlined">bookmark_add</i> in the toolbar
+在 **为你推荐** 页面浏览推荐内容时，可以通过以下方式订阅内容源：
 
-### Add RSS feeds manually
-1. Open the RSS feed dialog with either option:
-    * In the left menu bar, click <i class="material-symbols-outlined">add_circle</i> and select **RSS feed**.
-    * On the page **Manage** > **RSS feeds**, click **Add feed** in the top right corner.
-2. In the dialog, enter the feed information using any of these formats:
-    * Feed name. For example, `techcrunch`.
-    * Website URL for RSS feed search
-    * Direct RSS link
-3. Click **Add** to complete the subscription.
+* 点击 **订阅此订阅源** 按钮位于 **信息** 栏中。
+* 点击工具栏中的 <i class="material-symbols-outlined">bookmark_add</i>。
 
-### Use LarePass for web subscriptions
-:::tip
-LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
+### 手动添加 RSS 订阅源
+
+1. 使用以下任一选项打开 RSS 订阅对话框：
+    * 在左侧菜单栏中，点击 <i class="material-symbols-outlined">add_circle</i>，选择 **RSS 订阅源**。
+    * 在 **管理** > **RSS 订阅源** 页面右上角，点击 **添加订阅源**。
+2. 在对话框中，使用以下格式之一输入订阅源信息：
+    * 订阅源名称。例如：`techcrunch`。
+    * 用于 RSS 订阅源搜索的网站 URL。
+    * 直接 RSS 链接。
+3. 点击 **添加** 完成订阅。
+
+### 使用 LarePass 订阅网页内容
+
+:::tip 提示
+LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass) 下载。
 :::
-1. Open the LarePass browser extension, and click **Collect**.
-2. For the current webpage, check available subscriptions in the **RSS** section.
+
+1. 打开 LarePass 浏览器扩展，点击 **收集**。
+2. 在 **RSS** 部分查看当前网页可用的订阅源。
    :::info
-   The **RSS** option appears only when feeds are detected on the current page.
+   只有当前页面检测到订阅源时，**RSS** 选项才会出现。
    :::
-3. Click <i class="material-symbols-outlined">bookmark_add</i> to add the feed to Wise.
+3. 点击 <i class="material-symbols-outlined">bookmark_add</i> 将订阅源添加到 Wise。
 
-#### Upload cookie
-Some websites require cookies for accessing content.
+#### 上传 Cookie
 
-1. Log in to the target website.
-2. Open the LarePass browser extension, and click **Collect** > **Cookie**.
-3. Click **Upload** to apply changes or enable **Auto Sync**.
+某些网站需要 Cookie 才能访问内容。你也可以通过上传 Cookie 提升网站的访问体验。要上传网站的 Cookie：
 
-You can hover over cookies to view details.
+1. 登录目标网站。
+2. 打开 LarePass 浏览器扩展，点击 **收集** > **Cookie**。
+3. 点击 **上传** 应用更改或启用 **自动同步**。
 
-## View subscription list
-Access all your RSS feed subscriptions from **Manage** > **RSS feeds**.
+你可以悬停查看 Cookie 详细信息。
 
-You can:
+## 查看订阅列表
 
-* View feed details and descriptions
-* Search for specific feeds
-* Copy RSS links
-* Edit feed names and descriptions
+从 **管理** > **RSS 订阅源** 页面访问你所有的 RSS 订阅源。
 
-## Unsubscribe
-:::warning
-Unsubscribing removes all articles from this feed unless they're saved to your Library. This action cannot be undone.
+你可以：
+
+* 查看订阅源详情和描述。
+* 搜索特定订阅源。
+* 复制 RSS 链接。
+* 编辑订阅源名称和描述。
+
+## 取消订阅
+
+:::warning 警告
+取消订阅将删除该订阅源的所有文章，除非它们已保存到你的图书馆中。此操作不可撤销。
 :::
 
-You can unsubscribe from content sources in several ways:
+你可以通过以下方式取消订阅内容源：
 
-* From the **Info** column
-* Through the reading page toolbar
-* Via the LarePass browser extension
-* On the **RSS Feeds management** page 
-
-
-
+* 从 **信息** 栏取消订阅。
+* 通过阅读页面工具栏。
+* 使用 LarePass 浏览器扩展。
+* 在 **RSS 订阅管理** 页面取消订阅。

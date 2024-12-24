@@ -2,7 +2,7 @@
 Olares regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
 
 :::info
-Only Olares admin can perform system updates. Updates will apply to all members within the same Olares team.
+Only Olares admin can perform system updates. Updates will apply to all members within the same Olares cluster.
 :::
 
 ## Check and install updates

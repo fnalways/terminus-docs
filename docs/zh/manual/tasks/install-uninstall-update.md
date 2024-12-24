@@ -2,97 +2,101 @@
 outline: [2, 3]
 ---
 
-# Install, uninstall and update
-This guide helps users understand how to install, update, and uninstall applications through the Market. We'll also cover how to install custom applications.
+# 安装、卸载和更新
 
-## Before you begin
-Before you start, it is recommended to familiarize yourself with a few concepts for Olares applications:
+本文档介绍如何通过市场安装、更新和卸载应用程序，同时介绍如何安装自定义应用程序。
 
-| Terminology                                                                                          | Description                                                                                                                      |
-|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [System application](../concepts/application.md#system-applications)                                 | Built-in applications that come pre-installed with Olares, such as Profile, Files, and Vault.                                    |
-| [Community application](../concepts/application.md#community-applications)                           | Applications that are created and maintained by third-party developers.                                                          |
-| &nbsp;&nbsp;[Cluster-scoped application](../concepts/application.md#cluster-scoped-applications)     | A special type of community application that can only be installed by Olares admin and only one instance is allowed per cluster. |
-| &nbsp;&nbsp;&nbsp;&nbsp;[Authorized application](../concepts/application.md#authorized-applications) | The client-side interfaces for cluster-scoped applications.                                                                      |
-| [Dependencies](../concepts/application.md#dependencies)                                              | Prerequisite applications that must already be installed before a user can access an application that requires them.             |
+## 开始之前
 
-## Find applications
-The Olares Market offers various ways to discover and browse applications:
+在开始之前，建议你先熟悉一些与 Olares 应用程序相关的概念：
 
-On **Discover** page:
-* **Featured Applications**: Curated by the editorial team, showcasing trending and seasonally relevant apps.
-* **Community choices**: Most loved and recommended apps by the Olares community.
-* **Top apps**: Apps with the highest usage and download rates.
-* **Latest apps**: Recently added applications to the market.
+| 术语                          | 描述                                                                                           |
+|-------------------------------|----------------------------------------------------------------------------------------------|
+| [系统应用程序](../concepts/application.md#system-applications)       | Olares 内置的预安装应用程序，例如 Profile、文件管理器和 Vault。                                     |
+| [社区应用程序](../concepts/application.md#community-applications)     | 由第三方开发者创建和维护的应用程序。                                                           |
+| [集群应用](../concepts/application.md#cluster-scoped-applications) | 一种特殊类型的社区应用程序，仅能由 Olares 管理员安装，为授权应用提供服务。每个 Olares 集群只能安装一个实例。                        |
+| [授权应用](../concepts/application.md#authorized-applications)    | 集群应用对应的客户端应用。                                            |
+| [依赖项](../concepts/application.md#dependencies)                     | 应用需要先安装的前置应用程序。                                                             |
 
-You can also browse applications based on their functionality:
-* **Productivity**: Apps for work scenarios and improving efficiency.
-* **Utilities**: Tools for solving specific problems or completing tasks.
-* **Entertainment**: Apps for leisure and enjoyment.
-* **Social network**: Platforms for connecting with others.
-* **Blockchain**: Applications related to blockchain technology.
-* **Recommendation**: Decentralized content recommendation algorithms for Wise.
-    :::info
-    For information on using the recommendation feature in Wise, refer to [discover themed content](./recommend).
-    :::
+## 查找应用
 
-![Market](/images/manual/tasks/market-discover.png)
-## Install applications
+Olares 市场提供多种方式发现和浏览应用程序：
 
-1. Open the Market app from the Dock or Launchpad.
-2. Navigate to the app you want, and click **Get**.
-3. When the operation button changes to "**Install**", click it to start the installation.
-4. Once finished, the button will change to "**Open**".
+在 **发现** 页面：
+* **精选应用**：由编辑团队策划，展示流行和季节相关的应用程序。
+* **社区推荐**：最受 Olares 社区喜爱的推荐应用程序。
+* **热门应用**：使用率和下载量最高的应用程序。
+* **最新应用**：最近添加到市场的应用程序。
 
-:::tip
-To cancel an installation, hover over the operation button and click **Cancel** when it appears.
+你还可以根据功能浏览应用程序：
+* **效率**：适用于工作场景和提升效率的应用程序。
+* **工具**：解决特定问题或完成任务的工具。
+* **娱乐**：用于休闲和享受的应用程序。
+* **社交网络**：连接他人的平台。
+* **区块链**：与区块链技术相关的应用程序。
+* **推荐**：用于 Wise 的去中心化内容推荐算法。
+
+:::info 提示
+有关在 Wise 中使用推荐功能的信息，请参阅 [发现主题内容](./recommend)。
 :::
 
-### Install cluster-scoped and authorized applications
-In this context, a cluster refers to a server cluster within the Olares system that provides shared resources and services to multiple users. Cluster-scoped applications serve the entire cluster, while authorized applications allow individual users to access these services.
+![市场](/images/manual/tasks/market-discover.png)
 
-Therefore, to make sure a cluster-scoped service is running normally, follow the general process:
+## 安装应用程序
 
-1. Install the cluster-scoped application first (for Olares admin).
-    Once installation is complete, the operation button will display "**Running**".
-2. Install the corresponding authorized application (for all Olares user).
+1. 从 Dock 或启动板打开市场应用程序。
+2. 找到所需应用程序，点击 **获取**。
+3. 当操作按钮变为 "**安装**" 时，点击以开始安装。
+4. 安装完成后，按钮将变为 "**打开**"。
 
-After installation, users can access the cluster-scoped application's services by running the authorized application.
+:::tip
+若要取消安装，在操作按钮上悬停，点击出现的 **取消** 按钮。
+:::
 
-### Install custom applications
+### 安装集群应用和授权应用
 
-1. Prepare an Olares Application Chart file (in `.zip`, `.tgz`, `.tar`, or `.gz` format).
-2. Open the Market app from the Dock or Launchpad.
-3. Click **My Olares** > **Custom** to see all custom applications.
-4. Click **Upload custom chart** and select chart files.
+在 Olares 系统中，集群指的是为多个用户提供共享资源和服务的服务器集群。集群应用服务整个集群，而授权应用程序允许个人用户在集群内访问这些服务。
 
-## Update applications
-1. Open the Market app from the Dock or Launchpad.
-2. Click for update notifications besides **My Olares** from the left sidebar.
-    If there is an available update, you should see a label marked with number.
-3. Click **My Olares** > **Available updates** to see all updatable applications.
-4. Click **Update all** to update all applications at once, or update each application individually.
+安装流程如下：
+1. 首先安装集群应用（由 Olares 管理员完成）。安装完成后，操作按钮将显示 "**运行中**"。
+2. 安装相应的授权应用程序（所有 Olares 用户可用）。
 
-## Uninstall applications
+安装完成后，用户可通过运行授权应用访问集群应用提供的服务。
 
-### Uninstall from Market
-1. Open the Market app from the Dock or Launchpad.
-2. Click **My Olares** from the left sidebar to view all installed apps.
-3. Click <i class="material-icons">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
+### 安装自定义应用程序
 
-### Uninstall from Launchpad
-1. In Olares, click Launchpad icon in the Dock to display all installed apps.
-2. Click and hold the app icon until all the apps begin to jiggle.
-3. Click <i class="material-symbols-outlined">cancel</i> on the app icon to uninstall it.
+1. 准备 Olares 应用程序 Chart 文件（格式为 `.zip`、`.tgz`、`.tar` 或 `.gz`）。
+2. 从 Dock 或启动板打开市场应用程序。
+3. 点击 **我的 Olares** > **自定义** 查看所有自定义应用程序。
+4. 点击 **上传自定义 Chart** 并选择文件。
 
+## 更新应用程序
 
-## FAQ
+1. 从 Dock 或启动板打开市场应用程序。
+2. 在左侧边栏 **我的 Olares** 旁查看更新通知（如果有更新可用，将显示标记数字）。
+3. 点击 **我的 Olares** > **可用更新** 查看所有可更新应用程序。
+4. 点击 **全部更新** 以一次性更新所有应用程序，或单独更新每个应用程序。
 
-### Why can't I install an application?
-If you can't install an application, it might be due to:
-* **Insufficient system resources**: Try freeing up system resources, or increasing your resource quota.
-* **Missing dependencies**: Check the **Dependency** section on the application details page and make sure all required apps are installed.
-* **Incompatible system version**: Try upgrading Olares to the latest version.
-* **Cluster-scoped application restrictions** (for Olares member): Install the authorized app, and contact your Olares admin to install the corresponding cluster-scoped application.
+## 卸载应用程序
 
+### 从市场卸载
 
+1. 从 Dock 或启动板打开市场应用程序。
+2. 点击左侧边栏的 **我的 Olares** 查看所有已安装应用程序。
+3. 点击应用程序操作按钮旁的 <i class="material-icons">keyboard_arrow_down</i>，选择 **卸载**。
+
+### 从启动台卸载
+
+1. 在 Olares 中，点击 Dock 中的启动台图标，显示所有已安装应用程序。
+2. 点击并按住应用程序图标，直到所有应用开始抖动。
+3. 点击应用图标上的 <i class="material-symbols-outlined">cancel</i> 卸载。
+
+## 常见问题
+
+### 为什么我无法安装应用程序？
+
+如果无法安装应用程序，可能是由于以下原因：
+* **系统资源不足**：尝试释放系统资源，或增加资源配额。
+* **缺少依赖项**：在应用程序详情页的 **依赖项** 部分检查，并确保已安装所有所需应用程序。
+* **系统版本不兼容**：尝试将 Olares 升级到最新版本。
+* **集群范围应用程序限制**（对于 Olares 成员）：安装授权应用，并联系你的 Olares 管理员安装相应的集群应用。

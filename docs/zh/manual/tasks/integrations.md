@@ -2,64 +2,70 @@
 outline: [2, 3]
 ---
 
-# Add and manage integrations
+# 添加和管理集成
 
-Olares allows you to integrate Olares Space and other third-party services to enhance functionality and personalize your experience. The integration helps you synchronize data, manage devices, and customize your profile.
+Olares 允许你将 Olares Space 和其他第三方服务集成，以增强功能并个性化你的体验。通过集成，你可以同步数据、管理设备并自定义个人资料。
 
 :::info
-We're working on adding support for third-party account integrations. This feature will allow you to connect various external services to your Olares account.
+我们正在开发对第三方账户集成的支持。此功能将允许你将各种外部服务连接到你的 Olares 账户。
 
-To stay updated on this and other new features:
+了解此功能及其他新功能的最新动态：
 
-* [Follow our official blog](https://blog.olares.xyz/)
-* [Join our discord channel](https://discord.com/invite/BzfqrgQPDK)
+* [关注我们的官方博客](https://blog.olares.xyz/)
+* [加入我们的 Discord 频道](https://discord.com/invite/BzfqrgQPDK)
 :::
 
-## Connect to Olares Space
-Olares Space is a cloud hosting service for Olares that shares the same account system with LarePass and Olares.
+## 连接到 Olares Space
 
-### Step 1. Log in to Olares Space
-1. Open https://space.olares.xyz/login in your browser.
-2. Open LarePass on your mobile device.
-3. On the Settings page, tap the "Scan" icon in the top-right corner.
-4. Scan the QR code on the Olares Space login page.
-5. Confirm the risk prompt and proceed with the login.
+Olares Space 是 Olares 的云托管服务，与 LarePass 和 Olares 共享相同的账户系统。
 
-### Step 2. Authorize Olares Space
+### 第一步：登录 Olares Space
 
-1. In the LarePass app, go to **Settings** > **Integration**.
-2. Tap <i class="material-icons">add</i> in the top-right corner and select **Space** to add your Olares Space account. 
+1. 在浏览器中打开 https://space.olares.xyz/login。
+2. 在移动设备上打开 LarePass。
+3. 在设置页面，点击右上角的 "扫描" 图标。
+4. 扫描 Olares Space 登录页面上的二维码。
+5. 确认风险提示并完成登录。
 
-Once you've authorized Olares Space, you can also verify the integration status in Olares.
+### 第二步：授权 Olares Space
 
-### Step 3. Associate Olares ID
-Associating your Olares ID allows you to import a blockchain wallet, which is necessary for using NFT images as unique avatars in your profile.
+1. 在 LarePass 应用中，进入 **设置** > **集成**。
+2. 点击右上角的 <i class="material-icons">add</i>，选择 **Space** 添加你的 Olares Space 账户。
 
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **Integration** from the left sidebar.
-3. Click on the Olares Space card on the right to view details.
-4. Click **Bind**. This will trigger a confirmation prompt in LarePass app.
-5. Open the LarePass app. You should see a confirmation prompt. If not:
+授权 Olares Space 后，你还可以在 Olares 中验证集成状态。
 
-   a. Go to **Settings** > **Integration**.
+### 第三步：关联 Olares ID
 
-   b. Tap the Olares Space card.
+关联你的 Olares ID 后，你可以导入区块链钱包，用于在个人资料中使用 NFT 图像作为唯一头像。
 
-   c. In the confirmation prompt, tap **Confirm** to authorize.
-6. Return to Olares, and click **Confirm** to complete the association to your Olares ID.
+1. 从 Dock 或启动板打开 **设置** 应用程序。
+2. 在左侧边栏选择 **集成**。
+3. 点击右侧的 Olares Space 卡片查看详情。
+4. 点击 **绑定**。这将触发 LarePass 应用中的确认提示。
+5. 打开 LarePass 应用。你应该会看到确认提示。如果没有：
 
-## Remove integration
-::: warning
-Disconnecting Olares Space may affect your ability to manage devices, and access cloud backups through the Olares Space interface.
-You can always reconnect later if needed.
+   a. 前往 **设置** > **集成**。
+
+   b. 点击 Olares Space 卡片。
+
+   c. 在确认提示中，点击 **确认** 授权。
+
+6. 返回 Olares，点击 **确认** 完成与 Olares ID 的关联。
+
+## 移除集成
+
+:::warning 警告
+断开 Olares Space 的连接可能会影响你管理设备以及通过 Olares Space 界面访问云备份的能力。
+如有需要，你可以随时重新连接。
 :::
 
-To disconnect Olares Space from your Olares:
+要从 Olares 中断开 Olares Space：
 
-1. Open LarePass app, and go to **Settings** > **Integration**.
-2. Tap on the Olares Space card.
-3. Tap <i class="material-icons">more_horiz</i> in the top-right corner, and tap **Delete**.
+1. 打开 LarePass 应用，进入 **设置** > **集成**。
+2. 点击 Olares Space 卡片。
+3. 点击右上角的 <i class="material-icons">more_horiz</i>，然后点击 **删除**。
 
-## See also
-- [Connect your blockchain wallet](./nft-image.md)
-- [Explore how you can leverage Olares Space](../space/)
+## 了解更多
+
+- [连接你的区块链钱包](./nft-image.md)
+- [探索如何利用 Olares Space](../space/)

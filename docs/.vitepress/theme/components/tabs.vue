@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="tabs-container">
+    <slot></slot>
     <div class="tabs">
       <button
         v-for="(tab, index) in tabLabels"
@@ -19,7 +20,7 @@
       </button>
     </div>
     <div v-for="tab in tabLabels" :key="tab" v-show="activeTab === tab">
-      <div v-if="activeTab === tab">
+      <div v-if="activeTab === tab" class="tab-item">
         <slot :name="tabSlots[tab]"></slot>
       </div>
     </div>
@@ -42,6 +43,7 @@ export default {
       activeTab: null,
       tabLabels: [],
       tabSlots: {},
+      randomKey: Math.random(),
     };
   },
   methods: {
@@ -65,6 +67,7 @@ export default {
       map[label] = slot;
       return map;
     }, {});
+    console.log("aa", this.tabSlots);
 
     this.tabLabels = Object.keys(this.tabSlots);
     this.activeTab = this.tabLabels[0];
@@ -112,5 +115,8 @@ div[style] {
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+.tabs-container .tab-item {
+  margin-top: 16px;
 }
 </style>

@@ -1,77 +1,81 @@
-# Use autofill with LarePass
+# 使用 LarePass 自动填充密码
 
-Password autofill eliminates the hassle of manually typing credentials while maintaining security. With LarePass, you can securely store passwords in your Vault and automatically fill them across your devices.
+密码自动填充可以省去手动输入凭据的麻烦，同时保持安全性。使用 LarePass，你可以将密码安全地存储在 Vault 中，并在设备间自动填充。
 
-## Before you begin
+## 开始之前
 
-Make sure you have LarePass mobile clients or Chrome extension installed on your device, and logged in using your Olares ID.
+确保你的设备上已安装 LarePass 移动客户端或 Chrome 扩展程序，并使用 Olares ID 登录。
 
-:::tip
-For different download options of LarePass, visit the [official website](https://www.olares.xyz/larepass).
+:::tip 提示
+要获取 LarePass 的不同下载选项，请访问 [LarePass 页面](https://www.olares.xyz/larepass)。
 :::
 
-## Enable autofill service
+## 启用自动填充服务
 <tabs>
 <template #Android>
 
-1. Open LarePass, and go to **Settings** > **Autofill**.
-2. Turn on Autofill, and select LarePass as your autofill provider.
-3. Review and accept the security note when prompted.
+1. 打开 LarePass，进入 **设置** > **自动填充**。
+2. 打开自动填充，并选择 LarePass 作为自动填充提供程序。
+3. 按提示查看并接受安全提示。
+
 </template>
 <template #iOS>
 
-Due to iOS system restrictions, you have to manually enable autofill for LarePass:
+由于 iOS 系统限制，必须手动启用 LarePass 自动填充：
 
-1. Open the Settings app on your iOS device.
-2. Use the search feature to quickly find the autofill settings.
-3. Ensure the Autofill service is on, then activate LarePass as an autofill provider.
+1. 打开 iOS 设备上的 **设置** 应用。
+2. 使用搜索功能快速找到自动填充设置。
+3. 确保自动填充服务已开启，然后激活 LarePass 作为自动填充提供程序。
 
 </template>
-<template #Chrome-extension>
+<template #Chrome-扩展>
 
-Autofill is automatically enabled upon logging in with the browser extension.
+登录浏览器扩展程序时会自动启用自动填充。
 </template>
 </tabs>
 
-## Save password
-When you enter credentials in an app or website, LarePass will detect this action and prompt you to save them.
-:::info
-On iOS, passwords cannot be automatically saved. You can manually add a vault item or use the Chrome extension. Vault items sync across all platforms.
-:::
-1. Log in to an app or website.
-2. When prompted, click **Save** to store your password in LarePass.
-3. In the details page or window, enter a name for this vault item, and click **Save**.
+## 保存密码
 
-## Use autofill
+当你在应用程序或网站中输入凭据时，LarePass 会检测该操作并提示保存密码。
+
+:::info 提示
+在 iOS 上，密码无法自动保存。可以手动添加 Vault 项目或使用 Chrome 扩展。Vault 项目将在所有平台同步。
+:::
+
+1. 登录应用程序或网站。
+2. 出现提示时，点击 **保存** 将密码存储到 LarePass。
+3. 在详情页面或窗口中输入此 Vault 项目的名称，点击 **保存**。
+
+## 使用自动填充
 
 <tabs>
 <template #Android>
 
-1. Open an app or website where you aren't logged in.
-2. Tap the username or password field.
-3. In the overlay popup, tap **Autofill with LarePass**.
-4. Unlock Vault to access your saved credentials.
-5. Select the matching vault item to autofill your login details.
+1. 打开尚未登录的应用程序或网站。
+2. 点击用户名或密码字段。
+3. 在弹出窗口中，点击 **使用 LarePass 自动填充**。
+4. 解锁 Vault 以访问保存的凭据。
+5. 选择匹配的 Vault 项目自动填充登录信息。
+
 </template>
 <template #iOS>
 
-1. Open an app or website where you aren't logged in.
-2. Tap the username or password field. A keyboard will slide up with a matching login, or with a **Password** option.
-3. If a matching login is displayed, tap it to autofill.
-4. If the **Password** option is displayed, tap it and unlock Vault to access available vault items for the login.
-   :::info
-   If other autofill services like iCloud Keychain are active, select **LarePass** in the provider list.
+1. 打开尚未登录的应用程序或网站。
+2. 点击用户名或密码字段，键盘将上滑显示匹配的登录项，或显示 **密码** 选项。
+3. 如果显示匹配的登录项，点击它进行自动填充。
+4. 如果显示 **密码** 选项，点击它并解锁 Vault 以访问可用的 Vault 项目。
+   :::info 提示
+   如果其他自动填充服务（如 iCloud 钥匙串）处于激活状态，请在提供程序列表中选择 **LarePass**。
    :::
-5. Select the matching vault item to autofill your login details.
+5. 选择匹配的 Vault 项目自动填充登录信息。
+
 </template>
 <template #Chrome-extension>
 
-1. Open a website where you aren't logged in.
-2. Click the LarePass icon in the text field.
-3. In the overlay popup, select the matching login to autofill your login details.
-4. If no credentials are saved for this site, select **New item** to add a new vault item.
+1. 打开尚未登录的网站。
+2. 在文本字段中点击 LarePass 图标。
+3. 在弹出窗口中，选择匹配的登录项进行自动填充。
+4. 如果未保存该网站的凭据，选择 **新建项目** 添加新的 Vault 项目。
+
 </template>
 </tabs>
-
-
-

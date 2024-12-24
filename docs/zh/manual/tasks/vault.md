@@ -1,39 +1,39 @@
-# Secure sensitive data
+# 保护敏感数据
 
-Vault is a password manager in Olares, designed for secure storage and management of sensitive data. With Vault, you can safely store and organize private keys and passwords, digital identities (DIDs) and Olares IDs, one-time passwords (OTPs), and other confidential data.
+Vault 是 Olares 中的密码管理器，旨在安全存储和管理敏感数据。通过 Vault，您可以安全地存储和组织私钥与密码、数字身份 (DIDs) 和 Olares ID、一时性密码 (OTPs) 以及其他机密数据。
 
-Key features of Vault include:
-* End-to-end encryption for maximum security
-* Private and shared vaults for personal and organizational use
-* Seamless synchronization across devices
-* Autofill functionality for easy credential input
-* Strong password suggestions for enhanced account security
-* Two-factor authentication (2FA) support with OTP management
+Vault 的关键功能包括：
+* 端到端加密，确保最高安全性
+* 私有和共享 Vault，满足个人与组织需求
+* 跨设备的无缝同步
+* 自动填充功能，轻松输入凭据
+* 强密码建议，增强账户安全
+* 支持 2FA（双因素认证），管理 OTP
 
-## Clients
-Vault's server component runs on Olares, synchronizing data across multiple client devices of a single user. Data is encrypted with a private key during transmission and storage to ensure security.
-You can access Vault in Olares, or through LarePass on mobile, desktop, and browser extensions for a consistent user experience across platforms.
+## 客户端
 
-Visit the [official page](https://www.olares.xyz/larepass) for LarePass details and download options.
+Vault 的服务器组件运行在 Olares 上，同步单个用户的多个客户端设备。数据在传输和存储过程中使用私钥加密，确保安全性。
+您可以通过 Olares 使用 Vault，也可以通过移动设备、桌面和浏览器扩展的 LarePass 客户端访问，实现跨平台一致的用户体验。
+
+访问 [LarePass 页面](https://www.olares.xyz/larepass) 获取 LarePass 的详细信息和下载选项。
 
 ---
 <div>
-<h4><a href="./vault-items">Vault basics</a></h4>
-Understand vault items, and learn how to securely store and manage your sensitive data in Vault.
+<h4><a href="./vault-items">Vault 基础知识</a></h4>
+了解 Vault 项目及基本操作，学习如何在 Vault 中安全存储和管理敏感数据。
 </div>
 
 <div>
-<h4><a href="./share-vault-items">Share vault items</a></h4>
-Learn how to manage team vault access, and work with shared vaults.
+<h4><a href="./share-vault-items">共享 Vault 项目</a></h4>
+学习如何管理团队 Vault 访问权限，以及使用共享 Vault。
 </div>
 
 <div>
-<h4><a href="./two-factor-verification">Set up two-factor authentication codes</a></h4>
-Learn how to generate and store 2FA codes for enhanced security.
+<h4><a href="./two-factor-verification">设置双因素认证代码</a></h4>
+学习如何生成并存储 2FA 代码以增强安全性。
 </div>
 
 <div>
-<h4><a href="./autofill">Use autofill with LarePass</a></h4>
-Learn how to set up and use autofill for logins with different LarePass clients.
+<h4><a href="./autofill">使用 LarePass 的自动填充功能</a></h4>
+学习如何设置和使用自动填充功能，适配不同的 LarePass 客户端。
 </div>
-

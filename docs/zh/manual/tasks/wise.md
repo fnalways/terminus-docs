@@ -1,25 +1,25 @@
-# Curate information hub
+# 创建个人知识库
 
-Wise is a local-first, AI-driven modern reader and a core application within the Olares ecosystem. It assists you in collecting, reading, and managing information from various platforms, thereby creating and maintaining a personal information hub.
+Wise 是一款以本地优先和 AI 驱动的现代阅读器，是 Olares 生态系统中的核心应用之一。它帮助你从各种平台收集、阅读和管理信息，从而创建并维护个人信息中心。
 
-Key features include:
+关键功能包括：
 
-* **Self-hosted recommendation algorithms**:  You can run personalized algorithms to filter and sort online content, breaking through the information bubble and receiving diverse and personalized content recommendations.
-* **Cross-platform content aggregation**: Wise integrates articles, videos, audio, and other multimedia content from different sources, offering you a comprehensive reading experience.
-* **Seamless bookmarking**: With the LarePass browser extension, you can save web pages to Olares with a single click, making it easy to access and manage content anytime.
+* **自托管推荐算法**：你可以运行个性化算法过滤和排序在线内容，突破信息泡沫，接收多样化和个性化的内容推荐。
+* **跨平台内容聚合**：Wise 集成文章、视频、音频及其他多媒体内容，为你提供全面的阅读体验。
+* **无缝书签功能**：通过 LarePass 浏览器扩展，你可以一键将网页保存到 Olares，随时访问和管理内容。
 
 ---
 <div>
-<h4><a href="./wise-basics">Wise basics</a></h4>
-Learn the essential tasks for collecting, reading, and managing your content library in Wise.
+<h4><a href="./wise-basics">Wise 基础知识</a></h4>
+了解 Wise 中收集、阅读和管理内容库的基本操作。
 </div>
 
 <div>
-<h4><a href="./recommend">Discover themed content</a></h4>
-Learn how self-hosted recommendation algorithms work in Wise.
+<h4><a href="./recommend">发现主题内容</a></h4>
+了解 Wise 中的自托管推荐算法如何工作。
 </div>
 
 <div>
-<h4><a href="./subscribe">Subscribe and manage feeds</a></h4>
-Set up and organize your content sources through RSS feeds, manual subscriptions, and the LarePass browser extension.
+<h4><a href="./subscribe">订阅和管理订阅源</a></h4>
+通过 RSS 订阅、手动订阅和 LarePass 浏览器扩展设置并组织你的内容来源。
 </div>
