@@ -6,6 +6,19 @@ outline: [2, 3]
 
 Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the Olares depend on this information to distribute and install applications.
 
+:::info NOTE
+Latest Olares Manifest Version: `0.8.2`
+  - Add a `runAsUser` option to force the app run under user `1000`
+:::
+:::details Changelog
+  `0.8.1`
+  - Add a `ports` section to specify exposed ports for the UDP or TCP protocol
+  
+  `0.7.1`
+  - Add new `authLevel` value `internal`
+  - Change `spec`>`language` to `spec`>`locale` and support i18n
+:::
+
 Here's an example of what a `OlaresManifest.yaml` file might look like:
 
 ::: details OlaresManifest.yaml Example
@@ -66,16 +79,6 @@ options:
     type: system
     version: '>=0.1.0'
 ```
-:::
-
-:::info NOTE
-Latest Olares Manifest Version: `0.8.1`
-  - Add a `ports` section to specify exposed ports for the UDP or TCP protocol
-:::
-:::details Changelog
-  `0.7.1`
-  - Add new `authLevel` value `internal`
-  - Change `spec`>`language` to `spec`>`locale` and support i18n
 :::
 
 ## olaresManifest.type
@@ -292,6 +295,7 @@ ports:
   host: udp          # Ingress name of the entrance that provides UDP service
   port: 8899         # Port of the entrance that provides UDP service
   protocol: udp      # Protocol type. {udp/tcp}
+  exposePort: 30140  # A random port will be assigned if not specified 
 - name: bbb
   host: udp
   port: 8090
@@ -398,9 +402,6 @@ spec:
   namespace: os-system 
   # optional. Install the app to a specified namespace, e.g. os-system, user-space, user-system
   
-  onlyAdmin:  true 
-  # optional. When set to true, only the admin can install this app.
-  
   versionName: '10.8.11' 
   # The version of the application that this chart contains. It is recommended to enclose the version number in quotes. This value corresponds to the appVersion field in the `Chart.yaml` file. Note that it is not related to the `version` field.
 
@@ -448,7 +449,6 @@ spec:
   - ios: https://apps.apple.com/us/app/jellyfin-mobile/id1480192618
 ```
 :::
-
 ### i18n 
 
 To add multi-language support for your app in Olares Market:
@@ -485,6 +485,38 @@ spec:
   upgradeDescription:
 ```
 
+### supportArch
+- Optional
+- Type: `list<string>`
+- Accepted Value: `amd64`, `arm64`
+
+This field is used to specify the CPU architecture supported by the application. Only `amd64` and `arm64` architectures are supported for now.
+
+:::info Example
+```yaml
+spec:
+  supportArch:
+  - amd64
+  - arm64
+```
+:::
+
+:::info NOTE
+Olares does not support mixed-architecture clusters for now.
+:::
+
+### onlyAdmin
+- Optional
+- Type: `boolean`
+- Default: `false`
+
+When set to `true`, only the admin can install this app.
+
+### runAsUser
+- Optional
+- Type: `boolean`
+
+When set to `true`, the Olares system enforces the application to run under the user ID `1000`.
 
 
 ## middleware
