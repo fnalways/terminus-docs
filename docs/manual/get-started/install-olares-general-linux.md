@@ -5,11 +5,11 @@ Make sure your device meets the following requirements.
 - CPU: 4 cores or above
 - RAM: 8GB or above (available memory)
 - Storage: 64GB or above (available disk space)
-- Supported Systems:
+- Supported systems:
     - Ubuntu 20.04 LTS or later
     - Debian 11 or later
 
-::: tip Note
+::: tip Version compatibility
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 

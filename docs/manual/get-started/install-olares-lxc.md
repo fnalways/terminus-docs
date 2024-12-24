@@ -1,15 +1,17 @@
 ## <span class="h2-border-none">System requirements</span>
 
+LXC (Linux Containers) is a lightweight virtualization method that runs applications in isolated containers. When used on PVE, it enables an efficient way to deploy Olares without the overhead of a full virtual machine.
+
 Make sure your device meets the following requirements.
 
 - CPU: 4 cores or above
 - RAM: 8GB or above (available memory)
 - Storage: 64GB or above (available disk space)
-- Supported Systems:
+- Supported systems:
     - PVE 8.2.2
-    - LXC system: Debian 12
+    - Linus container: Debian 12 (for existing LXC containers on PVE)
 
-::: tip Note
+::: tip Version compatibility
 While the specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 
@@ -25,17 +27,18 @@ While the specific versions are confirmed to work, the process may still work on
 
 ## Configure the LXC environment
 
+::: tip Install on existing LXC
+To install Olares on an existing LXC container, skip to step 2 directly. Make sure you use the corresponding container ID.
+:::
+
 1. Create the LXC container using the following script:
 
-   ::: tip Note
+   ::: tip Unique container ID
    To create a container, you need to assign it a unique container ID. In this guide, we use `16553`, but you can replace it with any available numeric ID. Make sure to update all commands and configurations accordingly.
    :::
 
-   ::: tip
-   To install Olares on an existing LXC container, skip to step 2 directly. Make sure you use the corresponding container ID.
-   :::
 
-   ``` bash
+   ``` bash{2}
    export ROOTPASS=123456 
    pct create 16553 /var/lib/vz/template/cache/debian-12-standard_12.7-1_amd64.tar.zst \
    --hostname olares \

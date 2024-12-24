@@ -1,5 +1,7 @@
 ## <span class="h2-border-none">系统要求</span>
 
+LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的容器中运行应用程序。在 PVE 环境下使用 LXC 部署 Olares 能够避免完整虚拟机的额外开销，提供了一种更高效的部署方式。
+
 请确保设备满足以下配置要求：
 
 - CPU：4 核及以上
@@ -9,7 +11,7 @@
   - PVE: 8.2.2
   - LXC 系统：Debian 12
 
-::: tip 注意
+::: tip 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 
@@ -26,11 +28,11 @@
 
 1. 使用以下命令创建 LXC 容器：
 
-   ::: tip 注意
+   ::: tip 指定唯一容器 ID
    要创建容器，必须分配一个唯一的 **容器 ID**。在本指南中，我们使用 `16553`，但你可以将其替换为任何可用的数字 ID，并在所有相关命令和配置中更新此 ID。
    :::
 
-   ::: tip 提示
+   ::: tip 安装至已有 LXC 容器
    如果你想要在 PVE 中已有 LXC 容器上安装 Olares，请直接到第二步更新 LXC 配置。要记得更新对应的容器 ID。
    :::
 
@@ -95,22 +97,21 @@
 4. 启动并配置 LXC 容器。
 
    ```bash 
-      # 启动容器
-      pct start 16553
+   # 启动容器
+   pct start 16553
 
-      # 进入容器
-      pct enter 16553
+   # 进入容器
+   pct enter 16553
 
-      # 创建缺失的目录
-      mkdir -p /lib/modules
+   # 创建缺失的目录
+   mkdir -p /lib/modules
 
-      # 更新 PATH 环境变量
-      echo 'export PATH="/usr/local/bin:$PATH"' >> /root/.bashrc
-      source ~/.bashrc
+   # 更新 PATH 环境变量
+   echo 'export PATH="/usr/local/bin:$PATH"' >> /root/.bashrc
+   source ~/.bashrc
       
-      # 退出 LXC
-      exit
-      ```
+   # 退出 LXC
+   exit
 
 5. 将 PVE 依赖项复制到 LXC 容器。
    
