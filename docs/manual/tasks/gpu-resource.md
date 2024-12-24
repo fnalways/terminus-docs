@@ -40,5 +40,5 @@ This means that the GPU mode settings described here do not directly affect auth
 2. Select **System** from the left sidebar, and click **GPU** on the right.
 3. In the dropdown **VRAM mode**, select the required GPU usage mode.
 
-## See also
+## Learn more
 - [Monitor GPU usage in Olares](./resources-usage.md)

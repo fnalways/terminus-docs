@@ -16,6 +16,6 @@ Corresponding to the BEC architecture, Olares comprises the following core compo
 - [**Olares OS**](https://github.com/beclab/Olares): A comprehensive, self-hosted operating system designed for edge devices. It allows users to host and manage their own data and applications, transforming personal edge devices into robust, sovereign cloud systems.
 - [**LarePass**](https://olares.xyz/larepass): A secure, unified interface software that connects users to their Olares systems. It offers key functionalities, including identity management, remote access, device management, and data storage, ensuring seamless interactions with Olares.
 
-## See also
+## Learn more
 
 - [Self-sovereign network](https://docs.snowinning.com/protocol/network.html)

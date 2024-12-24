@@ -2,109 +2,118 @@
 outline: [2, 3]
 ---
 
-# Monitor system and application status
-The Dashboard app in Olares works similarly to Windows Explorer, providing a centralized view of your system's status without requiring technical expertise. From the main dashboard, you can view resource usage patterns and detailed metrics.
+# 监控系统和应用程序状态
+
+Olares 的 Dashboard 应用类似于 Windows 资源管理器，为你提供系统状态的集中视图，无需技术背景。从主面板中，你可以查看资源使用模式和详细的指标数据。
+
 :::info
-When applications in your Olares are exposed to the public internet, they generate FRP traffic costs from external access. To monitor these costs and traffic, see [VIew system status](../space/manage-olares#view-system-status).
+当你的 Olares 应用程序暴露在公网时，它们会因外部访问产生 FRP 流量成本。要监控这些成本和流量，请参阅 [查看系统状态](../space/manage-olares#view-system-status)。
 :::
 
-## Access monitoring dashboards
-View your system's status through these specialized dashboards:
-- **Overview**: Shows current resource usage and system health.
-- **Applications**: Displays running applications and their status.
-- **Analytics**: Presents detailed performance metrics with up to one year of historical data.
+## 访问监控仪表板
 
-## Overview
+通过以下专业仪表板查看系统状态：
 
-### View physical resources
+- **概览**：显示当前资源使用情况和系统健康状态。
+- **应用程序**：显示运行中的应用程序及其状态。
+- **分析**：提供详细的性能指标数据，可追溯至一年内的历史数据。
 
-Monitor four fundamental metrics directly from **Overview**:
-- CPU utilization
-- Memory consumption
-- Disk usage
-- Pod status
+## 概览
+
+### 查看物理资源
+
+在 **概览** 中直接监控以下四个核心指标：
+- CPU 使用率
+- 内存使用量
+- 磁盘使用量
+- Pod 状态
 
 ![Dashboard overview](/images/manual/tasks/dashboard-overview.png)
-### Access detailed metrics
 
-For deeper analysis, click **More details** to view comprehensive monitoring data for the past 7 days.
+### 查看详细指标
 
-Use the dropdown menu in the top right to change the time range, or click <i class="material-symbols-outlined">refresh</i> to update monitoring data.
+点击 **更多详情**，查看过去 7 天的综合监控数据。
 
-The following metrics help you maintain optimal system performance:
+使用右上角的下拉菜单更改时间范围，或点击 <i class="material-symbols-outlined">refresh</i> 更新监控数据。
 
-| Metric           | Description                        | Impact                                        |
-|------------------|------------------------------------|-----------------------------------------------|
-| CPU usage        | Percentage of CPU resources used   | Prolonged spikes can slow down the system     |
-| Memory usage     | Percentage of memory in use        | Impacts application performance and stability |
-| Average CPU load | Average number of active processes | High load indicates system overload           |
-| Disk usage       | Percentage of disk space used      | Crucial for data reliability, prevent overuse |
-| Inode usage      | Percentage of inodes used          | Exhaustion prevents new file creation         |
-| Disk throughput  | Data transfer rate (MB/s)          | Important for large file transfers            |
-| IOPS             | Input/Output Operations Per Second | Critical for small file or random data access |
-| Network traffic  | Network usage (Mbps)               | Reflects network speed and quality            |
-| Pod status       | Count of pods by state             | Reflects application health                   |
+以下指标帮助你保持系统的最佳性能：
+
+| 指标              | 描述                               | 影响                                     |
+|-------------------|------------------------------------|------------------------------------------|
+| CPU 使用率        | CPU 资源的使用百分比               | 持续高峰会导致系统变慢                  |
+| 内存使用率        | 内存的使用百分比                   | 影响应用程序性能和稳定性                |
+| 平均 CPU 负载     | 活跃进程的平均数量                 | 高负载表明系统过载                      |
+| 磁盘使用率        | 磁盘空间的使用百分比               | 对数据可靠性至关重要，需防止过度使用     |
+| Inode 使用率      | Inode 的使用百分比                 | 耗尽将阻止新文件的创建                  |
+| 磁盘吞吐量        | 数据传输速率（MB/s）               | 对大文件传输非常重要                    |
+| IOPS              | 每秒输入/输出操作数                | 对小文件或随机数据访问至关重要           |
+| 网络流量          | 网络使用情况（Mbps）               | 反映网络速度和质量                      |
+| Pod 状态          | 按状态划分的 Pod 数量              | 反映应用程序的健康状态                  |
 
 ![Physical resource monitoring](/images/manual/tasks/physical-resource-monitoring.png)
-### Check resource quota
-You can view your resource quota allocated by the Olares admin.
+
+### 查看资源配额
+
+你可以查看 Olares 管理员分配的资源配额。
 
 ![Resource quota](/images/manual/tasks/resource-quota.png)
 
-:::warning
-When your resource quota runs low, you may experience:
+:::warning 警告
+当资源配额不足时，可能会出现以下问题：
 
-* Slower system performance.
-* Inability to install new applications.
-* Automatic suspension of resource-intensive applications.
+- 系统性能下降。
+- 无法安装新应用程序。
+- 资源密集型应用程序会自动暂停。
 :::
 
+### 追踪应用程序性能
 
-### Track application performance
-The **Usage ranking** section displays the top 5 applications consuming CPU and memory resources. To access the complete list of application resource usage, click **More**.
+**用量排名** 面板显示 CPU 和内存资源消耗最高的前 5 个应用程序。要查看完整的应用程序资源使用列表，点击 **更多**。
 
 ![Usage ranking](/images/manual/tasks/usage-ranking.png)
 
-The **Analytics** section shows view traffic for all applications within the last 24 hours. For detailed analytics of individual applications, click **More**.
+**分析**面板显示过去 24 小时内所有应用程序的访问流量。要查看单个应用程序的详细分析，点击 **更多**。
 
 ![Analytics](/images/manual/tasks/overview-analytics.png)
-## Applications
 
-The **Applications** dashboard helps you monitor resource usage patterns across your applications through various sorting and filtering options.
+## 应用程序
 
-Use the dropdown menu in the upper right corner to sort applications based on their resource consumption:
-- CPU usage
-- Memory usage
-- Inbound traffic
-- Outbound traffic
+**应用程序**仪表面板帮助你通过多种排序和筛选选项监控应用程序的资源使用模式。
+
+使用右上角的下拉菜单，根据以下资源消耗指标排序应用程序：
+- CPU 使用率
+- 内存使用率
+- 入站流量
+- 出站流量
 
 ![Applications](/images/manual/tasks/applications.png)
 
-Toggle between ascending and descending order to identify which applications are consuming the most or least resources.
+在升序和降序之间切换，找出资源消耗最高或最低的应用程序。
 
-For applications supporting multiple entrances (such as Wordpress), you can click icons to switch between different entrance types and view their corresponding resource metrics.
+对于支持多入口的应用程序（如 WordPress），你可以点击图标切换不同入口类型，并查看其对应的资源指标。
 ![Multiple entrances](/images/manual/tasks/multiple-entrances.png#bordered){width=40%}
-:::tip
-* When your application list grows large, quickly locate specific applications by typing their names in the search box at the top of the page.
-* Regularly checking resource consumption patterns helps you identify applications that might need optimization or attention.
+
+:::tip 提示
+* 当应用程序列表较长时，可通过页面顶部的搜索框快速定位特定应用程序。
+* 定期检查资源消耗模式可帮助你识别可能需要优化或关注的应用程序。
 :::
 
-## Analytics
+## 流量分析
 
-Olares features powerful built-in analytic, helping you understand application usage patterns, optimize user experience, and make data-driven decisions. The **Analytics** dashboard displays key metrics for each application spanning up to one year, including page views, unique visitors, and average visit time.
+Olares 内置强大的流量分析功能，帮助你了解应用程序的使用模式、优化用户体验并做出数据驱动的决策。**分析**仪表面板可显示每个应用程序长达一年的关键指标，包括页面浏览量、独立访客数和平均访问时间。
 
-:::info
-Analytics data is only available for applications that have declared the analytics function in their `OlaresManifest.yaml` file.
+:::info 提示
+分析数据仅适用于在 `OlaresManifest.yaml` 文件中声明了分析功能的应用程序。
 :::
 
 ![Analytics](/images/manual/tasks/analytics.png)
 
-Key metrics include:
+关键指标包括：
 
-| Metric             | What it shows                                                                 |
-|--------------------|-------------------------------------------------------------------------------|
-| Views              | Total webpage accesses, counted individually even for the same user           |
-| Visitors           | Unique individuals accessing your site (multiple visits count as one visitor) |
-| Average visit time | Time spent per user session                                                   |
-| Referrer           | Previous webpage before reaching your Olares application                      |
-| Visitor info       | Device, browser, OS, and location data                                        |
+| 指标             | 描述                                                                         |
+|------------------|------------------------------------------------------------------------------|
+| 浏览量           | 总网页访问次数，即使是同一用户也会单独计数                                    |
+| 访客数           | 访问你站点的独立用户数（多次访问计为一名访客）                                |
+| 平均访问时间     | 每个用户会话的停留时间                                                       |
+| 来源             | 用户到达你的 Olares 应用程序之前的网页                                        |
+| 访客信息         | 设备、浏览器、操作系统和位置信息                                              |

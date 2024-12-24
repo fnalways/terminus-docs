@@ -77,7 +77,7 @@ Inside the application, Olares has multiple layers of security.
   - Traffic access requires declared entrance service and system-provided entry proxy
   - The Pod declared as entrance will be forced to join Envoy's sandbox Sidecar to authenticate and authorize incoming traffic.
 
-## See also
+## Learn more
 - [Customize domain name for application](../tasks/access-settings.md#custom-domain-name)
 - [Access Olares via VPN](../tasks/private-network.md)
 

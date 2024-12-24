@@ -2,36 +2,42 @@
 outline: [2, 3]
 ---
 
-# Design Your Olares profile
+# 设计你的 Olares 个人主页
 
-You can create a distinctive personal homepage that showcases your digital identity.
+你可以创建一个独特的个人主页，展示你的数字身份。
 
 ![Profile](/images/manual/tasks/profile.png)
 
-## Access your homepage
-Your personal homepage's default URL is `{Local name}.olares.com`.
+## 访问你的主页
 
-## Customize your homepage
+你的个人主页默认 URL 为 `{本地名}.olares.cn`。
 
-### Design your cover
-Craft your homepage's header to reflect your style. You can build your content using various elements such as text, images, and link sections, much like assembling building blocks.
+## 自定义你的主页
 
-### Add social media links
-Enhance your online presence by adding social media links. Visitors can easily access your profiles by clicking the corresponding icons on your homepage.
+### 设计封面
 
-### Choose your layout
-Fine-tune your homepage's appearance by adjusting the layout style and background scheme in the appearance section.
+打造符合你风格的主页头部。你可以像拼积木一样，使用文本、图片和链接等多种元素构建内容。
 
-## Share your homepage
-Olares offers multiple ways to share your personal homepage:
+### 添加社交媒体链接
 
-* **Share via social platforms**: Directly share your homepage on popular social media platforms like X, Meta, and LinkedIn.
-* **Share via QR code**: Generate a QR code for your homepage, which you can download and share.
-* **Share as a digital business card**: Create a stylish digital business card featuring your homepage URL, perfect for networking.
+通过添加社交媒体链接增强你的在线存在。访问者可以通过点击主页上的相应图标轻松访问你的社交媒体资料。
 
-## Track your homepage analytics
-Monitor your homepage's performance with built-in analytics. This feature helps you understand your audience and optimize your content for better engagement.
+### 选择布局
 
-1. Open the Dashboard from the Dock or Launchpad in Olares.
-2. Navigate to the **Analytics** page and click on the **Profile** app card.
-3. View detailed visit statistics, including total views, unique visitors, average time spent, peak visit times, and visitor device types.
+在外观设置中调整布局样式和背景方案，以优化主页的外观。
+
+## 分享你的主页
+
+Olares 提供多种方式分享你的个人主页：
+
+* **通过社交平台分享**：直接将主页分享到热门社交媒体平台，例如 X、Meta 和 LinkedIn。
+* **通过二维码分享**：生成主页的二维码，下载并分享。
+* **作为数字名片分享**：创建一张包含主页 URL 的时尚数字名片，非常适合用于交流和拓展人脉。
+
+## 跟踪主页分析
+
+使用内置分析工具监控主页的表现。此功能帮助你了解受众并优化内容以提高参与度。
+
+1. 从 Dock 或启动板打开 **仪表盘** 应用。
+2. 进入 **分析** 页面，点击 **Profile** 应用卡片。
+3. 查看详细的访问统计数据，包括总浏览量、独立访客数、平均停留时间、高峰访问时间和访客设备类型。

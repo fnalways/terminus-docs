@@ -1,40 +1,47 @@
-# Add NFT image as profile picture
-Olares allows you to use NFT (Non-Fungible Token) images as unique avatars for your profile, adding a personalized touch to your digital identity. This feature requires connecting a blockchain wallet to your account.
+# 使用 NFT 图像作为个人头像
 
-## Before you begin
-Before you begin, [connect your Olares with Olares Space](./integrations).
+Olares 支持使用 NFT（非同质化代币）图像作为您的个人头像，为您的数字身份增添个性化色彩。此功能需要将区块链钱包连接到您的账户。
 
-## Step 1. Set up blockchain wallet
-1. Find and install the MetaMask extension from the Chrome Web Store.
-2. Create a new wallet or import an existing one.
-3. Follow the on-screen instructions to set up your MetaMask wallet.
+## 开始之前
 
-## Step 2. Import blockchain wallet
-1. In Olares, open the Settings app from the Dock or Launchpad.
-2. Select **Integration** from the left sidebar, and click on the Olares Space card on the right.
-3. Click **Import**, and follow the on-screen instructions to connect your MetaMask wallet.
+在开始之前，请先完成 [将 Olares 与 Olares Space 集成](./integrations)。
 
-After importing your wallet, the page will refresh to display wallet details.
+## 第一步：设置区块链钱包
 
-## Step 3. Associate Olares ID
+1. 在 Chrome 网上应用店找到并安装 MetaMask 扩展程序。
+2. 创建一个新钱包或导入现有钱包。
+3. 按屏幕提示完成 MetaMask 钱包的设置。
 
-1. Click **Bind**, and confirm this action in MetaMask. 
-    This will also trigger a confirmation prompt in LarePass app.
-2. Open the LarePass app. You should see a confirmation prompt. If not:
+## 第二步：导入区块链钱包
 
-    a. Go to **Settings** > **Integration**.
+1. 在 Olares 中，从 Dock 或启动台打开 **设置** 应用程序。
+2. 在左侧边栏选择 **集成**，点击右侧的 Olares Space 卡片。
+3. 点击 **导入**，并按照屏幕提示连接您的 MetaMask 钱包。
 
-    b. Tap the Olares Space card. 
+导入钱包后，页面会刷新并显示钱包详情。
 
-    c. In the confirmation prompt, tap **Confirm** to authorize.
-3. Return to Olares, and click **Confirm** to complete the association to your Olares ID.
+## 第三步：关联 Olares ID
 
-Now you should be able to access your NFT collection in Olares.
+1. 点击 **绑定**，并在 MetaMask 中确认此操作。
+    此操作还会触发 LarePass 应用中的确认提示。
+2. 打开 LarePass 应用。您应该会看到确认提示。如果没有：
+   
+   a. 前往 **设置** > **集成**。
 
-## Step 4. Select an NFT as your profile picture
-To use your preferred NFT image and set it as your unique avatar:
-1. Open the Profile app.
-2. In the **Header** page, click the avatar image under **Profile picture**.
-3. In the dialog, click **NFT Avatar**.
-4. Select an image from your NFT collection.
-5. Click **Create** to apply the change.
+   b. 点击 Olares Space 卡片。
+
+   c. 在确认提示中，点击 **确认** 授权。
+
+3. 返回 Olares，点击 **确认** 完成与 Olares ID 的关联。
+
+完成后，您可以在 Olares 中访问您的 NFT 收藏。
+
+## 第四步：选择 NFT 作为个人头像
+
+将您喜欢的 NFT 图像设置为唯一头像：
+
+1. 打开 **Profile** 应用。
+2. 在 **标题** 页面，点击 **个人头像** 下的头像图片。
+3. 在对话框中，点击 **NFT 头像**。
+4. 从您的 NFT 收藏中选择一张图片。
+5. 点击 **创建** 应用更改。

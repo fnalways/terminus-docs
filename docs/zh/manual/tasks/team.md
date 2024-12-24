@@ -1,42 +1,45 @@
-# Start a team
-Do you want to share Olares with your family, friends, or coworkers? Here's everything you need to know about creating a collaborative Olares environment.
+# 创建团队
 
-## Why Olares for teams
-Olares's multi-user design efficiently shares system resources, eliminating redundant deployments that would otherwise increase with each new user.
- 
-When you share Olares with others, you can:
-* Create a powerful workspace using professional-grade open source alternatives without subscription fees.
-* Enable everyone to access resource-intensive AI applications without system overhead.
-* Build a central hub for shared files, photos, and documents with secure access from anywhere.
-* Store and manage shared files, photos, and documents.
+想与家人、朋友或同事共享 Olares 吗？以下是创建协作 Olares 环境所需了解的一切。
 
-Transform your system into the hub that best serves your group - a smart home control center, a workspace, or a media server. With the rich applications in Olares, you can customize the environment to match how your team wants to work and collaborate.
+## 为什么选择 Olares 团队模式
 
-## The Olares cluster
-Your Olares installation creates a Kubernetes-based environment that efficiently supports multiple users while minimizing system overhead. Think of your Olares installation as a digital home for your team. When you set it up, your device becomes a private server that everyone can access securely.
+Olares 的多用户设计能够高效共享系统资源，避免了每增加一个新用户就需要部署额外系统的重复工作。
 
-## Your role as administrator
-As an Olares administrator, you'll mainly be responsible for:
+与他人共享 Olares 时，你可以：
 
-* Managing user accounts for team members
-* Installing and maintaining system-wide applications that everyone shares
-* Ensuring fair resource allocation across the system
+* 利用专业级开源替代方案构建强大的工作空间，无需订阅费用。
+* 让每个人都能使用资源密集型应用而不增加系统开销。
+* 为团队呢构建一个文件、照片和文档的共享库，随时随地安全访问。
+* 存储并管理共享的文件、照片和文档。
+
+借助 Olares 中丰富的应用程序，你可以根据团队的工作和协作需求定制环境。
+
+## Olares 集群
+
+ Olares 创建了一个基于 Kubernetes 的环境，可以高效支持多用户并最大限度减少系统开销。安装设置后，你的设备将成为一个私人服务器，供所有人安全访问。
+
+## 你作为管理员的角色
+
+作为 Olares 管理员，你主要负责：
+
+* 管理团队成员的用户账户
+* 安装和维护系统范围内的共享应用程序
+* 确保系统资源的公平分配
 
 ---
 
 <div>
-<h4><a href="./roles-permissions">User roles and permissions</a></h4>
-Understand different roles in Olares.
+<h4><a href="./roles-permissions">用户角色和权限</a></h4>
+了解 Olares 中的不同角色。
 </div>
 
 <div>
-<h4><a href="./manage-team">Manage your team</a></h4>
-Set up accounts for your team members.
+<h4><a href="./manage-team">管理你的团队</a></h4>
+为你的团队成员设置账户。
 </div>
 
 <div>
-<h4><a href="./collaborate">Collaborate in Olares</a></h4>
-Learn how to invite and interact with team members.
+<h4><a href="./collaborate">在 Olares 中协作</a></h4>
+学习如何邀请和与团队成员互动。
 </div>
-
-

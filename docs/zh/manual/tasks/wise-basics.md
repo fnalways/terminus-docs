@@ -2,74 +2,86 @@
 outline: [2, 3]
 ---
 
-# Wise basics
+# Wise 基础知识
 
-Wise helps you curate and organize your reading materials with flexible options for collecting, reading, and managing content. This page covers the essential tasks to get you started with Wise.
+Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、阅读、管理内容。你可以通过本页面学习 Wise 的基本操作。
 
-## Add content to your library
-Save interesting content using any of these methods.
+## 将内容添加到你的库
 
-### Add to Inbox or Read Later
-Organize your reading flow with two collections:
+通过以下方法保存感兴趣的内容。
 
-* **Inbox**: Your primary collection for content you want to read soon.
-* **Read Later**: Your backlog for content to revisit in the future.
+### 添加到收件箱或稍后阅读
 
-While browsing the title or reading, click **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** to save content to either collection.
+你可以使用以下两个内容集组织你的阅读流程：
+
+* **收件箱**：你计划近期阅读的主要内容集合。
+* **稍后阅读**：你计划稍后查看的内容。
+
+在浏览标题或阅读内容时，点击 **<i class="material-symbols-outlined">inbox</i> 收件箱** 或 **<i class="material-symbols-outlined">schedule</i> 稍后阅读**，将内容保存到相应的集合。
 
 ![Inbox or Read later](/images/manual/tasks/inbox-read-later.png)
-### Save web pages via LarePass
-:::tip
-LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
+
+### 通过 LarePass 保存网页
+
+:::tip 提示
+LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass) 下载。
 :::
 
-1. Open the LarePass browser extension and click **Collect**.
-2. In the **Pages** section, click <i class="material-symbols-outlined">add_box</i> to save the current page to your Wise library.
+1. 打开 LarePass 浏览器扩展，点击 **收集**。
+2. 在 **页面** 部分，点击 <i class="material-symbols-outlined">add_box</i> 将当前页面保存到你的 Wise 库。
 
-Once collected, you can find it in page **Library** > **Articles** in Wise.
-### Manually add content
-Wise supports various content types including videos, audio, PDFs, and eBooks:
+保存后，你可以在 Wise 的 **库** > **文章** 页面找到该网页。
 
-1. Click <i class="material-symbols-outlined">add_circle</i> in the menu bar.
-2. To add a web page, select **Web page**.
-3. To add other types of content, select **Download link**.
-4. To add an RSS feed, select **RSS**.
-    :::tip
-    To explore how you can leverage RSS subscription with Wise, see [Subscribe to an RSS feed](./subscribe).
-    :::
-5. Enter the URL in the popup, and click **Confirm** to retrieve the resource.
+### 手动添加内容
 
-## Automatic download
-Wise automatically creates download tasks for new audio or video content, saving media files to Olares for convenient offline access.
+Wise 支持包括视频、音频、PDF 和电子书在内的多种内容类型：
 
-This feature:
+1. 在菜单栏中点击 <i class="material-symbols-outlined">add_circle</i>。
+2. 添加网页时，选择 **网页**。
+3. 添加其他类型内容时，选择 **下载链接**。
+4. 添加 RSS 订阅源时，选择 **RSS**。
+   :::tip 提示
+   要了解如何通过 Wise 订阅 RSS，请参阅 [订阅 RSS 订阅源](./subscribe)。
+   :::
+5. 在弹出窗口中输入 URL，点击 **确认** 以检索资源。
 
-* Ensures your content is always available offline
-* Prevents content loss if the original source becomes unavailable
-* Provides quick access to your media files
+## 自动下载
 
-You can find downloaded media files in the Files app.
-## Organize your reading
+Wise 会自动为新的音频或视频内容创建下载任务，将媒体文件保存到 Olares 以便离线访问。
 
-### Use tags for organization
-To create a structured content collection with tags:
+此功能可以：
 
-1. On the list page, click <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">sell</i> on the content card.
-2. In the tag input box, select or create tags relevant to the current content.
+* 确保内容始终可离线访问
+* 防止原始来源不可用时内容丢失
+* 提供对媒体文件的快速访问
+
+你可以在文件管理器中找到已下载的媒体文件。
+
+## 组织你的阅读
+
+### 使用标签进行组织
+
+你剋通过标签创建结构化的内容集合：
+
+1. 在列表页面中，点击内容卡片上的 <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">sell</i>。
+2. 在标签输入框中，选择或创建与当前内容相关的标签。
 
 ![Tags](/images/manual/tasks/tags.png)
 
-You can find and manage your tags in the page **Manage** > **Tags**.
+你可以在 **管理** > **标签** 页面找到并管理你的标签。
 
-### Capture insights with notes
-1. While reading, click <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">right_panel_open</i> to open the **Info** panel.
-2. Add your thoughts in the **Note** section.
-3. Click **Save** to store your notes.
+### 用笔记捕捉灵感
 
-You can edit or delete note later.
+1. 在阅读时，点击 <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">right_panel_open</i> 打开 **信息** 面板。
+2. 在 **笔记** 部分输入你的想法。
+3. 点击 **保存** 存储笔记。
+
+你可以稍后编辑或删除笔记。
+
 ![Notes](/images/manual/tasks/notes.png)
 
-### Track your reading progress
-Wise uses green dot indicators on article covers to help you track unread content. When you open an article, it's automatically marked as read.
+### 跟踪你的阅读进度
 
-While reading, you can manually toggle between **<i class="material-symbols-outlined">playlist_add_check</i>Seen** or **<i class="material-symbols-outlined">playlist_remove</i>Unseen** status in the toolbar to maintain your reading progress.
+Wise 使用文章封面上的绿色点标识未读内容。当你打开一篇文章时，它会自动标记为已读。
+
+在阅读时，你可以通过工具栏手动在 **<i class="material-symbols-outlined">playlist_add_check</i> 已看** 和 **<i class="material-symbols-outlined">playlist_remove</i> 未看** 状态之间切换，以维护你的阅读进度。

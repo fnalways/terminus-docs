@@ -116,5 +116,5 @@ In the rare event of a sync conflict, LarePass has you covered. When multiple de
 * The first completed edit is saved to the Library.
 * A backup of the conflicting version is created with a unique filename, including the editor's Olares ID and timestamp: `test.txt(SFConflict name 2024-04-17-12-12-12)`.
 
-## See also
+## Learn more
 - [Manage users](./manage-users.md)

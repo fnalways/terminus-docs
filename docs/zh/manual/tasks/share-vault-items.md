@@ -2,67 +2,81 @@
 outline: [2, 3]
 ---
 
-# Share vault items
-A shared vault is an effective method for organizing, managing, and securely sharing data among users within the same Olares cluster. Whether you're managing family accounts or enterprise-level data, Team Vault provides the perfect balance of security and collaboration.
+# 共享 Vault 项目
 
-## Understand team roles
-:::info
-The Olares admin automatically becomes the shared vault owner.
+共享 Vault 是在同一 Olares 集群内组织、管理和安全共享数据的有效方法。无论是管理家庭账户还是企业级数据，团队 Vault 都能让你兼顾安全性与协作。
+
+## 了解团队角色
+
+:::info 提示
+Olares 管理员会自动成为共享 Vault 的所有者。
 :::
-| Role                             | Owner | Administrator | Member |
-|----------------------------------|-------|---------------|--------|
-| Add, suspend, reactivate members	 | ✅     | ✖️            | ✖️     |
-| Appoint administrators           | ✅     | ✖️            | ✖️     |
-| Create shared Vault items        | ✅     | ✅️            | ✖️     |
-| Assign read/write permissions    | ✅     | ✅             | ✖️     |
 
-## Get started with team access
-### Confirm membership
-All administrators and users of an Olares cluster are automatically included in one vault team. However, for security reasons, each new member must be verified before accessing team vault items.
+| 角色                              | 所有者 | 管理员       | 成员   |
+|-----------------------------------|-------|-------------|--------|
+| 添加、暂停、重新激活成员           | ✅     | ✖️          | ✖️     |
+| 指定管理员                       | ✅     | ✖️          | ✖️     |
+| 创建共享 Vault 条目               | ✅     | ✅️         | ✖️     |
+| 分配读/写权限                    | ✅     | ✅          | ✖️     |
 
-1. In Vault, navigate to the page **My Team** > **Invites**.
-2. Click on the member's account name to view the invitation code.
+## 设置团队访问
+
+### 确认成员资格
+
+所有 Olares 集群的管理员和用户会自动加入一个 Vault 团队。但出于安全原因，每位新成员在访问团队 Vault 条目前必须完成验证。
+
+1. 在 Vault 中，导航到 **我的团队** > **邀请** 页面。
+2. 点击成员账户名称查看邀请码。
 
    ![Invite members](/images/manual/tasks/invite-members.png)
-3. Send the invitation code to the corresponding member.
-   :::tip
-   For members, navigate to the page **Invites** > **My team** in Vault to accept invitation.
+
+3. 将邀请码发送给相应的成员。
+   :::tip 提示
+   对于成员，请导航到 Vault 中的 **邀请** > **我的团队** 页面接受邀请。
    :::
-4. After the member confirms the invitation, return to the invitation page and click **Add member**.
+4. 在成员确认邀请后，返回邀请页面并点击 **添加成员**。
 
-### Set administrator
-1. In Vault, navigate to the page **My team** > **Members**.
-2. Select a member from the member list. 
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Make admin**.
-4. To remove administrator privileges, select **Remove member**.
+### 设置管理员
 
-### Suspend members
-1. In Vault, navigate to the page **My team** > **Members**.
-2. Select a member from the member list.
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Suspend**.
-4. To reactivate a member, select **Unsuspend**.
+1. 在 Vault 中，导航到 **我的团队** > **成员** 页面。
+2. 从成员列表中选择一个成员。
+3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择 **设为管理员**。
+4. 若需移除管理员权限，选择 **移除成员**。
 
-:::info
-Suspended members retain their role but won't receive updates or make changes. Reactivation requires reverification for security.
+### 暂停成员
+
+1. 在 Vault 中，导航到 **我的团队** > **成员** 页面。
+2. 从成员列表中选择一个成员。
+3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择 **暂停**。
+4. 若需重新激活成员，选择 **取消暂停**。
+
+:::tip 提示
+暂停的成员保留其角色，但无法接收更新或进行更改。重新激活需再次验证以确保安全。
 :::
 
-## Work with shared vaults
-Shared vaults are designed for sharing data among multiple Olares users. By default, they must be created by Olares admin.
-### Create a shared vault
-1. In Vault, navigate to the page **My team** > **Vaults**.
-2. Click <i class="material-icons">add</i> in the top right corner, and enter vault name.
-3. Click **Save**.
+## 使用共享 Vault
 
-### Edit shared vault permissions
-1. In Vault, navigate to the page **My team** > **Vaults**. 
-2. Select the shared vault to edit permissions. You can add or remove members and set read/write permissions.
-3. Click **Save**.
+共享 Vault 专为在多个 Olares 用户间共享数据设计。默认情况下，必须由 Olares 管理员创建。
 
-### Delete a shared vault
-:::warning
-Deleting a shared vault permanently removes all associated data. Always double-check before confirming deletion.
+### 创建共享 Vault
+
+1. 在 Vault 中，导航到 **我的团队** > **Vaults** 页面。
+2. 点击右上角的 <i class="material-icons">add</i>，输入 Vault 名称。
+3. 点击 **保存**。
+
+### 编辑共享 Vault 权限
+
+1. 在 Vault 中，导航到 **我的团队** > **Vaults** 页面。
+2. 选择要编辑权限的共享 Vault，可以添加或移除成员并设置读/写权限。
+3. 点击 **保存**。
+
+### 删除共享 Vault
+
+:::warning 警告
+删除共享 Vault 将永久移除所有相关数据。请务必在确认删除前仔细检查。
 :::
-1. In Vault, navigate to the page **My team** > **Vaults**.
-2. Select the shared vault to view vault details.
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Delete**.
-4. In the popup dialog, enter `DELETE` to confirm deletion.
+
+1. 在 Vault 中，导航到 **我的团队** > **Vaults** 页面。
+2. 选择共享 Vault 查看其详情。
+3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择 **删除**。
+4. 在弹出对话框中输入 `DELETE` 以确认删除。

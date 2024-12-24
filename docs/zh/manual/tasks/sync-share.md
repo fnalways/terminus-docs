@@ -1,120 +1,136 @@
-# Sync and share files
-LarePass is a powerful tool not only ensures your Files content remains consistent and accessible, but also facilitates seamless collaboration within your Olares server.
+---
+outline: [2, 3]
+---
 
-This page will mainly cover:
-- How to sync files across devices
-- How to share files with other team members
+# 同步和共享文件
 
-## Understand Sync and Library
-### Sync
-Sync in the Files app is similar to cloud storage services like iCloud, where you can keep your most important information up to date, and available across all your devices. Sync also makes it easy to share files with other members within an Olares server.
+本页面主要介绍：
+- 如何跨设备同步文件
+- 如何与团队成员共享文件
 
-### Library
-Library is the fundamental unit for organizing, syncing, and sharing your digital content. It is more than just a folder. It's a versatile container designed to meet various data synchronization and sharing needs:
+## 了解同步和库
 
-* **Multi-device synchronization**: Libraries ensure your data remains consistent across all your devices.
-* **Real-time collaboration**: Share libraries with other users, enabling simultaneous access and editing of data within the same Library.
-* **Flexible management**: Create multiple libraries to organize different types of data or for various projects, giving you granular control over your synchronization and sharing preferences.
+### 同步
 
-### Roles and permissions
-:::info
-The roles and permissions described here are specific to file sharing and Library management within Files. These are distinct from the overall Olares user roles and system-wide permissions.
+文件管理器应用中的同步功能类似于 iCloud 等云存储服务，帮助你将最重要的信息保持最新，并可在所有设备上访问。同步功能还简化了在 Olares 服务器内与其他成员共享文件的操作。
+
+### 库
+
+库是组织、同步和共享数字内容的基本单元。它是一个多功能的文件容器，可满足各种数据同步和共享需求：
+
+* **多设备同步**：库确保你的数据在所有设备上保持一致。
+* **实时协作**：与其他用户共享库，在同一库内实现数据的同时访问和编辑。
+* **灵活管理**：创建多个库以组织不同类型的数据或用于不同项目，提供对同步和共享偏好的精细控制。
+
+### 角色与权限
+
+:::tip 提示
+此处描述的角色与权限仅适用于文件管理器中的文件共享和库管理，与 Olares 的整体用户角色和系统权限不同。
 :::
 
-| Operation                  | Owner | Member |
-|----------------------------|-------|--------|
-| Create Library             | ✅     | ✅      |
-| Manage Library permissions | ✅     | ❌      |
-| Invite other members       | ✅     | ❌      |
-| Share and rename Library   | ✅     | ❌      |
-| Remove members             | ✅     | ❌      |
-| Delete Library             | ✅     | ❌      |
-| Exit Library               | ❌     | ✅      |
+| 操作                     | 所有者 | 成员 |
+|--------------------------|-------|------|
+| 创建库                  | ✅     | ✅   |
+| 管理库权限              | ✅     | ❌   |
+| 邀请其他成员             | ✅     | ❌   |
+| 共享并重命名库           | ✅     | ❌   |
+| 移除成员                | ✅     | ❌   |
+| 删除库                  | ✅     | ❌   |
+| 退出库                  | ❌     | ✅   |
 
-Permission levels:
-- **Read-only**: Users can view Library contents but cannot modify them.
-- **Read-write**: Users can add, delete, and modify Library contents.
+权限级别：
+- **只读**：用户可以查看库内容，但无法修改。
+- **读写**：用户可以添加、删除和修改库内容。
 
-## Before you begin
-Make sure you have installed the LarePass desktop client from the [official website](https://www.olares.xyz/larepass), and logged in using your Olares ID.
+## 开始之前
 
-:::info
-Currently, local file sync is available for Windows and Mac users. We'll use the Mac version for our examples.
+请确保你已从 [官方网站](https://www.olares.xyz/larepass) 安装 LarePass 桌面客户端，并使用你的 Olares ID 登录。
+
+:::tip 提示
+目前，本地文件同步支持 Windows 和 Mac 用户。本示例使用 Mac 版本。
 :::
 
-## Create a Library
-Each user is automatically provided with their own personal Library as a starting point. To create a new Library:
+## 创建库
 
-1. In the left sidebar under **Sync**, click the <i class="material-symbols-outlined">add_circle</i> to open the **New library** dialog.
-2. Enter a name for the Library and click **Create**.
+每位用户都会自动获得一个个人库作为起点。要创建新库：
 
-## Sync Library files to local
+1. 在 **同步** 下的左侧边栏中，点击 <i class="material-symbols-outlined">add_circle</i> 打开 **新建库** 对话框。
+2. 输入库名称并点击 **创建**。
 
-1. Open LarePass on your Mac.
-2. Locate your desired Library and click <i class="material-icons">more_horiz</i> > **Sync to local**.
-3. Select your preferred local directory, and click **Complete**.
-4. To initiate the sync, click <i class="material-icons">more_horiz</i> > **Sync now**.
+## 将库文件同步到本地
 
-Once synchronized, your libraries will display a green icon, indicating active two-way synchronization. Any changes made locally will automatically reflect in your synced Library.
+1. 在 Mac 上打开 LarePass。
+2. 找到目标库，点击 <i class="material-icons">more_horiz</i> > **同步到本地**。
+3. 选择首选的本地目录并点击 **完成**。
+4. 要启动同步，点击 <i class="material-icons">more_horiz</i> > **立即同步**。
 
-## Sync local files to Library
-:::info
-If your permission to the Library is read-only, you cannot sync changes from the local folder to the Library. Your newly added and modified files will be read-only, indicated by a gray disabled icon <i class="material-icons">remove</i>.
+同步完成后，库将显示绿色图标，表示处于活动的双向同步状态。任何本地更改都会自动反映在同步的库中。
+
+## 将本地文件同步到库
+
+:::tip 提示
+如果你对库的权限是只读，则无法将本地文件夹的更改同步到库。新添加或修改的文件将为只读，显示为灰色禁用图标 <i class="material-icons">remove</i>。
 :::
 
-To sync an existing local folder on your Mac, simply create a matching Library in LarePass and move your files into the designated sync directory.
+要同步 Mac 上的现有本地文件夹，只需在 LarePass 中创建一个匹配的库，并将文件移动到指定的同步目录中。
 
-This approach allows you to maintain your current folder structure while benefiting from LarePass's synchronization capabilities.
+这种方法允许你保留当前的文件夹结构，同时支持 LarePass 的同步功能。
 
-## Managing sync settings
-If you need to pause or stop synchronization for a specific Library:
+## 管理同步设置
 
-1. Locate the Library in LarePass.
-2. Click <i class="material-icons">more_horiz</i> > **Unsynchronized**.
+如果需要暂停或停止特定库的同步：
 
-Rest assured, this action won't delete your local files. It simply halts the two-way synchronization process.
+1. 在 LarePass 中找到该库。
+2. 点击 <i class="material-icons">more_horiz</i> > **取消同步**。
 
-## Share a Library
-:::tip
-To add a member in Olares, see [manage users](./manage-users.md).
+此操作不会删除本地文件，只是停止双向同步过程。
+
+## 共享库
+
+:::tip 提示
+要在 Olares 中添加成员，请参阅 [管理用户](./manage-users.md)。
 :::
 
-You can share a Library with other members within an Olares server:
+你可以与 Olares 服务器中的其他成员共享库：
 
-1. Select a Library, and click <i class="material-icons">more_horiz</i> > **Share with**.
-2. In the dialog, select users from the dropdown menu, and click **Share to user**.
-3. Set file permissions for each user: **Read-write** or **Read-only**.
-4. Click **Close**.
+1. 选择一个库，点击 <i class="material-icons">more_horiz</i> > **共享**。
+2. 在对话框中，从下拉菜单中选择用户，点击 **共享给用户**。
+3. 为每位用户设置文件权限：**读写** 或 **只读**。
+4. 点击 **关闭**。
 
    ![Share library](/images/manual/tasks/share-library.png#bordered){width="50%"}
 
-Invited users will see the shared Library in their Sync content list. To revoke sharing permissions, simply remove the user from the sharing window.
+被邀请的用户将在其同步内容列表中看到共享库。要撤销共享权限，只需从共享窗口中移除该用户。
 
-## Exit or delete a Library
-If you don't want to share a Library, you could exit sharing or delete it.
-- **Exit sharing**: Any member can exit a shared Library. When an owner exits, the Library will appear in their personal Library list.
-- **Delete**: Only the owner can delete a shared Library.
-   :::warning
-   Deleting a Library is irreversible. All files in the shared Library will be permanently deleted.
+## 退出或删除库
+
+如果你不再希望共享库，可以选择退出共享或删除库。
+
+- **退出共享**：任何成员都可以退出共享库。如果所有者退出，共享库将出现在其个人库列表中。
+- **删除库**：只有所有者可以删除共享库。
+
+   :::warning 警告
+   删除库是不可逆的。共享库中的所有文件将被永久删除。
    :::
 
-1. To exit a Library:
+1. 要退出库：
    
-   a. Select a shared Library and click <i class="material-icons">more_horiz</i> > **Exit sharing**.
+   a. 选择一个共享库，点击 <i class="material-icons">more_horiz</i> > **退出共享**。
 
-   b. Click **Confirm** in the popup dialog.
-2. To delete a Library: 
+   b. 在弹出对话框中点击 **确认**。
+2. 要删除库：
 
-   a. Select a shared Library and click <i class="material-icons">more_horiz</i> > **Delete**.
+   a. 选择一个共享库，点击 <i class="material-icons">more_horiz</i> > **删除**。
 
-   b. Click **Confirm** in the popup dialog.
+   b. 在弹出对话框中点击 **确认**。
 
-## Handle sync conflicts
+## 处理同步冲突
 
-In the rare event of a sync conflict, LarePass has you covered. When multiple devices edit the same file simultaneously:
+在极少数情况下，可能会出现同步冲突。当多个设备同时编辑同一文件时：
 
-* The first completed edit is saved to the Library.
-* A backup of the conflicting version is created with a unique filename, including the editor's Olares ID and timestamp: `test.txt(SFConflict name 2024-04-17-12-12-12)`.
+* 第一个完成的编辑会保存到库中。
+* 冲突版本会备份，并以唯一文件名保存，包括编辑者的 Olares ID 和时间戳：`test.txt(SFConflict name 2024-04-17-12-12-12)`。
 
-## See also
-- [Manage users](./manage-users.md)
+## 了解更多
+
+- [管理用户](./manage-users.md)

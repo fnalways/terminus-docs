@@ -1,28 +1,26 @@
-# Manage files
+# 管理文件
 
-Olares's built-in Files app offers users a secure and efficient solution for file storage and synchronization, allowing access to various file types from any device or browser. It has the following advantages:
+Olares 内置的文件应用为用户提供了安全高效的文件存储与同步解决方案，支持从任何设备或浏览器访问各种文件类型。主要优势包括：
 
-* **Access anywhere**: View, download, or share files stored in Olares from any location using any device or browser.
-* **Seamless synchronization**: Ensures data remains up-to-date across all your devices.
-* **Centralized storage**: Simplifies information retrieval and integration, making it easier to access, manage, and update your data, whether personal documents or team-shared materials.
+* **随时随地访问**：使用任意设备端的浏览器，从任何位置查看、下载或共享存储在 Olares 中的文件。
+* **无缝同步**：确保数据在所有设备间保持最新。
+* **集中存储**：简化信息检索与集成，无论是个人文档还是团队共享资料，均可轻松访问、管理与更新。
 
-## Understand the interface
-The interface is similar to Windows Explorer or macOS Finder, allowing you to organize and access documents, images, videos, or any other files you own.
-It consists of three main components:
+## 界面概览
 
-* **Drive**: For storing files that don't require frequent synchronization or modifications.
-* **Sync**: For syncing files and directories across devices.
-* **Application**: For development and debugging purposes only.
+文件应用的界面类似于 Windows 资源管理器或 macOS 的访达，允许您整理和访问文档、图片、视频或其他文件。主要由以下三个部分组成：
+
+* **存储**：用于存储不需要频繁同步或修改的文件。
+* **同步**：用于在设备间同步文件和目录。
+* **应用**：存储应用与缓存数据，仅用于开发和调试目的。
 
 ---
 <div>
-<h4><a href="./add-edit-download">Add, edit, and download files</a></h4>
-Learn the fundamentals of file management in Olares.
+<h4><a href="./add-edit-download">添加、编辑和下载文件</a></h4>
+了解 Olares 文件管理的基本操作。
 </div>
 
 <div>
-<h4><a href="./sync-share">Sync and share files</a></h4>
-Learn how to keep files updated across devices, and how to share files with other Olares member.
+<h4><a href="./sync-share">同步和共享文件</a></h4>
+了解如何在设备间保持文件更新，以及如何与其他 Olares 成员共享文件。
 </div>
-
-

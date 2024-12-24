@@ -1,16 +1,18 @@
-# Update Olares
-Olares regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
+# 更新 Olares
 
-:::info
-Only Olares admin can perform system updates. Updates will apply to all members within the same Olares team.
+Olares 定期发布新版本，带来功能改进和用户体验优化。本文档说明如何检查和安装系统更新。
+
+:::info 提示
+只有 Olares 管理员可以执行系统更新。更新将应用于同一 Olares 集群内的所有成员。
 :::
 
-## Check and install updates
-:::tip
-Review the release notes before updating to learn about new features and important changes.
+## 检查并安装更新
+
+:::tip 提示
+在更新前，请查看发布说明以了解新功能和重要更改。
 :::
 
-1. Open Settings, and click **System** > **Version**. 
-2. Click **Upgrade now** when there is an available new version.
+1. 打开 **设置**，点击 **系统** > **版本**。
+2. 如果有可用的新版本，点击 **立即升级**。
 
-You'll see a confirmation message when update completed.
+更新完成后，系统将显示确认消息。

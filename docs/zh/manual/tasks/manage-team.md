@@ -1,66 +1,76 @@
-# Manage your team
-As an administrator, you can create and manage team members while ensuring optimal system performance through efficient resource controls.
-## Before you begin
-Ensure that:
+# 管理多用户
 
-* You have Olares admin privileges
-* Your system has sufficient available resources
-* Team members have created their Olares IDs
+Olares 支持多用户。作为管理员，你可以创建并管理团队成员，同时通过高效的资源控制确保系统的最佳性能。
+
+## 开始之前
+
+请确保：
+
+* 你拥有 Olares 管理员权限。
+* 系统有足够的可用资源。
+* 团队成员已创建 Olares ID。
 
     :::info
-    When creating a new member account in Olares, make sure the domain part of their Olares ID matches yours.
+    在 Olares 中创建新成员账户时，请确保其 Olares ID 的域名部分与你的一致。
     :::
-## Create a new member
 
-1. Navigate to the page **Settings** > **Account**.
-2. Click **Create account**.
-3. In the dialog, fill in the required fields.
-   - **Olares ID**: Enter the local name only.
-   - **CPU**: Allocate CPU cores (minimum 1 core)
-   - **Memory**: Allocate memory (minimum 3GB)
-4. Click **Save**.
-   Once created, you will see activation credentials for the specific Olares ID:
-   - Activation wizard URL
-   - One-time password
-5. Share activation credentials with the new member.
+## 创建新成员
 
-You can verify whether they have completed the activation in the **Accounts** page.
+1. 进入 **设置** > **账户** 页面。
+2. 点击 **创建账户**。
+3. 在对话框中填写必填字段：
+   - **Olares ID**：仅输入本地名称。
+   - **CPU**：分配 CPU 核心（最低 1 核）。
+   - **内存**：分配内存（最低 3GB）。
+4. 点击 **保存**。
+
+   创建完成后，你将看到该 Olares ID 的激活凭据：
+   - 激活向导 URL
+   - 一次性密码
+
+5. 将激活凭据分享给新成员。
+
+你可以在 **账户** 页面验证他们是否已完成激活。
 
 :::tip
-New members can activate their account through the wizard without installing Olares locally.
-For detailed instructions, see [Activate Olares](../get-started/activate-olares).
+新成员无需本地安装 Olares 即可通过激活向导激活账户。
+详细说明请参阅 [激活 Olares](../get-started/activate-olares)。
 :::
 
-## Remove a member
+## 删除成员
+
 :::warning
-Ensure users backup important data before deletion - some data cannot be recovered.
+确保用户在删除前备份重要数据——部分数据无法恢复。
 :::
 
-1. Navigate to the page **Settings** > **Account**.
-2. Click the member you want to delete to view its account details.
-3. Scroll to the bottom, and click **Delete user**.
-4. In the dialog, click **OK** to confirm.
+1. 进入 **设置** > **账户** 页面。
+2. 点击要删除的成员以查看其账户详情。
+3. 滚动到页面底部，点击 **删除用户**。
+4. 在对话框中点击 **确定** 以确认。
 
-## Manage resource quotas
-You can adjust the allocated resources for members in your Olares cluster.
+## 管理资源配额
 
-1. Navigate to the page **Settings** > **Account**.
-2. Click the member you need to adjust resource quotas.
-3. In the **Account info** page, scroll to the bottom and click **Modify limits**.
-4. In the dialog, adjust CPU and memory quotas.
-5. Click **OK** to apply changes.
+你可以调整分配给 Olares 集群成员的资源。
 
-## Reset passwords
-1. Navigate to the page **Settings** > **Account**.
-2. Click the member you need to reset password fo.
-3. In the **Account info** page, scroll down and click **Reset password**. The new password will be generated immediately.
-4. Share the new password with the member.
+1. 进入 **设置** > **账户** 页面。
+2. 点击需要调整资源配额的成员。
+3. 在 **账户信息** 页面，滚动到底部，点击 **修改配额**。
+4. 在对话框中调整 CPU 和内存配额。
+5. 点击 **确定** 应用更改。
 
-## FAQ
-### Why can't I create a new user?
-If you're an administrator:
+## 重置密码
 
-* Ensure the new member has obtained their Olares ID. See [Create an Olares ID](../get-started/create-olares-id).
-* The name you entered is correctly spelled.
-* There are sufficient system resources to allocate.
+1. 进入 **设置** > **账户** 页面。
+2. 点击需要重置密码的成员。
+3. 在 **账户信息** 页面，向下滚动，点击 **重置密码**。新密码将即刻生成。
+4. 将新密码分享给成员。
 
+## 常见问题
+
+### 为什么我无法创建新用户？
+
+如果你是管理员：
+
+* 确保新成员已获取其 Olares ID。请参阅 [创建 Olares ID](../get-started/create-olares-id)。
+* 检查你输入的名称是否正确拼写。
+* 确保有足够的系统资源可供分配。

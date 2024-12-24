@@ -1,41 +1,42 @@
-# Collaborate in Olares
-Olares helps teams work together efficiently while maintaining data privacy. Set up your collaborative workspace with some essential features.
+# 在 Olares 中协作
 
-## Access and share files in Files
+Olares 帮助团队在保持数据隐私的同时高效协作。通过以下关键功能，设置您的团队协作工作空间。
 
-Files provides both personal and shared storage spaces:
+## 在文件中访问和共享文件
 
-* Create shared libraries for team documents and assets.
-* Set granular access permissions for different team members.
-* Access files seamlessly across desktop and mobile devices.
+文件应用提供个人和共享存储空间：
 
-For details, see [Sync and share files](./sync-share).
+* 为团队文档和资产创建共享库。
+* 为不同团队成员设置精细的访问权限。
+* 在桌面和移动设备间无缝访问文件。
 
-## Store and share sensitive information in Vault
-Vault lets you store and share sensitive data within your team:
+详情请参阅 [同步和共享文件](./sync-share)。
 
-* Share passwords and credentials securely with team members.
-* Create separate vaults for different projects.
-* Keep sensitive data private with end-to-end encryption.
-* Access shared credentials across desktop and mobile devices.
+## 在 Vault 中存储和共享敏感信息
 
-For details, see [Share vault items](./share-vault-items).
+Vault 让您可以在团队内存储和共享敏感数据：
 
-## Set up application entrances
-Give your team flexible ways to access applications through public and private entrances. Public entrances are ideal for team services open to the world (like public websites), while private entrances ensure secure access to internal tools or assets. You can:
+* 安全地与团队成员共享密码和凭据。
+* 为不同项目创建单独的 Vault。
+* 使用端到端加密保护敏感数据隐私。
+* 在桌面和移动设备间访问共享凭据。
 
-* Replace default route IDs with memorable custom ones (like changing `de463205` to `team-wiki`).
-* Set up custom domains for easier team access.
+详情请参阅 [共享 Vault 项目](./share-vault-items)。
 
-For details, see [Customize application URLs](./access-settings).
-## Simplify remote access with VPN
-When your team works remotely, accessing Olares usually requires going through public networks - which means using services like Cloudflare and dealing with complex network setups. Olares's built-in VPN offers a simpler way:
+## 设置应用程序入口
 
-* All team members can access applications on different devices using simple local addresses.
-* Instead of going through public networks, connections stay within internal network, making it faster and reducing your public network usage costs.
+为您的团队提供通过公共和私有入口访问应用程序的灵活方式。公共入口适用于面向公众的团队服务（如公开网站），而私有入口确保内部工具或资产的安全访问。您可以：
 
-For details, see [Access Olares applications on other devices via VPN](./private-network).
+* 使用自定义路由 ID 替换默认的路由 ID（如将 `de463205` 更改为 `team-wiki`）。
+* 设置自定义域名，方便团队访问。
 
+详情请参阅 [自定义应用程序 URL](./access-settings)。
 
+## 使用专用网络简化远程访问
 
+当您的团队远程办公时，通常需要通过公共网络访问 Olares，涉及使用 Cloudflare 等服务和复杂的网络设置。Olares 内置专用网络，提供了更简单的解决方案：
 
+* 团队成员可以使用简单的本地地址，在不同设备上访问应用程序。
+* 连接保持在内部网络中，而无需通过公共网络，从而提高访问速度，降低公共网络使用成本。
+
+详情请参阅 [通过专用网络随时随地访问 Olares 应用](./private-network)。
