@@ -1,67 +1,47 @@
-# Install Olares on Mac
+## <span class="h2-border-none">System requirements</span>
 
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+
+Make sure your device meets the following requirements.
+
+- CPU: 4 cores or above
+- RAM: 8GB or above (available memory)
+- Storage: 64GB or above (available disk space)
+- Supported Systems: PVE 8.2.2
+
+::: tip Version compatibility
+While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+:::
+
+## Install on PVE
+
+In PVE CLI, run the following command:
+
+```bash
+curl -fsSL https://olares.sh |  bash -
+```
+
+:::tip Note
+During the installation, you may be prompted to enter your root password.
+:::
 
 :::info
-Currently, Olares on Mac has certain limitations including:
-- Lack of distributed storage support.
-- Inability to add local nodes.
-
-We recommend using it only for development or testing purposes.
-:::
-## System compatibility
-Make sure your Mac meets the following requirements.
-- Architecture: X86-64 or ARM64
-- RAM: 8 GB or above (available memory)
-- Storage: 90 GB or above (available disk space)
-- MacOS: Monterey (12) or later
-
-## Before you begin
-Ensure you have the following installed:
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
-    ::: tip
-    It's recommended to install via `homebrew`.
-    :::
-
-## Set up system environment
-1. In Docker Desktop, navigate to **Settings** > **Resources**, and configure as below:
-    - **CPU limit**: Set to at least 4 CPUs
-    - **Memory limit**: Set to at least 9 GB
-    - **Virtual disk limit**: Set to at least 80 GB
-
-   ![Update resource settings (example)](/images/manual/get-started/docker-resources-settings.png)
-2. Click **Apply & restart** to implement the changes.
-## Install Olares
-In terminal, run the following command:
-
- ```bash
- curl -fsSL https://olares.sh |  bash -
- ```
-:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
-## Prepare Wizard URL
-At the end of the installation process, you will need to provide some information:
-1. Check your Mac's IP address for the network gateway (e.g., `192.168.x.x`). 
 
-   If the automatically retrieved IP address is correct, press `Y`. To enter a different one, press `R` and provide the correct address.
-   ::: tip Identify your IP address
-   To identify the IP address of a Mac, you can use either the Graphical User Interface (GUI) or the Command Line (CLI).
-   - With GUI: Navigate to the **System Settings** (or **System Preferences**) > **Network**, and check the connection's details for the active network connection.
-   - With CLI: Open a new Terminal window and use the command `ipconfig getifaddr en0` for Wi-Fi or `ipconfig getifaddr en1` for Ethernet.
-   :::
-2. Enter your domain name and Olares ID.
+## Prepare Wizard URL
+
+At the end of the installation process, you will be prompted to enter your domain name and Olares ID.
 
    ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 
-   For example, if your full Olares ID is `alice123@olares.com`:
-    - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
-    - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
+For example, if your full Olares ID is `alice123@olares.com`:
+
+  - **Domain name**: Press `Enter` to use the default domain name or type `olares.com`.
+  - **Olares ID**: Enter the prefix of your Olares ID. In this example, enter `alice123`.
 
 Upon completion of the installation, the initial system information, including the Wizard URL and the initial login password, will appear on the screen. You will need them later in the activation stage.
 

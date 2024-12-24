@@ -1,3 +1,4 @@
+# Install Olares on Windows
 
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
 
@@ -13,7 +14,7 @@ Make sure your Windows meets the following requirements.
 - CPU: 4 cores or above
 - RAM: 16 or above (available memory)
 - Storage: 64 GB or above (available disk space)
-- Supported Systems:
+- Supported systems:
     - Windows 10 or 11
     - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
@@ -23,7 +24,7 @@ Make sure your Windows meets the following requirements.
 
 3. Set the execution policy for the current user.
 
-   a. Open PowerShell as Administrator, then run the following command:
+   a. Open PowerShell as administrator, then run the following command:
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
     ```
@@ -39,7 +40,12 @@ Make sure your Windows meets the following requirements.
    ![Run installation script](/images/manual/get-started/run-installation-script.png)
 
 The script will then start installing Olares.
-:::info
+
+:::tip Root user password
+During the installation, you may be prompted to enter your root password.
+:::
+
+:::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
 bash olares-uninstall.sh
@@ -47,9 +53,7 @@ bash olares-uninstall.sh
 After uninstalling, retry the installation by running the original installation command.
 :::
 ## Prepare Wizard URL
-At the end of the installation process, you will need to provide some information:
-
-Enter your domain name and Olares ID.
+At the end of the installation process, you will be prompted to enter your domain name and Olares ID.
 
 ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 

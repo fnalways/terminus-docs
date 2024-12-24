@@ -1,33 +1,27 @@
 ## <span class="h2-border-none">系统要求</span>
 
-请确保树莓派设备满足以下要求：
-- 硬件：树莓派 4B 或树莓派 5（8GB 内存版本）
-- 操作系统：Raspbian 12
-- 存储空间：64GB（建议使用 SSD）
+请确保设备满足以下配置要求：
 
-## 环境配置
-1. 配置 Raspbian 环境，启用必要功能：
+- CPU：4 核及以上
+- 内存：8GB 及以上（可用内存）
+- 存储：64GB 及以上（可用磁盘空间）
+- 支持的系统版本：PVE 8.2.2
 
-      ```bash
-      echo "$(head -1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee /boot/firmware/cmdline.txt
+::: tip 版本兼容性
+虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+:::
 
-      echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt
-      ```
-
-2. 重启树莓派使配置生效。
-
-   ```bash
-   sudo reboot
-   ```
 ## 安装 Olares
-执行以下命令:
 
- ```bash
- curl -fsSL https://cn.olares.sh |  bash -
- ```
+在 PVE 命令行中，执行以下命令：
+
+```bash
+curl -fsSL https://cn.olares.sh |  bash -
+```
 :::tip root 用户密码
 安装过程中，可能需要输入 root 用户密码。
 :::
+
 :::info 安装遇到报错？
 如果安装过程中出现错误，请先执行以下命令卸载：
 
