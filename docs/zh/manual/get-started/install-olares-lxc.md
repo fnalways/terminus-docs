@@ -137,7 +137,7 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
 curl -fsSL https://cn.olares.sh | bash -
 ```
 
-:::info
+:::tip 注意
 安装过程中，可能需要输入 root 用户密码。
 :::
 

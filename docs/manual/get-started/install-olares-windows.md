@@ -40,6 +40,11 @@ Make sure your Windows meets the following requirements.
    ![Run installation script](/images/manual/get-started/run-installation-script.png)
 
 The script will then start installing Olares.
+
+:::tip Note
+During the installation, you may be prompted to enter your root password.
+:::
+
 :::info
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
@@ -48,9 +53,7 @@ bash olares-uninstall.sh
 After uninstalling, retry the installation by running the original installation command.
 :::
 ## Prepare Wizard URL
-At the end of the installation process, you will need to provide some information:
-
-Enter your domain name and Olares ID.
+At the end of the installation process, you will be prompted to enter your domain name and Olares ID.
 
 ![Enter domain name and Olares ID](/images/manual/get-started/enter-olares-id.png)
 

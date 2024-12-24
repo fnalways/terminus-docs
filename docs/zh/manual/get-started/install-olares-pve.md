@@ -18,7 +18,7 @@
 ```bash
 curl -fsSL https://cn.olares.sh |  bash -
 ```
-:::info 注意
+:::提示 注意
 安装过程中，可能需要输入 root 用户密码。
 :::
 

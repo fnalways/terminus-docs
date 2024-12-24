@@ -46,6 +46,11 @@ Windows 设备需满足以下条件：
    ![运行安装脚本](/images/manual/get-started/run-installation-script.png)
 
 随后脚本将开始安装 Olares。
+
+:::tip 注意
+安装过程中，可能需要输入 root 用户密码。
+:::
+
 :::info 安装遇到报错？
 如果安装过程中出现错误，请先执行以下命令卸载：
 
