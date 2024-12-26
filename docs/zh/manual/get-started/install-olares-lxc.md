@@ -118,9 +118,11 @@ LXC（Linux 容器）是一种轻量级的虚拟化技术，可以在隔离的�
    ```bash
    # 将内核配置从 PVE 主机复制到 LXC 容器
    pct push 16553 /boot/config-$(uname -r) /boot/config-$(uname -r)
+   
    # 打包并复制内核模块目录
    tar cvf /lib/modules/6.8.4-2-pve.tar.gz /lib/modules/6.8.4-2-pve
    pct push 16553 /lib/modules/6.8.4-2-pve.tar.gz /lib/modules/6.8.4-2-pve.tar.gz
+   
    # 在 LXC 容器内解压内核模块文件
    pct enter 16553
    cd /lib/modules
