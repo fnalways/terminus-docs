@@ -82,7 +82,7 @@ To install Olares on an existing LXC container, skip to step 2 directly. Make su
    lxc.apparmor.profile: unconfined
    lxc.cgroup.devices.allow: a
    lxc.cap.drop:
-   lxc.mount.auto: "proc:rw sys:rw cgroup:rw"
+   lxc.mount.auto: "proc sys cgroup:mixed"
    ```
 
    c. Save and close the file.
@@ -130,7 +130,7 @@ To install Olares on an existing LXC container, skip to step 2 directly. Make su
    # Extract the archive inside the container
    pct enter 16553
    cd /lib/modules
-   tar xvf ./6.8.4-2-pve.tar.gz
+   tar xvf /lib/modules/6.8.4-2-pve.tar.gz -C /
    ```
 
 ## Install on LXC
