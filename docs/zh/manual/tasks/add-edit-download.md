@@ -39,7 +39,7 @@
 ![预览](/images/manual/tasks/files-preview.png)
 ## 搜索文件
 通过桌面搜索功能，可以轻松找到**文件管理器**中的文件。
-:::tip
+:::tip 提示
 **存储盘**（Drive）中的 `/Documents/` 目录支持全文搜索，可搜索文件内容。其他目录则可通过文件名搜索。
 :::
 1. 点击 Dock 中的<i class="material-icons">search</i>图标打开搜索窗口。
