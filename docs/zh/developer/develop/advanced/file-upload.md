@@ -8,7 +8,7 @@ Olares 作为一个云端系统，存在很多将本地文件上传到云端的�
 
 ## 如何安装
 
-只要在应用 chart 的 [TerminusManifest.yaml](../package/manifest.md#file-upload) 中申明
+只要在应用 chart 的 [OlaresManifest.yaml](../package/manifest.md#file-upload) 中申明
 ```yaml
 upload:
   fileType:

@@ -30,8 +30,8 @@ env:
 ---
 :::details 完整 OlaresManifest.yaml 例子
 ```Yaml
-terminusManifest.version: v1
-terminusManifest.type: app
+olaresManifest.version: v1
+olaresManifest.type: app
 metadata:
   name: desktop
   icon: https://file.bttcdn.com/appstore/default/defaulticon.webp
