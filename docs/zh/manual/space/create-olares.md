@@ -2,85 +2,87 @@
 outline: [2, 3]
 ---
 
-# Create a cloud-based Olares
+# 创建云端 Olares
 
-Cloud-based Olares offer a convenient deployment option, enabling you to set up an Olares environment without managing hardware directly.
-This section provides a step-by-step guide to creating and managing your cloud-based **Olares**. 
+云端 Olares 提供了便捷的部署方式，让你无需直接管理硬件即可搭建 Olares 环境。本节将为你详细介绍如何创建和管理云端 **Olares**。
 
-::: tip NOTE
-- The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Olares, contact us for an invitation.
-- If you are looking for information about setting up a self-hosted Olares, refer to the [Getting Started Guide](../get-started/index.md).
-:::
+::: info 注意
+- **托管服务**目前处于邀请制测试阶段。如需使用云端 Olares，请联系我们获取邀请。
+- 如果你想了解如何搭建自托管 Olares，请参考[快速入门指南](../get-started/index.md)。
+  :::
 
-## Prerequisites
+## 准备工作
 
-Ensure you get an Olares ID to log in to Olares Space and activate the Olares instance.
+确保你已有 Olares ID，用于登录 Olares Space 并激活 Olares 实例。
 
-## Create an Olares
+## 创建 Olares
 
-1. Log in to [Olares Space](https://space.olares.xyz/) by scanning the QR code using LarePass.
-2. Navigate to the **Cluster** page and select the second option to start creating.
+1. 使用 LarePass 扫描二维码登录 [Olares Space](https://space.olares.xyz/)。
+2. 进入**集群**页面，选择第二个选项开始创建。
 
-    ![Basic Configuration](/images/how-to/space/basic_configuration.jpg)
-3. Configure the environment for installation as below:
-   - **Select Cloud Provider**: Choose a cloud service provider and the data center location closest to your users or workloads.
-   - **Hardware Configuration**: Select the instance's CPU, RAM, and storage resources.
-   - **Olares Version & Kubernetes Setup**: Choose the appropriate version of Olares and the Kubernetes/K3S solution to be installed.
+   ![基础配置](/images/how-to/space/basic_configuration.jpg)
+3. 配置安装环境：
 
-    :::tip
-    If you intend to host large language models (LLMs), select the **Alibaba Cloud Hong Kong** region. Currently, it is the only region that offers instances with shared GPU services.
-    :::
+    a. 选择云服务提供商和离用户或工作负载最近的数据中心位置。
 
-4. Review the fees for storage and traffic. 
+    b. 选择实例的 CPU、内存和存储资源。
 
-    ![Storage and Network Fees](/images/how-to/space/storage_and_network.jpg)
+    c. 选择合适的 Olares 版本和要安装的 Kubernetes/K3S 方案。
 
-    ::: tip NOTE
-    Each instance comes with a set amount of free storage and bandwidth. If your usage exceeds these quotas, additional fees will apply based on your cloud provider's pricing. 
-    :::
-5. Review your order details, including instance configuration, selected options, and fees.
-6. Complete the payment to initiate the installation process.
+   :::tip 托管大语言模型
+   如果你打算托管大语言模型（LLM），请选择**阿里云香港**地区，目前只有该地区提供共享 GPU 服务的实例。
+   :::
 
-## Monitor installation
+4. 查看存储和流量费用。
 
-The creation and installation of your cloud-based Olares typically take around 10 minutes. During this time, you can monitor the progress and logs in real-time.
+   ![存储和网络费用](/images/how-to/space/storage_and_network.jpg)
 
-### System statuses
+   ::: tip 额外费用
+   每个实例都包含一定额度的免费存储和带宽。超出这些配额的使用量将按照云服务商的定价收取额外费用。
+   :::
+5. 确认订单详情，包括实例配置、选项和费用。
+6. 完成支付以启动安装流程。
 
-The installation follows several key stages, represented by different statuses:
+## 监控安装进度
 
-| Status                 | Description                                                                   |
-|------------------------|-------------------------------------------------------------------------------|
-| **Unpaid**             | 	Instance created but pending payment. Can be canceled.                       |
-| **Fetching**           | 	Payment confirmed. System is creating resources.                             |
-| **Queuing**            | Resource creation request has been submitted.                                 |
-| **Pending**            | Resources created. Waiting for OS installation.                               |
-| **Installing**         | OS installation is in progress.                                               |
-| **Restoring**          | OS restoration is in progress from backup.                                    |
-| **Restore_error**      | Restoration failed because of incorrect snapshot password.                    |
-| **Restarting**         | 	System is restarting.                                                        |
-| **Stopping**           | 	System is shutting down.                                                     |
-| **Starting**           | System is starting up.                                                        |
-| **Running**            | System is operating normally. You can restart, stop, or destroy the instance. |
-| **Stopped**            | System is not running. You can restart or destroy the instance.               |
-| **Errored**            | System encountered an error during resource creation or installation.         |
-| **Destroying**         | Instance is being destroyed.                                                  |
-| **Destroyed**          | Instance has been destroyed.                                                  |
-| **Canceled**           | 	Instance is terminated due to cancellation or payment issues.                |
-| **Pending Activation** | 	System is waiting for activation. Will start after activations.              |
+云端 Olares 的创建和安装通常需要约 10 分钟。在此期间，你可以实时监控进度和查看日志。
 
-### Real-time logs
+### 系统状态
 
-Click **Log** to view detailed logs and monitor the installation process in real time.
+安装过程包含几个关键阶段，对应不同状态：
 
-## Activate Olares  
+| 状态       | 说明                   |
+|----------|----------------------|
+| **未支付**  | 实例已创建但待支付，可以取消。      |
+| **获取中**  | 支付确认，系统正在创建资源。       |
+| **排队中**  | 已提交资源创建请求。           |
+| **等待中**  | 资源已创建，等待安装操作系统。      |
+| **安装中**  | 正在安装操作系统。            |
+| **恢复中**  | 正在从备份恢复操作系统。         |
+| **恢复错误** | 由于快照密码错误导致恢复失败。      |
+| **重启中**  | 系统正在重启。              |
+| **停止中**  | 系统正在关机。              |
+| **启动中**  | 系统正在启动。              |
+| **运行中**  | 系统正常运行，可以重启、停止或销毁实例。 |
+| **已停止**  | 系统未运行，可以重启或销毁实例。     |
+| **错误**   | 资源创建或安装过程中遇到错误。      |
+| **销毁中**  | 正在销毁实例。              |
+| **已销毁**  | 实例已被销毁。              |
+| **已取消**  | 实例因取消或支付问题而终止。       |
+| **待激活**  | 系统等待激活，激活后将开始运行。     |
 
-When the installation enters the **Pending Activation** state, activate Olares:
+### 实时日志
 
-1. Click **Activation**. A pop-up window will display Olares ID, one-time password, and a wizard URL.
+点击**日志**可查看详细日志，实时了解安装进度。
 
-    ![One Time Password](/images/how-to/space/one_time_password.jpg)
+## 激活 Olares
 
-2. Access the wizard URL in your browser, and use the one-time password to log into Olares for the first time. 
-3. Change the Olares password via LarePass when prompted. 
-4. Follow the on-screen instructions to finish the rest of activation process. 
+当安装进入**待激活**状态时，按以下步骤激活 Olares：
+
+1. 点击**激活**。弹窗将显示 Olares ID、一次性密码和向导 URL。
+
+   ![一次性密码](/images/how-to/space/one_time_password.jpg)
+
+2. 在浏览器中打开向导 URL，使用一次性密码首次登录 Olares。
+3. 根据提示通过 LarePass 修改 Olares 密码。
+4. 按照屏幕指引完成剩余激活步骤。

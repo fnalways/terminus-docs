@@ -69,11 +69,11 @@ const side = {
           link: "/zh/manual/use-cases/openwebui",
         },
         {
-          text: "Perplexica",
+          text: "Perplexica 本地 AI 搜索",
           link: "/zh/manual/use-cases/perplexica",
         },
         {
-          text: "Dify",
+          text: "Dify 定制 AI 助手",
           link: "/zh/manual/use-cases/dify",
         },
         {
@@ -81,7 +81,7 @@ const side = {
           link: "/zh/manual/use-cases/comfyui-for-krita",
         },
         {
-          text: "串流视频",
+          text: "远程看视频",
           link: "/zh/manual/use-cases/stream-media",
         },
       ],
@@ -182,7 +182,7 @@ const side = {
           ],
         },
         {
-          text: "智能内容聚合",
+          text: "内容智能聚合",
           collapsed: true,
           link: "/zh/manual/tasks/wise",
           items: [

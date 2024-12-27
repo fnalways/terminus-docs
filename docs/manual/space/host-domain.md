@@ -14,7 +14,7 @@ This guide walks you through adding your own domain for your Olares system on Ol
 A new domain can only be bound if the account is in the DID stage. If the account has already been bound with an Olares ID, it means that the account is already associated with a Domain. 
 :::
 
-Before creating and configuring your own domain, make sure you have:
+Before creating and configuring your own domain, make sure that:
 
 - **DID account status**: Ensure your account is in DID status (i.e., not yet bound to an Olares ID). 
    

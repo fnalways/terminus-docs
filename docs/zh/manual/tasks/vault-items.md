@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Vault 基础知识
+# Vault 基本操作
 
 本文档将带你了解 Vault 的基础使用方法，从设置第一个 Vault 到高效地组织你的敏感数据。
 
@@ -13,7 +13,7 @@ outline: [2, 3]
 Olares 为用户提供两种主要类型的 Vault：
 
 * 主 Vault（**我的 Vault**）：账户激活时自动创建，作为用户的私人 Vault。使用用户助记词加密以确保最大安全性。
-* 共享 Vault（**团队 Vault**）：Olares 内的协作 Vault，支持团队成员或家庭之间安全共享信息。
+* 共享 Vault（**Team Vault**）：Olares 内的协作 Vault，支持团队成员或家庭之间安全共享信息。
 
 ### Vault 项目
 
@@ -33,8 +33,9 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 - 银行账户
 - Wi-Fi 密码
 - 护照
-- 身份验证器
+- 验证器
 - 文档
+- 自定义
 
 ### 字段
 
@@ -62,13 +63,13 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 ![Vault password](/images/manual/tasks/vault-local-password.png)
 
 :::tip 提示
-如果你不知道助记词短语的位置，请参阅 [备份助记词短语](../get-started/back-up-mnemonics)。
+如果你不知道助记词短语的位置，请参阅[备份助记词短语](../get-started/back-up-mnemonics)。
 :::
 
 ## 管理 Vault 项目
 
 :::tip 提示
-通过使用描述性名称和相关标签从一开始就保持 Vault 井然有序。这在安全项目数量增长时尤为重要。
+从一开始就使用描述性名称和相关标签来组织 Vault 项目。随着 Vault 项目数量增加，这种做法会越来越有价值。
 :::
 
 ### 添加
@@ -77,17 +78,16 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 <tabs>
 <template #Olares>
 
-1. 从 Dock 或启动板打开 **Vault** 应用。
-2. 点击右上角的 <i class="material-icons">add</i>。
-3. 选择一种类型，例如 **网站/应用** 以存储账户详细信息，点击 **创建**。
+1. 打开 **Vault**，在右上角点击 <i class="material-icons">add</i>。
+2. 选择一种类型（例如**网站/应用**），点击**创建**。
 
    ![Add vault item](/images/manual/tasks/add-vault-item.png)
 
-4. 填写必填字段，例如项目名称、用户名、密码和 URL。
+3. 填写必填字段，例如项目名称、用户名、密码和 URL。
 
    ![Fill item fields](/images/manual/tasks/fill-item-fields.png)
 
-5. 点击 **保存** 创建新的 Vault 项目。
+4. 点击**保存**创建新的 Vault 项目。
 
 </template>
 
@@ -95,9 +95,9 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 
 1. 在设备上打开 **LarePass**，导航到应用中的 **Vault** 页面。
 2. 点击右上角的 <i class="material-icons">add</i>。
-3. 选择一种类型，例如 **网站/应用**，点击 **创建**。
+3. 选择一种类型（例如**网站/应用**），点击**创建**。
 4. 填写必填字段，例如项目名称、用户名、密码和 URL。
-5. 点击 **保存** 创建新的 Vault 项目。
+5. 点击**保存**创建新的 Vault 项目。
 
 </template>
 
@@ -113,9 +113,9 @@ LarePass 浏览器扩展目前仅支持 Google Chrome。请访问 [LarePass 页�
 1. 点击浏览器工具栏或扩展菜单中的 LarePass 图标，在浏览器窗口右侧打开 LarePass。
 2. 导航到扩展中的 **Vault** 页面。
 3. 点击右上角的 <i class="material-icons">add</i>。
-4. 选择一种类型，例如 **网站/应用**，点击 **创建**。
+4. 选择一种类型（例如**网站/应用**），点击**创建**。
 5. 填写必填字段，例如项目名称、用户名、密码和 URL。URL 字段会自动填充为当前网页地址。
-6. 点击 **保存** 创建新的 Vault 项目。
+6. 点击**保存**创建新的 Vault 项目。
 
 </template>
 </tabs>
@@ -123,7 +123,7 @@ LarePass 浏览器扩展目前仅支持 Google Chrome。请访问 [LarePass 页�
 ### 编辑
 
 :::info 提示
-LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能，请使用 Olares 的 Vault 应用程序或 LarePass 的移动或桌面版本。
+LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能，请使用 Olares 的 Vault 应用或 LarePass 的移动或桌面版本。
 :::
 
 在编辑模式下，你可以：
@@ -138,7 +138,7 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 1. 在 Vault 中选择需要编辑的项目。
 2. 在项目的详情窗口或页面中，点击右上角的 <i class="material-icons">edit_note</i> 进入编辑模式。
 3. 对项目详情进行必要的修改。
-4. 点击 **保存**。
+4. 点击**保存**。
 
 ### 收藏 Vault 项目
 
@@ -147,7 +147,7 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 <tabs>
 <template #Olares>
 
-1. 在 Vault 中，点击项目以在右侧打开其详情窗口。
+1. 在 Vault 中，点击项目，右侧打开其详情窗口。
 2. 点击右上角的 <i class="material-icons">star_border</i> 将该项目标记为收藏。
 
 </template>
@@ -167,11 +167,11 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 
 ### 快速筛选
 
-* 按主 Vault 和共享 Vault：选择 **我的 Vault** 或 **团队 Vault** 快速找到项目。
+* 按主 Vault 和共享 Vault：选择**我的 Vault** 或**团队 Vault** 快速找到项目。
 * 按标签：点击标签名称轻松定位已标记的 Vault 项目。
-* 按收藏：点击 **收藏** 列出所有收藏项目。
-* 按最近使用：点击 **最近使用** 显示你的最近项目。
-* 按附件：点击 **附件** 显示所有带有附件的项目。
+* 按收藏：点击**收藏**列出所有收藏项目。
+* 按最近使用：点击**最近使用**显示你的最近项目。
+* 按附件：点击**附件**显示所有带有附件的项目。
 
 ### 关键词搜索
 

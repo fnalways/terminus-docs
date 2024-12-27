@@ -57,7 +57,7 @@ sysData:
   - AppApi   # ProviderRegistry 中定义的 opApis 名称
 ```
 
-配置完成后，您可以将访问密钥(`access key`)和访问密钥(`access secret`)添加到应用 chart 的模板中。它们将在安装过程中被注入以供授权使用。
+配置完成后，你可以将访问密钥(`access key`)和访问密钥(`access secret`)添加到应用 chart 的模板中。它们将在安装过程中被注入以供授权使用。
 
 ```yaml
 env:

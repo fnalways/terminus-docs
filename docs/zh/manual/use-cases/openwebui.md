@@ -4,49 +4,54 @@ outline: [2, 3]
 
 # Open WebUI
 
-Open WebUI provides an intuitive interface for managing Large Language Models (LLMs) that supports both Ollama and OpenAI-compatible APIs. This page helps you set up and configure Open WebUI in Olares for:
+Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ollama 和 OpenAI 兼容的 API。本指南将帮助你在 Olares 中设置和配置 Open WebUI，包括：
 
-* Model management
-* Voice interactions (speech-to-text and text-to-speech)
-* Image generation capabilities
+* 模型管理
+* 语音交互（语音转文字和文字转语音）
+* 图像生成功能
 
-## Installation
-Ollama is required prior to launching Open WebUI:
-* **For admin**: Install both Ollama and Open WebUI.
-* **For team members**: Ensure that Ollama is already installed by Olares admin, and then install Open WebUI only.
+## 安装 Ollama 和 Open WebUI
+使用 Open WebUI 前需要先安装 Ollama：
+* **管理员**：需要同时安装“Ollama”和“Open WebUI”。
+* **团队成员**：仅需安装“Open WebUI”，同时确保管理员已安装“Ollama”。
 
-:::info
-First-time users need to create a local Open WebUI account. This account is specifically for your Olares installation and doesn't connect to external services. Note that existing Open WebUI accounts from other installations cannot be used here - you'll need to create a new one.
+:::info Open WebUI 账号
+首次使用时需要创建本地 Open WebUI 账号。这个账号仅限用于你的 Olares 环境，不会与任何外部服务连接。
+请注意，其他环境中创建的 Open WebUI 账号在这里无法使用，你需要重新创建一个新账号。
 :::
 
-## Download models
-:::tip
-Browse available models on [Hugging Face's Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard) and verify model names in the [Ollama Library](https://ollama.com/library) before downloading.
+## 下载模型
+:::tip 如何选择模型？
+下载前可以在 [Hugging Face Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard) 浏览可用模型，并在 [Ollama 模型库](https://ollama.com/library)中确认模型名称。
 :::
 
-Recommended starter models for optimal performance (13B parameters or smaller):
+推荐以下入门级模型（参数量在 13B 及以下）以获得最佳性能：
 
-* `gemma2`: Google's latest  efficient and powerful language model
-* `llama3.2`: Meta's latest open-source vision-language model
+* `gemma2`：Google 最新推出的高效强大语言模型
+* `llama3.2`：Meta 最新的开源视觉语言模型
 
-### Quick download
-1. Click the dropdown menu, enter the model name (e.g., `llama3.2`).
-2. Select **Pull from Ollama.com**. The download starts automatically.
-### Download from settings
-1. Click your username in the bottom left.
-2. Navigate to **Admin Panel** > **Settings** > **Models**.
-3. Under **Pull a model from Ollama.com**, enter the model name (e.g., `llama3.2`).
-4. Click <i class="material-symbols-outlined">download</i> to initiate the download.
-## Configure speech features
-### Speech-to-text
-1. Install Faster Whisper from Market based on your role:
-   - Admin: Install both Faster Whisper For Cluster and Faster Whisper.
-   - Team members: Ensure that Faster Whisper For Cluster is already installed by Olares admin, and install Faster Whisper only.
-2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
-3. Select **OpenAI** as the speech-to-text engine, with the following configurations:
-   - API Base URL: `http://whisper.whisper-{admin's local name}:8000/v1`. For example: `http://whisper.whisper-alice123:8000/v1`.
-   - API key: enter any character.
-4. Enter a model variant (default: `whisper-1`). You can select from the following:
+### 快速下载
+1. 在首页点击下拉菜单，输入模型名称（如 `llama3.2`）。
+2. 选择 从 Ollama.com 拉取，下载会自动开始。
+
+   ![从首页下载模型](/images/zh/manual/use-cases/openwebui-download-model-quick.png#bordered)
+### 通过设置下载
+1. 点击左下角的用户名称，选择**管理员面板** > **设置** > **模型**。
+2. 在**从 Ollama.com 拉取模型**字段下输入模型名称（如 `llama3.2`）。
+3. 点击 <i class="material-symbols-outlined">download</i> 开始下载。
+
+   ![从设置下载模型](/images/zh/manual/use-cases/openwebui-download-model-settings.png#bordered)
+
+## 配置语音功能
+### 语音转文字
+1. 根据角色安装 Faster Whisper：
+   - **管理员**：需要同时安装“Faster Whisper For Cluster”和“Faster Whisper”。
+   - **团队成员**：仅需安装“Faster Whisper”，同时确保管理员已安装“Faster Whisper For Cluster”。
+2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
+3. 选择 OpenAI 作为语音转文字引擎，配置如下：
+   - **API 基础 URL**：`http://whisper.whisper-{管理员本地名称}:8000/v1`，例如：`http://whisper.whisper-alice123:8000/v1`。
+   - **API 密钥**：输入任意字符
+4. 输入模型版本，默认为 `whisper-1`。你可以选择：
    - `tiny.en`
    - `tiny`
    - `base.en`
@@ -63,29 +68,36 @@ Recommended starter models for optimal performance (13B parameters or smaller):
    - `distil-medium.en`
    - `distil-small.en`
    - `distil-large-v3`
-5. Click **Save**.
-6. Launch Faster Whisper after configuration. You'll see that the model you configured in Open WebUI is automatically loaded. At this point, you can either:
-   - Upload audio directly to start transcription
-   - Adjust parameters including:
-      - Select different sub-models
-      - Choose task types
-      - Configure **Temperature** settings
+5. 点击**保存**。
+6. 配置完成后启动 Faster Whisper。你会看到在 Open WebUI 中配置的模型已自动加载。此时你可以：
+   - 直接上传音频开始转录
+   - 调整参数，包括：
+      - 选择不同的子模型
+      - 选择任务类型
+      - 配置"温度"设置
 
-### Text-to-speech
-1. Install OpenedAI Speech from Market.
-   :::info
-   OpenedAI Speech is a cluster-scoped application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed OpenedAI Speech.
-2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
-3. Select OpenAI as the text-to-speech engine, with the following configurations:
-    - API Base URL: `http://openedaispeech.openedaispeech-{admin's local name}:8000/v1`. For example: `http://openedaispeech.openedaispeech-alice123:8000/v1`.
-    - API key: enter any character.
-4. Click **Save**.
+   ![配置 Faster Whisper](/images/zh/manual/use-cases/openwebui-faster-whisper.png#bordered)
 
-### Text-to-image
-With SD Web UI For Cluster installed in your Olares environment, you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
+### 文字转语音
+1. 安装 OpenedAI Speech。
+   :::info 仅支持管理员安装
+   OpenedAI Speech 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 OpenedAI Speech。
+   :::
+2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
+3. 选择 OpenAI 作为文字转语音引擎，配置如下：
+   - **API 基础 URL**：`http://openedaispeech.openedaispeech-{管理员本地名称}:8000/v1`，例如：`http://openedaispeech.openedaispeech-alice123:8000/v1`。
+   - **API 密钥**：输入任意字符
+4. 点击**保存**。
 
-1. Open Open WebUI, and navigate to **Admin Panel** > **Settings** > **Images**.
-2. Select **Automatic1111** as the image generation engine, with the base URL:  `http://sdwebui.sdwebui--{admin's local name}:7860`. For example: `http://sdwebui.sdwebui-alice123:7860`.
-3. Click <i class="material-symbols-outlined">cached</i> to verify the connection.
-4. Turn on **Image Generation (Experimental)**, and select your preferred text-to-image model checkpoint.
-5. Click **Save**.
+### 文字转图像
+在 Olares 环境中安装了 SD Web UI For Cluster 后，你可以直接通过 Open WebUI 使用 Stable Diffusion 的强大图像生成功能。
+
+1. 安装 SD Web UI For Cluster。
+   :::info 仅支持管理员安装
+   SD Web UI For Cluster 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 SD Web UI For Cluster。
+   :::
+2. 打开 Open WebUI，进入**管理员面板** > **设置** > **图像**。
+3. 选择 **Automatic1111** 作为图像生成引擎，基础 URL 为：`http://sdwebui.sdwebui--{管理员本地名称}:7860`，例如：`http://sdwebui.sdwebui-alice123:7860`。
+4. 点击 <i class="material-symbols-outlined">cached</i> 验证连接。
+5. 开启**图像生成（实验性）**，选择你偏好的文本生成图像模型检查点。
+6. 点击**保存**。

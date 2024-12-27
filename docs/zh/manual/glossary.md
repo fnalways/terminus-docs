@@ -13,24 +13,24 @@
 
 ## C
 ### CNAME Record
-A CNAME (Canonical Name) record is a type of DNS (Domain Name System) record that maps your custom domain name to an Olares-provided address, enabling domain-to-application mapping.
+CNAME（规范名称）记录是 DNS（域名系统）记录的一种，用于将自定义域名映射到 Olares 提供的地址，从而实现域名到应用的映射。
 
 ## D
 ### DID
-A Decentralized Identifier (DID) is a unique digital identification method that enables any person or entity to have a persistent, unique identity on the network. This identifier is fully independent and doesn't require verification or registration through a central authority. A DID is a unique string that starts with "did" and follows specific formatting and naming conventions.
+去中心化标识符（DID）是一种独特的数字身份识别方法，可以让任何个人或实体在网络上拥有持久且唯一的身份标识。这种标识符完全独立，无需通过中心化机构进行验证或注册。DID 是一个以“did”开头的特定格式字符串，遵循既定的格式和命名规范。
 
 ## F
 ### FRP
-Fast Reverse Proxy (FRP) is a high-performance reverse proxy application designed for internal network penetration scenarios. It enables servers behind NAT or firewalls to provide services externally, even without public IP addresses. FRP helps users easily expose internal services to the public network.
+快速反向代理（FRP）是一款专为内网穿透场景设计的高性能反向代理工具。它使位于 NAT 或防火墙后的服务器即使没有公网 IP，也能对外提供服务。通过 FRP，用户可以轻松地将内部服务暴露到公网。
 
 ## T
 ### TOTP
-Time-Based One-Time Password (TOTP) is a time-based algorithm for generating one-time passwords, widely used in two-factor authentication (2FA). It generates single-use passwords using a shared key and current time to enhance account security. Each password is valid for a brief period (typically 30 or 60 seconds) before a new one is generated.
+基于时间的一次性密码（TOTP）是一种用于生成一次性密码的时间相关算法，在双因素认证（2FA）中广泛使用。它通过共享密钥和当前时间生成一次性密码，以加强账户安全性。每个密码仅在短时间内（通常是 30 或 60 秒）有效，之后系统会生成新的密码。
 
 ## V
 ### VC
-Verifiable Credential (VC) is a digital format proof that verifies certain attributes or qualifications of its holder without revealing additional personal information. It involves three primary roles:
+可验证凭证（VC）是一种数字化的证明格式，可以验证持有者的特定属性或资质，同时不会泄露额外的个人信息。它涉及三个主要角色：
 
-* Holder: The individual who possesses and uses the credential to prove certain information
-* Issuer: The authority or entity that creates and issues verifiable credentials
-* Verifier: The individual or organization that needs to verify the authenticity of the holder's information by validating the credential
+* 持有者：拥有并使用凭证来证明特定信息的个人
+* 颁发者：创建和签发可验证凭证的权威机构或实体
+* 验证者：需要通过验证凭证来确认持有者信息真实性的个人或组织

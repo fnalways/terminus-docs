@@ -17,7 +17,7 @@ Olares ID 由本地名称和域名两部分组成。以 `alice123@olares.cn` 为
 ## 创建 Olares ID
 
 ::: tip
-本节主要介绍如何创建个人 Olares ID。如需创建用于组织用途的 Olares ID，请参阅[创建组织 Olares ID](../space/host-domain.md#create-an-org-olares-id)。
+本节主要介绍如何创建个人 Olares ID。如需创建用于组织用途的 Olares ID，请参阅[创建组织 Olares ID](../space/host-domain.md#创建组织-olares-id)。
 :::
 
 :::warning `.com`域名 与 `.cn`域名

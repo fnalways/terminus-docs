@@ -1,3 +1,0 @@
-# Personalization
-
-Text

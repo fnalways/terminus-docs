@@ -1,20 +1,20 @@
-# Olares Space overview
+# Olares Space 概述
 
-Olares Space is the fully managed offering of Olares on public clouds. It provides two categories of services:
+Olares Space 是 Olares 在公有云上的全托管服务，提供两大类服务：
 
-- **Infrastructure service** – Manages data backup, custom domain configuration, reverse proxy, and shared GPU resources.
-- **Host service** – Hosts and manage Olares instances on public cloud platforms.
+- **基础设施服务**：负责数据备份、自定义域名配置、反向代理和共享 GPU 资源管理
+- **托管服务**：在公有云平台上托管和管理 Olares 实例
 
-Olares Space account is associated with your Olares IDs or DIDs. You can log in to Olares Space by scanning QR code using LarePass. 
+Olares Space 账号与你的 Olares ID 或 DID 关联。你可以通过 LarePass 扫描二维码登录 Olares Space。
 
-This section walks you through usages of Olares Space, covering:
+本章节将为你介绍 Olares Space 的使用方法，包括：
 
-- [Log in to/off Olares Space](manage-accounts.md)
-- [Host Olares](create-olares.md)
-- [Manage Olares](manage-olares.md)
-- [Host custom domains](host-domain.md)
-- [Manage organization domains](manage-domain.md)
-- [Back up & Restore Olares](backup-restore.md)
-- [Usage and Billing](billing.md)
+- [登录和退出 Olares Space](manage-accounts.md)
+- [托管 Olares](create-olares.md)
+- [管理 Olares](manage-olares.md)
+- [托管自定义域名](host-domain.md)
+- [管理组织域名](manage-domain.md)
+- [备份和恢复 Olares](backup-restore.md)
+- [使用量和计费](billing.md)
 
 

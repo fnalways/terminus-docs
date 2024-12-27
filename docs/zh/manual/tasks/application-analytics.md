@@ -1,3 +1,0 @@
-# Analyze applications
-
-Text

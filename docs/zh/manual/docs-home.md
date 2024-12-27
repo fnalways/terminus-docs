@@ -1,6 +1,3 @@
-:::warning 🚧 翻译工作进行中...
-我们正在将文档翻译成中文。如果你有意帮助提高翻译质量或参与翻译工作，请通过 [GitHub](https://github.com/beclab/docs) 提交 Pull Request 或 Issue。
-:::
 # Olares 文档
 :::info 注意
 我们已进行品牌升级，部分文档界面截图可能与最新版本存在差异。请放心，所有核心功能和操作步骤均保持不变。

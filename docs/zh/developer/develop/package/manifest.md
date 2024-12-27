@@ -97,7 +97,7 @@ olaresManifest.type: app
 
 - 类型：`string`
 
-随着 Olares 更新，`OlaresManifest.yaml` 的配置规范可能会发生变化。你可以通过检查 `olaresManifest.version` 来确定这些更改是否会影响您的应用程序。 `olaresManifest.version` 由三个用英文句点分隔的整数组成。
+随着 Olares 更新，`OlaresManifest.yaml` 的配置规范可能会发生变化。你可以通过检查 `olaresManifest.version` 来确定这些更改是否会影响你的应用程序。 `olaresManifest.version` 由三个用英文句点分隔的整数组成。
 
 - 第 1 位数字增加意味着引入了不兼容的配置项，未升级对应 `OlaresManifest.yaml` 的应用将无法分发或安装。
 - 第 2 位数字增加意味着分发和安装必须字段存在变化，但 Olares 系统仍兼容之前所有版本配置的应用分发与安装。我们建议开发者尽快更新升级应用的 `OlaresManifest.yaml` 文件。

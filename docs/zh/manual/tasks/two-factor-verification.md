@@ -24,26 +24,26 @@
 :::
 
 <tabs>
-<template #Olares,-LarePass-桌面,-浏览器插件>
+<template #Olares、LarePass-桌面端和浏览器插件>
 
-1. 在 Vault 中，点击右上角的 <i class="material-icons">add</i>。
-2. 选择 **身份验证器** 作为项目类型，并点击 **创建**。
+1. 在 Vault 中，右上角点击 **<i class="material-icons">add</i>添加**。
+2. 选择**验证器**作为项目类型，并点击**创建**。
 3. 填写必填字段：
     - 项目名称：输入服务的描述性名称，例如 `GitHub`。
     - 一次性密码：粘贴上一步提供的密钥。
-4. 点击 **保存**。
+4. 点击**保存**。
 
 </template>
 
-<template #LarePass-应用>
+<template #LarePass-移动端>
 
 1. 在你的设备上打开 LarePass，并进入应用的 **Vault** 页面。
-2. 点击右上角的 <i class="material-icons">add</i>。
-3. 选择 **身份验证器** 作为项目类型，并点击 **创建**。
+2. 右上角点击 **<i class="material-icons">add</i>添加**。
+3. 选择**验证器** 作为项目类型，并点击**创建**。
 4. 填写必填字段：
     - 项目名称：输入服务的描述性名称，例如 `GitHub`。
     - 一次性密码：点击文本字段中的 <i class="material-icons">qr_code</i> 以扫描二维码。
-5. 点击 **保存**。
+5. 点击**保存**。
 
 </template>
 </tabs>
@@ -52,8 +52,6 @@
 
 ## 使用你的 2FA 生成器
 
-要使用 2FA：
-
 1. 使用你的用户名和密码登录网站。
-2. 当系统提示输入身份验证代码时，打开 Vault 查看当前的 6 位代码。
-3. 输入代码完成登录。
+2. 当系统提示输入验证码时，打开 Vault 查看当前的 6 位验证码。
+3. 输入验证码完成登录。
