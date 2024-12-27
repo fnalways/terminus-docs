@@ -2,39 +2,39 @@
 outline: [2, 3]
 ---
 
-# Manage your domain
+# 管理域名
 
-You must [add a domain](host-domain.md#add-your-domain) before managing it. Once your domain is set up, you can configure email invitation rules for organization members and invite them to create their own organizational **Olares ID** via email.
+在进行管理之前，你需要先[添加域名](host-domain.md#添加域名)。完成域名设置后，你可以配置组织成员的邮箱邀请规则，并通过邮件邀请他们创建属于组织的 Olares ID。
 
-## Set email invitation rules
+## 设置邮箱邀请规则
 
-Most companies use a standard domain suffix for their team members' emails, like `A@myteam.com` for person A or `B@myteam.com` for person B. However, sometimes, team members might use emails in different domains. To accommodate these scenarios, Olares provides two types of rules for adding organization members' emails:
+大多数企业都会为团队成员使用统一的域名后缀，比如 A 的邮箱是 `A@myteam.com`，B 的邮箱是 `B@myteam.com`。不过有时团队成员可能会使用不同域名的邮箱。为了适应这些场景，Olares 提供了两种添加组织成员邮箱的规则：
 
 ![alt text](/images/how-to/space/set_rule.jpg)
 
-- **Fixed email suffix**: Use this option when all team members share the same email domain. Enter your organization's domain suffix (example: @company.com). Any email matching this suffix can be associated with your organization's Olares ID.
+- **固定邮箱后缀**：适用于所有团队成员使用相同邮箱域名的情况。输入组织的域名后缀（如：`@company.com`），任何匹配该后缀的邮箱都可以关联到组织的 Olares ID。
 
-- **Specified email address**: Use this option if your organization doesn't have a corporate email suffix. You need to manually add the email address for each member of the organization.
+- **指定邮箱地址**：适用于组织没有统一企业邮箱后缀的情况。需要手动添加组织每个成员的邮箱地址。
 
-:::info NOTE
-- Currently, only Gmail is supported for both rule types.
-- Emails that have been used to create organizational Olares IDs will appear in the member list and cannot be deleted.
-- Emails that are manually added and have not been used to create the Olares ID appear as "unbound" and can be removed.
-:::
+:::info 注意
+- 目前两种规则都仅支持 Gmail。
+- 已用于创建组织 Olares ID 的邮箱会显示在成员列表中，且无法删除。
+- 手动添加但尚未用于创建 Olares ID 的邮箱会显示为“未绑定”状态，可以删除。
+  :::
 
-## Manage members
+## 成员管理
 
-After setting email rules, you can add or remove members under your organization.
+设置邮箱规则后，你可以在组织下添加或删除成员。
 
 ![alt text](/images/how-to/space/management_members.jpg)
 
-### Add a member
+### 添加成员
 
-To add a member:
+添加成员的步骤：
 
-1. On the domain management page, add members to the organization by entering their email address.
-2. Notify the corresponding users to use their email addresses to [create an organizational Olares ID](host-domain.md#create-an-org-olares-id).
+1. 在域名管理页面，通过输入邮箱地址将成员添加到组织。
+2. 通知相关用户使用其邮箱地址[创建组织 Olares ID](host-domain.md#创建组织-olares-id)。
 
-### Remove a member
+### 删除成员
 
-You can remove email addresses that haven't been used to create an Olares ID. Once an email address is associated with an organization's Olares ID, it cannot be removed.
+你可以删除尚未用于创建 Olares ID 的邮箱地址。一旦邮箱与组织的 Olares ID 关联，就无法删除。

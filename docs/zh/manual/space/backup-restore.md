@@ -1,49 +1,49 @@
-# Back up and restore
+# 备份与恢复
 
-Olares Space is the official solution to back up snapshots for your Olares instances. You can restore an Olares to its most recent state whenever needed. This section provides instructions for managing backups and restores in Olares Space. 
+Olares Space 是为 Olares 实例提供快照备份的官方解决方案。你可以随时将 Olares 恢复到最近的状态。本节介绍如何在 Olares Space 中管理备份和恢复操作。
 
-:::tip
-Each Olares is provided with 10 GB of free backup space. Any usage beyond this will be charged according to the cloud provider's pricing.
+:::info 注意
+每个 Olares 实例可以获得 10GB 的免费备份空间。超出部分将按照云服务商的定价收费。
 :::
 
-## View backup list
+## 查看备份列表
 
-The backup task list shows information for each backup task, including:
+备份任务列表显示每个备份任务的信息，包括：
 
-- Initial creation time
-- Most recent snapshot time
-- Overall storage usage 
+- 初始创建时间
+- 最近快照时间
+- 总体存储用量
 
 ![alt text](/images/how-to/space/backup_list.jpg)
 
-Click **View Details** on a task to see its detail page. The detail page shows the storage usage since the task was created and a list of all successful snapshots.
+点击任务的**查看详情**可以进入详情页面。详情页面展示了该任务创建以来的存储用量变化，以及所有成功的快照记录。
 
-:::info NOTE
-Currently, only restoring from the most recent snapshot is supported.
+:::info 注意
+目前仅支持从最近一次快照恢复。
 :::
 
-## Restore backup to the Olares Space
+## 将备份恢复至 Olares Space
 
 ![alt text](/images/how-to/space/restore_backup_to_the_olares_space.jpg)
 
-Restoring a snapshot to the cloud is similar to setting up a new cloud-based Olares.
+将快照恢复到云端的操作流程与新建云端 Olares 类似。
 
-1. Set up relevant details.
+1. 设置相关信息。
 
-   a. Select the cloud service provider and their data center location. 
+   a. 选择云服务商和数据中心位置。
 
-   b. Choose the hardware configuration for the instance. 
+   b. 选择实例的硬件配置。
 
-   c. Confirm the snapshot details and enter the backup password.
+   c. 确认快照信息并输入备份密码。
 
-2. Understand charges for storage and bandwidth. <br>Each instance includes a certain amount of free storage and traffic. Any usage exceeding these quotas will incur charges.
+2. 了解存储和带宽费用。<br>每个实例都包含一定额度的免费存储和流量配额。超出部分将产生费用。
 
-3. Confirm the order and complete the payment. After that, the Olares begins to install.
+3. 确认订单并完成支付。之后 Olares 开始安装。
 
-:::info NOTE
-During the installation process, Olares will verify the backup password. If it is incorrect, you'll be asked to re-enter the correct one. If you forget the backup password, the restoration process won't be able to continue. In this case, please return your instance and try restoring again.
+:::info 注意
+在安装过程中，Olares 会验证备份密码。如果密码不正确，系统会要求重新输入正确的密码。如果忘记了备份密码，将无法继续恢复流程。此时请销毁实例，重新进行恢复。
 :::
 
-:::info NOTE
-To avoid conflicts or other unforeseeable problem, you must return the existing Olares that uses the same name before restoring to a cloud-based Olares.
+:::info 注意
+为避免冲突或其他意外问题，在恢复到云端 Olares 之前，必须先销毁使用相同名称的现有 Olares。
 :::

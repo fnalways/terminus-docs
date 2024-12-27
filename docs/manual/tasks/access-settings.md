@@ -22,7 +22,7 @@ Olares provides two methods to optimize application access addresses:
 ### Custom route ID
 Route ID is a crucial component in accessing your Olares applications. It forms part of the URL you use to reach your applications through a web browser:
 
-`https://{routeID}.{local}.{OlaresDomainName}`
+`https://{routeID}.local.{OlaresDomainName}`
 
 ::: info
  `local` in a URL signifies a private access point, typically used by apps offering services for individual users, families, or teams. Public-facing apps hosting external services do not include `local` in their URLs. For more details, see [entrance](../concepts/network.md#entrance).
@@ -54,8 +54,9 @@ Instead of using the default Olares domain, you can use your own domain name to 
 
 Olares will automatically verify the DNS record activation. Once verified, the custom domain status will change to "Activated". And you will be able to access Affine with the new URL: `hello.coffee`. 
 
-::: tips
+:::tip
 To allow public access to your custom domain without login, update the access policies as below:
-1. Navigate to **Settings**>**Application**, and click the target application'
-2. Under **Create access policies**, set **Authentication level** to **Public**, and click **Submit**.
+1. Navigate to **Settings** > **Application**, and click the target application.
+2. Click **Entrance**, then under **Create access policies**, set **Authentication level** to **Public**.
+3. Click **Submit** to apply changes.
 :::

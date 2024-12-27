@@ -1,45 +1,41 @@
-# Manage accounts in Olares Space
+# 管理 Olares Space 账号
 
-This guide walks you through common account operations with Olares Space, including logging in, managing multiple accounts, and logging out.  
+本指南将介绍 Olares Space 的常见账号操作，包括登录、多账号管理和退出登录。
 
-## Log in to Olares Space
+## 登录 Olares Space
 
-Olares Space uses a decentralized ID (DID) or Olares ID for authentication. Make sure you already have obtained your credentials on your LarePass. 
+Olares Space 使用去中心化身份（DID）或 Olares ID 进行身份验证。请确保你已在 LarePass 中获取了相应的凭据。
 
-1. In the LarePass app, select the DID or Olares ID you wish to use to log in. 
-2. Open https://space.olares.xyz/ in your browser. 
-3. Scan the QR code using LarePass.  
+1. 在 LarePass 应用中，选择要用于登录的 DID 或 Olares ID。
+2. 在浏览器中打开 [https://space.olares.xyz/](https://space.olares.xyz/)。
+3. 使用 LarePass 扫描二维码。
 
-::: tip NOTE
-The features and services available on Olares Space vary depending on whether you use a DID or Olares ID for login. 
-- **Logging in with a DID** allows you to set your own domain since no domain is associated to the account. However, you must bind the DID to an Olares ID before you can activate an Olares device.
-- **Logging in with an Olares ID** enables you to create an Olares, provided the name isn't already linked to another Olares device. However, you cannot use your custom domain since your Olares ID already corresponds to a unique domain.
-:::
+::: tip DID 与 Olares ID 的差异
+根据使用 DID 还是 Olares ID 登录，Olares Space 提供的功能和服务会有所不同。
+- **使用 DID 登录**：由于账号未关联域名，你可以设置自己的域名。但在激活 Olares 设备前，必须先将 DID 绑定到 Olares ID。
+- **使用 Olares ID 登录**：只要该名称尚未被其他 Olares 设备使用，你就可以创建 Olares。但因为 Olares ID 已对应唯一域名，所以无法使用自定义域名。
+  :::
 
+## 退出登录
 
-## Log out
+退出账号有以下方式：
 
-To log out of your account:
+1. 点击右上角的头像。
+2. 选择**退出登录**。
 
-1.	Click your avatar in the top-right corner.
-2.	Select **Log Out**.
+或者：
 
-Alternatively, you can:
+1. 从菜单中选择**切换账号**。
+2. 点击任意列出账号旁边的 <i class="material-icons">logout</i> 图标。
 
-1.	Choose **Switch Account** from the menu.
-2.	Click <i class="material-icons">logout</i> next to any listed account.
+## 管理多个账号
 
+每个 Olares ID 只能关联一个 Olares。通过 Olares Space 的多账号管理功能，你可以轻松切换账号，方便管理多个 Olares ID 和实例。
 
-## Manage multiple accounts 
+添加账号的步骤：
 
-Each Olares ID is linked to only one Olares. With multi-account management in Olares Space, you can switch between accounts effortlessly — perfect for managing multiple Olares IDs and instances.
+1. 点击右上角的头像。
+2. 在弹出菜单中选择**导入账号**。
+3. 打开 LarePass，扫描二维码登录。
 
-To add an account:
-
-1. Click your avatar in the top-right corner.
-2. In the pop-up menu, select **Import Account**.
-3. Launch LarePass, and scan the QR code to log in.
-
-Once you've added multiple accounts, switch between them using the **Switch Account** option in the menu. If the account is logged out, you'll be redirected to the QR code login page.
-
-
+添加多个账号后，可以通过菜单中的**切换账号**选项进行切换。如果账号已退出登录，系统会跳转到二维码登录页面。

@@ -162,7 +162,7 @@ Cookie: .... // v1.0.3 版本新增功能
 
 ## 应用部署 WebSocket 服务
 
-应用要使用这个功能只需要在应用 Chart 的 [TerminusManifest.yaml](../package/manifest.md#websocket) 中申明。
+应用要使用这个功能只需要在应用 Chart 的 [OlaresManifest.yaml](../package/manifest.md#websocket) 中申明。
 ```yaml
 options:
   websocket:

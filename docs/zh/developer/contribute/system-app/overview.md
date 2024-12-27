@@ -7,7 +7,7 @@
 - 了解 Olares 的架构和机制
   :::
 
-经过一年半开发，Terminus 团队在开发系统应用时已经逐渐迁移到 DevBox 上。
+经过一年半开发，Olares 团队在开发系统应用时已经逐渐迁移到 DevBox 上。
 
 下面我们将演示如何在 Devbox 里调试 Desktop 的前端代码。
 1. 在 DevBox 中创建应用

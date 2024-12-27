@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Wise 基础知识
+# Wise 基本操作
 
 Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、阅读、管理内容。你可以通过本页面学习 Wise 的基本操作。
 
@@ -24,26 +24,26 @@ Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、
 ### 通过 LarePass 保存网页
 
 :::tip 提示
-LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass) 下载。
+LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass)下载。
 :::
 
-1. 打开 LarePass 浏览器扩展，点击 **收集**。
-2. 在 **页面** 部分，点击 <i class="material-symbols-outlined">add_box</i> 将当前页面保存到你的 Wise 库。
+1. 打开 LarePass 浏览器扩展，点击**收集**。
+2. 在**页面**部分，点击 <i class="material-symbols-outlined">add_box</i> 将当前页面保存到你的 Wise 库。
 
-保存后，你可以在 Wise 的 **库** > **文章** 页面找到该网页。
+保存后，你可以在 Wise 的**库** > **文章**页面找到该网页。
 
 ### 手动添加内容
 
 Wise 支持包括视频、音频、PDF 和电子书在内的多种内容类型：
 
 1. 在菜单栏中点击 <i class="material-symbols-outlined">add_circle</i>。
-2. 添加网页时，选择 **网页**。
-3. 添加其他类型内容时，选择 **下载链接**。
+2. 添加网页时，选择**网页**。
+3. 添加其他类型内容时，选择**下载链接**。
 4. 添加 RSS 订阅源时，选择 **RSS**。
    :::tip 提示
    要了解如何通过 Wise 订阅 RSS，请参阅 [订阅 RSS 订阅源](./subscribe)。
    :::
-5. 在弹出窗口中输入 URL，点击 **确认** 以检索资源。
+5. 在弹出窗口中输入 URL，点击**确认**以检索资源。
 
 ## 自动下载
 
@@ -68,13 +68,13 @@ Wise 会自动为新的音频或视频内容创建下载任务，将媒体文件
 
 ![Tags](/images/manual/tasks/tags.png)
 
-你可以在 **管理** > **标签** 页面找到并管理你的标签。
+你可以在**管理** > **标签**页面找到并管理你的标签。
 
 ### 用笔记捕捉灵感
 
 1. 在阅读时，点击 <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">right_panel_open</i> 打开 **信息** 面板。
-2. 在 **笔记** 部分输入你的想法。
-3. 点击 **保存** 存储笔记。
+2. 在**笔记**部分输入你的想法。
+3. 点击**保存**存储笔记。
 
 你可以稍后编辑或删除笔记。
 

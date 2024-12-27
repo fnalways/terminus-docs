@@ -16,9 +16,9 @@ ComfyUI 是一款基于节点的 Stable Diffusion 图形界面工具。它把 AI
 
 ## 安装 ComfyUI
 
-根据角色选择安装方式：
+根据你的角色安装相应应用：
 * **管理员**：需要同时安装“ComfyUI For Cluster”和“ComfyUI”。
-* **团队成员**：确保管理员已安装“ComfyUI For Cluster”，然后只需安装“ComfyUI”。
+* **团队成员**：仅需安装“ComfyUI”，同时确保管理员已安装“ComfyUI For Cluster”。
 
 安装完成后，从桌面启动 ComfyUI。
 

@@ -6,7 +6,7 @@ Olares 由一系列项目组成，采用了分层授权的方式，基本原则�
 
 - 区块链上运行的项目，采用 Apache 2.0，例如 [Snowinning Protocol](https://github.com/beclab/olaresdid-contract-system)。
 - 协议相关的项目，采用 Apache 2.0，例如 [r4](https://github.com/beclab/r4)。
-- Olares 和 LarePass 相关的项目，采用 Terminus License。
+- Olares 和 LarePass 相关的项目，采用 Olares License。
 - 在 Olares 上运行的第三方应用，由开发者自己决定开源与否与协议选择。
 
 - 每个项目具体的情况，可以在 [GitHub](https://github.com/beclab) 上查询。

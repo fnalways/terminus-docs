@@ -28,8 +28,10 @@ Before getting started, ensure you have:
    - **Chat Model**: `gemma2:latest`
    - **Embedding model Provider**: `Ollama`
    - **Embedding Model**: `gemma2:latest`
+
+   ![Perplexica configurations](/images/manual/use-cases/perplexica-configurations.png){width=60%}
 5. Click the confirmation button to save your configuration and return to the search interface.
 
 Your setup is complete. Try searching for a topic you're interested in to test your new search environment.
-
+![Perplexica example](/images/manual/use-cases/perplexica-example-question.png)
 

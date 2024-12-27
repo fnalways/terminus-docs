@@ -1,2 +1,0 @@
-# Manage Olares with LarePass
-

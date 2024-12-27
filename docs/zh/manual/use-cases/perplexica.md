@@ -1,35 +1,38 @@
-# Perplexica
+# Perplexica 本地 AI 搜索
 
-Perplexica is an open-source AI-powered search engine that provides intelligent search capabilities while maintaining user privacy. As an alternative to Perplexity AI, it combines advanced machine learning with comprehensive web search functionality to deliver accurate, source-cited answers to your queries.
+Perplexica 是一个开源的 AI 搜索引擎，在提供智能搜索功能的同时注重保护用户隐私。作为 Perplexity AI 的替代方案，它将先进的机器学习技术与全面的网络搜索功能相结合，为你的查询提供准确且附带来源引用的答案。
 
-## The backend: SearSNG
-SearXNG serves as the privacy-focused meta-search engine backend for Perplexica. It:
-* Aggregates results from multiple search engines
-* Removes tracking and preserves your privacy
-* Provides clean, unbiased search results for the AI model to process
+## 后端引擎：SearXNG
+SearXNG 作为 Perplexica 的后端，是一个注重隐私的元搜索引擎。它具有以下特点：
+* 聚合多个搜索引擎的结果
+* 去除跟踪代码，保护你的隐私
+* 为 AI 模型提供干净、无偏见的搜索结果
 
-This integration enables Perplexica to function as a complete search solution while maintaining the security of your sensitive information.
+通过这样的集成，Perplexica 既能作为完整的搜索解决方案，又能确保敏感信息的安全。
 
-## Before you begin
-Before getting started, ensure you have:
-- Ollama installed and running in your Olares environment
-- Open WebUI installed with your preferred language models downloaded
+## 开始之前
+在开始使用前，请确保：
+- Olares 环境中已安装并运行 Ollama
+- Open WebUI 已安装，并已下载所需的语言模型
   :::tip
-  For optimal performance, consider using lightweight yet powerful models like `gemma2`, which offer a good balance between speed and capability.
+  建议使用 `gemma2` 等轻量但功能强大的模型，可在速度和性能间取得良好平衡。
   :::
-## Set up Perplexica
-1. Install SearXNG from Market based on your role:
-    - **For admin**: Install both "SearXNG For Cluster" and "SearXNG".
-    - **For team members**: Ensure your admin has installed "SearXNG For Cluster", and install "SearXNG" only.
-2. Install Perplexica from Market.
-3. Launch Perplexica, and click <i class="material-symbols-outlined">settings</i> in the bottom left corner to open the settings window.
-4. Configure your search environment with the following settings (using `gemma2` as an example):
-   - **Chat model Provider**: `Ollama`
-   - **Chat Model**: `gemma2:latest`
-   - **Embedding model Provider**: `Ollama`
-   - **Embedding Model**: `gemma2:latest`
-5. Click the confirmation button to save your configuration and return to the search interface.
 
-Your setup is complete. Try searching for a topic you're interested in to test your new search environment.
+## 配置 Perplexica
+1. 根据角色安装 SearXNG：
+    - **管理员**：需要安装“SearXNG For Cluster”和“SearXNG”。
+    - **团队成员**：仅需安装“SearXNG”，同时确保管理员已安装"SearXNG For Cluster"。
+2. 安装 Perplexica。
+3. 启动 Perplexica，点击左下角的 <i class="material-symbols-outlined">settings</i> 打开设置界面。
+4. 配置搜索环境。以 `gemma2` 为例：
+    - **Chat model provider**：`Ollama`
+    - **Chat model**：`gemma2:latest`
+    - **Embedding model provider**：`Ollama`
+    - **Embedding model**：`gemma2:latest`
 
+    ![Perplexica 配置](/images/manual/use-cases/perplexica-configurations.png){width=60%}
+5. 点击底部的 <i class="material-symbols-outlined">cloud_upload</i> 确认按钮保存配置并返回搜索界面。
 
+至此配置完成。你可以搜索感兴趣的主题来测试新的搜索环境。
+
+![Perplexica 示例](/images/manual/use-cases/perplexica-example-question.png)

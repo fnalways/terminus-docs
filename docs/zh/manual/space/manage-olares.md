@@ -2,50 +2,50 @@
 outline: [2, 3]
 ---
 
-# Manage Olares 
+# 管理 Olares
 
-This page covers Olares management tasks in Olares Space, including monitoring system data, adding worker nodes, and managing cloud services.
+本页介绍如何在 Olares Space 中管理 Olares，包括监控系统数据、添加工作节点和管理云服务。
 
-## View system status
+## 查看系统状态
 
-You can monitor the system status of Olares through **Olares Space**:
+你可以通过 **Olares Space** 监控 Olares 的系统状态：
 
-1. In your LarePass app, go to **Settings** > **Integration**.
-2. Click <i class="material-icons">add</i> in the top right corner and link your Olares Space account to the Olares device. This authorizes Olares Space's access to your system data.
-3. Log into [**Olares Space**](https://space.jointolares.com/).
-4. On the **Olares** page, view **Storage usage** and **Traffic consumption** in the system panel.
+1. 在 LarePass 应用中，进入**设置** > **集成**。
+2. 点击右上角的 <i class="material-icons">add</i>，将 Olares Space 账号与 Olares 设备关联，授权 Olares Space 访问系统数据。
+3. 登录 [**Olares Space**](https://space.jointolares.com/)。
+4. 在 **Olares** 页面的系统面板中查看**存储使用量**和**流量消耗**。
 
-![System Panel](/images/how-to/space/my_olares.jpg)
+![系统面板](/images/how-to/space/my_olares.jpg)
 
-:::info
-For self-hosted Olares users, it's important to monitor **Traffic statistics** for intranet penetration services, and **Storage usage** for backup services. These services may incur charges based on usage.
+:::info 注意
+对于自托管 Olares 用户，请重点关注内网穿透服务的**流量统计**和备份服务的**存储使用量**。这些服务可能会根据使用情况产生费用。
 :::
 
-## Add worker nodes
+## 添加工作节点
 
-For cloud Olares users, you can improve performance by adding worker nodes:
+云端 Olares 用户可以通过添加工作节点来提升性能：
 
-1. Click <i class="material-icons">more_horiz</i> in the upper right corner, and select **Add Worker**.
-2. On the guide page, choose your preferred hardware configuration.
-3. Review the fees for storage and traffic.
-4. Confirm your order and submit.
+1. 点击右上角的 <i class="material-icons">more_horiz</i>，选择**添加工作节点**。
+2. 在引导页面选择所需的硬件配置。
+3. 查看存储和流量费用。
+4. 确认订单并提交。
 
-## Return Olares
+## 销毁 Olares
 
-If you no longer need your Olares service, you can return the instance by following these steps:
+如果不再需要 Olares 服务，可以按以下步骤销毁实例：
 
-1. Click <i class="material-icons">more_horiz</i> in the upper right corner.
-2. Select **Destroy Olares**.
-3. Confirm the action and settle your usage:
-   - If you are eligible for a refund, the amount will be credited back to your account balance.
-   - If additional payment is required, please confirm and settle the payment.
+1. 点击右上角的 <i class="material-icons">more_horiz</i>。
+2. 选择**销毁 Olares**。
+3. 确认操作并结算使用费用：
+   - 如果符合退款条件，退款金额将返还到账户余额
+   - 如需补充支付，请确认并完成支付
 
-## Shared GPU solution
+## 共享 GPU 方案
 
-Currently, we do not offer cloud instances that include GPUs. However, for users who need GPU capabilities, we provide a shared GPU solution via rCuda. This solution is ideal for applications like Stable Diffusion, costing approximately $0.02 per image.
+目前我们不提供包含 GPU 的云实例。不过，对于需要 GPU 功能的用户，我们通过 rCuda 提供共享 GPU 方案。这个方案特别适合 Stable Diffusion 等应用，每张图片的成本约为 0.02 美元。
 
-::: tip NOTE
-For Large Language Models (LLMs), the shared GPU solution is still under development and may require further enhancements.
+::: info 注意
+对于大语言模型（LLM），共享 GPU 方案仍在开发中，可能需要进一步优化。
 :::
 
-If you need GPU support, please reach us on [Discord](https://discord.com/invite/BzfqrgQPDK).
+如果你需要 GPU 支持，请通过 [Discord](https://discord.com/invite/BzfqrgQPDK) 联系我们。
