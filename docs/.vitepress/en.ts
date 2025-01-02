@@ -52,6 +52,25 @@ const side = {
       ],
     },
     {
+      text: "Tutorials",
+      collapsed: true,
+      link: "/manual/tutorials/",
+      items: [
+        {
+         text: "Configure custom domain",
+         link: "/manual/tutorials/set-custom-domain",
+        },
+        {
+          text: "Stream videos remotely",
+          link: "/manual/tutorials/stream-media",
+        },
+        {
+          text: "Use ComfyUI in Krita",
+          link: "/manual/tutorials/comfyui-for-krita",
+        },
+      ],
+    },
+    {
       text: "Use cases",
       collapsed: true,
       link: "/manual/use-cases/",
@@ -75,14 +94,6 @@ const side = {
         {
           text: "Dify",
           link: "/manual/use-cases/dify",
-        },
-        {
-          text: "Use ComfyUI in Krita",
-          link: "/manual/use-cases/comfyui-for-krita",
-        },
-        {
-          text: "Stream videos",
-          link: "/manual/use-cases/stream-media",
         },
       ],
     },
