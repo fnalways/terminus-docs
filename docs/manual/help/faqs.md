@@ -4,7 +4,7 @@
 
 Olares consists of a series of projects using a hierarchical authorization approach. The basic principles are:
 
-- Projects running on blockchain use Apache 2.0, such as [Snowinning Protocol](https://github.com/beclab/olaresdid-contract-system).
+- Projects running on blockchain use Apache 2.0, such as [Snowinning Protocol](https://github.com/beclab/terminusdid-contract-system).
 - Projects related to protocols use Apache 2.0, such as [r4](https://github.com/beclab/r4).
 - Projects around Olares and LarePass use the [Olares License](https://github.com/beclab/Olares/blob/main/LICENSE.md).
 - For third-party applications running on Olares, it is up to the developer to decide whether they want them open source or not and choose the license accordingly.
