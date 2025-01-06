@@ -57,7 +57,7 @@ const side = {
       link: "/manual/tutorials/",
       items: [
         {
-         text: “Set up custom domain",
+         text: "Set up custom domain",
          link: "/manual/tutorials/set-custom-domain",
         },
         {
