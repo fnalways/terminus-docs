@@ -38,10 +38,10 @@ In the examples below, we use `KUBE_TYPE=k8s` to illustrate how to install K8s i
 Of course, you can also combine multiple environment variables for more flexible customization, for example:
 
 ```bash
-    export KUBE_TYPE=k8s \
-        REGISTRY_MIRRORS="https://mirrors.joinolares.cn" \
-        FRP_ENABLE=1 && \
-    bash install.sh
+export KUBE_TYPE=k8s \
+    REGISTRY_MIRRORS="https://mirrors.joinolares.cn" \
+    FRP_ENABLE=1 && \
+bash install.sh
 ```
 
 ## List of environment variables

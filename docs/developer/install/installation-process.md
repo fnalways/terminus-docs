@@ -17,8 +17,8 @@ Both installing and running Olares require that your target machine’s operatin
 Specific checks include:
 - Compatibility with operating system type, version, and CPU architecture
 - Ensuring the system uses `Systemd` as its initialization process
-	- Making sure multiple network ports that Olares needs to expose are available
-	-	Verifying that no conflicting container runtime is installed
+- Making sure multiple network ports that Olares needs to expose are available
+- Verifying that no conflicting container runtime is installed
 
 Below is an example of a failed precheck. Two checks failed: 
  
@@ -94,36 +94,37 @@ Greetings, Olares
 After the download phase, the prepare phase configures the operating system to ensure smooth operation of Kubernetes, container images, and other system services. 
 	
 ### Install and configure system dependencies
-  - Adjust DNS, NTP, and SSH services to ensure proper network functionality and time synchronization.
-  - Install essential dependencies (e.g., curl, net-tools, gcc, make) via `apt`.
+- Adjust DNS, NTP, and SSH services to ensure proper network functionality and time synchronization.
+- Install essential dependencies (e.g., curl, net-tools, gcc, make) via `apt`.
 
- **Example script output**:
-    ```bash
-    preparing installation environment...
+**Example script output**:
 
-    current: root
-    2024-12-17T19:46:39.517+0800        [Job] [Prepare the System Environment] start ...
-    2024-12-17T19:46:39.517+0800        [Module] PreCheckOs
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckSupport success (29.999µs)
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckPortsBindable success (144.035µs)
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckNoConflictingContainerd success (31.009µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: PatchAppArmor skipped (7.677µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: RaspbianCheck success (5.796µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: CorrectHostname success (5.363µs)
-    nameserver
-    nameserver
-    2024-12-17T19:46:41.921+0800        [A] ubuntu: DisableLocalDNS success (2.40336625s)
-    2024-12-17T19:46:41.921+0800        [INFO] installing and configuring OS dependencies ...
-    2024-12-17T19:46:41.921+0800        [Module] InstallDeps
-    Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-    Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
-    Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
-    ...
-    ```
-- **Install system dependencies and container runtime**
-  - Install and start the previously downloaded dependencies
-	- Install containerd on the system and start the service
-	- Import the downloaded container images into containerd
+```bash
+preparing installation environment...
+
+current: root
+2024-12-17T19:46:39.517+0800        [Job] [Prepare the System Environment] start ...
+2024-12-17T19:46:39.517+0800        [Module] PreCheckOs
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckSupport success (29.999µs)
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckPortsBindable success (144.035µs)
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckNoConflictingContainerd success (31.009µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: PatchAppArmor skipped (7.677µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: RaspbianCheck success (5.796µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: CorrectHostname success (5.363µs)
+nameserver
+nameserver
+2024-12-17T19:46:41.921+0800        [A] ubuntu: DisableLocalDNS success (2.40336625s)
+2024-12-17T19:46:41.921+0800        [INFO] installing and configuring OS dependencies ...
+2024-12-17T19:46:41.921+0800        [Module] InstallDeps
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
+Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
+...
+```
+### Install system dependencies and container runtime
+- Install and start the previously downloaded dependencies
+- Install containerd on the system and start the service
+- Import the downloaded container images into containerd
 
   - **Example script output**:
   
@@ -142,38 +143,37 @@ After the download phase, the prepare phase configures the operating system to e
     ...
     ```
 
-- **Install system daemon**
-    
-    Install and start `olaresd`, the system daemon for Olares. `olaresd` runs in the background and automatically performs maintenance operations.
+### Install system daemon
+Install and start `olaresd`, the system daemon for Olares. `olaresd` runs in the background and automatically performs maintenance operations.
 
-    **Example script output**:
+**Example script output**:
 
-    ```bash
-    024-12-17T19:52:31.862+0800        [A] ubuntu: GenerateOlaresdEnv success (23.829684ms)
-    2024-12-17T19:52:31.862+0800        template OlaresdService result: [Unit]
-    Description=olaresd
-    After=network.target
-    StartLimitIntervalSec=0
+```bash
+024-12-17T19:52:31.862+0800        [A] ubuntu: GenerateOlaresdEnv success (23.829684ms)
+2024-12-17T19:52:31.862+0800        template OlaresdService result: [Unit]
+Description=olaresd
+After=network.target
+StartLimitIntervalSec=0
 
-    [Service]
-    User=root
-    EnvironmentFile=/etc/systemd/system/olaresd.service.env
-    ExecStart=/usr/local/bin/olaresd
-    RestartSec=10s
-    LimitNOFILE=40000
-    Restart=always
+[Service]
+User=root
+EnvironmentFile=/etc/systemd/system/olaresd.service.env
+ExecStart=/usr/local/bin/olaresd
+RestartSec=10s
+LimitNOFILE=40000
+Restart=always
 
-    [Install]
-    WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 
-    2024-12-17T19:52:31.885+0800        [A] ubuntu: GenerateOlaresdService success (23.050958ms)
-    2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
-    ...
-    ```
+2024-12-17T19:52:31.885+0800        [A] ubuntu: GenerateOlaresdService success (23.050958ms)
+2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
+...
+```
 
-- **Optional installations**
+### Optional installations
   
-  If you want to enable distributed shared storage (e.g., JuiceFS, Redis, MinIO) or GPU support (CUDA), you can set corresponding [environment variables](environment-variables.md) when running the installation script.
+If you want to enable distributed shared storage (e.g., JuiceFS, Redis, MinIO) or GPU support (CUDA), you can set corresponding [environment variables](environment-variables.md) when running the installation script.
 
 ## Install
 
@@ -186,10 +186,10 @@ During this phase, the script primarily completes the following steps:
 ### Deploy Kubernetes
 
 By default, Olares installs K3s, a lightweight Kubernetes distribution. This step includes:
-	1.	Starting the etcd database.
-	2.	Starting and configuring K3s.
-	3.	Installing a Container Network Interface (CNI) plugin for cluster networking.
-	4.	Copying the `kubeconfig` file to the current user’s directory, enabling interaction with the cluster via kubectl.
+1.	Starting the etcd database.
+2.	Starting and configuring K3s.
+3.	Installing a Container Network Interface (CNI) plugin for cluster networking.
+4.	Copying the `kubeconfig` file to the current user’s directory, enabling interaction with the cluster via kubectl.
 
 You can also choose to install the official Kubernetes. The script will install using kubeadm, an official tool that assists you in creating a minimum viable cluster. On macOS, the scripts uses Minikube, which will skip the above installation steps.
 

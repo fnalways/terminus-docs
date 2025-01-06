@@ -1,4 +1,4 @@
-# Olares installation process
+# Olares 安装流程
 
 通常，安装 Olares 会从以下脚本开始，
 
@@ -35,7 +35,7 @@ Download 阶段会下载 Olares 安装所需的 wizard 文件及系统所依赖�
 
 Wizard 文件是 Olares 的安装包的元数据，包含了 Olares 不同组件的下载地址及安装配置。安装脚本会解压该文件到 `$HOME/.olares/versions/<version>` 目录，其中，
 
--`$HOME/.olares`是 Olares 的基础安装目录，用于存储所有镜像、日志、依赖项以及其他版本相关文件。详细目录结构请参考 [Olares Home 概述](olares-home.md)文档。
+- `$HOME/.olares`是 Olares 的基础安装目录，用于存储所有镜像、日志、依赖项以及其他版本相关文件。详细目录结构请参考 [Olares Home 概述](olares-home.md)文档。
 - `<version>` 是此 wizard 文件对应的 Olares 版本号，如示例中的 1.12.0-20241215。
 
 **示例脚本输出**：
@@ -87,84 +87,88 @@ Greetings, Olares
 
 在完成下载后，安装脚本将对操作系统进行配置，以保证能够顺利运行 Kubernetes、容器镜像等系统服务。
 
--  **系统依赖安装与配置**
-  - 调整 DNS、NTP、SSH 服务，确保机器网络正常、时间同步无误。
-  - 通过 apt 安装必要依赖（curl、net-tools、gcc、make 等）。
-  - **示例脚本输出**
-    ```bash
-    preparing installation environment...
+### 系统依赖安装与配置
+### 系统依赖安装与配置
+- 调整 DNS、NTP、SSH 服务，确保机器网络正常、时间同步无误。
+- 通过 apt 安装必要依赖（curl、net-tools、gcc、make 等）。
 
-    current: root
-    2024-12-17T19:46:39.517+0800        [Job] [Prepare the System Environment] start ...
-    2024-12-17T19:46:39.517+0800        [Module] PreCheckOs
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckSupport success (29.999µs)
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckPortsBindable success (144.035µs)
-    2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckNoConflictingContainerd success (31.009µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: PatchAppArmor skipped (7.677µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: RaspbianCheck success (5.796µs)
-    2024-12-17T19:46:39.517+0800        [A] ubuntu: CorrectHostname success (5.363µs)
-    nameserver
-    nameserver
-    2024-12-17T19:46:41.921+0800        [A] ubuntu: DisableLocalDNS success (2.40336625s)
-    2024-12-17T19:46:41.921+0800        [INFO] installing and configuring OS dependencies ...
-    2024-12-17T19:46:41.921+0800        [Module] InstallDeps
-    Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
-    Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
-    Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
-    ...
-    ```
-- **依赖组件及容器运行时安装** 
-  - 将之前下载的依赖组件安装并启动。
-  - 将 containerd 安装到系统中，并启动服务，同时将下载好的容器镜像全部导入到 containerd。
-  - **示例脚本输出**：
+**示例脚本输出**
+```bash
+preparing installation environment...
+
+current: root
+2024-12-17T19:46:39.517+0800        [Job] [Prepare the System Environment] start ...
+2024-12-17T19:46:39.517+0800        [Module] PreCheckOs
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckSupport success (29.999µs)
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckPortsBindable success (144.035µs)
+2024-12-17T19:46:39.517+0800        [A] LocalHost: PreCheckNoConflictingContainerd success (31.009µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: PatchAppArmor skipped (7.677µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: RaspbianCheck success (5.796µs)
+2024-12-17T19:46:39.517+0800        [A] ubuntu: CorrectHostname success (5.363µs)
+nameserver
+nameserver
+2024-12-17T19:46:41.921+0800        [A] ubuntu: DisableLocalDNS success (2.40336625s)
+2024-12-17T19:46:41.921+0800        [INFO] installing and configuring OS dependencies ...
+2024-12-17T19:46:41.921+0800        [Module] InstallDeps
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
+Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
+...
+```
+### 安装依赖组件及容器运行时
+- 将之前下载的依赖组件安装并启动。
+- 将 containerd 安装到系统中，并启动服务。
+- 将下载好的容器镜像全部导入到 containerd。
+
+**示例脚本输出**：
   
-    ```bash
-    2024-12-17T19:47:37.510+0800        [Module] InstallContainerModule(k3s)
-    2024-12-17T19:47:37.518+0800        [A] ubuntu: ZfsMountReset skipped (7.321811ms)
-    2024-12-17T19:47:37.525+0800        [A] ubuntu: CreateZfsMount skipped (7.322591ms)
-    2024-12-17T19:47:38.188+0800        [A] ubuntu: SyncContainerd success (662.643982ms)
-    2024-12-17T19:47:38.368+0800        [A] ubuntu: SyncCrictlBinaries success (179.758334ms)
-    2024-12-17T19:47:38.399+0800        [A] ubuntu: GenerateContainerdService success (31.410118ms)
-    2024-12-17T19:47:38.451+0800        [A] ubuntu: GenerateContainerdConfig success (52.047108ms)
-    2024-12-17T19:47:38.505+0800        [A] ubuntu: GenerateCrictlConfig success (53.760209ms)
-    2024-12-17T19:47:38.857+0800        [A] ubuntu: EnableContainerd success (352.128078ms)
-    2024-12-17T19:47:38.857+0800        [Module] PreloadImages
-    2024-12-17T19:47:41.665+0800        (1/145) imported image: rancher/mirrored-pause:3.6, time: 194.363948ms
-    ...
-    ```
+```bash
+2024-12-17T19:47:37.510+0800        [Module] InstallContainerModule(k3s)
+2024-12-17T19:47:37.518+0800        [A] ubuntu: ZfsMountReset skipped (7.321811ms)
+2024-12-17T19:47:37.525+0800        [A] ubuntu: CreateZfsMount skipped (7.322591ms)
+2024-12-17T19:47:38.188+0800        [A] ubuntu: SyncContainerd success (662.643982ms)
+2024-12-17T19:47:38.368+0800        [A] ubuntu: SyncCrictlBinaries success (179.758334ms)
+2024-12-17T19:47:38.399+0800        [A] ubuntu: GenerateContainerdService success (31.410118ms)
+2024-12-17T19:47:38.451+0800        [A] ubuntu: GenerateContainerdConfig success (52.047108ms)
+2024-12-17T19:47:38.505+0800        [A] ubuntu: GenerateCrictlConfig success (53.760209ms)
+2024-12-17T19:47:38.857+0800        [A] ubuntu: EnableContainerd success (352.128078ms)
+2024-12-17T19:47:38.857+0800        [Module] PreloadImages
+2024-12-17T19:47:41.665+0800        (1/145) imported image: rancher/mirrored-pause:3.6, time: 194.363948ms
+...
+```
 
-- **系统守护进程（olaresd）**
+### 安装系统守护进程（olaresd）
   
-  预安装阶段还会安装并启动 [olaresd](installation-overview.md#系统守护进程olaresd)，Olares 的系统守护进程服务。olaresd 会在后台运行并自动执行系统维护操作，如变更 IP 地址时自动更新配置。
+预安装阶段还会安装并启动 [olaresd](installation-overview.md#系统守护进程olaresd)，Olares 的系统守护进程服务。olaresd 会在后台运行并自动执行系统维护操作，如变更 IP 地址时自动更新配置。
 
-    **示例脚本输出**
+**示例脚本输出**：
 
-    ```bash
-    024-12-17T19:52:31.862+0800        [A] ubuntu: GenerateOlaresdEnv success (23.829684ms)
-    2024-12-17T19:52:31.862+0800        template OlaresdService result: [Unit]
-    Description=olaresd
-    After=network.target
-    StartLimitIntervalSec=0
+```bash
+024-12-17T19:52:31.862+0800        [A] ubuntu: GenerateOlaresdEnv success (23.829684ms)
+2024-12-17T19:52:31.862+0800        template OlaresdService result: [Unit]
+Description=olaresd
+After=network.target
+StartLimitIntervalSec=0
 
-    [Service]
-    User=root
-    EnvironmentFile=/etc/systemd/system/olaresd.service.env
-    ExecStart=/usr/local/bin/olaresd
-    RestartSec=10s
-    LimitNOFILE=40000
-    Restart=always
+[Service]
+User=root
+EnvironmentFile=/etc/systemd/system/olaresd.service.env
+ExecStart=/usr/local/bin/olaresd
+RestartSec=10s
+LimitNOFILE=40000
+Restart=always
 
-    [Install]
-    WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 
-    2024-12-17T19:52:31.885+0800        [A] ubuntu: GenerateOlaresdService success (23.050958ms)
-    2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
-    ...
-    ```
+2024-12-17T19:52:31.885+0800        [A] ubuntu: GenerateOlaresdService success (23.050958ms)
+2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
+...
+```
 
-- 可选安装项目
+### 可选安装项目
   
-  如果你想启用分布式共享存储（JuiceFS、Redis 以及MinIO）或 GPU 支持（CUDA），可在执行安装脚本时设置相应的[环境变量](environment-variables.md#olares-环境变量参考)。
+如果你想启用分布式共享存储（JuiceFS、Redis 以及MinIO）或 GPU 支持（CUDA），可在执行安装脚本时设置相应的[环境变量](environment-variables.md#olares-环境变量参考)。
 
 ## Install (安装)
 
