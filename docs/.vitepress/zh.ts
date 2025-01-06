@@ -316,6 +316,48 @@ const side = {
   ],
 
   "/zh/developer/": [
+  {
+    text: "安装 Olares",
+    link: "/zh/developer/install/",
+    items: [
+      {
+        text: "安装概述",
+        link: "/zh//developer/install/installation-overview",
+      },
+      {
+        text: "安装过程",
+        link: "/zh/developer/install/installation-process",
+      },
+      {
+        text: "Olares Home",
+        link: "/zh/developer/install/olares-home",
+      },
+      {
+        text: "环境变量",
+        link: "/zh/developer/install/environment-variables",
+      },
+      {text: "Olares CLI",
+        link: "/zh/developer/install/cli/olares-cli",
+        collapsed: true,
+        items: [
+        {text: "olares info",
+        link: "/zh/developer/install/cli/olares-info"},
+        {text: "olares download",
+        link: "/zh/developer/install/cli/olares-download"},
+        {text: "olares prepare",
+        link: "/zh/developer/install/cli/olares-prepare"},
+        {text: "olares install",
+        link: "/zh/developer/install/cli/olares-install"},
+        {text: "olares change-ip",
+        link: "/zh/developer/install/cli/olares-change-ip"},
+        {text: "olares release",
+        link: "/zh/developer/install/cli/olares-release"},
+        {text: "olares uninstall",
+        link: "/zh/developer/install/cli/olares-uninstall"},
+        ],
+        },
+      ],
+    },   
     {
       text: "开发 Olares 应用",
       items: [
@@ -383,26 +425,6 @@ const side = {
           text: "进阶",
           collapsed: true,
           items: [
-          {text: "Olares CLI",
-          link: "/developer/develop/advanced/cli/olares-cli",
-          collapsed: true,
-          items: [
-          {text: "olares info",
-          link: "/developer/develop/advanced/cli/olares-info"},
-          {text: "olares download",
-          link: "/developer/develop/advanced/cli/olares-download"},
-          {text: "olares prepare",
-          link: "/developer/develop/advanced/cli/olares-prepare"},
-          {text: "olares install",
-          link: "/developer/develop/advanced/cli/olares-install"},
-          {text: "olares change-ip",
-          link: "/developer/develop/advanced/cli/olares-change-ip"},
-          {text: "olares release",
-          link: "/developer/develop/advanced/cli/olares-release"},
-          {text: "olares uninstall",
-          link: "/developer/develop/advanced/cli/olares-uninstall"},
-          ],
-          },
             {
               text: "terminus-info",
               link: "/zh/developer/develop/advanced/terminus-info",
@@ -467,8 +489,7 @@ const side = {
         },
       ],
     },
-
-    {
+      {
       text: "参与贡献",
       items: [
         {
