@@ -16,6 +16,10 @@ Olares 为用户提供无障碍且安全灵活的网络解决方案。本文档�
   - 适用于阅读器、娱乐、生产力工具、桌面应用等
   - 需要通过[认证](account.md#多因素认证mfa)才能访问
 
+- **内部入口e**
+  - 和私有入口类似
+  - 设备通过本地网络或者 Olares 专用网络访问应用时无需鉴权
+
 ## 通过 local 访问
 在局域网内或使用[专用网络](../tasks/private-network.md)访问 Olares 上的应用时，可以在应用 URL 中加上 `.local` 字段，以获取更快的访问速度。例如，`https://vault.local.alice123.olares.cn`。
 

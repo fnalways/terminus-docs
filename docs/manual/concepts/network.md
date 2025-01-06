@@ -16,6 +16,10 @@ Each Olares application can have one or more entrances that serve as access poin
   - Suitable for readers, entertainment, productivity tools, desktop applications, etc.
   - Requires [authentication](account.md#multi-factor-authentication-mfa) for access
 
+- **Internal entrance**
+  - Functions similarly to private entrance
+  - No authentication required when accessing applications through local network or VPN
+
 ## Local access
 When accessing applications on Olares within a LAN or after starting a [private network](../tasks/private-network.md), you can add the `.local` field to the application URL for faster access speeds. For example, `https://vault.local.alice123.olares.com`.
 
