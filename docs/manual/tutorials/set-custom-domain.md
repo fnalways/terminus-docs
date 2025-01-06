@@ -4,64 +4,96 @@ outline: [2, 3]
 
 # Set up a custom domain for your Olares 
 
-By default, when you create an account in LarePass, you get an Olares ID with the `olares.com` domain. This means you access your Olares services through URLs like `desktop.{your-username}.olares.com`. While this default setup saves you from common network and domain configuration hassles, you might want more personalization, for example, an Olares ID with your custom domain. 
+By default, when you create an account in LarePass, you get an Olares ID with the `olares.com` domain. This means you access your Olares services through URLs like `desktop.{your-username}.olares.com`. While this default setup saves you from common network and domain configuration hassles, you might want use your own domain instead, especially in these common scenarios:
 
-This tutorial walks you through setting up your own domain for your Olares. 
+- As an organization: Use a company domain similar to your organizational email address for all team members, for example, `employee@company.com`.
+- As an individual: Use your personal domain for a more personalized experience.
 
-::: tip Note
-In Olares, a custom domain is associated with an organization. This makes it an organization domain. To use the domain, you must join the organization as a member, and apply for an Olares ID under the organization domain.
-:::
+This tutorial walks you through setting up your own domain for your Olares.
 
 ## Objectives
 In this tutorial, you will learn how to:
-- Create a organization and bind your domain with it
-- Apply for your Olares ID under the organization domain 
-- Install and activate Olares with your Olares ID 
+- Set up your custom domain in Olares Space and verify your domain ownership
+- Create an organization to manage your custom domain
+- Configure Gmail-based member access for your organization
+- Create an Olares ID under your custom domain
+- Install and activate Olares with your new domain settings
 
+## How custom domains work in Olares
+Custom domains in Olares are managed through organizations. This means whether you're an individual user or representing a company, you'll need to set up an organization first. The organization serves as the container for your custom domain configuration.
+
+The table below outlines the steps involved in setting up a custom domain and who is responsible for each task. Depending on whether you're an individual user or part of an organization, the actions you need to perform will differ.
+
+| Step                                        | Individual user | Organization admin | Organization member |
+|---------------------------------------------|-----------------|--------------------|---------------------|
+| Create a DID                                | ✅               | ✅                  | ✅                   |
+| Add domain to Olares Space                  | ✅               | ✅                  |                     |
+| Create organization for the domain          | ✅               | ✅                  |                     |
+| Add email to the organization               | ✅               | ✅                  |                     |
+| Join the organization & create an Olares ID | ✅               | ✅                  | ✅                   |
+| Set up Olares                               | ✅               | ✅                  | ✅                   |
 
 ## Before you begin
 
 Ensure you have:
-- Your own domain registered through a domain registrar. 
-
-  :::tip Note
-  Effective top level domains (eTLD)，inlcuding eTLD1 and eTLD2, are supported.
+- A registered domain name from a domain registrar.
+  :::tip Supported domain types
+   Your domain must be either:
+    - A top-level domain with one extension (e.g., `example.com`)
+    - A top-level domain with two extensions (e.g., `example.xyz.com`)
   :::
-- LarePass app installed on your phone. LarePass will be used later to sign in to Olares Space, and to bind your custom domain to Olares ID.
+- A Gmail account. Currently, only Gmail addresses are supported for domain verification and organization membership.
+- LarePass app installed on your phone.<br>
+  LarePass will be used later to sign in to Olares Space, and to bind your custom domain to Olares ID.
 
 ## Step 1: Create a DID
 
 A DID (Decentralized Identifier) is a temporary account state before you get your final Olares ID. You can only bind a custom domain to the account when it is in the DID stage. To create one:
 
-![create DID](/images/manual/tutorials/create-did.png)
-1. In LarePass app, go to the account creation page.
-2. Tap **Create an account** to trigger a DID creation. 
+1. In the LarePass app, go to the account creation page.
 
+2. Tap **Create an account** to trigger a DID creation.
+   
+   ![create DID](/images/manual/tutorials/create-a-did.png)
 This gets you an Olares account in the DID stage. 
 
+![DID stage](/images/manual/tutorials/did-stage.png)
 ## Step 2: Add your domain to Olares Space
 Add and verify your own domain in Olares Space before binding it.
 
 1. In your browser, access Olares Space at https://space.olares.xyz/.
-2. In LarePass app, click the scan button in the top-right corner, and scan the QR code on the login page to log in to Olares Space.
-  ![scan QR](/images/manual/tutorials/scan-qr.png)
-3. In Olares Space, go to **Domain Management** > **Domain Name Setup**, enter your domain and click **Confirm**.
-  ![add domain](/images/manual/tutorials/add-domain.png)
-4. Verify your TXT record for your domain. This verifies your ownership of the domain.
-    <br>a. Click **Guide** in the **Action** column. 
-    <br>b. Follow the on-screen instructions on the pop-up window to add a TXT record to your DNS provider configuration.
-    ![verify TXT](/images/manual/tutorials/verify-txt.png)
-5. Verify the Name Server (NS) Record for your domain. This delegates the DNS resolution for your domain to Olares’s Cloudflare.
-    <br>a. Click **Guide** in the **Action** column.
-    <br>b. Follow the on-screen instructions to add the NS record to your DNS provider configuration.
+2. In LarePass app, tap the scan button in the top-right corner, and scan the QR code on the login page to log in to Olares Space.
 
-:::tip Note
+  ![scan QR](/images/manual/tutorials/scan-qr-code.png)
+
+3. In Olares Space, go to **Domain Management** > **Domain Name Setup**, enter your domain and click **Confirm**.
+
+  ![add domain](/images/manual/tutorials/add-domain.png)
+
+4. Verify your TXT record for your domain. This verifies your ownership of the domain.
+
+   a. Click **Guide** in the **Action** column. 
+
+   b. Follow the on-screen instructions to add a TXT record to your DNS provider configuration.
+
+    ![verify TXT](/images/manual/tutorials/verify-txt.png)
+
+   Once verified, the domain setup status will update automatically to **Await NS Record for Your Domain**.
+5. Verify the Name Server (NS) Record for your domain. This delegates the DNS resolution for your domain to Olares's Cloudflare. 
+
+   a. Click **Guide** in the **Action** column. 
+
+   b. Follow the on-screen instructions to add the NS record to your DNS provider configuration.
+
+   Once verified, the domain status will update to **Awaiting the application for the domain's Verifiable Credential**.
+
+   ![domain added](/images/manual/tutorials/domain-added.png)
+
+:::info
 TXT verification typically completes within 30 minutes. NS record verification may take up to 2 hours. If the whole process exceeds 3 hours, check with your DNS provider.
 :::
 
-Once TXT and NS records are verified, your domain is successfully added to Olares Space. The status will change to **Awaiting the application for the domain's Verifiable Credential**. 
-![domain added](/images/manual/tutorials/domain-added.png)
-
+Once TXT and NS records are verified, your domain is successfully added to Olares Space.
 ## Step 3: Create an org for the domain
 
 This step creates an organization for the domain. Specifically, it binds your domain to an organization in Olares and requests the Verifiable Credential (VC) for the domain.
@@ -70,61 +102,76 @@ This step creates an organization for the domain. Specifically, it binds your do
 A Verifiable Credential is a digital format proof that verifies certain attributes or qualifications of its holder without revealing additional personal information. 
 :::
 
-![Create org](/images/manual/tutorials/create-org.png)
-
 1. Create a new organization in LarePass app.
-    <br>a. On the account creation page, tap <i class="material-icons">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
-    <br>b. Go to **Organization Olares ID** > **Create a new organization**. The organization for your domain will automatically show in the list. 
-    <br>c. Tap the organization name to apply for the VC. When it's done, you will see your domain name for confirmation.
-    <br>c. Click **Confirm** to finish the organization domain binding in LarePass.
+
+   a. On the account creation page, tap <i class="material-icons">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
+
+   b. Go to **Organization Olares ID** > **Create a new organization**. The organization for your domain will automatically show in the list. 
+
+      ![Create org](/images/manual/tutorials/create-org.png)
+
+   c. Tap the organization name to apply for the VC. When it's done, you will see your domain name for confirmation.
+
+   d. Click **Confirm** to finish the organization domain binding in LarePass.
+
     ![Bind org](/images/manual/tutorials/bind-domain-with-org.png)
+
 2. On Olares Space, navigate to the **Domain management** page. The domain setup status should change to **Awaiting rule configuration**.
 
 So far, you have successfully bound your custom domain with an organization, and is set for configuring the domain rules in Olares Space.
 
-## Step 4: Configure domain rules
+## Step 4: Add new member
 
-The domain rules specify how you add the members for the organization. Only members in the organization can apply for Olares ID under the organization domain. To configure domain rules:
-
-![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
+The domain rules specify how you add the members for the organization. Only members in the organization can apply for Olares ID under the organization domain (or, your custom domain). To configure domain rules:
 
 1. In Olares Space, go to **Domain management**, and click **View** next to your domain.
-2. Under **Domain Invitation Rule**, select **Specified email address**, and click **Save**. 
-3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
-4. Click **Submit** to finalize the member addition. Repeat step 3 and step 4 if you want to add multiple users.
+2. Under **Domain Invitation Rule**, select **Specified email address**, and click **Save**.
+   :::tip Invitation rules
+   - Two types of rules are available:
+       - **Fixed email suffix**: Only supports single-extension domains (e.g., `@company.com`). Domains with multiple extensions (like `@dept.company.com`) are not supported. Must follow G Suite format.
+       - **Specified email address**: Allows you to add specific email addresses one by one. Recommended for more precise member management.
+   - Currently, only Gmail addresses are supported for both rule types.
+   :::
 
-:::tip Note
-- The invitation rules support **Fixed email suffix** and **Specified email address**. Fixed email suffix is designed for corporation users with a unified email suffix (`@company.com`). We recommend **Specified email address** for its flexibility in adding a specific member.
-- Currently, only Gmail is supported for **Specified email address**.
+3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
+
+   ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
+4. Click **Submit** to finalize the member addition. Repeat step 3 and step 4 if you want to add multiple users
+
+:::tip Maintain member list
+For organization admin, you can manage your organization's member list anytime through the **Domain management** page.
 :::
 
-## Step 5: Create an Olares ID for the member
+## Step 5: Create an Olares ID with the custom domain
 
-To use the domain, apply for an Olares ID for the member under the organization.
+To use the domain, apply for an Olares ID under the organization.
 
 1. On the account creation page of LarePass app, tap <i class="material-icons">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
-2. Go to **Advanced Account Creation** > **Organization Olares ID** > **Join an existing organization**.
+2. Tap **Organization Olares ID** > **Join an existing organization**.
 3. Type the org domain name (the verified custom domain) and click **Continue**. If you see an error, verify if the domain name is correct and the domain rules are set properly in Olares Space.
 4. Add a VC for the member.
-  <br>a. When prompted, select Google as your VC credential provider.
-  <br>b. Log in with the Gmail account you added in the previous step and grant access for VC.  
+
+   a. When prompted, select Google as your VC credential provider.
+
+   b. Log in with the Gmail account you added in the previous step and grant access for VC.  
  
   ![Join the org](/images/manual/tutorials/join-org.png)
 
- After successful authorization, an Olares ID with the custom domain, `justtest1953@xxxx.cloud`, is successfully created for the member. 
+ After successful authorization, an Olares ID with the custom domain, `justtest1953@xxxx.cloud`, is successfully created.
 
 ## Step 6: Install and activate Olares
-Almost there! Now you are all set to install and activate Olares using the customized Olares ID.
+Almost there! When using a custom domain, you'll need to configure specific environment variables as part of your installation command. The following example shows installation on Linux. For other platforms, please refer to our [platform-specific installation guides](../get-started/install-olares.md).
 
-1. Use the installation script with specified environment variables to start the installation:
+1. In the terminal, run the installation script with specified environment variables to start the installation:
     
     ```bash
     export TERMINUS_OS_DOMAINNAME=xxxx.cloud \
       && export TERMINUS_OS_USERNAME=justtest1953 \ 
       && curl -sSfL https://olares.sh | bash -
     ```
-  - `export TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain.
-  - `export TERMINUS_OS_USERNAME=justtest1953`: Specify your username (local name).
+  - `export TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain. Replace `xxxx.cloud` with the actual one.
+  - `export TERMINUS_OS_USERNAME=justtest1953`: Specify your username (local name). Replace `justtest1953` with the prefix of your Olares ID.
+
 2. Wait for the installation to finish. Depending on your network, the process can take 20–30 minutes. When the installation completes, you will see the wizard URL and login credentials:
 
     ```bash
@@ -138,9 +185,9 @@ Almost there! Now you are all set to install and activate Olares using the custo
     2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
     ```
 
-3. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to finalize Olares activation. Learn more in [Activate Olares](../get-started/install-olares-general-linux.md#activate-olares). 
+3. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to complete the activation. Learn more in [Activate Olares](../get-started/install-olares-general-linux.md#activate-olares). 
 
-Congratulations! Your custom domain is now ready to be used with Olares. Now you can access Olares with a custom domain like `desktop.justtest1953.xxxx.cloud`.
+After completing these steps, your Olares installation will be accessible via your custom domain.
 
 ## Learn more
 
