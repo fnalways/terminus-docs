@@ -22,9 +22,9 @@ Windows 设备需满足以下条件：
 
 ## 配置系统环境
 
-1. 启用 Hyper-V 以支持虚拟化功能。具体步骤参见 [Install Hyper-V on Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)。
+1. 启用 Hyper-V 以支持虚拟化功能。具体步骤参见[在 Windows 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)。
 
-2. 暂时关闭 Windows Defender 防火墙。安装完成后可重新启用。具体步骤参见 [Turn Microsoft Defender Firewall on or off](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f)。
+2. 暂时关闭 Windows Defender 防火墙。安装完成后可重新启用。具体步骤参见[打开或关闭 Microsoft Defender 防火墙](https://support.microsoft.com/zh-cn/windows/%E6%89%93%E5%BC%80%E6%88%96%E5%85%B3%E9%97%AD-microsoft-defender-%E9%98%B2%E7%81%AB%E5%A2%99-ec0844f7-aebd-0583-67fe-601ecf5d774f)。
 
 3. 设置当前用户的执行策略。
 
@@ -55,11 +55,14 @@ Windows 设备需满足以下条件：
    :::
    
 3. 在弹出的提示框中，点击**打开**继续。
-4. 输入 `R` 并按下 **Enter** 以运行脚本。
+4. 输入 `R` 并按下 **Enter** 以运行脚本，开始安装 Olares。
 
    ![运行安装脚本](/images/manual/get-started/run-installation-script.png)
 
-随后脚本将开始安装 Olares。
+5. 配置防火墙规则。输入 `yes` 自动设置防火墙规则，或者输入 `no` 跳过自动设置。<br>
+   如果你选择跳过，按照屏幕上的指示手动添加 TCP 入站规则（端口 **80**、**443** 和 **30180**）。
+
+   ![配置防火墙规则](/images/manual/get-started/set-up-firewall-rules.png)
 
 :::tip root 用户密码
 安装过程中，可能需要输入 root 用户密码。

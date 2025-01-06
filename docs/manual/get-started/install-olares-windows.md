@@ -52,11 +52,14 @@ Make sure your Windows meets the following requirements.
    :::
 
 3. When prompted, click **Open** to proceed.
-4. Type `R` and press **Enter** to run the script.
+4. Type `R` and press **Enter** to run the script.  The installation process for Olares will start.
 
    ![Run installation script](/images/manual/get-started/run-installation-script.png)
 
-The script will then start installing Olares.
+5. Set up the firewall rules. Type `yes` to automatically configure them, or type `no` to skip this step. <br>
+   If you choose to skip, follow the on-screen instructions to manually add TCP inbound rules for ports `80`, `443`, and `30180`.
+
+   ![配置防火墙规则](/images/manual/get-started/set-up-firewall-rules.png)
 
 :::tip Root user password
 During the installation, you may be prompted to enter your root password.
