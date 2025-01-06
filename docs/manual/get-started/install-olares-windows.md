@@ -18,11 +18,16 @@ Make sure your Windows meets the following requirements.
     - Windows 10 or 11
     - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
-1. Enable Hyper-V, which is required for virtualization. See [Install Hyper-V on Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+1. Enable the required Windows features for virtualization.
 
-2. Temporarily disable Windows Defender Firewall. You can re-enable it after installation is complete. See [Turn Microsoft Defender Firewall on or off](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f).
+   a. Open **Control Panel**, then go to **Programs** > **Programs and Features** > **Turn Windows features on or off**.
 
-3. Set the execution policy for the current user.
+   b. In the **Windows Features** window, check:
+   - **Hyper-V**
+   - **Windows Subsystem for Linux**
+   - **Virtual Machine Platform**
+
+2. Set the execution policy for the current user.
 
    a. Open PowerShell as administrator, then run the following command:
     ```powershell
@@ -52,14 +57,14 @@ Make sure your Windows meets the following requirements.
    :::
 
 3. When prompted, click **Open** to proceed.
-4. Type `R` and press **Enter** to run the script.  The installation process for Olares will start.
+4. Type `R` and press **Enter** to run the script. The installation process for Olares will start.
 
    ![Run installation script](/images/manual/get-started/run-installation-script.png)
 
 5. Set up the firewall rules. Type `yes` to automatically configure them, or type `no` to skip this step. <br>
    If you choose to skip, follow the on-screen instructions to manually add TCP inbound rules for ports `80`, `443`, and `30180`.
 
-   ![配置防火墙规则](/images/manual/get-started/set-up-firewall-rules.png)
+   ![Set up firewall rules](/images/manual/get-started/set-up-firewall-rules.png)
 
 :::tip Root user password
 During the installation, you may be prompted to enter your root password.
@@ -68,7 +73,7 @@ During the installation, you may be prompted to enter your root password.
 :::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```bash
-bash olares-uninstall.sh
+olares-cli.exe olares uninstall
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
