@@ -23,9 +23,12 @@ Make sure your Windows meets the following requirements.
    a. Open **Control Panel**, then go to **Programs** > **Programs and Features** > **Turn Windows features on or off**.
 
    b. In the **Windows Features** window, check:
-   - **Hyper-V**
-   - **Windows Subsystem for Linux**
-   - **Virtual Machine Platform**
+
+    - **Hyper-V**
+    - **Windows Subsystem for Linux**
+    - **Virtual Machine Platform**
+
+   c. Click **OK** and restart your computer when prompted.
 
 2. Set the execution policy for the current user.
 

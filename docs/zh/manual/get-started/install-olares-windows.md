@@ -22,11 +22,17 @@ Windows 设备需满足以下条件：
 
 ## 配置系统环境
 
-1. 启用 Hyper-V 以支持虚拟化功能。具体步骤参见[在 Windows 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)。
+1. 启用虚拟化所需的 Windows 功能。
 
-2. 暂时关闭 Windows Defender 防火墙。安装完成后可重新启用。具体步骤参见[打开或关闭 Microsoft Defender 防火墙](https://support.microsoft.com/zh-cn/windows/%E6%89%93%E5%BC%80%E6%88%96%E5%85%B3%E9%97%AD-microsoft-defender-%E9%98%B2%E7%81%AB%E5%A2%99-ec0844f7-aebd-0583-67fe-601ecf5d774f)。
+   a. 打开**控制面板**，依次进入**程序** > **程序和功能** > **启用或关闭 Windows 功能**。
 
-3. 设置当前用户的执行策略。
+   b. 在弹出的 **Windows 功能** 窗口中，勾选以下选项：
+     - **Hyper-V**
+     - **适用于 Linux 的 Windows 子系统**
+     - **虚拟机平台**
+
+   c. 点击**确定**，然后根据提示重启电脑。
+2. 设置当前用户的执行策略。
 
    a. 以管理员身份打开 PowerShell，运行以下命令：
     ```powershell
@@ -72,7 +78,7 @@ Windows 设备需满足以下条件：
 如果安装过程中出现错误，请先执行以下命令卸载：
 
 ```bash
-bash olares-uninstall.sh
+olares-cli.exe olares uninstall
 ```
 卸载完成后，重新运行安装命令进行安装。
 :::
