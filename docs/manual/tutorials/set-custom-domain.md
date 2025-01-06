@@ -13,11 +13,11 @@ This tutorial walks you through setting up your own domain for your Olares.
 
 ## Objectives
 In this tutorial, you will learn how to:
-- Set up your custom domain in Olares Space and verify your domain ownership
+- Add and verify your custom domain in Olares Space
 - Create an organization to manage your custom domain
-- Configure Gmail-based member access for your organization
+- Configure member access for your organization
 - Create an Olares ID under your custom domain
-- Install and activate Olares with your new domain settings
+- Install and activate Olares with your Olares ID
 
 ## How custom domains work in Olares
 Custom domains in Olares are managed through organizations. This means whether you're an individual user or representing a company, you'll need to set up an organization first. The organization serves as the container for your custom domain configuration.
@@ -37,12 +37,7 @@ The table below outlines the steps involved in setting up a custom domain and wh
 
 Ensure you have:
 - A registered domain name from a domain registrar.
-  :::tip Supported domain types
-   Your domain must be either:
-    - A top-level domain with one extension (e.g., `example.com`)
-    - A top-level domain with two extensions (e.g., `example.xyz.com`)
-  :::
-- A Gmail account. Currently, only Gmail addresses are supported for domain verification and organization membership.
+- A Gmail or G-Suit account. Currently, only these two formats are supported for organization domain membership.
 - LarePass app installed on your phone.<br>
   LarePass will be used later to sign in to Olares Space, and to bind your custom domain to Olares ID.
 
@@ -94,6 +89,7 @@ TXT verification typically completes within 30 minutes. NS record verification m
 :::
 
 Once TXT and NS records are verified, your domain is successfully added to Olares Space.
+
 ## Step 3: Create an org for the domain
 
 This step creates an organization for the domain. Specifically, it binds your domain to an organization in Olares and requests the Verifiable Credential (VC) for the domain.
@@ -128,9 +124,8 @@ The domain rules specify how you add the members for the organization. Only memb
 2. Under **Domain Invitation Rule**, select **Specified email address**, and click **Save**.
    :::tip Invitation rules
    - Two types of rules are available:
-       - **Fixed email suffix**: Only supports single-extension domains (e.g., `@company.com`). Domains with multiple extensions (like `@dept.company.com`) are not supported. Must follow G Suite format.
-       - **Specified email address**: Allows you to add specific email addresses one by one. Recommended for more precise member management.
-   - Currently, only Gmail addresses are supported for both rule types.
+       - **Fixed email suffix**: Suitable for members who share the same corporation email domain (e.g., `@company.com`). Currently, only single suffix is supported. Must follow G-Suite format.
+       - **Specified email address**: Allows you to add specific email addresses. Both Gmail and G-suit account are supported.
    :::
 
 3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
@@ -160,7 +155,10 @@ To use the domain, apply for an Olares ID under the organization.
  After successful authorization, an Olares ID with the custom domain, `justtest1953@xxxx.cloud`, is successfully created.
 
 ## Step 6: Install and activate Olares
-Almost there! When using a custom domain, you'll need to configure specific environment variables as part of your installation command. The following example shows installation on Linux. For other platforms, please refer to our [platform-specific installation guides](../get-started/install-olares.md).
+Almost there! Now you are all set to install and activate Olares with your Olares ID. 
+
+::: tip Note
+In the following example, we preset the domain name and username using environment variables with the installation script. You can also install with the one-line script without these variables, in which case you’ll need to enter the domain and username manually. For detailed instructions on all supported platforms, please refer to our [platform-specific installation guides](../get-started/install-olares.md).
 
 1. In the terminal, run the installation script with specified environment variables to start the installation:
     
