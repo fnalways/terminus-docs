@@ -50,20 +50,22 @@ A DID (Decentralized Identifier) is a temporary account state before you get you
 2. Tap **Create an account** to trigger a DID creation.
    
    ![create DID](/images/manual/tutorials/create-a-did.png)
-This gets you an Olares account in the DID stage. 
 
-![DID stage](/images/manual/tutorials/did-stage.png)
+   This gets you an Olares account in the DID stage. 
+
+   ![DID stage](/images/manual/tutorials/did-stage.png)
+
 ## Step 2: Add your domain to Olares Space
 Add and verify your own domain in Olares Space before binding it.
 
 1. In your browser, access Olares Space at https://space.olares.xyz/.
 2. In LarePass app, tap the scan button in the top-right corner, and scan the QR code on the login page to log in to Olares Space.
 
-  ![scan QR](/images/manual/tutorials/scan-qr-code.png)
+   ![scan QR](/images/manual/tutorials/scan-qr-code.png)
 
 3. In Olares Space, go to **Domain Management** > **Domain Name Setup**, enter your domain and click **Confirm**.
 
-  ![add domain](/images/manual/tutorials/add-domain.png)
+   ![add domain](/images/manual/tutorials/add-domain.png)
 
 4. Verify your TXT record for your domain. This verifies your ownership of the domain.
 
@@ -71,7 +73,7 @@ Add and verify your own domain in Olares Space before binding it.
 
    b. Follow the on-screen instructions to add a TXT record to your DNS provider configuration.
 
-    ![verify TXT](/images/manual/tutorials/verify-txt.png)
+   ![verify TXT](/images/manual/tutorials/verify-txt.png)
 
    Once verified, the domain setup status will update automatically to **Await NS Record for Your Domain**.
 5. Verify the Name Server (NS) Record for your domain. This delegates the DNS resolution for your domain to Olares's Cloudflare. 
@@ -133,9 +135,9 @@ The domain rules specify how you add the members for the organization. Only memb
    ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
 4. Click **Submit** to finalize the member addition. Repeat step 3 and step 4 if you want to add multiple users
 
-:::tip Maintain member list
-For organization admin, you can manage your organization's member list anytime through the **Domain management** page.
-:::
+   :::tip Maintain member list
+   For organization admin, you can manage your organization's member list anytime through the **Domain management** page.
+   :::
 
 ## Step 5: Create an Olares ID with the custom domain
 

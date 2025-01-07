@@ -49,11 +49,11 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 
 2. 轻触**创建账户**以触发 DID 创建。
    
-   ![create DID](/images/manual/tutorials/create-a-did.png)
+  ![create DID](/images/manual/tutorials/create-a-did.png)
 
    此操作将为你创建一个 DID 阶段的 Olares 账户。
 
-![DID stage](/images/manual/tutorials/did-stage.png)
+  ![DID stage](/images/manual/tutorials/did-stage.png)
 
 ## 第 2 步：将域名添加到 Olares Space
 
@@ -62,18 +62,18 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 1. 在浏览器中访问 [Olares Space](https://space.olares.xyz/)。
 2. 在手机端的 LarePass 应用中，轻触右上角的扫码按钮，并扫描登录页面的二维码以登录 Olares Space。
 
-  ![scan QR](/images/manual/tutorials/scan-qr-code.png)
+    ![scan QR](/images/manual/tutorials/scan-qr-code.png)
 
 3. 在 Olares Space 中，进入**域名管理**>**域名设置**，输入你的域名并点击**确认**。
 
-  ![add domain](/images/manual/tutorials/add-domain.png)
+    ![add domain](/images/manual/tutorials/add-domain.png)
 
 4. 验证你域名的 TXT 记录。此步骤会验证你对该域名的所有权。
 
    a. 在操作列中，点击**引导**。  
    b. 按照屏幕提示，将 TXT 记录添加到你的 DNS 服务商配置中。
 
-   ![verify TXT](/images/manual/tutorials/verify-txt.png)
+    ![verify TXT](/images/manual/tutorials/verify-txt.png)
 
    完成验证后，域名状态会自动更新为**等待添加域名 NS 记录**。
 
