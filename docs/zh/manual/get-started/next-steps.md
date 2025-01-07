@@ -11,8 +11,6 @@
     :links="[
     { text: 'Stable Diffusion', 
     href: '../use-cases/stable-diffusion' }, 
-    { text: 'Krita + ComfyUI 实时绘画', 
-    href: '../use-cases/comfyui-for-krita' }, 
     { text: '使用 Open WebUI', 
     href: '../use-cases/openwebui' }, 
     { text: 'Perplexica', 

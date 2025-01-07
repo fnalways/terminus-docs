@@ -11,8 +11,6 @@ Here are some suggested next steps:
     :links="[
     { text: 'Stable Diffusion', 
     href: '../use-cases/stable-diffusion' }, 
-    { text: 'Use ComfyUI in Krita', 
-    href: '../use-cases/comfyui-for-krita' }, 
     { text: 'Open WebUI', 
     href: '../use-cases/openwebui' }, 
     { text: 'Perplexica', 
