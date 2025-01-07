@@ -6,8 +6,8 @@ outline: [2, 3]
 
 By default, when you create an account in LarePass, you get an Olares ID with the `olares.com` domain. This means you access your Olares services through URLs like `desktop.{your-username}.olares.com`. While this default setup saves you from common network and domain configuration hassles, you might want use your own domain instead, especially in these common scenarios:
 
-- As an organization: Use a company domain similar to your organizational email address for all team members, for example, `employee@company.com`.
-- As an individual: Use your personal domain for a more personalized experience.
+- **As an organization**: Use a company domain similar to your organizational email address for all team members, for example, `employee@company.com`.
+- **As an individual**: Use your personal domain for a more personalized experience.
 
 This tutorial walks you through setting up your own domain for your Olares.
 
