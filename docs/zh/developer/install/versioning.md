@@ -4,7 +4,7 @@ Olares 的版本管理和发布流程旨在提供清晰的版本号定义和稳�
 
 ## 版本号规则
 
-Olares 版本号基本遵循了 [语义版本号规范](https://semver.org/lang/zh-CN/)：
+Olares 版本号基本遵循了 [语义化版本规范](https://semver.org/lang/zh-CN/)：
 - 格式为 `主版本号.次版本号.修订号[-预发布版本号]`，例如：`1.11.0-rc.0`。
 - 版本顺序如下：
   `1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0`。

@@ -4,7 +4,7 @@ The Olares versioning and release process is designed to provide clear version d
 
 ## Versioning rules
 
-Olares primarily follows the [Semantic Versioning Specification](https://semver.org/):
+Olares primarily follows the [Semantic versioning specification](https://semver.org/):
 - The format is `Major.Minor.Patch[-PreReleaseVersion]`, for example, `1.11.0-rc.0`.
 - Versions are ordered as follows:  
   `1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0`.
