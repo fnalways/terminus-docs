@@ -186,7 +186,7 @@ In the following example, we preset the domain name and username using environme
     2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
     ```
 
-3. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to complete the activation. Learn more in [Activate Olares](../get-started/install-olares-general-linux.md#activate-olares). 
+3. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to complete the activation.
 
 After completing these steps, your Olares installation will be accessible via your custom domain.
 

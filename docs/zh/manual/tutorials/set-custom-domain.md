@@ -186,7 +186,7 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
     2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
     ```
 
-3. 在浏览器中打开上述向导地址，并按照屏幕提示完成激活。详情请参阅[激活 Olares](../get-started/install-olares-general-linux.md#activate-olares)。
+3. 在浏览器中打开上述向导地址，并按照屏幕提示完成激活。
 
 完成上述步骤后，你即可通过自定义域名访问安装好的 Olares。
 
