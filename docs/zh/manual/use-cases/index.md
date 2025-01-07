@@ -7,7 +7,5 @@
   { title: 'Open WebUI', link: './openwebui.html', tags: ['AI'] },
   { title: 'Perplexica', link: './perplexica.html', tags: ['AI']},
   { title: 'Dify', link: './dify.html', tags: ['AI']},
-  { title: '在 Krita 中使用 ComfyUI', link: './comfyui-for-krita.html', tags: ['AI']},
-  { title: '远程看视频', link: './stream-media.html', tags: ['娱乐']},
 ]" 
 />

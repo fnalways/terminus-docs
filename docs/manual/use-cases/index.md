@@ -8,7 +8,5 @@ While other guides tell you "what" and "how," these use cases reveal the full po
   { title: 'Perplexica', link: './perplexica.html', tags: ['ai']},
   { title: 'Dify', link: './dify.html', tags: ['ai']},
   { title: 'Hubble', link: 'https://blog.olares.xyz/running-farcaster-hubble-on-your-home-cloud/', tags: ['social network']},
-  { title: 'Use ComfyUI in Krita', link: './comfyui-for-krita.html', tags: ['ai']},
-  { title: 'Stream media library', link: './stream-media.html', tags: ['entertainment']},
 ]" 
 />
