@@ -54,19 +54,19 @@ const side = {
     {
       text: "教程",
       collapsed: true,
-      link: "/manual/tutorials/",
+      link: "/zh/manual/tutorials/",
       items: [
         {
           text: "设置自定义域名",
-          link: "/manual/tutorials/set-custom-domain",
+          link: "/zh/manual/tutorials/set-custom-domain",
         },
         {
           text: "远程观看视频",
-          link: "/manual/tutorials/stream-media",
+          link: "/zh/manual/tutorials/stream-media",
         },
         {
           text: "Krita + ComfyUI 实时绘画",
-          link: "/manual/tutorials/comfyui-for-krita",
+          link: "/zh/manual/tutorials/comfyui-for-krita",
         },
       ],
     },
@@ -333,7 +333,7 @@ const side = {
     items: [
       {
         text: "安装概述",
-        link: "/zh//developer/install/installation-overview",
+        link: "/zh/developer/install/installation-overview",
       },
       {
         text: "安装过程",
