@@ -1,13 +1,12 @@
-# Olares 教程
+# 教程
 
-Olares 教程提供循序渐进的动手指南，帮助你从头到尾完成特定任务或工作流程，让你在实际操作中学习及增强使用 Olares 的经验和信心。
+本章节包含详细的操作指南，将帮助你从头到尾完成特定任务和工作流程。建议你按照这些教程操作，以实践 Olares 的关键功能，并了解 Olares 如何在你的环境中充分发挥其潜力。
 
-> 想要查看具体功能的说明、最佳实践或深入解释？
-> 请查看我们的[使用指南](../tasks/index.md)。
+## 定制你的 Olares
 
-## 教程目录
-- [配置自定义域名](set-custom-domain.md)
-- [远程观看视频](stream-media.md)
-- [Krita + ComfyUI 实时绘画](comfyui-for-krita.md)
+- [为 Olares 配置自定义域名](set-custom-domain.md)
 
-更多教程持续更新中。
+## 应用
+
+- [远程串流你的媒体库](stream-media.md)
+- [使用 ComfyUI 和 Krita 创建 AI 图像](comfyui-for-krita.md)
