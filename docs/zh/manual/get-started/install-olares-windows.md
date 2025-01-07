@@ -39,7 +39,12 @@ Windows 设备需满足以下条件：
 ## 安装 Olares
 
 1. 点击 https://cn.windows.olares.sh 下载安装脚本 `publicInstall.latest.ps1`。
-2. 下载完成后，双击 `publicInstall.latest.ps1` 文件，或右键选择**使用 PowerShell 运行**。
+2. 以管理员身份打开 PowerShell，导航到安装脚本所在目录（例如 `C:\Users\<YourUsername>\Downloads`），并执行脚本：
+    
+   ```powershell
+   cd C:\Users\<YourUsername>\Downloads
+   .\publicInstall.latest.ps1
+   ```
 3. 在弹出的提示框中，点击**打开**继续。
 4. 输入 `R` 并按下 **Enter** 以运行脚本。
 
