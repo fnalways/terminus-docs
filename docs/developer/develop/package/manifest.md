@@ -490,7 +490,7 @@ spec:
 - Type: `list<string>`
 - Accepted Value: `amd64`, `arm64`
 
-This field is used to specify the CPU architecture supported by the application. Only `amd64` and `arm64` architectures are supported for now.
+This field specifies the CPU architecture supported by the application. Currently only `amd64` and `arm64` are supported.
 
 :::info Example
 ```yaml
