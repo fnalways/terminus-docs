@@ -124,8 +124,8 @@ The domain rules specify how you add the members for the organization. Only memb
 2. Under **Domain Invitation Rule**, select **Specified email address**, and click **Save**.
    :::tip Invitation rules
    - Two types of rules are available:
-       - **Fixed email suffix**: Suitable for members who share the same corporation email domain (e.g., `@company.com`). Currently, only single suffix is supported. Must follow G-Suite format.
-       - **Specified email address**: Allows you to add specific email addresses. Both Gmail and G-suit account are supported.
+       - **Fixed email suffix**: Suitable for large teams who share the same corporation email domain (e.g., `@company.com`). Any email matching the specified suffix is valid to apply for Olares ID under the organization. Currently, only single suffix is supported. Must follow G-Suite format.
+       - **Specified email address**: Allows you to add members by specifying their email addresses. This option is recommended if you do not have a corporate email domain and only need to invite a small number of members to your organization. Both Gmail and G-Suite accounts are supported.
    :::
 
 3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
