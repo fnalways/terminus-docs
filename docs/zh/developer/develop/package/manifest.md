@@ -4,14 +4,31 @@ outline: [2, 3]
 
 # OlaresManifest 规范
 
-每一个 Olares 应用的 Chart 根目录下都必须有一个 `OlaresManifest.yaml` 文件，且该文件名必须是 `OlaresManifest.yaml`。`OlaresManifest.yaml` 描述了一个 Olares 应用的所有基本信息。Olares 应用市场协议和 Olares 系统依赖这些关键信息来正确的分发和安装应用。
+每一个 Olares 应用的 Chart 根目录下都必须有一个名为 `OlaresManifest.yaml` 的文件。`OlaresManifest.yaml` 描述了一个 Olares 应用的所有基本信息。Olares 应用市场协议和 Olares 系统依赖这些关键信息来正确的分发和安装应用。
+
+:::info 提示
+最新的 Olares 系统使用的 Manifest 版本为: `0.8.3`
+  - 在 `dependencies` 部分增加 `mandatory` 字段以表示该依赖的应用是安装必须的
+  - 增加 `tailscaleAcls` 部分，允许应用让 Tailscale 开放指定端口
+:::
+:::details Changelog
+  `0.8.2`
+  - 添加 `runAsUser` 选项，用于限制应用程序在非root权限的用户下运行
+
+  `0.8.1`
+  - 添加 `ports` 部分以指定 UDP 或 TCP 的暴露端口
+  
+  `0.7.1`
+  - 添加新的 `authLevel` 值 `internal`
+  - 将 `spec`>`language` 改为 `spec`>`locale` 并支持 i18n
+:::
 
 一个 `OlaresManifest.yaml` 文件的示例如下：
 
 ::: details `OlaresManifest.yaml` 示例
 
 ```Yaml
-olaresManifest.version: '0.7.0'
+olaresManifest.version: '0.8.0'
 olaresManifest.type: app
 metadata:
   name: helloworld
@@ -66,28 +83,18 @@ options:
     type: system
     version: '>=0.1.0'
 ```
-
 :::
-
-:::info 注意
-Olares Manifest 版本: `0.7.1`
-
-变更日志：
-- `authLevel` 添加新的值 `internal`
-- 将 `spec`>`language` 改为 `spec`>`locale` 并支持 i18n
-:::
-
 
 ## olaresManifest.type
 
 - 类型：`string`
-- 可选值： `app`、`recommend`、`model`、`middleware`
+- 有效值： `app`、`recommend`、`model`、`middleware`
 
 Olares 目前支持四种类型的应用程序，每种类型需要不同的领域。本文档以 “app” 为例来解释各个字段。其他类型请参考相应的配置指南。
 - [推荐算法配置指南](recommend.md)
 - [模型配置指南](model.md)
 
-:::info 配置示例
+:::info 示例
 ```Yaml
 olaresManifest.type: app
 ```
@@ -111,9 +118,11 @@ OlaresManifest.yaml.version: '2.2'
 OlaresManifest.yaml.version: "3.0.122"
 ```
 
-## 元数据
+## Metadata
 
-:::info 配置示例
+应用的基本信息，用于在Olares系统和应用市场中展示应用。
+
+:::info 示例
 ```Yaml
 metadata:
   name: nextcloud
@@ -125,6 +134,7 @@ metadata:
   - Utilities
   - Productivity
 ```
+:::
 
 ### name
 
@@ -137,7 +147,7 @@ Olares 中的应用的命名空间，仅限小写字母数字字符。最多 30 
 
 - 类型：`string`
 
-在应用市场中显示的应用标题。长度不超过 30 个字符。
+在应用市场中显示的应用标题。长度不超过 `30` 个字符。
 
 ### description
 
@@ -151,7 +161,7 @@ Olares 应用市场中的应用名称下方显示的简短说明。
 
 应用图标。
 
-图标必须是 PNG 或 WEBP 格式文件，最大为 512 KB，大小为 256x256 px。
+图标必须是 `PNG` 或 `WEBP` 格式文件，最大为 `512 KB`，尺寸为 `256x256 px`。
 
 ### version
 
@@ -162,13 +172,13 @@ Olares 应用市场中的应用名称下方显示的简短说明。
 ### categories
 
 - 类型： `list<string>`
-- 可选值： `Blockchain`、`Utilities`、`Social Network`、`Entertainment`、`Productivity`
+- 有效值： `Blockchain`、`Utilities`、`Social Network`、`Entertainment`、`Productivity`
 
 在应用市场的哪个类别下展示应用。
 
 ## Entrances
 
-指定如何访问此应用，每个应用至少需要 1 个入口，至多 10 个。
+指定如何访问此应用，每个应用至少需要 `1` 个入口，至多 `10` 个。
 
 :::info 示例
 ```Yaml
@@ -191,17 +201,17 @@ entrances:
 - 类型：`string`
 - Accepted Value: `[a-z]([-a-z0-9]*[a-z0-9])?`
 
-  入口的名称，长度不超过 63 个字符。一个应用内不能重复。
+  入口的名称，长度不超过 `63` 个字符。一个应用内不能重复。
 
 ### port
 
 - 类型： `int`
-- 可选值： `0-65535`
+- 有效值： `0-65535`
 
 ### host
 
 - 类型：`string`
-- 可选值： `[a-z]([-a-z0-9]*[a-z0-9])?`
+- 有效值： `[a-z]([-a-z0-9]*[a-z0-9])?`
 
   当前入口的 Ingress 名称，只包含小写字母和数字和中划线`-`，长度不超过 63 个字符。
 
@@ -209,20 +219,20 @@ entrances:
 
 - 类型：`string`
 
-安装后出现在 Olares 桌面上的名称。长度不超过 30 个字符。
+安装后出现在 Olares 桌面上的名称。长度不超过 `30` 个字符。
 
 ### icon
 
 - 类型： `url`
 - 可选
 
-安装后出现在 Olares 桌面上的图标。应用的图标必须是 PNG 或 WEBP 格式文件，最大 512 KB，大小为 256x256 像素。
+安装后出现在 Olares 桌面上的图标。应用的图标必须是 `PNG` 或 `WEBP` 格式文件，最大为 `512 KB`，尺寸为 `256x256 px`。
 
 ### authLevel
 
 - 类型：`string`
-- 可选值： `public`、`private`
-- 默认： `private`
+- 有效值： `public`, `private`, `internal`
+- 默认值： `private`
 - 可选
 
 指定入口的认证级别。
@@ -233,25 +243,25 @@ entrances:
 ### invisible
 
 - 类型： `boolean`
-- 默认：`false`
+- 默认值：`false`
 - 可选
 
-当 invisible 为` true` 时，该入口不会显示在 Olares 桌面上。
+当 `invisible` 为` true` 时，该入口不会显示在 Olares 桌面上。
 
 ### openMethod
 
 - 类型：`string`
-- 类型： `default | iframe | window`
-- 默认： `default`
+- 有效值： `default`, `iframe`, `window`
+- 默认值： `default`
 - 可选
 
-显式定义了如何在桌面中打开该入口。
+显式定义如何在桌面中打开该入口。
 
 `iframe` 代表在桌面的窗口内通过 iframe 新建一个窗口，`window` 代表在浏览器新的 Tab 页打开。`default` 代表跟随系统的默认选择，系统默认的选择是`iframe`。
 
 ### windowPushState
 - 类型： `boolean`
-- 默认：`false`
+- 默认值：`false`
 - 可选
 
 将应用嵌入到桌面上的 iframe 中时，应用的 URL 可能会动态更改。由于浏览器的同源策略，桌面（父窗口）无法直接检测到 iframe URL 中的这些变化。因此，如果你重新打开应用程序选项卡，它将显示初始 URL，而不是更新后的 URL。
@@ -282,7 +292,32 @@ entrances:
 ```
 :::
 
-## permission
+## Ports
+
+定义暴露的端口
+
+:::info 示例
+```Yaml
+ports:
+- name: aaa          # 提供服务的 entrance 名称
+  host: udp          # 提供服务的 Ingress 名称
+  port: 8899         # 提供服务的端口号
+  protocol: udp      # 协议类型，目前支持udp和tcp
+  exposePort: 30140  # 暴露的端口号，如果未指定，系统将随机分配一个端口 
+- name: bbb
+  host: udp
+  port: 8090
+  protocol: tcp
+```
+:::
+
+Olares 会自动为您的应用程序分配一个（33333-36789）之间的随机端口。这些端口可通过应用程序域名在本地网络下访问。例如：`84864c1f.local.your_olares_id.olares.com:33805`。
+
+:::info 提示
+暴露的端口只能在本地网络或通过 VPN 访问。
+:::
+
+## Permission
 
 :::info 示例
 ```Yaml
@@ -307,14 +342,14 @@ permission:
 - 类型： `boolean`
 - 可选
 
-是否需要在 Cache 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appCache`, 则 appCache 必须为 `true`。
+是否需要在 `Cache` 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appCache`, 则 `appCache` 必须为 `true`。
 
 ### appData
 
 - 类型： `boolean`
 - 可选
 
-是否需要在 Data 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appData`, 则 appData 必须为 `true`。
+是否需要在 `Data` 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appData`, 则 `appData` 必须为 `true`。
 
 ### userData
 
@@ -364,7 +399,25 @@ permission:
 | secret.infisical | v1 | secret | CreateSecret, RetrieveSecret
 | secret.vault | v1 | key | List, Info, Sign
 
-## spec
+## TailscaleAcls
+- 类型：`map`
+- 可选
+
+允许应用在 Tailscale 的ACL(Access Control Lists)中开放指定端口。
+
+:::info 示例
+```Yaml
+tailscaleAcls:
+- proto: tcp
+  dst:
+  - "*:4557"
+- proto: "" # 可选, 如果未指定，则允许使用所有支持的协议
+  dst:
+  -  "*:4557"
+```
+:::
+
+## Spec
 记录额外的应用信息，主要用于应用商店的展示。
 
 :::info 示例
@@ -372,10 +425,7 @@ permission:
 spec:
   namespace: os-system 
   # 可选。将应用安装到指定的命名空间，如 os-system、user-space 和 user-system
-  
-  onlyAdmin:  true 
-  # 可选。 设置为 true 时，只有管理员可以安装此应用程序。
-  
+
   versionName: '10.8.11' 
   ## 此 Chart 包含的应用程序的版本。建议将版本号括在引号中。该值对应于 Chart.yaml 文件中的 appVersion 字段。请注意，它与 version 字段无关。
 
@@ -460,12 +510,42 @@ spec:
   upgradeDescription:
 ```
 
-
-
-## middleware
-
+### supportArch
+- 类型: `list<string>`
+- 有效值: `amd64`, `arm64`
 - 可选
+
+该字段用于声明应用程序支持的 CPU 架构。目前仅支持 `amd64` 和 `arm64` 两种类型。
+
+:::info 示例
+```yaml
+spec:
+  supportArch:
+  - amd64
+  - arm64
+```
+:::
+
+:::info 提示
+Olares 目前不支持混合架构的集群。
+:::
+
+### onlyAdmin
+- 类型: `boolean`
+- 默认值: `false`
+- 可选
+
+设置为 `true` 时，只有管理员可以安装此应用程序。
+
+### runAsUser
+- 类型: `boolean`
+- 可选
+
+当设置为 `true` 时，Olares 会强制以用户 ID “1000”（非root用户）运行应用程序。
+
+## Middleware
 - 类型：`map`
+- 可选
 
 系统提供了高可用的中间件服务，开发者无需重复安装中间件，只需在此填写对应的中间件信息即可，然后可以直接使用应用程序的 deployment YAML 文件中相应的中间件信息。
 
@@ -523,21 +603,20 @@ password --> "{{ .Values.mongodb.password }}" # yaml 文件中的端口和密码
 databases --> "{{ .Values.mongodb.databases }}" # 数据库的值类型是 map。你可以使用 {{ .Values.mongodb.databases.<dbname> }} 获取数据库。 <dbname> 是你在 OlaresManifest 中配置的名称，在 middleware.mongodb.databases[i].name 中指定
 
 
-      # 对于Redis来说，对应的值如下
+# 对于Redis来说，对应的值如下
 host --> {{ .Values.redis.host }}For Redis, the corresponding value is as follow
 port --> "{{ .Values.redis.port }}"
 password --> "{{ .Values.redis.password }}"
 
 ```
 
-## options
+## Options
 
 在此部分配置系统相关的选项。
 
 ### policies
-
-- 可选
 - 类型：`map`
+- 可选
 
 定义应用子域的详细访问控制。
 
@@ -554,13 +633,12 @@ options:
 :::
 
 ### clusterScoped
-
-- 可选
 - 类型：`map`
+- 可选
 
 是否为 Olares 集群中的所有用户安装此应用程序。
 
-:::info 服务器端示例
+:::info 服务端示例
 ```yaml
 metadata:
   name: gitlab
@@ -585,17 +663,17 @@ options:
     - name: gitlab # 服务器端的应用名称
       version: ">=0.0.1"
       type: application
+      mandatory: true
 ```
 :::
 
 ### analytics
-
-- 可选
 - 类型：`map`
+- 可选
 
 为应用启用网站分析功能。
 
-:::info Example
+:::info 示例
 ```yaml
 options:
   analytics:
@@ -604,10 +682,11 @@ options:
 :::
 
 ### dependencies
-
 - 类型：`list<map>`
 
-如果你的应用依赖于其他应用或需要特定操作系统版本，请在此处指定。
+如果此应用依赖于其他应用或需要特定操作系统版本，请在此处声明。
+
+如果此应用程序需要其他依赖的应用程序才能正确安装，则应将 `mandatory` 字段设置为 `true`。
 
 :::info 示例
 ```yaml
@@ -619,13 +698,13 @@ options:
     - name: mongodb
       version: ">=6.0.0-0"
       type: middleware
+      mandatory: true # 如果必须先安装此依赖，请将此字段设为 true。
 ```
 :::
 
 ### websocket
-
-- 可选
 - 类型：`map`
+- 可选
 
 为应用启用 websocket。请参阅 [websocket](../advanced/websocket.md) 了解更多信息。
 
@@ -639,9 +718,8 @@ options:
 :::
 
 ### resetCookie
-
-- 可选
 - 类型：`map`
+- 可选
 
 如果应用需要 cookie，请启用此功能。更多信息请参考 [cookie](../advanced/cookie.md)。
 
@@ -654,9 +732,8 @@ options:
 :::
 
 ### upload
-
-- 可选
 - 类型： `map`
+- 可选
 
 Olares 应用运行时包含一个内置文件上传组件，旨在简化应用程序中的文件上传过程。请参阅 [上传](../advanced/file-upload.md) 了解更多信息。
 
@@ -674,10 +751,9 @@ upload:
 :::
 
 ### mobileSupported
-
-- 可选
 - 类型： `boolean`
-- 默认： `false`
+- 默认值： `false`
+- 可选
 
 确定应用是否与移动网络浏览器兼容并且可以在移动版本的 Olares 桌面上显示。如果应用程序针对移动网络浏览器进行了优化，请启用此选项。这将使该应用程序在移动版 Olares 桌面上可见并可访问。
 
@@ -688,9 +764,8 @@ mobileSupported: true
 :::
 
 ### oidc
-
-- 可选
 - 类型：`map`
+- 可选
 
 Olares 包含内置的 OpenID Connect 身份验证组件，以简化用户的身份验证。启用此选项可在你的应用中使用 OpenID。
 ```yaml
@@ -710,8 +785,8 @@ oidc:
 :::
 
 ### apiTimeout
-- 可选
 - 类型：`int`
+- 可选
 
 指定 API 提供程序的超时限制（以秒为单位）。默认值为 `15`。使用 `0` 允许无限制的 API 连接。
 

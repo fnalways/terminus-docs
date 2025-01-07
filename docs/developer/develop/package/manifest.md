@@ -7,10 +7,14 @@ outline: [2, 3]
 Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the Olares depend on this information to distribute and install applications.
 
 :::info NOTE
-Latest Olares Manifest version: `0.8.2`
-  - Add a `runAsUser` option to force the app to run under user `1000`
+Latest Olares Manifest version: `0.8.3`
+  - Add a `mandatory` field in the `dependencies` section for dependent application that is required for the installation
+  - Add `tailscaleAcls` section to permit applications to open specified ports via Tailscale
 :::
 :::details Changelog
+  `0.8.2`
+  - Add a `runAsUser` option to force the app to run under non root user
+
   `0.8.1`
   - Add a `ports` section to specify exposed ports for UDP or TCP
   
@@ -116,6 +120,8 @@ OlaresManifest.yaml.version: "3.0.122"
 
 ## Metadata
 
+Basic information about the app, which is used to present the app in the system and Olares Market.
+
 :::info Example
 ```Yaml
 metadata:
@@ -141,7 +147,7 @@ App’s namespace in Olares, lowercase alphanumeric characters only. It can be u
 
 - Type: `string`
 
-Your app title that appears in the Olares Market. It can be up to 30 characters.
+Your app title that appears in the Olares Market. It can be up to `30` characters.
 
 ### description
 
@@ -172,7 +178,7 @@ Used to display your app on different category page in Olares Market.
 
 ## Entrances
 
-Specify how to access this app, at least 1 required. It is up to `10`.
+Specify how to access this app, at least `1` required. It is up to `10`.
 
 :::info Example
 ```Yaml
@@ -287,15 +293,17 @@ To ensure a seamless user experience, you can enable this option by setting it t
 :::
 
 ## Ports
+
 Specify exposed ports
+
 :::info Example
 ```Yaml
 ports:
-- name: aaa          # Name of the entrance that provides UDP service
-  host: udp          # Ingress name of the entrance that provides UDP service
-  port: 8899         # Port of the entrance that provides UDP service
-  protocol: udp      # Protocol type. {udp/tcp}
-  exposePort: 30140  # A random port will be assigned if not specified 
+- name: aaa          # Name of the entrance that provides service
+  host: udp          # Ingress name of the entrance that provides service
+  port: 8899         # Port of the entrance that provides service
+  protocol: udp      # Protocol type. udp and tcp are supported for now
+  exposePort: 30140  # Port to expose, a random port will be assigned if not specified 
 - name: bbb
   host: udp
   port: 8090
@@ -305,11 +313,9 @@ ports:
 
 Olares automatically assigns a random port (33333-36789) for your app. These ports can be accessed via the app entrance domain from local network. For example: `84864c1f.local.your_olares_id.olares.com:33805`.
 
-
 :::info NOTE
 The exposed ports can only be accessed on the local network or through a VPN.
 :::
-
 
 ## Permission
 
@@ -393,7 +399,25 @@ All system API [providers](../advanced/provider.md) are list below:
 | secret.infisical | v1 | secret | CreateSecret, RetrieveSecret
 | secret.vault | v1 | key | List, Info, Sign
 
-## spec
+## TailscaleAcls
+- Type: `map`
+- Optional
+
+Allow applications add ACL(Access Control Lists) in Tailscale to open specified ports.
+
+:::info Example
+```Yaml
+tailscaleAcls:
+- proto: tcp
+  dst:
+  - "*:4557"
+- proto: "" # Optional, if not specified, all supported protocols will be allowed.
+  dst:
+  -  "*:4557"
+```
+:::
+
+## Spec
 Additional information about the application, primarily used for display in the Olares Market.
 
 :::info Example
@@ -449,6 +473,7 @@ spec:
   - ios: https://apps.apple.com/us/app/jellyfin-mobile/id1480192618
 ```
 :::
+
 ### i18n 
 
 To add multi-language support for your app in Olares Market:
@@ -486,11 +511,11 @@ spec:
 ```
 
 ### supportArch
-- Optional
 - Type: `list<string>`
 - Accepted Value: `amd64`, `arm64`
+- Optional
 
-This field specifies the CPU architecture supported by the application. Currently only `amd64` and `arm64` are supported.
+This field specifies the CPU architecture supported by the application. Currently only `amd64` and `arm64` are available.
 
 :::info Example
 ```yaml
@@ -506,23 +531,21 @@ Olares does not support mixed-architecture clusters for now.
 :::
 
 ### onlyAdmin
-- Optional
 - Type: `boolean`
 - Default: `false`
+- Optional
 
 When set to `true`, only the admin can install this app.
 
 ### runAsUser
-- Optional
 - Type: `boolean`
+- Optional
 
 When set to `true`, Olares enforces the application to run under user ID `1000` (as a non-root user).
 
-
-## middleware
-
-- Optional
+## Middleware
 - Type: `map`
+- Optional
 
 The Olares provides highly available middleware services. Developers do not need to install middleware repeatedly. Just simply add required middleware here, You can then directly use the corresponding middleware information in the application's deployment YAML file.
 
@@ -587,14 +610,13 @@ password --> "{{ .Values.redis.password }}"
 
 ```
 
-## options
+## Options
 
 Configure system-related options here.
 
 ### policies
-
-- Optional
 - Type: `map`
+- Optional
 
 Define detailed access control for subdomains of the app.
 
@@ -611,9 +633,8 @@ options:
 :::
 
 ### clusterScoped
-
-- Optional
 - Type: `map`
+- Optional
 
 Whether this app is installed for all users in an Olares cluster.
 
@@ -642,13 +663,13 @@ options:
     - name: gitlab #app name of server
       version: ">=0.0.1"
       type: application
+      mandatory: true
 ```
 :::
 
 ### analytics
-
-- Optional
 - Type: `map`
+- Optional
 
 Enable website analytics for the app.
 
@@ -661,10 +682,11 @@ options:
 :::
 
 ### dependencies
-
 - Type: `list<map>`
 
 Specify the dependencies and requirements for your application. It includes other applications that your app depends on, as well as any specific operating system (OS) version requirements.
+
+If this application requires other dependent applications for proper installation, you should set the `mandatory` field to `true`.
 
 :::info Example
 ```yaml
@@ -676,13 +698,13 @@ options:
     - name: mongodb
       version: ">=6.0.0-0"
       type: middleware
+      mandatory: true # Set this field to true if the dependency needs to be installed first.
 ```
 :::
 
 ### websocket
-
-- Optional
 - Type: `map`
+- Optional
 
 Enable websocket for the app. Refer to [websocket](../advanced/websocket.md) for more information.
 
@@ -696,12 +718,10 @@ options:
 :::
 
 ### resetCookie
-
-- Optional
 - Type: `map`
+- Optional
 
 If the app requires cookies, please enable this feature. Refer to [cookie](../advanced/cookie.md) for more information.
-
 
 :::info Example
 ```yaml
@@ -712,9 +732,8 @@ options:
 :::
 
 ### upload
-
-- Optional
 - Type: `map`
+- Optional
 
 The Olares Application Runtime includes a built-in file upload component designed to simplify the file upload process in your application. Refer to [upload](../advanced/file-upload.md) for more information.
 
@@ -732,10 +751,9 @@ upload:
 :::
 
 ### mobileSupported
-
-- Optional
 - Type: `boolean`
 - Default: `false`
+- Optional
 
 Determine whether the application is compatible with mobile web browsers and can be displayed on the mobile version of Olares Desktop. Enable this option if the app is optimized for mobile web browsers. This will make the app visible and accessible on the mobile version of Olares Desktop.
 
@@ -746,9 +764,8 @@ mobileSupported: true
 :::
 
 ### oidc
-
-- Optional
 - Type: `map`
+- Optional
 
 The Olares includes a built-in OpenID Connect authentication component to simplify identity verification of users. Enable this option to use OpenID in your app. 
 ```yaml
@@ -768,8 +785,8 @@ oidc:
 :::
 
 ### apiTimeout
-- Optional
 - Type: `int`
+- Optional
 
 Specifies the timeout limit for API providers in seconds. The default value is `15`. Use `0` to allow an unlimited API connection.
 
