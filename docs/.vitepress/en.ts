@@ -336,6 +336,10 @@ const side = {
         text: "Environment variables",
         link: "/developer/install/environment-variables",
       },
+      {
+        text: "Olares Versioning",
+        link: "/developer/install/versioning",
+      },
       {text: "Olares CLI",
         link: "/developer/install/cli/olares-cli",
         collapsed: true,
