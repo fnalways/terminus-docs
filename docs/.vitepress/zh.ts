@@ -336,10 +336,6 @@ const side = {
         text: "环境变量",
         link: "/zh/developer/install/environment-variables",
       },
-      {
-        text: "版本说明",
-        link: "/zh/developer/install/versioning",
-      },
       {text: "Olares CLI",
         link: "/zh/developer/install/cli/olares-cli",
         collapsed: true,
@@ -359,6 +355,10 @@ const side = {
         {text: "olares uninstall",
         link: "/zh/developer/install/cli/olares-uninstall"},
         ],
+        },
+        {
+          text: "版本说明",
+          link: "/zh/developer/install/versioning",
         },
       ],
     },   
