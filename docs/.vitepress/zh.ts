@@ -52,6 +52,25 @@ const side = {
       ],
     },
     {
+      text: "教程",
+      collapsed: true,
+      link: "/manual/tutorials/",
+      items: [
+        {
+          text: "设置自定义域名",
+          link: "/manual/tutorials/set-custom-domain",
+        },
+        {
+          text: "远程观看视频",
+          link: "/manual/tutorials/stream-media",
+        },
+        {
+          text: "Krita + ComfyUI 实时绘画",
+          link: "/manual/tutorials/comfyui-for-krita",
+        },
+      ],
+    },
+    {
       text: "应用示例",
       collapsed: true,
       link: "/zh/manual/use-cases/",
@@ -75,14 +94,6 @@ const side = {
         {
           text: "Dify 定制 AI 助手",
           link: "/zh/manual/use-cases/dify",
-        },
-        {
-          text: "Krita + ComfyUI 实时绘画",
-          link: "/zh/manual/use-cases/comfyui-for-krita",
-        },
-        {
-          text: "远程看视频",
-          link: "/zh/manual/use-cases/stream-media",
         },
       ],
     },
