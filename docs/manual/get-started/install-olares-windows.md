@@ -33,7 +33,24 @@ Make sure your Windows meets the following requirements.
    ![Change execution policy](/images/manual/get-started/change-execution-policy.png)
 ## Install Olares
 1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`.
-2. Once downloaded, double-click the `publicInstall.latest.ps1` file or right-click and select **Run with PowerShell**.
+
+2. Execute the script.
+   
+   a. Open PowerShell as administrator, then navigate to the folder where the script is located. For example, if the script is in the `Downloads` folder, run the following command:
+      
+   ```powershell
+   cd C:\Users\<YourUsername>\Downloads
+   ```
+   
+   b. Once in the correct folder, run the following command:
+   ```powershell
+   .\publicInstall.latest.ps1
+   ```
+  
+   :::warning Administrator privileges required 
+   Running PowerShell without administrator privileges may cause the installation to fail. 
+   :::
+
 3. When prompted, click **Open** to proceed.
 4. Type `R` and press **Enter** to run the script.
 
