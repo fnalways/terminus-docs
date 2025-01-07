@@ -47,7 +47,7 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 
 1. 在 LarePass 应用中，打开账户创建页面。
 
-2. 轻触**创建账户**以触发 DID 创建。
+2. 点击**创建账户**以触发 DID 创建。
    
   ![create DID](/images/manual/tutorials/create-a-did.png)
 
@@ -60,7 +60,7 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 在绑定域名之前，你需要先在 Olares Space 中添加并验证域名。
 
 1. 在浏览器中访问 [Olares Space](https://space.olares.xyz/)。
-2. 在手机端的 LarePass 应用中，轻触右上角的扫码按钮，并扫描登录页面的二维码以登录 Olares Space。
+2. 在手机端的 LarePass 应用中，点击右上角的扫码按钮，并扫描登录页面的二维码以登录 Olares Space。
 
     ![scan QR](/images/manual/tutorials/scan-qr-code.png)
 
@@ -102,13 +102,13 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 
 1. 在 LarePass 应用中创建新组织。
 
-   a. 在账户创建页面，轻触右上角的 <i class="material-icons">display_settings</i>，进入**高级账户创建**页面。
+   a. 在账户创建页面，点击右上角的 <i class="material-icons">display_settings</i>，进入**高级账户创建**页面。
 
-   b. 前往**组织 Olares ID**>**创建新组织**。与你域名对应的组织会自动显示在列表中。
+   b. 前往**组织 Olares ID** >**创建新组织**。与你域名对应的组织会自动显示在列表中。
 
    ![Create org](/images/manual/tutorials/create-org.png)
 
-   c. 轻触该组织名称以申请 VC。完成后，你将看到域名名称以作确认。
+   c. 点击该组织名称以申请 VC。完成后，你将看到待绑定的域名。
 
    d. 点击**确定**完成在 LarePass 中的组织域名绑定。
 
@@ -123,19 +123,19 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 域名规则决定了如何向组织添加成员。只有组织成员才能在组织域名（即你的自定义域名）下申请 Olares ID。要配置域名规则，请执行以下步骤：
 
 1. 在 Olares Space 中，进入**域名管理**，然后在目标域名右侧点击**查看**。
-2. 在**Domain 邀请规则**下，选择**指定邮箱地址**（指定邮箱地址），并点击**保存**。
+2. 在**域名邀请规则**下，选择**指定邮箱地址**（指定邮箱地址），并点击**保存**。
 
    :::tip 邀请规则
     目前提供两种邀请规则：
      - **固定邮箱后缀**：适用于使用统一公司邮箱域名（例如 `@company.com`）的大型团队。任何符合指定后缀的邮箱地址都可以申请在组织下的 Olares ID。目前仅支持添加单个邮箱后缀。账户必须符合 G-Suite 格式。
-     - **指定邮箱地址**：允许您通过指定成员的邮箱地址来添加成员。如果你没有公司邮箱域名且仅需邀请少数成员加入组织，建议使用此选项。支持 Gmail 和 G-Suite 账号。
+     - **指定邮箱地址**：允许你通过指定成员的邮箱地址来添加成员。如果你没有公司邮箱域名且仅需邀请少数成员加入组织，建议使用此选项。支持 Gmail 和 G-Suite 账号。
    :::
 
-1. 点击**添加新用户**并输入成员的 Gmail 地址，例如 `justtest193@gmail.com`。
+3. 点击**添加新用户**并输入成员的 Gmail 地址，例如 `justtest193@gmail.com`。
 
    ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
 
-2. 点击**提交**完成成员添加。如果需要添加多个用户，请重复第 3 步和第 4 步。
+4. 点击**提交**完成成员添加。如果需要添加多个用户，请重复第 3 步和第 4 步。
 
 :::tip 维护成员列表
 作为组织管理员，你可以随时在**域名管理**页面管理组织成员列表。
@@ -145,8 +145,8 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 
 要使用该域名，需要在组织下申请一个 Olares ID。
 
-1. 在 LarePass 应用的账户创建页面，轻触右上角的 <i class="material-icons">display_settings</i> 进入**高级账户创建**页面。
-2. 点击**组织 Olares ID**>**加入已有组织**。
+1. 在 LarePass 应用的账户创建页面，点击右上角的 <i class="material-icons">display_settings</i> 进入**高级账户创建**页面。
+2. 点击**组织 Olares ID** >**加入已有组织**。
 3. 输入组织域名（即已验证的自定义域名），然后点击**继续**。如果出现错误，请检查域名拼写是否正确，并确认在 Olares Space 中的域名规则已正确配置。
 4. 为成员申请 VC。
    
