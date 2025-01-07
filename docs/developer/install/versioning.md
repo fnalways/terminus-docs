@@ -31,8 +31,6 @@ Olares offers three types of releases: **Stable**, **Release Candidate (RC)**, a
   - **Release cadence**: Daily
   - **Examples**: `v1.12.0-20241201`
 
----
-
 ## Release branch management
 
 During the `1.x` phase, Olares follows a structured monthly release cadence:
@@ -46,8 +44,6 @@ During the `1.x` phase, Olares follows a structured monthly release cadence:
 4. Issues identified in the stable version are addressed through patch releases (e.g., `v1.11.1`), based on the corresponding release branch.
 
 Developers can submit pull requests (PRs) to both the `main` branch and the relevant release branch as needed.
-
----
 
 ## Upgrade policies and compatibility
 

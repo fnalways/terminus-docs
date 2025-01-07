@@ -9,7 +9,6 @@ Olares 版本号基本遵循了 [语义版本号规范](https://semver.org/lang/
 - 版本顺序如下：
   `1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0`。
 
-
 ## 发布策略
 
 Olares 提供三种类型的版本：**正式版**、**候选（Release Candidate 或 RC）版** 和 **Dailybuild（每日构建）版**。
