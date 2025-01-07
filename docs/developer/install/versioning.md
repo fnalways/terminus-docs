@@ -1,4 +1,4 @@
-# Olares Versioning
+# Olares versioning
 
 The Olares versioning and release process is designed to provide clear version definitions and stable upgrade paths. This document outlines Olares' versioning rules, release policies, branch management, and upgrade guidelines.
 
@@ -14,26 +14,26 @@ Olares primarily follows the [Semantic Versioning Specification](https://semver.
 
 Olares offers three types of releases: **Stable**, **Release Candidate (RC)**, and **Dailybuild**.
 
-### Stable releases
-- Thoroughly tested versions suitable for production environments.
-- The official installation script (`https://olares.sh`) always defaults to the latest stable version.
-- **Release cadence**: Monthly
-- **Examples**: `v1.10.5`, `v1.11.0`, `v1.11.1`, `v1.12.0`
+- **Stable releases**
+  - Thoroughly tested versions suitable for production environments.
+  - The official installation script (`https://olares.sh`) always defaults to the latest stable version.
+  - **Release cadence**: Monthly
+  - **Examples**: `v1.10.5`, `v1.11.0`, `v1.11.1`, `v1.12.0`
 
-### Release Candidate (RC) releases
-- Pre-release versions for testing prior to a stable release. Once verified, RC versions are promoted to stable releases.
-- **Release cadence**: Based on testing status
-- **Examples**: `v1.11.0.rc.0`, `v1.11.0.rc.1`
+- **Release Candidate (RC) releases**
+  - Pre-release versions for testing prior to a stable release. Once verified, RC versions are promoted to stable releases.
+  - **Release cadence**: Based on testing status
+  - **Examples**: `v1.11.0.rc.0`, `v1.11.0.rc.1`
 
-### Dailybuild releases
-- Automatically generated from the `main` branch every day at 2:00 AM (Beijing Time).
-- Intended for development and testing; may be unstable.
-- **Release cadence**: Daily
-- **Examples**: `v1.12.0-20241201`
+- **Dailybuild releases**
+  - Automatically generated from the `main` branch every day at 2:00 AM (Beijing Time).
+  - Intended for development and testing; may be unstable.
+  - **Release cadence**: Daily
+  - **Examples**: `v1.12.0-20241201`
 
 ---
 
-## Release Branch Management
+## Release branch management
 
 During the `1.x` phase, Olares follows a structured monthly release cadence:
 
@@ -49,7 +49,7 @@ Developers can submit pull requests (PRs) to both the `main` branch and the rele
 
 ---
 
-## Upgrade Policies and Compatibility
+## Upgrade policies and compatibility
 
 During the `1.x` phase, Olares is in rapid iteration. **Automatic upgrades are not supported across different minor versions**. The upgrade and compatibility rules are as follows:
 
