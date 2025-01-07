@@ -161,6 +161,7 @@ Almost there! Now you are all set to install and activate Olares with your Olare
 
 ::: tip Note
 In the following example, we preset the domain name and username using environment variables with the installation script. You can also install with the one-line script without these variables, in which case you’ll need to enter the domain and username manually. For detailed instructions on all supported platforms, please refer to our [platform-specific installation guides](../get-started/install-olares.md).
+:::
 
 1. In the terminal, run the installation script with specified environment variables to start the installation:
     
