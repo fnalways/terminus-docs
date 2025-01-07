@@ -516,7 +516,7 @@ When set to `true`, only the admin can install this app.
 - Optional
 - Type: `boolean`
 
-When set to `true`, the Olares system enforces the application to run under the user ID `1000`.
+When set to `true`, Olares enforces the application to run under user ID `1000` (as a non-root user).
 
 
 ## middleware
