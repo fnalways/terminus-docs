@@ -7,12 +7,12 @@ outline: [2, 3]
 Every **Olares Application Chart** should include a `OlaresManifest.yaml` file in the root directory. `OlaresManifest.yaml` provides all the essential information about an Olares App. Both the **Olares Market protocol** and the Olares depend on this information to distribute and install applications.
 
 :::info NOTE
-Latest Olares Manifest Version: `0.8.2`
-  - Add a `runAsUser` option to force the app run under user `1000`
+Latest Olares Manifest version: `0.8.2`
+  - Add a `runAsUser` option to force the app to run under user `1000`
 :::
 :::details Changelog
   `0.8.1`
-  - Add a `ports` section to specify exposed ports for the UDP or TCP protocol
+  - Add a `ports` section to specify exposed ports for UDP or TCP
   
   `0.7.1`
   - Add new `authLevel` value `internal`
