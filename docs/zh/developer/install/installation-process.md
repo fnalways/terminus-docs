@@ -88,7 +88,6 @@ Greetings, Olares
 在完成下载后，安装脚本将对操作系统进行配置，以保证能够顺利运行 Kubernetes、容器镜像等系统服务。
 
 ### 系统依赖安装与配置
-### 系统依赖安装与配置
 - 调整 DNS、NTP、SSH 服务，确保机器网络正常、时间同步无误。
 - 通过 apt 安装必要依赖（curl、net-tools、gcc、make 等）。
 

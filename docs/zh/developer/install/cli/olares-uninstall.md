@@ -4,7 +4,7 @@
 卸载 Olares。
 
 ```bash
-olares-cli olares uninstall [option]
+olares-cli olares uninstall [选项]
 ```
 
 ## 选项

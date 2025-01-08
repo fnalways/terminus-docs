@@ -21,7 +21,7 @@ Olares 命令行工具（Olares CLI）是一个面向开发者和系统管理员
 ## 语法
 Olares 命令行工具使用如下语法：
 
-> `olares-cli command [subcommand] [option]`
+> `olares-cli command [子命令] [选项]`
 
 其中：
 - `command`：指定要执行的主要操作，例如 `olares download`
