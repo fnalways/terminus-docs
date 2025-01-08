@@ -7,7 +7,7 @@
 更新所有 Olares 组件使用的本地 IP 地址。
 
 ```bash
-olares-cli olares change-ip [option]
+olares-cli olares change-ip [选项]
 ```
 
 ## 选项

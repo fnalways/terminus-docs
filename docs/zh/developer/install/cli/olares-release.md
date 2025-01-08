@@ -4,7 +4,7 @@
 基于本地 Olares 代码仓库构建发布版本。此命令需要在 Olares 代码仓库的根目录下运行。
 
 ```bash
-olares-cli olares release [option]
+olares-cli olares release [选项]
 ```
 
 ## 选项

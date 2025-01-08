@@ -365,6 +365,8 @@ const side = {
         link: "/zh/developer/install/cli/olares-release"},
         {text: "olares uninstall",
         link: "/zh/developer/install/cli/olares-uninstall"},
+        {text: "gpu",
+          link: "/zh/developer/install/cli/gpu"},
         ],
         },
       ],
