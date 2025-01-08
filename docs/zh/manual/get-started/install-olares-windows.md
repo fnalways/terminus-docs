@@ -71,7 +71,7 @@ Windows 设备需满足以下条件：
    不以管理员身份运行 PowerShell 会导致安装失败。参考[如何确认 PowerShell 是否以管理员身份运行](#如何确认-powershell-是否以管理员身份运行)。
    :::
 
-3. 输入 `R` 并按下 **Enter** 以运行脚本，开始安装 Olares。
+3. 出现安全提示时，输入 `R` 并按下 **Enter** 以运行脚本，开始安装 Olares。
 
    ```powershell
    Security warning
