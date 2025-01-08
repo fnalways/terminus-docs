@@ -12,7 +12,7 @@ You can monitor the system status of Olares through **Olares Space**:
 
 1. In your LarePass app, go to **Settings** > **Integration**.
 2. Click <i class="material-icons">add</i> in the top right corner and link your Olares Space account to the Olares device. This authorizes Olares Space's access to your system data.
-3. Log into [**Olares Space**](https://space.jointolares.com/).
+3. Log into [**Olares Space**](https://space.olares.xyz/).
 4. On the **Olares** page, view **Storage usage** and **Traffic consumption** in the system panel.
 
 ![System Panel](/images/how-to/space/my_olares.jpg)
