@@ -8,4 +8,4 @@ This section provides in-depth information and command references to help you ex
 - [Olares Home introduction](olares-home.md): Learn the structure of the base installation directory and gain a clearer understanding of the Olares installation process.
 - [Olares environment variables](environment-variables.md): Look up the right environment variables for you to customize the installation.
 - [Olares CLI reference](./index.md): Fine tune or troubleshoot Olares installation using `olares-cli` command line tools
-- [Olares Versioning](versioning.md): Learn versioning rules, release types, branch management practices, and upgrade guidelines of Olares. 
+- [Olares versioning](versioning.md): Learn versioning rules, release types, branch management practices, and upgrade guidelines of Olares. 
