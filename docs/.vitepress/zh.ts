@@ -369,6 +369,10 @@ const side = {
           link: "/zh/developer/install/cli/gpu"},
         ],
         },
+        {
+          text: "版本说明",
+          link: "/zh/developer/install/versioning",
+        },
       ],
     },   
     {

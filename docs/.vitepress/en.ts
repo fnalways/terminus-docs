@@ -369,6 +369,10 @@ const side = {
           link: "/developer/install/cli/gpu"},
         ],
         },
+        {
+          text: "Olares versioning",
+          link: "/developer/install/versioning",
+        },
       ],
     },
     {
