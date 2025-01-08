@@ -18,26 +18,48 @@ Make sure your Windows meets the following requirements.
     - Windows 10 or 11
     - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
-1. Enable Hyper-V, which is required for virtualization. See [Install Hyper-V on Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+1. Enable the required Windows features for virtualization.
 
-2. Temporarily disable Windows Defender Firewall. You can re-enable it after installation is complete. See [Turn Microsoft Defender Firewall on or off](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f).
+   a. Open **Control Panel**, then go to **Programs** > **Programs and Features** > **Turn Windows features on or off**.
 
+   b. In the **Windows Features** window, check:
+    - **Hyper-V** (not required for Windows 10 Home and Windows 11 Home)
+    - **Windows Subsystem for Linux**
+    - **Virtual Machine Platform**
+
+   c. Click **OK** and restart your computer when prompted.
+
+2. Temporarily disable Windows Defender Firewall. You can re-enable it after installation is complete.
+
+   a. Open **Control Panel** > **System and Security** > **Windows Defender Firewall**.
+
+   b. In the navigation pane, click **Turn Windows Defender Firewall on or off**.
+
+   c. Select **Turn off Windows Defender Firewall** for both private and public networks, then click **OK**.
+
+   ![Turn off Windows Defender Firewall](/images/manual/get-started/disable-firewall.png)
 3. Set the execution policy for the current user.
 
    a. Open PowerShell as administrator, then run the following command:
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
     ```
-   b. Type `A` and press **Enter** to change the execution policy.
+   b. When prompted to check whether to change the execution policy, type `A` and press **Enter** to confirm.
 
-   ![Change execution policy](/images/manual/get-started/change-execution-policy.png)
+    ```powershell
+    Execution Policy Change
+    The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+    you to the security risks described in the about_Execution_Policies help topic at
+    https:/go.microsoft.com/fwlink/?LinkID-135170. Do you want to change the execution policy?
+    [Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "N"):
+    ```
+
 ## Install Olares
 1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`.
 
 2. Execute the script.
    
    a. Open PowerShell as administrator, then navigate to the folder where the script is located. For example, if the script is in the `Downloads` folder, run the following command:
-      
    ```powershell
    cd C:\Users\<YourUsername>\Downloads
    ```
@@ -48,15 +70,17 @@ Make sure your Windows meets the following requirements.
    ```
   
    :::warning Administrator privileges required 
-   Running PowerShell without administrator privileges may cause the installation to fail. 
+   Running PowerShell without administrator privileges will cause the installation to fail. See [How to make sure I am using PowerShell as administrator](#how-to-make-sure-i-am-using-powershell-as-administrator).
    :::
 
-3. When prompted, click **Open** to proceed.
-4. Type `R` and press **Enter** to run the script.
+3. When prompted with security warning, type `R` and press **Enter** to run the script once. The installation process for Olares will start.
 
-   ![Run installation script](/images/manual/get-started/run-installation-script.png)
-
-The script will then start installing Olares.
+   ```powershell
+   Security warning
+   Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
+   publicInstall.latest.ps1?
+   [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
+   ```
 
 :::tip Root user password
 During the installation, you may be prompted to enter your root password.
@@ -64,8 +88,8 @@ During the installation, you may be prompted to enter your root password.
 
 :::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
-```bash
-bash olares-uninstall.sh
+```powershell
+olares-cli.exe olares uninstall
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
@@ -128,3 +152,73 @@ Securely access Olares with a two-step verification process.
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
 - [Back up your mnemonic phrase](./back-up-mnemonics.md)
+
+## FAQ
+
+### How to make sure I am using PowerShell as administrator?
+You can confirm that PowerShell is running as an administrator if you see "Administrator: Windows PowerShell" in the title bar of the PowerShell window.
+
+![Confirm run Powershell as administrator](/images/manual/get-started/confirm-run-powershell-as-admin.png#bordered)
+
+If not, use one of the following methods:
+- Search for "PowerShell" in the **Start** menu, right-click it, and select **Run as administrator**.
+- Or press Win + R, type `powershell`, and press Ctrl + Shift + Enter to open PowerShell as an administrator.
+
+### How to configure the CPU and memory for WLS?
+When installing Olares in WSL, the default memory allocation is `12GB`. But you can configure the memory before Olares installation, or adjust both memory and CPU settings after installation.
+
+**Adjust the memory setting before installation**
+
+For example, to allocate 16GB of memory:
+
+1. Add a user variable with the following:
+   - **Variable name**: `WSL_MEMORY`
+   - **Variable value**: `16`
+
+   ![Add user variable](/images/manual/get-started/add-user-variable.png)
+
+2. Click **OK** to apply changes.
+
+   :::tip
+   If you already have a PowerShell window open, changes to environment variables will not take effect in the current session. To ensure the updated environment variables are loaded, open a new PowerShell terminal as administrator, and then run the installation script.
+   :::
+
+**Adjust memory and CPU settings after installation**
+
+After installation, a configuration file named `.wslconfig` will be created in the current user's home directory (`C:\Users\<YourUsername>\`). This file allows you to adjust memory and CPU settings. The default configuration looks like this:
+
+```bash
+[wsl2]
+memory=12GB
+swap=0GB
+```
+
+For example, to use 4 CPU cores:
+1. Add the `processors` parameter to the file:
+   ```bash
+   [wsl2]
+   memory=12GB
+   processors=4
+   swap=0GB
+   ```
+2. Save the `.wslconfig` file with your custom changes. 
+3. Close all running virtual machines by running the following command in PowerShell:
+   ```powershell
+   wsl --shutdown
+   ```
+4. Restart Olares by running:
+   ```powershell
+   wsl -d Ubuntu
+   ```
+It will take a few minutes for Olares services to restart.
+
+### How to reactivate Olares after the PC restarts?
+Run the following command in PowerShell to restart the Olares service:
+```powershell
+wsl -d Ubuntu
+```
+### How to uninstall Olares?
+Run the following command in PowerShell:
+```powershell
+olares-cli.exe olares uninstall
+```
