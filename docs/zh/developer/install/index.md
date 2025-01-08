@@ -7,3 +7,4 @@
 - [Olares Home 介绍](olares-home.md)：了解 Olares 默认安装目录的结构，更全面理解 Olares 的安装流程。
 - [Olares 环境变量](environment-variables.md)：查找所需环境变量，定制你的 Olares 安装过程。
 - [Olares CLI 参考](./index.md)：使用 `olares-cli` 命令行工具，对 Olares 安装进行微调或排障。
+- [Olares 版本说明](versioning.md): 了解 Olares 的版本号规则、版本类型、分支管理实践以及升级策略。
