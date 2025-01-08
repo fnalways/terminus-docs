@@ -75,7 +75,7 @@ Windows 设备需满足以下条件：
 
    ```powershell
    Security warning
-   Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File mdlet to allow the script to run without this warning message. Do you want to run
+   Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
    publicInstall.latest.ps1?
    [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
    ```
