@@ -1,22 +1,12 @@
 # Olares environment variables
 
-In most scenarios, you can install Olares with a single-line script:
+Olares provides a highly customizable installation process through the use of environment variables. These variables can override default settings, enabling advanced configurations to suit your specific requirements.
 
-```bash
-curl -sSfL https://olares.sh | bash
-```
+## Usage examples
 
-To meet more advanced installation requirements, the Olares installation script also supports a range of environment variables that can override default configurations and behaviors. 
+To customize the installation process, you can define environment variables in several ways:
 
-## How to use environment variables
-
-You can specify these environment variables in several ways:
-
-::: tip Note
-In the examples below, we use `KUBE_TYPE=k8s` to illustrate how to install K8s instead of k3s for Olares. Other environment variables can be used similarly.
-:::
-
-- Specify inline while running the installation script:
+- Specify the variables inline while running the installation script:
   
     ```bash
     KUBE_TYPE=k8s bash install.sh
@@ -29,13 +19,13 @@ In the examples below, we use `KUBE_TYPE=k8s` to illustrate how to install K8s i
     bash install.sh
     ```
 
-- Chain commands with `&&`:
+- Use `&&` to chain commands:
 
     ```bash
     export KUBE_TYPE=k8s && bash install.sh
     ``` 
 
-Of course, you can also combine multiple environment variables for more flexible customization, for example:
+You can also combine multiple environment variables for more flexible customization, for example:
 
 ```bash
 export KUBE_TYPE=k8s \
@@ -44,206 +34,174 @@ export KUBE_TYPE=k8s \
 bash install.sh
 ```
 
-## List of environment variables
+## Environment variables reference
 
 The section lists all the environment variables supported by the installation script, along with their default values, optional values, and descriptions. Configure them as needed.
 
-### KUBE_TYPE
-- Specifies the Kubernetes distribution to use. If you need the full version of k8s, set this to `k8s`. Only applies when running `install.sh`.  
-- **Possible Values**: `k8s` / `k3s`  
-- **Default Value**: `k3s`  
+### `KUBE_TYPE`
+Determines the Kubernetes distribution to install.
+- **Valid values**: 
+   - `k8s` (full Kubernetes)
+   - `k3s` (lightweight Kubernetes)
+- **Default**: `k3s`
+- **Usage**: Only applicable with `install.sh`.
 
+### `REGISTRY_MIRRORS`
+Specifies a custom Docker registry mirror for faster image pulls.
+- **Valid values**: `https://mirrors.joinolares.cn` or any other valid URL
+- **Default**: `https://registry-1.docker.io`
+- **Usage**: Only applicable with `install.sh`.
 
+### `PREINSTALL`
+Runs only the pre-installation phase (system dependency setup) without proceeding with the full Olares installation.  
+- **Valid values**: `1`  
+- **Default**: None (full installation is performed if not set).
+- **Usage**: Only applicable with `install.sh`.
 
-### REGISTRY_MIRRORS
-- Sets the Docker registry mirror. Only applies when running `install.sh`.  
-- **Possible Values**: `https://mirrors.joinolares.cn` or another mirror URL  
-- **Default Value**: *(None; if not set, defaults to* `https://registry-1.docker.io`)  
+### `JUICEFS`
+Installs [JuiceFS](https://juicefs.com/) alongside Olares. Should only be used with `install.sh`.
+- **Valid values**: `1`  
+- **Default**: None (JuiceFS is not installed if not set).
+- **Usage**: Only applicable with `install.sh`.
 
+### `TERMINUS_OS_DOMAINNAME`
+Sets the domain name before installation and skip the interactive prompt.
+- **Valid values**: Any valid domain name  
+- **Default**: None (prompts for domain name if not set).
 
+### `TERMINUS_OS_USERNAME`
+Sets the username before installation and skip the interactive prompt.
 
-### PREINSTALL
-- When set to `1`, only finishes the preinstall phase (installs system dependencies). If unset or empty, Olares will be installed fully. Only applies when running `install.sh`.  
-- **Possible Values**: `1`  
-- **Default Value**: None 
+- **Valid values**: Any valid username (2–250 characters, excluding reserved keywords)
+- **Default**: None (prompts for username if not set).
+- **Validation**: Reserved keywords are `user`, `system`, `space`, `default`, `os`, `kubesphere`, `kube`, `kubekey`, `kubernetes`,
+    `gpu`, `tapr`, `bfl`, `bytetrade`, `project`, `pod`.
 
+### `TERMINUS_OS_EMAIL`
+Specifies the email address instead of the generated one.  
+- **Valid values**: Any valid email address  
+- **Default**: None (a temporary email is auto-generated if not set).
 
+### `TERMINUS_OS_PASSWORD`
+Specifies the password instead of the generated one.
+- **Valid values**: A valid password with 6–32 characters  
+- **Default**: A randomly 8-digit password 
 
-### JUICEFS
-- When set to `1`, installs [JuiceFS](https://juicefs.com/). By default, it is not installed. Only applies when running `install.sh`.  
-- **Possible Values**: `1`  
-- **Default Value**: None 
+### `TERMINUS_IS_CLOUD_VERSION`
+Marks the machine explicitly as a cloud instance.
+- **Valid values**: `true`  
+- **Default**: None
 
+### `LOCAL_GPU_ENABLE`
+Enables GPU support and installs necessary drivers.
+- **Valid values**: 
+  - `0` (disable)
+  - `1` (enable)  
+- **Default**: `0`
 
+### `LOCAL_GPU_SHARE`
+Enables GPU sharing (only applicable if GPU is enabled).
+- **Valid values**:
+  - `0` (disable)
+  - `1` (enable)
+- **Default**: `0`
 
-### TERMINUS_OS_DOMAINNAME
-- Presets the domain name before installation, skipping the interactive prompt.  
-- **Possible Values**: Any valid domain name  
-- **Default Value**: None 
+### `CLOUDFLARE_ENABLE`
+Enables the Cloudflare proxy.
+- **Valid values**:
+  - `0` (disable)
+  - `1` (enable)
+- **Default**: `0`
 
+### `FRP_ENABLE`
+Enables FRP for internal network tunneling. Requires additional FRP-related variables if using a custom server.
+- **Valid values**:
+  - `0` (disable)
+  - `1` (enable)
+- **Default**: `0`
 
+### `FRP_SERVER`
+Specifies the FRP server address.
+- **Valid values**: Any valid FRP server address  
+- **Default**: None
 
-### TERMINUS_OS_USERNAME
-- Presets the username before installation, skipping the interactive prompt.  
-  **Reserved keywords:**
-    ```
-    user, system, space, default, os, kubesphere, kube, kubekey, kubernetes,
-    gpu, tapr, bfl, bytetrade, project, pod
-    ```
-- **Possible Values**: Any valid username (length 2–250; no conflicts with reserved keywords)  
-- **Default Value**: None 
+### `FRP_PORT`
+Specifies the FRP server's listening port.
+- **Valid values**: Integer in the range `1–65535`  
+- **Default**: `7000` if not set or set to `0`.
 
+### `FRP_AUTH_METHOD`
+- Sets the FRP authentication method.
+- **Valid values**:
+  - `jws`
+  - `token` (requires `FRP_AUTH_TOKEN`)
+  - (empty) – No authentication
+- **Default**: `jws`.
 
+### `FRP_AUTH_TOKEN`
+Specifies the token for FRP communication (required if `FRP_AUTH_METHOD=token`).
+- **Valid values**: Any non-empty string  
+- **Default**: None
 
-### TERMINUS_OS_EMAIL
-- Presets the email address before installation, skipping the interactive prompt. If not set, a temporary email is automatically generated.  
-- **Possible Values**: Any valid email address  
-- **Default Value**: Automatically generated email address
+### `TOKEN_MAX_AGE`
+Sets the maximum duration for a token's validity (in seconds).
+- **Valid values**: Any integer (in seconds)  
+- **Default**: `31536000` (365 days)
 
+### `MARKET_PROVIDER`
+Specifies the backend domain used by the application marketplace (Market).
+- **Valid values**: 
+  - `appstore-server-prod.bttcdn.com` 
+  - `appstore-china-server-prod.api.jointerminus.cn` (Recommended for mainland China users with better connectivity) 
+- **Default**: `appstore-server-prod.bttcdn.com`
 
-
-### TERMINUS_OS_PASSWORD
-- Presets the password before installation, skipping the interactive prompt.  
-- **Possible Values**: 6–32 characters  
-- **Default Value**: A randomly 8-digit password 
-
-
-
-### TERMINUS_IS_CLOUD_VERSION
-- Explicitly marks this machine as a cloud instance.  
-- **Possible Values**: `true`  
-- **Default Value**: None 
-
-
-
-### LOCAL_GPU_ENABLE
-- Specifies whether to enable GPU and install drivers.  
-- **Possible Values**: `0` (disable)/ `1`(enable)  
-- **Default Value**: `0` (disable)
-
-
-
-### LOCAL_GPU_SHARE
-- Specifies whether to enable GPU sharing. Only available when GPU is already enabled.  
-- **Possible Values**: `0` (disable)/ `1`(enable)  
-- **Default Value**: `0` (disable)
-
-
-
-### CLOUDFLARE_ENABLE
-- Specifies whether to enable the Cloudflare proxy.  
-- **Possible Values**: `0` (disable)/ `1`(enable)  
-- **Default Value**: `0` (disable)
-
-
-
-### FRP_ENABLE
-- Specifies whether to enable FRP for internal network tunneling. If you use a custom FRP server, you must also set `FRP_SERVER`, `FRP_PORT`, and other FRP-related variables.  
-- **Possible Values**: `0` (disable)/ `1`(enable)  
-- **Default Value**: `0` (disable)
-
-
-
-### FRP_SERVER
-- Specifies the FRP server address.  
-- **Possible Values**: Any valid FRP server address  
-- **Default Value**: None
-
-
-### FRP_PORT
-- Sets the FRP server’s listening port. If not specified (or `0`), it defaults to 7000.  
-- **Possible Values**: Integer in the range `1–65535`  
-- **Default Value**: `0`
-
-
-
-### FRP_AUTH_METHOD
-- Sets the FRP authentication method. If set to `token`, you must also provide `FRP_AUTH_TOKEN`. If left blank, no authentication is used.  
-- **Possible Values**: `jws` / `token` / (empty) 
-- **Default Value**: `jws`
-
-
-
-### FRP_AUTH_TOKEN
-- When `FRP_AUTH_METHOD=token`, specifies the token for server communication.  
-- **Possible Values**: Any non-empty string  
-- **Default Value**: None 
-
-
-
-### TOKEN_MAX_AGE
-- Sets the maximum valid duration for the token (in seconds).  
-- **Possible Values**: Any integer (in seconds)  
-- **Default Value**: `31536000` (365 days)
-
-
-
-### MARKET_PROVIDER
-- Specifies the backend domain used by the application marketplace (Market). Choose an appropriate domain for optimal network access.  
-- **Possible Values**: 
-  - `appstore-server-prod.bttcdn.com` / 
-  - `appstore-china-server-prod.api.jointerminus.cn`  
-- **Default Value**: `appstore-server-prod.bttcdn.com`
-
-
-
-### TERMINUS_CERT_SERVICE_API
-- Specifies the endpoint for the Olares HTTPS certificate service. For better connectivity within mainland China, use `https://terminus-cert.api.jointerminus.cn`.  
-- **Possible Values**:
+### `TERMINUS_CERT_SERVICE_API`
+Specifies the endpoint for the Olares HTTPS certificate service.
+- **Valid values**:
   - `https://terminus-cert.snowinning.com`
-  - `https://terminus-cert.api.jointerminus.cn`
-- **Default Value**: `https://terminus-cert.snowinning.com`
+  - `https://terminus-cert.api.jointerminus.cn` (Recommended for mainland China users with better connectivity)
+- **Default**: `https://terminus-cert.snowinning.com`
 
 
 
-### TERMINUS_DNS_SERVICE_API
-- Specifies the endpoint for the Olares DNS service. For better connectivity within mainland China, use `https://terminus-dnsop.api.jointerminus.cn`.  
-- **Possible Values**:
+### `TERMINUS_DNS_SERVICE_API`
+Specifies the endpoint for the Olares DNS service.  
+- **Valid values**:
   - `https://terminus-dnsop.snowinning.com`
-  - `https://terminus-dnsop.api.jointerminus.cn`
-- **Default Value**: `https://terminus-dnsop.snowinning.com`
+  - `https://terminus-dnsop.api.jointerminus.cn` (Recommended for mainland China users with better connectivity)
+- **Default**: `https://terminus-dnsop.snowinning.com`
 
-
-
-### DID_GATE_URL
-- Specifies the endpoint for the DID gateway. For better connectivity within mainland China, use `https://did-gate-v3.api.jointerminus.cn/`.  
-- **Possible Values**:
+### `DID_GATE_URL`
+Specifies the endpoint for the DID gateway.
+- **Valid values**:
   - `https://did-gate-v3.bttcdn.com/`
-  - `https://did-gate-v3.api.jointerminus.cn/`
-- **Default Value**: `https://did-gate-v3.bttcdn.com/`
+  - `https://did-gate-v3.api.jointerminus.cn/` (Recommended for mainland China users with better connectivity)
+- **Default**: `https://did-gate-v3.bttcdn.com/`
 
-
-
-### OLARES_SPACE_URL
-- Specifies the endpoint for the Olares Space service. For better connectivity within mainland China, use `https://cloud-api.api.jointerminus.cn/`.  
-- **Possible Values**:
+### `OLARES_SPACE_URL`
+Specifies the endpoint for the Olares Space service. 
+- **Valid values**:
   - `https://cloud-api.bttcdn.com/`
-  - `https://cloud-api.api.jointerminus.cn/`
-- **Default Value**: `https://cloud-api.bttcdn.com/`
+  - `https://cloud-api.api.jointerminus.cn/`  (Recommended for mainland China users with better connectivity)
+- **Default**: `https://cloud-api.bttcdn.com/`
 
-
-
-### FIREBASE_PUSH_URL
-- Specifies the endpoint for Firebase push services. For better connectivity within mainland China, use `https://firebase-push-test.api.jointerminus.cn/v1/api/push`.  
-- **Possible Values**:
+### `FIREBASE_PUSH_URL`
+Specifies the endpoint for Firebase push services.
+- **Valid values**:
   - `https://firebase-push-test.bttcdn.com/v1/api/push`
-  - `https://firebase-push-test.api.jointerminus.cn/v1/api/push`
-- **Default Value**: `https://firebase-push-test.bttcdn.com/v1/api/push`
+  - `https://firebase-push-test.api.jointerminus.cn/v1/api/push`  (Recommended for mainland China users with better connectivity)
+- **Default**: `https://firebase-push-test.bttcdn.com/v1/api/push`
 
-
-
-### FRP_LIST_URL
-- Specifies the endpoint for the Olares FRP information service. For better connectivity within mainland China, use `https://terminus-frp.api.jointerminus.cn`.  
-- **Possible Values**:
+### `FRP_LIST_URL`
+Specifies the endpoint for the Olares FRP information service.
+- **Valid values**:
   - `https://terminus-frp.snowinning.com`
-  - `https://terminus-frp.api.jointerminus.cn`
-- **Default Value**: `https://terminus-frp.snowinning.com`
+  - `https://terminus-frp.api.jointerminus.cn`  (Recommended for mainland China users with better connectivity)
+- **Default**: `https://terminus-frp.snowinning.com`
 
-
-
-### TAILSCALE_CONTROLPLANE_URL
-- Specifies the endpoint for the Olares Tailscale control-plane service. For better connectivity within mainland China, use `https://controlplane.api.jointerminus.cn`.  
-- **Possible Values**:
+### `TAILSCALE_CONTROLPLANE_URL`
+Specifies the endpoint for the Olares Tailscale control-plane service.
+- **Valid values**:
   - `https://controlplane.snowinning.com`
-  - `https://controlplane.api.jointerminus.cn`
-- **Default Value**: `https://controlplane.snowinning.com`
+  - `https://controlplane.api.jointerminus.cn`  (Recommended for mainland China users with better connectivity)
+- **Default**: `https://controlplane.snowinning.com`

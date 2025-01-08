@@ -328,21 +328,22 @@ const side = {
 
   "/developer/": [
   {
-    text: "Installing Olares",
+    text: "Olares installation",
     link: "/developer/install/",
     items: [
       {
         text: "Installation overview",
         link: "/developer/install/installation-overview",
+        collapsed: true,
       },
-      {
-        text: "Installation process",
-        link: "/developer/install/installation-process",
-      },
-      {
-        text: "Olares Home",
-        link: "/developer/install/olares-home",
-      },
+    {
+      text: "Installation breakdown",
+      link: "/developer/install/installation-process",
+    },
+    {
+      text: "Olares Home",
+      link: "/developer/install/olares-home",
+    },
       {
         text: "Environment variables",
         link: "/developer/install/environment-variables",
@@ -376,12 +377,9 @@ const side = {
       ],
     },
     {
-      text: "Developing Olares App",
+      text: "Develop Olares app",
+      link: "/developer/develop/",
       items: [
-        {
-          text: "Overview",
-          link: "/developer/develop/",
-        },
         {
           text: "Tutorial",
           collapsed: true,
@@ -392,20 +390,20 @@ const side = {
               link: "/developer/develop/tutorial/devbox",
             },
             {
-              text: "Create Your First Apps",
+              text: "Create your first app",
               collapsed: true,
               link: "/developer/develop/tutorial/note/",
               items: [
                 {
-                  text: "1. Create App",
+                  text: "1. Create app",
                   link: "/developer/develop/tutorial/note/create",
                 },
                 {
-                  text: "2. Develop Backend",
+                  text: "2. Develop backend",
                   link: "/developer/develop/tutorial/note/backend",
                 },
                 {
-                  text: "3. Develop Frontend",
+                  text: "3. Develop frontend",
                   link: "/developer/develop/tutorial/note/frontend",
                 },
               ],
@@ -413,11 +411,11 @@ const side = {
           ],
         },
         {
-          text: "Application Package",
+          text: "Application package",
           collapsed: true,
           items: [
             {
-              text: "Application Chart",
+              text: "Application chart",
               link: "/developer/develop/package/chart",
             },
             {
@@ -429,11 +427,11 @@ const side = {
               link: "/developer/develop/package/model",
             },
             {
-              text: "Recommend",
+              text: "Recommendation",
               link: "/developer/develop/package/recommend",
             },
             {
-              text: "Helm Extension",
+              text: "Helm extension",
               link: "/developer/develop/package/extension",
             },
           ],
@@ -447,7 +445,7 @@ const side = {
               link: "/developer/develop/advanced/terminus-info",
             },
             {
-              text: "Service Provider",
+              text: "Service provider",
               link: "/developer/develop/advanced/provider",
             },
             {
@@ -473,7 +471,7 @@ const side = {
               link: "/developer/develop/advanced/websocket",
             },
             {
-              text: "File Upload",
+              text: "File upload",
               link: "/developer/develop/advanced/file-upload",
             },
             // {
@@ -500,21 +498,17 @@ const side = {
         },
 
         {
-          text: "Submit Application",
+          text: "Submit application",
           collapsed: true,
           link: "/developer/develop/submit/",
         },
       ],
     },
     {
-      text: "Contributing To Olares",
+      text: "Contribute to Olares",
       items: [
         {
-          text: "Olares",
-          link: "/developer/contribute/olares",
-        },
-        {
-          text: "Develop System App",
+          text: "Develop system app",
           collapsed: true,
 
           items: [
@@ -553,7 +547,7 @@ export const en = defineConfig({
 
     nav: [
       { text: "Manual", link: "/manual/docs-home" },
-      { text: "Developer", link: "/developer/develop/" },
+      { text: "Developer Guide", link: "/developer/install/" },
     ],
 
     sidebar: side,

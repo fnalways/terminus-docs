@@ -1,85 +1,87 @@
-# Olares installation
+# Olares installation overview
 
-This document provides a high-level look at how Olares is installed, focusing on its overall architecture and core components.
+This document provides a high-level overview of the Olares installation process, focusing on its overall architecture and core components. It is intended for system administrators and developers who need a foundational understanding of how Olares operates and is installed.
 
-Typically, when you start the installation using the one-click installation script (`install.sh`), you first install `olares-cli`, a command-line tool designed for installing and maintaining the Olares cluster. `olares-cli` orchestrates the installation of subsequent components, which include:
-
-![Install arch](/images/developer/install/olares-install.png)
+## Three layers of Olares installation
+The Olares installation is structured into three key layers:
 
 - **Operating system layer**: Manages Linux system configurations and installs essential environment dependencies.
 - **Container orchestration layer**: Deploys the Kubernetes cluster to enable automated service management and scaling.
 - **Containerization layer**: Launches containerized core system services and user applications, providing the final runtime environment.
 
-::: tip Note
-To learn the detailed installation procedures, refer to [Olares installation process](installation-process.md)
+The installation process is managed by the `olares-cli` tool. This command-line tool orchestrates the installation, configuration, and lifecycle management of all components.
+
+![Install arch](/images/developer/install/olares-install.png)
+
+::: tip
+To understand the detailed installation process phase-by-phase, refer to [Olares installation breakdown](installation-process.md).
 :::
 
 ## Operating system layer
+The Olares installation process begins at the operating system layer, ensuring that the underlying Linux environment supports distributed storage, container runtimes, and Kubernetes cluster management.
 
-This operating system layer ensures that the underlying Linux environment supports distributed storage, container runtimes, and Kubernetes cluster management. The configuration includes core Linux system settings, file system initialization, container runtime installation, and the deployment of critical system services.
+This layer's configuration includes core Linux system settings, file system initialization, container runtime installation, and deployment of critical system services.
 
 ### Environment configuration
 
-The installation first configures the basic Linux installation environment. This includes setting up Domain Name System (DNS), Secure Shell (SSH), and Network Time Protocol (NTP) services to ensure time synchronization and remote management capabilities. Additionally, necessary dependencies such as the GNU Compiler Collection (GCC) and Network Tools (net-tools) are installed to ensure a robust runtime environment.
+The installation first configures the basic Linux installation environment. This includes setting up Domain Name System (DNS), Secure Shell (SSH), and Network Time Protocol (NTP) services to ensure time synchronization and remote management capabilities.
+
+Additionally, necessary dependencies such as the GNU Compiler Collection (GCC) and Network Tools (net-tools) are installed to ensure a robust runtime environment.
 
 ### File system configuration
 
-The root file system (rootfs) is used to store and access system core components and user data. Depending on the installation mode, Olares supports the following two file systems:
+The root file system (rootfs) is used to store and access system core components and user data. Olares supports the following two file systems based on deployment needs:
 
-- **LocalFS**: This is the default file system for Olares using the local Linux disk for storage. It is ideal for single-node deployments that require high data throughput without the need for network sharing.
+- **LocalFS** (default): Uses the local Linux disk for storage. It is ideal for single-node deployments that require high data throughput without the need for network sharing.
 
-- **JuiceFS**: JuiceFS offers a distributed file system by acting as a file system gateway. It stores file data in locally installed MinIO instances or remote storage buckets such as Amazon S3. This setup allows different storage nodes to share a unified storage view. It is ideal for multi-node cluster deployments where data needs to be accessible across multiple nodes. To install, you must either set the appropriate [environment variables](environment-variables.md#juicefs) for the installation script or use the [`olares-cli` command](./cli/olares-prepare.md#options) with JuiceFS-specific flags.
+- **JuiceFS**: Provides a distributed file system for multi-node cluster. File data are stored in locally installed MinIO instances or remote storage buckets such as Amazon S3. This setup allows different storage nodes to share a unified storage view.
 
-### Container runtime: Containerd
+  :::tip Enable JuiceFS
+  JuiceFS and MinIO are not installed by default. To enable them, set the necessary [environment variables](environment-variables.md#juicefs) or use `olares-cli` with JuiceFS-specific flags.
+  :::
 
-All core components of Olares are containerized and deployed using Containerd, a lightweight container runtime. It provides the following functionalities:
-- Container image management, which 
+### Container runtime: containerd
+Olares uses containerd, a lightweight container runtime, for containerized deployments. Its features include:
+- **Container image management**:
     - Downloads packaged container images from the Content Delivery Network (CDN)
-    - Imports them into Containerd during the environment pre-installation phase
-    - Starts the images as container processes during the formal installation phase
+    - Imports them into containerd during the "prepare" phase
+    - Starts the images as container processes during the "install" phase
+- **Container lifecycle management**: Starts, stops, restarts, and monitors containerized application services.
 
-- Container lifecycle management: Starts, stops, restarts, and monitors containerized application services.
-
-::: tip Note
-If Containerd is already installed on your machine, especially in the form of Docker, it may conflict with the container runtime in Olares. Please uninstall the existing Containerd before installing Olares.
+::: tip Compatibility issue
+If containerd is already installed on your machine (for example, as part of Docker), it may cause compatibility issues with the containerd used by Olares. Please uninstall the existing containerd before installing Olares.
 :::
 
-### System daemon service: `olaresd`
+### System daemon: olaresd
 
-`olaresd` is the system daemon for Olares, running continuously in the background as a system service. It provides system management functionalities like:
-- Automated configuration updates: Automatically detects and adjusts when IP addresses or related configuration items change.
-- Remote system management: Executes remote system operations such as Olares installation, activation, factory reset, and Wi-Fi connection through the LarePass client or command-line requests.
+olaresd is the system daemon that runs in the background, providing essential management functionalities such as:
+- **Automated configuration updates**: Automatically adjusts configurations when system changes (e.g. IP changes) are detected.
+- **Remote system management**: Executes remote system operations, such as Olares installation and activation, based on requests issued from the LarePass client or `olares-cli`.
 
 ### CUDA support
-
-To ensure local Artificial Intelligence (AI) models and applications can fully utilize the GPU performance, `olares-cli` supports installing the Compute Unified Device Architecture (CUDA) toolkit and drivers in the operating system layer. 
+To enable GPU acceleration for local AI models and applications, Olares supports the installation of the CUDA toolkit and drivers through `olares-cli`.
 
 ## Container orchestration layer
+The container orchestration layer integrates system components into an efficient runtime environment using Kubernetes.
 
-After completing the operating system configuration, the installation proceeds to the container orchestration Layer. This layer’s primary task is to integrate various system components (core services, auxiliary tools, user applications) into an organized, efficient, and scalable runtime environment. Kubernetes serves as the backbone of this layer, providing the foundational framework for automated deployment, operation, scaling, and management of multi-component services.
+### Roles of Kubernetes
+Kubernetes serves as the backbone of this layer, providing automated deployment, operation, scaling, and management of multi-component services.
 
-### Why Kubernetes?
+Compared to tools like Docker Compose or Docker Swarm, Kubernetes offers:
+- High scalability and production-grade reliability.
+- Robust community support and a rich ecosystem for integrating applications via Helm Charts, Operators, and Custom Resource Definitions (CRDs).
 
- Kubernetes is the de-facto standard for container orchestration. Compared to earlier solutions like Docker Compose or Docker Swarm, Kubernetes offers significant advantages in community support, architectural scalability, production-grade reliability, and security. Its robust ecosystem allows a vast array of system applications to be easily integrated into Olares through Helm Charts, Operators, and Custom Resource Definitions (CRDs), offering users a diverse range of options and a cloud-native experience.
+### Kubernetes options in Olares
+Olares supports the following Kubernetes setups:
+- **K3s** (default): A lightweight Kubernetes distribution optimized for resource efficiency on local hardware.
+- **Kubernetes**: The full-featured Kubernetes distribution for advanced or custom deployments.
+- **Minikube** (macOS only): A tool that sets up a single-node Kubernetes cluster, ensuring consistent features and user experience.
 
-### Kubernetes choice for Olares
+## Containerization layer
 
-Olares supports both official Kubernetes and Rancher's lightweight K3s across various Linux environments including:
+The containerization layer is where Olares' components and applications come together to provide the system's full functionality. All Olares components and user applications run within containers, with the full lifecycle managed via Kubernetes. This ensures that the system remains efficient, stable, and scalable.
 
-- Ubuntu/Debian
-- Windows Subsystem for Linux (WSL)
-- Proxmox Virtual Environment (PVE)
-- Raspberry Pi
-  
-K3s is installed by default to optimize performance and resource efficiency on local hardware. 
-
-For macOS users, Olares deploys Kubernetes through Minikube in a Linux virtual machine to ensure consistency in underlying features and user experience.
-
-## Containerization layer: the app runtime for Olares
-
-The containerization layer represents the final presentation form of the Olares system. All Olares components and user applications run within containers, with the full lifecycle managed via Kubernetes. This ensures that the system remains efficient, stable, and scalable.
-
-You can view the running containers using the ControlHub application in an environment where Olares is already installed:
+Once Olares is installed and activated, you can view the running containers through a graphical user interface provided by the Control Hub app:
 
 ![Running pods](/images/developer/install/running-pods.png)
 
