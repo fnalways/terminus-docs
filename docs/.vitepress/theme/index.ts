@@ -14,7 +14,11 @@ import mediumZoom from "medium-zoom";
 import OSTabs from "./components/OStabs.vue";
 
 const LANGUAGE_ZH_PATH = "/zh/";
+const LANGUAGE_ZH_KEY = "zh";
+const LANGUAGE_EN_KEY = "en";
+
 const LANGUAGE_LOCAL_KEY = "language";
+let isMenuChange = false;
 
 export default {
   extends: DefaultTheme,
@@ -30,17 +34,22 @@ export default {
     const route = useRoute();
     const router = useRouter();
     const { lang } = useData();
-    let isMenuChange = false;
 
     const routerRedirect = () => {
+      const startsWithZH = navigator.language.startsWith(LANGUAGE_ZH_KEY);
       const localLanguage = localStorage.getItem(LANGUAGE_LOCAL_KEY);
-      const language = localLanguage || navigator.language || "en";
 
-      if (language.startsWith("zh") && !route.path.includes(LANGUAGE_ZH_PATH)) {
+      const language = localLanguage
+        ? localLanguage
+        : startsWithZH
+        ? LANGUAGE_ZH_KEY
+        : LANGUAGE_EN_KEY;
+      const isZh = language === LANGUAGE_ZH_KEY;
+      if (isZh && !route.path.includes(LANGUAGE_ZH_PATH)) {
         router.go(`/zh${route.path}`);
         return;
       }
-      if (!language.startsWith("zh") && route.path.includes(LANGUAGE_ZH_PATH)) {
+      if (!isZh && route.path.includes(LANGUAGE_ZH_PATH)) {
         router.go(route.path.replace(LANGUAGE_ZH_PATH, "/"));
         return;
       }
@@ -54,7 +63,7 @@ export default {
       const menuDom = document.querySelector(".menu .VPMenu");
       menuDom?.addEventListener("click", (e) => {
         const target = e.target as Element;
-        const isLink = target?.classList.contains("VPLink");
+        const isLink = target.closest(".VPMenuLink");
         if (isLink) {
           isMenuChange = true;
         }
@@ -83,10 +92,8 @@ export default {
     watch(
       () => lang.value,
       (newValue) => {
-        if (isMenuChange) {
-          localStorage.setItem(LANGUAGE_LOCAL_KEY, newValue);
-          isMenuChange = false;
-        }
+        localStorage.setItem(LANGUAGE_LOCAL_KEY, newValue);
+        isMenuChange = false;
       }
     );
 
