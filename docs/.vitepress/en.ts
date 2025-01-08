@@ -540,7 +540,7 @@ const side = {
 };
 
 export const en = defineConfig({
-  lang: "/",
+  lang: "en",
   themeConfig: {
     //logo: "/icon.png",
     socialLinks: [{ icon: "github", link: "https://github.com/beclab/olares" }],
