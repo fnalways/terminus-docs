@@ -11,7 +11,7 @@ olares-cli gpu [subcommand] [options]
 ::: tip Note
 
 - By default, the Olares installation script detects your GPU hardware and CUDA drivers, then configures and enables the GPU components and services automatically.
-- Currently, only Nvidia GPUs are supported.
+- Currently, only NVIDIA GPUs are supported.
 :::
 
 ## Subcommands
@@ -37,19 +37,19 @@ olares-cli gpu [subcommand] [options]
 
 ```bash
 # Install GPU drivers and dependencies to a specific directory
-sudo olares-cli gpu install --base-dir /home/olares/.olares --version 1.11.1-rc.4
+olares-cli gpu install --base-dir /home/olares/.olares --version 1.11.1-rc.4
 
 # Enable GPU functionality
-sudo olares-cli gpu enable
+olares-cli gpu enable
 
 # View the status of GPU drivers and services
-sudo olares-cli gpu status
+olares-cli gpu status
 
 # Disable GPU functionality
-sudo olares-cli gpu disable
+olares-cli gpu disable
 
 # Uninstall GPU drivers and components
-sudo olares-cli gpu uninstall
+olares-cli gpu uninstall
 ```
 
 

@@ -11,7 +11,7 @@ olares-cli gpu [子命令][选项]
 ::: tip Note
 
 - 通常情况下，Olares 安装脚本会自动检测显卡硬件和 CUDA 驱动，并根据检测结果自动安装、启用显卡相关组件和服务。
-- 当前仅支持 Nvidia 显卡。
+- 当前仅支持 NVIDIA 显卡。
 :::
 
 ## 子命令
@@ -35,19 +35,19 @@ olares-cli gpu [子命令][选项]
 ## 使用示例
 ```bash
 # 安装指定 Olares 版本的 GPU 驱动及依赖至指定目录
-sudo olares-cli gpu install --base-dir /home/olares/.olares --version 1.11.1-rc.4
+olares-cli gpu install --base-dir /home/olares/.olares --version 1.11.1-rc.4
 
 # 启用 GPU 功能
-sudo olares-cli gpu enable
+olares-cli gpu enable
 
 # 查看 GPU 驱动和服务状态
-sudo olares-cli gpu status
+olares-cli gpu status
 
 # 禁用 GPU 功能
-sudo olares-cli gpu disable
+olares-cli gpu disable
 
 # 卸载 GPU 驱动及组件
-sudo olares-cli gpu uninstall
+olares-cli gpu uninstall
 
 ```
 
