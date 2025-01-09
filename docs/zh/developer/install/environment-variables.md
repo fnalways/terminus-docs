@@ -1,33 +1,16 @@
 # Olares 环境变量参考
 
-在大多数场景下，你只需通过一行脚本即可完成 Olares 的快速安装和使用。
-然而，为了满足更细化的安装需求，Olares 安装脚本也支持通过一系列环境变量来改变默认的配置和行为。
+Olares 提供了丰富的环境变量以满足定制化安装需求。通过修改这些变量，你可以覆盖默认安装设置，实现灵活的个性化安装配置。
 
 ## 使用示例
 
-::: tip 提示
-下文示例以 `KUBE_TYPE=k8s`（指定安装 K8S）为例，其他环境变量的用法类似。
-:::
+你可以按以下示例中的方式为安装脚本指定环境变量：
 
-- 在执行安装脚本时直接指定：
-  
-    ```bash
-    KUBE_TYPE=k8s bash cn.install.sh
-    ```
-
-- 先导出环境变量，再执行脚本：
-
-    ```bash
-    export KUBE_TYPE=k8s
-    bash install.sh
-    ```
-
-- 使用 **&&** 链式命令：
-
-    ```bash
-    export KUBE_TYPE=k8s && bash install.sh
-    ``` 
-
+```bash
+export KUBE_TYPE=k8s
+bash install.sh
+```
+该示例为安装脚本指定了 `KUBE_TYPE=k8s` 的环境变量设置，这会引导 `olares-cli` 安装完整的 Kubernetes (K8s) 而非轻量级的 K3s 版本。
 
 当然，你也可以组合多个环境变量来实现更灵活的自定义效果。例如中国大陆的用户通过`cn.olares.sh`获取的安装脚本，就是一个在默认安装脚本之上设置了一系列环境变量的脚本：
 
@@ -59,32 +42,32 @@ curl -sSfL https://olares.sh | bash
 以下列出了安装脚本所支持的全部环境变量，以及它们的默认值、可选值和说明。你可以根据具体需求进行配置。
 
 ### KUBE_TYPE
-指定要使用的 Kubernetes 发行版。如果需要完整版本的 k8s，请将其设置为 `k8s`。仅在执行 `install.sh` 时生效。  
+指定要使用的 Kubernetes 发行版。如果需要完整版本的 k8s，请将其设置为 `k8s`。
 - **可选值**: `k8s` / `k3s`  
 - **默认值**: `k3s`
 
 ### REGISTRY_MIRRORS
-设置 Docker 镜像加速地址。仅在执行 `install.sh` 时生效。  
+设置 Docker 镜像加速地址。 
   （如果不设置，则默认使用 `https://registry-1.docker.io`）  
 - **可选值**: `https://mirrors.joinolares.cn` 或其他镜像源地址  
 - **默认值**: `https://registry-1.docker.io`
 
 ### PREINSTALL
-当该值设为 `1` 时，仅完成预安装阶段（安装系统依赖）。如果未设置或留空，则完整安装 Olares。仅在执行 `install.sh` 时生效。  
+当该值设为 `1` 时，仅完成预安装阶段（安装系统依赖）。如果未设置或留空，则完整安装 Olares。
 - **可选值**: `1`  
 - **默认值**: 无
 
 
 
 ### JUICEFS
-当该值设为 `1` 时，安装 [JuiceFS](https://juicefs.com/)，默认不安装。仅在执行 `install.sh` 时生效。  
+当该值设为 `1` 时，安装 [JuiceFS](https://juicefs.com/)，默认不安装。
 - **可选值**: `1`  
 - **默认值**: 无
 
 
 
 ### TERMINUS_OS_DOMAINNAME
-在安装前预先设置域名，可跳过安装过程中的交互式提示。  
+在安装前预先设置域名，会跳过安装过程中的交互式提示。  
 - **可选值**: 任意有效域名  
 - **默认值**: 无
 
