@@ -89,7 +89,7 @@ During the installation, you may be prompted to enter your root password.
 :::info Errors during installation?
 If an error occurs during installation, use the following command to uninstall first:
 ```powershell
-olares-cli.exe olares uninstall
+wsl --unregister ubuntu
 ```
 After uninstalling, retry the installation by running the original installation command.
 :::
@@ -162,7 +162,7 @@ You can confirm that PowerShell is running as an administrator if you see "Admin
 
 If not, use one of the following methods:
 - Search for "PowerShell" in the **Start** menu, right-click it, and select **Run as administrator**.
-- Or press Win + R, type `powershell`, and press Ctrl + Shift + Enter to open PowerShell as an administrator.
+- Or press **Win** + **R**, type `powershell`, and press **Ctrl** + **Shift** + **Enter** to open PowerShell as an administrator.
 
 ### How to configure the CPU and memory for WLS?
 When installing Olares in WSL, the default memory allocation is `12GB`. But you can configure the memory before Olares installation, or adjust both memory and CPU settings after installation.
@@ -220,5 +220,5 @@ wsl -d Ubuntu
 ### How to uninstall Olares?
 Run the following command in PowerShell:
 ```powershell
-olares-cli.exe olares uninstall
+wsl --unregister ubuntu
 ```

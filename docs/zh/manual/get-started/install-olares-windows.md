@@ -58,7 +58,7 @@ Windows 设备需满足以下条件：
 1. 点击 https://cn.windows.olares.sh 下载安装脚本 `publicInstall.latest.ps1`。
 2. 执行安装脚本。
 
-   a. 以管理员身份打开 PowerShell 并导航至脚本所在文件夹。例如，如果脚本在 `Downloads` 文件夹里，则执行以下命令:
+   a. 以管理员身份打开 PowerShell 并导航至脚本所在文件夹。例如，如果脚本在 `Downloads` 文件夹里，则执行以下命令：
       ```powershell
       cd C:\Users\<YourUsername>\Downloads
       ```
@@ -86,7 +86,7 @@ Windows 设备需满足以下条件：
 :::info 安装遇到报错？
 如果安装过程中出现错误，请先执行以下命令卸载：
 ```powershell
-olares-cli.exe olares uninstall
+wsl --unregister ubuntu
 ```
 卸载完成后，重新运行安装命令进行安装。
 :::
@@ -152,7 +152,7 @@ olares-cli.exe olares uninstall
 
 如果没有看到“管理员”标识，你可以尝试以下两种方式启动 PowerShell：
 - 在开始菜单中搜索“PowerShell”，右键点击 Windows PowerShell，选择**以管理员身份运行**。
-- 按下 Win + R，输入“powershell”，然后按 Ctrl + Shift + Enter 打开管理员模式的 PowerShell。
+- 按下 **Win** + **R**，输入“powershell”，然后按 **Ctrl** + **Shift** + **Enter** 打开管理员模式的 PowerShell。
 
 ### 如何配置 WSL 的 CPU 和内存？
 在 WSL 上安装 Olares 时，默认内存分配为 `12GB`。但是，你可以在安装之前调整分配的内存大小，或在安装完成后调整内存和 CPU。
@@ -206,5 +206,5 @@ wsl -d Ubuntu
 ### 如何卸载 Olares？
 如果需要卸载 Olares，可以在 PowerShell 中运行以下命令：
 ```powershell
-olares-cli.exe olares uninstall
+wsl --unregister ubuntu
 ```

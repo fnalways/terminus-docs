@@ -51,15 +51,15 @@ Each user is automatically provided with their own personal Library as a startin
 ## Sync Library files to local
 
 1. Open LarePass on your Mac.
-2. Locate your desired Library and click <i class="material-icons">more_horiz</i> > **Sync to local**.
+2. Locate your desired Library and click <i class="material-symbols-outlined">more_horiz</i> > **Sync to local**.
 3. Select your preferred local directory, and click **Complete**.
-4. To initiate the sync, click <i class="material-icons">more_horiz</i> > **Sync now**.
+4. To initiate the sync, click <i class="material-symbols-outlined">more_horiz</i> > **Sync now**.
 
 Once synchronized, your libraries will display a green icon, indicating active two-way synchronization. Any changes made locally will automatically reflect in your synced Library.
 
 ## Sync local files to Library
 :::info
-If your permission to the Library is read-only, you cannot sync changes from the local folder to the Library. Your newly added and modified files will be read-only, indicated by a gray disabled icon <i class="material-icons">remove</i>.
+If your permission to the Library is read-only, you cannot sync changes from the local folder to the Library. Your newly added and modified files will be read-only, indicated by a gray disabled icon <i class="material-symbols-outlined">remove</i>.
 :::
 
 To sync an existing local folder on your Mac, simply create a matching Library in LarePass and move your files into the designated sync directory.
@@ -70,7 +70,7 @@ This approach allows you to maintain your current folder structure while benefit
 If you need to pause or stop synchronization for a specific Library:
 
 1. Locate the Library in LarePass.
-2. Click <i class="material-icons">more_horiz</i> > **Unsynchronized**.
+2. Click <i class="material-symbols-outlined">more_horiz</i> > **Unsynchronized**.
 
 Rest assured, this action won't delete your local files. It simply halts the two-way synchronization process.
 
@@ -81,7 +81,7 @@ To add a member in Olares, see [manage users](./manage-users.md).
 
 You can share a Library with other members within an Olares server:
 
-1. Select a Library, and click <i class="material-icons">more_horiz</i> > **Share with**.
+1. Select a Library, and click <i class="material-symbols-outlined">more_horiz</i> > **Share with**.
 2. In the dialog, select users from the dropdown menu, and click **Share to user**.
 3. Set file permissions for each user: **Read-write** or **Read-only**.
 4. Click **Close**.
@@ -100,12 +100,12 @@ If you don't want to share a Library, you could exit sharing or delete it.
 
 1. To exit a Library:
    
-   a. Select a shared Library and click <i class="material-icons">more_horiz</i> > **Exit sharing**.
+   a. Select a shared Library and click <i class="material-symbols-outlined">more_horiz</i> > **Exit sharing**.
 
    b. Click **Confirm** in the popup dialog.
 2. To delete a Library: 
 
-   a. Select a shared Library and click <i class="material-icons">more_horiz</i> > **Delete**.
+   a. Select a shared Library and click <i class="material-symbols-outlined">more_horiz</i> > **Delete**.
 
    b. Click **Confirm** in the popup dialog.
 

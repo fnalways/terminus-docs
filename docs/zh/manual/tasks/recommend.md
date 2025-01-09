@@ -49,7 +49,7 @@ Wise 中的内容推荐分为两个阶段：
 卸载推荐算法的方法：
 
 1. 在**应用市场**中进入**我的 Olares** 页面。
-2. 点击应用操作按钮旁的 <i class="material-icons">keyboard_arrow_down</i>，选择**卸载**。
+2. 点击应用操作按钮旁的 <i class="material-symbols-outlined">keyboard_arrow_down</i>，选择**卸载**。
 
 ## 常见问题
 

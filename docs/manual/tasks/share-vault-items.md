@@ -33,13 +33,13 @@ All administrators and users of an Olares cluster are automatically included in 
 ### Set administrator
 1. In Vault, navigate to the page **My team** > **Members**.
 2. Select a member from the member list. 
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Make admin**.
+3. Click <i class="material-symbols-outlined">more_horiz</i> in the top right corner, and select **Make admin**.
 4. To remove administrator privileges, select **Remove member**.
 
 ### Suspend members
 1. In Vault, navigate to the page **My team** > **Members**.
 2. Select a member from the member list.
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Suspend**.
+3. Click <i class="material-symbols-outlined">more_horiz</i> in the top right corner, and select **Suspend**.
 4. To reactivate a member, select **Unsuspend**.
 
 :::info
@@ -50,7 +50,7 @@ Suspended members retain their role but won't receive updates or make changes. R
 Shared vaults are designed for sharing data among multiple Olares users. By default, they must be created by Olares admin.
 ### Create a shared vault
 1. In Vault, navigate to the page **My team** > **Vaults**.
-2. Click <i class="material-icons">add</i> in the top right corner, and enter vault name.
+2. Click <i class="material-symbols-outlined">add</i> in the top right corner, and enter vault name.
 3. Click **Save**.
 
 ### Edit shared vault permissions
@@ -64,5 +64,5 @@ Deleting a shared vault permanently removes all associated data. Always double-c
 :::
 1. In Vault, navigate to the page **My team** > **Vaults**.
 2. Select the shared vault to view vault details.
-3. Click <i class="material-icons">more_horiz</i> in the top right corner, and select **Delete**.
+3. Click <i class="material-symbols-outlined">more_horiz</i> in the top right corner, and select **Delete**.
 4. In the popup dialog, enter `DELETE` to confirm deletion.

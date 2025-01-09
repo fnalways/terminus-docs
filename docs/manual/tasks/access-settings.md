@@ -34,7 +34,7 @@ For community applications, you can quickly obtain a simple and memorable URL by
 1. In Olares, open the Settings app from the Dock or Launchpad.
 2. Select **Application** from the left sidebar, and click **Jellyfin** on the right to view application details.
 3. Go to **Entrances** > **Set up endpoint**. You can see the default Route ID for Jellyfin, which is a combination of numbers and letters.
-4. Next to **Set custom Route ID**, click <i class="material-icons">add</i>.
+4. Next to **Set custom Route ID**, click <i class="material-symbols-outlined">add</i>.
 5. Enter a route ID that is more memorable and recognizable. For example, `jellyfin`.
 6. Click **Confirm**.
 
@@ -46,7 +46,7 @@ Instead of using the default Olares domain, you can use your own domain name to 
 1. Open the Settings app from the Dock or Launchpad.
 2. Select **Application** from the left sidebar, and click Affine on the right to view application details.
 3. Go to **Entrances** > **Set up endpoint**.
-4. Next to **Set custom domain**, click <i class="material-icons">add</i>.
+4. Next to **Set custom domain**, click <i class="material-symbols-outlined">add</i>.
 5. Enter your custom domain, and click **Confirm**. For example, `hello.coffee`.
 6. Click **Activation**.
 7. Follow the prompt to add a CNAME record on your domain hosting website.

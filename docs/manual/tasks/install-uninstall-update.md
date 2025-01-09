@@ -78,7 +78,7 @@ After installation, users can access the cluster-scoped application's services b
 ### Uninstall from Market
 1. Open the Market app from the Dock or Launchpad.
 2. Click **My Olares** from the left sidebar to view all installed apps.
-3. Click <i class="material-icons">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
+3. Click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
 
 ### Uninstall from Launchpad
 1. In Olares, click Launchpad icon in the Dock to display all installed apps.

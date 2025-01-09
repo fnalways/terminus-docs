@@ -102,7 +102,7 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 
 1. 在 LarePass 应用中创建新组织。
 
-   a. 在账户创建页面，点击右上角的 <i class="material-icons">display_settings</i>，进入**高级账户创建**页面。
+   a. 在账户创建页面，点击右上角的 <i class="material-symbols-outlined">display_settings</i>，进入**高级账户创建**页面。
 
    b. 前往**组织 Olares ID** >**创建新组织**。与你域名对应的组织会自动显示在列表中。
 
@@ -145,7 +145,7 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 
 要使用该域名，需要在组织下申请一个 Olares ID。
 
-1. 在 LarePass 应用的账户创建页面，点击右上角的 <i class="material-icons">display_settings</i> 进入**高级账户创建**页面。
+1. 在 LarePass 应用的账户创建页面，点击右上角的 <i class="material-symbols-outlined">display_settings</i> 进入**高级账户创建**页面。
 2. 点击**组织 Olares ID** >**加入已有组织**。
 3. 输入组织域名（即已验证的自定义域名），然后点击**继续**。如果出现错误，请检查域名拼写是否正确，并确认在 Olares Space 中的域名规则已正确配置。
 4. 为成员申请 VC。
@@ -160,21 +160,29 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 ## 第 6 步：安装并激活 Olares
 最后，你只需安装并激活 Olares，即可通过自定义域名进行访问。
 
-::: tip 注意
-以下示例展示了如何在安装脚本中通过环境变量预先设置域名和用户名。你也可以不配置环境变量，直接使用单行脚本进行安装；这种情况下，你需要在安装过程中手动填写域名和用户名。关于所有支持平台的详细安装说明，请参阅[安装指南](../get-started/install-olares.md)。
+::: tip 使用添加环境变量的脚本安装
+以下示例展示了如何在安装脚本中通过环境变量预先设置域名和用户名。
+
+你也可以不配置环境变量，直接使用单行脚本进行安装。这种情况下，你需要在安装过程中手动输入域名和 Olares ID 前缀。
+
+关于支持平台的详细安装说明，请参阅[安装指南](../get-started/install-olares.md)。
 :::
+
+<tabs>
+<template #Linux-and-macOS>
 
 1. 在终端中，通过带有指定环境变量的安装脚本来启动安装：
 
-    ```bash
+    ```bash {1,2}
     export TERMINUS_OS_DOMAINNAME=xxxx.cloud \
       && export TERMINUS_OS_USERNAME=justtest1953 \ 
-      && curl -sSfL https://olares.sh | bash -
+      && curl -sSfL https://cn.olares.sh | bash -
     ```
     - `export TERMINUS_OS_DOMAINNAME=xxxx.cloud`: 指定你的自定义域名，请将 `xxxx.cloud` 替换为实际的域名。
-    - `export TERMINUS_OS_USERNAME=justtest1953`: 指定你的用户名（本地名称），请将 `justtest1953` 替换为你的 Olares ID 前缀。
+    - `export TERMINUS_OS_USERNAME=justtest1953`: 指定你的 Olares ID 前缀，请将 `justtest1953` 替换为实际的前缀。
 
 2. 等待安装完成。根据你的网络情况，安装可能需要 20–30 分钟。安装完成后，终端会显示向导地址和登录凭证，例如：
+
     ```bash
     2024-12-17T21:00:58.086+0800        Olares is running at:
     2024-12-17T21:00:58.086+0800        http://192.168.1.16:30180
@@ -187,6 +195,80 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
     ```
 
 3. 在浏览器中打开上述向导地址，并按照屏幕提示完成激活。
+
+</template>
+<template #Windows>
+
+:::warning 需配置系统环境
+在进行以下操作之前，请确保已正确完成 Windows 环境的配置。
+
+如果环境未正确设置，安装脚本可能无法正常运行。有关详细说明，请参阅 [Windows 安装指南](../get-started/install-olares.md)。
+:::
+
+1. 点击 https://cn.windows.olares.sh 下载安装脚本 `publicInstall.latest.ps1`。
+
+2. 使用记事本打开 `publicInstall.latest.ps1`，编辑下列环境变量：
+
+   ```bash {16,17}
+   $env:FRP_ENABLE = "1"
+   $env:FRP_SERVER = "http://frp-bj.api.jointerminus.cn"
+   $env:FRP_PORT = "0"
+   $env:JUICEFS = "0"
+   $env:FRP_AUTH_METHOD = "jws"
+   $env:REGISTRY_MIRRORS = "https://mirrors.joinolares.cn"
+   $env:DOWNLOAD_CDN_URL = "https://cdn.joinolares.cn"
+   $env:MARKET_PROVIDER = "appstore-china-server-prod.api.jointerminus.cn"
+   $env:TERMINUS_CERT_SERVICE_API = "https://terminus-cert.api.jointerminus.cn"
+   $env:TERMINUS_DNS_SERVICE_API = "https://terminus-dnsop.api.jointerminus.cn"
+   $env:DID_GATE_URL = "https://did-gate-v3.api.jointerminus.cn/"
+   $env:OLARES_SPACE_URL = "https://cloud-api.api.jointerminus.cn/"
+   $env:FIREBASE_PUSH_URL = "https://firebase-push-test.api.jointerminus.cn/v1/api/push"
+   $env:FRP_LIST_URL = "https://terminus-frp.api.jointerminus.cn/"
+   $env:TAILSCALE_CONTROLPLANE_URL = "https://controlplane.api.jointerminus.cn"
+   $env:TERMINUS_OS_DOMAINNAME = "xxxx.cloud"
+   $env:TERMINUS_OS_USERNAME= "justtest1953"
+   ```
+   - `$env:TERMINUS_OS_DOMAINNAME=xxxx.cloud`: 指定你的自定义域名，请将 `xxxx.cloud` 替换为实际的域名。
+   - `$env:TERMINUS_OS_USERNAME=justtest1953`: 指定你的 Olares ID 前缀，请将 `justtest1953` 替换为实际的前缀。
+
+3. 执行安装脚本。
+
+   a. 以管理员身份打开 PowerShell 并导航至脚本所在文件夹。例如，如果脚本在 `Downloads` 文件夹里，则执行以下命令：
+   ```powershell
+   cd C:\Users\<YourUsername>\Downloads
+   ```
+
+   b. 进入正确的文件目录后，执行以下命令：
+   ```powershell
+   .\publicInstall.latest.ps1
+   ```
+
+4. 出现安全提示时，输入 `R` 并按下 **Enter** 以运行脚本，开始安装 Olares。
+
+   ```powershell
+   Security warning
+   Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
+   publicInstall.latest.ps1?
+   [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
+   ```
+
+5. 等待安装完成。根据你的网络情况，安装可能需要 20-30 分钟。安装完成后，终端会显示向导地址和登录凭证，例如：
+
+    ```bash
+    2024-12-17T21:00:58.086+0800        Olares is running at:
+    2024-12-17T21:00:58.086+0800        http://192.168.1.16:30180
+   
+    2024-12-17T21:00:58.086+0800        Open your browser and visit the above address
+    2024-12-17T21:00:58.086+0800        with the following credentials:
+   
+    2024-12-17T21:00:58.086+0800        Username: justtest1953
+    2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
+    ```
+
+6. 在浏览器中打开上述向导地址，并按照屏幕提示完成激活。
+
+</template>
+</tabs>
 
 完成上述步骤后，你即可通过自定义域名访问安装好的 Olares。
 

@@ -19,7 +19,7 @@ Visit the [official page](https://www.olares.xyz/larepass) for download options.
 <tabs>
 <template #Olares,-LarePass-desktop,-or-browser-extension>
 
-1. In Vault, click <i class="material-icons">add</i> in the top right corner.
+1. In Vault, click <i class="material-symbols-outlined">add</i> in the top right corner.
 2. Select **Authenticator** as the item type, and click **Create**.
 3. Fill in the required fields:
     - Item name: enter a descriptive name or the service. For example, `GitHub`.
@@ -30,11 +30,11 @@ Visit the [official page](https://www.olares.xyz/larepass) for download options.
 <template #LarePass-mobile>
 
 1. Open LarePass on your device, and navigate to the **Vault** page within the app.
-2. Click <i class="material-icons">add</i> in the top right corner.
+2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
 3. Select **Authenticator** as the item type, and click **Create**.
 4. Fill in the required fields:
     - Item name: enter a descriptive name or the service. For example, `GitHub`.
-    - One-time password: Click <i class="material-icons">qr_code</i> in the text field to scan the QR code.
+    - One-time password: Click <i class="material-symbols-outlined">qr_code</i> in the text field to scan the QR code.
 5. Click **Save**.
 </template>
 </tabs>

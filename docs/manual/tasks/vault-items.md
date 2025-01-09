@@ -71,7 +71,7 @@ To add a vault item:
 <template #Olares>
 
 1. Open the Vault app from the Dock or Launchpad.
-2. Click <i class="material-icons">add</i> in the top right corner.
+2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
 3. Select a type, such as **Website / App** for storing account details, and click **Create**.
 
    ![Add vault item](/images/manual/tasks/add-vault-item.png)
@@ -83,7 +83,7 @@ To add a vault item:
 <template #LarePass-desktop-or-mobile>
 
 1. Open LarePass on your device, and navigate to the **Vault** page within the app.
-2. Click <i class="material-icons">add</i> in the top right corner.
+2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
 3. Select a type, such as **Website / App** for storing account details, and click **Create**.
 4. Fill in the required fields like item name, Username, Password, and URL.
 5. Click **Save** to create the new vault item.
@@ -99,7 +99,7 @@ To easily access LarePass, you can pin the extension to your toolbar.
 :::
 1. Click the LarePass icon in your toolbar or extension menu to open LarePass on the right side of your browser window.
 2. Navigate to the **Vault** page within the extension.
-3. Click <i class="material-icons">add</i> in the top right corner.
+3. Click <i class="material-symbols-outlined">add</i> in the top right corner.
 4. Select a type, such as **Website / App** for storing account details, and click **Create**.
 5. Fill in the required fields like item name, Username, Password, and URL. The URL field is automatically populated with the current web address.
 6. Click **Save** to create the new vault item.
@@ -119,7 +119,7 @@ In the edit mode, you can:
 
 To edit a vault item:
 1. In Vault, select the vault item you need to edit. 
-2. In its details window or page, click <i class="material-icons">edit_note</i> in the top right corner to enter edit mode.
+2. In its details window or page, click <i class="material-symbols-outlined">edit_note</i> in the top right corner to enter edit mode.
 3. Make the necessary changes to the item's details.
 4. Click **Save**.
 
@@ -129,13 +129,13 @@ Important items can be marked as favorites for quick access.
 <template #Olares>
 
 1. In Vault, click the vault item to open its details window on the right.
-2. Click <i class="material-icons">star_border</i> in the top right corner to mark this item as favorite.
+2. Click <i class="material-symbols-outlined">star_border</i> in the top right corner to mark this item as favorite.
 </template>
 <template #LarePass-desktop-or-mobile>
 
 1. Open LarePass on your device, and navigate to the **Vault** page within the app.
 2. Click the vault item to navigate to its details page.
-3. Click <i class="material-icons">star_border</i> in the top right corner to mark this item as favorite.
+3. Click <i class="material-symbols-outlined">star_border</i> in the top right corner to mark this item as favorite.
 </template>
 </tabs>
 
@@ -151,4 +151,4 @@ You can use quick filters or search box to locate the vault item you need.
 * By attachment: Click on **Attachment** to display all items with attached files.
 
 ### Keyword search
-Click <i class="material-icons">search</i> to directly search for target items using keywords.
+Click <i class="material-symbols-outlined">search</i> to directly search for target items using keywords.

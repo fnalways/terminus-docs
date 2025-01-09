@@ -40,14 +40,14 @@ Olares 管理员会自动成为共享 Vault 的所有者。
 
 1. 在 Vault 中，导航到**我的团队** > **成员**页面。
 2. 从成员列表中选择一个成员。
-3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择**设为管理员**。
+3. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>，选择**设为管理员**。
 4. 若需移除管理员权限，选择**移除成员**。
 
 ### 暂停成员
 
 1. 在 Vault 中，导航到**我的团队** > **成员**页面。
 2. 从成员列表中选择一个成员。
-3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择**暂停**。
+3. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>，选择**暂停**。
 4. 若需重新激活成员，选择**取消暂停**。
 
 :::tip 提示
@@ -61,7 +61,7 @@ Olares 管理员会自动成为共享 Vault 的所有者。
 ### 创建共享 Vault
 
 1. 在 Vault 中，导航到**我的团队** > **Vaults** 页面。
-2. 点击右上角的 <i class="material-icons">add</i>，输入 Vault 名称。
+2. 点击右上角的 <i class="material-symbols-outlined">add</i>，输入 Vault 名称。
 3. 点击**保存**。
 
 ### 编辑共享 Vault 权限
@@ -78,5 +78,5 @@ Olares 管理员会自动成为共享 Vault 的所有者。
 
 1. 在 Vault 中，导航到**我的团队** > **Vaults** 页面。
 2. 选择共享 Vault 查看其详情。
-3. 点击右上角的 <i class="material-icons">more_horiz</i>，选择**删除**。
+3. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>，选择**删除**。
 4. 在弹出对话框中输入 `DELETE` 以确认删除。

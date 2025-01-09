@@ -78,7 +78,7 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 <tabs>
 <template #Olares>
 
-1. 打开 **Vault**，在右上角点击 <i class="material-icons">add</i>。
+1. 打开 **Vault**，在右上角点击 <i class="material-symbols-outlined">add</i>。
 2. 选择一种类型（例如**网站/应用**），点击**创建**。
 
    ![Add vault item](/images/manual/tasks/add-vault-item.png)
@@ -94,7 +94,7 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 <template #LarePass-桌面端、移动端>
 
 1. 在设备上打开 **LarePass**，导航到应用中的 **Vault** 页面。
-2. 点击右上角的 <i class="material-icons">add</i>。
+2. 点击右上角的 <i class="material-symbols-outlined">add</i>。
 3. 选择一种类型（例如**网站/应用**），点击**创建**。
 4. 填写必填字段，例如项目名称、用户名、密码和 URL。
 5. 点击**保存**创建新的 Vault 项目。
@@ -112,7 +112,7 @@ LarePass 浏览器扩展目前仅支持 Google Chrome。请访问 [LarePass 页�
 
 1. 点击浏览器工具栏或扩展菜单中的 LarePass 图标，在浏览器窗口右侧打开 LarePass。
 2. 导航到扩展中的 **Vault** 页面。
-3. 点击右上角的 <i class="material-icons">add</i>。
+3. 点击右上角的 <i class="material-symbols-outlined">add</i>。
 4. 选择一种类型（例如**网站/应用**），点击**创建**。
 5. 填写必填字段，例如项目名称、用户名、密码和 URL。URL 字段会自动填充为当前网页地址。
 6. 点击**保存**创建新的 Vault 项目。
@@ -136,7 +136,7 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 **编辑 Vault 项目**：
 
 1. 在 Vault 中选择需要编辑的项目。
-2. 在项目的详情窗口或页面中，点击右上角的 <i class="material-icons">edit_note</i> 进入编辑模式。
+2. 在项目的详情窗口或页面中，点击右上角的 <i class="material-symbols-outlined">edit_note</i> 进入编辑模式。
 3. 对项目详情进行必要的修改。
 4. 点击**保存**。
 
@@ -148,7 +148,7 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 <template #Olares>
 
 1. 在 Vault 中，点击项目，右侧打开其详情窗口。
-2. 点击右上角的 <i class="material-icons">star_border</i> 将该项目标记为收藏。
+2. 点击右上角的 <i class="material-symbols-outlined">star_border</i> 将该项目标记为收藏。
 
 </template>
 
@@ -156,7 +156,7 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 
 1. 在设备上打开 LarePass，导航到应用中的 **Vault** 页面。
 2. 点击项目以进入其详情页面。
-3. 点击右上角的 <i class="material-icons">star_border</i> 将该项目标记为收藏。
+3. 点击右上角的 <i class="material-symbols-outlined">star_border</i> 将该项目标记为收藏。
 
 </template>
 </tabs>
@@ -175,4 +175,4 @@ LarePass 浏览器扩展不支持编辑 Vault 项目。如需完整编辑功能�
 
 ### 关键词搜索
 
-点击 <i class="material-icons">search</i> 使用关键词直接搜索目标项目。
+点击 <i class="material-symbols-outlined">search</i> 使用关键词直接搜索目标项目。

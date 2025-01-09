@@ -11,7 +11,7 @@ outline: [2, 3]
 你可以通过 **Olares Space** 监控 Olares 的系统状态：
 
 1. 在 LarePass 应用中，进入**设置** > **集成**。
-2. 点击右上角的 <i class="material-icons">add</i>，将 Olares Space 账号与 Olares 设备关联，授权 Olares Space 访问系统数据。
+2. 点击右上角的 <i class="material-symbols-outlined">add</i>，将 Olares Space 账号与 Olares 设备关联，授权 Olares Space 访问系统数据。
 3. 登录 [**Olares Space**](https://space.olares.xyz/)。
 4. 在 **Olares** 页面的系统面板中查看**存储使用量**和**流量消耗**。
 
@@ -25,7 +25,7 @@ outline: [2, 3]
 
 云端 Olares 用户可以通过添加工作节点来提升性能：
 
-1. 点击右上角的 <i class="material-icons">more_horiz</i>，选择**添加工作节点**。
+1. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>，选择**添加工作节点**。
 2. 在引导页面选择所需的硬件配置。
 3. 查看存储和流量费用。
 4. 确认订单并提交。
@@ -34,7 +34,7 @@ outline: [2, 3]
 
 如果不再需要 Olares 服务，可以按以下步骤销毁实例：
 
-1. 点击右上角的 <i class="material-icons">more_horiz</i>。
+1. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>。
 2. 选择**销毁 Olares**。
 3. 确认操作并结算使用费用：
    - 如果符合退款条件，退款金额将返还到账户余额
