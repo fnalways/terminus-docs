@@ -1,12 +1,15 @@
 # Olares Home
 
-Olares Home 是 Olares 的默认安装目录，用于存储镜像、日志、依赖组件以及版本管理数据。 
+Olares Home 是 Olares 的默认安装目录，用于存储镜像、日志、依赖组件以及版本管理数据。本文将带你了解 Olares Home 的结构，更全面掌握 Olares 安装过程。
 
 ## 路径及设置
 
-Olares Home 默认路径为 `~/.olares`。你可以通过以下方式自定义其位置：
-- 设置环境变量 `OLARES-HOME`。
-- 使用 `olares-cli` 提供的 `--base-dir` 命令更改路径。
+默认情况下，Olares Home 位于 `~/.olares`。你可以执行 `olares-cli` 命令时配合 `--base-dir` 选项更改其位置。例如：
+
+```bash
+# 指定所有下载组件的存储目录
+olares-cli olares download component --base-dir /custom/path
+```
 
 ## 目录结构
 
