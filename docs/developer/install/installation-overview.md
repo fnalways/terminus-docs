@@ -59,13 +59,13 @@ olaresd is the system daemon that runs in the background, providing essential ma
 - **Remote system management**: Executes remote system operations, such as Olares installation and activation, based on requests issued from the LarePass client or `olares-cli`.
 
 ### CUDA support
-To enable GPU acceleration for local AI models and applications, Olares supports the installation of the CUDA toolkit and drivers through `olares-cli`.
+To enable GPU acceleration for local AI models and applications, Olares supports automatic installation of the CUDA toolkit and drivers through [`olares-cli`](./cli/gpu.md). 
 
 ## Container orchestration layer
 The container orchestration layer integrates system components into an efficient runtime environment using Kubernetes.
 
 ### Roles of Kubernetes
-Kubernetes serves as the backbone of this layer, providing automated deployment, operation, scaling, and management of multi-component services.
+Kubernetes serves as the backbone of the container orchestration layer, providing automated deployment, operation, scaling, and management of multi-component services.
 
 Compared to tools like Docker Compose or Docker Swarm, Kubernetes offers:
 - High scalability and production-grade reliability.
