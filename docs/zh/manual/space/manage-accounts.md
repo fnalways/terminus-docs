@@ -26,7 +26,7 @@ Olares Space 使用去中心化身份（DID）或 Olares ID 进行身份验证�
 或者：
 
 1. 从菜单中选择**切换账号**。
-2. 点击任意列出账号旁边的 <i class="material-icons">logout</i> 图标。
+2. 点击任意列出账号旁边的 <i class="material-symbols-outlined">logout</i> 图标。
 
 ## 管理多个账号
 

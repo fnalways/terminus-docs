@@ -63,7 +63,7 @@ Olares Space 是 Olares 的云托管服务，与 LarePass 和 Olares 共享相�
 
 1. 打开 LarePass 应用，进入**设置** > **集成**。
 2. 点击 Olares Space 卡片。
-3. 点击右上角的 <i class="material-icons">more_horiz</i>，然后点击**删除**。
+3. 点击右上角的 <i class="material-symbols-outlined">more_horiz</i>，然后点击**删除**。
 
 ## 了解更多
 

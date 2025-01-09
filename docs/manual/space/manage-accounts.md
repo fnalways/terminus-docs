@@ -27,7 +27,7 @@ To log out of your account:
 Alternatively, you can:
 
 1.	Choose **Switch Account** from the menu.
-2.	Click <i class="material-icons">logout</i> next to any listed account.
+2.	Click <i class="material-symbols-outlined">logout</i> next to any listed account.
 
 
 ## Manage multiple accounts 

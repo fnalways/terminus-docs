@@ -54,22 +54,22 @@ outline: [2, 3]
 
 每位用户都会自动获得一个个人库作为起点。要创建新库：
 
-1. 在**同步盘**下的左侧边栏中，点击 <i class="material-icons">add_circle</i> 打开**新建库**对话框。
+1. 在**同步盘**下的左侧边栏中，点击 <i class="material-symbols-outlined">add_circle</i> 打开**新建库**对话框。
 2. 输入库名称并点击**创建**。
 
 ## 将库文件同步到本地
 
 1. 在 Mac 上打开 LarePass。
-2. 找到目标库，点击 <i class="material-icons">more_horiz</i> > **同步到本地**。
+2. 找到目标库，点击 <i class="material-symbols-outlined">more_horiz</i> > **同步到本地**。
 3. 选择首选的本地目录并点击 **完成**。
-4. 要启动同步，点击 <i class="material-icons">more_horiz</i> > **立即同步**。
+4. 要启动同步，点击 <i class="material-symbols-outlined">more_horiz</i> > **立即同步**。
 
 同步完成后，库将显示绿色图标，表示处于双向同步状态。任何本地更改都会自动反映在同步的库中。
 
 ## 将本地文件同步到库
 
 :::tip 提示
-如果你对库只有只读权限，就无法将本地文件夹的更改同步到资料库。新添加和修改的文件将为只读状态，用灰色禁用图标 <i class="material-icons">remove</i> 表示。
+如果你对库只有只读权限，就无法将本地文件夹的更改同步到资料库。新添加和修改的文件将为只读状态，用灰色禁用图标 <i class="material-symbols-outlined">remove</i> 表示。
 :::
 
 要同步 Mac 上的现有本地文件夹，只需在 LarePass 中创建一个匹配的库，并将文件移动到指定的同步目录中。
@@ -81,7 +81,7 @@ outline: [2, 3]
 如果需要暂停或停止特定库的同步：
 
 1. 在 LarePass 中找到该库。
-2. 点击 <i class="material-icons">more_horiz</i> > **取消同步**。
+2. 点击 <i class="material-symbols-outlined">more_horiz</i> > **取消同步**。
 
 此操作不会删除本地文件，只是停止双向同步过程。
 
@@ -93,7 +93,7 @@ outline: [2, 3]
 
 你可以与 Olares 服务器中的其他成员共享库：
 
-1. 选择一个库，点击 <i class="material-icons">more_horiz</i> > **共享**。
+1. 选择一个库，点击 <i class="material-symbols-outlined">more_horiz</i> > **共享**。
 2. 在对话框中，从下拉菜单中选择用户，点 **共享用户**。
 3. 为每位用户设置文件权限：**读写**或**只读**。
 4. 点击**关闭**。
@@ -115,12 +115,12 @@ outline: [2, 3]
 
 1. 要退出库：
    
-   a. 选择一个共享库，点击 <i class="material-icons">more_horiz</i> > **退出共享**。
+   a. 选择一个共享库，点击 <i class="material-symbols-outlined">more_horiz</i> > **退出共享**。
 
    b. 在弹出对话框中点击**确认**。
 2. 要删除库：
 
-   a. 选择一个共享库，点击 <i class="material-icons">more_horiz</i> > **删除**。
+   a. 选择一个共享库，点击 <i class="material-symbols-outlined">more_horiz</i> > **删除**。
 
    b. 在弹出对话框中点击**确认**。
 

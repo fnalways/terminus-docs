@@ -6,7 +6,7 @@ Operations in Files are essentially the same as in other file managers. This pag
 1. Open the Files app from the Dock or Launchpad on Olares.
 2. Upload multiple files or folders using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
-   - Click <i class="material-icons">drive_folder_upload</i> in the top right corner. 
+   - Click <i class="material-symbols-outlined">drive_folder_upload</i> in the top right corner. 
    - Right-click in an empty space and select from the context menu.
 
 :::info
@@ -41,9 +41,9 @@ You can easily find files in the Files app using desktop search.
 :::tip
 Full-text search is available for the `/Documents/` directory in **Drive**, allowing you to search within file contents. For other directories, you can search files using their file names.
 :::
-1. Click <i class="material-icons">search</i>in the Dock to open the search window.
+1. Click <i class="material-symbols-outlined">search</i>in the Dock to open the search window.
 2. In the search field, enter keywords related to the file you're looking for.
-3. Use arrow keys <i class="material-icons">arrow_upward</i><i class="material-icons">arrow_downward</i> to select the search scope: **Drive** or **Sync**, and press **Enter** to see search results.
+3. Use arrow keys <i class="material-symbols-outlined">arrow_upward</i><i class="material-symbols-outlined">arrow_downward</i> to select the search scope: **Drive** or **Sync**, and press **Enter** to see search results.
 
 ![Search](/images/manual/tasks/files-search.png){width="90%""}
 ## Delete files
@@ -53,7 +53,7 @@ Deleted files cannot be recovered.
 1. Open the Files application from the Dock or Launchpad on Olares.
 2. Select the file(s) you want to delete and choose one of these methods:
    - Right-click and select **Delete** from the context menu.
-   - Click <i class="material-icons">more_horiz</i> in the top right corner and select **Delete**.
+   - Click <i class="material-symbols-outlined">more_horiz</i> in the top right corner and select **Delete**.
 3. Confirm the deletion in the popup window.
 
 ## Change display view

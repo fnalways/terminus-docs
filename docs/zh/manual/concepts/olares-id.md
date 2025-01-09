@@ -45,7 +45,7 @@ Olares 支持三种类型的域名：
   * 在你的社交身份与 Olares DID 之间建立加密链接
 
 :::tip 如何创建带有验证凭证（VC）的 Olares ID
-打开 LarePass，在账户创建页面的右上角点击 <i class="material-icons">display_settings</i>，在“**创建带有 VC 的 Olares ID**”下，选择**个人 Olares ID**。
+打开 LarePass，在账户创建页面的右上角点击 <i class="material-symbols-outlined">display_settings</i>，在“**创建带有 VC 的 Olares ID**”下，选择**个人 Olares ID**。
 
 目前支持通过 Google OAuth 进行身份验证。
 :::

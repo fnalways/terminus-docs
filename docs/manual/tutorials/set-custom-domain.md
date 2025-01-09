@@ -102,7 +102,7 @@ A Verifiable Credential is a digital format proof that verifies certain attribut
 
 1. Create a new organization in LarePass app.
 
-   a. On the account creation page, tap <i class="material-icons">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
+   a. On the account creation page, tap <i class="material-symbols-outlined">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
 
    b. Go to **Organization Olares ID** > **Create a new organization**. The organization for your domain will automatically show in the list. 
 
@@ -125,25 +125,26 @@ The domain rules specify how you add the members for the organization. Only memb
 1. In Olares Space, go to **Domain management**, and click **View** next to your domain.
 2. Under **Domain Invitation Rule**, select **Specified email address**, and click **Save**.
    :::tip Invitation rules
-   - Two types of rules are available:
-       - **Fixed email suffix**: Suitable for large teams who share the same corporation email domain (e.g., `@company.com`). Any email matching the specified suffix is valid to apply for Olares ID under the organization. Currently, only single suffix is supported. Must follow G-Suite format.
-       - **Specified email address**: Allows you to add members by specifying their email addresses. This option is recommended if you do not have a corporate email domain and only need to invite a small number of members to your organization. Both Gmail and G-Suite accounts are supported.
+   Two types of rules are available:
+   - **Fixed email suffix**: Suitable for large teams who share the same corporation email domain (e.g., `@company.com`). Any email matching the specified suffix is valid to apply for Olares ID under the organization. Currently, only single suffix is supported. Must follow G-Suite format.
+   - **Specified email address**: Allows you to add members by specifying their email addresses. This option is recommended if you do not have a corporate email domain and only need to invite a small number of members to your organization. Both Gmail and G-Suite accounts are supported.
    :::
 
 3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
 
    ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
+
 4. Click **Submit** to finalize the member addition. Repeat step 3 and step 4 if you want to add multiple users
 
-   :::tip Maintain member list
-   For organization admin, you can manage your organization's member list anytime through the **Domain management** page.
-   :::
+:::tip Maintain member list
+For organization admin, you can manage your organization's member list anytime through the **Domain management** page.
+:::
 
 ## Step 5: Create an Olares ID with the custom domain
 
 To use the domain, apply for an Olares ID under the organization.
 
-1. On the account creation page of LarePass app, tap <i class="material-icons">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
+1. On the account creation page of LarePass app, tap <i class="material-symbols-outlined">display_settings</i> in the top-right corner to go to the **Advanced account creation** page.
 2. Tap **Organization Olares ID** > **Join an existing organization**.
 3. Type the org domain name (the verified custom domain) and click **Continue**. If you see an error, verify if the domain name is correct and the domain rules are set properly in Olares Space.
 4. Add a VC for the member.
@@ -159,19 +160,26 @@ To use the domain, apply for an Olares ID under the organization.
 ## Step 6: Install and activate Olares
 Almost there! Now you are all set to install and activate Olares with your Olares ID. 
 
-::: tip Note
-In the following example, we preset the domain name and username using environment variables with the installation script. You can also install with the one-line script without these variables, in which case you’ll need to enter the domain and username manually. For detailed instructions on all supported platforms, please refer to our [platform-specific installation guides](../get-started/install-olares.md).
+::: tip Install with environment variables
+In the following examples, the domain name and username are preset with environment variables.
+
+For Linux environment, you can also install with the one-line script without these variables, and enter the domain and the prefix of Olares ID manually.
+
+For detailed instructions on all supported platforms, refer to [platform-specific installation guides](../get-started/install-olares.md).
 :::
 
+<tabs>
+<template #Linux-and-macOS>
+
 1. In the terminal, run the installation script with specified environment variables to start the installation:
-    
-    ```bash
+
+    ```bash {1,2}
     export TERMINUS_OS_DOMAINNAME=xxxx.cloud \
       && export TERMINUS_OS_USERNAME=justtest1953 \ 
       && curl -sSfL https://olares.sh | bash -
     ```
-  - `export TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain. Replace `xxxx.cloud` with the actual one.
-  - `export TERMINUS_OS_USERNAME=justtest1953`: Specify your username (local name). Replace `justtest1953` with the prefix of your Olares ID.
+   - `export TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain. Replace `xxxx.cloud` with the actual one.
+   - `export TERMINUS_OS_USERNAME=justtest1953`: Specify the prefix of your Olares ID. Replace `justtest1953` with the actual one.
 
 2. Wait for the installation to finish. Depending on your network, the process can take 20–30 minutes. When the installation completes, you will see the wizard URL and login credentials:
 
@@ -187,6 +195,72 @@ In the following example, we preset the domain name and username using environme
     ```
 
 3. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to complete the activation.
+
+</template>
+<template #Windows>
+
+:::warning System environment setup required
+Before proceeding with the following steps, ensure that your Windows environment is properly set up.
+
+If the setup is incomplete, the installation script will not work as expected. For detailed instructions, refer to the dedicated [installation guide for Windows](../get-started/install-olares.md).
+:::
+
+1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`.
+
+2. Open `publicInstall.latest.ps1` with Notepad, and add the environment variables to the beginning:
+
+   ```bash {1,2}
+   $env:TERMINUS_OS_DOMAINNAME = "xxxx.cloud"
+   $env:TERMINUS_OS_USERNAME= "justtest1953"
+   $env:WSL_UTF8 = 1
+   $OutputEncoding = [System.Text.Encoding]::UTF8
+   $currentPath = Get-Location
+   $architecture = $env:PROCESSOR_ARCHITECTURE
+   $downloadCdnUrlFromEnv = $env:DOWNLOAD_CDN_URL
+   $version = "1.11.1"
+   $downloadUrl = "https://dc3p1870nn3cj.cloudfront.net"
+   ```
+   - `$env:TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain. Replace `xxxx.cloud` with the actual one.
+   - `$env:TERMINUS_OS_USERNAME=justtest1953`: Specify the prefix of your Olares ID. Replace `justtest1953` with the actual one.
+
+3. Execute the script.
+
+   a. Open PowerShell as administrator, then navigate to the folder where the script is located. For example, if the script is in the `Downloads` folder, run the following command:
+   ```powershell
+   cd C:\Users\<YourUsername>\Downloads
+   ```
+
+   b. Once in the correct folder, run the following command:
+   ```powershell
+   .\publicInstall.latest.ps1
+   ```
+
+4. When prompted with security warning, type `R` and press **Enter** to run the script once. The installation process for Olares will start.
+
+   ```powershell
+   Security warning
+   Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
+   publicInstall.latest.ps1?
+   [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
+   ```
+
+5. Wait for the installation to finish. Depending on your network, the process can take 20-30 minutes. When the installation completes, you will see the wizard URL and login credentials:
+
+    ```bash
+    2024-12-17T21:00:58.086+0800        Olares is running at:
+    2024-12-17T21:00:58.086+0800        http://192.168.1.16:30180
+
+    2024-12-17T21:00:58.086+0800        Open your browser and visit the above address
+    2024-12-17T21:00:58.086+0800        with the following credentials:
+
+    2024-12-17T21:00:58.086+0800        Username: justtest1953
+    2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
+    ```
+
+6. Open the Olares activation wizard in your browser using the given URL, and follow the on-screen instructions to complete the activation.
+
+</template>
+</tabs>
 
 After completing these steps, your Olares installation will be accessible via your custom domain.
 

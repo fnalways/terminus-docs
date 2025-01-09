@@ -26,7 +26,7 @@
 <tabs>
 <template #Olares、LarePass-桌面端和浏览器插件>
 
-1. 在 Vault 中，右上角点击 **<i class="material-icons">add</i>添加**。
+1. 在 Vault 中，右上角点击 **<i class="material-symbols-outlined">add</i>添加**。
 2. 选择**验证器**作为项目类型，并点击**创建**。
 3. 填写必填字段：
     - 项目名称：输入服务的描述性名称，例如 `GitHub`。
@@ -38,11 +38,11 @@
 <template #LarePass-移动端>
 
 1. 在你的设备上打开 LarePass，并进入应用的 **Vault** 页面。
-2. 右上角点击 **<i class="material-icons">add</i>添加**。
+2. 右上角点击 **<i class="material-symbols-outlined">add</i>添加**。
 3. 选择**验证器** 作为项目类型，并点击**创建**。
 4. 填写必填字段：
     - 项目名称：输入服务的描述性名称，例如 `GitHub`。
-    - 一次性密码：点击文本字段中的 <i class="material-icons">qr_code</i> 以扫描二维码。
+    - 一次性密码：点击文本字段中的 <i class="material-symbols-outlined">qr_code</i> 以扫描二维码。
 5. 点击**保存**。
 
 </template>

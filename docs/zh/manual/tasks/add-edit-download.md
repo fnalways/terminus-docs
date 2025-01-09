@@ -42,9 +42,9 @@
 :::tip 提示
 **存储盘**（Drive）中的 `/Documents/` 目录支持全文搜索，可搜索文件内容。其他目录则可通过文件名搜索。
 :::
-1. 点击 Dock 中的<i class="material-icons">search</i>图标打开搜索窗口。
+1. 点击 Dock 中的<i class="material-symbols-outlined">search</i>图标打开搜索窗口。
 2. 在搜索框中输入要查找的文件相关关键词。
-3. 使用方向键<i class="material-icons">arrow_upward</i><i class="material-icons">arrow_downward</i>选择搜索范围：**存储盘**或**同步盘**，按 **Enter** 查看搜索结果。
+3. 使用方向键<i class="material-symbols-outlined">arrow_upward</i><i class="material-symbols-outlined">arrow_downward</i>选择搜索范围：**存储盘**或**同步盘**，按 **Enter** 查看搜索结果。
 
 ![搜索](/images/manual/tasks/files-search.png){width="90%""}
 ## 删除文件
@@ -54,7 +54,7 @@
 1. 打开**文件管理器**。
 2. 选中要删除的文件，可通过以下方式操作：
    - 右键点击，从上下文菜单中选择**删除**
-   - 右上角点击 **<i class="material-icons">more_horiz</i>更多**，选择**删除**
+   - 右上角点击 **<i class="material-symbols-outlined">more_horiz</i>更多**，选择**删除**
 3. 在弹窗中确认删除。
 
 ## 切换显示视图

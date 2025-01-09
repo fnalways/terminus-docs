@@ -28,7 +28,7 @@ Olares Space is a cloud hosting service for Olares that shares the same account 
 ### Step 2. Authorize Olares Space
 
 1. In the LarePass app, go to **Settings** > **Integration**.
-2. Tap <i class="material-icons">add</i> in the top-right corner and select **Space** to add your Olares Space account. 
+2. Tap <i class="material-symbols-outlined">add</i> in the top-right corner and select **Space** to add your Olares Space account. 
 
 Once you've authorized Olares Space, you can also verify the integration status in Olares.
 
@@ -58,7 +58,7 @@ To disconnect Olares Space from your Olares:
 
 1. Open LarePass app, and go to **Settings** > **Integration**.
 2. Tap on the Olares Space card.
-3. Tap <i class="material-icons">more_horiz</i> in the top-right corner, and tap **Delete**.
+3. Tap <i class="material-symbols-outlined">more_horiz</i> in the top-right corner, and tap **Delete**.
 
 ## Learn more
 - [Connect your blockchain wallet](./nft-image.md)

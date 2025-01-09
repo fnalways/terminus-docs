@@ -45,7 +45,7 @@ When creating a verified identity, Olares:
    * Creates cryptographic links between the social identity and Olares DID
 
 :::tip Create an Olares ID with Verifiable Credential (VC)
-On the LarePass app, click <i class="material-icons">display_settings</i>, then select **Individual Olares ID**. 
+On the LarePass app, click <i class="material-symbols-outlined">display_settings</i>, then select **Individual Olares ID**. 
 
 Currently, verification is available through Google OAuth.
 :::

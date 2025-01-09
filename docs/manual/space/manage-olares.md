@@ -11,7 +11,7 @@ This page covers Olares management tasks in Olares Space, including monitoring s
 You can monitor the system status of Olares through **Olares Space**:
 
 1. In your LarePass app, go to **Settings** > **Integration**.
-2. Click <i class="material-icons">add</i> in the top right corner and link your Olares Space account to the Olares device. This authorizes Olares Space's access to your system data.
+2. Click <i class="material-symbols-outlined">add</i> in the top right corner and link your Olares Space account to the Olares device. This authorizes Olares Space's access to your system data.
 3. Log into [**Olares Space**](https://space.olares.xyz/).
 4. On the **Olares** page, view **Storage usage** and **Traffic consumption** in the system panel.
 
@@ -25,7 +25,7 @@ For self-hosted Olares users, it's important to monitor **Traffic statistics** f
 
 For cloud Olares users, you can improve performance by adding worker nodes:
 
-1. Click <i class="material-icons">more_horiz</i> in the upper right corner, and select **Add Worker**.
+1. Click <i class="material-symbols-outlined">more_horiz</i> in the upper right corner, and select **Add Worker**.
 2. On the guide page, choose your preferred hardware configuration.
 3. Review the fees for storage and traffic.
 4. Confirm your order and submit.
@@ -34,7 +34,7 @@ For cloud Olares users, you can improve performance by adding worker nodes:
 
 If you no longer need your Olares service, you can return the instance by following these steps:
 
-1. Click <i class="material-icons">more_horiz</i> in the upper right corner.
+1. Click <i class="material-symbols-outlined">more_horiz</i> in the upper right corner.
 2. Select **Destroy Olares**.
 3. Confirm the action and settle your usage:
    - If you are eligible for a refund, the amount will be credited back to your account balance.

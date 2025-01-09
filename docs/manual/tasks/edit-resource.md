@@ -9,7 +9,7 @@ Modifying system resources can significantly impact system stability and perform
 To edit the YAML file of a workload resource:
 
 1. In Control Hub, navigate to the application's **Deployments** list, and click a resource to expand its details view.
-2. In the top right corner, click **<i class="material-icons">more_vert</i>** > **Edit YAML** to open the YAML editor.
+2. In the top right corner, click **<i class="material-symbols-outlined">more_vert</i>** > **Edit YAML** to open the YAML editor.
 3. Edit the YAML configuration of the workload as needed.
 4. Click **OK** to save your changes and apply them.
 
@@ -20,7 +20,7 @@ To edit the YAML file of a workload resource:
 To modify the number of running Pod replicas:
 
 1. In Control Hub, navigate to a Pod's resource details page, and locate the number of Pod replicas at the top.
-2. Click **<i class="material-icons">add</i>** or **<i class="material-icons">remove</i>** to adjust the number of Pod replicas.
+2. Click **<i class="material-symbols-outlined">add</i>** or **<i class="material-symbols-outlined">remove</i>** to adjust the number of Pod replicas.
 
    ![replicas](/images/how-to/olares/controlhub/browse/09.jpg)
 

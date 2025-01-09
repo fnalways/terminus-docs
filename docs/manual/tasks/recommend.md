@@ -42,7 +42,7 @@ The workflow visualization shows each step of the recommendation process. You ca
 To uninstall a recommendation algorithm:
 
 1. In Market, go to the page **My Olares**.
-2. Click <i class="material-icons">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
+2. Click <i class="material-symbols-outlined">keyboard_arrow_down</i> next to the application's operation button, and select **Uninstall**.
 
 ## FAQ
 
