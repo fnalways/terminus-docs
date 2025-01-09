@@ -161,9 +161,9 @@ To use the domain, apply for an Olares ID under the organization.
 Almost there! Now you are all set to install and activate Olares with your Olares ID. 
 
 ::: tip Install with environment variables
-In the following example, the domain name and username are preset with environment variables.
+In the following examples, the domain name and username are preset with environment variables.
 
-You can also install with the one-line script without these variables, and enter the domain and the prefix of Olares ID manually.
+For Linux environment, you can also install with the one-line script without these variables, and enter the domain and the prefix of Olares ID manually.
 
 For detailed instructions on all supported platforms, refer to [platform-specific installation guides](../get-started/install-olares.md).
 :::
