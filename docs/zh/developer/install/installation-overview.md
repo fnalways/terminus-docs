@@ -92,7 +92,7 @@ Olares 支持以下 Kubernetes 部署方式：
 
 ## 了解更多
 
-- [Olares 安装过程](installation-process.md)
+- [Olares 安装流程详解](installation-process.md)
 - [Olares Home 概述](olares-home.md)
 - [`olares-cli` 命令行参考](../install/cli/olares-cli.md)
 - [Olares 环境变量](environment-variables.md)

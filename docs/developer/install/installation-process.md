@@ -308,7 +308,7 @@ After activation, your Olares will be fully operational and ready to use.
 ## Learn more
 
 - [Olares CLI reference](./cli/olares-cli.md)
-- [Olares installation overview](installation-process.md)
+- [Olares installation overview](installation-overview.md)
 
 
 
