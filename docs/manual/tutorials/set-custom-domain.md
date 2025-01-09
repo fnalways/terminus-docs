@@ -207,26 +207,18 @@ If the setup is incomplete, the installation script will not work as expected. F
 
 1. Click https://windows.olares.sh to download the installation script `publicInstall.latest.ps1`.
 
-2. Open `publicInstall.latest.ps1` with Notepad, and add the following environment variables:
+2. Open `publicInstall.latest.ps1` with Notepad, and add the environment variables to the beginning:
 
-   ```bash {16,17}
-   $env:FRP_ENABLE = "1"
-   $env:FRP_SERVER = "http://frp-bj.api.jointerminus.cn"
-   $env:FRP_PORT = "0"
-   $env:JUICEFS = "0"
-   $env:FRP_AUTH_METHOD = "jws"
-   $env:REGISTRY_MIRRORS = "https://mirrors.joinolares.cn"
-   $env:DOWNLOAD_CDN_URL = "https://cdn.joinolares.cn"
-   $env:MARKET_PROVIDER = "appstore-china-server-prod.api.jointerminus.cn"
-   $env:TERMINUS_CERT_SERVICE_API = "https://terminus-cert.api.jointerminus.cn"
-   $env:TERMINUS_DNS_SERVICE_API = "https://terminus-dnsop.api.jointerminus.cn"
-   $env:DID_GATE_URL = "https://did-gate-v3.api.jointerminus.cn/"
-   $env:OLARES_SPACE_URL = "https://cloud-api.api.jointerminus.cn/"
-   $env:FIREBASE_PUSH_URL = "https://firebase-push-test.api.jointerminus.cn/v1/api/push"
-   $env:FRP_LIST_URL = "https://terminus-frp.api.jointerminus.cn/"
-   $env:TAILSCALE_CONTROLPLANE_URL = "https://controlplane.api.jointerminus.cn"
+   ```bash {1,2}
    $env:TERMINUS_OS_DOMAINNAME = "xxxx.cloud"
    $env:TERMINUS_OS_USERNAME= "justtest1953"
+   $env:WSL_UTF8 = 1
+   $OutputEncoding = [System.Text.Encoding]::UTF8
+   $currentPath = Get-Location
+   $architecture = $env:PROCESSOR_ARCHITECTURE
+   $downloadCdnUrlFromEnv = $env:DOWNLOAD_CDN_URL
+   $version = "1.11.1"
+   $downloadUrl = "https://dc3p1870nn3cj.cloudfront.net"
    ```
    - `$env:TERMINUS_OS_DOMAINNAME=xxxx.cloud`: Specify your custom domain. Replace `xxxx.cloud` with the actual one.
    - `$env:TERMINUS_OS_USERNAME=justtest1953`: Specify the prefix of your Olares ID. Replace `justtest1953` with the actual one.
