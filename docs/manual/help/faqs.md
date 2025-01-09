@@ -51,15 +51,12 @@ But for the following two features, we may introduce reasonable charges due to t
 
   We provide 10G of free backup space for each Olares ID on Olares Space. When the archive size exceeds this limit, we will charge you a certain fee to cover the cloud provider fee.
 
-- **Network Traffic**
+- **Fast Reverse Proxy (FRP)**
 
-  We provide 2G of free public network traffic for each Olares ID every month.
+   Accessing Olares locally or via VPN is essentially free. However, if you’re providing external services like hosting a blog, traffic will be forwarded to a Fast Reverse Proxy (FRP) server before reaching Olares. In this case:
 
-  If you don't provide service via the public Internet, almost all of your traffic can be routed peer-to-peer through the VPN, and you won't be charged for it. However, we are not sure how the TailScale DERP service is billed.
-
-  If you need to provide service via the public Internet, we will charge you for the additional traffic generated with reference to the bills from cloud providers.
-
-Meanwhile, we believe that cold backup and CDN are resource types that are relatively easy to DePinize, and we look forward to solutions based on Otmoic Protocol.
+   - If you use your own FRP service, Olares does not impose any charges.
+   - If you opt to use the default FRP service from Olares, we offer a free monthly traffic allowance of 2GB. This is usually sufficient for users who do not provide external services through Olares. Additional charges may apply if your usage exceeds this limit.
 
 ## When are other languages available?
 
