@@ -88,7 +88,7 @@ Once Olares is installed and activated, you can view the running containers thro
 
 ## Learn more
 
-- [Olares installation process](installation-process.md)
+- [Olares installation breakdown](installation-process.md)
 - [Olares Home](olares-home.md)
 - [Olares CLI](../install/cli/olares-cli.md)
 - [Olares environment variables](environment-variables.md)

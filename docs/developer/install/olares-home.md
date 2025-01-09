@@ -61,5 +61,5 @@ The structure of Olares Home is designed to optimize file management, version co
 
 ## Learn more
 - [Olares CLI](../install/cli/olares-cli.md)
-- [Olares installation process](installation-process.md)
+- [Olares installation breakdown](installation-process.md)
 - [Olares environment variables](environment-variables.md)

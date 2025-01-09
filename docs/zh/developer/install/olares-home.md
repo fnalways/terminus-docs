@@ -59,5 +59,5 @@ Olares Home 的结构设计旨在优化文件管理、版本控制和资源共�
 ## 了解更多
 
 - [`olares-cli` 命令行参考](../install/cli/olares-cli.md)
-- [Olares 安装过程](installation-process.md)
+- [安装流程详解](installation-process.md)
 - [Olares 环境变量](environment-variables.md)

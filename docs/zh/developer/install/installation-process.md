@@ -1,4 +1,4 @@
-# Olares 安装分解
+# 安装流程详解
 本文档从四个主要阶段详细说明 Olares 的安装流程，包括各阶段的底层命令、配置和逻辑。文档适用于希望深入了解安装过程的开发者和系统管理员。
 
 ## 四个安装阶段
@@ -326,7 +326,7 @@ local (default)   openebs.io/local   Delete   WaitForFirstConsumer   false   31s
 ## 了解更多
 
 - [`olares-cli` 命令行参考](../install/cli/olares-cli.md)
-- [Olares 安装过程](installation-process.md)
+- [安装流程详解](installation-process.md)
 - [Olares 环境变量](environment-variables.md)
 
 
