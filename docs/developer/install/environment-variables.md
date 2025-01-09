@@ -4,26 +4,13 @@ Olares provides a highly customizable installation process through the use of en
 
 ## Usage examples
 
-To customize the installation process, you can define environment variables in several ways:
-
-- Specify the variables inline while running the installation script:
-  
-    ```bash
-    KUBE_TYPE=k8s bash install.sh
-    ```
-
-- Export the variables first, then run the script:
-
+To use environment variables, you typically export them before running the one-line installation script. For example:
+    
     ```bash
     export KUBE_TYPE=k8s
     bash install.sh
     ```
-
-- Use `&&` to chain commands:
-
-    ```bash
-    export KUBE_TYPE=k8s && bash install.sh
-    ``` 
+In this example, the `KUBE_TYPE` variable is set to `k8s`. This will instruct `olares-cli` to install the full Kubernetes (K8s) instead of the lightweight K3s version.
 
 You can also combine multiple environment variables for more flexible customization, for example:
 
@@ -59,7 +46,7 @@ Runs only the pre-installation phase (system dependency setup) without proceedin
 - **Usage**: Only applicable with `install.sh`.
 
 ### `JUICEFS`
-Installs [JuiceFS](https://juicefs.com/) alongside Olares. Should only be used with `install.sh`.
+Installs [JuiceFS](https://juicefs.com/) alongside Olares.
 - **Valid values**: `1`  
 - **Default**: None (JuiceFS is not installed if not set).
 - **Usage**: Only applicable with `install.sh`.
