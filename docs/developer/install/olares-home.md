@@ -4,10 +4,12 @@
 
 ## Path configuration
 
-By default, Olares Home is located at `~/.olares`. You can customize its location in the following ways:
+By default, Olares Home is located at `~/.olares`. You can customize its location using the `--base-dir` option with a specific `olares-cli` command, for example:
 
-- Set the environment variable `OLARES-HOME`.
-- Use the `olares-cli` command-line option `base-dir` to change the path.
+```bash
+#  Specifies the base directory where all downloaded components will be saved
+olares-cli olares download component --base-dir /custom/path
+```
 
 ## Directory structure
 
