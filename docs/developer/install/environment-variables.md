@@ -31,25 +31,21 @@ Determines the Kubernetes distribution to install.
    - `k8s` (full Kubernetes)
    - `k3s` (lightweight Kubernetes)
 - **Default**: `k3s`
-- **Usage**: Only applicable with `install.sh`.
 
 ### `REGISTRY_MIRRORS`
 Specifies a custom Docker registry mirror for faster image pulls.
 - **Valid values**: `https://mirrors.joinolares.cn` or any other valid URL
 - **Default**: `https://registry-1.docker.io`
-- **Usage**: Only applicable with `install.sh`.
 
 ### `PREINSTALL`
 Runs only the pre-installation phase (system dependency setup) without proceeding with the full Olares installation.  
 - **Valid values**: `1`  
 - **Default**: None (full installation is performed if not set).
-- **Usage**: Only applicable with `install.sh`.
 
 ### `JUICEFS`
 Installs [JuiceFS](https://juicefs.com/) alongside Olares.
 - **Valid values**: `1`  
 - **Default**: None (JuiceFS is not installed if not set).
-- **Usage**: Only applicable with `install.sh`.
 
 ### `TERMINUS_OS_DOMAINNAME`
 Sets the domain name before installation and skip the interactive prompt.
