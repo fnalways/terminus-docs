@@ -4,39 +4,24 @@ Olares provides a highly customizable installation process through the use of en
 
 ## Usage examples
 
-To customize the installation process, you can define environment variables in several ways:
-
-- Specify the variables inline while running the installation script:
-  
-    ```bash
-    KUBE_TYPE=k8s bash install.sh
-    ```
-
-- Export the variables first, then run the script:
-
-    ```bash
-    export KUBE_TYPE=k8s
-    bash install.sh
-    ```
-
-- Use `&&` to chain commands:
-
-    ```bash
-    export KUBE_TYPE=k8s && bash install.sh
-    ``` 
-
-You can also combine multiple environment variables for more flexible customization, for example:
+To customize the installation process, you can set the environment variables before running the installation command. For example:
 
 ```bash
+# Specify Kubernetes (k8s) instead of k3s
 export KUBE_TYPE=k8s \
-    REGISTRY_MIRRORS="https://mirrors.joinolares.cn" \
-    FRP_ENABLE=1 && \
-bash install.sh
+&& curl -sSfL https://olares.sh | bash -
 ```
+Or, if you have already downloaded the installation script `install.sh`:
+
+```bash
+# Specify Kubernetes (k8s) instead of k3s
+export KUBE_TYPE=k8s && bash install.sh
+```
+Both methods achieve the same result. The environment variable `KUBE_TYPE` will be passed to the script, and the script will use it to modify its behavior.
 
 ## Environment variables reference
 
-The section lists all the environment variables supported by the installation script, along with their default values, optional values, and descriptions. Configure them as needed.
+The section lists all the environment variables, along with their default values, optional values, and descriptions. Configure them as needed.
 
 ### `KUBE_TYPE`
 Determines the Kubernetes distribution to install.
@@ -44,25 +29,25 @@ Determines the Kubernetes distribution to install.
    - `k8s` (full Kubernetes)
    - `k3s` (lightweight Kubernetes)
 - **Default**: `k3s`
-- **Usage**: Only applicable with `install.sh`.
+- **Usage**: Must be used with `install.sh` or with the installation command.
 
 ### `REGISTRY_MIRRORS`
 Specifies a custom Docker registry mirror for faster image pulls.
 - **Valid values**: `https://mirrors.joinolares.cn` or any other valid URL
 - **Default**: `https://registry-1.docker.io`
-- **Usage**: Only applicable with `install.sh`.
+- **Usage**: Must be used with `install.sh` or with the installation command.
 
 ### `PREINSTALL`
 Runs only the pre-installation phase (system dependency setup) without proceeding with the full Olares installation.  
 - **Valid values**: `1`  
 - **Default**: None (full installation is performed if not set).
-- **Usage**: Only applicable with `install.sh`.
+- **Usage**: Must be used with `install.sh` or with the installation command.
 
 ### `JUICEFS`
-Installs [JuiceFS](https://juicefs.com/) alongside Olares. Should only be used with `install.sh`.
+Installs [JuiceFS](https://juicefs.com/) alongside Olares.
 - **Valid values**: `1`  
 - **Default**: None (JuiceFS is not installed if not set).
-- **Usage**: Only applicable with `install.sh`.
+- **Usage**: Must be used with `install.sh` or with the installation command.
 
 ### `TERMINUS_OS_DOMAINNAME`
 Sets the domain name before installation and skip the interactive prompt.

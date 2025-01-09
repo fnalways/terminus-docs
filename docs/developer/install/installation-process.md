@@ -182,10 +182,6 @@ WantedBy=multi-user.target
 ...
 ```
 
-### Optional settings
-  
-If you want to enable distributed shared storage (e.g., JuiceFS, Redis, MinIO) or GPU support (CUDA), you can set corresponding [environment variables](environment-variables.md) when running the installation script.
-
 ## Install phase
 The install phase brings all system components online and ensures the runtime environment is fully operational.
 
