@@ -4,13 +4,19 @@ Olares 提供了丰富的环境变量以满足定制化安装需求。通过修�
 
 ## 使用示例
 
-你可以按以下示例中的方式为安装脚本指定环境变量：
+你可以在运行安装命令前设置环境变量，以自定义安装流程。例如：
+    ```bash
+    # 指定安装完整的 Kubernetes (k8s) 而非轻量级 k3s
+    export KUBE_TYPE=k8s \
+    && curl -sSfL https://olares.sh | bash -
+    ```
 
-```bash
-export KUBE_TYPE=k8s
-bash install.sh
-```
-该示例为安装脚本指定了 `KUBE_TYPE=k8s` 的环境变量设置，这会引导 `olares-cli` 安装完整的 Kubernetes (K8s) 而非轻量级的 K3s 版本。
+如果你已预先下载了安装脚本 `install.sh`，也可以使用以下方式：
+    ```bash
+    # 指定使用完整的 Kubernetes (k8s) 而非轻量级 k3s
+    export KUBE_TYPE=k8s && bash install.sh
+    ```
+两种方式的执行效果相同：环境变量 `KUBE_TYPE` 会传递给安装脚本，脚本会根据这个变量来调整其安装逻辑。
 
 当然，你也可以组合多个环境变量来实现更灵活的自定义效果。例如中国大陆的用户通过`cn.olares.sh`获取的安装脚本，就是一个在默认安装脚本之上设置了一系列环境变量的脚本：
 
@@ -58,12 +64,10 @@ curl -sSfL https://olares.sh | bash
 - **默认值**: 无
 
 
-
 ### JUICEFS
 当该值设为 `1` 时，安装 [JuiceFS](https://juicefs.com/)，默认不安装。
 - **可选值**: `1`  
 - **默认值**: 无
-
 
 
 ### TERMINUS_OS_DOMAINNAME
