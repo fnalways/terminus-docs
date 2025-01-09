@@ -53,10 +53,10 @@ But for the following two features, we may introduce reasonable charges due to t
 
 - **Fast Reverse Proxy (FRP)**
 
-Accessing Olares locally or via VPN is essentially free. However, if you’re providing external services like a blog, traffic will be forwarded to a Fast Reverse Proxy (FRP) server before reaching Olares. In this case:
+   Accessing Olares locally or via VPN is essentially free. However, if you’re providing external services like hosting a blog, traffic will be forwarded to a Fast Reverse Proxy (FRP) server before reaching Olares. In this case:
 
-- If you use your own FRP service, Olares does not impose any charges.
-- If you opt to use the default FRP service from Olares, we offer a free monthly traffic allowance of 2GB. This is usually sufficient for users who do not provide external services through Olares. Additional charges may apply if your usage exceeds this limit.
+   - If you use your own FRP service, Olares does not impose any charges.
+   - If you opt to use the default FRP service from Olares, we offer a free monthly traffic allowance of 2GB. This is usually sufficient for users who do not provide external services through Olares. Additional charges may apply if your usage exceeds this limit.
 
 ## When are other languages available?
 
