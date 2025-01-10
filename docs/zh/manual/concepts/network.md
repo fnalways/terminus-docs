@@ -7,20 +7,23 @@ Olares 为用户提供无障碍且安全灵活的网络解决方案。本文档�
 每个 Olares 应用可以配置一个或多个入口来接入外部访问。入口分为三种类型：
 
 - **公开入口**
+
   - 托管博客、社交媒体等需要外部访问的服务
   - 无需认证即可访问
   - 通过 Cloudflare 提供基础安全防护
 
 - **私有入口**
+
   - 专门为个人、家庭或团队提供服务
   - 适用于阅读器、娱乐、生产力工具、桌面应用等
   - 需要通过[认证](account.md#多因素认证mfa)才能访问
 
-- **内部入口e**
+- **内部入口**
   - 和私有入口类似
   - 设备通过本地网络或者 Olares 专用网络访问应用时无需鉴权
 
 ## 通过 local 访问
+
 在局域网内或使用[专用网络](../tasks/private-network.md)访问 Olares 上的应用时，可以在应用 URL 中加上 `.local` 字段，以获取更快的访问速度。例如，`https://vault.local.alice123.olares.cn`。
 
 ## 端点
@@ -48,9 +51,10 @@ Olares 为用户提供无障碍且安全灵活的网络解决方案。本文档�
   - 示例：对于路由 ID 为 `92d76a13` 且有两个入口的应用，第一个入口为`92d76a130`，访问 URL 为 `92d76a130.alice.olares.cn`
 
 ::: tip 注意
-- 应用地址包含 Olares ID 
+
+- 应用地址包含 Olares ID
 - 入口索引指的是入口在 [`OlaresManifest.yaml`](../../developer/develop/package/manifest.md) 中定义的多个入口中的位置。
-:::
+  :::
 
 ## Olares 内部网络
 
@@ -63,6 +67,7 @@ Olares 在网关架构中采用多层代理路由设计。流量经过多个层�
 在应用内部，Olares 实现了多层安全防护。
 
 - **命名空间隔离**
+
   - 每个应用运行在独立命名空间中
   - 所有资源限定在命名空间内
   - 应用无法将 "`ClusterRole`" 连接到 "`ServiceAccount`"
@@ -80,9 +85,6 @@ Olares 在网关架构中采用多层代理路由设计。流量经过多个层�
   - 声明为入口的 Pod 将被强制加入 Envoy 的沙箱 Sidecar，以对入站流量进行认证和授权
 
 ## 了解更多
+
 - [为应用设置自定义域名](../tasks/access-settings.md#自定义域名)
 - [通过专用网络访问 Olares 应用](../tasks/private-network.md)
-
-
-
-

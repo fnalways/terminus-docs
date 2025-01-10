@@ -7,11 +7,13 @@ Olares provides users with a barrier-free but secure and versatile network solut
 Each Olares application can have one or more entrances that serve as access points. There are three types of entrances:
 
 - **Public entrance**
-  - Provides external services such as blogs, social media, etc. 
-  - Accessible without authentication 
+
+  - Provides external services such as blogs, social media, etc.
+  - Accessible without authentication
   - Basic security through Cloudflare
 
 - **Private entrance**
+
   - Provides services exclusively for individual users, families, or teams
   - Suitable for readers, entertainment, productivity tools, desktop applications, etc.
   - Requires [authentication](account.md#multi-factor-authentication-mfa) for access
@@ -21,11 +23,12 @@ Each Olares application can have one or more entrances that serve as access poin
   - No authentication required when accessing applications through local network or VPN
 
 ## Local access
+
 When accessing applications on Olares within a LAN or after starting a [private network](../tasks/private-network.md), you can add the `.local` field to the application URL for faster access speeds. For example, `https://vault.local.alice123.olares.com`.
 
 ## Endpoints
 
-An endpoint is the access address or point where users interact with an application. Simply put, it's the URL you enter in your browser's address bar to access a specific Olares application or its features. 
+An endpoint is the access address or point where users interact with an application. Simply put, it's the URL you enter in your browser's address bar to access a specific Olares application or its features.
 
 A typical Olares application endpoint follows this format:
 
@@ -43,14 +46,15 @@ A route ID is a unique identifier used to identify specific applications or appl
 - System applications
   - Use predefined memorable Route IDs
   - Examples: `desktop` (for Desktop), `market` (for Market)
-- Community applications 
+- Community applications
   - Use an 8-character random string + entrance index (starting from 0)
   - Example: For an application with Route ID 92d76a13 and two entrances, the first entrance is `92d76a130`, and the access URL is `92d76a130.bob.olares.com`
 
 ::: tip Note
+
 - The URL of the application is derived from Olares ID.
 - Entrance index refers to the position of entrance in multiple entrances defined in [`OlaresManifest.yaml`](../../developer/develop/package/manifest.md).
-:::
+  :::
 
 ## Olares internal network
 
@@ -63,6 +67,7 @@ Olares implements a layered proxy routing design in its gateway architecture. Tr
 Inside the application, Olares has multiple layers of security.
 
 - **Namespace isolation**
+
   - Each application operates in its exclusive namespace
   - All resources are namespace-confined
   - Applications cannot connect "`ClusterRole`" to "`ServiceAccount`"
@@ -72,7 +77,7 @@ Inside the application, Olares has multiple layers of security.
   - Each namespace has dedicated network policies
   - Incoming network requests are restricted to cluster applications and system applications of the user
   - User-level network isolation:
-    - Applications isolated between users 
+    - Applications isolated between users
     - Third-party applications isolated within user space
 - **Pod restrictions**
   - Pods cannot use "`hostNetwork`" service or "`NodePort`" service
@@ -80,9 +85,6 @@ Inside the application, Olares has multiple layers of security.
   - The Pod declared as entrance will be forced to join Envoy's sandbox Sidecar to authenticate and authorize incoming traffic.
 
 ## Learn more
+
 - [Set up custom domain name for application](../tasks/access-settings.md#custom-domain-name)
 - [Access Olares via VPN](../tasks/private-network.md)
-
-
-
-
