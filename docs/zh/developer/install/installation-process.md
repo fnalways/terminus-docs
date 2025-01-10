@@ -130,6 +130,7 @@ Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
 ...
 ```
 ### 配置容器运行时
+
 容器运行时是运行容器化应用程序的关键组件。在此步骤中，安装脚本将：
 - 安装并启动之前下载的依赖组件。
 - 将 containerd 安装到系统中，并启动服务。

@@ -13,7 +13,7 @@ Olares 的安装流程分为三个关键层级：
 安装过程由命令行工具 `olares-cli` 管理。该工具负责协调所有组件的安装、配置以及生命周期管理。
 
 ::: tip 提示
-要了解安装的详细过程，请参考 [Olares 安装分解](installation-process.md)文档。
+要了解安装的详细过程，请参考 [Olares 安装流程详解](installation-process.md)文档。
 :::
 
 ## 操作系统层
