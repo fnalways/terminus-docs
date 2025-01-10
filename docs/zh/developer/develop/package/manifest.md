@@ -4,19 +4,19 @@ outline: [2, 3]
 
 # OlaresManifest 规范
 
-每一个 Olares 应用的 Chart 根目录下都必须有一个名为 `OlaresManifest.yaml` 的文件。`OlaresManifest.yaml` 描述了一个 Olares 应用的所有基本信息。Olares 应用市场协议和 Olares 系统依赖这些关键信息来正确的分发和安装应用。
+每一个 Olares 应用的 Chart 根目录下都必须有一个名为 `OlaresManifest.yaml` 的文件。`OlaresManifest.yaml` 描述了一个 Olares 应用的所有基本信息。Olares 应用市场协议和 Olares 系统依赖这些关键信息来正确分发和安装应用。
 
 :::info 提示
 最新的 Olares 系统使用的 Manifest 版本为: `0.8.3`
-  - 在 `dependencies` 部分增加 `mandatory` 字段以表示该依赖的应用是安装必须的
-  - 增加 `tailscaleAcls` 部分，允许应用让 Tailscale 开放指定端口
+  - 在 `dependencies` 配置项里增加 `mandatory` 字段以表示该依赖的应用是安装必须的
+  - 增加 `tailscaleAcls` 配置项，允许应用让 Tailscale 开放指定端口
 :::
 :::details Changelog
   `0.8.2`
   - 添加 `runAsUser` 选项，用于限制应用程序在非root权限的用户下运行
 
   `0.8.1`
-  - 添加 `ports` 部分以指定 UDP 或 TCP 的暴露端口
+  - 添加 `ports` 选项以指定 UDP 或 TCP 的暴露端口
   
   `0.7.1`
   - 添加新的 `authLevel` 值 `internal`
@@ -120,7 +120,7 @@ OlaresManifest.yaml.version: "3.0.122"
 
 ## Metadata
 
-应用的基本信息，用于在Olares系统和应用市场中展示应用。
+应用的基本信息，用于在 Olares 系统和应用市场中展示应用。
 
 :::info 示例
 ```Yaml
@@ -178,7 +178,7 @@ Olares 应用市场中的应用名称下方显示的简短说明。
 
 ## Entrances
 
-指定如何访问此应用，每个应用至少需要 `1` 个入口，至多 `10` 个。
+指定此应用访问入口的数量。每个应用允许最少 1 个，最多 10 个入口 。
 
 :::info 示例
 ```Yaml
@@ -219,14 +219,14 @@ entrances:
 
 - 类型：`string`
 
-安装后出现在 Olares 桌面上的名称。长度不超过 `30` 个字符。
+安装后 Olares 桌面的显示名称。长度不超过 `30` 个字符。
 
 ### icon
 
 - 类型： `url`
 - 可选
 
-安装后出现在 Olares 桌面上的图标。应用的图标必须是 `PNG` 或 `WEBP` 格式文件，最大为 `512 KB`，尺寸为 `256x256 px`。
+应用安装后 Olares 桌面上的图标。图片文件必须是 `PNG` 或 `WEBP` 格式，不超过 `512 KB`，尺寸为 `256x256 px`。
 
 ### authLevel
 
@@ -255,7 +255,7 @@ entrances:
 - 默认值： `default`
 - 可选
 
-显式定义如何在桌面中打开该入口。
+指定该入口在桌面的打开方式。
 
 `iframe` 代表在桌面的窗口内通过 iframe 新建一个窗口，`window` 代表在浏览器新的 Tab 页打开。`default` 代表跟随系统的默认选择，系统默认的选择是`iframe`。
 
@@ -302,8 +302,8 @@ ports:
 - name: aaa          # 提供服务的 entrance 名称
   host: udp          # 提供服务的 Ingress 名称
   port: 8899         # 提供服务的端口号
-  protocol: udp      # 协议类型，目前支持udp和tcp
-  exposePort: 30140  # 暴露的端口号，如果未指定，系统将随机分配一个端口 
+  protocol: udp      # 协议类型，目前支持 udp 和 tcp
+  exposePort: 30140  # 暴露的端口号。如果未指定，系统将随机分配一个端口。
 - name: bbb
   host: udp
   port: 8090
@@ -311,10 +311,10 @@ ports:
 ```
 :::
 
-Olares 会自动为您的应用程序分配一个（33333-36789）之间的随机端口。这些端口可通过应用程序域名在本地网络下访问。例如：`84864c1f.local.your_olares_id.olares.com:33805`。
+Olares 会自动为你的应用分配一个 33333-36789 之间的随机端口。这些端口可通过应用域名在本地网络下访问。例如：`84864c1f.local.your_olares_id.olares.com:33805`。
 
 :::info 提示
-暴露的端口只能在本地网络或通过 VPN 访问。
+暴露的端口只能通过本地网络或 Olares 专用网络访问。
 :::
 
 ## Permission
@@ -342,14 +342,14 @@ permission:
 - 类型： `boolean`
 - 可选
 
-是否需要在 `Cache` 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appCache`, 则 `appCache` 必须为 `true`。
+是否需要在 `Cache` 目录创建应用的目录。如需要在部署 yaml 文件中使用`.Values.userspace.appCache`,  `appCache` 必须设为 `true`。
 
 ### appData
 
 - 类型： `boolean`
 - 可选
 
-是否需要在 `Data` 目录创建应用的目录。如需要在 deployment yaml 中使用`.Values.userspace.appData`, 则 `appData` 必须为 `true`。
+是否需要在 `Data` 目录创建应用的目录。如需要在部署 yaml 中使用`.Values.userspace.appData`,  `appData` 必须设为 `true`。
 
 ### userData
 
@@ -541,7 +541,7 @@ Olares 目前不支持混合架构的集群。
 - 类型: `boolean`
 - 可选
 
-当设置为 `true` 时，Olares 会强制以用户 ID “1000”（非root用户）运行应用程序。
+当设置为 `true` 时，Olares 会强制以用户 ID “1000”（非 root 用户）运行应用程序。
 
 ## Middleware
 - 类型：`map`
@@ -686,7 +686,7 @@ options:
 
 如果此应用依赖于其他应用或需要特定操作系统版本，请在此处声明。
 
-如果此应用程序需要其他依赖的应用程序才能正确安装，则应将 `mandatory` 字段设置为 `true`。
+如果此应用程序需要依赖其他应用程序才能正确安装，则应将 `mandatory` 字段设置为 `true`。
 
 :::info 示例
 ```yaml

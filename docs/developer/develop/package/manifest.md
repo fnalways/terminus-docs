@@ -8,7 +8,7 @@ Every **Olares Application Chart** should include a `OlaresManifest.yaml` file i
 
 :::info NOTE
 Latest Olares Manifest version: `0.8.3`
-  - Add a `mandatory` field in the `dependencies` section for dependent application that is required for the installation
+  - Add a `mandatory` field in the `dependencies` section for dependent applications required for the installation
   - Add `tailscaleAcls` section to permit applications to open specified ports via Tailscale
 :::
 :::details Changelog
@@ -120,7 +120,7 @@ OlaresManifest.yaml.version: "3.0.122"
 
 ## Metadata
 
-Basic information about the app, which is used to present the app in the system and Olares Market.
+Basic information about the app shown in the system and Olares Market.
 
 :::info Example
 ```Yaml
@@ -147,7 +147,7 @@ App’s namespace in Olares, lowercase alphanumeric characters only. It can be u
 
 - Type: `string`
 
-Your app title that appears in the Olares Market. It can be up to `30` characters.
+The title of your app title shown in the Olares Market.  Must be within `30` characters.
 
 ### description
 
@@ -178,7 +178,7 @@ Used to display your app on different category page in Olares Market.
 
 ## Entrances
 
-Specify how to access this app, at least `1` required. It is up to `10`.
+The number of entrances through which to access the app.  You must specify at least 1 access method, with a maximum of 10 allowed.
 
 :::info Example
 ```Yaml
@@ -303,7 +303,7 @@ ports:
   host: udp          # Ingress name of the entrance that provides service
   port: 8899         # Port of the entrance that provides service
   protocol: udp      # Protocol type. udp and tcp are supported for now
-  exposePort: 30140  # Port to expose, a random port will be assigned if not specified 
+  exposePort: 30140  # The port to expose. A random port will be assigned if not specified 
 - name: bbb
   host: udp
   port: 8090
@@ -403,7 +403,7 @@ All system API [providers](../advanced/provider.md) are list below:
 - Type: `map`
 - Optional
 
-Allow applications add ACL(Access Control Lists) in Tailscale to open specified ports.
+Allow applications to add Access Control Lists (ACL) in Tailscale to open specified ports.
 
 :::info Example
 ```Yaml
@@ -411,7 +411,7 @@ tailscaleAcls:
 - proto: tcp
   dst:
   - "*:4557"
-- proto: "" # Optional, if not specified, all supported protocols will be allowed.
+- proto: "" # Optional. If not specified, all supported protocols will be allowed.
   dst:
   -  "*:4557"
 ```
@@ -515,7 +515,7 @@ spec:
 - Accepted Value: `amd64`, `arm64`
 - Optional
 
-This field specifies the CPU architecture supported by the application. Currently only `amd64` and `arm64` are available.
+Specifies the CPU architecture supported by the application. Currently only `amd64` and `arm64` are available.
 
 :::info Example
 ```yaml
@@ -541,7 +541,7 @@ When set to `true`, only the admin can install this app.
 - Type: `boolean`
 - Optional
 
-When set to `true`, Olares enforces the application to run under user ID `1000` (as a non-root user).
+When set to `true`, Olares forces the application to run under user ID `1000` (as a non-root user).
 
 ## Middleware
 - Type: `map`
