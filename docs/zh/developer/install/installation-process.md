@@ -1,48 +1,52 @@
-# Olares 安装流程
+# 安装流程详解
+本文档从四个主要阶段详细说明 Olares 的安装流程，包括各阶段的底层命令、配置和逻辑。文档适用于希望深入了解安装过程的开发者和系统管理员。
 
-通常，安装 Olares 会从以下脚本开始，
+## 四个安装阶段
 
-```bash
-curl -fsSL https://cn.olares.sh | bash -
-```
+Olares 的安装可分为以下四个阶段：
 
-该脚本首先会下载并安装最新版的 `olares-cli` 命令行工具，之后即自动开始执行 Olares 集群的安装流程。为了提高稳定性和效率，Olares的安装分为四个阶段：**Precheck（预检）**、**Download（下载）**、**Prepare（预装环境）**、**Install（安装）**。
+- **预检（Precheck）**：验证系统环境是否满足 Olares 安装的所有前置条件。
+- **下载（Download）**：获取安装所需的所有文件、依赖项和容器镜像。
+- **环境准备（Prepare）**：配置操作系统和系统服务，为 Kubernetes 和 Olares 组件创建就绪的环境。
+- **安装（Install）**：部署 Kubernetes，集成 KubeSphere，并安装 Olares 的核心服务和应用程序。
 
-本文档将为你详细介绍每个安装阶段的步骤与细节。
+## 预检阶段
 
-## Precheck（预检）
+预检阶段的重点是验证系统是否满足安装 Olares 的必要条件。通过运行 `olares-cli olares precheck`命令执行一系列验证检查。若在此阶段发现任何问题，需在继续安装前解决。 
 
-Olares的安装及运行都需要宿主系统满足一系列的条件。在实际安装前，脚本将执行 `olares-cli olares precheck` 命令，对这些条件预先进行检查。若条件不满足，则会提供提示信息并退出安装流程。具体来说，会针对以下条件进行预检：
-- 操作系统类型、版本号以及处理器架构的兼容性检测
-- 系统是否是以 `Systemd` 作为初始化进程启动
-- Olares 对外暴露服务所需的网络端口是否可用
-- 系统是否已安装了冲突的容器运行时
+关键预检项目包括：
+- 检查操作系统类型、版本号以及处理器架构是否兼容
+- 确保系统使用 `Systemd` 作为初始化进程
+- 验证 Olares 需要暴露的多个网络端口是否可用
+- 系统里是否存在与 Olares 冲突的容器运行时
 
-下图是一个预检不通过的示例，其中有两项检查失败了：
+下图是一个预检失败的示例：
  ![Precheck](/images/developer/install/precheck.png)
 
-- Olares所需的9100端口已被占用
-- 系统中存在已有的容器运行时
+在此示例中，有两项检查失败：
+- Olares 所需的端口 `9100` 已被占用。
+- 系统中检测到已有的容器运行时。
 
-需解决这些问题后，再次尝试安装。
+必须解决这些问题后才可继续安装。
 
+## 下载阶段
 
-## Download（下载）
-
-Download 阶段会下载 Olares 安装所需的 wizard 文件及系统所依赖的组件和容器镜像。
+下载阶段会下载 Olares 安装所需的 Wizard 文件、系统依赖组件和容器镜像。
 
 ### 下载 Wizard 文件
 
-Wizard 文件是 Olares 的安装包的元数据，包含了 Olares 不同组件的下载地址及安装配置。安装脚本会解压该文件到 `$HOME/.olares/versions/<version>` 目录，其中，
+Wizard 文件是一个元数据包，包含所有 Olares 组件的下载链接和配置信息。Wizard 文件是此阶段首个被获取的文件，为后续的下载提供了关键信息。
 
-- `$HOME/.olares`是 Olares 的基础安装目录，用于存储所有镜像、日志、依赖项以及其他版本相关文件。详细目录结构请参考 [Olares Home 概述](olares-home.md)文档。
-- `<version>` 是此 wizard 文件对应的 Olares 版本号，如示例中的 1.12.0-20241215。
+Wizard 文件会被默认解压存储至 `$HOME/.olares/versions/<version>` 目录，其中，
+
+- `$HOME/.olares`是 Olares 的基础安装目录，
+- `<version>` 是 Olares 版本号，如示例中的 `1.12.0-20241215`。
 
 **示例脚本输出**：
 
 ```bash
 ➜  ~ ./install.sh
-the KUBE_TYPE env var is not set, defaulting to "k3s
+the KUBE_TYPE env var is not set, defaulting to "k3s"
 olares-cli already installed and is the expected version
 
 downloading installation wizard...
@@ -59,9 +63,12 @@ Greetings, Olares
 
 ### 下载安装所需组件与容器镜像
 
-完成 Wizard 下载后，olares-cli 会下载 Olares 所需的基础软件、容器镜像和依赖包，这些文件会保存在 `$HOME/.olares/pkg` 和 `$HOME/.olares/image` 下。
+Wizard 下载完成后，脚本会下载 Olares 所需的所有依赖组件和容器镜像。保存路径如下：
 
-和 Wizard 的保存路径不同，大部分组件是通用且长期稳定的，不会保存在具体版本对应的路径下。因此重新安装时仅需对新增或更新的镜像进行增量下载，避免重复下载。
+- 依赖包：`$HOME/.olares/pkg` 
+- 容器镜像：`$HOME/.olares/image`
+
+这种存储结构支持在多个版本之间复用稳定组件，避免重复下载。
 
 **示例脚本输出**：
 
@@ -83,13 +90,21 @@ Greetings, Olares
 ...
 ```
 
-## Prepare（预装环境）
+## 环境准备阶段
 
-在完成下载后，安装脚本将对操作系统进行配置，以保证能够顺利运行 Kubernetes、容器镜像等系统服务。
+环境准备阶段的任务是配置操作系统进行，以支持 Kubernetes、容器镜像和 Olares 系统服务。
 
-### 系统依赖安装与配置
-- 调整 DNS、NTP、SSH 服务，确保机器网络正常、时间同步无误。
-- 通过 apt 安装必要依赖（curl、net-tools、gcc、make 等）。
+此阶段包括以下主要任务：
+- 配置系统
+- 配置容器运行时
+- 安装系统守护进程
+
+### 配置系统
+
+安装脚本会配置 Linux 环境以满足 Olares 的要求，这些配置包括：
+
+- 配置域名解析系统（DNS）、网络时间协议（NTP）和安全远程访问（SSH）等服务，确保机器网络正常、时间同步无误。
+- 通过 apt 方式安装必要的依赖项，如 curl、网络工具 （net-tools）、GNC 编译器集合 （GCC)、make 工具等。
 
 **示例脚本输出**
 ```bash
@@ -114,10 +129,11 @@ Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
 Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
 ...
 ```
-### 安装依赖组件及容器运行时
-- 将之前下载的依赖组件安装并启动。
+### 配置容器运行时
+容器运行时是运行容器化应用程序的关键组件。在此步骤中，安装脚本将：
+- 安装并启动之前下载的依赖组件。
 - 将 containerd 安装到系统中，并启动服务。
-- 将下载好的容器镜像全部导入到 containerd。
+- 将下载好的容器镜像导入至 containerd。
 
 **示例脚本输出**：
   
@@ -136,10 +152,10 @@ Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
 ...
 ```
 
-### 安装系统守护进程（olaresd）
-  
-预安装阶段还会安装并启动 [olaresd](installation-overview.md#系统守护进程olaresd)，Olares 的系统守护进程服务。olaresd 会在后台运行并自动执行系统维护操作，如变更 IP 地址时自动更新配置。
+### 安装系统守护进程
 
+容器运行时配置完成后，Olares 系统守护进程 olaresd 会被安装并启动，用于监控系统并自动执行维护任务。
+  
 **示例脚本输出**：
 
 ```bash
@@ -164,27 +180,25 @@ WantedBy=multi-user.target
 2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
 ...
 ```
-
-### 可选安装项目
-  
-如果你想启用分布式共享存储（JuiceFS、Redis 以及MinIO）或 GPU 支持（CUDA），可在执行安装脚本时设置相应的[环境变量](environment-variables.md#olares-环境变量参考)。
-
-## Install (安装)
-
-此阶段主要通过以下步骤完成：
-- 部署并启动 Kubernetes。 
-- 安装并配置 KubeSphere，提供云原生管理能力与可视化工具集。
-- 安装 Olares 账户。
-- 部署内置应用（如存储、备份、账号系统、文件服务等），完成 Olares 环境的所有功能模块。
+## 安装阶段
+安装阶段将所有组件整合起来，并完成最终环境配置。在此阶段，脚本会执行以下关键任务：
+- 部署 Kubernetes。
+- 集成 KubeSphere，实现云原生管理与可观测性。
+- 配置 Olares 账户。
+- 部署并启动内置应用和服务。
 
 ### 部署 Kubernetes
-Olares 默认安装 K3s，一款轻量级的 Kubernetes 发行版。此步骤将：
-1. 启动 etcd 数据库；
-2. 启动并配置 K3s；
-3. 安装容器网络界面（CNI）插件以提供集群网络能力；
-4. 将 `kubeconfig` 文件复制到当前用户路径，以便使用 `kubectl` 与集群交互。
 
-如果你选择安装官方的 Kubernetes，脚本将使用 `kubeadm` 完成部署。`kubeadm` 是 Kubernetes 提供的官方工具，可帮助你创建最低可行集群。在 macOS 上，脚本会使用 Minikube 来进行安装，不会执行上述安装步骤。
+Kubernetes 是 Olares 系统的核心调度组件。在此步骤中，安装脚本会执行以下操作：
+
+1. 启动 etcd 数据库。  
+2. 启动并配置 Olares 默认的 Kubernetes 发行版 — K3s。  
+3. 安装用于集群网络通信的容器网络界面（CNI） 插件。  
+4. 将 `kubeconfig` 文件复制到当前用户目录，以便使用 `kubectl` 与集群进行交互。
+
+由于 K3s 轻量且易用，Olares 默认使用它作为 Kubernetes 的发行版。如果你有高级或自定义的配置需求，也可以选择安装完整的 Kubernetes。
+
+在 macOS 环境下，脚本会使用 Minikube 部署集群，并跳过上述步骤。
 
 **示例脚本输出**
 
@@ -227,16 +241,21 @@ Olares 默认安装 K3s，一款轻量级的 Kubernetes 发行版。此步骤将
 ...
 ```
 
-### 安装并集成 KubeSphere
+### 集成 KubeSphere
 
-Olares 会基于 Kubernetes 安装 KubeSphere。 Olares 集成了一部分 KubeSphere 的功能，主要用于系统监控、告警、工作空间管理等。此过程会创建一系列命名空间与 CRD（自定义资源定义）对象，并启动 KubeSphere 的后台服务。
+Olares 会基于 Kubernetes 安装 KubeSphere，以增强系统的管理和可观测性。主要特性包括：
+- 系统监控与告警
+- 资源和工作区管理
+- 命名空间和自定义资源定义（CRD）管理
 
-### 安装 Olares 账户
+### 安装账户
 
-在KubeSphere安装完成后，命令行会提示用户输入自己的 Olares ID。 这将创建一个系统账号用于登录 Olares，并且在后台完成多处访问与权限配置。
+Olares ID 在 LarePass 应用中创建。安装脚本会在此步骤中提示你输入以下信息，以便之后使用 LarePass 激活 Olares：
 
-- Olares 域名: 默认为 `olares.cn`，可以自定义）。
-- Olares ID: 输入 Olares ID 中的用户名部分。  
+- Olares 域名: Olares 默认提供了 `olares.com` 和 `olares.cn` 这两个域名。如果你已将自定义域名添加到 Olares Space，也可以在此步骤中输入自定义域名。 
+- Olares ID: 输入 Olares ID 中的用户名部分。
+
+完成此步骤后，系统会为你创建一个用于登录 Olares 的账户，并完成相关的访问和权限配置。  
 
 **示例脚本输出**：
 
@@ -250,14 +269,14 @@ Enter the Olares ID (which you registered in the LarePass app): marvin113
 2024-12-17T20:58:52.584+0800        using password: 2uO5PZ2X
 ```
 
-### 安装 Olares 组件与内置应用
+### 安装 Olares 系统应用
 
-此步骤会会通过 Helm 部署 Olares 系统的核心功能与常用服务：
+安装的最后一步会通过 Helm 部署 Olares 系统的核心服务与内置用户应用：
 
-- 核心系统服务（`os-system` 命名空间）：如备份（Velero）、存储（OpenEBS）、Redis、Nats、MinIO 等关键组件。
-- 用户应用（`user-space-xxx` 命名空间）：如文件管理器、桌面、设置、知识库应用、和其他自托管应用等。
+- 核心系统服务（`os-system` 命名空间）：包含备份（Velero）、存储（OpenEBS）、Redis、Nats、MinIO 等关键组件。
+- 用户应用（`user-space-xxx` 命名空间）：包含文件管理器、桌面、设置等系统应用。
 
-日志中会显示 `[helm] app installed success` 以及一系列 `xxx created` 的提示，表示对应的 Helm Chart 或 Kubernetes 资源安装成功。
+安装过程中，日志中会显示 `[helm] app installed success` 以及一系列 `xxx created` 的提示，表示对应的 Helm Chart 或 Kubernetes 资源安装成功。
 
 **示例脚本输出**：
 ```bash
@@ -279,9 +298,9 @@ local (default)   openebs.io/local   Delete   WaitForFirstConsumer   false   31s
 ...
 ```
 
-### 安装成功
+### 完成安装
 
-待所有组件启动并运行后，脚本会输出类似下面的汇总信息：
+待所有组件部署成功后，脚本会输出包含激活向导页面 URL 的汇总信息：
 
 ```bash
 2024-12-17T21:00:58.086+0800        [INFO] Installation wizard is complete
@@ -299,12 +318,15 @@ local (default)   openebs.io/local   Delete   WaitForFirstConsumer   false   31s
 2024-12-17T21:00:58.086+0800        Password: 2uO5PZ2X
 ```
 
-打开浏览器，输入提供的 URL，并使用得到的初始密码登录 Olares 引导页面。按照屏幕提示即可完成系统激活。安装流程至此结束。
+此时，执行以下操作以完成安装：
+1. 打开浏览器并输入提供的 URL。
+2. 使用初始密码登录激活向导。
+3. 按照屏幕提示完成激活流程。
 
 ## 了解更多
 
 - [`olares-cli` 命令行参考](../install/cli/olares-cli.md)
-- [Olares 安装过程](installation-process.md)
+- [安装流程详解](installation-process.md)
 - [Olares 环境变量](environment-variables.md)
 
 

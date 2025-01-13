@@ -1,15 +1,15 @@
 # Olares Home
 
-**Olares Home** is the default installation directory for Olares. It stores images, logs, dependency components, and version management data. In this document, you will learn the structure of Olares Home and gain a clearer understanding of the Olares installation process.
-
+"Olares Home" is the default installation directory for Olares. It stores images, logs, dependency components, and version management data. In this document, you will learn the structure of Olares Home and gain a clearer understanding of the Olares installation process.
 
 ## Path configuration
 
-By default, **Olares Home** is located at `~/.olares`. You can customize its location in the following ways:
+By default, Olares Home is located at `~/.olares`. You can customize its location using the `--base-dir` option with a specific `olares-cli` command, for example:
 
-- Set the environment variable `olares-home`.
-- Use the `olares-cli` command-line option `base_dir` to change the path.
-
+```bash
+#  Specifies the base directory where all downloaded components will be saved
+olares-cli olares download component --base-dir /custom/path
+```
 
 ## Directory structure
 
@@ -53,14 +53,13 @@ A typical Olares Home directory might look like this:
 
 ```
 
-## Key features 
+The structure of Olares Home is designed to optimize file management, version control, and resource sharing. The advantages include:  
 
-The structure of Olares Home enables efficient file management and flexible version switching, allowing for simplified installation and daily operations.  
+- Each Olares version is stored under the `versions` directory. All files and logs related to a particular version are contained within its subdirectory.
+- Only one Olares instance can run on a single machine at a time, preventing version conflicts.
+- The `images` and `pkg` directories are shared across all Olares versions. This design reduces redundancy, minimizes duplicate downloads, and saves disk space.
 
-- **Versioned storage**: Each Olares version is stored under the `versions` directory. All files and logs related to a particular version are contained within its subdirectory.
-
-- **Single Olares instance per machine**  
-   Only one Olares instance can run on a single machine at a time, preventing version conflicts.
-
-- **Shared images and dependencies**  
-   Different Olares versions share the files in the `images` and `pkg` directories, reducing duplicate downloads and saving storage space.
+## Learn more
+- [Olares CLI](../install/cli/olares-cli.md)
+- [Olares installation breakdown](installation-process.md)
+- [Olares environment variables](environment-variables.md)
