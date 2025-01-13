@@ -1,3 +1,6 @@
+---
+outline: [2, 3]
+---
 # Olares installation overview
 
 This document provides a high-level overview of the Olares installation process, focusing on its overall architecture and core components. It is intended for system administrators and developers who need a foundational understanding of how Olares operates and is installed.
@@ -53,7 +56,6 @@ If containerd is already installed on your machine (for example, as part of Dock
 :::
 
 ### System daemon: olaresd
-
 olaresd is the system daemon that runs in the background, providing essential management functionalities such as:
 - **Automated configuration updates**: Automatically adjusts configurations when system changes (e.g. IP changes) are detected.
 - **Remote system management**: Executes remote system operations, such as Olares installation and activation, based on requests issued from the LarePass client or `olares-cli`.
@@ -75,7 +77,7 @@ Compared to tools like Docker Compose or Docker Swarm, Kubernetes offers:
 Olares supports the following Kubernetes setups:
 - **K3s** (default): A lightweight Kubernetes distribution optimized for resource efficiency on local hardware.
 - **Kubernetes**: The full-featured Kubernetes distribution for advanced or custom deployments.
-- **Minikube** (macOS only): A tool that sets up a single-node Kubernetes cluster, ensuring consistent features and user experience.
+- **minikube** (macOS only): A tool that sets up a single-node Kubernetes cluster, ensuring consistent features and user experience.
 
 ## Containerization layer
 
@@ -83,8 +85,7 @@ The containerization layer is where Olares' components and applications come tog
 
 Once Olares is installed and activated, you can view the running containers through a graphical user interface provided by the Control Hub app:
 
-![Running pods](/images/developer/install/running-pods.png)
-
+![View running pods in Control Hub](/images/developer/install/running-pods.png#bordered){width=90%}
 
 ## Learn more
 

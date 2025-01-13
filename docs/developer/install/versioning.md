@@ -1,3 +1,6 @@
+---
+outline: [2, 3]
+---
 # Olares versioning
 
 The Olares versioning and release process is designed to provide clear version definitions and stable upgrade paths. This document outlines Olares' versioning rules, release types, branch management practices, and upgrade guidelines.

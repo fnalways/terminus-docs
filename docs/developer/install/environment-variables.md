@@ -1,3 +1,6 @@
+---
+outline: [2, 3]
+---
 # Olares environment variables
 
 Olares provides a highly customizable installation process through the use of environment variables. These variables can override default settings, enabling advanced configurations to suit your specific requirements.

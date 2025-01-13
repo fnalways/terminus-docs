@@ -50,11 +50,9 @@ A typical Olares Home directory might look like this:
         │   ├── install.log
         │   └── uninstall.log
         └── wizard
-
 ```
 
-The structure of Olares Home is designed to optimize file management, version control, and resource sharing. The advantages include:  
-
+The structure of Olares Home is designed to optimize file management, version control, and resource sharing. The advantages include:
 - Each Olares version is stored under the `versions` directory. All files and logs related to a particular version are contained within its subdirectory.
 - Only one Olares instance can run on a single machine at a time, preventing version conflicts.
 - The `images` and `pkg` directories are shared across all Olares versions. This design reduces redundancy, minimizes duplicate downloads, and saves disk space.

@@ -1,5 +1,7 @@
+---
+outline: [2, 3]
+---
 # Olares installation breakdown
-
 This document explains the Olares installation process from the perspective of its four main phases. It is aimed at developers and system administrators who want to understand the installation in detail, including the underlying commands, configurations, and logic behind each phase.
 
 ## Four phases of installation
@@ -34,7 +36,6 @@ You must resolve these issues before proceeding.
 
 The download phase retrieves the necessary wizard files, system dependencies, and container images required for Olares installation.
 
-
 ### Download the wizard file
 
 The wizard file is a metadata package that contains download URLs and configuration details for all Olares components. It is the first file retrieved during this phase, as it provides critical information for the subsequent downloads.
@@ -47,11 +48,10 @@ where:
 - `$HOME/.olares` is the base directory for Olares.
 - `<version>` refers to the version number of Olares (e.g. `1.12.0-20241215`).
 
-**Example script output**:
-
+:::details Example script output
 ```bash
 ➜  ~ ./install.sh
-the KUBE_TYPE env var is not set, defaulting to "k3s
+the KUBE_TYPE env var is not set, defaulting to "k3s"
 olares-cli already installed and is the expected version
 
 downloading installation wizard...
@@ -65,7 +65,7 @@ Greetings, Olares
 /home/keven/.olares/versions/v1.12.0-20241215/.env
 /home/keven/.olares/versions/v1.12.0-20241215/wizard/config/account/Chart.yaml
 ```
-
+:::
 ### Download components and container images
 Once the wizard file has been downloaded, the script retrieves all necessary dependencies and container images. These files are stored in:
 - `$HOME/.olares/pkg` for dependency packages.
@@ -73,8 +73,7 @@ Once the wizard file has been downloaded, the script retrieves all necessary dep
 
 This storage structure allows reusing stable components across multiple versions to avoid redundant downloads.
 
-**Example script output**:
-
+:::details Example script output
 ```bash
 downloading installation packages...
 
@@ -92,7 +91,7 @@ Greetings, Olares
 2024-12-17T19:41:51.814+0800        (2/5) downloading image calico/kube-controllers:v3.23.2, file: 521564c4b60ae73c78899b7b40ae655e.tar.gz
 ...
 ```
-
+:::
 ## Prepare phase
 
 The prepare phase configures the system environment to support Kubernetes, container images, and Olares services.
@@ -107,8 +106,7 @@ The installation script configures the Linux environment to meet Olares' require
 - Adjusts DNS, NTP, and SSH services to ensure proper network functionality and time synchronization.
 - Installs essential dependencies (e.g., curl, net-tools, gcc, make) via `apt`.
 
-**Example script output**:
-
+:::details Example script output
 ```bash
 preparing installation environment...
 
@@ -131,14 +129,14 @@ Hit:2 https://download.docker.com/linux/ubuntu jammy InRelease
 Hit:3 http://hk.archive.ubuntu.com/ubuntu jammy InRelease
 ...
 ```
+:::
 ### Set up container runtime
 The container runtime is a critical component for running containerized applications. During this step, the installation script:
 - Installs and start the previously downloaded dependencies
 - Installs containerd on the system and start the service
 - Imports the downloaded container images into containerd
 
-**Example script output**:
-  
+:::details Example script output
 ```bash
 2024-12-17T19:47:37.510+0800        [Module] InstallContainerModule(k3s)
 2024-12-17T19:47:37.518+0800        [A] ubuntu: ZfsMountReset skipped (7.321811ms)
@@ -153,12 +151,11 @@ The container runtime is a critical component for running containerized applicat
 2024-12-17T19:47:41.665+0800        (1/145) imported image: rancher/mirrored-pause:3.6, time: 194.363948ms
 ...
 ```
-
+:::
 ### Install system daemon
 The Olares system daemon, olaresd, is then installed and started to monitor the system and automatically perform maintenance tasks.
 
-**Example script output**:
-
+:::details Example script output
 ```bash
 024-12-17T19:52:31.862+0800        [A] ubuntu: GenerateOlaresdEnv success (23.829684ms)
 2024-12-17T19:52:31.862+0800        template OlaresdService result: [Unit]
@@ -181,7 +178,7 @@ WantedBy=multi-user.target
 2024-12-17T19:52:32.033+0800        [A] ubuntu: EnableOlaresdService success (147.987242ms)
 ...
 ```
-
+:::
 ## Install phase
 The install phase brings all system components online and ensures the runtime environment is fully operational.
 
@@ -195,16 +192,15 @@ During this phase, the script primarily completes the following tasks:
 
 Kubernetes is the backbone of the Olares system. During this step, the installation script:
 1.	Starts the etcd database.
-2.	Starts and configures K3s, the default Kubernetes distribution used by Olares.
+2.	Starts and configures K3s.
 3.	Installs a Container Network Interface (CNI) plugin for cluster networking.
 4.	Copies the `kubeconfig` file to the current user's directory, enabling interaction with the cluster via `kubectl`.
 
 K3s is the default Kubernetes distribution for Olares due to its lightweight design and ease of use. However, kubernetes is also available for advanced or custom setups.
 
-On macOS, the scripts uses Minikube, which will skip the above step.
+On macOS, the scripts uses minikube, which will skip the above step.
 
-**Example script output**:
-
+:::details Example script output
 ```bash
 [certs] Generating "ca" certificate and key
 [certs] admin-ubuntu serving cert is signed for DNS names [etcd etcd.kube-system etcd.kube-system.svc etcd.kube-system.svc.cluster.local lb.kubesphere.local localhost ubuntu] and IPs [127.0.0.1 ::1 192.168.1.16]
@@ -243,7 +239,7 @@ On macOS, the scripts uses Minikube, which will skip the above step.
 2024-12-17T19:52:46.572+0800        [A] ubuntu: CopyKubeConfig success (60.33887ms)
 ...
 ```
-
+:::
 ### Integrate KubeSphere
 
 KubeSphere is installed on top of Kubernetes to enhance system management and observability. It provides features such as:
@@ -253,30 +249,50 @@ KubeSphere is installed on top of Kubernetes to enhance system management and ob
 - Namespaces and custom resource definitions (CRDs).
 
 ### Configure account
-The Olares ID is created on the LarePass app. During this step, the installation script prompts you to enter the following info, so you can use LarePass to activate Olares later:
+The Olares ID is created in the LarePass app. During this step, the installation script prompts you to enter the following info, so you can use LarePass to activate Olares later:
 - **Olares domain name**: Olares provides default names `olares.com` and `olares.cn`. This can be customized if the custom domain has been added to Olares Space.
 - **Olares ID**: Enter the username part of your Olares ID. 
 
 This creates a system account for logging in to Olares and completes several background access and permission configurations.
 
-**Example script output:**
-
+:::details Example script output
 ```bash
-Enter the domain name ( olares.com by default ): olares.cn
-2024-12-17T20:58:15.690+0800        using Domain Name: olares.cn
+Enter the domain name ( olares.com by default ): 
+2024-12-17T20:58:15.690+0800        using Domain Name: olares.com
 
-Enter the Olares ID (which you registered in the LarePass app): terminus
+Enter the Olares ID (which you registered in the LarePass app): marvin113
 2024-12-17T20:58:52.584+0800        using Olares Local Name: marvin113
 2024-12-17T20:58:52.584+0800        using Olares ID: marvin113@olares.com
 2024-12-17T20:58:52.584+0800        using password: 2uO5PZ2X
 ```
-
+:::
 ### Deploy built-in applications
 The final deployment step installs core services and user applications using Helm charts:
 - **Core system services** (in the `os-system` namespace): Includes backups (Velero), storage (OpenEBS), Redis, Nats, MinIO, etc.
 - **User applications** (in namespaces like `user-space-xxx`): Includes Files, Desktop, Settings, etc.
 
 During installation, the log will display messages such as `[helm] app installed success` and `xxx created`, indicating that the respective Helm charts or Kubernetes resources have been installed successfully.
+
+:::details Example script output
+```bash
+2024-12-17T19:53:18.382+0800        [A] ubuntu: InitKsNamespace success (2.678362348s)
+2024-12-17T19:53:18.382+0800        [Module] DeploySnapshotController
+customresourcedefinition.apiextensions.k8s.io/volumesnapshotclasses.snapshot.storage.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/volumesnapshotcontents.snapshot.storage.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/volumesnapshots.snapshot.storage.k8s.io created
+2024-12-17T19:53:18.924+0800        [helm] app installed success        {"NAME": "snapshot-controller", "LAST DEPLOYED": "Tue Dec 17 19:53:18 2024", "NAMESPACE": "kube-system", "STATUS": "deployed", "REVISION": 1}
+2024-12-17T19:53:18.924+0800        [A] ubuntu: CreateSnapshotController success (541.656132ms)
+2024-12-17T19:53:18.924+0800        [Module] DeployRedis
+secret/redis-secret created
+2024-12-17T19:53:19.057+0800        [A] ubuntu: CreateRedisSecret success (133.123121ms)
+2024-12-17T19:53:19.189+0800        [A] ubuntu: BackupRedisManifests success (132.045425ms)
+2024-12-17T19:53:19.339+0800        [A] ubuntu: DeployRedisHA success (149.251633ms)
+local (default)   openebs.io/local   Delete          WaitForFirstConsumer   false                  31s
+local (default)   openebs.io/local   Delete   WaitForFirstConsumer   false   31s
+2024-12-17T19:53:19.971+0800        [helm] app installed success        {"NAME": "redis", "LAST DEPLOYED": "Tue Dec 17 19:53:19 2024", "NAMESPACE": "kubesphere-system", "STATUS": "deployed", "REVISION": 1}
+...
+```
+:::
 
 ### Complete the installation
 
@@ -309,30 +325,4 @@ After activation, your Olares will be fully operational and ready to use.
 
 - [Olares CLI reference](./cli/olares-cli.md)
 - [Olares installation overview](installation-overview.md)
-
-
-
-
-
-    
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
+- [Olares environment variables](environment-variables.md)
