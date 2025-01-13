@@ -2,30 +2,29 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 
 const side = {
   "/zh/manual/": [
-    { text: "文档站",
+    {
+      text: "文档站",
       link: "/zh/manual/docs-home",
       items: [
-      { text: "应用场景", link: "/zh/manual/why-olares" },
-      { text: "功能对比",
-            link: "/zh/manual/feature-overview",
-      },
-          {
-            text: "帮助与支持",
-            collapsed: true,
-            items: [
-              { text: "常见问题", link: "/zh/manual/help/faqs" },
-              {
-                    text: "技术支持",
-                    link: "/zh/manual/help/request-technical-support",
-                    },
-         //     {
-         //       text: "Troubleshooting Guide",
-         //       link: "/zh/manual/help/troubleshooting-guide",
-         //     },
-            ],
-          },
+        { text: "应用场景", link: "/zh/manual/why-olares" },
+        { text: "功能对比", link: "/zh/manual/feature-overview" },
+        {
+          text: "帮助与支持",
+          collapsed: true,
+          items: [
+            { text: "常见问题", link: "/zh/manual/help/faqs" },
+            {
+              text: "技术支持",
+              link: "/zh/manual/help/request-technical-support",
+            },
+            //     {
+            //       text: "Troubleshooting Guide",
+            //       link: "/zh/manual/help/troubleshooting-guide",
+            //     },
+          ],
+        },
       ],
-      },
+    },
     {
       text: "快速开始",
       collapsed: false,
@@ -247,19 +246,19 @@ const side = {
               link: "/zh/manual/tasks/update",
             },
             {
-               text: "控制面板",
-               link: "/zh/manual/tasks/navigate-control-hub",
-               collapsed: true,
-               items: [
-               {
-               text: "编辑系统资源",
-               link: "/zh/manual/tasks/edit-resource",
-               },
-               {
-               text: "查看数据库状态",
-               link: "/zh/manual/tasks/view-database-status",
-               },
-               ],
+              text: "控制面板",
+              link: "/zh/manual/tasks/navigate-control-hub",
+              collapsed: true,
+              items: [
+                {
+                  text: "编辑系统资源",
+                  link: "/zh/manual/tasks/edit-resource",
+                },
+                {
+                  text: "查看数据库状态",
+                  link: "/zh/manual/tasks/view-database-status",
+                },
+              ],
             },
           ],
         },
@@ -314,7 +313,7 @@ const side = {
       collapsed: true,
       link: "/zh/manual/concepts/",
       items: [
-        { text: "架构", link: "/zh/manual/architecture" },
+        { text: "架构", link: "/zh/manual/concepts/architecture" },
         { text: "Olares ID", link: "/zh/manual/concepts/olares-id" },
         { text: "账户", link: "/zh/manual/concepts/account" },
         { text: "应用", link: "/zh/manual/concepts/application" },
@@ -374,7 +373,7 @@ const side = {
           link: "/zh/developer/install/versioning",
         },
       ],
-    },   
+    },
     {
       text: "开发 Olares 应用",
       items: [
@@ -506,7 +505,7 @@ const side = {
         },
       ],
     },
-      {
+    {
       text: "参与贡献",
       items: [
         {
@@ -559,4 +558,3 @@ export const zh = defineConfig({
     sidebar: side,
   },
 });
-
