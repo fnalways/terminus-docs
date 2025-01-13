@@ -142,7 +142,7 @@ curl -sSfL https://olares.sh | bash
 配置 `nvidia-container-toolkit` 的 APT 安装镜像源。
 - **可选值**：
   - `nvidia.github.io`
-  - `mirrors.ustc.edu.cn`
+  - `mirrors.ustc.edu.cn`（推荐中国大陆用户使用，连接性更好）
 - **默认值**：`nvidia.github.io`
 
 ### `OLARES_SPACE_URL`

@@ -116,7 +116,7 @@ Specifies the backend domain used by the application marketplace (Market).
 Specifies the APT repository mirror for installing NVIDIA Container Toolkit.
 - **Valid values**:
   - `nvidia.github.io`
-  - `mirrors.ustc.edu.cn`
+  - `mirrors.ustc.edu.cn` (recommended for better connectivity in mainland China)
 - **Default**: `nvidia.github.io`
 
 ### `OLARES_SPACE_URL`
