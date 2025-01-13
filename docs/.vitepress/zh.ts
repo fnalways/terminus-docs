@@ -336,7 +336,7 @@ const side = {
         link: "/zh/developer/install/installation-overview",
       },
       {
-        text: "安装过程",
+        text: "安装流程",
         link: "/zh/developer/install/installation-process",
       },
       {
@@ -553,7 +553,7 @@ export const zh = defineConfig({
 
     nav: [
       { text: "使用指南", link: "/zh/manual/docs-home" },
-      { text: "开发者", link: "/zh/developer/develop/" },
+      { text: "开发者文档", link: "/zh/developer/install/" },
     ],
 
     sidebar: side,

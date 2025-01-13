@@ -16,22 +16,22 @@ olares-cli gpu [subcommand] [options]
 
 ## Subcommands
 
-| Subcommand    | Description                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------------|
-| `install`     | Installs GPU drivers and dependencies. Requires specifying the installation directory (`--base-dir`) and the Olares version (`--version`). |
-| `enable`      | Enables GPU functionality to support GPU-based applications.                                      |
-| `disable`     | Disables GPU functionality, stopping support for GPU-based applications.                         |
-| `uninstall`   | Uninstalls GPU drivers and related components.                                                    |
-| `status`      | Displays the installed GPU driver version, CUDA version, and the status of GPU-related services.  |
+| Subcommand  | Description                                                                                                                                |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `install`   | Installs GPU drivers and dependencies. Requires specifying the installation directory (`--base-dir`) and the Olares version (`--version`). |
+| `enable`    | Enables GPU functionality to support GPU-based applications.                                                                               |
+| `disable`   | Disables GPU functionality, stopping support for GPU-based applications.                                                                   |
+| `uninstall` | Uninstalls GPU drivers and related components.                                                                                             |
+| `status`    | Displays the installed GPU driver version, CUDA version, and the status of GPU-related services.                                           |
 
 
 ## Options
 
-| Name          | Short | Description                                                                                                   |
-|---------------|-------|-------------------------------------------------------------------------------------------------------------|
-| `--base-dir`  | `-b`  | Specifies the base installation directory for the GPU components. Typically, this is Olares' default installation directory `$HOME/.olares`. |
-| `--version`   | `-v`  | Specifies the Olares version for GPU drivers and components. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
-| `--help`      | `-h`  | Displays help information.                  |
+| Name         | Short | Description                                                                                                                                                                                                                                                                              |
+|--------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--base-dir` | `-b`  | Specifies the base installation directory for the GPU components. Typically, this is Olares' default installation directory `$HOME/.olares`.                                                                                                                                             |
+| `--version`  | `-v`  | Specifies the Olares version for GPU drivers and components. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
+| `--help`     | `-h`  | Displays help information.                                                                                                                                                                                                                                                               |
 
 ## Example
 

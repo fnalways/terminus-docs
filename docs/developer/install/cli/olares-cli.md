@@ -7,10 +7,11 @@ Olares provides Olares CLI, a command-line tool for developers and system admini
 
 The recommended [one-liner installation command](../../../manual/get-started/install-olares.md) retrieves a shell script from https://olares.sh/ that downloads and installs Olares CLI. Once installed, the CLI orchestrates the remainder of the setup.
 
-In general, Olares CLI manages installation through three main phases:
-1. **Download**: Olares CLI fetches the necessary components.
-2. **Prepare**: Olares CLI prepares the environment for installation.
-3. **Install**: Olares CLI installs the core services of Olares.
+In general, Olares CLI manages installation through four main phases:
+1. **Precheck**: Olares CLI checks the system environment.
+2. **Download**: Olares CLI fetches the necessary components.
+3. **Prepare**: Olares CLI prepares the environment for installation.
+4. **Install**: Olares CLI installs the core services of Olares.
 
 This page explains the Olares CLI syntax and describes the command operations.
 

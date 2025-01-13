@@ -1,3 +1,6 @@
+---
+outline: [2, 3]
+---
 # Olares versioning
 
 The Olares versioning and release process is designed to provide clear version definitions and stable upgrade paths. This document outlines Olares' versioning rules, release types, branch management practices, and upgrade guidelines.
@@ -16,7 +19,7 @@ Olares offers three types of releases: **Stable**, **Release Candidate (RC)**, a
 
 ### Stable releases
 
-Stable releases are thoroughly tested versions suitable for production environments. The official installation script (`https://olares.sh`) always defaults to the latest stable version.
+Stable releases are thoroughly tested versions suitable for production environments. The official one-line installation command always defaults to the latest stable version.
 - **Release cadence**: Monthly
 - **Examples**: `v1.10.5`, `v1.11.0`, `v1.11.1`, `v1.12.0`
 
