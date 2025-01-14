@@ -4,8 +4,8 @@
 Make sure your device meets the following requirements.
 
 - CPU: 4 cores or above
-- At least 8GB of available memory
-- Storage: SSD with 64GB or more of available space
+- RAM: At least 8GB of available memory
+- Storage: At least 64GB of available space (SSD recommended)
 - Supported Systems: PVE 8.2.2
 
 ::: tip Version compatibility
