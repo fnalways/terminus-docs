@@ -18,7 +18,7 @@ Olares supports different Kubernetes distributions depending on the underlying e
 - Linux environments (including WSL, PVE, LXC, Raspberry Pi): Users can choose to install [Kubernetes](https://kubernetes.io/) or the lightweight [K3s](https://k3s.io/), with K3s being the default for its better performance and resource efficiency on local hardware.
 - macOS: [minikube](https://minikube.sigs.k8s.io/) is used to deploy Kubernetes within a Linux virtual machine, ensuring a unified experience across platforms.
 
-Regardless of the chosen Kubernetes distribution, users benefit from a consistent set of capabilities, including deployment, scaling, resource allocation, and self-healing.
+Regardless of the chosen Kubernetes distribution, users get consistent core capabilities and experience with Olares.
 
 ### Networking
 
@@ -28,7 +28,7 @@ The networking stack ensures seamless communication between containers, nodes, a
 - [Calico](https://www.tigera.io/project-calico/): A container networking interface (CNI) that facilitates communication between containers and virtual machines while offering advanced network policy controls.
 - [Envoy](https://www.envoyproxy.io/): A high-performance, extensible edge and service proxy. Envoy acts as middleware for communication between services, handling load balancing, service discovery, secure communication, and observability. It can operate as a standalone reverse proxy or an API gateway and is often used as a data plane component in service meshes.
 
-These tools collectively ensure robust, scalable, and secure networking within Olares.
+These components collectively ensure robust, scalable, and secure networking within Olares.
 
 ### Storage
 
@@ -46,31 +46,34 @@ Olares uses [etcd](https://etcd.io/) as its distributed key-value store. etcd is
 
 ### GPU management
 
-With the growing need for AI and ML workloads, Olares provides robust GPU management capabilities, supporting both shared and exclusive GPU usage:
+With the growing need for AI workloads, Olares provides robust GPU management capabilities, supporting both shared and exclusive GPU usage:
 
-- **Shared mode**: Applications can access the full GPU (compute and memory), while Olares schedules GPU usage to ensure fairness across multiple applications. This is implemented with [nvshare](https://github.com/grgalex/nvshare).
+- **Shared mode**: Applications can access the full GPU (computing power and VRAM), while Olares schedules GPU usage to ensure fairness across multiple applications. It is implemented with [nvshare](https://github.com/grgalex/nvshare).
 - **Standalone mode**: If an application claims the entire GPU memory, other tasks requiring GPU resources will not execute until it is released.
 
+:::info
+Currently, Olares GPU support is restricted to deployments with one GPU per node.
+:::
 Starting with Olares v1.11, [CUDA](https://developer.nvidia.com/cuda-toolkit) (12.4 and above) is supported. Changes in the host environment's CUDA configuration can be synchronized with the Olares cluster using `olares-cli`.
 
-### Olares management
+### Olares cluster management
 
 The management of Olares is implemented through the following:
 
 - [olares-cli](../developer/install/cli/olares-cli.md): A command-line tool for managing Olares clusters, applications, and hardware nodes.
-- [olaresd](../developer/install/installation-overview.md#container-runtime-containerd): A daemon process that monitors hardware and network changes, handles system upgrades, and ensures the integrity of the cluster.
+- [olaresd](../developer/install/installation-overview.md#container-runtime-containerd): A daemon process that monitors hardware and network changes, while also managing cluster upgrades, restarts, and other maintenance operations.
 
-These tools streamline installation, maintenance, and scaling.
+These tools streamline installation, maintenance, and scaling for Olares.
 
 ## Platform
 
-The platform layer provides middleware services such as databases, messaging systems, file systems, workflow orchestration, secret management, and observability.
+The platform layer services run in containers with middlewares such as databases, messaging system, file system, workflow orchestration, secret management, and observability.
 
 ### Databases
 
-Olares uses [PostgreSQL](https://www.postgresql.org/) as its primary relational database. All applications share a single PostgreSQL instance, with each having dedicated accounts for isolation. PostgreSQL also serves as a full-text search engine and vector database.
+Olares uses [PostgreSQL](https://www.postgresql.org/) 16 as its primary relational database. All applications share a single PostgreSQL instance, with each having dedicated accounts for isolation. PostgreSQL also serves as a full-text search engine and vector database.
 
-For clustering, [Citus](https://github.com/citusdata/citus) is used, though its production readiness is still under evaluation.
+For multi-nodes, [Citus](https://github.com/citusdata/citus) is used, though its production readiness is still under evaluation.
 
 In the future, PostgreSQL is expected to migrate to the infrastructure layer for better resource management.
 
@@ -80,7 +83,7 @@ Olares integrates [KVRocks](https://github.com/apache/incubator-kvrocks), a Redi
 
 ### Messaging system
 
-The lightweight and high-performance [NATS.io](https://nats.io/) is used as the messaging system. NATS ensures low resource consumption while delivering reliable message queues for inter-application communication.
+The lightweight and high-performance [NATS.io](https://nats.io/) is used as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
 
 ### File system
 
@@ -101,7 +104,7 @@ Two secret management solutions are integrated into Olares:
 
 Olares integrates [Prometheus](https://prometheus.io/) for system monitoring and resource usage tracking. Prometheus collects resource metrics for applications like Dashboard and Market.
 
-Additionally, [OpenTelemetry](https://opentelemetry.io/) with eBPF-based monitoring traces request workflows within the system.
+Additionally, [OpenTelemetry](https://opentelemetry.io/) with eBPF-based monitoring is being developed to trace request workflows within the system.
 
 ### Other middlewares
 
@@ -119,30 +122,30 @@ Additionally, [Authelia](https://www.authelia.com/) adds authentication and auth
 
 ### Application governance
 
-Key components for application governance include:
+Components for application governance include:
 - [app-service](https://github.com/beclab/app-service): Handles application lifecycle management and resource allocation.
-- [system-server](https://github.com/beclab/system-server): Manages permissions for inter-application API calls and routes network connections between applications and middleware.
+- [system-server](https://github.com/beclab/system-server): Manages permissions for inter-application API calls and handles network routing between applications and database middlewares.
 - image-server: Works with app-service to manage container images required by Olares applications.
 - [bfl](https://github.com/beclab/bfl): Aggregates backend interfaces and proxies requests for all system services, including user-isolated system and cluster information.
 
 ### Network connectivity
 Olares supports secure and flexible network connectivity through:
-- Reverse proxy: Options include [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/), Olares Tunnel, and self-hosted FRP.
+- Reverse proxy: Options include [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/), Olares Tunnel, and self-built FRP.
 - [Tailscale](https://tailscale.com/): Enables users to securely access the system from anywhere.
 - [Headscale](https://github.com/juanfont/headscale): A self-hosted implementation of the Tailscale control server.
 
 ### File service
-Key components for file service include:
+Components for file service include:
 - File server
 - [Seafile](https://www.seafile.com/): An open-source alternative to Dropbox for file synchronization. Olares deeply integrates Seafile, enabling users to synchronize files scattered across multiple devices into a unified repository.
 - Drive server: Provides integration with external storage services like Google Drive, Dropbox and S3.
 - Media server: Streams video files using [ffmpeg](https://github.com/FFmpeg/FFmpeg). 
 
 ### Knowledge service
-Key components for knowledge service include:
+Components for knowledge service include:
 - Knowledge: Stores content such as web pages, videos, audio files, PDFs, and EPUBs that users collect via the browser extension or share from their mobile phones using LarePass. This repository is also utilized by the decentralized recommendation engine to store its results.
 - Download: Uses [aria2](https://aria2.github.io/) and [youtube-dlp](https://github.com/yt-dlp/yt-dlp) to download files, magnet links, and online videos.
-- Search: Provides full-text search for stored content.
+- Search: Provides full-text search for stored content in Knowledge and Files.
 - [RSSHub](https://github.com/DIYgod/RSSHub): Generates RSS feeds for easier content subscription.
 
 ### AI service
@@ -182,22 +185,27 @@ A secure password manager for storing sensitive information and synchronizing it
 
 A decentralized and permissionless app store for installing, uninstalling, and updating applications.
 
-## Settings
+### Settings
 
 A system configuration application.
 
-## Dashboard
+### Dashboard
 
 An app for monitoring system resource usage.
 
-## Control Hub
+### Control Hub
 
 The console for Olares, providing precise and autonomous control over the system and its environment.
 
-## Profile
+### Profile
 
 An app to customize the user's profile page.
 
 ### DevBox
 
 A development tool for building and deploying Olares applications.
+
+## Learn more
+- To get started with Olares, see the [Getting Started guide](get-started/index.md).
+- To learn more about the internals of Olares, see the topics in [Concept](concepts/index.md).
+- For in-depth details about how each component of Olares is orchestrated, see [Olares installation overview](../developer/install/index.md).
