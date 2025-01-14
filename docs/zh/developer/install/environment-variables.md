@@ -65,7 +65,7 @@ curl -sSfL https://olares.sh | bash
 - **默认值**：`https://registry-1.docker.io`
 
 ### `PREINSTALL`
-仅执行预安装阶段（系统依赖配置），不进行完整的 Olares 安装。
+仅执行到准备阶段（系统依赖配置），不进行完整的 Olares 安装。
 - **可选值**：`1`  
 - **默认值**：无（若不设置则执行完整安装）
 

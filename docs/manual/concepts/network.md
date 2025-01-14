@@ -70,7 +70,7 @@ Inside the application, Olares has multiple layers of security.
 
   - Each application operates in its exclusive namespace
   - All resources are namespace-confined
-  - Applications cannot connect "`ClusterRole`" to "`ServiceAccount`"
+  - Applications cannot connect `ClusterRole` to `ServiceAccount`
   - Cross-namespace resource access is prohibited
 
 - **Network policy controls**
@@ -80,7 +80,7 @@ Inside the application, Olares has multiple layers of security.
     - Applications isolated between users
     - Third-party applications isolated within user space
 - **Pod restrictions**
-  - Pods cannot use "`hostNetwork`" service or "`NodePort`" service
+  - Pods cannot use `hostNetwork` service or `NodePort` service
   - Traffic access requires declared entrance service and system-provided entry proxy
   - The Pod declared as entrance will be forced to join Envoy's sandbox Sidecar to authenticate and authorize incoming traffic.
 
