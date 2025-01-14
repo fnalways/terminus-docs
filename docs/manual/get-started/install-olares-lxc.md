@@ -4,9 +4,9 @@ LXC (Linux Containers) is a lightweight virtualization method that runs applicat
 
 Make sure your device meets the following requirements.
 
-- CPU: 4 cores or above
+- CPU: At least 4 cores
 - RAM: At least 8GB of available memory
-- Storage: At least 64GB of available space (SSD recommended
+- Storage: At least 64GB of available space (SSD recommended)
 - Supported systems:
     - PVE 8.2.2
     - Linux container: Debian 12 (for existing LXC containers on PVE)
