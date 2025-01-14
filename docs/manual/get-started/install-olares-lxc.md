@@ -6,7 +6,7 @@ Make sure your device meets the following requirements.
 
 - CPU: 4 cores or above
 - RAM: 8GB or above (available memory)
-- Storage: 64GB or above (available disk space)
+- Storage: SSD with 64GB or more of available space
 - Supported systems:
     - PVE 8.2.2
     - Linux container: Debian 12 (for existing LXC containers on PVE)
