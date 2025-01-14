@@ -2,9 +2,9 @@
 
 Make sure your device meets the following requirements.
 
-- CPU: 4 cores or above
-- RAM: 8GB or above (available memory)
-- Storage: 64GB or above (available disk space)
+- CPU: At least 4 cores
+- RAM: At least 8GB of available memory
+- Storage: At least 64GB of available space (SSD recommended)
 - Supported systems:
     - Ubuntu 20.04 LTS or later
     - Debian 11 or later
