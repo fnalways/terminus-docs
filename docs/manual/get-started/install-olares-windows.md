@@ -12,7 +12,7 @@ We recommend using it only for development or testing purposes.
 ## System compatibility
 Make sure your Windows meets the following requirements.
 - CPU: 4 cores or above
-- RAM: 16 or above (available memory)
+- RAM: At least 16GB of available memory
 - Storage: SSD with 64GB or more of available space
 - Supported systems:
     - Windows 10 or 11
