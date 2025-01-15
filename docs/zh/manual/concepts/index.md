@@ -9,7 +9,7 @@
 
 通过以下概念来理解 Olares：
 
-- [架构](../architecture.md)
+- [架构](architecture.md)
 - [Olares ID](./olares-id.md)
 - [账户](./account.md)
 - [应用](./application.md)
