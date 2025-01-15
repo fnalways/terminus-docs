@@ -109,7 +109,6 @@ Olares 集成了两个密钥管理解决方案：
 Olares 通过以下组件提供可观测性：
 
 - [Prometheus](https://prometheus.io/)：用于系统监控和资源使用跟踪。它为**仪表盘**和**应用市场**等应用提供资源使用方面的数据。
-
 - [OpenTelemetry](https://opentelemetry.io/)\*：使用基于 eBPF 的监控，实现 Olares 系统内请求工作流的追踪。*（开发中）*
 
 ### 其他中间件
@@ -142,7 +141,7 @@ Olares 通过以下方式提供安全灵活的网络连接：
 
 ### 文件服务
 文件服务的组件包括：
-- File server
+- File server：提供基本的文件管理服务。
 - [Seafile](https://www.seafile.com/)：Dropbox 的开源替代品，用于文件同步。Olares 深度集成了 Seafile，使用户能将分散在多个设备上的文件同步到统一的存储库中。
 - Drive server：提供与 Google Drive、Dropbox 和 S3 等外部存储服务的接入。
 - Media server：使用 [ffmpeg](https://github.com/FFmpeg/FFmpeg) 流式传输视频文件。

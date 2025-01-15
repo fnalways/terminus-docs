@@ -109,7 +109,6 @@ Two secret management solutions are integrated into Olares:
 Olares provides observability through the following:
 
 - [Prometheus](https://prometheus.io/): Used for system monitoring and resource usage tracking. It collects resource metrics for applications like Dashboard and Market.
-
 - [OpenTelemetry](https://opentelemetry.io/)*: Enables tracing of request workflows within the Olares system using eBPF-based monitoring. *(In development)*
 
 ### Other middlewares
@@ -142,7 +141,7 @@ Olares supports secure and flexible network connectivity through:
 
 ### File service
 Components for file service include:
-- File server
+- File server: Provides essential file management services.
 - [Seafile](https://www.seafile.com/): An open-source alternative to Dropbox for file synchronization. Olares deeply integrates Seafile, enabling users to synchronize files across multiple devices into a centralized repository.
 - Drive server: Provides integration with external storage services like Google Drive, Dropbox and S3.
 - Media server: Streams video files using [ffmpeg](https://github.com/FFmpeg/FFmpeg). 
