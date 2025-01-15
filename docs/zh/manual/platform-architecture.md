@@ -6,11 +6,11 @@ outline: [2, 3]
 
 本文详细介绍了 Olares 的架构，阐述了各层及其组件的用途和功能。
 
-![Olares 架构图](/images/manual/olares-architecture-diagram.png)
+![Olares 架构图](/images/manual/architecture-diagram.png)
 
 ## 基础设施
 
-这一层是 Olares 的基石，提供容器编排、存储、网络等基础设施。
+基础设施层提供了容器编排、存储、网络和集群管理等核心基础服务。
 
 ### 容器编排
 
@@ -34,29 +34,33 @@ Olares 根据底层环境支持不同的 Kubernetes 发行版：
 
 Olares 为单节点和多节点设置提供灵活的存储方案：
 
-- 本地存储：适用于单节点部署，为系统日志等本地数据提供最佳读写性能。
-- [S3](https://aws.amazon.com/s3/)：多节点环境的云存储选项，也支持任何兼容 S3 的服务。
-- [MinIO](https://min.io/)：本地部署的 S3 兼容存储解决方案。用户可以通过 Olares 搭建 MinIO 集群，或使用现有的 MinIO 服务。
+- 本地存储：适用于单节点部署，提供最佳读写性能。
+- [S3](https://aws.amazon.com/s3/)：云存储选项，适合通过 S3 或任何兼容 S3 的服务进行云部署。
+- [MinIO](https://min.io/)：自托管部署的分布式存储解决方案。用户可以通过 Olares 搭建 MinIO 集群，或挂载现有的 MinIO 集群。
 
 这种方案确保了应用能够访问所需的存储机制，无论是本地还是分布式环境。
 
 ### 分布式键值存储
 
-Olares 使用 [etcd](https://etcd.io/) 作为分布式键值存储。etcd 对管理集群状态、配置和服务发现等关键系统数据至关重要。其高可用性和强一致性使其成为分布式环境的理想选择。
+Olares 使用 [etcd](https://etcd.io/) 作为分布式键值存储。etcd 是存储和管理 Kubernetes 集群数据的核心组件。
 
 ### GPU 管理
 
-针对资源密集型需求（如使用 AI 应用），Olares 提供强大的 GPU 管理能力，支持共享和独占两种 GPU 使用模式：
+Olares 利用 CUDA 驱动、NVIDIA 设备插件和 nvshare 等组件协同工作，有效管理和分配 GPU 资源：
 
-- **共享模式**：应用可以访问完整的 GPU（算力和显存），Olares 会调度 GPU 使用以确保多个应用间的公平性。通过 [nvshare](https://github.com/grgalex/nvshare) 实现。
-- **独占模式**：如果一个应用声明使用全部 GPU 内存，其他需要 GPU 资源的任务将等待资源释放后才能执行。
+- CUDA：作为 GPU 硬件和操作系统之间的核心接口。
+- NVIDIA 设备插件：使 GPU 资源能够被容器或 Pod 发现、调度和分配。
+- [nvshare](https://github.com/grgalex/nvshare)：允许多个容器或 Pod 共享单个 GPU，实现 GPU 的共享和独占使用，提高 GPU 利用率。
 
 :::info 注意
 Olares 目前的 GPU 管理功能仅支持单节点单 GPU 的部署场景。
 :::
 从 Olares v1.11 开始，支持 [CUDA](https://developer.nvidia.com/cuda-toolkit)（12.4 及以上版本）。当宿主机环境的 CUDA 配置变更时，可以通过 `olares-cli` 通知 Olares 集群进行配置。
 
-### Olares 管理
+### 容器管理
+Olares 使用轻量级容器运行时 [containerd](../developer/install/installation-overview.md#容器运行时containerd) 进行容器化部署。
+
+### 集群管理
 
 Olares 的集群管理通过以下工具实现：
 
@@ -83,7 +87,7 @@ Olares 集成了 [KVRocks](https://github.com/apache/incubator-kvrocks)，这是
 
 ### 消息系统
 
-使用轻量级高性能的 [NATS.io](https://nats.io/) 作为消息系统。NATS 在保证可靠消息队列的同时，保持较低的资源消耗。
+使用轻量级高性能的 [NATS](https://nats.io/) 作为消息系统，这是一个轻量级、高性能的面向消息的中间件。NATS 在保证可靠消息队列的同时，确保较低的资源消耗。
 
 ### 文件系统
 
@@ -98,17 +102,19 @@ Olares 使用 [Argo Workflows](https://argoproj.github.io/) 进行工作流编�
 Olares 集成了两个密钥管理解决方案：
 
 - [Vault](https://github.com/beclab/olares/tree/main/apps/vault)：保护账号、密码和助记词等敏感数据。它对密钥进行加密，即使服务器被攻破，数据也能保持安全。Vault 由 Olares 团队基于 [Padloc](https://padloc.app/) 开发。
-- [Infisical](https://infisical.com/)：一个用于管理敏感信息和防止团队内密钥泄露的工具。
+- [Infisical](https://infisical.com/)：用于管理敏感信息和防止 Olares 开发中的密钥泄露。
 
 ### 可观测性
 
-Olares 集成了 [Prometheus](https://prometheus.io/) 用于系统监控和资源使用跟踪。Prometheus 为**仪表盘**和**应用市场**等应用提供资源使用方面的数据。
+Olares 通过以下组件提供可观测性：
 
-此外，使用基于 eBPF 的 [OpenTelemetry](https://opentelemetry.io/) 正在开发中，用于监控请求进入 Olares 后的链路。*（开发中）*
+- [Prometheus](https://prometheus.io/)：用于系统监控和资源使用跟踪。它为**仪表盘**和**应用市场**等应用提供资源使用方面的数据。
+
+- [OpenTelemetry](https://opentelemetry.io/)\*：使用基于 eBPF 的监控，实现 Olares 系统内请求工作流的追踪。*（开发中）*
 
 ### 其他中间件
 
-Olares 在**应用市场**中集成了一些常用中间件，如用于可视化的 [Grafana](https://grafana.com/)、用于文档存储的 [MongoDB](https://www.mongodb.com/) 和用于混沌工程的 [Chaos Mesh](https://chaos-mesh.org/)。
+Olares 在**应用市场**中集成了一些常用中间件，如用于可视化的 [Grafana](https://grafana.com/)、用于文档存储的 [MongoDB](https://www.mongodb.com/) 和用于混沌测试的 [Chaos Mesh](https://chaos-mesh.org/)。
 
 ## 应用框架
 
@@ -153,7 +159,7 @@ Olares 通过以下方式提供安全灵活的网络连接：
 Olares 提供以下 AI 能力：
 - 模型服务*：提供模型托管服务。*（开发中）*
 - RAG 接口*：为文件、文章、图片和视频提供检索增强生成（RAG）服务。*（开发中）*
-- 代理和工作流编排*：管理 Agent 和工具工作流。*（开发中）*
+- Agent 和工作流编排*：管理 Agent 和工具工作流。*（开发中）*
 
 ### 系统服务
 
@@ -165,25 +171,25 @@ Olares 提供以下 AI 能力：
 
 ## 系统应用
 
-系统应用提供文件、知识、密码和系统本身的管理工具。这些应用预装在系统中。
+Olares 预装了用于管理文件、知识、密码和系统本身的应用。
 
 用户可以通过应用市场安装更多应用。
 
 ### 文件管理器
 
-管理和同步多设备间的文件，实现无缝共享和访问。
+文件管理应用，管理和同步跨设备和不同来源的文件，实现无缝共享和访问。
 
 ### Wise
 
-一个本地优先、AI 原生的现代阅读器，帮助从各平台收集、阅读和管理信息。用户可以运行自托管的推荐算法来过滤和排序在线内容。
+本地优先、AI 原生的现代阅读器，帮助从各平台收集、阅读和管理信息。用户可以运行自托管的推荐算法来过滤和排序在线内容。
 
 ### Vault
 
-一个安全的密码管理器，用于存储敏感信息并在设备间同步。
+安全的密码管理器，用于存储敏感信息并在设备间同步。
 
 ### 应用市场
 
-一个去中心化、无许可的应用商店，用于安装、卸载和更新应用。
+去中心化、无许可的应用商店，用于安装、卸载和更新应用或推荐算法。
 
 ### 设置
 

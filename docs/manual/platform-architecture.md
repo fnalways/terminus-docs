@@ -6,7 +6,7 @@ outline: [2, 3]
 
 This document provides a comprehensive explanation of the Olares architecture, outlining the purpose and functionality of each layer and its components.
 
-![Olares architecture diagram](/images/manual/olares-architecture-diagram.png)
+![Olares architecture diagram](/images/manual/architecture-diagram.png)
 
 ## Infrastructure
 
@@ -52,13 +52,13 @@ Olares leverages components like CUDA driver, NVIDIA device plugin, and nvShare,
 - NVIDIA device plugin: Allows GPU resources to be advertised, scheduled, and allocated to containers or pods.
 - [nvshare](https://github.com/grgalex/nvshare): Allows multiple containers or pods to share a single GPU, enabling both shared and exclusive GPU usage in Olares for better GPU utilization.
 
-- **Shared mode**: Applications can access the full GPU (computing power and VRAM), while Olares schedules GPU usage to ensure fairness across multiple applications. It is implemented with [nvshare](https://github.com/grgalex/nvshare).
-- **Standalone mode**: If an application claims the entire GPU memory, other tasks requiring GPU resources will not execute until it is released.
-
 :::info
 Currently, Olares GPU support is restricted to deployments with one GPU per node.
 :::
 Starting with Olares v1.11, [CUDA](https://developer.nvidia.com/cuda-toolkit) (12.4 and above) is supported. Changes in the host environment's CUDA configuration can be synchronized with the Olares cluster using `olares-cli`.
+
+### Container management
+Olares uses [containerd](../developer/install/installation-overview.md#container-runtime-containerd), a lightweight container runtime, for containerized deployments.
 
 ### Olares cluster management
 
@@ -87,7 +87,7 @@ Olares integrates [KVRocks](https://github.com/apache/incubator-kvrocks), a Redi
 
 ### Messaging system
 
-Olares integrates [NATS](nats.io), a lightweight and high-performance (https://nats.io/) message-oriented middleware, as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
+Olares integrates [NATS](https://nats.io/), a lightweight and high-performance message-oriented middleware, as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
 
 ### File system
 
@@ -106,9 +106,11 @@ Two secret management solutions are integrated into Olares:
 
 ### Observability
 
-Olares integrates [Prometheus](https://prometheus.io/) for system monitoring and resource usage tracking. Prometheus collects resource metrics for applications like Dashboard and Market.
+Olares provides observability through the following:
 
-Additionally, [OpenTelemetry](https://opentelemetry.io/) with eBPF-based monitoring is being developed to trace request workflows within the system.
+- [Prometheus](https://prometheus.io/): Used for system monitoring and resource usage tracking. It collects resource metrics for applications like Dashboard and Market.
+
+- [OpenTelemetry](https://opentelemetry.io/)*: Enables tracing of request workflows within the Olares system using eBPF-based monitoring. *(In development)*
 
 ### Other middlewares
 
