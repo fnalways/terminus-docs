@@ -46,7 +46,11 @@ Olares uses [etcd](https://etcd.io/) as its distributed key-value store. etcd is
 
 ### GPU management
 
-With the growing need for AI workloads, Olares provides robust GPU management capabilities, supporting both shared and exclusive GPU usage:
+Olares leverages components like CUDA driver, NVIDIA device plugin, and nvShare, which work in conjunction to manage and provision GPU resources effectively: 
+
+- CUDA: Acts as the core interface between the GPU hardware and the operating system.
+- NVIDIA device plugin: Allows GPU resources to be advertised, scheduled, and allocated to containers or pods.
+- [nvshare](https://github.com/grgalex/nvshare): Allows multiple containers or pods to share a single GPU, enabling both shared and exclusive GPU usage in Olares for better GPU utilization.
 
 - **Shared mode**: Applications can access the full GPU (computing power and VRAM), while Olares schedules GPU usage to ensure fairness across multiple applications. It is implemented with [nvshare](https://github.com/grgalex/nvshare).
 - **Standalone mode**: If an application claims the entire GPU memory, other tasks requiring GPU resources will not execute until it is released.
@@ -83,7 +87,7 @@ Olares integrates [KVRocks](https://github.com/apache/incubator-kvrocks), a Redi
 
 ### Messaging system
 
-The lightweight and high-performance [NATS.io](https://nats.io/) is used as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
+Olares integrates [NATS](nats.io), a lightweight and high-performance (https://nats.io/) message-oriented middleware, as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
 
 ### File system
 
