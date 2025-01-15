@@ -10,7 +10,7 @@ This document provides a comprehensive explanation of the Olares architecture, o
 
 ## Infrastructure
 
-The infrastructure layer forms the foundation of Olares.
+The infrastructure layer provides essential infrastructure services such as container orchestration, storage, networking, and cluster management.
 
 ### Container orchestration
 
@@ -34,15 +34,15 @@ These components collectively ensure robust, scalable, and secure networking wit
 
 Olares provides flexibility in storage solutions tailored to both single-node and multi-node setups:
 
-- Local storage: Ideal for single-node deployments, offering the best read/write performance for local-only data like system logs.
-- [S3](https://aws.amazon.com/s3/): A cloud-based storage option for multi-node environments, or any S3-compatible service.
-- [MinIO](https://min.io/): A self-hosted S3-compatible storage solution for on-premise deployments. Users can either set up a MinIO cluster through Olares or use an existing one.
+- Local storage (default): Ideal for single-node deployments, offering the best read/write performance.
+- [S3](https://aws.amazon.com/s3/): A cloud-based storage option. Ideal for cloud deployment via S3 or any S3-compatible service.
+- [MinIO](https://min.io/): A distributed storage solution for self-hosted deployment. Users can either set up a MinIO cluster through Olares or mount an existing one.
 
 This approach ensures that applications have access to the necessary storage mechanisms, whether it's for local or distributed environments.
 
 ### Distributed key-value storage
 
-Olares uses [etcd](https://etcd.io/) as its distributed key-value store. etcd is integral for managing critical system data such as cluster state, configuration, and service discovery. Its high availability and strong consistency make it an excellent choice for distributed environments.
+Olares uses [etcd](https://etcd.io/) as its distributed key-value store. etcd is integral for storing and managing all cluster data for Kubernetes.
 
 ### GPU management
 
@@ -91,14 +91,14 @@ Olares employs [JuiceFS](https://juicefs.com/), a cloud-native distributed file 
 
 ### Workflow management
 
-For workflow orchestration, Olares uses [Argo Workflows](https://argoproj.github.io/). This Kubernetes-native tool automates complex tasks, such as those required by Olares' distributed recommendation engine. Currently, this functionality is not available to third-party applications.
+Olares uses [Argo Workflows](https://argoproj.github.io/) for workflow orchestration. This Kubernetes-native tool automates complex tasks, such as those required by Olares' distributed recommendation engine. Currently, this functionality is not available to third-party applications.
 
 ### Secret management
 
 Two secret management solutions are integrated into Olares:
 
 - [Vault](https://github.com/beclab/olares/tree/main/apps/vault): Protects sensitive data like accounts, passwords, and mnemonics. It encrypts secrets, ensuring that even if the server is compromised, the data remains secure. Vault is developed by the Olares team based on [Padloc](https://padloc.app/).
-- [Infisical](https://infisical.com/): A tool for managing sensitive information and preventing secret leaks within teams.
+- [Infisical](https://infisical.com/): A tool for managing sensitive information and preventing secret leaks in Olares development.
 
 ### Observability
 
@@ -108,7 +108,7 @@ Additionally, [OpenTelemetry](https://opentelemetry.io/) with eBPF-based monitor
 
 ### Other middlewares
 
-The Olares application store includes common middleware such as [Grafana](https://grafana.com/) for visualization, [MongoDB](https://www.mongodb.com/) for document storage, and [Chaos Mesh](https://chaos-mesh.org/) for chaos engineering.
+The Olares application store includes common middleware such as [Grafana](https://grafana.com/) for visualization, [MongoDB](https://www.mongodb.com/) for document storage, and [Chaos Mesh](https://chaos-mesh.org/) for chaos testing.
 
 ## Application framework
 
@@ -126,7 +126,7 @@ Components for application governance include:
 - [app-service](https://github.com/beclab/app-service): Handles application lifecycle management and resource allocation.
 - [system-server](https://github.com/beclab/system-server): Manages permissions for inter-application API calls and handles network routing between applications and database middlewares.
 - image-server: Works with app-service to manage container images required by Olares applications.
-- [bfl](https://github.com/beclab/bfl): Aggregates backend interfaces and proxies requests for all system services, including user-isolated system and cluster information.
+- [bfl](https://github.com/beclab/bfl): The Backend For Launcher service that aggregates backend interfaces and proxies requests for all system services, including user-isolated system and cluster information.
 
 ### Network connectivity
 Olares supports secure and flexible network connectivity through:
@@ -137,7 +137,7 @@ Olares supports secure and flexible network connectivity through:
 ### File service
 Components for file service include:
 - File server
-- [Seafile](https://www.seafile.com/): An open-source alternative to Dropbox for file synchronization. Olares deeply integrates Seafile, enabling users to synchronize files scattered across multiple devices into a unified repository.
+- [Seafile](https://www.seafile.com/): An open-source alternative to Dropbox for file synchronization. Olares deeply integrates Seafile, enabling users to synchronize files across multiple devices into a centralized repository.
 - Drive server: Provides integration with external storage services like Google Drive, Dropbox and S3.
 - Media server: Streams video files using [ffmpeg](https://github.com/FFmpeg/FFmpeg). 
 
@@ -171,7 +171,7 @@ Users can install additional applications via the Market app.
 
 ### Files
 
-Manages and synchronizes files across devices, enabling seamless sharing and access.
+A file management app that manages and synchronizes files across devices and sources, enabling seamless sharing and access.
 
 ### Wise
 
@@ -179,11 +179,11 @@ A local-first and AI-native modern reader that helps to collect, read, and manag
 
 ### Vault
 
-A secure password manager for storing sensitive information and synchronizing it across devices.
+A secure password manager for storing and mangaging sensitive information across devices.
 
 ### Market
 
-A decentralized and permissionless app store for installing, uninstalling, and updating applications.
+A decentralized and permissionless app store for installing, uninstalling, and updating applications and recommendation algorithms.
 
 ### Settings
 
