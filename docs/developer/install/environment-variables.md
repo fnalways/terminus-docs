@@ -131,6 +131,14 @@ Runs only the pre-installation phase (system dependency setup) without proceedin
 - **Valid values**: `1`
 - **Default**: None (performs full installation if not set)
 
+### `PUBLICLY_ACCESSIBLE`
+Explicitly specifies that this machine is accessible publicly on the internet, and a reverse proxy should not be used.
+- **Valid values**: 
+  - `0` (false)
+  - `1` (true)
+- **Default**: `0`
+
+
 ### `REGISTRY_MIRRORS`
 Specifies a custom Docker registry mirror for faster image pulls.
 - **Valid values**: `https://mirrors.joinolares.cn` or any other valid URL

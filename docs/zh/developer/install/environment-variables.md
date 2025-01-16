@@ -157,6 +157,13 @@ curl -sSfL https://olares.sh | bash
 - **可选值**：`1`  
 - **默认值**：无（若不设置则执行完整安装）
 
+### `PUBLICLY_ACCESSIBLE`
+明确指定该机器可以在互联网上公开访问，同时不设置反向代理。
+- **可选值**： 
+  - `0` (否)
+  - `1` (是)
+- **默认值**: `0`
+
 ### `REGISTRY_MIRRORS`
 设置 Docker 镜像加速地址。
 - **可选值**：`https://mirrors.joinolares.cn` 或其他镜像源地址  
