@@ -2,30 +2,30 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 
 const side = {
   "/manual/": [
-    { text: "Docs home",
+    {
+      text: "Docs home",
       link: "/manual/docs-home",
       items: [
-      { text: "Why Olares", link: "/manual/why-olares" },
-      { text: "Feature comparison",
-            link: "/manual/feature-overview",
-      },
-          {
-            text: "Help and support",
-            collapsed: true,
-            items: [
-              { text: "FAQs", link: "/manual/help/faqs" },
-      {text: "Request support",
-      link: "/manual/help/request-technical-support",
-         },
-         //{
-         //  text: "Troubleshooting Guide",
-         //  link: "/manual/help/troubleshooting-guide",
-         // },
-            ],
-          },
-
+        { text: "Why Olares", link: "/manual/why-olares" },
+        { text: "Feature comparison", link: "/manual/feature-overview" },
+        { text: "Olares architecture", link: "/manual/platform-architecture" },
+        {
+          text: "Help and support",
+          collapsed: true,
+          items: [
+            { text: "FAQs", link: "/manual/help/faqs" },
+            {
+              text: "Request support",
+              link: "/manual/help/request-technical-support",
+            },
+            //{
+            //  text: "Troubleshooting Guide",
+            //  link: "/manual/help/troubleshooting-guide",
+            // },
+          ],
+        },
       ],
-      },
+    },
     {
       text: "Get started",
       collapsed: false,
@@ -57,8 +57,8 @@ const side = {
       link: "/manual/tutorials/",
       items: [
         {
-         text: "Set up custom domain",
-         link: "/manual/tutorials/set-custom-domain",
+          text: "Set up custom domain",
+          link: "/manual/tutorials/set-custom-domain",
         },
         {
           text: "Stream videos remotely",
@@ -247,19 +247,19 @@ const side = {
               link: "/manual/tasks/update",
             },
             {
-               text: "Navigate Control Hub",
-               link: "/manual/tasks/navigate-control-hub",
-               collapsed: true,
-               items: [
-               {
-               text: "Edit system resource",
-               link: "/manual/tasks/edit-resource",
-               },
-               {
-               text: "View database status",
-               link: "/manual/tasks/view-database-status",
-               },
-               ],
+              text: "Navigate Control Hub",
+              link: "/manual/tasks/navigate-control-hub",
+              collapsed: true,
+              items: [
+                {
+                  text: "Edit system resource",
+                  link: "/manual/tasks/edit-resource",
+                },
+                {
+                  text: "View database status",
+                  link: "/manual/tasks/view-database-status",
+                },
+              ],
             },
           ],
         },
@@ -314,7 +314,7 @@ const side = {
       collapsed: true,
       link: "/manual/concepts/",
       items: [
-        { text: "Architecture", link: "/manual/architecture" },
+        { text: "Architecture", link: "/manual/concepts/architecture" },
         { text: "Olares ID", link: "/manual/concepts/olares-id" },
         { text: "Account", link: "/manual/concepts/account" },
         { text: "Application", link: "/manual/concepts/application" },
@@ -553,4 +553,3 @@ export const en = defineConfig({
     sidebar: side,
   },
 });
-

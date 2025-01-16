@@ -16,7 +16,7 @@ outline: [2, 3]
 
 ### 应用 ID
 
-应用 ID 是应用名 MD5 哈希值的前八个字符。例如，如果应用名称为"hello"，则其应用 ID 为"b1946ac9"。
+应用 ID 是应用名 MD5 哈希值的前八个字符。例如，如果应用名称为“hello”，则其应用 ID 为“b1946ac9”。
 
 应用对应的端点（Endpoint）会使用该应用 ID。
 
@@ -85,8 +85,8 @@ gitlab-client-bob
 
 - 每个集群仅允许安装一个实例
 - 仅管理员可以安装和管理集群应用
-- 在 Olares 应用市场中以 "for Cluster" 后缀和 "Cluster-scoped" 标签标识
-- 用户需要通过其授权应用访问集群应用。例如，"ComfyUI for Cluster" 提供集群范围的服务，用户通过其授权客户端应用 "ComfyUI" 访问
+- 在 Olares 应用市场中以“for Cluster”后缀和“Cluster-scoped”标签标识
+- 用户需要通过其授权应用访问集群应用。例如，“ComfyUI for Cluster”提供集群范围的服务，用户通过其授权客户端应用“ComfyUI”访问
 
 ### 授权应用
 授权应用是集群应用的客户端界面。管理员和普通成员都可以安装。
