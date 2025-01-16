@@ -28,7 +28,7 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
    
    ![Ollama entrance](/images/zh/manual/use-cases/dify-ollama-entrance.png#bordered)
 
-   **b.** 从入口页面进**端点设置**页面，获取 Ollama 的默认路由 ID（`39975b9a`）。这样，我们便得到了 Ollama 的本地访问地址：`https://39975b9a.local.{your local name}.olares.cn`, 如 `https://39975b9a.local.marvin.olares.cn`。
+   **b.** 从入口页面进**端点设置**页面，获取 Ollama 的默认路由 ID（`39975b9a`）。这样，我们便得到了 Ollama 的本地访问地址：`https://39975b9a.local.{你的本地名称}.olares.cn`, 如 `https://39975b9a.local.marvin.olares.cn`。
 
 2. 在 Dify 的 模型提供者商配置页面，选择 Ollama 作为模型提供者商，并进行以下配置：
     - **模型名称**：填写模型名称，例如：`gemma2`。
