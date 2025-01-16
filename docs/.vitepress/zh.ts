@@ -8,7 +8,7 @@ const side = {
       items: [
         { text: "应用场景", link: "/zh/manual/why-olares" },
         { text: "功能对比", link: "/zh/manual/feature-overview" },
-        { text: "系统架构", link: "/zh/manual/platform-architecture" },
+        { text: "系统架构", link: "/zh/manual/system-architecture" },
         {
           text: "帮助与支持",
           collapsed: true,
