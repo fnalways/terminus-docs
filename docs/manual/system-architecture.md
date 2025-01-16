@@ -85,7 +85,7 @@ In the future, PostgreSQL is expected to migrate to the infrastructure layer for
 
 Olares integrates [KVRocks](https://github.com/apache/incubator-kvrocks), a Redis-compatible persistent key-value store built on RocksDB. KVRocks balances memory and disk storage, making it more resource-efficient than Redis clusters, though slightly slower in performance.
 
-### Messaging system
+### Message queue
 
 Olares integrates [NATS](https://nats.io/), a lightweight and high-performance message-oriented middleware, as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
 
