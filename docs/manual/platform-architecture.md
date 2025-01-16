@@ -192,7 +192,7 @@ A decentralized and permissionless app store for installing, uninstalling, and u
 
 ### Desktop
 
-A hub for managing and interacting with installed applications.
+A hub for managing and interacting with installed applications. File and application searching are also supported.
 
 ### Profile
 
