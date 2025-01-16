@@ -196,6 +196,10 @@ A decentralized and permissionless app store for installing, uninstalling, and u
 
 A hub for managing and interacting with installed applications.
 
+#### Profile
+
+An app to customize the user's profile page.
+
 #### Settings
 
 A system configuration application.
@@ -207,10 +211,6 @@ An app for monitoring system resource usage.
 #### Control Hub
 
 The console for Olares, providing precise and autonomous control over the system and its environment.
-
-#### Profile
-
-An app to customize the user's profile page.
 
 ### DevBox
 
