@@ -30,7 +30,7 @@ The networking stack ensures seamless communication between containers, nodes, a
 
 These components collectively ensure robust, scalable, and secure networking within Olares.
 
-### Storage
+### Distributed storage
 
 Olares provides flexibility in storage solutions tailored to both single-node and multi-node setups:
 
@@ -60,7 +60,7 @@ Starting with Olares v1.11, [CUDA](https://developer.nvidia.com/cuda-toolkit) (1
 ### Container management
 Olares uses [containerd](../developer/install/installation-overview.md#container-runtime-containerd), a lightweight container runtime, for containerized deployments.
 
-### Olares cluster management
+### Olares Controller Panel
 
 The management of Olares is implemented through the following:
 
@@ -73,7 +73,7 @@ These tools streamline installation, maintenance, and scaling for Olares.
 
 The platform layer services run in containers with middlewares such as databases, messaging system, file system, workflow orchestration, secret management, and observability.
 
-### Databases
+### Relational database
 
 Olares uses [PostgreSQL](https://www.postgresql.org/) 16 as its primary relational database. All applications share a single PostgreSQL instance, with each having dedicated accounts for isolation. PostgreSQL also serves as a full-text search engine and vector database.
 
@@ -89,7 +89,7 @@ Olares integrates [KVRocks](https://github.com/apache/incubator-kvrocks), a Redi
 
 Olares integrates [NATS](https://nats.io/), a lightweight and high-performance message-oriented middleware, as the messaging system. NATS ensures low resource consumption while delivering reliable message queues.
 
-### File system
+### Distributed file system
 
 Olares employs [JuiceFS](https://juicefs.com/), a cloud-native distributed file system, to provide POSIX-compatible interfaces for applications. When S3 or MinIO is used as the storage backend, JuiceFS ensures seamless file access across nodes.
 
@@ -119,7 +119,7 @@ The Olares application store includes common middleware such as [Grafana](https:
 
 The application framework layer provides common functionality and interfaces for system and third-party applications.
 
-### Authentication and identity management
+### Authentication and authorization
 
 Olares uses [LLDAP](https://lldap.example.com/) to manage user accounts and provide LDAP (Lightweight Directory Access Protocol) services for applications.
 
@@ -190,6 +190,14 @@ A secure password manager for storing and mangaging sensitive information across
 
 A decentralized and permissionless app store for installing, uninstalling, and updating applications and recommendation algorithms.
 
+### Desktop
+
+A hub for managing and interacting with installed applications. File and application searching are also supported.
+
+### Profile
+
+An app to customize the user's profile page.
+
 ### Settings
 
 A system configuration application.
@@ -201,10 +209,6 @@ An app for monitoring system resource usage.
 ### Control Hub
 
 The console for Olares, providing precise and autonomous control over the system and its environment.
-
-### Profile
-
-An app to customize the user's profile page.
 
 ### DevBox
 
