@@ -190,25 +190,23 @@ A secure password manager for storing and mangaging sensitive information across
 
 A decentralized and permissionless app store for installing, uninstalling, and updating applications and recommendation algorithms.
 
-### System management
-
 ### Desktop
 
 A hub for managing and interacting with installed applications.
 
-#### Profile
+### Profile
 
 An app to customize the user's profile page.
 
-#### Settings
+### Settings
 
 A system configuration application.
 
-#### Dashboard
+### Dashboard
 
 An app for monitoring system resource usage.
 
-#### Control Hub
+### Control Hub
 
 The console for Olares, providing precise and autonomous control over the system and its environment.
 
