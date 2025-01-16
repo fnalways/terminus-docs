@@ -16,7 +16,7 @@ Install Dify from Market based on your role:
 * **For admin**: Install both "Dify For Cluster" and "Dify".
 * **For team members**: Ensure your admin has installed "Dify For Cluster", and install "Dify" only.
 
-### Create an AI assistant app
+## Create an AI assistant app
 
 1. Open **Dify**, navigate to the **Studio** tab, and select **Create from Blank** to create an app for the AI assistant. Here, we created an agent named "Ashia."
    ![Create App](/images/manual/use-cases/dify-create-app.png#bordered)
