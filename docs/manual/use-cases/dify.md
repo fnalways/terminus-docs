@@ -1,6 +1,6 @@
 # Customize your local AI assistant using Dify
 
-Dify is an AI application development platform that runs on your self-hosted Olares system. It's one of the key open-source projects that Olares integrates to help you build and manage AI applications while maintaining full data ownership.
+Dify is an AI application development platform that runs on your self-hosted Olares system. It's one of the key open-source projects that Olares integrates to help you build and manage AI applications while maintaining full data ownership. Additionally, you can integrate your personal knowledge base documents into Dify, allowing for more personalized interactions.
 
 ## Before you begin
 To use local AI models on Dify, ensure you have:
@@ -28,7 +28,7 @@ Install Dify from Market based on your role:
 
 1. Set up the Ollama access entrance:
    
-   **a.** Navigate to **Settings** > **Application** > **Ollama** > **Entrances**, and set the authentication level for Ollama to **Internal**. This configuration allows other applications to access Ollama services within the local network environment without authentication. 
+   **a.** Navigate to **Settings** > **Application** > **Ollama** > **Entrances**, and set the authentication level for Ollama to **Internal**. This configuration allows other applications to access Ollama services within the local network without authentication. 
     
     ![Ollama entrance](/images/manual/use-cases/dify-ollama-entrance.png#bordered)
    
