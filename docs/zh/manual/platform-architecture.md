@@ -44,7 +44,7 @@ Olares 为单节点和多节点设置提供灵活的存储方案：
 
 Olares 使用 [etcd](https://etcd.io/) 作为分布式键值存储。etcd 是存储和管理 Kubernetes 集群数据的核心组件。
 
-### GPU enhance
+### GPU 管理
 
 Olares 利用 CUDA 驱动、NVIDIA 设备插件和 nvshare 等组件协同工作，有效管理和分配 GPU 资源：
 

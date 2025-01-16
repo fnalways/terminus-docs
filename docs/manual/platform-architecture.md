@@ -44,7 +44,7 @@ This approach ensures that applications have access to the necessary storage mec
 
 Olares uses [etcd](https://etcd.io/) as its distributed key-value store. etcd is integral for storing and managing all cluster data for Kubernetes.
 
-### GPU enhance
+### GPU management
 
 Olares leverages components like CUDA driver, NVIDIA device plugin, and nvShare, which work in conjunction to manage and provision GPU resources effectively: 
 
