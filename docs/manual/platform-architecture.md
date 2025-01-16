@@ -192,6 +192,10 @@ A decentralized and permissionless app store for installing, uninstalling, and u
 
 ### System management
 
+### Desktop
+
+A hub for managing and interacting with installed applications.
+
 #### Settings
 
 A system configuration application.
