@@ -30,7 +30,7 @@ Olares 根据底层环境支持不同的 Kubernetes 发行版：
 
 这些组件共同确保了 Olares 中网络的健壮性、可扩展性和安全性。
 
-### 存储
+### 分布式存储
 
 Olares 为单节点和多节点设置提供灵活的存储方案：
 
@@ -44,7 +44,7 @@ Olares 为单节点和多节点设置提供灵活的存储方案：
 
 Olares 使用 [etcd](https://etcd.io/) 作为分布式键值存储。etcd 是存储和管理 Kubernetes 集群数据的核心组件。
 
-### GPU 管理
+### GPU enhance
 
 Olares 利用 CUDA 驱动、NVIDIA 设备插件和 nvshare 等组件协同工作，有效管理和分配 GPU 资源：
 
@@ -60,7 +60,7 @@ Olares 目前的 GPU 管理功能仅支持单节点单 GPU 的部署场景。
 ### 容器管理
 Olares 使用轻量级容器运行时 [containerd](../developer/install/installation-overview.md#容器运行时containerd) 进行容器化部署。
 
-### 集群管理
+### Olares Controller Panel
 
 Olares 的集群管理通过以下工具实现：
 
@@ -73,7 +73,7 @@ Olares 的集群管理通过以下工具实现：
 
 平台层的服务运行在容器中，提供数据库、消息系统、文件系统、工作流编排、密钥管理和可观测性等中间件服务。
 
-### 数据库
+### 关系型数据库
 
 Olares 使用 [PostgreSQL](https://www.postgresql.org/) 16 作为主要关系型数据库。所有应用共享一个 PostgreSQL 实例，每个应用都有专用账号以实现隔离。PostgreSQL 同时作为全文搜索引擎和向量数据库。
 
@@ -85,11 +85,11 @@ Olares 使用 [PostgreSQL](https://www.postgresql.org/) 16 作为主要关系型
 
 Olares 集成了 [KVRocks](https://github.com/apache/incubator-kvrocks)，这是一个基于 RocksDB 构建的 Redis 兼容持久化键值存储。KVRocks 在内存和磁盘存储之间取得平衡，比 Redis 集群更节省资源，但性能略有损失。
 
-### 消息系统
+### 消息队列
 
 使用轻量级高性能的 [NATS](https://nats.io/) 作为消息系统，这是一个轻量级、高性能的面向消息的中间件。NATS 在保证可靠消息队列的同时，确保较低的资源消耗。
 
-### 文件系统
+### 分布式文件系统
 
 Olares 采用云原生分布式文件系统 [JuiceFS](https://juicefs.com/)，为应用提供 POSIX 兼容接口。当使用 S3 或 MinIO 作为存储后端时，JuiceFS 确保跨节点的无缝文件访问。
 
@@ -119,7 +119,7 @@ Olares 在**应用市场**中集成了一些常用中间件，如用于可视化
 
 应用框架层为系统和第三方应用提供通用功能和接口。
 
-### 认证和身份管理
+### 认证与授权
 
 Olares 使用 [LLDAP](https://lldap.example.com/) 管理用户账号并为应用提供 LDAP（轻量目录访问协议）服务。
 
@@ -190,19 +190,21 @@ Olares 预装了用于管理文件、知识、密码和系统本身的应用。
 
 去中心化、无许可的应用商店，用于安装、卸载和更新应用或推荐算法。
 
-### 设置
+### 系统管理
+
+#### 设置
 
 系统配置应用。
 
-### 仪表盘
+#### 仪表盘
 
 监控系统资源使用的应用。
 
-### 控制面板
+#### 控制面板
 
 Olares 的控制台，提供对系统及其环境的精确和自主控制。
 
-### Profile
+#### Profile
 
 自定义用户个人页面的应用。
 
