@@ -41,7 +41,7 @@ Install Dify from Market based on your role:
 
      ![Add gemma2](/images/manual/use-cases/dify-add-gemma2.png#bordered)
 
-      :::info
+      :::tip
       You can keep default values for other required fields.
       :::
 4. Click **Save**.

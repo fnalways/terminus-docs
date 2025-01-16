@@ -6,7 +6,7 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
 要使用本地 AI 模型，请确保你的环境中已配置以下内容：
 - Olares 环境中已安装并运行 Ollama。
 - 已安装 Open WebUI，并下载了你偏好的语言模型。
-  :::tip
+  :::tip 提示
   建议使用 `gemma2` 或 `qwen` 等轻量但功能强大的模型，可在速度和性能间取得良好平衡。
   :::
 
@@ -35,7 +35,7 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
     - **基础 URL**：填入上一步获取的 Ollama 本地地址，如 `https://39975b9a.local.marvin.olares.cn`。
    
     ![配置 Ollama](/images/zh/manual/use-cases/dify-add-gemma2.png#bordered)
-      :::info
+      :::info 提示
       其他必填字段可以保留默认值。
       :::
 3. 点击**保存**。
