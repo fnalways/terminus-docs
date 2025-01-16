@@ -45,7 +45,7 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
 2. 从右侧模型列表中选择已配置好的 Gemma2 本地模型。
 
    ![选择模型](/images/zh/manual/use-cases/dify-select-model.png#bordered)
-3. 点击**发布**。现在可以在调试与预览窗口试着和 Gemma2 聊天了。
+3. 点击**发布**。现在可以在**调试与预览**窗口试着和 Gemma2 聊天了。
 
    ![聊天](/images/zh/manual/use-cases/dify-chat-with-ashia.png#bordered)
 
