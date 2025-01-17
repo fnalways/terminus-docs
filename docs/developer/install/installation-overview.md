@@ -8,7 +8,7 @@ This document provides a high-level overview of the Olares installation process,
 ## Three layers of Olares installation
 The Olares installation is structured into three key layers:
 
-- **Operating system layer**: Manages Linux system configurations and installs essential environment dependencies.
+- **Native layer**: Manages Linux system configurations and installs essential environment dependencies.
 - **Container orchestration layer**: Deploys the Kubernetes cluster to enable automated service management and scaling.
 - **Containerization layer**: Launches containerized core system services and user applications, providing the final runtime environment.
 
@@ -20,8 +20,8 @@ The installation process is managed by the `olares-cli` tool. This command-line 
 To understand the detailed installation process phase-by-phase, refer to [Olares installation breakdown](installation-process.md).
 :::
 
-## Operating system layer
-The Olares installation process begins at the operating system layer, ensuring that the underlying Linux environment supports distributed storage, container runtimes, and Kubernetes cluster management.
+## Native layer
+The Olares installation process begins at the native layer, ensuring that the underlying Linux environment supports distributed storage, container runtimes, and Kubernetes cluster management.
 
 This layer's configuration includes core Linux system settings, file system initialization, container runtime installation, and deployment of critical system services.
 
