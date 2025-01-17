@@ -57,4 +57,5 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
    ![添加文档](/images/zh/manual/use-cases/dify-add-kb-file.png#bordered)
 4. 在 Ashia 的编排页面中，点击 **<i class="material-symbols-outlined">add</i>添加**，选择创建的知识库，为 Ashia 添加上下文支持。
    ![添加知识库](/images/zh/manual/use-cases/dify-add-knowledge-base.png#bordered)
-5. 点击**发布**。
+5. 点击**发布**。现在有了知识库的帮助，你可以试着向助手问一个专业问题：
+   ![知识库聊天](/images/zh/manual/use-cases/dify-chat-kb.png#bordered)

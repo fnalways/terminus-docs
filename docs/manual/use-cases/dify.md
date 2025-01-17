@@ -62,4 +62,5 @@ Install Dify from Market based on your role:
    ![Default KB](/images/manual/use-cases/dify-add-kb-file.png#bordered)
 4. In Ashia's orchestration page, click **<i class="material-symbols-outlined">add</i>Add** to add context support for Ashia.
     ![Add KB](/images/manual/use-cases/dify-add-knowledge-base.png#bordered){width=70%}
-5. Click **Publish**.
+5. Click **Publish**. Now try asking a domain-specific question with the help of the knowledge base.
+    ![Add KB](/images/manual/use-cases/dify-chat-kb.png#bordered)
