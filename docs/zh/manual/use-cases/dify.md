@@ -1,5 +1,5 @@
 # Dify 定制 AI 助手
-Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。它是 Olares 集成的关键开源项目之一，帮助你构建和管理 AI 应用，同时确保数据完全由自己掌控。
+Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目之一，帮助你构建和管理 AI 应用，同时确保数据完全由自己掌控。
 此外，你也可以在 Dify 中接入个人知识库文档，让 AI 应用更懂你。
 
 ## 开始之前
@@ -16,7 +16,7 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
 * **团队成员**：仅需安装“Dify”，同时确保管理员已安装 “Dify For Cluster”。
 
 ## 创建 AI 助手应用
-1. 打开 Dify，在**工作室**选项卡下，点击**创建空白应用**创建一个 AI 助手应用。在这里，我们创建了一个名为 "Ashia" 的 Agent。
+1. 打开 Dify，在**工作室**选项卡下，点击**创建空白应用**创建一个 AI 助手应用。这里我们创建一个名为 “Ashia” 的 Agent。
    ![创建应用](/images/zh/manual/use-cases/dify-create-app.png#bordered)
 2. 右侧点击**去设置**，进入模型供应商配置页面。你可以选择远程模型或本地托管模型。
    ![应用初始页面](/images/zh/manual/use-cases/dify-app-init.png#bordered)
@@ -24,15 +24,15 @@ Dify 是一个运行在你自托管 Olares 系统上的 AI 应用开发平台。
 ## 添加 Ollama 作为模型提供商
 1. 配置 Ollama 访问入口。
    
-   **a.** 进入**设置**>**应用**> **Ollama** >**入口**，设置 Ollama 的认证级别为“内部”。该设置允许其他应用在本地网络环境下可无需认证即可访问 Ollama 服务。
+   a. 进入**设置** > **应用** > **Ollama** > **入口**，设置 Ollama 的认证级别为“内部”。该设置允许其他应用在本地网络环境下可无需认证即可访问 Ollama 服务。
    
    ![Ollama entrance](/images/zh/manual/use-cases/dify-ollama-entrance.png#bordered)
 
-   **b.** 从入口页面进**端点设置**页面，获取 Ollama 的默认路由 ID（`39975b9a`）。这样，我们便得到了 Ollama 的本地访问地址：`https://39975b9a.local.{你的本地名称}.olares.cn`, 如 `https://39975b9a.local.marvin.olares.cn`。
+   b. 点击**设置端点**页面，查看 Ollama 的默认路由 ID（`39975b9a`）。这样，我们便得到了 Ollama 的本地访问地址：`https://39975b9a.local.{你的本地名称}.olares.cn`, 如 `https://39975b9a.local.marvin123.olares.cn`。
 
 2. 在 Dify 的 模型提供者商配置页面，选择 Ollama 作为模型提供者商，并进行以下配置：
     - **模型名称**：填写模型名称，例如：`gemma2`。
-    - **基础 URL**：填入上一步获取的 Ollama 本地地址，如 `https://39975b9a.local.marvin.olares.cn`。
+    - **基础 URL**：填入上一步获取的 Ollama 本地地址，如 `https://39975b9a.local.marvin123.olares.cn`。
    
     ![配置 Ollama](/images/zh/manual/use-cases/dify-add-gemma2.png#bordered)
       :::info 提示
