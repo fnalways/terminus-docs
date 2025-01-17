@@ -7,7 +7,7 @@ const side = {
       link: "/manual/docs-home",
       items: [
         { text: "Why Olares", link: "/manual/why-olares" },
-        { text: "Feature comparison", link: "/manual/feature-overview" },
+        //{ text: "Feature comparison", link: "/manual/feature-overview" },
         { text: "Olares architecture", link: "/manual/system-architecture" },
         {
           text: "Help and support",
