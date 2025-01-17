@@ -90,7 +90,7 @@ options:
 - 类型：`string`
 - 有效值： `app`、`recommend`、`model`、`middleware`
 
-Olares 目前支持四种类型的应用程序，每种类型需要不同的领域。本文档以 “app” 为例来解释各个字段。其他类型请参考相应的配置指南。
+Olares 市场目前支持三种类型的应用，各自对应不同场景。本文档以 “app” 为例来解释各个字段。其他类型请参考相应的配置指南。
 - [推荐算法配置指南](recommend.md)
 - [模型配置指南](model.md)
 
