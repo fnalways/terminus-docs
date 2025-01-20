@@ -39,7 +39,37 @@ const side = {
         {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
-          activeMatch: "/manual/get-started/install/",
+          items: [
+            {
+              text: "Using the script",
+              collapsed: true,
+              items: [
+                {
+                  text: "General Linux",
+                  link: "/manual/get-started/install-olares-linux",
+                },
+                { text: "PVE", link: "/manual/get-started/install-olares-pve" },
+                { text: "LXC", link: "/manual/get-started/install-olares-lxc" },
+                {
+                  text: "Raspberry Pi",
+                  link: "/manual/get-started/install-olares-raspberry-pi",
+                },
+                {
+                  text: "macOS",
+                  link: "/manual/get-started/install-olares-mac",
+                },
+                {
+                  text: "Windows (WSL)",
+                  link: "/manual/get-started/install-olares-windows",
+                },
+              ],
+            },
+
+            {
+              text: "Using Docker image",
+              link: "/manual/get-started/install-olares-docker",
+            },
+          ],
         },
         {
           text: "Back up mnemonics",
@@ -335,16 +365,15 @@ const side = {
   ],
 
   "/developer/": [
-  {
-    text: "Olares installation",
-    link: "/developer/install/",
-    items: [
-      {
-        text: "Installation overview",
-        link: "/developer/install/installation-overview",
-        collapsed: true,
-      },
     {
+      text: "Olares installation",
+      link: "/developer/install/",
+      items: [
+        {
+          text: "Installation overview",
+          link: "/developer/install/installation-overview",
+        },
+      {
       text: "Installation breakdown",
       link: "/developer/install/installation-process",
     },

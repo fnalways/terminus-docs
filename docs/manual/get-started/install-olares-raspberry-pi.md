@@ -1,6 +1,10 @@
+# Install Olares on Raspberry Pi
+Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 
+- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
+- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
 
-## <span class="h2-border-none">System requirements</span>
+## System requirements
 Make sure your Raspbian device meets the following requirements.
 - Hardware: Raspberry Pi 4B or Raspberry Pi 5 with 8GB memory
 - Operating system: Raspbian 12
@@ -97,4 +101,4 @@ Securely access Olares with a two-step verification process.
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
-- [Back up your mnemonic phrase](./back-up-mnemonics.md)
+- [Back up your mnemonic phrase](back-up-mnemonics.md)
