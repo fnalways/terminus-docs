@@ -39,7 +39,37 @@ const side = {
         {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
-          activeMatch: "/manual/get-started/install/",
+          items: [
+            {
+              text: "Using the script",
+              collapsed: true,
+              items: [
+                {
+                  text: "General Linux",
+                  link: "/manual/get-started/install-olares-linux",
+                },
+                { text: "PVE", link: "/manual/get-started/install-olares-pve" },
+                { text: "LXC", link: "/manual/get-started/install-olares-lxc" },
+                {
+                  text: "Raspberry Pi",
+                  link: "/manual/get-started/install-olares-raspberry-pi",
+                },
+                {
+                  text: "macOS",
+                  link: "/manual/get-started/install-olares-mac",
+                },
+                {
+                  text: "Windows (WSL)",
+                  link: "/manual/get-started/install-olares-windows",
+                },
+              ],
+            },
+
+            {
+              text: "Using Docker image",
+              link: "/manual/get-started/install-olares-docker",
+            },
+          ],
         },
         {
           text: "Back up mnemonics",
@@ -327,48 +357,59 @@ const side = {
   ],
 
   "/developer/": [
-  {
-    text: "Olares installation",
-    link: "/developer/install/",
-    items: [
-      {
-        text: "Installation overview",
-        link: "/developer/install/installation-overview",
-        collapsed: true,
-      },
     {
-      text: "Installation breakdown",
-      link: "/developer/install/installation-process",
-    },
-    {
-      text: "Olares Home",
-      link: "/developer/install/olares-home",
-    },
-      {
-        text: "Environment variables",
-        link: "/developer/install/environment-variables",
-      },
-      {text: "Olares CLI",
-        link: "/developer/install/cli/olares-cli",
-        collapsed: true,
-        items: [
-        {text: "olares info",
-        link: "/developer/install/cli/olares-info"},
-        {text: "olares download",
-        link: "/developer/install/cli/olares-download"},
-        {text: "olares prepare",
-        link: "/developer/install/cli/olares-prepare"},
-        {text: "olares install",
-        link: "/developer/install/cli/olares-install"},
-        {text: "olares change-ip",
-        link: "/developer/install/cli/olares-change-ip"},
-        {text: "olares release",
-        link: "/developer/install/cli/olares-release"},
-        {text: "olares uninstall",
-        link: "/developer/install/cli/olares-uninstall"},
-        {text: "gpu",
-          link: "/developer/install/cli/gpu"},
-        ],
+      text: "Olares installation",
+      link: "/developer/install/",
+      items: [
+        {
+          text: "Installation overview",
+          link: "/developer/install/installation-overview",
+          collapsed: true,
+        },
+        {
+          text: "Installation breakdown",
+          link: "/developer/install/installation-process",
+        },
+        {
+          text: "Olares Home",
+          link: "/developer/install/olares-home",
+        },
+        {
+          text: "Environment variables",
+          link: "/developer/install/environment-variables",
+        },
+        {
+          text: "Olares CLI",
+          link: "/developer/install/cli/olares-cli",
+          collapsed: true,
+          items: [
+            { text: "olares info", link: "/developer/install/cli/olares-info" },
+            {
+              text: "olares download",
+              link: "/developer/install/cli/olares-download",
+            },
+            {
+              text: "olares prepare",
+              link: "/developer/install/cli/olares-prepare",
+            },
+            {
+              text: "olares install",
+              link: "/developer/install/cli/olares-install",
+            },
+            {
+              text: "olares change-ip",
+              link: "/developer/install/cli/olares-change-ip",
+            },
+            {
+              text: "olares release",
+              link: "/developer/install/cli/olares-release",
+            },
+            {
+              text: "olares uninstall",
+              link: "/developer/install/cli/olares-uninstall",
+            },
+            { text: "gpu", link: "/developer/install/cli/gpu" },
+          ],
         },
         {
           text: "Olares versioning",

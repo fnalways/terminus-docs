@@ -1,4 +1,10 @@
-## <span class="h2-border-none">System requirements</span>
+# Install Olares on LXC
+Olares is designed to run on Linux-based systems and has been verified on the following platforms:
+
+- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
+- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
+
+## System requirements
 
 LXC (Linux Containers) is a lightweight virtualization method that runs applications in isolated containers. When used on PVE, it enables an efficient way to deploy Olares without the overhead of a full virtual machine.
 
@@ -213,4 +219,4 @@ Securely access Olares with a two-step verification process.
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
-- [Back up your mnemonic phrase](./back-up-mnemonics.md)
+- [Back up your mnemonic phrase](back-up-mnemonics.md)

@@ -1,6 +1,10 @@
-## <span class="h2-border-none">System requirements</span>
+# Install Olares on PVE
+Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 
+- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
+- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
 
+## System requirements
 Make sure your device meets the following requirements.
 
 - CPU: At least 4 cores
@@ -92,4 +96,4 @@ Securely access Olares with a two-step verification process.
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
-- [Back up your mnemonic phrase](./back-up-mnemonics.md)
+- [Back up your mnemonic phrase](back-up-mnemonics.md)
