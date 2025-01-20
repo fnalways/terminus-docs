@@ -82,6 +82,13 @@ export MASTER_HOST=192.168.1.15 \
     MASTER_SSH_PASSWORD=olares
 ./joincluster.sh
 ```
+
+## Uninstall a worker node
+On the worker node, run the following:
+```bash
+olares-cli olares uninstall
+```
+
 ## Handle network changes
 Once your cluster is set up, changes in network configurations can disrupt communication between the master and worker nodes.
 ### If the network of master node changes
