@@ -61,6 +61,10 @@ const side = {
           link: "/manual/tutorials/set-custom-domain",
         },
         {
+          text: "Install a multi-node Olares cluster",
+          link: "/manual/tutorials/install-olares-multi-node",
+        },
+        {
           text: "Stream videos remotely",
           link: "/manual/tutorials/stream-media",
         },

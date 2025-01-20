@@ -10,4 +10,7 @@ It is recommended that you follow along with these tutorials to implement key Ol
 ## Application
 - [Stream your media library from anywhere with Olares](stream-media.md)
 - [Create AI art with ComfyUI and Krita](comfyui-for-krita.md)
-  
+
+## Setup and scaling
+
+- [Install a multi-node Olares cluster](install-olares-multi-node.md)
