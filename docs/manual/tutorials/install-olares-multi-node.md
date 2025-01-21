@@ -30,7 +30,7 @@ To set up the master node, run the following command to install Olares with supp
 export JUICEFS = 1 \
 && curl -sSfL https://olares.sh | bash -
 ```
-This installation configures a built-in MinIO instance as backend storage. The remaining installation process is identical to a single-node installation and will prompt you to enter the domain name, and provide username of your Olares ID.
+This command installs Olares with a built-in MinIO instance as the backend storage. The installation process is identical to a single-node one and will prompt you to enter the domain name, and provide username of your Olares ID.
 
 :::tip Custom storage
 If you already have your own MinIO cluster or an S3 (or S3-compatible) bucket, you can configure Olares to use it instead of the built-in MinIO instance.
@@ -67,7 +67,7 @@ export MASTER_HOST=192.168.1.15
 ```
 
 ### Example 2: Custom SSH key path
-If the master node IP is `192.168.1.15`, with SSH port `22`, and the SSH user `root`, and the worker node uses a custom SSH key located at `/home/olares/.ssh/id_rsa`, run:
+If the master node IP is `192.168.1.15`, with SSH port `22` and SSH user `root`, and the worker node uses a custom SSH key located at `/home/olares/.ssh/id_rsa`, run:
 ```bash
 export MASTER_HOST=192.168.1.15 \
     MASTER_SSH_PRIVATE_KEY_PATH=/home/olares/.ssh/id_rsa
@@ -90,7 +90,7 @@ olares-cli olares uninstall
 ```
 
 ## Handle network changes
-Once your cluster is set up, changes in network configurations can disrupt communication between the master and worker nodes.
+Once your cluster is set up, changes in network configurations can disrupt the master-worker communication.
 ### If the network of master node changes
 If the master node moves to a different LAN, the Olares system daemon (olaresd) will detect this and trigger a `changeip` event with `olares-cli`.
 
@@ -102,8 +102,8 @@ If the master node's IP changes within the same LAN, the worker nodes will still
 sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
 ```
 where:
-- `-b /home/olares/.olares`: Specify the base directory for Olares (default: `$HOME/.olares`).
-- `--new-master-host 192.168.1.18`: Specify the new IP address of the master node.
+- `-b /home/olares/.olares`: Specifies the base directory for Olares (default: `$HOME/.olares`).
+- `--new-master-host 192.168.1.18`: Specifies the new IP address of the master node.
 ### If the network of worker node changes
 If a worker node moves to a different LAN, it will lose communication with the master node and stop functioning.
 
