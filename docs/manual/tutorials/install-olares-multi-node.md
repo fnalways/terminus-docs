@@ -8,9 +8,8 @@ The default Olares installation sets up a single-node cluster. Starting from v1.
 This feature is currently in the **Alpha** stage and is not recommended for production environments. It may contain performance issues and require additional manual configurations. If you encounter any issues, please report them to the [Olares GitHub repository](https://github.com/beclab/Olares/issues).
 :::
 :::info Linux-only support
-Currently, Olares only supports adding worker nodes on Linux systems.
+Only Linux systems are supported as Olares cluster nodes.
 :::
-
 
 ## Objectives
 In this tutorial, you will learn how to:
@@ -42,7 +41,7 @@ If you already have your own MinIO cluster or an S3 (or S3-compatible) bucket, y
 ## Step 2: Add a worker node to the cluster
 1. On the worker node, download `joincluster.sh` from https://github.com/beclab/Olares/releases.
 2. Run the `joincluster.sh` script with the necessary environment variables. These variables tell the worker node how to connect to the master node. At a minimum, you must set the MASTER_HOST variable, which specifies the IP address of the master node:
-      ```bash
+    ```bash
     export MASTER_HOST=192.168.1.15
     ./joincluster.sh
     ```
@@ -70,7 +69,7 @@ Below is a list of the variables you might need to set.
 ## Examples
 Here are practical examples to help you understand how to run the `joincluster.sh` script under different scenarios.
 ### Example 1: Default setup
-If the master node IP is `192.168.1.15`, and SSH keys are already set up with the default user (`root`) and port (`22`), run:
+If the master node IP is `192.168.1.15`, the default user is `root`, the port is `22`, and the master node's `/root/.ssh/authorized_keys` already contains the public key `/root/.ssh/id_rsa.pub` from the current node, run:
 ```bash
 export MASTER_HOST=192.168.1.15
 ./joincluster.sh
@@ -102,9 +101,7 @@ olares-cli olares uninstall
 ## Handle network changes
 Once your cluster is set up, changes in network configurations can disrupt the master-worker communication.
 ### If the network of master node changes
-If the master node moves to a different LAN, the Olares system daemon (olaresd) will detect this and trigger a `changeip` event with `olares-cli`.
-
-The master node will continue working, but worker nodes will lose communication with it and stop functioning.
+If the master node moves to a different LAN, the Olares system daemon (olaresd) will detect this and trigger a `changeip` event with `olares-cli`. The master node will continue working, but worker nodes will lose communication with it and stop functioning.
 
 If the master node's IP changes within the same LAN, the worker nodes will still lose communication because they cannot detect the new IP automatically. To resolve this, use the `olares-cli` command on the worker nodes to update the master node's IP address and restart the dependent services:
 
@@ -125,4 +122,4 @@ If the worker node's IP changes within the same LAN, olaresd will automatically 
 - [Data](../concepts/data.md#juicefs): Dive into how Olares leverages JuiceFS to provide a unified file system for efficient data storage and retrieval.
 - [Olares CLI](../../developer/install/cli/olares-cli.md): Explore the command-line interface for managing Olares installation.
 - [Olares environment variables](../../developer/install/environment-variables.md): Learn about the environment variables that enable advanced configurations of Olares.
-- [Install Olares](../get-started/install-olares.md): Follow detailed instructions to set up Olares on your local machine and get started.
+- [Install Olares](../get-started/install-olares.md): Understand how to install and activate Olares.

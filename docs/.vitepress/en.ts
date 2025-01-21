@@ -520,7 +520,6 @@ const side = {
         {
           text: "Develop system app",
           collapsed: true,
-
           items: [
             {
               text: "Overview",
