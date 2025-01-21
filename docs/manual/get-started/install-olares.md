@@ -1,5 +1,5 @@
 # Install Olares
-This page provides an overview of the installation methods for Olares. To run Olares, you must [create an Olares ID](create-olares-id.md), and have a supported operating system, hardware that meets or exceeds minimum requirements.
+This page provides an overview of the installation methods for Olares. To run Olares, you must [create an Olares ID](create-olares-id.md), and have a supported operating system, a hardware that meets or exceeds minimum requirements.
 
 Currently, Olares is supported on the following platforms or environments:
 - Linux (Ubuntu or Debian)

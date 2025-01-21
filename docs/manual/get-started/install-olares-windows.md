@@ -1,3 +1,6 @@
+---
+outline: [2, 3]
+---
 # Install Olares on Windows
 
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
@@ -156,7 +159,7 @@ Securely access Olares with a two-step verification process.
 
    Once you've logged in, you'll be directed to the Olares desktop.🎉
 
-## Protect your Olares ID
+## Next step: Protect your Olares ID
 
 You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
 
