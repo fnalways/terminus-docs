@@ -61,6 +61,10 @@ const side = {
           link: "/zh/manual/tutorials/set-custom-domain",
         },
         {
+          text: "收集整理内容",
+          link: "/zh/manual/tutorials/organize-content",
+        },
+        {
           text: "远程观看视频",
           link: "/zh/manual/tutorials/stream-media",
         },

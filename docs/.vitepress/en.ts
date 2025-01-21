@@ -61,6 +61,10 @@ const side = {
           link: "/manual/tutorials/set-custom-domain",
         },
         {
+          text: "Organize your content",
+          link: "/manual/tutorials/organize-content",
+        },
+        {
           text: "Stream videos remotely",
           link: "/manual/tutorials/stream-media",
         },
