@@ -55,22 +55,7 @@ To avoid activation failures, ensure that both your phone and the Olares device 
 
 Once activation is complete, LarePass will display the desktop address of your Olares device, such as `https://desktop.marvin123.olares.com`.
 
-## Log in to Olares
-
-Securely access Olares with a two-step verification process.
-
-1. Enter the Olares desktop address in your browser, and press any key to continue.
-2. On the login page, enter your Olares login password.
-
-   ![Log in](/images/manual/get-started/log-in.png)
-3. You will be prompted to complete the two-factor verification. You can confirm login on LarePass, or manually enter the 6-digit verification code.
-   ::: info
-   The verification code is time-sensitive. Ensure you enter it before it expires. If it does, you will need to generate a new code.
-   :::
-
-   ![Confirm login](/images/manual/get-started/confirm-login.png)
-
-   Once you've logged in, you'll be directed to the Olares desktop.🎉
+<!--@include: ./log-in-to-olares.md-->
 
 ## Manage the Olares container
 ### Restart the container
@@ -93,8 +78,4 @@ docker rm oic
 docker volume rm oic-data
 ```
 
-## Next step: Protect your Olares ID
-
-You're almost ready to start using Olares! Before diving in, it's crucial to ensure your Olares ID is securely backed up. Without this step, you won't be able to recover Olares ID if needed.
-
-- [Back up your mnemonic phrase](back-up-mnemonics.md)
+<!--@include: ./reusables.md{35,39}-->
