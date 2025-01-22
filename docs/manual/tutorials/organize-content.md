@@ -159,7 +159,7 @@ In addition to regular RSS subscriptions, you can use the LarePass extension and
    :::
 3. Under the video you want to watch, click <i class="material-symbols-outlined">more_horiz</i> the button, select **Save**, and then click **Create New Playlist**. For example, `Save to Wise`.
 4. Enter your playlist. The LarePass extension will automatically detect the available RSS feeds and show the **RSS** tab.
-5. In the **RSS** tab, select the RSS feed link starting with `https://www.youtube.com/feeds/` and click <i class="material-symbols-outlined">bookmark_add</i> to subscribe.
+5. In the **RSS** tab, select the RSS feed with a link starting with `https://www.youtube.com/feeds/...` and click <i class="material-symbols-outlined">bookmark_add</i> to subscribe.
     ![Subscribe to YouTube playlist](/images/manual/tutorials/wise-youtube-rss.png)
 
 Wise will automatically download all the videos saved to this playlist.
