@@ -26,14 +26,14 @@ docker run --network host -d --privileged -v oic-data:/var --name oic beclab/ola
 ```
 where:
 - `--network host`: Shares the host's network stack with the container, allowing the container to communicate through the host's network interfaces.
-- `-d`: Runs the container in detached mode, so it runs in the background.
+- `-d`: Starts the container in detached mode to allow it to run in the background.
 - `--privileged`: Grants the container elevated privileges.
 - `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
 - `--name oic`: Names the container `oic` for easier reference.
 - `beclab/olares:latest`: Specifies the Olares Docker image and version.
 
 :::warning Do not add the `--rm` flag
-The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to uninstall and reinstall Olares to run it again. Without the `--rm` flag, the container persists after it stops, so you can restart it later using the `docker start` command.
+The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.
 :::
 
 ## Prepare installation environment for Olares
@@ -41,15 +41,15 @@ Once the container is running, run the following:
 ```bash
 docker exec -it oic olares-install
 ```
-This command sets up Olares to the "Prepare" phase. After this step, you can continue installing and activating Olares using LarePass.
+This command executes the preparation phase for Olares installation. After this step, you can continue installing and activating Olares using LarePass on your phone.
 ## Install and activate Olares
 
 :::warning Same network required
 To avoid activation failures, ensure that both your phone and the Olares device are connected to the same network.
 :::
 
-1. Open LarePass, on your account activation page, tap **Discover nearby Olares**.
-2. Select your self-hosted Olares device, and tap **Install now**.
+1. Open LarePass, on your account activation page, tap **Discover nearby Olares**.  LarePass will list the detected Olares instances in the same network.
+2. Select the target self-hosted Olares device, and tap **Install now**.
 3. When the installation completes, tap **Activate now**. Olares will enter the activation process, including initial configuration and network setup.
 4. Follow the on-screen instructions to reset the login password for Olares, then tap **Complete**.
 
