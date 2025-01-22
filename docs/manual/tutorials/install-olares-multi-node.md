@@ -8,7 +8,7 @@ The default Olares installation sets up a single-node cluster. Starting from v1.
 This feature is currently in the **Alpha** stage and is not recommended for production environments. It may contain performance issues and require additional manual configurations. If you encounter any issues, please report them to the [Olares GitHub repository](https://github.com/beclab/Olares/issues).
 :::
 :::info Linux-only support
-Only Linux systems are supported as Olares cluster nodes.
+This feature is currently only available for Linux systems.
 :::
 
 ## Objectives
@@ -101,9 +101,9 @@ olares-cli olares uninstall
 ## Handle network changes
 Once your cluster is set up, changes in network configurations can disrupt the master-worker communication.
 ### If the network of master node changes
-If the master node moves to a different LAN, the Olares system daemon (olaresd) will detect this and trigger a `changeip` event with `olares-cli`. The master node will continue working, but worker nodes will lose communication with it and stop functioning.
+- **If the master node moves to a different LAN**: The Olares system daemon (olaresd) will detect this and trigger a `changeip` event with `olares-cli`. The master node will continue working, but worker nodes will lose communication with it and stop functioning.
 
-If the master node's IP changes within the same LAN, the worker nodes will still lose communication because they cannot detect the new IP automatically. To resolve this, use the `olares-cli` command on the worker nodes to update the master node's IP address and restart the dependent services:
+- **If the master node's IP changes within the same LAN**: The worker nodes will still lose communication because they cannot detect the new IP automatically. To resolve this, use the `olares-cli` command on the worker nodes to update the master node's IP address and restart the dependent services:
 
 ```bash
 sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
@@ -112,9 +112,9 @@ where:
 - `-b /home/olares/.olares`: Specifies the base directory for Olares (default: `$HOME/.olares`).
 - `--new-master-host 192.168.1.18`: Specifies the new IP address of the master node.
 ### If the network of worker node changes
-If a worker node moves to a different LAN, it will lose communication with the master node and stop functioning.
+- **If a worker node moves to a different LAN**: The worker node will lose communication with the master node and stop functioning.
 
-If the worker node's IP changes within the same LAN, olaresd will automatically report the new IP to the master node, and no manual intervention is required.
+- **If the worker node's IP changes within the same LAN**: olaresd will automatically report the new IP to the master node, and no manual intervention is required.
 
 ## Learn more
 - [Olares system architecture](../system-architecture.md#distributed-file-system): Understand the distributed file system that underpins Olares, ensuring scalability, high availability, and seamless data management.
