@@ -5,7 +5,7 @@ outline: [2, 3]
 默认情况下，Olares 的安装会部署单节点集群。从 v1.11.3 开始，Olares 支持添加子节点。本教程将指导你如何配置主节点并添加子节点，以创建一个可扩展的多节点 Olares 集群。
 
 :::warning Alpha 功能
-此功能目前处于 **Alpha** 阶段，不建议用于生产环境。可能存在性能问题并需要额外的手动配置。如果遇到任何问题，请在 [Olares 的 GitHub 仓库](https://github.com/beclab/Olares/issues)中提交 Issue。
+此功能目前处于 **Alpha** 阶段，可能存在性能问题并需要额外的手动配置，不建议用于生产环境。如果遇到任何问题，请在 [Olares 的 GitHub 仓库](https://github.com/beclab/Olares/issues)中提交 Issue。
 :::
 :::info 仅支持 Linux
 当前仅支持 Linux 系统节点加入 Olares 集群。
@@ -27,6 +27,10 @@ outline: [2, 3]
     - 如果使用非 root 用户：需要在主节点上启用基于密码的 SSH 身份验证。
 
 ## 第一步：设置主节点
+::: tip 卸载已有的 Olares 集群
+如果你已经使用默认的安装命令在当前节点上安装了 Olares 集群，运行 `bash olares-uninstall.sh` 命令将其卸载。
+:::
+
 在主节点上运行以下命令以启用 JuiceFS 支持：
 ```bash
 export JUICEFS=1 \
@@ -101,20 +105,20 @@ olares-cli olares uninstall
 ## 处理网络变化
 集群设置完成后，网络配置的变化可能会中断主节点与子节点的通信。
 ### 如果主节点网络发生变化
-如果主节点切换到另一个局域网，Olares 系统守护进程（olaresd）会检测到这一变化，触发 `olares-cli` 调用 `changeip` 命令。此时主节点将继续工作，但子节点无法与主节点通信，导致无法正常运行。
+- **如果主节点切换到另一个局域网**：Olares 系统守护进程（olaresd）会检测到这一变化，触发 `olares-cli` 调用 `changeip` 命令。此时主节点将继续工作，但子节点无法与主节点通信，导致无法正常运行。
 
-如果主节点的 IP 在同一局域网内发生变化，子节点同样会失去通信，因为它们无法自动检测新的 IP。为解决此问题，可以在子节点上使用 `olares-cli` 命令更新主节点的 IP 地址并重启相关服务：
+- **如果主节点的 IP 在同一局域网内发生变化**：子节点同样会失去通信，因为它们无法自动检测新的 IP。为解决此问题，可以在子节点上使用 `olares-cli` 命令更新主节点的 IP 地址并重启相关服务：
 
-```bash
-sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
-```
-其中：
-- `-b /home/olares/.olares`：指定 Olares 的基础目录（默认值为 `$HOME/.olares`）。
-- `--new-master-host 192.168.1.18`：指定主节点的新 IP 地址。
+    ```bash
+    sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
+    ```
+   其中：
+   - `-b /home/olares/.olares`：指定 Olares 的基础目录（默认值为 `$HOME/.olares`）。
+   - `--new-master-host 192.168.1.18`：指定主节点的新 IP 地址。
 ### 如果子节点网络发生变化
-如果子节点切换到另一个局域网，将失去与主节点的通信，无法正常运行。
+- **如果子节点切换到另一个局域网**：子节点将失去与主节点的通信，无法正常运行。
 
-如果子节点的 IP 在同一局域网内发生变化，olaresd 会自动将新 IP 上报给主节点，无需手动干预。
+- **如果子节点的 IP 在同一局域网内发生变化**：olaresd 会自动将新 IP 上报给主节点，无需手动干预。
 
 ## 了解更多
 - [Olares 系统架构](../system-architecture.md#分布式存储)：了解支持 Olares 的分布式文件系统，确保可扩展性、高可用性以及无缝的数据管理。

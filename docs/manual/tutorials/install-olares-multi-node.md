@@ -27,6 +27,10 @@ Before you begin, make sure the following requirements are met:
   - For non-root user: enable password-based SSH authentication on the master node.
 
 ## Step 1: Set up the master node
+::: tip Uninstall existing Olares cluster
+If you have already installed an Olares cluster using the default installation command, uninstall it using `bash olares-uninstall.sh` before you set up your master node.
+:::
+
 To set up the master node with the JuiceFS support, run the following command:
 ```bash
 export JUICEFS = 1 \
@@ -105,12 +109,12 @@ Once your cluster is set up, changes in network configurations can disrupt the m
 
 - **If the master node's IP changes within the same LAN**: The worker nodes will still lose communication because they cannot detect the new IP automatically. To resolve this, use the `olares-cli` command on the worker nodes to update the master node's IP address and restart the dependent services:
 
-```bash
-sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
-```
-where:
-- `-b /home/olares/.olares`: Specifies the base directory for Olares (default: `$HOME/.olares`).
-- `--new-master-host 192.168.1.18`: Specifies the new IP address of the master node.
+    ```bash
+    sudo olares-cli olares change-ip -b /home/olares/.olares --new-master-host 192.168.1.18
+    ```
+   where:
+   - `-b /home/olares/.olares`: Specifies the base directory for Olares (default: `$HOME/.olares`).
+   - `--new-master-host 192.168.1.18`: Specifies the new IP address of the master node.
 ### If the network of worker node changes
 - **If a worker node moves to a different LAN**: The worker node will lose communication with the master node and stop functioning.
 
