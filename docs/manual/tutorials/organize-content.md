@@ -1,4 +1,3 @@
-
 # Build your knowledge hub with Wise
 
 Managing information across different sources and devices can be a challenge. You might find yourself using multiple tools to bookmark articles, track RSS feeds, or manage documents, only to end up with fragmented workflows.
