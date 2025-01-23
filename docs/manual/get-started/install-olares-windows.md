@@ -89,7 +89,7 @@ Make sure your Windows meets the following requirements.
    C:\  Free Disk: 391.07 GB
    D:\  Free Disk: 281.32 GB
    
-   Please enter the drive letter (e.g., C or D):
+   Please enter the drive letter (e.g., C):
    ```
 :::tip Root user password
 During the installation, you may be prompted to enter your root password.

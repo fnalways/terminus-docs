@@ -88,7 +88,7 @@ Windows 设备需满足以下条件：
    C:\  Free Disk: 391.07 GB
    D:\  Free Disk: 281.32 GB
    
-   Please enter the drive letter (e.g., C or D):
+   Please enter the drive letter (e.g., C):
    ```
 :::tip root 用户密码
 安装过程中，可能需要输入 root 用户密码。
