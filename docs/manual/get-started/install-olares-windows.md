@@ -29,16 +29,7 @@ Make sure your Windows meets the following requirements.
 
    c. Click **OK** and restart your computer when prompted.
 
-2. Temporarily disable Windows Defender Firewall. You can re-enable it after installation is complete.
-
-   a. Open **Control Panel** > **System and Security** > **Windows Defender Firewall**.
-
-   b. In the navigation pane, click **Turn Windows Defender Firewall on or off**.
-
-   c. Select **Turn off Windows Defender Firewall** for both private and public networks, then click **OK**.
-
-   ![Turn off Windows Defender Firewall](/images/manual/get-started/disable-firewall.png)
-3. Set the execution policy for the current user.
+2. Set the execution policy for the current user.
 
    a. Open PowerShell as administrator, then run the following command:
     ```powershell
@@ -46,7 +37,7 @@ Make sure your Windows meets the following requirements.
     ```
    b. When prompted to check whether to change the execution policy, type `A` and press **Enter** to confirm.
 
-    ```powershell
+    ```powershell{5}
     Execution Policy Change
     The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
     you to the security risks described in the about_Execution_Policies help topic at
@@ -75,13 +66,31 @@ Make sure your Windows meets the following requirements.
 
 3. When prompted with security warning, type `R` and press **Enter** to run the script once. The installation process for Olares will start.
 
-   ```powershell
+   ```powershell{4}
    Security warning
    Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
    publicInstall.latest.ps1?
    [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
    ```
 
+4. When prompted with the firewall rules setup, type `yes` to automatically configure them, or type `no` to skip this step. <br>
+   If you choose to skip, either [disable Windows Firewall Defender](#how-to-disable-windows-defender-firewall), or [manually add TCP inbound rules](#how-to-manually-set-firewall-rules).
+   ```powershell{2}
+   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
+   Do you want to set up the firewall rules? (yes/no):
+   ```
+
+5. When prompted to select the drive to store the WSL Ubuntu distro, type the drive letter of an available disk. Ensure the selected drive has at least **80 GB** of free space.
+   ```powershell{7}
+   Installing Olares will create a WSL Ubuntu Distro and occupy at least 80 GB of disk space.
+   Please select the drive where you want to install it.
+   
+   Available drives and free space:
+   C:\  Free Disk: 391.07 GB
+   D:\  Free Disk: 281.32 GB
+   
+   Please enter the drive letter (e.g., C):
+   ```
 :::tip Root user password
 During the installation, you may be prompted to enter your root password.
 :::
@@ -175,7 +184,7 @@ For example, to allocate 16GB of memory:
    - **Variable name**: `WSL_MEMORY`
    - **Variable value**: `16`
 
-   ![Add user variable](/images/manual/get-started/add-user-variable.png)
+   ![Add user variable](/images/manual/get-started/add-user-variable.png#bordered)
 
 2. Click **OK** to apply changes.
 
@@ -217,6 +226,47 @@ Run the following command in PowerShell to restart the Olares service:
 ```powershell
 wsl -d Ubuntu
 ```
+
+### How to disable Windows Defender Firewall?
+:::tip
+You can turn on Windows Defender Firewall when the Olares installation completes.
+:::
+To completely disable the firewall:
+1. Open **Control Panel** > **System and Security** > **Windows Defender Firewall**.
+2. In the navigation pane, click **Turn Windows Defender Firewall on or off**.
+3. Select **Turn off Windows Defender Firewall** for both private and public networks, then click **OK**.
+
+   ![Turn off Windows Defender Firewall](/images/manual/get-started/disable-firewall.png#bordered)
+
+### How to manually set firewall rules?
+If you choose not to configure firewall rules during installation, follow these steps to set them manually:
+1. Open **Control Panel** > **System and Security** > **Windows Defender Firewall**.
+
+   ![Navigate to Windows Defender Firewall](/images/manual/get-started/select-firewall.png#bordered)
+
+2. In the navigation pane, select **Advanced settings**.
+
+   ![Select Advanced settings](/images/manual/get-started/select-advanced-settings.png#bordered)
+3. In the navigation pane, right-click **Inbound Rules** and select **New Rule**.
+
+   ![Add new rule](/images/manual/get-started/add-new-rule.png#bordered)
+4. In the **New Inbound Rule Wizard**, select **Port** and click **Next**.
+
+   ![Select Port](/images/manual/get-started/select-port.png#bordered)
+5. In **Specific local ports**, enter `80`, `443`, `30180`, and click **Next**.
+
+   ![Sepecify Port](/images/manual/get-started/specify-port.png#bordered)
+6.  Select **Allow the connection** and click **Next**.
+
+   ![Allow the connection](/images/manual/get-started/allow-the-connection.png#bordered)
+
+7. Confirm the rules apply to **Domain**, **Private**, and **Public**, then click **Next**.
+
+   ![Confirm rules](/images/manual/get-started/confirm-rules.png#bordered)
+8. Provide a name for the rule and click **Finish**.
+
+   ![Name the rule](/images/manual/get-started/name-the-rule.png#bordered)
+
 ### How to uninstall Olares?
 Run the following command in PowerShell:
 ```powershell

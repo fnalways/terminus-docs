@@ -29,23 +29,15 @@ Windows 设备需满足以下条件：
 
    c. 点击**确定**，然后根据提示重启电脑。
 
-2. 暂时关闭 Windows Defender 防火墙。安装完成后可重新启用。
-
-   a. 打开**控制面板** > **系统和安全** > **Windows Defender 防火墙**。
-
-   b. 在左侧导航栏中，点击**启用或关闭 Windows Defender 防火墙**。
-
-   c. 选择**关闭 Windows Defender 防火墙**，分别对**专用网络**和**公用网络**进行设置，然后点击**确定**。
-
-   ![关闭 Windows Defender Firewall](/images/manual/get-started/disable-firewall.png)
-3. 设置当前用户的执行策略。
+2. 设置当前用户的执行策略。
 
    a. 以管理员身份打开 PowerShell，运行以下命令：
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
     ```
    b. 当提示是否更改执行策略时，输入 `A` 并按下 **Enter** 确认。
-    ```powershell
+    
+    ```powershell{5}
     Execution Policy Change
     The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
     you to the security risks described in the about_Execution_Policies help topic at
@@ -54,8 +46,8 @@ Windows 设备需满足以下条件：
     ```
 
 ## 安装 Olares
-
 1. 点击 https://cn.windows.olares.sh 下载安装脚本 `publicInstall.latest.ps1`。
+
 2. 执行安装脚本。
 
    a. 以管理员身份打开 PowerShell 并导航至脚本所在文件夹。例如，如果脚本在 `Downloads` 文件夹里，则执行以下命令：
@@ -73,11 +65,30 @@ Windows 设备需满足以下条件：
 
 3. 出现安全提示时，输入 `R` 并按下 **Enter** 以运行脚本，开始安装 Olares。
 
-   ```powershell
+   ```powershell{4}
    Security warning
    Run only scripts that you trust. While scripts from the internet can be useful, this script can potentially harm your computer. If you trust this script, use the Unblock-File cmdlet to allow the script to run without this warning message. Do you want to run
    publicInstall.latest.ps1?
    [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
+   ```
+
+4. 配置防火墙规则。输入 `yes` 自动设置防火墙规则，或者输入 `no` 跳过自动设置。<br>
+   如果你选择跳过，可以[暂时关闭防火墙](#如何关闭-windows-defender-防火墙)，或[手动添加 TCP 入站规则](#如何手动设置防火墙规则)。
+   ```powershell{2}
+   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
+   Do you want to set up the firewall rules? (yes/no):
+   ```
+
+5. 选择 WSL Ubuntu 的存储位置。请输入一个可用磁盘的盘符，并确保所选磁盘至少有 **80 GB** 的可用空间。
+   ```powershell{7}
+   Installing Olares will create a WSL Ubuntu Distro and occupy at least 80 GB of disk space.
+   Please select the drive where you want to install it.
+   
+   Available drives and free space:
+   C:\  Free Disk: 391.07 GB
+   D:\  Free Disk: 281.32 GB
+   
+   Please enter the drive letter (e.g., C):
    ```
 :::tip root 用户密码
 安装过程中，可能需要输入 root 用户密码。
@@ -164,7 +175,7 @@ wsl --unregister ubuntu
    - **变量名**: `WSL_MEMORY`
    - **变量值**: `16`
 
-     ![Add user variable](/images/manual/get-started/add-user-variable.png)
+     ![Add user variable](/images/manual/get-started/add-user-variable.png#bordered)
 2. 点击**确定**使变更生效。
    :::tip 提示
    如果你已经打开了一个 PowerShell 窗口，环境变量的更改不会在当前会话中生效。请务必以管理员身份打开一个新的 PowerShell 窗口，然后再运行安装脚本。
@@ -203,6 +214,45 @@ swap=0GB
 ```powershell
 wsl -d Ubuntu
 ```
+
+### 如何关闭 Windows Defender 防火墙？
+:::tip 提示
+建议在完成 Olares 安装后重新启用 Windows Defender 防火墙。
+:::
+按照以下步骤完全关闭防火墙：
+1. 打开**控制面板** > **系统和安全** > **Windows Defender 防火墙**。
+2. 在左侧导航栏中，点击**启用或关闭 Windows Defender 防火墙**。
+3. 选择**关闭 Windows Defender 防火墙**，分别对**专用网络**和**公用网络**进行设置，然后点击**确定**。
+
+   ![关闭 Windows Defender Firewall](/images/manual/get-started/disable-firewall.png#bordered)
+
+### 如何手动设置防火墙规则？
+如果在安装时选择不自动配置防火墙规则，可以通过以下步骤手动添加规则：
+1. 打开**控制面板** > **系统和安全** > **Windows Defender 防火墙**。
+
+   ![进入 Windows Defender 防火墙](/images/manual/get-started/select-firewall.png#bordered)
+2. 在左侧导航栏中，点击**高级设置**。
+
+   ![选择高级设置](/images/manual/get-started/select-advanced-settings.png#bordered)
+3. 在左侧导航栏中，右键点击**入站规则**，然后选择**新建规则**。
+
+   ![添加新规则](/images/manual/get-started/add-new-rule.png#bordered)
+4. 在**新建入站规则向导**中，选择**端口**，然后点击**下一步**。
+
+   ![选择端口规则](/images/manual/get-started/select-port.png#bordered)
+5. 在**特定本地端口**输入框中，输入 `80`, `443`, `30180`，然后点击**下一步**。
+
+   ![指定端口](/images/manual/get-started/specify-port.png#bordered)
+6. 选择**允许连接**，然后点击**下一步**。
+
+   ![允许连接](/images/manual/get-started/allow-the-connection.png#bordered)
+7. 确保规则适用于**域**、**专用**和**公用**网络，然后点击**下一步**。
+
+   ![确认规则适用范围](/images/manual/get-started/confirm-rules.png#bordered)
+8. 为规则提供一个名称，然后点击**完成**。
+
+   ![命名规则](/images/manual/get-started/name-the-rule.png#bordered)
+
 ### 如何卸载 Olares？
 如果需要卸载 Olares，可以在 PowerShell 中运行以下命令：
 ```powershell
