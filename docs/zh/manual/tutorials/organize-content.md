@@ -78,17 +78,17 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
 1. 打开内容页面，如一个 B 站的视频。
 2. 打开 LarePass 扩展。扩展会自动检测并获取当前页面的可收集内容。
 3. 在**网页**页签下，点击内容标题旁的 <i class="material-symbols-outlined">add_box</i> 按钮，将该页面添加到 Wise 库中。
-   ![收集在线内容](/images/zh/manual/tutorials/wise-collect-web-content.png)
+   ![收集在线内容](/images/zh/manual/tutorials/wise-collect-web-content.png#bordered)
 
 收集成功后，你可以在 Wise 的**库** > **文章**中找到对应内容。页面上音频、视频和图片等媒体文件也会被下载到 Olares 本地的 `/download/Wise/Article` 文件夹。
 
-![查看文章](/images/zh/manual/tutorials/wise-view-article.png)
+![查看文章](/images/zh/manual/tutorials/wise-view-article.png#bordered)
 
 
 ### 通过 LarePass 移动端
 
 你可以将网页链接分享到 LarePass 移动客户端以收集相应内容。此处以 iOS 上收藏微信公众号文章为例：
-![LarePass 分享](/images/zh/manual/tutorials/wise-larepass-share.png)
+![LarePass 分享](/images/zh/manual/tutorials/wise-larepass-share.png#bordered)
 1. 打开公众号文章，点击公众号文章右上角的 <i class="material-symbols-outlined">more_horiz</i> 按钮，选择在**默认浏览器中打开**。
 2. 点击浏览器的分享按钮 <i class="material-symbols-outlined">ios_share</i>，选择 LarePass 为分享对象。
 3. LarePass 会自动检测待分享页面的内容，并提示是否要添加至 Wise。点击**确认**。
@@ -107,7 +107,7 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
 
 你可以在 **库** > **PDF** 下查看上传的 PDF，在**库** > **图书**下查看 EPUB 电子书。
 
-![View and manage PDF](/images/zh/manual/tutorials/wise-pdf.png)
+![View and manage PDF](/images/zh/manual/tutorials/wise-pdf.png#bordered)
 
 ::: tip 
 您可以通过标签高效地分类和关联相关内容，或者通过笔记直接在内容旁记录洞见和想法。详细用法请参考[组织你的阅读](../tasks/wise-basics.md#组织你的阅读)。
@@ -124,7 +124,7 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
 1. 在浏览器中打开要订阅的 RSS 页面，例如 “加州101”的播客：`https://www.xiaoyuzhoufm.com/podcast/5e280faf418a84a0461fbd0d`。
 2. 打开 LarePass 扩展。扩展会自动识别页面的 RSS 订阅源，并显示 **RSS** 页签。
 3. 在 **RSS** 页签下，找到正确的订阅源，点击 <i class="material-symbols-outlined">bookmark_add</i> 按钮以完成订阅。
-![订阅播客](/images/manual/tutorials/wise-sub-podcast.png)
+![订阅播客](/images/manual/tutorials/wise-sub-podcast.png#bordered)
 
 ### 手动添加 RSS 源
 
@@ -133,7 +133,7 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
 1. 获取目标 RSS 订阅链接，如 HackerNews 头条订阅源： `https://hnrss.org/frontpage`。
 2. 打开 Wise，在菜单栏点击 <i class="material-symbols-outlined">add_circle</i> 按钮，并选择 **RSS 源**。
 3. 输入网址后，Wise 将自动识别出可用的 RSS 订阅源。
-   ![手动添加 RSS](/images/zh/manual/tutorials/wise-add-rss.png)
+   ![手动添加 RSS](/images/zh/manual/tutorials/wise-add-rss.png#bordered)
 4. 点击 **添加** 完成订阅。
 
 ### 自动下载收藏视频
@@ -148,7 +148,7 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
    :::
 3. 进入你的 B 站收藏夹管理页面，新建一个收藏夹并打开。此处，我们创建了一个“保存到 Olares” 的收藏夹。
 4. 打开 LarePass 扩展。扩展会自动获取当前页面的订阅源并显示 **RSS** 页签
-    ![订阅 B 站收藏夹](/images/zh/manual/tutorials/wise-bilibili-rss.png)
+    ![订阅 B 站收藏夹](/images/zh/manual/tutorials/wise-bilibili-rss.png#bordered)
 5. 选择正确的订阅源。此处我们选择 **RSS** 页签下第二个源：“UP主非默认收藏夹”。点击 <i class="material-symbols-outlined">bookmark_add</i> 以完成订阅。
 
 订阅完成后，任何添加到此收藏夹的视频都会被 Olares 自动下载至本地。
@@ -175,7 +175,7 @@ d. 点击 **加载已解压的扩展程序** 选项，选择解压后的 LarePas
 
 将你的内容收集到 Wise 后，你可以通过 Olares 的聚合搜索功能进行全文搜索。
 
-![搜索 Wise](/images/zh/manual/tutorials/wise-search.png)
+![搜索 Wise](/images/zh/manual/tutorials/wise-search.png#bordered)
 
 ::: info 搜索格式
 目前，只有文档类型的内容（PDF、网页文章和 ePUB）可以进行搜索。其他格式将在后续版本中支持。

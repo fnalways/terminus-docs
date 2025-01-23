@@ -88,7 +88,7 @@ To collect web content using the LarePass extension:
 
 1. Open the content page, for example, a CNN article.
 2. Open the LarePass extension. The extension will automatically detect the collectable content on the page.
-   ![Collect web content](/images/manual/tutorials/wise-collect-web-content.png)
+   ![Collect web content](/images/manual/tutorials/wise-collect-web-content.png#bordered)
 3. In **Collect** > **Page**, click <i class="material-symbols-outlined">add_box</i> next to the title to add the page to the Wise library.
 
 Once collected, you can find the content in **Library** > **Articles** in Wise. All media files, including audios, videos, and images on the page, will also be downloaded locally to the `/download/Wise/Article` directory. 
@@ -101,7 +101,7 @@ You can share web links to the LarePass mobile client for content collection. Fo
 2. Open the LarePass app. LarePass will automatically detect the collectable content on the shared page and prompt whether to add it to Wise.
 3. Tap **Confirm** to add it to the Wise library.
 
-![LarePass share](/images/manual/tutorials/wise-share-to-larepass.png)
+![LarePass share](/images/manual/tutorials/wise-share-to-larepass.png#bordered)
 
 ::: tip 
 Alternatively, you can copy the URL directly and open LarePass. LarePass will automatically detect the URL in the clipboard and the collectable content as well.
@@ -118,7 +118,7 @@ You can upload local PDF or EPUB e-books to Wise for centralized knowledge manag
 
 View your PDFs under **Library** > **PDFs** and EPUBs under **Library** > **Books**.
 
-![View and manage PDF](/images/manual/tutorials/wise-pdf.png)
+![View and manage PDF](/images/manual/tutorials/wise-pdf.png#bordered)
 
 ::: tip
 You can efficiently categorize and connect related content instantly with tags, or capture insights and ideas directly alongside the content using notes.
@@ -133,7 +133,7 @@ To subscribe an RSS feed using the LarePass extension:
 
 1. Open the RSS page you want to subscribe to, for example, the "Paranormal Mysteries" podcast: `https://www.spreaker.com/podcast/paranormal-mysteries--2321086`
 2. Open the LarePass extension. It will automatically detect the RSS source on the page and show the **RSS** tab.
-   ![Subscribe to podcast](/images/manual/tutorials/wise-sub-podcast.png)
+   ![Subscribe to podcast](/images/manual/tutorials/wise-sub-podcast.png#bordered)
 3. In the **RSS** tab, find the correct subscription source and click <i class="material-symbols-outlined">bookmark_add</i> to subscribe.
 
 
@@ -144,7 +144,7 @@ To manually add an RSS source to Wise:
 1. Copy the RSS subscription link, such as [https://hnrss.org/frontpage](https://hnrss.org/frontpage), an RSS feed for HackerNews frontliners.
 2. In Wise, click <i class="material-symbols-outlined">add_circle</i> in the menu bar, and select **RSS feed**. 
 3. Paste the URL. Wise will automatically detect the available RSS source.
-   ![Manually add RSS](/images/manual/tutorials/wise-add-rss.png)
+   ![Manually add RSS](/images/manual/tutorials/wise-add-rss.png#bordered)
 4. Click **Add** to subscribe.
 
 ### Automatically download videos
@@ -160,7 +160,7 @@ In addition to regular RSS subscriptions, you can use the LarePass extension and
 3. Under the video you want to watch, click <i class="material-symbols-outlined">more_horiz</i> the button, select **Save**, and then click **Create New Playlist**. For example, `Save to Wise`.
 4. Enter your playlist. The LarePass extension will automatically detect the available RSS feeds and show the **RSS** tab.
 5. In the **RSS** tab, select the RSS feed with a link starting with `https://www.youtube.com/feeds/...` and click <i class="material-symbols-outlined">bookmark_add</i> to subscribe.
-    ![Subscribe to YouTube playlist](/images/manual/tutorials/wise-youtube-rss.png)
+    ![Subscribe to YouTube playlist](/images/manual/tutorials/wise-youtube-rss.png#bordered)
 
 Wise will automatically download all the videos saved to this playlist.
 
@@ -174,7 +174,7 @@ To access your RSS content in Wise:
 1. From the left-hand menu bar, navigate to **Subscriptions** > **Feeds**.
 2. Select an unread RSS item and enter it to watch the video, listen to the podcast, or simply read the article. 
 
-![Access RSS](/images/manual/tutorials/wise-access-rss.png)
+![Access RSS](/images/manual/tutorials/wise-access-rss.png#bordered)
 
 ::: tip Smart content recommendations
 In addition to regular RSS subscriptions, Wise offers a fully local, 100% privacy-protected intelligent content recommendation system. You can download the recommended algorithms from the Olares app market. Learn more in [Discover themed content](../tasks/recommend.md).
@@ -184,7 +184,7 @@ In addition to regular RSS subscriptions, Wise offers a fully local, 100% privac
 
 Once you've collected your content in Wise, you can search for particular content themes or entries using aggregated search in Olares.
 
-![Seach in Wise](/images/manual/tutorials/wise-search.png)
+![Seach in Wise](/images/manual/tutorials/wise-search.png#bordered)
 
 ::: info Search formats
 Currently, only document-type content (PDF, web articles, and ePUB) is searchable. Other formats will be supported in the future.
