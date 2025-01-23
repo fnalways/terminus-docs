@@ -79,7 +79,7 @@ Windows 设备需满足以下条件：
    Do you want to set up the firewall rules? (yes/no):
    ```
 
-5. 选择存储位置。请输入一个可用磁盘的盘符。请确保所选磁盘至少有 **80 GB** 的可用空间。
+5. 选择 WSL Ubuntu 的存储位置。请输入一个可用磁盘的盘符，并确保所选磁盘至少有 **80 GB** 的可用空间。
    ```powershell{7}
    Installing Olares will create a WSL Ubuntu Distro and occupy at least 80 GB of disk space.
    Please select the drive where you want to install it.
