@@ -61,6 +61,10 @@ const side = {
           link: "/zh/manual/tutorials/set-custom-domain",
         },
         {
+          text: "使用 Wise 管理知识",
+          link: "/zh/manual/tutorials/organize-content",
+        },
+        {
           text: "安装多节点",
           link: "/zh/manual/tutorials/install-olares-multi-node",
         },

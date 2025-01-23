@@ -61,6 +61,10 @@ const side = {
           link: "/manual/tutorials/set-custom-domain",
         },
         {
+          text: "Manage your knowledge with Wise",
+          link: "/manual/tutorials/organize-content",
+        },
+        {
           text: "Install a multi-node Olares cluster",
           link: "/manual/tutorials/install-olares-multi-node",
         },
