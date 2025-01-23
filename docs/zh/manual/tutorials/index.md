@@ -10,3 +10,7 @@
 - [使用 Wise 打造知识中枢](organize-content.md)
 - [远程串流你的媒体库](stream-media.md)
 - [使用 ComfyUI 和 Krita 创建 AI 图像](comfyui-for-krita.md)
+
+## 部署和扩展
+
+- [安装多节点 Olares 集群](install-olares-multi-node.md)
