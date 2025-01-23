@@ -8,7 +8,7 @@ It is recommended that you follow along with these tutorials to implement key Ol
 - [Configure a custom domain for your Olares](set-custom-domain.md)
 
 ## Application
-- [Build your knowledge hub in Olares](organize-content.md)
+- [Build your knowledge hub with Wise](organize-content.md)
 - [Stream your media library from anywhere with Olares](stream-media.md)
 - [Create AI art with ComfyUI and Krita](comfyui-for-krita.md)
 

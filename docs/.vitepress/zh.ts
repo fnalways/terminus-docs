@@ -61,7 +61,7 @@ const side = {
           link: "/zh/manual/tutorials/set-custom-domain",
         },
         {
-          text: "收集整理内容",
+          text: "使用 Wise 管理知识",
           link: "/zh/manual/tutorials/organize-content",
         },
         {
