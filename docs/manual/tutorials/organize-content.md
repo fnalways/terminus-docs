@@ -73,7 +73,7 @@ Once logged in, your LarePass browser extension and your Olares device are synce
 
 ## Collect web content
 
-LarePass provides flexible and efficient ways to collect online content, including web articles, videos, podcasts, and more. 
+You can collect online content, including web articles, videos, podcasts, using the LarePass browser extension, or the mobile client.
 
 ### Collect via the LarePass extension
 
@@ -114,7 +114,7 @@ Once added, you can find the content in **Library** > **Articles** in Wise.
 You can upload local PDF or EPUB e-books to Wise for centralized knowledge management. This allows you to keep your reading materials, notes, and related content in one place, making it easier to organize, search, and reference them whenever needed.
 
 1. Open **Wise**, click <i class="material-symbols-outlined">add_circle</i> in the menu bar, and select **Upload**.
-2. Choose the file you wish to upload, specify the upload directory, and click **Confirm**.
+2. Navigate to the directory that contains the file you wish to upload, select the file, and click **Confirm**.
 
 View your PDFs under **Library** > **PDFs** and EPUBs under **Library** > **Books**.
 
