@@ -43,23 +43,12 @@ export JUICEFS=1 \
 :::
 
 ## 第二步：向集群添加子节点
-1. 在子节点上，从 https://github.com/beclab/Olares/releases 下载 `joincluster.sh`。
+1. 在子节点上，从 https://joincluster.joinolares.cn 下载 `joincluster.sh`。
 2. 使用必要的环境变量运行 `joincluster.sh` 脚本。这些变量用于告诉子节点如何连接到主节点。必须要设置 `MASTER_HOST` 变量，该变量指定主节点的 IP 地址：
     ```bash
     export MASTER_HOST=192.168.1.15
     ./joincluster.sh
     ```
-:::tip 使用其他环境变量
-对于中国大陆地区用户，运行脚本时建议额外设置以下环境变量，以提升脚本的连接速度和稳定性，例如：
-```bash
-export MASTER_HOST=192.168.1.15 \
-REGISTRY_MIRRORS="https://mirrors.joinolares.cn" \
-DOWNLOAD_CDN_URL="https://cdn.joinolares.cn" \
-NVIDIA_CONTAINER_REPO_MIRROR="mirrors.ustc.edu.cn"
-./joincluster.sh
-```
-具体可参考[环境变量](../../developer/install/environment-variables.md)。
-:::
 
 下面是可能需要设置的变量列表：
 
