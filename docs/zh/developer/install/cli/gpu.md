@@ -5,7 +5,7 @@
 `gpu` 命令用于管理 GPU 功能，包括安装、启用、禁用和卸载 GPU 驱动及相关组件，以及查看 GPU 安装状态。
 
 ```bash
-olares-cli gpu [子命令][选项]
+olares-cli gpu 子命令 [选项]
 ```
 
 ::: tip Note

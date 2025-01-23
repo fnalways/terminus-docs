@@ -61,6 +61,10 @@ const side = {
           link: "/manual/tutorials/set-custom-domain",
         },
         {
+          text: "Install a multi-node Olares cluster",
+          link: "/manual/tutorials/install-olares-multi-node",
+        },
+        {
           text: "Stream videos remotely",
           link: "/manual/tutorials/stream-media",
         },
@@ -352,8 +356,12 @@ const side = {
         link: "/developer/install/cli/olares-cli",
         collapsed: true,
         items: [
+        {text: "info",
+        link: "/developer/install/cli/info"},
         {text: "olares info",
         link: "/developer/install/cli/olares-info"},
+        {text: "olares precheck",
+        link: "/developer/install/cli/olares-precheck"},
         {text: "olares download",
         link: "/developer/install/cli/olares-download"},
         {text: "olares prepare",
@@ -367,7 +375,9 @@ const side = {
         {text: "olares uninstall",
         link: "/developer/install/cli/olares-uninstall"},
         {text: "gpu",
-          link: "/developer/install/cli/gpu"},
+        link: "/developer/install/cli/gpu"},
+        {text: "node",
+        link: "/developer/install/cli/node"},
         ],
         },
         {
@@ -510,7 +520,6 @@ const side = {
         {
           text: "Develop system app",
           collapsed: true,
-
           items: [
             {
               text: "Overview",

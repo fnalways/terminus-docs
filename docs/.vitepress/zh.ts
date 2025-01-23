@@ -61,6 +61,10 @@ const side = {
           link: "/zh/manual/tutorials/set-custom-domain",
         },
         {
+          text: "安装多节点",
+          link: "/zh/manual/tutorials/install-olares-multi-node",
+        },
+        {
           text: "远程观看视频",
           link: "/zh/manual/tutorials/stream-media",
         },
@@ -351,8 +355,12 @@ const side = {
         link: "/zh/developer/install/cli/olares-cli",
         collapsed: true,
         items: [
+        {text: "info",
+        link: "/zh/developer/install/cli/info"},
         {text: "olares info",
         link: "/zh/developer/install/cli/olares-info"},
+        {text: "olares precheck",
+        link: "/zh/developer/install/cli/olares-precheck"},
         {text: "olares download",
         link: "/zh/developer/install/cli/olares-download"},
         {text: "olares prepare",
@@ -366,7 +374,9 @@ const side = {
         {text: "olares uninstall",
         link: "/zh/developer/install/cli/olares-uninstall"},
         {text: "gpu",
-          link: "/zh/developer/install/cli/gpu"},
+        link: "/zh/developer/install/cli/gpu"},
+        {text: "node",
+        link: "/zh/developer/install/cli/node"},
         ],
         },
         {
@@ -377,11 +387,8 @@ const side = {
     },
     {
       text: "开发 Olares 应用",
+      link: "/zh/developer/develop/",
       items: [
-        {
-          text: "简介",
-          link: "/zh/developer/develop/",
-        },
         {
           text: "教程",
           collapsed: true,
@@ -510,13 +517,8 @@ const side = {
       text: "参与贡献",
       items: [
         {
-          text: "Olares",
-          link: "/zh/developer/contribute/olares",
-        },
-        {
           text: "开发系统应用",
           collapsed: true,
-
           items: [
             {
               text: "概述",

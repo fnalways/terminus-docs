@@ -4,7 +4,7 @@
 The `olares download` command downloads the necessary packages and components required to install Olares on your local machine. It supports downloading components, checking the status of installation packages, and fetching the manifest file.
 
 ```bash
-olares-cli olares download [subcommand] [option]
+olares-cli olares download subcommand [option]
 ```
 
 ## Subcommands
