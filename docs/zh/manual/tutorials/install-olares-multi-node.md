@@ -49,7 +49,17 @@ export JUICEFS=1 \
     export MASTER_HOST=192.168.1.15
     ./joincluster.sh
     ```
-安装过程与单节点安装相同，系统会提示你输入域名并提供 Olares ID 的用户名。
+:::tip 使用其他环境变量
+对于中国大陆地区用户，运行脚本时建议额外设置以下环境变量，以提升脚本的连接速度和稳定性，例如：
+```bash
+export MASTER_HOST=192.168.1.15 \
+REGISTRY_MIRRORS="https://mirrors.joinolares.cn" \
+DOWNLOAD_CDN_URL="https://cdn.joinolares.cn" \
+NVIDIA_CONTAINER_REPO_MIRROR="mirrors.ustc.edu.cn"
+./joincluster.sh
+```
+具体可参考[环境变量](../../developer/install/environment-variables.md)。
+:::
 
 下面是可能需要设置的变量列表：
 

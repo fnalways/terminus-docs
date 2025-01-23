@@ -49,9 +49,8 @@ If you already have your own MinIO cluster or an S3 (or S3-compatible) bucket, y
     export MASTER_HOST=192.168.1.15
     ./joincluster.sh
     ```
-The installation process is identical to a single-node one and will prompt you to enter the domain name, and provide username of your Olares ID.
 
-Below is a list of the variables you might need to set.
+Below is a list of the variables you might need to set:
 
 | **Variable**               | **Description**                                                                                                                                                                            |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
