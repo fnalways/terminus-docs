@@ -37,13 +37,17 @@ Olares 命令行工具使用如下语法：
 
 ## 可用命令列表
 
-| 操作                 | 语法                                                 | 说明                             |
-|--------------------|----------------------------------------------------|--------------------------------|
-| `olares info`      | `olares-cli olares info [option]`                  | 显示已下载的 Olares OS 的常规信息         |
-| `olares download`  | `olares-cli olares download [subcommand] [option]` | 下载指定资源                         |
-| `olares prepare`   | `olares-cli olares prepare [option]`               | 为安装过程准备环境，包括设置 Olares 的基础服务和配置 |
-| `olares install`   | `olares-cli olares install [option]`               | 部署 Olares 的系统级和用户级组件           |
-| `olares change-ip` | `olares-cli olares change-ip [option]`             | 修改 Olares OS 的 IP 地址           |
-| `olares release`   | `olares-cli olares release [option]`               | 打包 Olares 安装资源以供分发或部署          |
-| `olares uninstall` | `olares-cli olares uninstall [option]`             | 完全卸载 Olares，或将安装回滚到特定阶段        |
+| 操作                 | 语法                                    | 说明                             |
+|--------------------|---------------------------------------|--------------------------------|
+| `info`             | `olares-cli olares info 子命令 [选项]`     | 显示当前设备的操作系统信。                  |
+| `olares info`      | `olares-cli olares info [选项]`         | 显示已下载的 Olares OS 的常规信息         |
+| `olares precheck`  | `olares-cli olares precheck [选项]`     | 检查系统环境是否满足 Olares 安装要求         |
+| `olares download`  | `olares-cli olares download 子命令 [选项]` | 下载指定资源                         |
+| `olares prepare`   | `olares-cli olares prepare [选项]`      | 为安装过程准备环境，包括设置 Olares 的基础服务和配置 |
+| `olares install`   | `olares-cli olares install [选项]`      | 部署 Olares 的系统级和用户级组件           |
+| `olares change-ip` | `olares-cli olares change-ip [选项]`    | 修改 Olares OS 的 IP 地址           |
+| `olares release`   | `olares-cli olares release [选项]`      | 打包 Olares 安装资源以供分发或部署          |
+| `olares uninstall` | `olares-cli olares uninstall [选项]`    | 完全卸载 Olares，或将安装回滚到特定阶段        |
+| `gpu`              | `olares-cli gpu 子命令 [选项]`             | 管理 GPU 相关的操作                   |
+| `node`             | `olares-cli node 子命令 [选项]`            | 管理节点相关的操作                      |
 
