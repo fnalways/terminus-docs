@@ -21,11 +21,9 @@ You'll see a confirmation message when update completed.
 
 ## Update `olaresd` manually
 
-`olaresd` is the core daemon process of the Olares system responsible for various key management functions. In some cases, upgrading Olares may require manually updating olaresd to address issues where certain services fail to function properly.
+`olaresd` is the core daemon process of the Olares system responsible for various key management functions. In some cases, upgrading Olares may require manually updating `olaresd` to address issues where certain services fail to function properly.
 
-::: tip Note
-In most cases, manual upgrade of `olaresd` is not necessary. Please refer to the Release Note to confirm if this step is required.
-:::
+To confirm if this step is required, refer to the [Release notes](https://github.com/beclab/Olares/releases/).
 
 To update `olaresd` manually:
 
@@ -36,5 +34,6 @@ To update `olaresd` manually:
    ```
 
 :::tip Note
-- The script suffix 1_11_3 corresponds to upgrading `olaresd` and `olares-cli` to version 1.11.3.
-- Currently, only the 1.11.3 upgrade script is available, which resolves the issue of being unable to mount external hard drives after upgrading from 1.11.2 to 1.11.3.
+- The script suffix `1_11_3` means to upgrade `olaresd` and `olares-cli` to version `1.11.3`.
+- Currently, only the v1.11.3 upgrade script is available, which resolves the issue of being unable to mount external hard drives after upgrading from `1.11.2` to `1.11.3`.
+:::
