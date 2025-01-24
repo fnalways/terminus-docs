@@ -41,7 +41,7 @@ const side = {
           link: "/zh/manual/get-started/install-olares",
           items: [
             {
-              text: "使用脚本安装",
+              text: "使用脚本",
               collapsed: true,
               items: [
                 {

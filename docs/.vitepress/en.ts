@@ -3,7 +3,7 @@ import { defineConfig, type DefaultTheme } from "vitepress";
 const side = {
   "/manual/": [
     {
-      text: "Docs home",
+      text: "What is Olares",
       link: "/manual/docs-home",
       items: [
         { text: "Why Olares", link: "/manual/why-olares" },

@@ -4,10 +4,15 @@ outline: [2, 3]
 # Install Olares using Docker image
 
 You can use Docker to install and run Olares in a containerized environment. This guide explains how to set up Olares using the Docker command line interface (CLI), prepare the installation environment, activate Olares, and manage the container lifecycle.
-
+:::warning
+Currently, installing Olares via the Docker image:
+- has only been tested and verified on Linux platforms.
+- does not support GPU enablement.  
+:::
 ## System requirements
 Make sure your device meets the following requirements.
 
+- Architecture: AMD64
 - CPU: At least 4 cores
 - RAM: At least 8GB of available memory
 - Storage: At least 64GB of available space (SSD recommended)
@@ -45,19 +50,6 @@ where:
 - `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.3`.
 
 When the container is running, you will see a container ID output.
-
-:::tip Enable GPU support
-If your device has a GPU available, you can enable GPU support by adding the `--gpu all` flag. For example:
-```bash{2,3,8}
-docker run  -d --privileged -v oic-data:/var \
-  --gpu all \
-  -e HOST_IP=192.168.50.98 \
-  -p 80:80 \
-  -p 443:443 \
-  -p 30180:30180 \
-  --name oic \
-  beclab/olares:1.11.3  
-```
 :::
 :::warning Do not add the `--rm` flag
 The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.

@@ -4,10 +4,15 @@ outline: [2, 3]
 # 使用 Docker 镜像安装 Olares
 
 通过 Docker 可以在容器化环境中安装和运行 Olares。本文将介绍如何使用 Docker 命令行界面（CLI）进行安装配置、准备环境、激活 Olares 以及管理容器生命周期。
-
+:::warning
+目前，通过 Docker 镜像安装 Olares：
+- 仅在 Linux 平台上经过测试和验证。
+- 不支持启用 GPU。
+:::
 ## 系统要求
 请确保设备满足以下配置要求：
 
+- 架构：AMD64
 - CPU：至少 4 核
 - 内存：至少 8GB 可用空间
 - 存储：至少 64GB 可用空间（推荐 SSD）
@@ -45,20 +50,6 @@ docker run -d --privileged -v oic-data:/var \
 - `beclab/olares:<olares version>-cn`：指定 Olares Docker 镜像及版本，例如`beclab/olares:1.11.3-cn`。
 
 容器启动后，你会看到一个容器 ID。
-
-:::tip 启用 GPU 支持
-如果设备上有可用的 GPU，可以添加 `--gpu all` 参数来启用 GPU 支持。例如：
-```bash{2,3,8}
-docker run  -d --privileged -v oic-data:/var \
---gpu all \
--e HOST_IP=192.168.50.98 \
--p 80:80 \
--p 443:443 \
--p 30180:30180 \
---name oic \
-beclab/olares:1.11.3-cn  
-```
-:::
 :::warning 请勿添加 `--rm` 参数
 `--rm` 参数会在容器停止后自动删除容器。如果发生这种情况，将无法重新启动容器，必须重新安装 Olares 才能再次运行。不使用此参数可以在停止后保留容器，让你能够通过 docker start 命令恢复运行。
 :::
