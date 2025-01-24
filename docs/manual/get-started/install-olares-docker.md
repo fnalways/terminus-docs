@@ -16,22 +16,49 @@ Make sure your device meets the following requirements.
 Before you begin, ensure the following:
 
 - [Docker](https://www.docker.com/) is installed and running on your system.
+- You know the IP address of the current device.
 - You have [created an Olares ID via LarePass](create-olares-id.md).
 
 ## Run Olares using the Docker CLI
 
-To run the latest stable version of Olares, execute the following command:
-```bash
-docker run --network host -d --privileged -v oic-data:/var --name oic beclab/olares:latest
+To pull the image of Olares, execute the following command.
+
+Replace `<host ip>` with your device's IP address and `<olares version>` with the desired version of Olares:
+```bash{2,7}
+docker run -d --privileged -v oic-data:/var \
+  -e HOST_IP=<host ip> \
+  -p 80:80 \
+  -p 443:443 \
+  -p 30180:30180 \
+  --name oic \
+  beclab/olares:<olares version>
 ```
 where:
-- `--network host`: Shares the host's network stack with the container, allowing the container to communicate through the host's network interfaces.
 - `-d`: Starts the container in detached mode to allow it to run in the background.
 - `--privileged`: Grants the container elevated privileges.
 - `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
+- `-e HOST_IP=<host ip>`: Specifies the host device's IP address as an environment variable.
+- `-p 80:80`: Maps port `80` on the host to port `80` in the container.
+- `-p 443:443`: Maps port `443` on the host to port `443` in the container.
+- `-p 30180:30180`: Maps port `30180` on the host to port `30180` in the container.
 - `--name oic`: Names the container `oic` for easier reference.
-- `beclab/olares:latest`: Specifies the Olares Docker image and version.
+- `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.3`.
 
+When the container is running, you will see a container ID output.
+
+:::tip Enable GPU support
+If your device has a GPU available, you can enable GPU support by adding the `--gpu all` flag. For example:
+```bash{2,3,8}
+docker run  -d --privileged -v oic-data:/var \
+  --gpu all \
+  -e HOST_IP=192.168.50.98 \
+  -p 80:80 \
+  -p 443:443 \
+  -p 30180:30180 \
+  --name oic \
+  beclab/olares:1.11.3  
+```
+:::
 :::warning Do not add the `--rm` flag
 The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.
 :::
@@ -53,7 +80,11 @@ To avoid activation failures, ensure that both your phone and the Olares device 
 3. When the installation completes, tap **Activate now**. Olares will enter the activation process, including initial configuration and network setup.
 4. Follow the on-screen instructions to reset the login password for Olares, then tap **Complete**.
 
+![Activate Olares via LarePass](/images/manual/get-started/activate-olares-mdns.png#bordered)
+
 Once activation is complete, LarePass will display the desktop address of your Olares device, such as `https://desktop.marvin123.olares.com`.
+
+![Access Olares via browser](/images/manual/get-started/access-olares-via-browser.png#bordered){width=30%}
 
 <!--@include: ./log-in-to-olares.md-->
 
