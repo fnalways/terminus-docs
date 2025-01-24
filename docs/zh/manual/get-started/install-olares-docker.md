@@ -54,28 +54,14 @@ docker run -d --privileged -v oic-data:/var \
 `--rm` 参数会在容器停止后自动删除容器。如果发生这种情况，将无法重新启动容器，必须重新安装 Olares 才能再次运行。不使用此参数可以在停止后保留容器，让你能够通过 docker start 命令恢复运行。
 :::
 
-## 准备 Olares 安装环境
+## 安装 Olares
 容器运行后，执行以下命令：
 ```bash
 docker exec -it oic olares-install
 ```
-该命令会执行 Olares 安装的准备阶段。完成后，可以使用手机上的 LarePass 继续安装并激活 Olares。
-## 安装并激活 Olares
+<!--@include: ./reusables.md{20,28}-->
 
-:::warning 检查网络连接
-为避免激活失败，请确保你的手机和 Olares 设备连接到同一网络。
-:::
-
-1. 打开 LarePass，在账号激活页面点击**发现附近的 Olares**。LarePass 将列出同一网络中检测到的 Olares 实例。
-2. 选择刚刚准备好安装环境的 Olares 设备，点击**立即安装**。
-3. 安装完成后，点击**立即激活**。Olares 将开始激活流程，包括初始配置和网络设置。
-4. 按照屏幕提示重置 Olares 的登录密码，然后点击**完成**。
-
-![使用 LarePass 激活 Olares](/images/zh/manual/get-started/activate-olares-mdns.png#bordered)
-
-激活完成后，LarePass 将显示 Olares 设备的桌面地址，如 `https://desktop.marvin123.olares.cn`。
-
-![从浏览器访问 Olares](/images/zh/manual/get-started/access-olares-via-browser.png#bordered){width=30%}
+<!--@include: ./activate-olares.md-->
 
 <!--@include: ./log-in-to-olares.md-->
 

@@ -55,28 +55,15 @@ When the container is running, you will see a container ID output.
 The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.
 :::
 
-## Prepare installation environment for Olares
+## Install Olares
 Once the container is running, run the following:
 ```bash
 docker exec -it oic olares-install
 ```
-This command executes the preparation phase for Olares installation. After this step, you can continue installing and activating Olares using LarePass on your phone.
-## Install and activate Olares
 
-:::warning Same network required
-To avoid activation failures, ensure that both your phone and the Olares device are connected to the same network.
-:::
+<!--@include: ./reusables.md{20,33}-->
 
-1. Open LarePass, on your account activation page, tap **Discover nearby Olares**.  LarePass will list the detected Olares instances in the same network.
-2. Select the target self-hosted Olares device, and tap **Install now**.
-3. When the installation completes, tap **Activate now**. Olares will enter the activation process, including initial configuration and network setup.
-4. Follow the on-screen instructions to reset the login password for Olares, then tap **Complete**.
-
-![Activate Olares via LarePass](/images/manual/get-started/activate-olares-mdns.png#bordered)
-
-Once activation is complete, LarePass will display the desktop address of your Olares device, such as `https://desktop.marvin123.olares.com`.
-
-![Access Olares via browser](/images/manual/get-started/access-olares-via-browser.png#bordered){width=30%}
+<!--@include: ./activate-olares.md-->
 
 <!--@include: ./log-in-to-olares.md-->
 
