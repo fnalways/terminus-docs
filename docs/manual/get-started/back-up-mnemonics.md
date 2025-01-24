@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Back up mnemonic phrase
 A mnemonic phrase is a sequence of 12 words that serves as the sole method to recover your Olares ID. If you lose your devices or need to import your Olares account, you can use the phrase to regain your access to Olares.
 

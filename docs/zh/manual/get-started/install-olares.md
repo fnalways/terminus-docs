@@ -1,83 +1,15 @@
-<script setup>
-   import { ref, computed, onMounted } from 'vue'
-   import installOlaresRaspberryPi from './install-olares-raspberry-pi.md'
-   import installOlaresMac from './install-olares-mac.md'
-   import installOlaresInstallOlaresWindows from './install-olares-windows.md'
+# 安装 Olares
+本文介绍安装 Olares 的不同方式。在运行 Olares 之前，你需要[创建 Olares ID](create-olares-id.md)，并确保操作系统和硬件配置满足最低要求。
 
-   import installOlaresLinux from './install-olares-linux.md'
-   import installOlaresGeneralLinux from './install-olares-general-linux.md'
-   import installOlaresPVE from './install-olares-pve.md'
-   import installOlaresLXC from './install-olares-lxc.md'
+Olares 目前支持以下平台或环境：
+- Linux（Ubuntu 或 Debian）
+- PVE
+- LXC
+- 树莓派
+- macOS
+- Windows（WSL）
 
-   import { useData } from 'vitepress'
+你可以选择以下方式安装 Olares：
 
-   const { isDark } = useData()
-   const tabActiveIndex = ref(0)
-   const randomKey = ref('RandomKey')
-   const title = computed(()=> titles[tabActiveIndex.value])
-   const titles = ['在 Linux 系统上安装', '在 Mac 上安装', '在 Windows 上安装']
-
-   const icons = ['linux-brands-solid', 'apple-brands-solid', 'windows-brands-solid']
-   const icons_light = computed(() => icons.map(item => `/images/manual/icons/${item}.svg`))
-   const icons_dark = computed(() => icons.map(item => `/images/manual/icons/${item}-dark.svg`))
-
-   function tabChange(tab, index) {
-      tabActiveIndex.value = index
-      document.title = `${title.value} | Olares`;
-   }
-
-   function tabChange2(tab, index) {
-      randomKey.value = Math.random()
-   }
-
-   onMounted(() => {
-      document.title = `${title.value} | Olares`;
-      setTimeout(() => {
-         randomKey.value = Math.random()
-      }, 0)
-   })
-   
-
-</script>
-
-<span style="display:none;opacity: 0;">{{randomKey}}</span>
-
-<Tabs @tab-changed="tabChange" style="margin-top: 16px;" :icons="icons" :isDark="isDark" >
-<template #Linux>
-
-<Tabs @tab-changed="tabChange2" >
-
-# 在 Linux 系统上安装 Olares
-
-<installOlaresLinux />
-<template #通用-Linux>
-<installOlaresGeneralLinux/>
-</template>
-<template #PVE>
-<installOlaresPVE />
-</template>
-<template #LXC-on-PVE>
-<installOlaresLXC />
-</template>
-<template #Raspberry-Pi>
-<installOlaresRaspberryPi/>
-</template>
-</Tabs>
-
-</template>
-<template #macOS>
-<installOlaresMac />
-</template>
-<template #Windows>
-<installOlaresInstallOlaresWindows />
-</template>
-</Tabs>
-
-<style>
-   h2:has(.h2-border-none) {
-    border: none !important;
-    margin-top: 0px !important;
-    padding-top: 0px !important;
-}
-</style>
-
+- **使用脚本安装**：通过简单的安装脚本将 Olares 直接安装到系统中。
+- **使用 Docker 镜像**：以容器化方式运行 Olares，无需直接安装在机器上。
