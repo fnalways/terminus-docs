@@ -281,6 +281,10 @@ const side = {
               link: "/manual/tasks/resources-usage",
             },
             {
+              text: "Set up hosts",
+              link: "/manual/tasks/set-up-hosts",
+            },
+            {
               text: "Update Olares",
               link: "/manual/tasks/update",
             },
