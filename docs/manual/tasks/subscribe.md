@@ -18,14 +18,26 @@ When browsing recommended content on the **For you** page, you can subscribe to 
 
 ### Add RSS feeds manually
 1. Open the RSS feed dialog with either option:
-    * In the left menu bar, click <i class="material-symbols-outlined">add_circle</i> and select **RSS feed**.
-    * On the page **Manage** > **RSS feeds**, click **Add feed** in the top right corner.
+    * Click <i class="material-symbols-outlined">add_circle</i> on the bottom left, and select **RSS feed**.
+    * Click <i class="material-symbols-outlined">settings</i> on the bottom left, select **RSS feeds**, then click **Add feed** in the top right corner.
 2. In the dialog, enter the feed information using any of these formats:
     * Feed name. For example, `techcrunch`.
-    * Website URL for RSS feed search
-    * Direct RSS link
+    * Website URL for RSS feed search.
+    * Direct RSS link.
 3. Click **Add** to complete the subscription.
 
+### Import RSS feeds from OPML
+OPML files allow you to easily import RSS feed collections from other users or RSS readers. This is a convenient way to migrate your existing feed subscriptions or add curated feed collections.
+
+1. Click <i class="material-symbols-outlined">settings</i> in the bottom left corner and select **Preferences**.
+2. Under **Import/Export**, click **Import feeds from OPML file**.
+3. Select your OPML file and open it.
+
+After import, you can view and manage your RSS feeds under <i class="material-symbols-outlined">settings</i> > **RSS feeds**.
+
+:::info
+ Only new feed subscriptions will be imported. Historical feed content from your previous reader won't be transferred.
+:::
 ### Use LarePass for web subscriptions
 :::tip
 LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
@@ -37,17 +49,17 @@ LarePass extension is currently available for Chrome browsers only. Download it 
    :::
 3. Click <i class="material-symbols-outlined">bookmark_add</i> to add the feed to Wise.
 
-#### Upload cookie
-Some websites require cookies for accessing content.
+:::tip Upload cookie
 
+Some websites require cookies for accessing content:
 1. Log in to the target website.
 2. Open the LarePass browser extension, and click **Collect** > **Cookie**.
 3. Click **Upload** to apply changes or enable **Auto Sync**.
 
 You can hover over cookies to view details.
-
+:::
 ## View subscription list
-Access all your RSS feed subscriptions from **Manage** > **RSS feeds**.
+Access all your RSS feed subscriptions from <i class="material-symbols-outlined">settings</i> > **RSS feeds**.
 
 You can:
 
@@ -66,7 +78,4 @@ You can unsubscribe from content sources in several ways:
 * From the **Info** column
 * Through the reading page toolbar
 * Via the LarePass browser extension
-* On the **RSS Feeds management** page 
-
-
-
+* On the **RSS Feeds management** page
