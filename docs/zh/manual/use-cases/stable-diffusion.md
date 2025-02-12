@@ -20,7 +20,9 @@ Stable Diffusion 是基于潜在扩散模型（LDM）的新一代 AI 图像生�
 根据角色选择安装方式：
 * **管理员**：需要同时安装“SD Web UI For Cluster”和“SD Web UI”。
 * **团队成员**：确保管理员已安装“SD Web UI For Cluster”，然后只需安装“SD Web UI”。
-* 
+
+![安装 SD Web UI](/images/manual/use-cases/install-sd.png){width=40%}
+
 完成安装后，从桌面启动应用即可开始创作。
 
 ## 多人使用避免冲突

@@ -74,10 +74,10 @@ To add a vault item:
 2. Click <i class="material-symbols-outlined">add</i> in the top right corner.
 3. Select a type, such as **Website / App** for storing account details, and click **Create**.
 
-   ![Add vault item](/images/manual/tasks/add-vault-item.png)
+   ![Add vault item](/images/manual/tasks/add-vault-item.png#bordered)
 4. Fill in the required fields like item name, Username, Password, and URL.
 
-   ![Fill item fields](/images/manual/tasks/fill-item-fields.png)
+   ![Fill item fields](/images/manual/tasks/fill-item-fields.png#bordered)
 5. Click **Save** to create the new vault item.
 </template>
 <template #LarePass-desktop-or-mobile>

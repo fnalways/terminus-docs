@@ -52,11 +52,11 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 
 2. 点击**创建账户**以触发 DID 创建。
    
-  ![create DID](/images/manual/tutorials/create-a-did.png)
+  ![创建 DID](/images/manual/tutorials/create-a-did.png)
 
    此操作将为你创建一个 DID 阶段的 Olares 账户。
 
-  ![DID stage](/images/manual/tutorials/did-stage.png)
+  ![DID 阶段](/images/manual/tutorials/did-stage.png)
 
 ## 第 2 步：将域名添加到 Olares Space
 
@@ -65,18 +65,18 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 1. 在浏览器中访问 [Olares Space](https://space.olares.xyz/)。
 2. 在手机端的 LarePass 应用中，点击右上角的扫码按钮，并扫描登录页面的二维码以登录 Olares Space。
 
-    ![scan QR](/images/manual/tutorials/scan-qr-code.png)
+    ![扫描二维码](/images/manual/tutorials/scan-qr-code.png)
 
 3. 在 Olares Space 中，进入**域名管理**>**域名设置**，输入你的域名并点击**确认**。
 
-    ![add domain](/images/manual/tutorials/add-domain.png)
+    ![添加域名](/images/manual/tutorials/add-domain.png#bordered)
 
 4. 验证你域名的 TXT 记录。此步骤会验证你对该域名的所有权。
 
    a. 在操作列中，点击**引导**。  
    b. 按照屏幕提示，将 TXT 记录添加到你的 DNS 服务商配置中。
 
-    ![verify TXT](/images/manual/tutorials/verify-txt.png)
+    ![验证 TXT](/images/manual/tutorials/verify-txt.png#bordered)
 
    完成验证后，域名状态会自动更新为**等待添加域名 NS 记录**。
 
@@ -87,7 +87,7 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 
    一旦通过验证，域名状态将更新为**等待为域名申请可验证凭证**。
 
-   ![domain added](/images/manual/tutorials/domain-added.png)
+   ![域名状态更新](/images/manual/tutorials/domain-added.png#bordered)
 
 :::tip 注意
 TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小时。如果整个过程超过 3 小时，请联系你的 DNS 服务商进行排查。
@@ -109,13 +109,13 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
 
    b. 前往**组织 Olares ID** >**创建新组织**。与你域名对应的组织会自动显示在列表中。
 
-   ![Create org](/images/manual/tutorials/create-org.png)
+   ![创建组织](/images/manual/tutorials/create-org.png)
 
    c. 点击该组织名称以申请 VC。完成后，你将看到待绑定的域名。
 
    d. 点击**确定**完成在 LarePass 中的组织域名绑定。
 
-   ![Bind org](/images/manual/tutorials/bind-domain-with-org.png)
+   ![绑定组织](/images/manual/tutorials/bind-domain-with-org.png)
 
 2. 在 Olares Space 中，进入**域名管理**页面。此时，域名状态应变为**等待规则配置**。
 
@@ -134,9 +134,9 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
      - **指定邮箱地址**：允许你通过指定成员的邮箱地址来添加成员。如果你没有公司邮箱域名且仅需邀请少数成员加入组织，建议使用此选项。支持 Gmail 和 G-Suite 账号。
    :::
 
-3. 点击**添加新用户**并输入成员的 Gmail 地址，例如 `justtest193@gmail.com`。
+3. 点击**添加新用户**并输入成员的 Gmail 地址，例如 `justtest1953@gmail.com`。
 
-   ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
+   ![设置邀请规则](/images/manual/tutorials/set-domain-rule.png#bordered)
 
 4. 点击**提交**完成成员添加。如果需要添加多个用户，请重复第 3 步和第 4 步。
 
@@ -156,7 +156,7 @@ TXT 验证通常在 30 分钟内完成。NS 记录验证可能需要长达 2 小
    a. 在系统提示时，选择 Google 作为你的 VC 凭证提供商。  
    b. 使用之前添加的 Gmail 帐号登录，并授权 VC 验证。
 
-   ![Join the org](/images/manual/tutorials/join-org.png)
+   ![加入组织](/images/manual/tutorials/join-org.png)
 
   授权成功后，就会自动创建一个使用自定义域名的 Olares ID，例如 `justtest1953@xxxx.cloud`。
 

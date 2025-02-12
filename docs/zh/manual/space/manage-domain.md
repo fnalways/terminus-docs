@@ -10,7 +10,7 @@ outline: [2, 3]
 
 大多数企业都会为团队成员使用统一的域名后缀，比如 A 的邮箱是 `A@myteam.com`，B 的邮箱是 `B@myteam.com`。不过有时团队成员可能会使用不同域名的邮箱。为了适应这些场景，Olares 提供了两种添加组织成员邮箱的规则：
 
-![alt text](/images/how-to/space/set_rule.jpg)
+![alt text](/images/how-to/space/set_rule.jpg#bordered)
 
 - **固定邮箱后缀**：适用于所有团队成员使用相同邮箱域名的情况。输入组织的域名后缀（如：`@company.com`），任何匹配该后缀的邮箱都可以关联到组织的 Olares ID。
 
@@ -26,7 +26,7 @@ outline: [2, 3]
 
 设置邮箱规则后，你可以在组织下添加或删除成员。
 
-![alt text](/images/how-to/space/management_members.jpg)
+![alt text](/images/how-to/space/management_members.jpg#bordered)
 
 ### 添加成员
 

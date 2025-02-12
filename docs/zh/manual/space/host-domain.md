@@ -30,15 +30,15 @@ outline: [2, 3]
 
 1. 在 Olares Space 控制台中，进入**域名** > **域名设置**，按照提示输入你的自定义域名。
 
-   ![alt text](/images/how-to/space/submit_a_domain.jpg)
+   ![alt text](/images/how-to/space/submit_a_domain.jpg#bordered)
 
 2. 为域名添加 TXT 记录以验证域名所有权。系统会验证你的配置。验证通过后，域名设置状态会自动更新为**等待配置域名 NS 记录**。
 
-   ![alt text](/images/how-to/space/txt.jpg)
+   ![alt text](/images/how-to/space/txt.jpg#bordered)
 
 3. 添加 NS 记录，允许 Olares Space 为你的域名配置 DNS。
 
-   ![alt text](/images/how-to/space/ns.jpg)
+   ![alt text](/images/how-to/space/ns.jpg#bordered)
 
    系统会验证你的配置。验证通过后，域名状态会更新为**等待申请域名可验证凭证**。
 

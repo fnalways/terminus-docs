@@ -15,7 +15,7 @@ outline: [2, 3]
 3. 登录 [**Olares Space**](https://space.olares.xyz/)。
 4. 在 **Olares** 页面的系统面板中查看**存储使用量**和**流量消耗**。
 
-![系统面板](/images/how-to/space/my_olares.jpg)
+![系统面板](/images/how-to/space/my_olares.jpg#bordered)
 
 :::info 注意
 对于自托管 Olares 用户，请重点关注内网穿透服务的**流量统计**和备份服务的**存储使用量**。这些服务可能会根据使用情况产生费用。

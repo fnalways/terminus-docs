@@ -1,5 +1,4 @@
 # 添加、编辑和下载
-
 **文件管理器**使用方式与其他同类软件类似。本文将介绍一些常用操作，帮助你快速上手。
 
 ## 上传文件
@@ -36,7 +35,7 @@
 
 **文件管理器**还支持编辑以下文本格式：TXT、JS、MD、CSS、XML、YAML、HTML。
 
-![预览](/images/manual/tasks/files-preview.png)
+![预览](/images/manual/tasks/files-preview.png#bordered)
 ## 搜索文件
 通过桌面搜索功能，可以轻松找到**文件管理器**中的文件。
 :::tip 提示
@@ -46,7 +45,7 @@
 2. 在搜索框中输入要查找的文件相关关键词。
 3. 使用方向键<i class="material-symbols-outlined">arrow_upward</i><i class="material-symbols-outlined">arrow_downward</i>选择搜索范围：**存储盘**或**同步盘**，按 **Enter** 查看搜索结果。
 
-![搜索](/images/manual/tasks/files-search.png){width="90%""}
+![搜索](/images/manual/tasks/files-search.png#bordered){width="90%""}
 ## 删除文件
 :::warning 警告
 删除的文件无法恢复。

@@ -65,7 +65,7 @@ Add and verify your own domain in Olares Space before binding it.
 
 3. In Olares Space, go to **Domain Management** > **Domain Name Setup**, enter your domain and click **Confirm**.
 
-   ![add domain](/images/manual/tutorials/add-domain.png)
+   ![add domain](/images/manual/tutorials/add-domain.png#bordered)
 
 4. Verify your TXT record for your domain. This verifies your ownership of the domain.
 
@@ -73,7 +73,7 @@ Add and verify your own domain in Olares Space before binding it.
 
    b. Follow the on-screen instructions to add a TXT record to your DNS provider configuration.
 
-   ![verify TXT](/images/manual/tutorials/verify-txt.png)
+   ![verify TXT](/images/manual/tutorials/verify-txt.png#bordered)
 
    Once verified, the domain setup status will update automatically to **Await NS Record for Your Domain**.
 5. Verify the Name Server (NS) Record for your domain. This delegates the DNS resolution for your domain to Olares's Cloudflare. 
@@ -84,7 +84,7 @@ Add and verify your own domain in Olares Space before binding it.
 
    Once verified, the domain status will update to **Awaiting the application for the domain's Verifiable Credential**.
 
-   ![domain added](/images/manual/tutorials/domain-added.png)
+   ![domain added](/images/manual/tutorials/domain-added.png#bordered)
 
 :::info
 TXT verification typically completes within 30 minutes. NS record verification may take up to 2 hours. If the whole process exceeds 3 hours, check with your DNS provider.
@@ -130,9 +130,9 @@ The domain rules specify how you add the members for the organization. Only memb
    - **Specified email address**: Allows you to add members by specifying their email addresses. This option is recommended if you do not have a corporate email domain and only need to invite a small number of members to your organization. Both Gmail and G-Suite accounts are supported.
    :::
 
-3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest193@gmail.com`.
+3. Click **Add New User** and enter the Gmail address for the member. For example, `justtest1953@gmail.com`.
 
-   ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png)
+   ![Configure domain rules](/images/manual/tutorials/set-domain-rule.png#bordered)
 
 4. Click **Submit** to finalize the member addition. Repeat step 3 and step 4 if you want to add multiple users
 

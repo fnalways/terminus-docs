@@ -12,8 +12,10 @@ Open WebUI provides an intuitive interface for managing Large Language Models (L
 
 ## Installation
 Ollama is required prior to launching Open WebUI:
-* **For admin**: Install both Ollama and Open WebUI.
-* **For team members**: Ensure that Ollama is already installed by Olares admin, and then install Open WebUI only.
+* **For admin**: Install both "Ollama" and "Open WebUI".
+* **For team members**: Ensure that "Ollama" is already installed by Olares admin, and then install "Open WebUI" only.
+
+![Install Ollama and Open WebUI](/images/manual/use-cases/install-open-webui.png){width=30%}
 
 :::info
 First-time users need to create a local Open WebUI account. This account is specifically for your Olares installation and doesn't connect to external services. Note that existing Open WebUI accounts from other installations cannot be used here - you'll need to create a new one.
@@ -40,8 +42,10 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 ## Configure speech features
 ### Speech-to-text
 1. Install Faster Whisper from Market based on your role:
-   - Admin: Install both Faster Whisper For Cluster and Faster Whisper.
-   - Team members: Ensure that Faster Whisper For Cluster is already installed by Olares admin, and install Faster Whisper only.
+   - Admin: Install both "Faster Whisper For Cluster" and "Faster Whisper".
+   - Team members: Ensure that "Faster Whisper For Cluster" is already installed by Olares admin, and install "Faster Whisper" only.
+
+   ![Install Faster Whisper](/images/manual/use-cases/install-faster-whisper.png){width=40%}
 2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select **OpenAI** as the speech-to-text engine, with the following configurations:
    - API Base URL: `http://whisper.whisper-{admin's local name}:8000/v1`. For example: `http://whisper.whisper-alice123:8000/v1`.
@@ -74,7 +78,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 ### Text-to-speech
 1. Install OpenedAI Speech from Market.
    :::info
-   OpenedAI Speech is a cluster-scoped application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed OpenedAI Speech.
+   "OpenedAI Speech" is a cluster-scoped application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed "OpenedAI Speech".
 2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select OpenAI as the text-to-speech engine, with the following configurations:
     - API Base URL: `http://openedaispeech.openedaispeech-{admin's local name}:8000/v1`. For example: `http://openedaispeech.openedaispeech-alice123:8000/v1`.
@@ -82,7 +86,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 4. Click **Save**.
 
 ### Text-to-image
-With SD Web UI For Cluster installed in your Olares environment, you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
+With [SD Web UI For Cluster installed in your Olares environment](stable-diffusion.md#install-sd-web-ui), you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
 
 1. Open Open WebUI, and navigate to **Admin Panel** > **Settings** > **Images**.
 2. Select **Automatic1111** as the image generation engine, with the base URL:  `http://sdwebui.sdwebui--{admin's local name}:7860`. For example: `http://sdwebui.sdwebui-alice123:7860`.

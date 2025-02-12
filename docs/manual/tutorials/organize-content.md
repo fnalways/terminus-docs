@@ -9,7 +9,7 @@ Wise, a built-in app in Olares, is designed to centralize and organize your know
 	
 This tutorial guides you on how to leverage Wise and LarePass to collect, organize, and access content across platforms.
 
-## Learning objectives
+## Objectives
 
 By the end of this tutorial, you will learn how to:
 
@@ -33,8 +33,6 @@ The LarePass browser extension is the core tool for content discovery and collec
 ::: tip Support for Chrome only
 The LarePass extension is currently only available for Chrome.
 :::
-
-### Install the LarePass extension
 
 <tabs>
 <template #Install-from-Chrome-Web-Store>
@@ -195,7 +193,7 @@ Once you've collected your content in Wise, you can search for particular conten
 
 ![Search in Wise](/images/manual/tutorials/wise-search.png#bordered)
 
-::: info Search formats
+::: info Supported search formats
 Currently, only document-type content (PDF, web articles, and ePUB) is searchable. Other formats will be supported in the future.
 :::
 

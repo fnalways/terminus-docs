@@ -15,6 +15,8 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
 * **管理员**：需要同时安装“Ollama”和“Open WebUI”。
 * **团队成员**：仅需安装“Open WebUI”，同时确保管理员已安装“Ollama”。
 
+![安装 Ollama 和 Open WebUI](/images/manual/use-cases/install-open-webui.png){width=30%}
+
 :::info Open WebUI 账号
 首次使用时需要创建本地 Open WebUI 账号。这个账号仅限用于你的 Olares 环境，不会与任何外部服务连接。
 请注意，其他环境中创建的 Open WebUI 账号在这里无法使用，你需要重新创建一个新账号。
@@ -47,6 +49,8 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
 1. 根据角色安装 Faster Whisper：
    - **管理员**：需要同时安装“Faster Whisper For Cluster”和“Faster Whisper”。
    - **团队成员**：仅需安装“Faster Whisper”，同时确保管理员已安装“Faster Whisper For Cluster”。
+
+   ![Install Faster Whisper](/images/manual/use-cases/install-faster-whisper.png){width=40%}
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
 3. 选择 OpenAI 作为语音转文字引擎，配置如下：
    - **API 基础 URL**：`http://whisper.whisper-{管理员本地名称}:8000/v1`，例如：`http://whisper.whisper-alice123:8000/v1`。

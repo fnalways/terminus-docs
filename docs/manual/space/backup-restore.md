@@ -14,7 +14,7 @@ The backup task list shows information for each backup task, including:
 - Most recent snapshot time
 - Overall storage usage 
 
-![alt text](/images/how-to/space/backup_list.jpg)
+![alt text](/images/how-to/space/backup_list.jpg#bordered)
 
 Click **View Details** on a task to see its detail page. The detail page shows the storage usage since the task was created and a list of all successful snapshots.
 
@@ -24,7 +24,7 @@ Currently, only restoring from the most recent snapshot is supported.
 
 ## Restore backup to the Olares Space
 
-![alt text](/images/how-to/space/restore_backup_to_the_olares_space.jpg)
+![alt text](/images/how-to/space/restore_backup_to_the_olares_space.jpg#bordered)
 
 Restoring a snapshot to the cloud is similar to setting up a new cloud-based Olares.
 

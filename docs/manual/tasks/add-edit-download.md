@@ -35,7 +35,7 @@ Double-click a file to open its preview. The Files app supports previewing the f
 
 The Files app also supports editing the following text formats: TXT, JS, MD, CSS, XML, YAML, HTML.
 
-![Preview](/images/manual/tasks/files-preview.png)
+![Preview](/images/manual/tasks/files-preview.png#bordered)
 ## Search files
 You can easily find files in the Files app using desktop search.
 :::tip
@@ -45,7 +45,7 @@ Full-text search is available for the `/Documents/` directory in **Drive**, allo
 2. In the search field, enter keywords related to the file you're looking for.
 3. Use arrow keys <i class="material-symbols-outlined">arrow_upward</i><i class="material-symbols-outlined">arrow_downward</i> to select the search scope: **Drive** or **Sync**, and press **Enter** to see search results.
 
-![Search](/images/manual/tasks/files-search.png){width="90%""}
+![Search](/images/manual/tasks/files-search.png#bordered){width="90%""}
 ## Delete files
 :::warning
 Deleted files cannot be recovered.

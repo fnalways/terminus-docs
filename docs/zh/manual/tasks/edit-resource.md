@@ -15,7 +15,7 @@
 3. 根据需要编辑工作负载的 YAML 配置。
 4. 点击**确认**保存更改并应用配置。
 
-   ![编辑 YAML](/images/how-to/olares/controlhub/browse/10.jpg)
+   ![编辑 YAML](/images/how-to/olares/controlhub/browse/10.jpg#bordered)
 
 ## 修改 Pod 副本数
 
@@ -24,7 +24,7 @@
 1. 在**控制面板**中，进入 Pod 资源详情页，查看顶部显示的 Pod 副本数量。
 2. 点击 **<i class="material-symbols-outlined">add</i>** 或 **<i class="material-symbols-outlined">remove</i>** 调整 Pod 副本数量。
 
-   ![副本数量](/images/how-to/olares/controlhub/browse/09.jpg)
+   ![副本数量](/images/how-to/olares/controlhub/browse/09.jpg#bordered)
 
 :::warning 警告
 Olares 中的许多应用不支持多副本模式。增加这些 Pod 的副本数量可能会导致异常。因此，请务必仔细阅读文档，并谨慎调整副本数量。
@@ -45,4 +45,4 @@ Pods 页面提供了 Olares 环境中所有 Pod 的全面视图，允许你在 K
   无法从该视图直接编辑 YAML 配置。YAML 配置由 Olares 通过应用负载模板和 Webhook 管理。
   :::
 
-![Pod 详情](/images/how-to/olares/controlhub/pods/02.jpg)
+![Pod 详情](/images/how-to/olares/controlhub/pods/02.jpg#bordered)

@@ -30,15 +30,15 @@ When you have everything ready, take the steps below to add your domain in Olare
 
 1. In the Olares Space console, navigate to **Domain** > **Domain Name Setup**, and enter your custom domain as instructed. 
 
-    ![alt text](/images/how-to/space/submit_a_domain.jpg)
+    ![alt text](/images/how-to/space/submit_a_domain.jpg#bordered)
 
 2. Add a TXT record for your domain to confirm your domain ownership. The system will verify your configuration. Once verified, the domain setup status will update automatically to **Await NS Record for Your Domain**.
 
-    ![alt text](/images/how-to/space/txt.jpg)
+    ![alt text](/images/how-to/space/txt.jpg#bordered)
 
 3. Add NS records to allow Olares Space to configure DNS for your domain. 
 
-    ![alt text](/images/how-to/space/ns.jpg)
+    ![alt text](/images/how-to/space/ns.jpg#bordered)
 
    The system will verify your configuration. Once verified, the domain status will update to **Awaiting the application for the domain's Verifiable Credential**.
 

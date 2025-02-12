@@ -60,7 +60,7 @@ Olares 成员仅能访问自己的命名空间，而 Olares 管理员可以访�
 
 ### 工作负载详情
 
-![alt text](/images/how-to/olares/controlhub/browse/02.jpg)
+![alt text](/images/how-to/olares/controlhub/browse/02.jpg#bordered)
 
 工作负载资源的信息包括：
 
@@ -82,13 +82,13 @@ Pod 的信息包括：
 - **环境变量**：为容器定义的环境变量。
 - **事件**：按时间顺序记录与容器相关的事件。
 
-![containers](/images/how-to/olares/controlhub/browse/04.jpg)
+![containers](/images/how-to/olares/controlhub/browse/04.jpg#bordered)
 
 ### 保密字典
 
 保密字典（Secrets）用于存储密码、凭据和关键配置等敏感数据。在 Kubernetes 中，这些数据默认以 Base64 编码。
 
-![secrets](/images/how-to/olares/controlhub/browse/11.jpg)
+![secrets](/images/how-to/olares/controlhub/browse/11.jpg#bordered)
 
 展开**保密字典**可查看应用命名空间下的所有密文数据。
 
@@ -105,7 +105,7 @@ Pod 的信息包括：
 
 配置字典（ConfigMap）结构类似于**保密字典**，但内容以明文保存。
 
-![configmaps](/images/how-to/olares/controlhub/browse/12.jpg)
+![configmaps](/images/how-to/olares/controlhub/browse/12.jpg#bordered)
 
 展开**配置字典**可查看应用命名空间下的所有配置。
 
@@ -118,7 +118,7 @@ Pod 的信息包括：
 
 **服务账户**（Service accounts）是 Kubernetes 的一种机制，用于验证集群容器应用并允许其访问 Kubernetes 管理的集群资源。
 
-![Service accounts](/images/how-to/olares/controlhub/browse/13.jpg)
+![Service accounts](/images/how-to/olares/controlhub/browse/13.jpg#bordered)
 
 展开 **服务账户** 部分可查看应用命名空间下的所有服务账户。
 
@@ -132,7 +132,7 @@ Pod 的信息包括：
 
 **服务**（Service）通过网络服务将运行在单个或一组 Pods 上的应用暴露出来，并根据定义的选择器分发流量。
 
-![service1](/images/how-to/olares/controlhub/browse/14.jpg)
+![service1](/images/how-to/olares/controlhub/browse/14.jpg#bordered)
 
 服务的信息包括：
 
@@ -148,13 +148,13 @@ Pod 的信息包括：
 
 **命名空间** 提供基于用户的资源消耗和工作负载状态视图。
 
-![namespace](/images/how-to/olares/controlhub/namespace/01.jpg)
+![namespace](/images/how-to/olares/controlhub/namespace/01.jpg#bordered)
 
 ### 用量排名
 
 按命名空间组织系统资源消耗。
 
-![namespace list](/images/how-to/olares/controlhub/namespace/02.jpg)
+![namespace list](/images/how-to/olares/controlhub/namespace/02.jpg#bordered)
 
 信息包括：
 
@@ -165,7 +165,7 @@ Pod 的信息包括：
 
 显示当前和历史资源利用率图表，可按用户筛选查看。
 
-![resources](/images/how-to/olares/controlhub/namespace/04.jpg)
+![resources](/images/how-to/olares/controlhub/namespace/04.jpg#bordered)
 
 ## 容器组
 
@@ -176,7 +176,7 @@ Pod 的信息包括：
 - **Pod 列表**：Olares 中的所有 Pods。
 - **资源**：显示容器的物理资源消耗。
 
-![resources](/images/how-to/olares/controlhub/pods/04.jpg)
+![resources](/images/how-to/olares/controlhub/pods/04.jpg#bordered)
 
 ## 资源
 
@@ -198,7 +198,7 @@ Pod 的信息包括：
 
 列出 Olares 中所有基于 Kubernetes 的自定义资源声明。
 
-![CRDs](/images/how-to/olares/controlhub/resources/02.jpg)
+![CRDs](/images/how-to/olares/controlhub/resources/02.jpg#bordered)
 
 信息包括：
 
@@ -218,4 +218,4 @@ Pod 的信息包括：
 - **信息**：集群数据，如名称、命名空间、访问地址等。
 - **数据库**：各应用使用的数据库概览。
 
-![postgres](/images/how-to/olares/controlhub/middleware/01.jpg)
+![postgres](/images/how-to/olares/controlhub/middleware/01.jpg#bordered)
