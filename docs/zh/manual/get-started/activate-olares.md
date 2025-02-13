@@ -25,7 +25,7 @@ search: false
 
    b. 按照 LarePass 上的提示重置 Olares 的登录密码。
 
-   ::: tip 使用相同的  ID 重新激活 Olares
+   ::: tip 使用相同的 ID 重新激活 Olares
 
    如果你重新安装了 Olares，原有实例将不可用。要使用同一个 ID 重新激活 Olares：
    1.	在手机上打开 LarePass，你将看到提示：`未发现运行中的的 Olares`。
