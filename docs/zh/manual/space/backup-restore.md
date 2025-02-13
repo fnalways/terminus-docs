@@ -14,7 +14,7 @@ Olares Space 是为 Olares 实例提供快照备份的官方解决方案。你�
 - 最近快照时间
 - 总体存储用量
 
-![alt text](/images/how-to/space/backup_list.jpg)
+![alt text](/images/how-to/space/backup_list.jpg#bordered)
 
 点击任务的**查看详情**可以进入详情页面。详情页面展示了该任务创建以来的存储用量变化，以及所有成功的快照记录。
 
@@ -24,7 +24,7 @@ Olares Space 是为 Olares 实例提供快照备份的官方解决方案。你�
 
 ## 将备份恢复至 Olares Space
 
-![alt text](/images/how-to/space/restore_backup_to_the_olares_space.jpg)
+![alt text](/images/how-to/space/restore_backup_to_the_olares_space.jpg#bordered)
 
 将快照恢复到云端的操作流程与新建云端 Olares 类似。
 

@@ -3,7 +3,13 @@ outline: [2, 3]
 ---
 
 # Stream your media library from anywhere with Olares
-Want to enjoy your movies and TV shows from anywhere? Here's how to access your personal media library remotely through Olares.
+Olares makes it easy to access and enjoy your personal media library from anywhere, whether you're at home or on the go. With built-in VPN support and media management tools like Jellyfin, you can stream your favorite movies and TV shows securely and seamlessly. This tutorial will guide you through the process of setting up Olares VPN, accessing media files, and configuring Jellyfin for advanced streaming capabilities.
+
+## Objectives
+In this tutorial, you will learn how to:
+- Configure Olares VPN to securely access your media library from anywhere with LAN-like performance.
+- Explore and play video files stored in Olares Files using the LarePass client or a web browser.
+- Install and set up Jellyfin for media streaming.
 
 ## Enable Olares VPN connection
 To achieve smooth streaming over external networks, enable the Olares VPN connection in LarePass. This ensures all traffic from devices with LarePass installed routes through the dedicated network, providing LAN-like speed and performance.
@@ -14,11 +20,11 @@ For different LarePass download options, visit [the official page](https://www.o
 ### On LarePass mobile client
 1. Open LarePass, go to **Settings** > **Account**.
 2. Turn on the VPN switch.
-   ![Enable VPN on LarePass mobile](/images/manual/use-cases/vpn-mobile.png)
+   ![Enable VPN on LarePass mobile](/images/manual/use-cases/vpn-mobile.png#bordered)
 ### On LarePass desktop client
 1. Open LarePass, click on the avatar area in the top left corner of the main interface.
 2. Turn on the switch for **VPN connection** in the pop-up panel.
-   ![Enable VPN on LarePass desktop](/images/manual/use-cases/vpn-desktop.png)
+   ![Enable VPN on LarePass desktop](/images/manual/use-cases/vpn-desktop.png#bordered)
 
 Once enabled, you can also access your applications using the format: `https://[RouteID].local.[OlaresDomainName]`.
 
@@ -52,7 +58,7 @@ For advanced media management features like subtitle support and multi-channel a
    - Descriptions 
    - Cast information 
 
-![Jellyfin](/images/manual/use-cases/jellyfin.png)
+![Jellyfin](/images/manual/use-cases/jellyfin.png#bordered)
 ## Access your media library through Jellyfin clients
 To stream your media on various devices:
 

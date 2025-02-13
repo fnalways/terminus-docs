@@ -36,7 +36,7 @@ You can also browse applications based on their functionality:
     For information on using the recommendation feature in Wise, refer to [discover themed content](./recommend).
     :::
 
-![Market](/images/manual/tasks/market-discover.png)
+![Market](/images/manual/tasks/market-discover.png#bordered)
 ## Install applications
 
 1. Open the Market app from the Dock or Launchpad.

@@ -17,11 +17,11 @@ To start receiving personalized content recommendations:
 2. Click **Get** to install your chosen algorithm.
 3. Allow some time for the algorithm to complete its local recommendation workflow.
 
-   ![Recommendation algorithm](/images/manual/tasks/install-recommendation.png)
+   ![Recommendation algorithm](/images/manual/tasks/install-recommendation.png#bordered)
 
 Once installed, find your recommended content on the **For you** page in Wise. This page displays results from all your installed recommendation algorithms, with separate content feeds for each. Switch between different algorithms by clicking the recommendation title at the top.
 
-![For you](/images/manual/tasks/for-you.png)
+![For you](/images/manual/tasks/for-you.png#bordered)
 
 :::tip
 You can subscribe to a feed to read all content from that source in the future.
@@ -30,11 +30,11 @@ You can subscribe to a feed to read all content from that source in the future.
 ## Monitor algorithm workflow
 To track how your recommendation engine processes data and generates suggestions:
 
-1. In Wise, go to the page **Manage** > **Recommendations**.
+1. In the left menu bar, click <i class="material-symbols-outlined">settings</i>, and select **Recommendations**.
 2. Click any specific workflow to view its operation records.
 3. Click a record to see detailed information and logs.
 
-![Recommendation algorithm workflow](/images/manual/tasks/recommendation-algorithm-workflow.png)
+![Recommendation algorithm workflow](/images/manual/tasks/recommendation-algorithm-workflow.png#bordered)
 
 The workflow visualization shows each step of the recommendation process. You can examine step summaries, container settings, and operation logs for complete transparency.
 

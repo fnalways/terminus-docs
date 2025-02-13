@@ -13,7 +13,7 @@ To edit the YAML file of a workload resource:
 3. Edit the YAML configuration of the workload as needed.
 4. Click **OK** to save your changes and apply them.
 
-   ![edit yaml](/images/how-to/olares/controlhub/browse/10.jpg)
+   ![edit yaml](/images/how-to/olares/controlhub/browse/10.jpg#bordered)
 
 ## Modify Pod replicas
 
@@ -22,7 +22,7 @@ To modify the number of running Pod replicas:
 1. In Control Hub, navigate to a Pod's resource details page, and locate the number of Pod replicas at the top.
 2. Click **<i class="material-symbols-outlined">add</i>** or **<i class="material-symbols-outlined">remove</i>** to adjust the number of Pod replicas.
 
-   ![replicas](/images/how-to/olares/controlhub/browse/09.jpg)
+   ![replicas](/images/how-to/olares/controlhub/browse/09.jpg#bordered)
 
 :::warning
 Many applications in Olares do not support multi-replica mode. Increasing the number of replicas for these Pods may cause exceptions. Therefore, it's important to read the documentation thoroughly and adjust the number of replicas with caution.
@@ -39,5 +39,5 @@ Click on a Pod in the list takes you to the Pod details page, where you can:
   :::tip
   You cannot edit the YAML configuration directly from this view. The YAML is managed by Olares through workload templates and webhooks.
   :::
-![pod detail](/images/how-to/olares/controlhub/pods/02.jpg)
+![pod detail](/images/how-to/olares/controlhub/pods/02.jpg#bordered)
 

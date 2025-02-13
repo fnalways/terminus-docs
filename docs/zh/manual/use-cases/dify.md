@@ -11,17 +11,22 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
   :::
 
 ## 安装 Dify
+
 根据你的角色安装相应应用：
 * **管理员**：需要安装“Dify For Cluster”和“Dify”。
 * **团队成员**：仅需安装“Dify”，同时确保管理员已安装 “Dify For Cluster”。
 
+![安装 Dify](/images/manual/use-cases/install-dify.png){width=30%}
 ## 创建 AI 助手应用
+
 1. 打开 Dify，在**工作室**选项卡下，点击**创建空白应用**创建一个 AI 助手应用。这里我们创建一个名为 “Ashia” 的 Agent。
    ![创建应用](/images/zh/manual/use-cases/dify-create-app.png#bordered)
+
 2. 右侧点击**去设置**，进入模型供应商配置页面。你可以选择远程模型或本地托管模型。
    ![应用初始页面](/images/zh/manual/use-cases/dify-app-init.png#bordered)
 
 ## 添加 Ollama 作为模型提供商
+
 1. 配置 Ollama 访问入口。
    
    a. 进入**设置** > **应用** > **Ollama** > **入口**，设置 Ollama 的认证级别为“内部”。该设置允许其他应用在本地网络环境下可无需认证即可访问 Ollama 服务。
@@ -34,13 +39,15 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
     - **模型名称**：填写模型名称，例如：`gemma2`。
     - **基础 URL**：填入上一步获取的 Ollama 本地地址，如 `https://39975b9a.local.marvin123.olares.cn`。
    
-    ![配置 Ollama](/images/zh/manual/use-cases/dify-add-gemma2.png#bordered)
+    ![配置 Ollama](/images/zh/manual/use-cases/dify-add-gemma2.png#bordered){width=70%}
+
       :::info 提示
       其他必填字段可以保留默认值。
       :::
 3. 点击**保存**。
 
 ## 配置 Ashia
+
 1. 切换至 Dify 的**工作室**选项，并进入 **Ashia** 应用。
 2. 从右侧模型列表中选择已配置好的 Gemma2 本地模型。
 

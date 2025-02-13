@@ -5,7 +5,7 @@ outline: [2, 3]
 # Create a cloud-based Olares
 
 Cloud-based Olares offer a convenient deployment option, enabling you to set up an Olares environment without managing hardware directly.
-This section provides a step-by-step guide to creating and managing your cloud-based **Olares**. 
+This section provides a step-by-step guide to creating and managing your cloud-based Olares. 
 
 ::: tip NOTE
 - The **Host Service** is currently in an invite-only beta phase. To access the cloud-based Olares, contact us for an invitation.
@@ -21,7 +21,7 @@ Ensure you get an Olares ID to log in to Olares Space and activate the Olares in
 1. Log in to [Olares Space](https://space.olares.xyz/) by scanning the QR code using LarePass.
 2. Navigate to the **Cluster** page and select the second option to start creating.
 
-    ![Basic Configuration](/images/how-to/space/basic_configuration.jpg)
+    ![Basic Configuration](/images/how-to/space/basic_configuration.jpg#bordered)
 3. Configure the environment for installation as below:
    - **Select Cloud Provider**: Choose a cloud service provider and the data center location closest to your users or workloads.
    - **Hardware Configuration**: Select the instance's CPU, RAM, and storage resources.
@@ -33,7 +33,7 @@ Ensure you get an Olares ID to log in to Olares Space and activate the Olares in
 
 4. Review the fees for storage and traffic. 
 
-    ![Storage and Network Fees](/images/how-to/space/storage_and_network.jpg)
+    ![Storage and Network Fees](/images/how-to/space/storage_and_network.jpg#bordered)
 
     ::: tip NOTE
     Each instance comes with a set amount of free storage and bandwidth. If your usage exceeds these quotas, additional fees will apply based on your cloud provider's pricing. 
@@ -79,7 +79,7 @@ When the installation enters the **Pending Activation** state, activate Olares:
 
 1. Click **Activation**. A pop-up window will display Olares ID, one-time password, and a wizard URL.
 
-    ![One Time Password](/images/how-to/space/one_time_password.jpg)
+    ![One Time Password](/images/how-to/space/one_time_password.jpg#bordered)
 
 2. Access the wizard URL in your browser, and use the one-time password to log into Olares for the first time. 
 3. Change the Olares password via LarePass when prompted. 

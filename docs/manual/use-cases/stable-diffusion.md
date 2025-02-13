@@ -19,6 +19,8 @@ The installation process is straightforward, with just a couple of steps based o
 * **For admin**: Install both "SD Web UI For Cluster" and "SD Web UI".
 * **For team members**: Ensure your admin has installed "SD Web UI For Cluster", and install "SD Web UI" only.
 
+![Install SD Web UI](/images/manual/use-cases/install-sd.png){width=40%}
+
 Launch SD Web UI from your desktop, and voilà - unleash your creativity and start generating stunning images!
 ## Prevent conflicts among members
 In SD Web UI, checkpoint settings are globally applied to all users by default. When one user switches to a different checkpoint, all subsequent image generations by other users will also use this newly selected checkpoint. To prevent workflow disruptions in multi-user environments, you could specify checkpoints for individual tasks.

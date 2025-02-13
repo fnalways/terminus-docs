@@ -20,6 +20,11 @@ ComfyUI 是一款基于节点的 Stable Diffusion 图形界面工具。它把 AI
 * **管理员**：需要同时安装“ComfyUI For Cluster”和“ComfyUI”。
 * **团队成员**：仅需安装“ComfyUI”，同时确保管理员已安装“ComfyUI For Cluster”。
 
+![安装 ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+
 安装完成后，从桌面启动 ComfyUI。
 
-![ComfyUI](/images/manual/use-cases/comfyui.png)
+![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
+
+## 了解更多
+- [Krita + ComfyUI 实时绘画](../tutorials/comfyui-for-krita.md)：了解如何利用 ComfyUI 助力 Krita 中的创意工作流。

@@ -17,7 +17,7 @@ Organize your reading flow with two collections:
 
 While browsing the title or reading, click **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** to save content to either collection.
 
-![Inbox or Read later](/images/manual/tasks/inbox-read-later.png)
+![Inbox or Read later](/images/manual/tasks/inbox-read-later.png#bordered)
 ### Save web pages via LarePass
 :::tip
 LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
@@ -27,17 +27,18 @@ LarePass extension is currently available for Chrome browsers only. Download it 
 2. In the **Pages** section, click <i class="material-symbols-outlined">add_box</i> to save the current page to your Wise library.
 
 Once collected, you can find it in page **Library** > **Articles** in Wise.
+
 ### Manually add content
 Wise supports various content types including videos, audio, PDFs, and eBooks:
 
 1. Click <i class="material-symbols-outlined">add_circle</i> in the menu bar.
 2. To add a web page, select **Web page**.
-3. To add other types of content, select **Download link**.
-4. To add an RSS feed, select **RSS**.
+3. To add a downloadable link, select **Download link**.
+4. To add a PDF or E-book (in EPUB format) from your local machine, select **Upload**.
+5. To add an RSS feed, select **RSS**.
     :::tip
     To explore how you can leverage RSS subscription with Wise, see [Subscribe to an RSS feed](./subscribe).
     :::
-5. Enter the URL in the popup, and click **Confirm** to retrieve the resource.
 
 ## Automatic download
 Wise automatically creates download tasks for new audio or video content, saving media files to Olares for convenient offline access.
@@ -48,7 +49,11 @@ This feature:
 * Prevents content loss if the original source becomes unavailable
 * Provides quick access to your media files
 
-You can find downloaded media files in the Files app.
+To view all your downloaded media files, go to <i class="material-symbols-outlined">settings</i> > **Transmission** > **Download**. This page shows a complete list of your downloads along with their details.
+![Downloaded media files](/images/manual/tasks/downloaded-media-files.png#bordered)
+
+You can click <i class="material-symbols-outlined">folder_open</i> to locate the target content in the Files app.
+
 ## Organize your reading
 
 ### Use tags for organization
@@ -57,9 +62,9 @@ To create a structured content collection with tags:
 1. On the list page, click <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">sell</i> on the content card.
 2. In the tag input box, select or create tags relevant to the current content.
 
-![Tags](/images/manual/tasks/tags.png)
+![Tags](/images/manual/tasks/tags.png#bordered)
 
-You can find and manage your tags in the page **Manage** > **Tags**.
+You can find and manage your tags in the page <i class="material-symbols-outlined">settings</i> > **Tags**.
 
 ### Capture insights with notes
 1. While reading, click <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">right_panel_open</i> to open the **Info** panel.
@@ -67,9 +72,21 @@ You can find and manage your tags in the page **Manage** > **Tags**.
 3. Click **Save** to store your notes.
 
 You can edit or delete note later.
-![Notes](/images/manual/tasks/notes.png)
+
+![Notes](/images/manual/tasks/notes.png#bordered)
 
 ### Track your reading progress
 Wise uses green dot indicators on article covers to help you track unread content. When you open an article, it's automatically marked as read.
 
 While reading, you can manually toggle between **<i class="material-symbols-outlined">playlist_add_check</i>Seen** or **<i class="material-symbols-outlined">playlist_remove</i>Unseen** status in the toolbar to maintain your reading progress.
+
+### Search from Wise
+<!--@include: ../tutorials/organize-content.md{192,202}-->
+
+## Change appearance
+By default, Wise follows your system's light/dark theme settings. You can override this to set your preferred appearance:
+
+1. Click the <i class="material-symbols-outlined">settings</i> in the bottom left corner and select **Preferences**。
+2. Under **Theme**, choose your preferred appearance:
+   - Light mode
+   - Dark mode

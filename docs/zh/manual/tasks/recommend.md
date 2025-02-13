@@ -1,10 +1,6 @@
-
 # 本地推荐算法
-
 大多数数字平台通过集中式推荐系统控制你看到的内容，这些系统会收集并分析你的数据。Wise 提供了不同的方式——你可以直接在设备上选择并运行推荐算法，在享受个性化内容发现的同时，确保你的阅读偏好和交互完全私密。
-
 ## 自托管推荐如何工作
-
 Wise 中的内容推荐分为两个阶段：
 
 1. 内容提供商在云端收集并打包全球内容。
@@ -22,30 +18,28 @@ Wise 中的内容推荐分为两个阶段：
 2. 点击**获取**安装你选择的算法。
 3. 等待算法完成本地推荐工作流。
 
-   ![Recommendation algorithm](/images/manual/tasks/install-recommendation.png)
+   ![Recommendation algorithm](/images/manual/tasks/install-recommendation.png#bordered)
 
 安装完成后，你可以在 Wise 的**为你推荐**页面查看推荐内容。此页面显示所有已安装推荐算法的结果，并按算法分为独立内容流。点击顶部的推荐标题即可切换不同算法。
 
-![For you](/images/manual/tasks/for-you.png)
+![For you](/images/manual/tasks/for-you.png#bordered)
 
 :::tip 提示
 你可以订阅内容源，以便未来阅读该来源的所有内容。
 :::
 
 ## 监控算法工作流
-
 你可以查看推荐引擎如何处理数据并生成内容推荐：
 
-1. 在 Wise 中，进入**管理** > **推荐算法**页面。
+1. 在 Wise 中，左下角点击<i class="material-symbols-outlined">settings</i>，选择**推荐算法**。
 2. 点击任一特定工作流以查看其操作记录。
 3. 点击记录查看详细信息和日志。
 
-![Recommendation algorithm workflow](/images/manual/tasks/recommendation-algorithm-workflow.png)
+![Recommendation algorithm workflow](/images/manual/tasks/recommendation-algorithm-workflow.png#bordered)
 
 工作流可视化显示推荐过程的每个步骤。你可以检查步骤摘要、容器设置和操作日志，确保完全透明。
 
 ## 卸载推荐算法
-
 卸载推荐算法的方法：
 
 1. 在**应用市场**中进入**我的 Olares** 页面。
@@ -54,5 +48,4 @@ Wise 中的内容推荐分为两个阶段：
 ## 常见问题
 
 ### 为什么安装推荐算法后看不到推荐内容？
-
 如果你刚安装推荐算法，需要稍等片刻，等待算法在 Olares 上完成本地推荐工作流。这种方式确保所有处理均在本地进行，以保护你的隐私。

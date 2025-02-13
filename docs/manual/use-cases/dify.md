@@ -16,6 +16,7 @@ Install Dify from Market based on your role:
 * **For admin**: Install both "Dify For Cluster" and "Dify".
 * **For team members**: Ensure your admin has installed "Dify For Cluster", and install "Dify" only.
 
+![Install Dify](/images/manual/use-cases/install-dify.png){width=30%}
 ## Create an AI assistant app
 
 1. Open Dify, navigate to the **Studio** tab, and select **Create from Blank** to create an app for the AI assistant. Here, we created an agent named "Ashia".
@@ -39,7 +40,7 @@ Install Dify from Market based on your role:
     - **Model Name**: Enter the model name. For example: `gemma2`.
     - **Base URL**: Enter Ollama's local address you get in step 1, for example, `https://39975b9a.local.kevin112.olares.com`.
 
-     ![Add gemma2](/images/manual/use-cases/dify-add-gemma2.png#bordered)
+     ![Add gemma2](/images/manual/use-cases/dify-add-gemma2.png#bordered){width=70%}
 
       :::tip
       You can keep default values for other required fields.
@@ -50,8 +51,10 @@ Install Dify from Market based on your role:
 
 1. Navigate to Dify's **Studio** tab and enter Ashia.  
 2. From the model list on the right, select the Gemma2 model you just configured.
-  ![Select model](/images/manual/use-cases/dify-select-model.png#bordered)
+
+   ![Select model](/images/manual/use-cases/dify-select-model.png#bordered)
 3. Click **Publish**. Now you can chat with Ashia in the **Debug & Preview** window. 
+
    ![Chat](/images/manual/use-cases/dify-chat-with-ashia.png#bordered)
 
 ## Set up local knowledge base

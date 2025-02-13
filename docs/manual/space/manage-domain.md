@@ -10,7 +10,7 @@ You must [add a domain](host-domain.md#add-your-domain) before managing it. Once
 
 Most companies use a standard domain suffix for their team members' emails, like `A@myteam.com` for person A or `B@myteam.com` for person B. However, sometimes, team members might use emails in different domains. To accommodate these scenarios, Olares provides two types of rules for adding organization members' emails:
 
-![alt text](/images/how-to/space/set_rule.jpg)
+![alt text](/images/how-to/space/set_rule.jpg#bordered)
 
 - **Fixed email suffix**: Use this option when all team members share the same email domain. Enter your organization's domain suffix (example: @company.com). Any email matching this suffix can be associated with your organization's Olares ID.
 
@@ -26,7 +26,7 @@ Most companies use a standard domain suffix for their team members' emails, like
 
 After setting email rules, you can add or remove members under your organization.
 
-![alt text](/images/how-to/space/management_members.jpg)
+![alt text](/images/how-to/space/management_members.jpg#bordered)
 
 ### Add a member
 

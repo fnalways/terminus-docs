@@ -48,7 +48,7 @@ In Olares, Workloads represent applications running on your Olares cluster. They
   - Used for node-specific hardware operations.
 
 ### Workloads details
-![alt text](/images/how-to/olares/controlhub/browse/02.jpg)
+![alt text](/images/how-to/olares/controlhub/browse/02.jpg#bordered)
 You can view the following information for a workload resource:
 - **Details**: The general information of the resource.
 - **Pods**: The general information of Pods.
@@ -66,13 +66,13 @@ You can view the following information for a Pod:
 - **Environment Variables**: Environment variables defined for the Pod.
 - **Events**: Chronological log of events related to the Pod.
 
-![containers](/images/how-to/olares/controlhub/browse/04.jpg)
+![containers](/images/how-to/olares/controlhub/browse/04.jpg#bordered)
 
 ### Secrets
 
 The **Secrets** section stores sensitive data like passwords, credentials, and key configurations. In Kubernetes, this data is Base64 encoded by default.
 
-![secrets](/images/how-to/olares/controlhub/browse/11.jpg)
+![secrets](/images/how-to/olares/controlhub/browse/11.jpg#bordered)
 
 Expand the **Secrets** section in the second column to see the all secrets under the application's namespace.
 
@@ -89,7 +89,7 @@ The **Data Value** shown by default is the `Base64` encoded. You can click the *
 
 The **ConfigMap** section has a structure similar to **Secrets**. However, the content stored in the **ConfigMap** is saved in plaintext.
 
-![configmaps](/images/how-to/olares/controlhub/browse/12.jpg)
+![configmaps](/images/how-to/olares/controlhub/browse/12.jpg#bordered)
 
 Expand the **ConfigMaps** section in the second column to view the details of the **ConfigMaps** under the application's namespace.
 
@@ -104,7 +104,7 @@ You can view the following information for the configmap:
 
 Each **Service Account** is linked to a **Secret**. This **Secret** includes the **Service Account's** `CA certificate`, `Namespace`, and `Token`.
 
-![Service accounts](/images/how-to/olares/controlhub/browse/13.jpg)
+![Service accounts](/images/how-to/olares/controlhub/browse/13.jpg#bordered)
 
 Expand the second column on the **Service Accounts** section to view all the **Service Accounts** under the application's namespace.
 
@@ -120,7 +120,7 @@ You can view the following information for the service account:
 
 A Selector uses Labels to filter and select Pods. Essentially, a Service acts as a virtual IP (VIP) that directs traffic to a single Pod or a group of Pods.
 
-![service1](/images/how-to/olares/controlhub/browse/14.jpg)
+![service1](/images/how-to/olares/controlhub/browse/14.jpg#bordered)
 
 Expand the **Services** section in the second column to view all the Services` under the namespace of the current application.
 
@@ -138,13 +138,13 @@ You can view the following information for the service:
 
 The **Namespace** section in ControlHub provides a user-centric view of resource consumption and workload conditions on your Olares.
 
-![namespace](/images/how-to/olares/controlhub/namespace/01.jpg)
+![namespace](/images/how-to/olares/controlhub/namespace/01.jpg#bordered)
 
 ### Usage Ranking
 
 **Usage Ranking** organizes system resource consumption by namespace.
 
-![namespace list](/images/how-to/olares/controlhub/namespace/02.jpg)
+![namespace list](/images/how-to/olares/controlhub/namespace/02.jpg#bordered)
 
 You can view the following information for the namespace:
 - **Quota**: System resource usage percentage of this namespace.
@@ -156,7 +156,7 @@ The **Resources** section displays a chart of current and historical resource ut
 
 You can view the total resource usage by all users. Alternatively, select a specific user from the dropdown box to view individual resource consumption.
 
-![resources](/images/how-to/olares/controlhub/namespace/04.jpg)
+![resources](/images/how-to/olares/controlhub/namespace/04.jpg#bordered)
 
 ## Pods
 
@@ -165,7 +165,8 @@ The **Pods** section page provides a comprehensive view of all Pods in your Olar
 You can view the following information:
 - **Pod List**: All Pods within your Olares.
 - **Resource**: A visual representation of the physical resources consumed by your Pods. This view helps you understand how your cluster's resources are being utilized.
-![resources](/images/how-to/olares/controlhub/pods/04.jpg)
+
+![resources](/images/how-to/olares/controlhub/pods/04.jpg#bordered)
 
 ## Resource
 
@@ -173,7 +174,7 @@ The **Resource** section includes resources related to both software and hardwar
 
 ### Network
 
-![networks](/images/how-to/olares/controlhub/resources/01.jpg)
+![networks](/images/how-to/olares/controlhub/resources/01.jpg#bordered)
 
 **Network Policies** is one of the most important network resource in Olares. They define how the network connects. The system utilizes a **sandbox mechanism** for network policies, which restricts interactions based on the namespace. This provides isolation between the networks of different users and applications.
 
@@ -188,7 +189,7 @@ The **Resource** section includes resources related to both software and hardwar
 
 ### CRDs
 
-![CRDs](/images/how-to/olares/controlhub/resources/02.jpg)
+![CRDs](/images/how-to/olares/controlhub/resources/02.jpg#bordered)
 
 CRDs list all the Kubernetes-based Custom Resource Definitions (CRDs) in Olares. Many cloud-native features of Olares depend on these CRDs.
 You can see the following information for the CRDs:
@@ -212,4 +213,4 @@ You can see the following information for the middleware:
 - **Details**: Cluster data, including cluster name, deployment namespace, access address, and administrator password.
 - **Database**: An overview of the databases utilized by different applications within Olares, including database name, user, and passwords.
 
-![postgres](/images/how-to/olares/controlhub/middleware/01.jpg)
+![postgres](/images/how-to/olares/controlhub/middleware/01.jpg#bordered)

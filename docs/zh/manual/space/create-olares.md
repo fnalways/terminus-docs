@@ -4,12 +4,13 @@ outline: [2, 3]
 
 # 创建云端 Olares
 
-云端 Olares 提供了便捷的部署方式，让你无需直接管理硬件即可搭建 Olares 环境。本节将为你详细介绍如何创建和管理云端 **Olares**。
+云端 Olares 提供了便捷的部署方式，让你无需直接管理硬件即可搭建 Olares 环境。
+本节将为你详细介绍如何创建和管理云端 Olares。
 
 ::: info 注意
 - **托管服务**目前处于邀请制测试阶段。如需使用云端 Olares，请联系我们获取邀请。
 - 如果你想了解如何搭建自托管 Olares，请参考[快速入门指南](../get-started/index.md)。
-  :::
+:::
 
 ## 准备工作
 
@@ -20,7 +21,7 @@ outline: [2, 3]
 1. 使用 LarePass 扫描二维码登录 [Olares Space](https://space.olares.xyz/)。
 2. 进入**集群**页面，选择第二个选项开始创建。
 
-   ![基础配置](/images/how-to/space/basic_configuration.jpg)
+   ![基础配置](/images/how-to/space/basic_configuration.jpg#bordered)
 3. 配置安装环境：
 
     a. 选择云服务提供商和离用户或工作负载最近的数据中心位置。
@@ -35,7 +36,7 @@ outline: [2, 3]
 
 4. 查看存储和流量费用。
 
-   ![存储和网络费用](/images/how-to/space/storage_and_network.jpg)
+   ![存储和网络费用](/images/how-to/space/storage_and_network.jpg#bordered)
 
    ::: tip 额外费用
    每个实例都包含一定额度的免费存储和带宽。超出这些配额的使用量将按照云服务商的定价收取额外费用。
@@ -81,7 +82,7 @@ outline: [2, 3]
 
 1. 点击**激活**。弹窗将显示 Olares ID、一次性密码和向导 URL。
 
-   ![一次性密码](/images/how-to/space/one_time_password.jpg)
+   ![一次性密码](/images/how-to/space/one_time_password.jpg#bordered)
 
 2. 在浏览器中打开向导 URL，使用一次性密码首次登录 Olares。
 3. 根据提示通过 LarePass 修改 Olares 密码。

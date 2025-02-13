@@ -20,6 +20,11 @@ Based on your role:
 * **For admin**: Install both "ComfyUI For Cluster" and "ComfyUI".
 * **For team members**: Ensure your admin has installed "ComfyUI For Cluster", and install "ComfyUI" only.
 
+![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+
 Once installed, launch ComfyUI from your desktop.
 
-![ComfyUI](/images/manual/use-cases/comfyui.png)
+![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
+
+## Learn more
+- [Use ComfyUI in Krita](../tutorials/comfyui-for-krita.md): Learn how to leverage ComfyUI to empower your creative workflows in Krita.

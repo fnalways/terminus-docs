@@ -22,6 +22,9 @@ SearXNG 作为 Perplexica 的后端，是一个注重隐私的元搜索引擎。
 1. 根据角色安装 SearXNG：
     - **管理员**：需要安装“SearXNG For Cluster”和“SearXNG”。
     - **团队成员**：仅需安装“SearXNG”，同时确保管理员已安装"SearXNG For Cluster"。
+
+   ![安装 SearXNG](/images/manual/use-cases/install-searxng.png){width=40%}
+
 2. 安装 Perplexica。
 3. 启动 Perplexica，点击左下角的 <i class="material-symbols-outlined">settings</i> 打开设置界面。
 4. 配置搜索环境。以 `gemma2` 为例：
@@ -30,9 +33,9 @@ SearXNG 作为 Perplexica 的后端，是一个注重隐私的元搜索引擎。
     - **Embedding model provider**：`Ollama`
     - **Embedding model**：`gemma2:latest`
 
-    ![Perplexica 配置](/images/manual/use-cases/perplexica-configurations.png){width=60%}
+    ![Perplexica 配置](/images/manual/use-cases/perplexica-configurations.png#bordered){width=50%}
 5. 点击底部的 <i class="material-symbols-outlined">cloud_upload</i> 确认按钮保存配置并返回搜索界面。
 
 至此配置完成。你可以搜索感兴趣的主题来测试新的搜索环境。
 
-![Perplexica 示例](/images/manual/use-cases/perplexica-example-question.png)
+![Perplexica 示例](/images/manual/use-cases/perplexica-example-question.png#bordered)

@@ -91,7 +91,7 @@ const side = {
           link: "/manual/tutorials/set-custom-domain",
         },
         {
-          text: "Manage your knowledge with Wise",
+          text: "Manage knowledge with Wise",
           link: "/manual/tutorials/organize-content",
         },
         {
