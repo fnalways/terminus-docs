@@ -281,7 +281,7 @@ const side = {
               link: "/zh/manual/tasks/resources-usage",
             },
             {
-              text: "配置 Hosts 地址",
+              text: "修改 Hosts 配置",
               link: "/manual/tasks/set-up-hosts",
             },
             {
