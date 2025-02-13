@@ -281,6 +281,10 @@ const side = {
               link: "/zh/manual/tasks/resources-usage",
             },
             {
+              text: "修改 Hosts 配置",
+              link: "/manual/tasks/set-up-hosts",
+            },
+            {
               text: "升级",
               link: "/zh/manual/tasks/update",
             },
