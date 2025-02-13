@@ -27,9 +27,9 @@ Use the Wizard URL and initial one-time password to activate. This process conne
 
    ::: tip Reactivate Olares with the same Olares ID
 
-   If you’ve reinstalled Olares, the original instance becomes unavailable. To reactivate Olares with the same Olares ID:
+   If you have reinstalled Olares, the original instance becomes unavailable. To reactivate Olares with the same Olares ID:
       
-   1.	Open LarePass on your phone, and you’ll see the prompt: `No active Olares found.`
+   1.	Open LarePass on your phone, and you can see a red prompt: "No active Olares found".
    2.	Tap **Learn more**, then **Reactivate** to enter the QR scan page.
    3.	Tap **Scan QR code** to scan the QR code on the wizard page and activate Olares.
    :::
