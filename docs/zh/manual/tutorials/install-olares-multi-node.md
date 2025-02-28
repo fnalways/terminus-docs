@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Olares 多节点集群部署教程，包括主节点配置、工作节点添加和网络变更处理，助你搭建可扩展的分布式环境。
 ---
 # 安装多节点 Olares 集群 <Badge type="warning" text="Alpha" />
 默认情况下，Olares 的安装会部署单节点集群。从 v1.11.3 开始，Olares 支持添加子节点。本教程将指导你如何配置主节点并添加子节点，以创建一个可扩展的多节点 Olares 集群。

@@ -1,3 +1,6 @@
+---
+description: Guide to leveraging Dify on Olares for building AI applications. Learn how to deploy Dify and add personal knowledge base with ease.
+---
 # Customize your local AI assistant using Dify
 
 Dify is an AI application development platform. It's one of the key open-source projects that Olares integrates to help you build and manage AI applications while maintaining full data ownership. Additionally, you can integrate your personal knowledge base documents into Dify for more personalized interactions.

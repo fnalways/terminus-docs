@@ -1,3 +1,6 @@
+---
+description: 在 Mac 系统上安装配置 Olares 的完整步骤，包括环境准备、安装过程和系统激活。
+---
 # 在 Mac 上安装 Olares
 
 Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows 上安装，方便测试和评估使用。

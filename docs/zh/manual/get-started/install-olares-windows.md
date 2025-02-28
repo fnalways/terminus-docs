@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: 通过 WSL 在 Windows 系统安装配置 Olares 的完整步骤，包括环境要求和激活设置。
 ---
 # 在 Windows 上安装 Olares
 

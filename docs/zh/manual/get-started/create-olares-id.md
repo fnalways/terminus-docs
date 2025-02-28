@@ -1,3 +1,6 @@
+---
+description: 使用 LarePass 移动端应用创建 Olares ID。
+---
 # 创建 Olares ID
 
 Olares ID 是 Olares 生态系统中的唯一标识符，作为你的数字身份，可用于访问各种服务和功能。

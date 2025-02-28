@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: 全面了解 Olares 架构，涵盖基础设施、平台服务和应用框架。
 ---
 
 # Olares 架构

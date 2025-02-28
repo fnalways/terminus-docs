@@ -1,3 +1,6 @@
+---
+description: Complete guide to installing Olares on Raspberry Pi including hardware requirements, installation process, and system activation steps.
+---
 # Install Olares on Raspberry Pi
 Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 

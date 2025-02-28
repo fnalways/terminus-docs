@@ -1,3 +1,6 @@
+---
+description: 在 Olares 上部署 Stable Diffusion 的指南，包括模型安装、多用户配置和系统优化，轻松实现 AI 图像生成。
+---
 # Stable Diffusion
 
 Stable Diffusion 是基于潜在扩散模型（LDM）的新一代 AI 图像生成技术。它通过在低维空间处理图像生成过程，显著降低了计算需求，同时保持了高保真度的输出质量。

@@ -1,3 +1,6 @@
+---
+description: 学习如何通过 GitHub Discussion 和 Issues 获取 Olares 技术支持。
+---
 # 技术支持
 
 遇到任何问题，都可以通过 GitHub 联系 Olares 团队寻求帮助。

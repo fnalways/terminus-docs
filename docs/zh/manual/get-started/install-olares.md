@@ -1,3 +1,6 @@
+---
+description: 全平台 Olares 安装指南，支持 Linux、PVE、LXC、树莓派、Mac、Windows WSL，提供命令行和 Docker 两种部署方式。
+---
 # 安装 Olares
 本文介绍安装 Olares 的不同方式。在运行 Olares 之前，你需要[创建 Olares ID](create-olares-id.md)，并确保操作系统和硬件配置满足最低要求。
 

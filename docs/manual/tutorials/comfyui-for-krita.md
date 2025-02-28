@@ -1,3 +1,6 @@
+---
+description: Learn how to integrate ComfyUI with Krita for AI-powered digital art creation. Step-by-step guide to setting up and connecting ComfyUI in Olares with Krita for seamless creative workflows.
+---
 # AI art creation with ComfyUI and Krita
 Running ComfyUI locally on Olares gives you the flexibility of server-side AI processing, but making it work seamlessly with your creative tools requires additional steps. Instead of confining ComfyUI to a single device, Olares allows you to extend its functionality to other machines, enabling smooth integration with tools such as Krita for editing and refinement.
 

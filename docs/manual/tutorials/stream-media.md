@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Comprehensive tutorial on streaming media with Olares. Learn to configure VPN access, manage media files through LarePass, and set up Jellyfin for advanced streaming capabilities from anywhere.
 ---
 
 # Stream your media library from anywhere with Olares

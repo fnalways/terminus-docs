@@ -1,3 +1,6 @@
+---
+description: Step-by-step instructions for installing Olares on macOS systems including prerequisites, installation commands, and activation process.
+---
 # Install Olares on Mac
 
 Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.

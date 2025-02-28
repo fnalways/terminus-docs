@@ -1,3 +1,6 @@
+---
+description: Discover how to install ComfyUI, a node-based interface for Stable Diffusion, with ease in Olares. Create reusable workflows, fine-tune image generation, and apply advanced post-processing effects.
+---
 # ComfyUI
 
 ComfyUI is a powerful node-based interface for Stable Diffusion that transforms AI image generation into a visual programming experience. By connecting different nodes together like building blocks, you gain precise control over every aspect of the generation process - from prompts and models to post-processing effects.

@@ -1,3 +1,6 @@
+---
+description: Explore Perplexica for advanced AI-driven data analysis and visualization with Olares. Learn how to set up Perplexica with ease.
+---
 # Perplexica
 
 Perplexica is an open-source AI-powered search engine that provides intelligent search capabilities while maintaining user privacy. As an alternative to Perplexity AI, it combines advanced machine learning with comprehensive web search functionality to deliver accurate, source-cited answers to your queries.

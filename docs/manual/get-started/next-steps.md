@@ -1,3 +1,6 @@
+---
+description: Guide to getting started with Olares after installation including initial setup, configuration, and essential features.
+---
 # What's next
 
 You're now ready to dive into Olares's powerful features. You will find it easy to get things done in Olares. 

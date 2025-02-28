@@ -1,3 +1,6 @@
+---
+description: Step-by-step guide to creating your Olares ID using LarePass mobile app.
+---
 :::warning Note for Mainland China users
 The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
 :::

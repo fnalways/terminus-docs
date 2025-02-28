@@ -1,3 +1,6 @@
+---
+description: Instructions for installing Olares on Linux Containers (LXC) including container setup, system requirements, and activation steps.
+---
 # Install Olares on LXC
 Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 

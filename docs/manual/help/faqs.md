@@ -1,3 +1,6 @@
+---
+description: Find answers to common questions about Olares.
+---
 # FAQs
 
 ## What license is Olares using?

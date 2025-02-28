@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Step-by-step guide to setting up a custom domain for your Olares environment. Learn how to add and verify domains, create organizations, configure member access, and create Olares IDs under your domain.
 ---
 
 # Set up a custom domain for your Olares 

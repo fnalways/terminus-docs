@@ -1,3 +1,6 @@
+---
+description: Guide to installing Olares on Proxmox VE (PVE) with system requirements, installation commands, and step-by-step activation instructions.
+---
 # Install Olares on PVE
 Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 

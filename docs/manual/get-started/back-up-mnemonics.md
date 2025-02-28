@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Learn how to securely back up your Olares ID mnemonic phrase for account recovery and protection.
 ---
 
 # Back up mnemonic phrase
