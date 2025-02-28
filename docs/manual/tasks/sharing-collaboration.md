@@ -1,3 +1,0 @@
-# Sharing and collaboration
-
-Text

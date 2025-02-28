@@ -1,3 +1,0 @@
-# Debug cluster issues
-
-Text
