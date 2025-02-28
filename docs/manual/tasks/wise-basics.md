@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Get started with Wise in Olares. Learn to collect content, organize your reading library, add notes, track progress, and customize your reading experience.
 ---
 
 # Wise basics
@@ -81,7 +82,7 @@ Wise uses green dot indicators on article covers to help you track unread conten
 While reading, you can manually toggle between **<i class="material-symbols-outlined">playlist_add_check</i>Seen** or **<i class="material-symbols-outlined">playlist_remove</i>Unseen** status in the toolbar to maintain your reading progress.
 
 ### Search from Wise
-<!--@include: ../tutorials/organize-content.md{192,202}-->
+<!--@include: ../tutorials/wise.reusables.md{4,13}-->
 
 ## Change appearance
 By default, Wise follows your system's light/dark theme settings. You can override this to set your preferred appearance:
