@@ -1,3 +1,6 @@
+---
+description: Configure and manage your Olares hosts file to customize domain name resolution, map IP addresses, and control access to services with step by step guidance.
+---
 # Set up hosts file
 
 The hosts file is a system configuration file that maps domain names to specific IP addresses. By editing this file, you can customize how Olares resolves domain names, bypass the default DNS resolution, and control access to certain websites or services.

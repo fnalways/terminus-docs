@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Optimize GPU usage in Olares with flexible memory management options. Choose between shared and standalone modes for different resource requirements.
 ---
 
 # Manage GPU usage

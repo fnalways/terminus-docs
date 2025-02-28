@@ -1,3 +1,6 @@
+---
+description: Learn how to safely update your Olares system, check for new versions, install system updates, and manually update olaresd for optimal performance and security.
+---
 # Update Olares
 Olares regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
 

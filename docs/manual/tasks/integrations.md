@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Connect Olares Space and third-party services to enhance functionality. Learn how to integrate, authorize, and manage connected services for seamless data synchronization.
 ---
 
 # Add and manage integrations

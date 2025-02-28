@@ -1,3 +1,6 @@
+---
+description: Manage files efficiently in Olares with secure storage, seamless synchronization across devices, and centralized file management capabilities.
+---
 # Manage files
 
 Olares's built-in Files app offers users a secure and efficient solution for file storage and synchronization, allowing access to various file types from any device or browser. It has the following advantages:

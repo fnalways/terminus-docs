@@ -1,3 +1,6 @@
+---
+description: Secure your sensitive data with Olares Vault - a comprehensive password manager featuring end-to-end encryption, shared vaults, cross-device sync, autofill, and two-factor authentication support.
+---
 # Secure sensitive data
 
 Vault is a password manager in Olares, designed for secure storage and management of sensitive data. With Vault, you can safely store and organize private keys and passwords, digital identities (DIDs) and Olares IDs, one-time passwords (OTPs), and other confidential data.

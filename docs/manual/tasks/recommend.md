@@ -1,3 +1,6 @@
+---
+description: Discover how Olares Wise uses self-hosted recommendation algorithms to deliver personalized content while maintaining your privacy and controlling your content discovery.
+---
 # Discover themed content
 Most digital platforms control what content you see through centralized recommendation systems that collect and analyze your data. Wise offers a different approach - you choose and run recommendation algorithms directly on your device, keeping your reading preferences and interactions completely private while still enjoying personalized content discovery.
 ## How self-hosted recommendation works

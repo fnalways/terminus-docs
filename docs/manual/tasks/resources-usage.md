@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Monitor your Olares system and application performance with comprehensive dashboards tracking CPU, memory, disk usage, and application analytics for optimal resource management.
 ---
 
 # Monitor system and application status

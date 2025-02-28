@@ -1,3 +1,6 @@
+---
+description: Create collaborative environments in Olares for teams, families, or organizations. Share resources, manage multi-user access, and build customized workspaces efficiently.
+---
 # Start a team
 Do you want to share Olares with your family, friends, or coworkers? Here's everything you need to know about creating a collaborative Olares environment.
 

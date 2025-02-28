@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Learn how to subscribe in Olares, covering adding RSS feeds, importing OPML files, managing subscriptions with LarePass, and organizing your content sources efficiently.
 ---
 
 # Subscribe and manage feeds

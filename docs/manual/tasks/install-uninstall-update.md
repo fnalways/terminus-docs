@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Complete guide to managing Olares applications - install from Market, update system and community apps, handle custom installations, and properly uninstall applications.
 ---
 
 # Install, uninstall and update

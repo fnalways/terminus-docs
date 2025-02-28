@@ -1,3 +1,6 @@
+---
+description: Transform your Olares into a powerful information hub with Wise - featuring AI-driven content curation, cross-platform aggregation, and seamless bookmarking capabilities.
+---
 # Curate information hub
 
 Wise is a local-first, AI-driven modern reader and a core application within the Olares ecosystem. It assists you in collecting, reading, and managing information from various platforms, thereby creating and maintaining a personal information hub.
