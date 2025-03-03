@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: 介绍在 Olares Space 中添加自定义域名的步骤，包含域名验证方法、DNS 解析配置、组织 ID 创建和邮箱关联流程。
 ---
 
 # 配置自定义域名

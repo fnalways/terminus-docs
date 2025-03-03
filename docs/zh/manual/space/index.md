@@ -1,3 +1,6 @@
+---
+description: Olares Space 是 Olares 在公有云上的全托管服务，支持数据备份、域名配置、反向代理和 GPU 资源管理，通过 LarePass 扫码登录以访问所有功能。
+---
 # Olares Space 概述
 
 Olares Space 是 Olares 在公有云上的全托管服务，提供两大类服务：

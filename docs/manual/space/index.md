@@ -1,3 +1,6 @@
+---
+description: Discover Olares Space platform for managed cloud hosting of Olares instances. Explore infrastructure services, host services, account management, and billing features for efficient cloud deployment.
+---
 # Olares Space overview
 
 Olares Space is the fully managed offering of Olares on public clouds. It provides two categories of services:

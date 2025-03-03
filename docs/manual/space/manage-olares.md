@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Control your Olares instances through system monitoring, worker node management, and shared GPU solutions. Track storage usage, traffic consumption and maintain instance health.
 ---
 
 # Manage Olares 

@@ -1,7 +1,7 @@
 ---
 outline: [2, 3]
+description: Set up your cloud based Olares instance in Olares Space. Configure system resources, monitor installation progress, and activate your instance with proper credentials.
 ---
-
 # Create a cloud-based Olares
 
 Cloud-based Olares offer a convenient deployment option, enabling you to set up an Olares environment without managing hardware directly.
