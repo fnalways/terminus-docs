@@ -1,5 +1,5 @@
 ---
-description: 学习如何通过 GitHub Discussion 和 Issues 获取 Olares 技术支持。
+description: 通过 GitHub Discussion 和 Issues 获取 Olares 技术支持。
 ---
 # 技术支持
 
