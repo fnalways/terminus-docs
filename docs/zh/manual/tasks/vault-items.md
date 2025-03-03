@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: Olares Vault 的基本操作指南。学习创建和管理 Vault 项目，使用标签组织内容，通过快速筛选功能高效管理敏感数据。
+description: 了解 Olares 系统应用 Vault 的基本操作。学习创建和管理 Vault 项目，使用标签组织内容，通过快速筛选功能高效管理敏感数据。
 ---
 
 # Vault 基本操作

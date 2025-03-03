@@ -1,5 +1,5 @@
 ---
-description: Olares 系统更新指南。了解如何检查和安装系统更新，保持系统功能和安全性。
+description: 了解如何升级 Olares 版本，保持系统功能和安全性。
 ---
 # 更新 Olares
 
