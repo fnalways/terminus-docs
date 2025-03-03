@@ -1,5 +1,5 @@
 ---
-description: Discover step-by-step tutorials on Olares to help you configure and optimize its powerful features. Learn how to personalize, scale, and integrate Olares into your workflows with hands-on guides.
+description: Step-by-step tutorials on how to personalize, scale, and integrate Olares into your workflows with hands-on guides.
 ---
 # Tutorials
 
