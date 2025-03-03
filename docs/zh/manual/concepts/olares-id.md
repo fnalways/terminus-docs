@@ -1,3 +1,6 @@
+---
+description: Olares ID 的定义、结构和用途说明。包括个人 ID 类型、不同域名类型以及与去中心化标识符 DID 的关系原理。
+---
 # Olares ID
 
 本文档将帮助你了解 Olares ID 的重要性。

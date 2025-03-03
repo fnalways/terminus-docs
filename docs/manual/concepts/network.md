@@ -1,3 +1,6 @@
+---
+description: Olares network architecture principles, covering application entrance types, local access mechanisms, endpoint configurations and internal network security policies.
+---
 # Network
 
 Olares provides users with a barrier-free but secure and versatile network solutions. This documents covers the key networking concepts related to application access.

@@ -1,3 +1,6 @@
+---
+description: Overview of Olares BEC architecture, explaining distributed node implementation for data storage and security. Details three core components Snowinning Protocol, Olares OS and LarePass.
+---
 # Architecture of Olares
 
 Olares introduces a next-generation decentralized Internet framework through its Blockchain-Edge-Client (BEC) architecture. BEC decentralizes data storage and enhances security by distributing information across suitable platforms.

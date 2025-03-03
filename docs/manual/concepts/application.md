@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Fundamental concepts of Olares application system, explaining application identifiers and characteristics of four application types: system applications, user system applications, community applications and cluster-scoped applications. Includes service provider mechanisms and application dependencies.
 ---
 
 # Applications

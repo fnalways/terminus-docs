@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Olares data management architecture, explaining file system types, application storage paths and database support. Covers technical specifications of JuiceFS, PostgreSQL, MongoDB and Redis.
 ---
 
 # Data

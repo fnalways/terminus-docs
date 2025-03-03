@@ -1,3 +1,6 @@
+---
+description: Technical glossary of Olares, providing standard definitions and explanations for common technical concepts. Alphabetically organized for easy reference of professional terminology.
+---
 # Glossary
 <div style="text-align: center; font-size: 18px; margin-bottom: 20px;">
   <a href="#c" style="text-decoration: none; color: #007BFF;">C</a>
