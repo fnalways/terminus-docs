@@ -87,6 +87,13 @@ export default withMermaid({
     },
   },
   head: [
+    [
+      "meta",
+      {
+        name: "google-site-verification",
+        content: "3AzyPY6Q-LxE8CBNwz6ppsqDJ4iQaiPY9V0MHJbQlbU",
+      },
+    ],
     // 引入 Material Design Icons
     [
       "link",
