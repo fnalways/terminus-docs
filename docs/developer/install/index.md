@@ -1,3 +1,6 @@
+---
+description: Technical overview of Olares deployment including system architecture, setup processes, environment configuration, CLI capabilities and version management. Key concepts for developers working with Olares.
+---
 # Olares installation 
 
 This section provides in-depth information and command references to help you explore, learn, and customize your Olares installation.
