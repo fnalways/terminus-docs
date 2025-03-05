@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: 使用 Docker 容器部署运行 Olares 的完整步骤，包括镜像配置和容器设置说明。
 ---
 # 使用 Docker 镜像安装 Olares
 

@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Set up custom domains in Olares Space with domain verification and DNS configuration. Create organizational Olares IDs and manage domain settings for your team.
 ---
 
 # Set up a custom domain

@@ -1,3 +1,6 @@
+---
+description: 获取关于 Olares 的常见问题解答。
+---
 # 常见问题
 
 ## Olares 采用了什么协议？

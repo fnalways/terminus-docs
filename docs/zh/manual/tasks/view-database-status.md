@@ -1,3 +1,6 @@
+---
+description: 在 Olares 中使用 Bytebase 查看数据库状态。学习添加和管理 PostgreSQL、MongoDB 实例，使用 SQL 编辑器操作数据库。
+---
 # 在 Olares 中查看数据库状态
 
 你可以使用第三方数据库中间件应用在 Olares 中查看数据库状态。本指南以 Bytebase 为例，演示如何通过中间件访问数据库。

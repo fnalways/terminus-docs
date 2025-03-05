@@ -1,3 +1,6 @@
+---
+description: 介绍 Olares Space 的账号操作方法，通过 LarePass 扫码实现 DID 和 Olares ID 登录，支持多账号导入和切换，可随时退出登录切换身份。
+---
 # 管理 Olares Space 账号
 
 本指南将介绍 Olares Space 的常见账号操作，包括登录、多账号管理和退出登录。

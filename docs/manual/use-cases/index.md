@@ -1,3 +1,6 @@
+---
+description: Explore practical use cases of Olares, showcasing how to leverage its features for AI workflows, creative tools, and self-hosted applications. Unlock the full potential of Olares in your environment.
+---
 # Use cases
 While other guides tell you "what" and "how," these use cases reveal the full potential of Olares - from running AI models to creating seamless workflows across your self-hosted services.
 

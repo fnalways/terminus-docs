@@ -1,3 +1,6 @@
+---
+description: 将 ComfyUI 与 Krita 结合使用的教程，学习如何配置 AI 绘画环境，实现本地化的智能创作工作流程。
+---
 # Krita + ComfyUI 实时绘画
 在 Olares 上本地运行 ComfyUI 可以让你灵活地使用端侧 AI 能力，但要让它与你的创作工具无缝配合，还需要一些额外的设置。Olares 支持将 ComfyUI 的功能扩展到其他机器，从而实现与 Krita 等编辑工具的流畅集成。
 

@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Olares 数据管理架构说明，阐述文件系统类型、应用存储路径和数据库支持体系。包括 JuiceFS、PostgreSQL、MongoDB 和 Redis 的技术特性。
 ---
 
 # 数据

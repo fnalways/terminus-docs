@@ -1,3 +1,6 @@
+---
+description: Comprehensive guide to managing teams in Olares, including creating accounts, assigning roles, setting permissions, and maintaining efficient team collaboration within your Olares cluster.
+---
 # Manage your team
 As an administrator, you can create and manage team members while ensuring optimal system performance through efficient resource controls.
 ## Before you begin

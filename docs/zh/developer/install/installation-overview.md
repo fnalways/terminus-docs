@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Olares 部署的核心架构，涵盖系统原生层、容器编排曾和容器化层。深入解析 Olares 各层级之间的技术交互。
 ---
 # Olares 安装概述 
 

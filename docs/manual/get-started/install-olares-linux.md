@@ -1,3 +1,6 @@
+---
+description: Detailed instructions for installing Olares on Linux systems including Ubuntu and Debian. Covers system requirements, installation steps, and activation process.
+---
 # Install Olares on Linux
 Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 

@@ -1,3 +1,6 @@
+---
+description: Comprehensive guide to using Stable Diffusion in Olares. Learn about text-to-image generation, and how to optimize your SD Web UI deployment for multi-user environments.
+---
 # Stable Diffusion
 Stable Diffusion represents a groundbreaking implementation of latent diffusion models (LDMs) in AI image synthesis. This deep learning architecture operates by decomposing the image generation process into a lower-dimensional latent space, significantly reducing computational requirements while maintaining high-fidelity output.
 

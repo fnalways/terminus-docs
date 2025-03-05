@@ -1,3 +1,6 @@
+---
+description: Definition, structure and purpose of Olares ID system. Covers personal ID types, domain categories and relationship principles with decentralized identifiers (DID).
+---
 # Olares ID
 
 This document gets you familiar with Olares ID.

@@ -1,3 +1,6 @@
+---
+description: Internal structure of Olares Home directory organizing images, logs, dependencies and version management. Details about the default installation directory architecture.
+---
 # Olares Home
 
 "Olares Home" is the default installation directory for Olares. It stores images, logs, dependency components, and version management data. In this document, you will learn the structure of Olares Home and gain a clearer understanding of the Olares installation process.

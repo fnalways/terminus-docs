@@ -1,3 +1,6 @@
+---
+description: Installing Olares on supported platforms including Linux, PVE, LXC, Raspberry Pi, macOS and Windows WSL using script or Docker methods.
+---
 :::warning Note for Mainland China users
 The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
 :::

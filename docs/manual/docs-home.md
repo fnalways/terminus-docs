@@ -1,10 +1,9 @@
+---
+description: Learn about Olares, an open-source sovereign cloud OS for local AI. Discover how to self-host services, run AI applications, manage files, and collaborate securely with enterprise-grade features.
+---
 # Olares documentation
-:::info Note
-We're updating our documentation to reflect the rebranding. While you may see different interface labels in screenshots, all features
-and procedures remain the same.
-:::
 ## What is Olares?
-Olares (formerly known as Terminus) is an open-source sovereign cloud operating system built for local AI. It turns your hardware into a private, scalable, and AI-ready environment, making it easy to run local AI applications, self-host services, manage files, or collaborate securely with your team.
+Olares is an open-source sovereign cloud operating system built for local AI. It turns your hardware into a private, scalable, and AI-ready environment, making it easy to run local AI applications, self-host services, manage files, or collaborate securely with your team.
 
 With Olares, self-hosting is no longer a daunting task. It simplifies complex processes like network setup, domain management, and service orchestration, enabling both beginners or experienced users to focus on what truly matters.
 

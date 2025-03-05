@@ -1,3 +1,6 @@
+---
+description: 在 LXC 容器环境中安装配置 Olares 的完整步骤，包括容器设置、系统要求和激活方法。
+---
 # 在 Linux 容器（LXC）中安装 Olares
 Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
 

@@ -1,3 +1,6 @@
+---
+description: 在 Linux 系统 Ubuntu 和 Debian 上安装配置 Olares 的完整步骤，包括系统要求、安装命令和激活流程。
+---
 # 在 Linux 上安装 Olares
 Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
 

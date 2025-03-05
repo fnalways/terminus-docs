@@ -1,3 +1,6 @@
+---
+description: Understand Olares Space billing system with service charges and payment workflows. Learn about cloud hosting fees, usage based pricing, and promotional credit applications.
+---
 # Billing
 
 Olares partners with Stripe for secure payment processing. Your invoices and receipts will be sent via email, allowing you to keep records for analysis. If you have any questions during the payment process, please contact support.

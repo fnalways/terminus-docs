@@ -1,3 +1,0 @@
-# Generate strong passwords
-
-Text

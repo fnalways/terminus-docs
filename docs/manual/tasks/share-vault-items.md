@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Learn how to share vault items securely in Olares, manage team access permissions, create shared vaults, and efficiently collaborate while maintaining data security.
 ---
 
 # Share vault items

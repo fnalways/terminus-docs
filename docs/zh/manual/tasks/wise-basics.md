@@ -1,7 +1,7 @@
 ---
 outline: [2, 3]
+description: 了解 Olares 系统应用 Wise 的基本操作。学习收集、阅读和组织内容，使用标签和笔记功能，追踪阅读进度，实现个性化阅读体验。
 ---
-
 # Wise 基本操作
 
 Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、阅读、管理内容。你可以通过本页面学习 Wise 的基本操作。
@@ -85,7 +85,7 @@ Wise 使用文章封面上的绿色点标识未读内容。当你打开一篇文
 在阅读时，你可以通过工具栏手动在 **<i class="material-symbols-outlined">playlist_add_check</i> 已看** 和 **<i class="material-symbols-outlined">playlist_remove</i> 未看** 状态之间切换，以维护你的阅读进度。
 
 ### 搜索 Wise 中的内容
-<!--@include: ../tutorials/organize-content.md{195,204}-->
+<!--@include: ../tutorials/wise.reusables.md{4,13}-->
 
 ## 更改主题
 默认情况下，Wise 会跟随系统的浅色/深色主题设置。你可以根据个人喜好更改：

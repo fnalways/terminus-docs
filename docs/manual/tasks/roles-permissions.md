@@ -1,3 +1,6 @@
+---
+description: Understand Olares team roles and permissions. Learn about administrator responsibilities, user access levels, and effective team management structures.
+---
 # User roles and permissions
 
 Olares supports multi-user operations, allowing multiple users to access the system simultaneously. Each user can securely access resources based on their assigned role and permissions.

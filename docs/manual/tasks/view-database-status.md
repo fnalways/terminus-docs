@@ -1,3 +1,6 @@
+---
+description: Access and monitor your Olares database status using Bytebase, managing PostgreSQL and MongoDB instances with detailed configuration guidance.
+---
 # View database status in Olares
 You can use third-party applications to view database status in Olares.
 

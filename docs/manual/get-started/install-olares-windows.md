@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Guide to installing Olares on Windows using WSL (Windows Subsystem for Linux) including setup requirements and activation steps.
 ---
 # Install Olares on Windows
 

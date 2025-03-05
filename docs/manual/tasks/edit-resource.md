@@ -1,3 +1,6 @@
+---
+description: Manage Olares system resources efficiently by editing YAML configurations, modifying Pod replicas, and monitoring container status through the Control Hub interface.
+---
 # Edit resources via Control Hub
 This guide shows you how to edit resource for your Olares environment.
 

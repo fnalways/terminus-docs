@@ -1,3 +1,6 @@
+---
+description: Olares secrets management system principles, detailing vault items, credentials, secrets and integration credentials classification. Explains sensitive data storage strategies.
+---
 # Secrets
 
 Olares categorizes secrets based on usage scenarios and employs various management techniques.

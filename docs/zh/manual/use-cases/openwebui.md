@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Open WebUI 使用教程，包括模型管理、语音交互和图像生成功能配置，轻松搭建私有 AI 助手服务。
 ---
 
 # Open WebUI

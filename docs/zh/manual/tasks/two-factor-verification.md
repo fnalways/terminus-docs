@@ -1,3 +1,6 @@
+---
+description: 在 Vault 中设置和使用双因素身份验证。生成安全的 2FA 代码，增强账户安全性，实现与主流验证器的兼容。
+---
 # 生成双因素身份验证（2FA）代码
 
 双因素身份验证（2FA）在登录时需要你的密码和身份验证代码。这些代码由基于时间的一次性密码（TOTP）生成，自动刷新。与 Google Authenticator 或 Microsoft Authenticator 类似，Vault 可以为你的在线账户生成安全的 2FA 代码。

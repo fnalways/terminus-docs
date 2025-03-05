@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Technical guide for installing and configuring a multi-node Olares cluster. Learn how to set up master nodes with JuiceFS support, add worker nodes, and handle network changes in your cluster environment.
 ---
 # Install a multi-node Olares cluster <Badge type="warning" text="Alpha" />
 The default Olares installation sets up a single-node cluster. Starting from v1.11.3, Olares supports adding worker nodes. This tutorial explains how to configure a master node and add worker nodes to create a scalable, multi-node Olares cluster.

@@ -1,3 +1,6 @@
+---
+description: Olares Home 目录的内部结构，用于组织镜像、日志、依赖项和版本管理。详细介绍默认安装目录的架构设计。
+---
 # Olares Home
 
 Olares Home 是 Olares 的默认安装目录，用于存储镜像、日志、依赖组件以及版本管理数据。本文将带你了解 Olares Home 的结构，进一步 Olares 安装过程。

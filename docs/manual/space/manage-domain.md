@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Configure domain settings in Olares Space with email invitation rules and member management. Administrate organizational Olares IDs for seamless team collaboration.
 ---
 
 # Manage your domain

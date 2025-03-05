@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Customize Olares application URLs with personalized domain names and route IDs. Learn how to set up public access and manage application endpoints.
 ---
 
 # Customize application URLs

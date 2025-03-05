@@ -1,3 +1,6 @@
+---
+description: Personalize your Olares experience by setting system language preferences, switching between light and dark themes, and customizing desktop and login screen wallpapers.
+---
 # Set language and appearance
 
 Personalizing your Olares experience is easy. You can set your preferred language, choose between light and dark themes, and select custom wallpapers for your desktop and login screen.

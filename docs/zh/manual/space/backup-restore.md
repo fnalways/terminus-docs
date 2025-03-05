@@ -1,3 +1,6 @@
+---
+description: 介绍 Olares Space 的数据备份工具，支持查看备份记录、管理系统快照、恢复云端数据。
+---
 # 备份与恢复
 
 Olares Space 是为 Olares 实例提供快照备份的官方解决方案。你可以随时将 Olares 恢复到最近的状态。本节介绍如何在 Olares Space 中管理备份和恢复操作。

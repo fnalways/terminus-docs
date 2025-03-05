@@ -1,3 +1,6 @@
+---
+description: Keep files synchronized across devices and share content securely with other Olares members using built-in file sharing capabilities.
+---
 # Sync and share files
 LarePass is a powerful tool not only ensures your Files content remains consistent and accessible, but also facilitates seamless collaboration within your Olares server.
 
@@ -76,7 +79,7 @@ Rest assured, this action won't delete your local files. It simply halts the two
 
 ## Share a Library
 :::tip
-To add a member in Olares, see [manage users](./manage-users.md).
+To add a member in Olares, see [manage team](./manage-team.md).
 :::
 
 You can share a Library with other members within an Olares server:
@@ -117,4 +120,4 @@ In the rare event of a sync conflict, LarePass has you covered. When multiple de
 * A backup of the conflicting version is created with a unique filename, including the editor's Olares ID and timestamp: `test.txt(SFConflict name 2024-04-17-12-12-12)`.
 
 ## Learn more
-- [Manage users](./manage-users.md)
+- [Manage team](./manage-team.md)

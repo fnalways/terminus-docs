@@ -1,3 +1,0 @@
-# Configure application parameters
-
-Text

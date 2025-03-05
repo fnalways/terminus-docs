@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Create and customize your Olares personal homepage with a unique cover design, social media links, custom layouts, and monitor its performance with powerful analytics tracking capabilities.
 ---
 
 # Design Your Olares profile

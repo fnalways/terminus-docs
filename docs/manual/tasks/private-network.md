@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Access Olares applications securely from anywhere using VPN. Learn VPN setup, troubleshooting, and how to enforce VPN-only access for maximum security.
 ---
 
 # Access Olares applications anywhere via VPN

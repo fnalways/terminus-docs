@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: 了解如何在 Wise 中添加和管理 RSS 订阅、使用 OPML 导入订阅源，以及上传 Cookie 改善阅读体验。
 ---
 
 # 订阅和管理订阅源

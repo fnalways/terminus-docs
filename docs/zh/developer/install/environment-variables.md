@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Olares 提供的环境变量，用于自定义网络、认证、GPU 支持等功能。包含配置示例和详细规格说明。
 ---
 # Olares 环境变量参考
 

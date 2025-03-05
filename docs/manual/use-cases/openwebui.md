@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Guide to using Open WebUI in Olares for managing Large Language Models. Learn about model management, voice interactions, and image generation capabilities with both Ollama and OpenAI-compatible APIs.
 ---
 
 # Open WebUI

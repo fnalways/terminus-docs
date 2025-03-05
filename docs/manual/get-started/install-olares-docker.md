@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+description: Instructions for running Olares as a containerized application using Docker including image setup and container configuration.
 ---
 # Install Olares using Docker image
 

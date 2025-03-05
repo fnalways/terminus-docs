@@ -1,3 +1,6 @@
+---
+description: Learn how to access and manage Olares Space accounts using LarePass authentication. 
+---
 # Manage accounts in Olares Space
 
 This guide walks you through common account operations with Olares Space, including logging in, managing multiple accounts, and logging out.  

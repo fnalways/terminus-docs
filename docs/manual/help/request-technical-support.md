@@ -1,3 +1,6 @@
+---
+description: Learn how to get technical support for Olares through GitHub discussions and issues. Guide includes steps to collect and export system logs for troubleshooting.
+---
 # Request technical support
 
 If you need help with Olares, you can reach out to Olares team through GitHub. 
