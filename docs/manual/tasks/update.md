@@ -2,6 +2,7 @@
 description: Learn how to safely update your Olares system, check for new versions, install system updates, and manually update olaresd for optimal performance and security.
 ---
 # Update Olares
+
 Olares regularly releases new versions with feature improvements and usability enhancements. This guide explains how to check for and install system updates.
 
 :::info Olares admin required
@@ -33,10 +34,7 @@ To update `olaresd` manually:
 1. Log in to your Olares host machine.
 2. Execute the following command in the terminal:
    ```bash
-   curl -SsfL https://dc3p1870nn3cj.cloudfront.net/upgrade_1_11_3.sh | bash -
+   curl -SsfL https://dc3p1870nn3cj.cloudfront.net/upgrade_1_11_5.sh | bash -
    ```
-
-:::tip Note
-- The script suffix `1_11_3` means to upgrade `olaresd` and `olares-cli` to version `1.11.3`.
-- Currently, only the v1.11.3 upgrade script is available, which resolves the issue of being unable to mount external hard drives after upgrading from `1.11.2` to `1.11.3`.
-:::
+   where:
+   - `1_11_5` means to upgrade `olaresd` and `olares-cli` to version `1.11.5`.
