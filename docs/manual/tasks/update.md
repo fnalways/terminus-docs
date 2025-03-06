@@ -25,13 +25,14 @@ You'll see a confirmation message when update completed.
 
 ## Update `olaresd` manually
 
-`olaresd` is the core daemon process of the Olares system responsible for various key management functions. In some cases, upgrading Olares may require manually updating `olaresd` to address issues where certain services fail to function properly.
+`olaresd` is the core daemon process of the Olares system responsible for various key management functions. In some cases, after your update Olares via the Settings app, a manual update of `olaresd` may be required to resolve issues where certain services fail to operate correctly.
 
 To confirm if this step is required, refer to the [Release notes](https://github.com/beclab/Olares/releases/).
 
 To update `olaresd` manually:
 
-1. Log in to your Olares host machine.
+1. Open Control Hub, and navigate to **Terminal** > **Olares**.
+   ![Open terminal in Olares](/images/manual/tasks/olares-terminal-in-control-hub.png#bordered)
 2. Execute the following command in the terminal:
    ```bash
    curl -SsfL https://dc3p1870nn3cj.cloudfront.net/upgrade_1_11_5.sh | bash -
