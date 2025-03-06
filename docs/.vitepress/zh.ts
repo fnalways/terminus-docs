@@ -197,10 +197,10 @@ const side = {
               text: "同步与分享",
               link: "/zh/manual/tasks/sync-share",
             },
-            //{
-            //  text: "Sharing and collaboration",
-            //  link: "/zh/manual/tasks/sharing-collaboration",
-            // },
+            {
+              text: "挂载 SMB 共享文件夹",
+              link: "/zh/manual/tasks/mount-SMB-shares",
+             },
           ],
         },
         {

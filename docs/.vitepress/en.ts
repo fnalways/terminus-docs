@@ -197,10 +197,10 @@ const side = {
               text: "Sync and share",
               link: "/manual/tasks/sync-share",
             },
-            //{
-            //  text: "Sharing and collaboration",
-            //  link: "/manual/tasks/sharing-collaboration",
-            // },
+            {
+              text: "Mount SMB shares",
+              link: "/manual/tasks/mount-SMB-shares",
+             },
           ],
         },
         {
