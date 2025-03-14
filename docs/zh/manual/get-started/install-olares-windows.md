@@ -20,7 +20,7 @@ Windows 设备需满足以下条件：
 - 存储空间：建议使用 SSD，且可用磁盘空间不少于 64GB
 - 支持的系统：
     - Windows 10 或 11
-    - Linux（WSL2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
+    - Linux（WSL 2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
 ## 配置系统环境
 1. 启用虚拟化所需的 Windows 功能。
 

@@ -1,3 +1,6 @@
+---
+search: false
+---
 ## Install and activate Olares
 :::warning Same network required
 To avoid activation failures, ensure that both your phone and the Olares device are connected to the same network.

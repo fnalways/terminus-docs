@@ -1,4 +1,5 @@
 ---
+outline: [2, 3]
 description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olares。本安装指南涵盖系统要求、配置、安装、激活以及容器管理的相关内容。
 ---
 # 使用 Docker Compose 在 Linux 上安装 Olares
@@ -20,8 +21,8 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 :::
 
 ## 开始之前
-
-- 系统中已安装并运行 [Docker](https://www.docker.com/) 和 [Docker Compose](https://docs.docker.com/compose/install/)。
+开始安装前，请确保：
+- 系统中已安装并运行 [Docker](https://docs.docker.com/engine/install/) 和 [Docker Compose](https://docs.docker.com/compose/install/)。
 - 已知当前设备的 IP 地址。
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
@@ -101,8 +102,8 @@ cd ~/olares-config
    :::
 3. 依次按下 `CTRL+O`、`ENTER` 及 `CTRL+X` 保存文件。
 
-## 修改 Daemon 镜像地址
-
+## 更新 Docker 的镜像源
+添加 Olares 的镜像源，提高镜像拉取速度：
 1. 打开 `/etc/docker/daemon.json` 文件：
    ```bash
    sudo nano /etc/docker/daemon.json

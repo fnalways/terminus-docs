@@ -20,7 +20,7 @@ Make sure your Windows meets the following requirements.
 - Storage: At least 64GB of available space (SSD recommended)
 - Supported systems:
     - Windows 10 or 11
-    - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
+    - Linux (on WSL 2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
 1. Enable the required Windows features for virtualization.
 

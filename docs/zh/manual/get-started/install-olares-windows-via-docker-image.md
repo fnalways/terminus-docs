@@ -21,10 +21,10 @@ Windows 设备需满足以下条件：
 - 存储空间：建议使用 SSD，且可用磁盘空间不少于 64GB
 - 支持的系统：
     - Windows 10 或 11
-    - Linux（WSL2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
+    - Linux（WSL 2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
 ## 开始前的准备
 开始安装前，请确保：
-- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
+- 系统中已安装并运行 [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)。
    :::info WSL 2 and Hyper-V
    如果 Docker Desktop 的模式为 **Hyper-V**，则无法启用 Olares 的 GPU 支持。请确保 Docker Desktop 在 **WSL 2** 模式下运行。  
    :::
@@ -62,7 +62,7 @@ Windows 设备需满足以下条件：
    ```bash
    wsl --set-default-version 2
    ```
-4. 在 `C:\Users\<your user name>` 目录下创建文件 `.wslconfig`，填入以下内容：
+4. 在 `C:\Users\<YourUsername>\` 目录下创建文件 `.wslconfig`，填入以下内容：
    ```txt
    [wsl2]
    kernel=c:\\path\\to\\your\\kernel\\bzImage-<version> ## 注意：使用双反斜杠 (\\) 作为路径分隔符
@@ -78,6 +78,7 @@ Windows 设备需满足以下条件：
 5. 重启 Windows 使变更生效。
 
 ## 更新 Docker 的镜像源
+添加 Olares 的镜像源，提高镜像拉取速度：
 1. 打开 Docker Desktop，选择 **Settings** > **Docker Engine**。
 2. 修改 Docker daemon 的 json 文件，添加镜像源：
    ```json{9-11}
@@ -150,26 +151,6 @@ docker run --gpus all  -d --privileged -v oic-data:/var \
 
 <!--@include: ./install-and-activate-olares.md-->
 
-## 管理 Olares 容器
-### 重启容器
-容器停止后，使用以下命令重启：
-```bash
-docker start oic
-```
-
-### 停止容器
-要停止运行中的容器：
-```bash
-docker stop oic
-```
-容器重启后，所有服务可能需要 6–7 分钟才能完全初始化。在此时间内请耐心等待。
-
-### 卸载容器
-要完全移除容器及其关联数据：
-```bash
-docker stop oic
-docker rm oic
-docker volume rm oic-data
-```
+<!--@include: ./manage-olares-container.md-->
 
 <!--@include: ./reusables.md{30,34}-->

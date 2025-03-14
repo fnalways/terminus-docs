@@ -19,11 +19,11 @@ Make sure your Windows meets the following requirements.
 - Storage: At least 64GB of available space (SSD recommended)
 - Supported systems:
     - Windows 10 or 11
-    - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
+    - Linux (on WSL 2): Ubuntu 20.04 LTS or later; Debian 11 or later
 
 ## Before you begin
 Before you begin, ensure the following:
-- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)  is installed and running on your system.
   :::info WSL 2 and Hyper-V  
   If Docker Desktop is configured to use **Hyper-V**, GPU support for Olares cannot be enabled. Ensure Docker Desktop is set to run in the **WSL 2** mode.
   :::
@@ -61,7 +61,7 @@ Before you begin, ensure the following:
   ```bash
   wsl --set-default-version 2
   ```
-4. In the directory `C:\Users\<your user name>`, create a file named `.wslconfig` with the following content:
+4. In the directory `C:\Users\<YourUsername>\`, create a file named `.wslconfig` with the following content:
    ```txt
    [wsl2]
    kernel=c:\\path\\to\\your\\kernel\\bzImage-<version> ## Note: Use double backslashes (\\) as path separators
@@ -135,26 +135,6 @@ The `--rm` flag automatically deletes the container after it stops. If this happ
 
 <!--@include: ./install-and-activate-olares.md-->
 
-## Manage the Olares container
-
-### Stop the container
-To stop the running container:
-```bash
-docker stop oic
-```
-
-### Restart the container
-To restart the container after it has been stopped:
-```bash
-docker start oic
-```
-
-### Uninstall the container
-To completely remove the container and its associated data:
-```bash
-docker stop oic
-docker rm oic
-docker volume rm oic-data
-```
+<!--@include: ./manage-olares-container.md-->
 
 <!--@include: ./reusables.md{35,39}-->

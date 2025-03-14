@@ -2,9 +2,10 @@
 outline: [2, 3]
 description: 使用 Docker 容器部署运行 Olares 的完整步骤，包括镜像配置和容器设置说明。
 ---
-# 使用 Docker 镜像在 Windows 上安装 Olares
+# 使用 Docker 镜像在 Mac 上安装 Olares
 
-通过 Docker 可以在容器化环境中安装和运行 Olares。本文将介绍如何使用 Docker 命令行界面（CLI）进行安装配置、准备环境、激活 Olares 以及管理容器生命周期。
+你可以通过 Docker 可以在容器化环境中安装和运行 Olares。本文将带你了解：如何使用 Docker 设置 Olares，准备安装环境，完成激活流程，并管理容器的生命周期。
+
 :::info
 Mac 版 Olares 目前存在以下限制：
 - 不支持分布式存储
@@ -21,7 +22,7 @@ Mac 设备需满足以下条件：
 
 ## 开始前的准备
 开始安装前，请确保：
-- 系统中已安装 Docker。
+- 系统中已安装并运行 [Docker](https://docs.docker.com/engine/install/)。
 - 已知当前设备的 IP 地址。
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
@@ -47,8 +48,8 @@ Mac 设备需满足以下条件：
 </template>
 </tabs>
 
-## 添加镜像源
-以 Docker Desktop 为例：
+## 更新 Docker 的镜像源
+添加 Olares 的镜像源，提高镜像拉取速度。以 Docker Desktop 为例：
 1. 打开 Docker Desktop，选择 **Settings** > **Docker Engine**。
 2. 修改 Docker daemon 的 json 文件，添加镜像源：
    ```json{9-11}
@@ -99,27 +100,6 @@ docker run -d --privileged -v oic-data:/var \
 
 <!--@include: ./install-and-activate-olares.md-->
 
-## 管理 Olares 容器
-
-### 停止容器
-要停止运行中的容器：
-```bash
-docker stop oic
-```
-
-### 重启容器
-容器停止后，使用以下命令重启：
-```bash
-docker start oic
-```
-容器重启后，所有服务可能需要 6–7 分钟才能完全初始化。在此时间内请耐心等待。
-
-### 卸载容器
-要完全移除容器及其关联数据：
-```bash
-docker stop oic
-docker rm oic
-docker volume rm oic-data
-```
+<!--@include: ./manage-olares-container.md-->
 
 <!--@include: ./reusables.md{30,34}-->

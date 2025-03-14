@@ -1,3 +1,6 @@
+---
+search: false
+---
 ## 安装并激活 Olares
 :::warning 检查网络连接
 为避免激活失败，请确保你的手机和 Olares 设备连接到同一网络。

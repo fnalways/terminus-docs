@@ -2,9 +2,9 @@
 outline: [2, 3]
 description: Instructions for running Olares as a containerized application using Docker including image setup and container configuration.
 ---
-# Install Olares using Docker Compose
+# Install Olares on Mac with Docker image
 
-You can use Docker to install and run Olares in a containerized environment. This guide explains how to set up Olares using the Docker command line interface (CLI), prepare the installation environment, activate Olares, and manage the container lifecycle.
+You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 :::info
 Currently, Olares on Mac has certain limitations including:
 - Lack of distributed storage support.
@@ -81,26 +81,6 @@ The `--rm` flag automatically deletes the container after it stops. If this happ
 
 <!--@include: ./install-and-activate-olares.md-->
 
-## Manage the Olares container
-
-### Stop the container
-To stop the running container:
-```bash
-docker stop oic
-```
-
-### Restart the container
-To restart the container after it has been stopped:
-```bash
-docker start oic
-```
-
-### Uninstall the container
-To completely remove the container and its associated data:
-```bash
-docker stop oic
-docker rm oic
-docker volume rm oic-data
-```
+<!--@include: ./manage-olares-container.md-->
 
 <!--@include: ./reusables.md{35,39}-->
