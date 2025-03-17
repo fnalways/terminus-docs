@@ -1,7 +1,7 @@
 ---
 description: Detailed instructions for installing Olares on Linux systems including Ubuntu and Debian. Covers system requirements, installation steps, and activation process.
 ---
-# Install Olares on Linux
+# Install Olares on Linux via the script
 Olares is designed to run on Linux-based systems and has been verified on the following platforms:
 
 - Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
@@ -18,7 +18,7 @@ Make sure your device meets the following requirements.
     - Ubuntu 20.04 LTS or later
     - Debian 11 or later
 
-::: tip Version compatibility
+:::info Version compatibility
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 

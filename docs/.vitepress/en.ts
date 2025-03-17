@@ -40,17 +40,45 @@ const side = {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
           items: [
+              {
+                text: "macOS",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Using Docker image (recommended)",
+                    link: "/manual/get-started/install-olares-mac-via-docker-image",
+                  },
+                  {
+                    text: "Using the script",
+                    link: "/manual/get-started/install-olares-mac",
+                  },
+                ],
+              },
+              {
+                text: "Windows (WSL)",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Using Docker image (recommended)",
+                    link: "/manual/get-started/install-olares-windows-via-docker-image",
+                  },
+                  {
+                    text: "Using the script",
+                    link: "/manual/get-started/install-olares-windows",
+                  },
+                ],
+              },
             {
               text: "General Linux",
               collapsed: true,
               items: [
+                  {
+                    text: "Using the script (recommended)",
+                    link: "/manual/get-started/install-olares-linux",
+                  },
                 {
                   text: "Using Docker Compose",
                   link: "/manual/get-started/install-olares-linux-via-docker-compose",
-                },
-                {
-                  text: "Using the script",
-                  link: "/manual/get-started/install-olares-linux",
                 },
               ],
             },
@@ -59,34 +87,6 @@ const side = {
             {
               text: "Raspberry Pi",
               link: "/manual/get-started/install-olares-raspberry-pi",
-            },
-            {
-              text: "macOS",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using Docker image",
-                  link: "/manual/get-started/install-olares-mac-via-docker-image",
-                },
-                {
-                  text: "Using the script",
-                  link: "/manual/get-started/install-olares-mac",
-                },
-              ],
-            },
-            {
-              text: "Windows (WSL)",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using Docker image",
-                  link: "/manual/get-started/install-olares-windows-via-docker-image",
-                },
-                {
-                  text: "Using the script",
-                  link: "/manual/get-started/install-olares-windows",
-                },
-              ],
             },
           ],
         },

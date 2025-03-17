@@ -16,7 +16,7 @@ We recommend using it only for development or testing purposes.
 ## System requirements
 Make sure your device meets the following requirements.
 
-- Architecture: AMD64
+- Architecture: AMD64 or ARM64
 - CPU: At least 4 cores
 - RAM: At least 8GB of available memory
 - Storage: At least 64GB of available space (SSD recommended)

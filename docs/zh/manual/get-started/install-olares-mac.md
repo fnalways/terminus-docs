@@ -1,9 +1,7 @@
 ---
 description: 在 Mac 系统上安装配置 Olares 的完整步骤，包括环境准备、安装过程和系统激活。
 ---
-# 在 Mac 上安装 Olares
-
-Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows 上安装，方便测试和评估使用。
+# 在 Mac 上使用脚本安装 Olares
 
 :::info
 Mac 版 Olares 目前存在以下限制：
@@ -11,6 +9,10 @@ Mac 版 Olares 目前存在以下限制：
 - 无法添加本地节点
 
 建议仅用于开发或测试环境。
+:::
+
+:::tip
+推荐[使用 Docker 在 Mac 上安装 Olares](install-olares-mac-via-docker-image.md)。
 :::
 ## 系统要求
 Mac 设备需满足以下条件：

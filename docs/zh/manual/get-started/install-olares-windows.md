@@ -2,9 +2,7 @@
 outline: [2, 3]
 description: 通过 WSL 在 Windows 系统安装配置 Olares 的完整步骤，包括环境要求和激活设置。
 ---
-# 在 Windows 上安装 Olares
-
-Olares 主要运行于 Linux 系统环境下，同时支持在 macOS 或 Windows 上安装，方便测试和评估使用。
+# 在 Windows 上使用脚本安装 Olares
 
 :::info
 Windows 版 Olares 目前存在以下限制：
@@ -12,6 +10,10 @@ Windows 版 Olares 目前存在以下限制：
 - 无法添加本地节点
 
 建议仅用于开发或测试环境。
+:::
+
+:::tip
+推荐[使用 Docker 在 Windows 上安装 Olares](install-olares-windows-via-docker-image.md)。
 :::
 ## 系统要求
 Windows 设备需满足以下条件：

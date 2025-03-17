@@ -20,7 +20,7 @@ LXC 是一种轻量级的虚拟化技术，可以在隔离的容器中运行应�
   - PVE: 8.2.2
   - LXC 容器系统：Debian 12（既有 LXC 环境）
 
-::: tip 版本兼容性
+:::info 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 

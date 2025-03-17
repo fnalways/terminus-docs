@@ -1,9 +1,7 @@
 ---
 description: Step-by-step instructions for installing Olares on macOS systems including prerequisites, installation commands, and activation process.
 ---
-# Install Olares on Mac
-
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+# Install Olares on Mac via the script
 
 :::info
 Currently, Olares on Mac has certain limitations including:
@@ -11,6 +9,10 @@ Currently, Olares on Mac has certain limitations including:
 - Inability to add local nodes.
 
 We recommend using it only for development or testing purposes.
+:::
+
+:::tip
+It's recommended to [install Olares on Mac using Docker](install-olares-mac-via-docker-image.md).
 :::
 ## System compatibility
 Make sure your Mac meets the following requirements.

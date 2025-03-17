@@ -4,6 +4,10 @@ description: Learn how to deploy Olares on a Linux server using Docker Compose. 
 ---
 # Install Olares on Linux using Docker Compose
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
+
+:::tip
+It's recommended to [install Olares on Linux using script](install-olares-linux.md)。
+:::
 ## System requirements
 
 Make sure your device meets the following requirements.
@@ -15,7 +19,7 @@ Make sure your device meets the following requirements.
     - Ubuntu 20.04 LTS or later
     - Debian 11 or later
 
-::: tip Version compatibility
+:::info Version compatibility
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 
