@@ -64,7 +64,7 @@ Before you begin, ensure the following:
 4. In the directory `C:\Users\<YourUsername>\`, create a file named `.wslconfig` with the following content:
    ```txt
    [wsl2]
-   kernel=c:\\path\\to\\your\\kernel\\bzImage-<version> ## Note: Use double backslashes (\\) as path separators
+   kernel=c:\\path\\to\\your\\kernel\\bzImage-<version> # Note: Use double backslashes (\\) as path separators
    memory=8GB # Recommended: 16GB
    swap=0GB
    ```
@@ -94,17 +94,19 @@ CUDA version 12.4 or above is required for GPU support. Older versions are incom
 Run the following command to pull the Olares image.
 Replace `<host ip>` with your device's IP address and `<olares version>` with the desired version of Olares:
 ::: code-group
-```bash{2,7} [Without GPU support]
+```bash{2,9} [Without GPU support]
 docker run -d --privileged -v oic-data:/var \
- -e HOST_IP=<host ip> \
- -p 80:80 \
- -p 443:443 \
- -p 30180:30180 \
- --name oic \
+  -e HOST_IP=<host ip> \
+  -p 80:80 \
+  -p 443:443 \
+  -p 30180:30180 \
+  -p 18088:18088 \
+  -p 41641:41641/udp \
+  --name oic \
  beclab/olares:<olares version>
 ```
-```bash{1,2,7} [With GPU support]
-docker run --gpus all  -d --privileged -v oic-data:/var \
+```bash{1,2,9} [With GPU support]
+docker run --gpus all -d --privileged -v oic-data:/var \
  -e HOST_IP=<host ip> \
  -p 80:80 \
  -p 443:443 \
@@ -116,15 +118,17 @@ docker run --gpus all  -d --privileged -v oic-data:/var \
 ```
 :::
 where:
-- `-d`: Starts the container in detached mode to allow it to run in the background.
-- `--privileged`: Grants the container elevated privileges.
-- `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
-- `-e HOST_IP=<host ip>`: Specifies the host device's IP address as an environment variable.
-- `-p 80:80`: Maps port `80` on the host to port `80` in the container.
-- `-p 443:443`: Maps port `443` on the host to port `443` in the container.
-- `-p 30180:30180`: Maps port `30180` on the host to port `30180` in the container.
-- `--name oic`: Names the container `oic` for easier reference.
-- `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.5`.
+  - `-d`: Starts the container in detached mode to allow it to run in the background.
+  - `--privileged`: Grants the container elevated privileges.
+  - `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
+  - `-e HOST_IP=<host ip>`: Specifies the host device's IP address as an environment variable.
+  - `-p 80:80`: Maps port `80` on the host to port `80` in the container.
+  - `-p 443:443`: Maps port `443` on the host to port `443` in the container.
+  - `-p 30180:30180`: Maps port `30180` on the host to port `30180` in the container.
+  - `-p 18088:18088`: Maps port `18088` on the host to port `18088` in the container.
+  - `-p 41641:41641/udp`: Maps UDP port `41641` on the host to UDP port `41641` in the container.
+  - `--name oic`: Names the container `oic` (Olares in container) for easier reference.
+  - `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.5`.
 
 When the container is running, you will see a container ID output.
 

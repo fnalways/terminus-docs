@@ -5,6 +5,7 @@ description: Instructions for running Olares as a containerized application usin
 # Install Olares on Mac with Docker image
 
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
+
 :::info
 Currently, Olares on Mac has certain limitations including:
 - Lack of distributed storage support.
@@ -53,25 +54,29 @@ Before you begin, ensure the following:
 To pull the image of Olares, execute the following command.
 
 Replace `<host ip>` with your device's IP address and `<olares version>` with the desired version of Olares:
-```bash{2,7}
+```bash{2,9}
 docker run -d --privileged -v oic-data:/var \
   -e HOST_IP=<host ip> \
   -p 80:80 \
   -p 443:443 \
   -p 30180:30180 \
+  -p 18088:18088 \
+  -p 41641:41641/udp \
   --name oic \
   beclab/olares:<olares version>
 ```
 where:
-- `-d`: Starts the container in detached mode to allow it to run in the background.
-- `--privileged`: Grants the container elevated privileges.
-- `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
-- `-e HOST_IP=<host ip>`: Specifies the host device's IP address as an environment variable.
-- `-p 80:80`: Maps port `80` on the host to port `80` in the container.
-- `-p 443:443`: Maps port `443` on the host to port `443` in the container.
-- `-p 30180:30180`: Maps port `30180` on the host to port `30180` in the container.
-- `--name oic`: Names the container `oic` for easier reference.
-- `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.5`.
+  - `-d`: Starts the container in detached mode to allow it to run in the background.
+  - `--privileged`: Grants the container elevated privileges.
+  - `-v oic-data:/var`: Binds a Docker volume (`oic-data`) to the `/var` directory inside the container to persist data.
+  - `-e HOST_IP=<host ip>`: Specifies the host device's IP address as an environment variable.
+  - `-p 80:80`: Maps port `80` on the host to port `80` in the container.
+  - `-p 443:443`: Maps port `443` on the host to port `443` in the container.
+  - `-p 30180:30180`: Maps port `30180` on the host to port `30180` in the container.
+  - `-p 18088:18088`: Maps port `18088` on the host to port `18088` in the container.
+  - `-p 41641:41641/udp`: Maps UDP port `41641` on the host to UDP port `41641` in the container.
+  - `--name oic`: Names the container `oic` (Olares in container) for easier reference.
+  - `beclab/olares:<olares version>`: Specifies the Olares Docker image and version. For example: `beclab/olares:1.11.5`.
 
 When the container is running, you will see a container ID output.
 :::

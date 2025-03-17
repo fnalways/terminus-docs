@@ -103,16 +103,13 @@ cd ~/olares-config
 
 ## Set up environment variables and start container
 
-1. In the `olares-config` directory, use the following command to set the environment variables and start the Olares services.
-   Replace `<olares version>` with the desired Olares version and `<host ip>` with the IP address of your Linux machine.
+1. In the `olares-config` directory, use the following command to set the environment variables and start the Olares services:
 
    ```bash [With Docker Compose Plugin]
    VERSION=<olares version> HOST_IP=<host ip> docker compose up -d
    ```
-
-   where:
-   - `<olares version>`: Specifies the Olares version. For example: `1.11.5`.
-   - `<host ip>`: Specifies the Linux machine's IP address.
+   - `VERSION=<olares version>`: Specifies the Olares version. Replace `<olares version>` with the actual one. For example: `1.11.5`.
+   - `HOST_IP=<host ip>`: Specifies the Linux machine's IP address. Replace `<host ip>` with the actual one.
    
    After executing the command, you should see output similar to the following, showing the status and port mappings of all containers:
     ```bash
