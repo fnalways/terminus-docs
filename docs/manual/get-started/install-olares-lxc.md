@@ -20,7 +20,7 @@ Make sure your device meets the following requirements.
     - PVE 8.2.2
     - Linux container: Debian 12 (for existing LXC containers on PVE)
 
-::: tip Version compatibility
+:::info Version compatibility
 While the specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 

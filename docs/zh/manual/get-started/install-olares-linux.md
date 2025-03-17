@@ -1,7 +1,7 @@
 ---
 description: 在 Linux 系统 Ubuntu 和 Debian 上安装配置 Olares 的完整步骤，包括系统要求、安装命令和激活流程。
 ---
-# 在 Linux 上安装 Olares
+# 在 Linux 上使用脚本安装 Olares
 Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
 
 - **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
@@ -17,7 +17,7 @@ Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系
     - Ubuntu 20.04 LTS 及以上
     - Debian 11 及以上
 
-::: tip 版本兼容性
+:::info 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 

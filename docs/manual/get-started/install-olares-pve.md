@@ -15,7 +15,7 @@ Make sure your device meets the following requirements.
 - Storage: At least 64GB of available space (SSD recommended)
 - Supported Systems: PVE 8.2.2
 
-::: tip Version compatibility
+:::info Version compatibility
 While the specific version is confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 

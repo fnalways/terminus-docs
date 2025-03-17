@@ -2,9 +2,7 @@
 outline: [2, 3]
 description: Guide to installing Olares on Windows using WSL (Windows Subsystem for Linux) including setup requirements and activation steps.
 ---
-# Install Olares on Windows
-
-Olares is designed to run on Linux-based systems. However, you can also install it on macOS or Windows for testing or evaluation purposes.
+# Install Olares on Windows via the script
 
 :::info
 Currently, Olares on Windows has certain limitations including:
@@ -13,6 +11,11 @@ Currently, Olares on Windows has certain limitations including:
 
 We recommend using it only for development or testing purposes.
 :::
+
+:::tip
+It's recommended to [install Olares on Windows using Docker](install-olares-windows-via-docker-image.md).
+:::
+
 ## System compatibility
 Make sure your Windows meets the following requirements.
 - CPU: At least 4 cores
@@ -20,7 +23,7 @@ Make sure your Windows meets the following requirements.
 - Storage: At least 64GB of available space (SSD recommended)
 - Supported systems:
     - Windows 10 or 11
-    - Linux (on WSL2): Ubuntu 20.04 LTS or later; Debian 11 or later
+    - Linux (on WSL 2): Ubuntu 20.04 LTS or later; Debian 11 or later
 ## Set up system environment
 1. Enable the required Windows features for virtualization.
 

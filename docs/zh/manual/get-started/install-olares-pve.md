@@ -15,7 +15,7 @@ Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系
 - 存储：建议使用 SSD，且可用磁盘空间不少于 64GB
 - 支持的系统版本：PVE 8.2.2
 
-::: tip 版本兼容性
+:::info 版本兼容性
 虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
 :::
 
