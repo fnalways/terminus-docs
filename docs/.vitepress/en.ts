@@ -122,6 +122,10 @@ const side = {
           link: "/manual/use-cases/comfyui",
         },
         {
+          text: "Ollama",
+          link: "/manual/use-cases/ollama",
+        },
+        {
           text: "Open WebUI",
           link: "/manual/use-cases/openwebui",
         },
