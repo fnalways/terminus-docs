@@ -162,7 +162,7 @@ To restart the container after it has been stopped:
 ```bash
 docker compose start
 ```
-It may take 6 to 7 minutes for all services to fully initialize after restarting. Please wait before verifying the container's functionality.
+It may take 6 to 7 minutes for all services to fully initialize after restarting.
 
 ### Uninstall the container
 To uninstall the container:
