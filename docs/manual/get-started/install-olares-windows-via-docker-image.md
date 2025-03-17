@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: A step-by-step guide to installing and running Olares on Windows using WSL 2 and Docker, including system preparation, configuration, and container management.
+description: Learn how to run Olares on Windows using WSL 2 and Docker, including system preparation, configuration, and container management.
 ---
 # Install Olares on Windows (WSL 2) with Docker image
 

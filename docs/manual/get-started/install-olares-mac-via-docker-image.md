@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: Instructions for running Olares as a containerized application using Docker including image setup and container configuration.
+description: Learn how to run Olares as a containerized application on Mac with Docker, covering image setup and container configuration.
 ---
 # Install Olares on Mac with Docker image
 

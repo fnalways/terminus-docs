@@ -1,6 +1,6 @@
 ---
 outline: [2, 3]
-description: 本指南详细介绍如何通过 WSL 2 和 Docker 在 Windows 上安装和运行 Olares，包括系统准备、环境配置以及容器管理。
+description: 了解如何通过 WSL 2 和 Docker 在 Windows 上安装和运行 Olares，包括系统准备、环境配置以及容器管理。
 ---
 # 使用 Docker 镜像在 Windows 上安装 Olares
 
