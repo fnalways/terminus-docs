@@ -41,6 +41,20 @@ const side = {
           link: "/manual/get-started/install-olares",
           items: [
               {
+                text: "General Linux",
+                collapsed: true,
+                items: [
+                    {
+                      text: "Using the script (recommended)",
+                      link: "/manual/get-started/install-olares-linux",
+                    },
+                  {
+                    text: "Using Docker Compose",
+                    link: "/manual/get-started/install-olares-linux-via-docker-compose",
+                  },
+                ],
+              },
+              {
                 text: "macOS",
                 collapsed: true,
                 items: [
@@ -68,20 +82,6 @@ const side = {
                   },
                 ],
               },
-            {
-              text: "General Linux",
-              collapsed: true,
-              items: [
-                  {
-                    text: "Using the script (recommended)",
-                    link: "/manual/get-started/install-olares-linux",
-                  },
-                {
-                  text: "Using Docker Compose",
-                  link: "/manual/get-started/install-olares-linux-via-docker-compose",
-                },
-              ],
-            },
             { text: "PVE", link: "/manual/get-started/install-olares-pve" },
             { text: "LXC", link: "/manual/get-started/install-olares-lxc" },
             {

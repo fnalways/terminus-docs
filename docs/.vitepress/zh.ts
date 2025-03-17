@@ -41,6 +41,20 @@ const side = {
           link: "/zh/manual/get-started/install-olares",
           items: [
               {
+                text: "通用 Linux",
+                collapsed: true,
+                items: [
+                    {
+                      text: "使用脚本（推荐）",
+                      link: "/zh/manual/get-started/install-olares-linux",
+                    },
+                  {
+                    text: "使用 Docker Compose",
+                    link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
+                  },
+                ],
+              },
+              {
                 text: "macOS",
                 collapsed: true,
                 items: [
@@ -68,21 +82,6 @@ const side = {
                   },
                 ],
               },
-            {
-              text: "通用 Linux",
-              collapsed: true,
-              items: [
-                  {
-                    text: "使用脚本（推荐）",
-                    link: "/zh/manual/get-started/install-olares-linux",
-                  },
-                {
-                  text: "使用 Docker Compose",
-                  link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
-                },
-
-              ],
-            },
                 { text: "PVE", link: "/zh/manual/get-started/install-olares-pve" },
                 { text: "LXC", link: "/zh/manual/get-started/install-olares-lxc" },
                 {
