@@ -2,15 +2,9 @@
 description: 在 LXC 容器环境中安装配置 Olares 的完整步骤，包括容器设置、系统要求和激活方法。
 ---
 # 在 Linux 容器（LXC）中安装 Olares
-Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
-
-- **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
-- **虚拟化平台**：Proxmox VE（PVE，基于 Debian）、PVE LXC（PVE 上运行的 Linux 容器）。
-
-## 系统要求
-
 LXC 是一种轻量级的虚拟化技术，可以在隔离的容器中运行应用程序。在 PVE 环境下使用 LXC 部署 Olares 能够避免完整虚拟机的额外开销，提供了一种更高效的部署方式。
 
+## 系统要求
 请确保设备满足以下配置要求：
 
 - CPU：4 核及以上

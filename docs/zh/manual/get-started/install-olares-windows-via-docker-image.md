@@ -3,7 +3,6 @@ outline: [2, 3]
 description: 了解如何通过 WSL 2 和 Docker 在 Windows 上安装和运行 Olares，包括系统准备、环境配置以及容器管理。
 ---
 # 使用 Docker 镜像在 Windows 上安装 Olares
-
 你可以通过 Docker 可以在容器化环境中安装和运行 Olares。本文将带你了解：如何使用 Docker 和 WSL 2 设置 Olares，准备安装环境，完成激活流程，并管理容器的生命周期。
 
 :::info
@@ -22,6 +21,7 @@ Windows 设备需满足以下条件：
 - 支持的系统：
     - Windows 10 或 11
     - Linux（WSL 2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
+
 ## 开始前的准备
 开始安装前，请确保：
 - 系统中已安装并运行 [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)。
@@ -29,6 +29,12 @@ Windows 设备需满足以下条件：
    如果 Docker Desktop 的模式为 **Hyper-V**，则无法启用 Olares 的 GPU 支持。请确保 Docker Desktop 在 **WSL 2** 模式下运行。  
    :::
 - 已知当前设备的 IP 地址。
+  ::: tip 查看 IP 地址
+  在 PowerShell 或命令提示符中，使用下列命令确认 IP 地址：
+  ```bash
+  ifconfig
+  ```
+  :::
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 配置 WSL 2
@@ -45,11 +51,10 @@ Windows 设备需满足以下条件：
    DXCore 版本： 10.0.26100.1-240331-1435.ge-release
    Windows 版本： 10.0.26100.3475
    ```
-2. 下载与 WSL 内核版本相匹配的文件：`https://cdn.joinolares.cn/bzImage-<内核版本号>`.
-  例如，`5.15.167.4-1` 版本对应的链接是 `https://cdn.joinolares.cn/bzImage-5.15.167.4`.
+2. 下载与 WSL 内核版本相匹配的文件：`https://cdn.joinolares.cn/bzImage-<内核版本号>`。
+  例如，`5.15.167.4-1` 版本对应的链接是 [https://cdn.joinolares.cn/bzImage-5.15.167.4](https://cdn.joinolares.cn/bzImage-5.15.167.4)。
 
    目前支持以下内核版本（`5.15.146.1` 及以上）：
-   :::details
    -  `linux-msft-wsl-5.15.146.1`
    -  `linux-msft-wsl-5.15.150.1`
    -  `linux-msft-wsl-5.15.153.1`
@@ -57,7 +62,6 @@ Windows 设备需满足以下条件：
    -  `linux-msft-wsl-6.6.75.1`
    -  `linux-msft-wsl-6.6.36.6`
    -  `linux-msft-wsl-6.6.36.3`
-      :::
 3. 设置 WSL 使用的默认版本：
    ```bash
    wsl --set-default-version 2
@@ -98,7 +102,7 @@ Windows 设备需满足以下条件：
 3. 点击 **Apply & restart** 使变更生效。
 
 ## 运行 `olaresd-proxy`
-1. 下载 `olaresd-proxy`：https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-windows-amd64.tar.gz 。
+1. 下载 `olaresd-proxy`：[https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-windows-amd64.tar.gz](https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-windows-amd64.tar.gz)。
 2. 解压文件，打开 `olaresd-proxy`。
    :::info 保持 `olaresd-proxy` 在后台运行
    在安装和激活 Olares 的整个过程中，确保 `olaresd-proxy` 在后台运行。
@@ -150,7 +154,7 @@ docker run --gpus all -d --privileged -v oic-data:/var \
 容器启动后，你会看到一个容器 ID。
 
 :::warning 请勿添加 `--rm` 参数
-`--rm` 参数会在容器停止后自动删除容器。如果发生这种情况，将无法重新启动容器，必须重新安装 Olares 才能再次运行。不使用此参数可以在停止后保留容器，让你能够通过 docker start 命令恢复运行。
+`--rm` 参数会在容器停止后自动删除容器。如果发生这种情况，将无法重新启动容器，必须重新安装 Olares 才能再次运行。不使用此参数可以在停止后保留容器，让你能够通过 `docker start` 命令恢复运行。
 :::
 
 <!--@include: ./install-and-activate-olares.md-->

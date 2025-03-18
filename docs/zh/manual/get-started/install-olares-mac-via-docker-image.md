@@ -24,23 +24,30 @@ Mac 设备需满足以下条件：
 开始安装前，请确保：
 - 系统中已安装并运行 [Docker](https://docs.docker.com/engine/install/)。
 - 已知当前设备的 IP 地址。
+  ::: tip 查看 IP 地址
+  要查看 Mac 的 IP 地址，可以使用两种方式:
+  - 使用图形界面：打开**系统设置**（或**系统偏好设置**）> **网络**，在当前活动的网络连接中查看详细信息。
+  - 使用命令行：打开终端窗口，Wi-Fi 网络输入 `ipconfig getifaddr en0`，有线网络输入 `ipconfig getifaddr en1`。
+  :::
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 运行 `olaresd-proxy`
-
+::: tip 确认 Mac 芯片  
+如果你不确定 Mac 所使用的芯片，请点击苹果菜单并选择**关于本机**，查看芯片类型。
+:::
 <tabs>
-<template #Intel>
+<template #M-系列芯片>
 
-1. 下载`olaresd-proxy`：https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-darwin-amd64.tar.gz 。
+1. 下载`olaresd-proxy`：https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-darwin-arm64.tar.gz 。
 2. 解压文件，启动 `olaresd-proxy`。
    :::info 保持 `olaresd-proxy` 在后台运行
    在 Olares 安装和激活期间，保证 `olaresd-proxy` 在后台运行。
    :::
 </template>
 
-<template #Apple-Silicon>
+<template #Intel-芯片>
 
-1. 下载`olaresd-proxy`：https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-darwin-arm64.tar.gz 。
+1. 下载`olaresd-proxy`：https://cdn.joinolares.cn/olaresd-proxy-v0.1.0-darwin-amd64.tar.gz 。
 2. 解压文件，启动 `olaresd-proxy`。
    :::info 保持 `olaresd-proxy` 在后台运行
    在 Olares 安装和激活期间，保证 `olaresd-proxy` 在后台运行。
@@ -51,7 +58,7 @@ Mac 设备需满足以下条件：
 ## 更新 Docker 的镜像源
 添加 Olares 的镜像源，提高镜像拉取速度。以 Docker Desktop 为例：
 1. 打开 Docker Desktop，选择 **Settings** > **Docker Engine**。
-2. 修改 Docker daemon 的 json 文件，添加镜像源：
+2. 修改 Docker daemon 的 `json` 文件，添加镜像源：
    ```json{9-11}
    {
      "builder": {
@@ -73,6 +80,7 @@ Mac 设备需满足以下条件：
 执行以下命令来拉取 Olares 的镜像。
 
 将 `<host ip>` 替换为设备的 IP 地址，将 `<olares version>-cn` 替换为想要使用的 Olares 版本：
+
 ```bash{2,9}
 docker run -d --privileged -v oic-data:/var \
   -e HOST_IP=<host ip> \

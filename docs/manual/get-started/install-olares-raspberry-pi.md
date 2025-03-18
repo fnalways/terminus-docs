@@ -2,10 +2,7 @@
 description: Complete guide to installing Olares on Raspberry Pi including hardware requirements, installation process, and system activation steps.
 ---
 # Install Olares on Raspberry Pi
-Olares is designed to run on Linux-based systems and has been verified on the following platforms:
-
-- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
-- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
+This guide explains how to install Olares on a Raspberry Pi.
 
 ## System requirements
 Make sure your Raspbian device meets the following requirements.

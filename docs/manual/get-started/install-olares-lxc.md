@@ -2,15 +2,9 @@
 description: Instructions for installing Olares on Linux Containers (LXC) including container setup, system requirements, and activation steps.
 ---
 # Install Olares on LXC
-Olares is designed to run on Linux-based systems and has been verified on the following platforms:
-
-- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
-- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
-
-## System requirements
-
 LXC (Linux Containers) is a lightweight virtualization method that runs applications in isolated containers. When used on PVE, it enables an efficient way to deploy Olares without the overhead of a full virtual machine.
 
+## System requirements
 Make sure your device meets the following requirements.
 
 - CPU: At least 4 cores

@@ -2,10 +2,7 @@
 description: 使用树莓派安装配置 Olares 的完整步骤，包括硬件要求、安装命令和系统设置。
 ---
 # 在树莓派上安装 Olares
-Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
-
-- **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
-- **虚拟化平台**：Proxmox VE（PVE，基于 Debian）、PVE LXC（PVE 上运行的 Linux 容器）。
+本文介绍如何在树莓派设备上安装 Olares。
 
 ## 系统要求
 请确保树莓派设备满足以下要求：
