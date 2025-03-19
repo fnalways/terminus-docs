@@ -27,6 +27,13 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 开始安装前，请确保：
 - 系统中已安装并运行 [Docker](https://docs.docker.com/engine/install/) 和 [Docker Compose](https://docs.docker.com/compose/install/)。
 - 已知当前设备的 IP 地址。
+  :::tip 查看 IP 地址
+  如需确认 IP 地址，在终端中运行以下命令：
+  ```bash
+  ip r
+  ```
+  找到以 `default via` 开头的行，对应默认网关和正在使用的网络接口。
+  :::
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 创建文件夹
@@ -37,94 +44,20 @@ mkdir ~/olares-config
 cd ~/olares-config
 ```
 ## 准备 `docker-compose.yaml`
-1. 在 `olares-config` 目录中创建 `docker-compose.yaml` 文件：
-   ```bash
-   nano docker-compose.yaml
-   ```
-2. 添加以下内容：
-   ::: code-group
-   ```yaml  [无 GPU]
-   services:
-    olares:
-    image: beclab/olares:${VERSION}
-    privileged: true
-    volumes:
-    - oic-data:/var
-    ports:
-      - "80:80"    
-      - "443:443"    
-      - "30180:30180"    
-      - "18088:18088"    
-      - "41641:41641/udp"
-      environment:
-      - HOST_IP=${HOST_IP}
-    
-    olaresd-proxy:
-    image: beclab/olaresd:proxy-v0.1.0
-    network_mode: host
-    depends_on:
-    olares:
-    condition: service_started
-    
-    volumes:
-    oic-data:
-   ```
-   ```yaml [支持 GPU]
-    services:
-    olares:
-    image: beclab/olares:${VERSION}
-    privileged: true
-    volumes:
-    - oic-data:/var
-    ports:
-      - "80:80"    
-      - "443:443"    
-      - "30180:30180"    
-      - "18088:18088"    
-      - "41641:41641/udp"
-      environment:
-      - HOST_IP=${HOST_IP}
-      deploy:
-      resources:
-      reservations:
-      devices:
-      - driver: nvidia
-      count: 1
-      capabilities: [gpu]
-    
-    olaresd-proxy:
-    image: beclab/olaresd:proxy-v0.1.0
-    network_mode: host
-    depends_on:
-    olares:
-    condition: service_started
-    
-    volumes:
-    oic-data:
-   ```
+1. 在 `olares-config` 目录中创建 `docker-compose.yaml` 文件。
+2. 根据是否启用 GPU，填入对应的内容：
+   :::code-group
+   <<< @/code-snippets/docker-compose.yaml
+   <<< @/code-snippets/docker-compose-GPU.yaml
    :::
-3. 依次按下 `CTRL+O`、`ENTER` 及 `CTRL+X` 保存文件。
+3. 保存 `docker-compose.yaml` 文件。
 
 ## 更新 Docker 的镜像源
 添加 Olares 的镜像源，提高镜像拉取速度：
-1. 打开 `/etc/docker/daemon.json` 文件：
-   ```bash
-   sudo nano /etc/docker/daemon.json
-   ```
-   :::info
-   如果文件不存在，nano 会自动创建一个新的文件。
-   :::
+1. 打开 `/etc/docker/daemon.json` 文件。
 2. 编辑文件，加上以下内容：
-   ```json
-   {
-    "registry-mirrors": [
-        "https://mirrors.joinolares.cn"
-    ],
-   "features": {
-   "containerd-snapshotter": false
-   }
-   }
-   ```
+
+   <<< @/code-snippets/docker-daemon.json
 3. 重启 Docker 服务以应用更改。
    ```bash
    sudo systemctl restart docker
@@ -136,7 +69,7 @@ cd ~/olares-config
    在输出的结果中，如输出结果包含如下内容，表示修改成功：
 
    ```bash
-    Registry Mirrors:
+   Registry Mirrors:
    https://mirrors.joinolares.cn/
    ```
 ## 设置环境变量并启动容器
@@ -179,9 +112,9 @@ cd ~/olares-config
    ```
    输出结果如下：
    ```bash
-    CONTAINER ID   IMAGE                       COMMAND                  STATUS          PORTS
-    <container_id> beclab/olares:<version>     "/start.sh"             Up 2 minutes   0.0.0.0:80->80/tcp, ...
-    <container_id> beclab/olaresd:proxy-v0.1.0 "/proxy.sh"             Up 2 minutes   Host
+   CONTAINER ID   IMAGE                         COMMAND                  CREATED              STATUS              PORTS                   NAMES
+   28e86c473750   beclab/olaresd:proxy-v0.1.0   "/mdns-agent"            About a minute ago   Up About a minute                           olares-olaresd-proxy-1
+   5fd68a8709ad   beclab/olares:1.11.5-cn       "/usr/local/bin/entr…"   2 minutes ago        Up About a minute   0.0.0.0:80->80/tcp...   olares-olares-1
    ```
 
 <!--@include: ./install-and-activate-olares.md-->

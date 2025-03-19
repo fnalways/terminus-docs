@@ -2,11 +2,8 @@
 description: Detailed instructions for installing Olares on Linux systems including Ubuntu and Debian. Covers system requirements, installation steps, and activation process.
 ---
 # Install Olares on Linux via the script
-Olares is designed to run on Linux-based systems and has been verified on the following platforms:
+This guide explains how to install Olares on Linux using the provided installation script.
 
-- Linux distributions: Debian, Ubuntu, Raspbian (a Debian-based system for Raspberry Pi)
-- Virtualization platforms: Proxmox VE (PVE, Debian-based), LXC on PVE.
-  
 ## System requirements
 
 Make sure your device meets the following requirements.

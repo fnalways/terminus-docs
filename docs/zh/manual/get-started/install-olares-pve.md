@@ -2,10 +2,7 @@
 description: 在 PVE 虚拟化平台上安装配置 Olares 的完整步骤，包括系统要求、安装命令和激活过程。
 ---
 # 在 PVE 上安装 Olares
-Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
-
-- **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
-- **虚拟化平台**：Proxmox VE（PVE，基于 Debian）、PVE LXC（PVE 上运行的 Linux 容器）。
+Proxmox 虚拟环境（PVE）是一个基于 Debian Linux 的开源虚拟化平台。本文将介绍如何在 PVE 环境中安装 Olares。
 
 ## 系统要求
 请确保设备满足以下配置要求：

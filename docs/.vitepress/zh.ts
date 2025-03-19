@@ -59,26 +59,26 @@ const side = {
                 collapsed: true,
                 items: [
                   {
-                    text: "使用 Docker 镜像（推荐）",
-                    link: "/zh/manual/get-started/install-olares-mac-via-docker-image",
+                    text: "使用脚本（推荐）",
+                    link: "/zh/manual/get-started/install-olares-mac",
                   },
                   {
-                    text: "使用脚本",
-                    link: "/zh/manual/get-started/install-olares-mac",
+                    text: "使用 Docker 镜像",
+                    link: "/zh/manual/get-started/install-olares-mac-via-docker-image",
                   },
                 ],
               },
               {
-                text: "Windows (WSL)",
+                text: "Windows (WSL 2)",
                 collapsed: true,
                 items: [
                   {
-                    text: "使用 Docker 镜像（推荐）",
-                    link: "/zh/manual/get-started/install-olares-windows-via-docker-image",
+                    text: "使用脚本（推荐）",
+                    link: "/zh/manual/get-started/install-olares-windows",
                   },
                   {
-                    text: "使用脚本",
-                    link: "/zh/manual/get-started/install-olares-windows",
+                    text: "使用 Docker 镜像",
+                    link: "/zh/manual/get-started/install-olares-windows-via-docker-image",
                   },
                 ],
               },
@@ -301,7 +301,7 @@ const side = {
             },
             {
               text: "修改 Hosts 配置",
-              link: "/manual/tasks/set-up-hosts",
+              link: "/zh/manual/tasks/set-up-hosts",
             },
             {
               text: "升级",

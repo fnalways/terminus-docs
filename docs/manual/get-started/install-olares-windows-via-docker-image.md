@@ -3,8 +3,8 @@ outline: [2, 3]
 description: Learn how to run Olares on Windows using WSL 2 and Docker, including system preparation, configuration, and container management.
 ---
 # Install Olares on Windows (WSL 2) with Docker image
-
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker and WSL 2, preparing the installation environment, completing the activation process, and managing the container lifecycle.
+
 :::info
 Currently, Olares on Windows has certain limitations including:
 - Lack of distributed storage support
@@ -12,6 +12,7 @@ Currently, Olares on Windows has certain limitations including:
 
 We recommend using it only for development or testing purposes.
 :::
+
 ## System requirements
 Make sure your Windows meets the following requirements.
 - CPU: At least 4 cores
@@ -28,6 +29,12 @@ Before you begin, ensure the following:
   If Docker Desktop is configured to use **Hyper-V**, GPU support for Olares cannot be enabled. Ensure Docker Desktop is set to run in the **WSL 2** mode.
   :::
 - You know the IP address of the current device.
+  ::: tip View IP Address
+  In PowerShell or Command Prompt, use the following command to confirm your IP address:
+  ```bash
+  ipconfig | findstr /i "IPv4.*192"
+  ```
+    :::
 - You have [created an Olares ID via LarePass](create-olares-id.md).
 
 ## Configure WSL 2
@@ -48,7 +55,6 @@ Before you begin, ensure the following:
    For example, For kernel version `5.15.167.4`, download the file from `https://dc3p1870nn3cj.cloudfront.net/bzImage-5.15.167.4`.
 
    Supported kernel versions (above `5.15.146.1`) are:
-   :::details
    -  `linux-msft-wsl-5.15.146.1`
    -  `linux-msft-wsl-5.15.150.1`
    -  `linux-msft-wsl-5.15.153.1`
@@ -56,7 +62,6 @@ Before you begin, ensure the following:
    -  `linux-msft-wsl-6.6.75.1`
    -  `linux-msft-wsl-6.6.36.6`
    -  `linux-msft-wsl-6.6.36.3`
-   :::
 3. Set the default version of WSL to version 2:
   ```bash
   wsl --set-default-version 2
@@ -132,7 +137,6 @@ where:
 
 When the container is running, you will see a container ID output.
 
-:::
 :::warning Do not add the `--rm` flag
 The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.
 :::

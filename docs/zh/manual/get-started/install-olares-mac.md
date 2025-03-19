@@ -2,6 +2,7 @@
 description: 在 Mac 系统上安装配置 Olares 的完整步骤，包括环境准备、安装过程和系统激活。
 ---
 # 在 Mac 上使用脚本安装 Olares
+本文介绍如何在 Mac 上使用脚本安装 Olares。
 
 :::info
 Mac 版 Olares 目前存在以下限制：
@@ -11,9 +12,6 @@ Mac 版 Olares 目前存在以下限制：
 建议仅用于开发或测试环境。
 :::
 
-:::tip
-推荐[使用 Docker 在 Mac 上安装 Olares](install-olares-mac-via-docker-image.md)。
-:::
 ## 系统要求
 Mac 设备需满足以下条件：
 - 处理器架构：X86-64 或 ARM64
@@ -23,9 +21,8 @@ Mac 设备需满足以下条件：
 
 ## 前置准备
 请确保已安装以下软件：
-- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fhomebrew)
-  
   ::: tip
   推荐通过 `homebrew` 安装 minikube。
   :::

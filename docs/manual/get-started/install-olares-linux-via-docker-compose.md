@@ -5,9 +5,6 @@ description: Learn how to deploy Olares on a Linux server using Docker Compose. 
 # Install Olares on Linux using Docker Compose
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 
-:::tip
-It's recommended to [install Olares on Linux using script](install-olares-linux.md)。
-:::
 ## System requirements
 
 Make sure your device meets the following requirements.
@@ -23,10 +20,17 @@ Make sure your device meets the following requirements.
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 
-## Before you start
+## Before you begin
 Before you begin, ensure the following:
 - [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed and running on your system.
 - You know the IP address of the current device.
+  :::tip Verify host IP
+  To verify your host IP, run the following command in the terminal:
+  ```bash
+  ip r
+  ```
+  Look for the line starting with `default via`. It will show the default gateway and the network interface being used.
+  :::
 - You have [created an Olares ID via LarePass](create-olares-id.md).
 
 ## Create a new directory
@@ -37,73 +41,13 @@ mkdir ~/olares-config
 cd ~/olares-config
 ```
 ## Prepare `docker-compose.yaml`
-1. Create a `docker-compose.yaml` file in the `olares-config` directory:
-   ```bash
-   nano docker-compose.yaml
-   ```
-2. Add the following content to the file:
-   ::: code-group
-   ```yaml [Without GPU support]
-   services:
-    olares:
-    image: beclab/olares:${VERSION}
-    privileged: true
-    volumes:
-    - oic-data:/var
-    ports:
-      - "80:80"    
-      - "443:443"    
-      - "30180:30180"    
-      - "18088:18088"    
-      - "41641:41641/udp"
-      environment:
-      - HOST_IP=${HOST_IP}
-    
-    olaresd-proxy:
-    image: beclab/olaresd:proxy-v0.1.0
-    network_mode: host
-    depends_on:
-    olares:
-    condition: service_started
-    
-    volumes:
-    oic-data:
-   ```
-   ```yaml [With GPU support]
-    services:
-    olares:
-    image: beclab/olares:${VERSION}
-    privileged: true
-    volumes:
-    - oic-data:/var
-    ports:
-      - "80:80"    
-      - "443:443"    
-      - "30180:30180"    
-      - "18088:18088"    
-      - "41641:41641/udp"
-      environment:
-      - HOST_IP=${HOST_IP}
-      deploy:
-      resources:
-      reservations:
-      devices:
-      - driver: nvidia
-      count: 1
-      capabilities: [gpu]
-    
-    olaresd-proxy:
-    image: beclab/olaresd:proxy-v0.1.0
-    network_mode: host
-    depends_on:
-    olares:
-    condition: service_started
-    
-    volumes:
-    oic-data:
-   ```
+1. Create a `docker-compose.yaml` file in the `olares-config` directory.
+2. Add the appropriate content to the file based on whether GPU support is required:
+   :::code-group
+   <<< @/code-snippets/docker-compose.yaml
+   <<< @/code-snippets/docker-compose-GPU.yaml
    :::
-3. Save and exit the file by pressing `CTRL+O`, `ENTER`, and `CTRL+X`.
+3. Save the `docker-compose.yaml` file.
 
 ## Set up environment variables and start container
 

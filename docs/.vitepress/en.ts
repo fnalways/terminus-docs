@@ -59,26 +59,26 @@ const side = {
                 collapsed: true,
                 items: [
                   {
-                    text: "Using Docker image (recommended)",
-                    link: "/manual/get-started/install-olares-mac-via-docker-image",
+                    text: "Using the script (recommended)",
+                    link: "/manual/get-started/install-olares-mac",
                   },
                   {
-                    text: "Using the script",
-                    link: "/manual/get-started/install-olares-mac",
+                    text: "Using Docker image",
+                    link: "/manual/get-started/install-olares-mac-via-docker-image",
                   },
                 ],
               },
               {
-                text: "Windows (WSL)",
+                text: "Windows (WSL 2)",
                 collapsed: true,
                 items: [
                   {
-                    text: "Using Docker image (recommended)",
-                    link: "/manual/get-started/install-olares-windows-via-docker-image",
+                    text: "Using the script (recommended)",
+                    link: "/manual/get-started/install-olares-windows",
                   },
                   {
-                    text: "Using the script",
-                    link: "/manual/get-started/install-olares-windows",
+                    text: "Using Docker image",
+                    link: "/manual/get-started/install-olares-windows-via-docker-image",
                   },
                 ],
               },

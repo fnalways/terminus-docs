@@ -2,10 +2,8 @@
 description: 在 Linux 系统 Ubuntu 和 Debian 上安装配置 Olares 的完整步骤，包括系统要求、安装命令和激活流程。
 ---
 # 在 Linux 上使用脚本安装 Olares
-Olares 主要运行在基于 Linux 的系统上。目前以验证可运行的系统有：
+本文介绍如何在 Linux 上使用脚本安装 Olares。
 
-- **Linux 发行版**：Debian、Ubuntu、Raspbian（基于 Debian 的树莓派系统）。
-- **虚拟化平台**：Proxmox VE（PVE，基于 Debian）、PVE LXC（PVE 上运行的 Linux 容器）。
 ## 系统要求
 
 请确保设备满足以下配置要求：

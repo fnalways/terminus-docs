@@ -3,6 +3,7 @@ outline: [2, 3]
 description: Guide to installing Olares on Windows using WSL (Windows Subsystem for Linux) including setup requirements and activation steps.
 ---
 # Install Olares on Windows via the script
+This guide explains how to install Olares on Windows (WSL 2) using the provided installation script.
 
 :::info
 Currently, Olares on Windows has certain limitations including:
@@ -10,10 +11,6 @@ Currently, Olares on Windows has certain limitations including:
 - Inability to add local nodes.
 
 We recommend using it only for development or testing purposes.
-:::
-
-:::tip
-It's recommended to [install Olares on Windows using Docker](install-olares-windows-via-docker-image.md).
 :::
 
 ## System compatibility

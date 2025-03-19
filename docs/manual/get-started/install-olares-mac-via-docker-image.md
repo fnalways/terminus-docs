@@ -3,7 +3,6 @@ outline: [2, 3]
 description: Learn how to run Olares as a containerized application on Mac with Docker, covering image setup and container configuration.
 ---
 # Install Olares on Mac with Docker image
-
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 
 :::info
@@ -25,23 +24,30 @@ Make sure your device meets the following requirements.
 Before you begin, ensure the following:
 - [Docker](https://www.docker.com/) is installed and running on your system.
 - You know the IP address of the current device.
+  ::: tip View IP Address
+  To view the IP address on a Mac, there are two methods:
+   - Using the graphical interface: Open **System Settings** (or **System Preferences**) > **Network**, and check the details under the currently active network connection.
+   - Using the command line: Open a terminal window and enter `ipconfig getifaddr en0` for Wi-Fi, or `ipconfig getifaddr en1` for wired network.
+     :::
 - You have [created an Olares ID via LarePass](create-olares-id.md).
 
 ## Run `olaresd-proxy`
-
+::: tip Check Mac chip  
+If you are unsure which chip your Mac is using, go to the Apple menu and select **About This Mac** to verify.
+:::
 <tabs>
-<template #Intel>
+<template #Apple-Silicon>
 
-1. Download `olaresd-proxy` via the link: https://dc3p1870nn3cj.cloudfront.net/olaresd-proxy-v0.1.0-darwin-amd64.tar.gz .
+1. Download `olaresd-proxy` via the link: https://dc3p1870nn3cj.cloudfront.net/olaresd-proxy-v0.1.0-darwin-arm64.tar.gz .
 2. Unzip the file, then start `olaresd-proxy`.
    :::info Keep `olaresd-proxy` running in the background
    During Olares installation and activation, keep `olaresd-proxy` running in the background.
    :::
 </template>
 
-<template #Apple-Silicon>
+<template #Intel>
 
-1. Download `olaresd-proxy` via the link: https://dc3p1870nn3cj.cloudfront.net/olaresd-proxy-v0.1.0-darwin-arm64.tar.gz .
+1. Download `olaresd-proxy` via the link: https://dc3p1870nn3cj.cloudfront.net/olaresd-proxy-v0.1.0-darwin-amd64.tar.gz .
 2. Unzip the file, then start `olaresd-proxy`.
    :::info Keep `olaresd-proxy` running in the background
    During Olares installation and activation, keep `olaresd-proxy` running in the background.

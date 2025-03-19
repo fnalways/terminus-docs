@@ -3,6 +3,7 @@ outline: [2, 3]
 description: 通过 WSL 在 Windows 系统安装配置 Olares 的完整步骤，包括环境要求和激活设置。
 ---
 # 在 Windows 上使用脚本安装 Olares
+本文介绍如何在 Windows （WSL 2）上使用脚本安装 Olares。
 
 :::info
 Windows 版 Olares 目前存在以下限制：
@@ -12,9 +13,6 @@ Windows 版 Olares 目前存在以下限制：
 建议仅用于开发或测试环境。
 :::
 
-:::tip
-推荐[使用 Docker 在 Windows 上安装 Olares](install-olares-windows-via-docker-image.md)。
-:::
 ## 系统要求
 Windows 设备需满足以下条件：
 - CPU：4 核及以上
