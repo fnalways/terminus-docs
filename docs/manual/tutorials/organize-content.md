@@ -103,13 +103,14 @@ Once collected, you can find the content in **Library** > **Articles** in Wise. 
 
 You can share web links to the LarePass mobile client for content collection. For example, to save an article from the Chrome browser on your phone:
 
-1. Tap **<i class="material-symbols-outlined">ios_share</i>Share** in the browser, then select **LarePass** as the sharing destination.
+1. Tap **<i class="material-symbols-outlined">ios_share</i>Share** in the browser, then either:
+   - Select the LarePass icon in the sharing options, or
+   - Tap **LarePass** in **Other Actions**
+   
 2. Open the LarePass app. LarePass will automatically detect the collectable content on the shared page and prompt whether to add it to Wise.
 3. Tap **Confirm** to add it to the Wise library.
 
-![LarePass share](/images/manual/tutorials/wise-share-to-larepass.png#bordered)
-
-::: tip 
+::: tip Copy URL to share
 Alternatively, you can copy the URL directly and open LarePass. LarePass will automatically detect the URL in the clipboard and the collectable content as well.
 :::
 

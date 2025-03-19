@@ -105,10 +105,13 @@ LarePass 扩展目前仅支持 Chrome 浏览器。
 
 你可以将网页链接分享到 LarePass 移动客户端来收集内容。此处以 iOS 上收藏微信公众号文章为例：
 
-![LarePass 分享](/images/zh/manual/tutorials/wise-larepass-share.png#bordered)
 1. 打开公众号文章，点击公众号文章右上角的 <i class="material-symbols-outlined">more_horiz</i> 按钮，选择在**默认浏览器中打开**。
-2. 点击浏览器的分享按钮 <i class="material-symbols-outlined">ios_share</i>，选择 LarePass 为分享对象。
-3. LarePass 会自动检测待分享页面的内容，并提示是否要添加至 Wise。点击**确认**。
+2. 点击浏览器的分享按钮 <i class="material-symbols-outlined">ios_share</i>，选择 LarePass 为分享对象。你可以：
+   - 在分享选项中选择 LarePass 的图标，或者
+   - 在**其他操作**栏中选择 **LarePass**
+
+3. LarePass 会自动检测待分享页面的内容，并提示是否要添加至 Wise。
+4. 点击**确认**添加。
 
 ::: tip 复制 URL 分享
 你也可以直接复制网页 URL 并打开 LarePass。LarePass 会自动检测剪贴板中的 URL 和可收藏的内容。
