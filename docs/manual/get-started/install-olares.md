@@ -14,9 +14,4 @@ You can install Olares using one of the following approaches:
 - **Using the script**: Install Olares directly on your system using a simple installation script.
 - **Using Docker image**: Run Olares as a containerized application without installing it directly on your machine.
 
-:::info Troubleshooting installation issues
-If any issues arise during installation, report them by [creating a GitHub issue](https://github.com/beclab/Olares/issues/new). Include the following details:
-- The platform or environment being used (e.g., Ubuntu, Docker, WSL, etc.).
-- The installation method (script or Docker image).
-- Detailed error information (including logs, error messages, or screenshots).
-:::
+<!--@include: .installation-troubleshooting.md{4,9}-->
