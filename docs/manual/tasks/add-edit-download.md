@@ -6,8 +6,10 @@ Operations in Files are essentially the same as in other file managers. This pag
 
 ## Upload files
 
+### Upload via the Files app
 1. Open the Files app from the Dock or Launchpad on Olares.
-2. Upload multiple files or folders using one of these methods:
+2. In the left sidebar, select the directory where you want to upload files. For example, **Documents**.
+3. Upload multiple files or folders using one of these methods:
    - Drag and drop files from your local file manager into the Files window. 
    - Click <i class="material-symbols-outlined">drive_folder_upload</i> in the top right corner. 
    - Right-click in an empty space and select from the context menu.
@@ -15,6 +17,40 @@ Operations in Files are essentially the same as in other file managers. This pag
 :::info
 Files supports resumable uploads. If an upload is interrupted, it will automatically resume from the last checkpoint.
 :::
+
+### Upload via LarePass desktop
+:::info Import your Olares ID
+To start using LarePass desktop, you must import your Olares ID by pasting your mnemonics. Make sure you have [backed up your mnemonics](../get-started/back-up-mnemonics.md).
+:::
+LarePass desktop offers the same upload experience as the Files app, with automatic syncing to your Olares ID.
+
+### Upload via LarePass mobile
+You can also upload files or folders on your phone via the LarePass app.
+<Tabs>
+<template #Direct-upload>
+
+1. Open LarePass app and navigate to the **Files** tab.
+2. Select the directory where you want to upload files.
+3. Tap <i class="material-symbols-outlined">add_circle</i> in the bottom-right corner, and select one of the following upload options:
+   - **File**. Select this to upload individual files.
+   - **Image/Video**. Select this option when uploading pictures or videos to the **Pictures** folder.
+   - **Create folder**. Select this option if you want to organize your files into a new folder before uploading.
+4. Follow the on-screen instructions to complete the upload.
+</template>
+
+<template #Share-to-upload>
+
+This method allows you to quickly upload files or media via your phone's sharing options.
+1. Revoke the share action for the file.
+2. Select the LarePass icon in the sharing options, or select **LarePass** in the **Other actions** menu. You will be directed to the LarePass app.
+3. In the LarePass app, select the destination for your upload:
+   - **Drive**: Select this option to upload files to your Drive storage.
+   - **Sync**: Select this option if you want to share files with others.
+4. Follow the on-screen instructions based on the selected upload destination to complete the process.
+</template>
+</Tabs>
+
+Files uploaded via the LarePass mobile app will also sync automatically with your Olares ID.
 
 ## Download files
 When downloading multiple files, the behavior differs between the Files in Olares and LarePass desktop application.
