@@ -20,15 +20,16 @@ Make sure your device meets the following requirements.
 While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
 :::
 
-## Before you start
+## Before you begin
 Before you begin, ensure the following:
 - [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed and running on your system.
 - You know the IP address of the current device.
   :::tip Verify host IP
   To verify your host IP, run the following command in the terminal:
   ```bash
-  hostname -I
+  ip r
   ```
+  Look for the line starting with `default via`. It will show the default gateway and the network interface being used.
   :::
 - You have [created an Olares ID via LarePass](create-olares-id.md).
 

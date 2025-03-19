@@ -12,6 +12,7 @@ Currently, Olares on Windows has certain limitations including:
 
 We recommend using it only for development or testing purposes.
 :::
+
 ## System requirements
 Make sure your Windows meets the following requirements.
 - CPU: At least 4 cores
@@ -31,7 +32,7 @@ Before you begin, ensure the following:
   ::: tip View IP Address
   In PowerShell or Command Prompt, use the following command to confirm your IP address:
   ```bash
-  ifconfig
+  ipconfig | findstr /i "IPv4.*192"
   ```
     :::
 - You have [created an Olares ID via LarePass](create-olares-id.md).
@@ -136,7 +137,6 @@ where:
 
 When the container is running, you will see a container ID output.
 
-:::
 :::warning Do not add the `--rm` flag
 The `--rm` flag automatically deletes the container after it stops. If this happens, you will not be able to restart the container and will need to reinstall Olares to run it again. Omitting this flag preserves the container after stoppage, enabling you to resume it with the`docker start` command.
 :::

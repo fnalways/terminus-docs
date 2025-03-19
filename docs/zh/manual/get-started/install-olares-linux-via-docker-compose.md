@@ -30,8 +30,9 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
   :::tip 查看 IP 地址
   如需确认 IP 地址，在终端中运行以下命令：
   ```bash
-  hostname -I
+  ip r
   ```
+  找到以 `default via` 开头的行，对应默认网关和正在使用的网络接口。
   :::
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 

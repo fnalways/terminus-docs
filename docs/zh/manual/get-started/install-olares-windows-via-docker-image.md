@@ -22,7 +22,7 @@ Windows 设备需满足以下条件：
     - Windows 10 或 11
     - Linux（WSL 2 环境）：Ubuntu 20.04 LTS 及以上；Debian 11 及以上
 
-## 开始前的准备
+## 开始之前
 开始安装前，请确保：
 - 系统中已安装并运行 [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)。
    :::info WSL 2 and Hyper-V
@@ -32,7 +32,7 @@ Windows 设备需满足以下条件：
   ::: tip 查看 IP 地址
   在 PowerShell 或命令提示符中，使用下列命令确认 IP 地址：
   ```bash
-  ifconfig
+  ipconfig | findstr /i "IPv4.*192"
   ```
   :::
 - 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。

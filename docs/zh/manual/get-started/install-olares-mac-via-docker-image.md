@@ -20,7 +20,7 @@ Mac 设备需满足以下条件：
 - 存储空间：可用磁盘空间 90 GB 及以上
 - MacOS 版本：Monterey（12）及以上
 
-## 开始前的准备
+## 开始之前
 开始安装前，请确保：
 - 系统中已安装并运行 [Docker](https://docs.docker.com/engine/install/)。
 - 已知当前设备的 IP 地址。
