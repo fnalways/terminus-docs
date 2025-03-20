@@ -17,3 +17,4 @@ description: 探索丰富的教程资源，学习如何配置和优化 Olares �
 ## 部署和扩展
 
 - [安装多节点 Olares 集群](install-olares-multi-node.md)
+- [设置 SMTP 服务](set-up-SMTP-service.md)
