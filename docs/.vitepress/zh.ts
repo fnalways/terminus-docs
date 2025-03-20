@@ -125,6 +125,10 @@ const side = {
           text: "Krita + ComfyUI 实时绘画",
           link: "/zh/manual/tutorials/comfyui-for-krita",
         },
+        {
+          text: "设置 SMTP 邮件服务",
+          link: "/zh/manual/tutorials/set-up-SMTP-service",
+        },
       ],
     },
     {
