@@ -22,36 +22,37 @@ Once installation is complete, you can access Ollama terminal from the Launchpad
 ## Ollama CLI
 Ollama CLI allows you to manage and interact with AI models directly. Below are the key commands and their usage:
 
-### Run model
+### Download model
 :::tip Check Ollama library
 If you are unsure which model to download, check the [Ollama Library](https://ollama.com/library) to explore available models.
 :::
+To download a model, use the following command:
+```bash
+ollama pull [model]
+```
+
+### Run model
+:::tip
+If the specified model has not been downloaded yet, the `ollama run` command will automatically download it before running.
+:::
+
 To run a model, use the following command:
 ```bash
 ollama run [model]
 ```
 
-For example:
-```bash
-ollama run gemma3:4b
-```
-
 After running the command, you can enter queries directly into the CLI, and the model will generate responses.
 
 When you're finished interacting with the model, type:
-
 ```bash
 /bye
 ```
 This will exit the session and return you to the standard terminal interface.
+
 ### Stop model
 To stop a model that is currently running, use the following command:
 ```bash
 ollama stop [model]
-```
-For example:
-```bash
-ollama stop gemma3:4b
 ```
 
 ### List models
@@ -64,10 +65,6 @@ ollama list
 If you need to delete a model, you can use the following command:
 ```bash
 ollama rm [model]
-```
-For example:
-```bash
-ollama rm gemma3:4b
 ```
 ### Show information for a model
 To display detailed information about a model, use:

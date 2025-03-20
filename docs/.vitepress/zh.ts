@@ -123,7 +123,7 @@ const side = {
         },
         {
           text: "Ollama 下载开源模型",
-          link: "/manual/use-cases/ollama",
+          link: "/zh/manual/use-cases/ollama",
         },
         {
           text: "Open WebUI",

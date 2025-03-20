@@ -11,5 +11,6 @@ While other guides tell you "what" and "how," these use cases reveal the full po
   { title: 'Perplexica', link: './perplexica.html', tags: ['ai']},
   { title: 'Dify', link: './dify.html', tags: ['ai']},
   { title: 'Hubble', link: 'https://blog.olares.xyz/running-farcaster-hubble-on-your-home-cloud/', tags: ['social network']},
+  { title: 'Ollama', link: './ollama.html', tags: ['ai']},
 ]" 
 />
