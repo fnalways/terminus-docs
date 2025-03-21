@@ -110,7 +110,7 @@ The exact steps may vary depending on your operating system and browser. The fol
    - Select the LarePass icon in the sharing options, or
    - Tap **LarePass** in **Other Actions**
    
-   ![收藏到 Wise](/images/manual/tutorials/wise-add-articles-via-share.png#bordered)
+   ![Share to Wise](/images/manual/tutorials/wise-add-articles-via-share.png#bordered)
 
    You will be redirected to the LarePass app. LarePass will automatically detect the collectable content on the shared page and prompt whether to add it to Wise.
 2. Tap **Confirm** to add it to the Wise library.

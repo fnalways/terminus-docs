@@ -19,7 +19,11 @@ Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、
 
 ![Inbox or Read later](/images/manual/tasks/inbox-read-later.png)
 
-### 通过 LarePass 保存网页
+### 通过 LarePass 收藏网页
+
+<tabs>
+<template #LarePass-浏览器扩展>
+
 :::tip 提示
 LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass)下载。
 :::
@@ -28,6 +32,14 @@ LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https
 2. 在**页面**部分，点击 <i class="material-symbols-outlined">add_box</i> 将当前页面保存到你的 Wise 库。
 
 保存后，你可以在 Wise 的**库** > **文章**页面找到该网页。
+</template>
+
+<template #LarePass-移动端>
+
+<!--@include: ../tutorials/wise.reusables.md{15,32}-->
+</template>
+</tabs>
+
 
 ### 手动添加内容
 Wise 支持包括视频、音频、PDF 和电子书在内的多种内容类型：
@@ -64,7 +76,7 @@ Wise 会自动为新的音频或视频内容创建下载任务，将媒体文件
 1. 在列表页面中，点击内容卡片上的 <i class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">sell</i>。
 2. 在标签输入框中，选择或创建与当前内容相关的标签。
 
-![Tags](/images/manual/tasks/tags.png#bordered)
+![标签](/images/manual/tasks/tags.png#bordered)
 
 你可以在<i class="material-symbols-outlined">settings</i> > **标签**页面找到并管理你的标签。
 
@@ -76,7 +88,7 @@ Wise 会自动为新的音频或视频内容创建下载任务，将媒体文件
 
 你可以稍后编辑或删除笔记。
 
-![Notes](/images/manual/tasks/notes.png#bordered)
+![笔记](/images/manual/tasks/notes.png#bordered)
 
 ### 跟踪你的阅读进度
 
@@ -94,3 +106,6 @@ Wise 使用文章封面上的绿色点标识未读内容。当你打开一篇文
 2. 在**主题**选项下，选择你喜欢的显示模式：
    - 浅色
    - 暗黑
+
+## 了解更多
+- [使用 Wise 打造知识中枢](../tutorials/organize-content.md)
