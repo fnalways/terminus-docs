@@ -32,21 +32,27 @@ You can also upload files or folders on your phone via the LarePass app.
 1. Open LarePass app and navigate to the **Files** tab.
 2. Select the directory where you want to upload files.
 3. Tap <i class="material-symbols-outlined">add_circle</i> in the bottom-right corner, and select one of the following upload options:
-   - **File**. Select this to upload individual files.
-   - **Image/Video**. Select this option when uploading pictures or videos to the **Pictures** folder.
-   - **Create folder**. Select this option if you want to organize your files into a new folder before uploading.
+   - **File**: Select from your phone's storage.
+   - **Image/Video**: Select from your phone's gallery.
+   :::tip
+   If you want to organize your uploads, you can create a **Create folder** first.
+   :::
 4. Follow the on-screen instructions to complete the upload.
 </template>
 
 <template #Share-to-upload>
 
+:::info
+The exact steps may vary depending on your operating system and browser.
+:::
+
 This method allows you to quickly upload files or media via your phone's sharing options.
-1. Revoke the share action for the file.
+1. Open the share menu for the file.
 2. Select the LarePass icon in the sharing options, or select **LarePass** in the **Other actions** menu. You will be directed to the LarePass app.
 3. In the LarePass app, select the destination for your upload:
-   - **Drive**: Select this option to upload files to your Drive storage.
-   - **Sync**: Select this option if you want to share files with others.
-4. Follow the on-screen instructions based on the selected upload destination to complete the process.
+   - **drive**: Upload files to your Drive storage for personal use.
+   - **sync**: Upload files to your Sync storage for sharing or synchronization.
+4. Follow the on-screen instructions to complete the process based on your selected target location.
 </template>
 </Tabs>
 
