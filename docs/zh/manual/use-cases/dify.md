@@ -7,8 +7,8 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
 
 ## 开始之前
 要使用本地 AI 模型，请确保你的环境中已配置以下内容：
-- Olares 环境中已安装并运行 Ollama。
-- 已安装 Open WebUI，并下载了你偏好的语言模型。
+- Olares 环境中已安装并运行 [Ollama](ollama.md)。
+- 已安装 [Open WebUI](openwebui.md)，并下载了你偏好的语言模型。
   :::tip 提示
   建议使用 `gemma2` 或 `qwen` 等轻量但功能强大的模型，可在速度和性能间取得良好平衡。
   :::
@@ -30,17 +30,13 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
 
 ## 添加 Ollama 作为模型提供商
 
-1. 配置 Ollama 访问入口。
-   
-   a. 进入**设置** > **应用** > **Ollama** > **入口**，设置 Ollama 的认证级别为“内部”。该设置允许其他应用在本地网络环境下可无需认证即可访问 Ollama 服务。
+1. 进入**设置** > **应用** > **Ollama** > **入口**，设置 Ollama 的认证级别为“内部”。该设置允许其他应用在本地网络环境下可无需认证即可访问 Ollama 服务。
    
    ![Ollama entrance](/images/zh/manual/use-cases/dify-ollama-entrance.png#bordered)
 
-   b. 点击**设置端点**页面，查看 Ollama 的默认路由 ID（`39975b9a`）。这样，我们便得到了 Ollama 的本地访问地址：`https://39975b9a.local.{你的本地名称}.olares.cn`, 如 `https://39975b9a.local.marvin123.olares.cn`。
-
 2. 在 Dify 的 模型提供者商配置页面，选择 Ollama 作为模型提供者商，并进行以下配置：
     - **模型名称**：填写模型名称，例如：`gemma2`。
-    - **基础 URL**：填入上一步获取的 Ollama 本地地址，如 `https://39975b9a.local.marvin123.olares.cn`。
+    - **基础 URL**：填入 Ollama 本地地址: `https://39975b9a1.local.{username}.olares.cn`。将 `{username}` 替换为 Olares 管理员的用户名。例如：`https://39975b9a1.local.marvin123.olares.com`。
    
     ![配置 Ollama](/images/zh/manual/use-cases/dify-add-gemma2.png#bordered){width=70%}
 

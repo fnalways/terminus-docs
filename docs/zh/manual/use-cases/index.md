@@ -10,5 +10,6 @@ description: 了解 Olares 的多种实际应用场景，学习如何将其功�
   { title: 'Open WebUI', link: './openwebui.html', tags: ['AI'] },
   { title: 'Perplexica', link: './perplexica.html', tags: ['AI']},
   { title: 'Dify', link: './dify.html', tags: ['AI']},
+  { title: 'Ollama', link: './ollama.html', tags: ['ai']},
 ]" 
 />

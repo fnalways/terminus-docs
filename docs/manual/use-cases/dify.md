@@ -7,8 +7,8 @@ Dify is an AI application development platform. It's one of the key open-source 
 
 ## Before you begin
 To use local AI models on Dify, ensure you have:
-- Ollama installed and running in your Olares environment
-- Open WebUI installed with your preferred language models downloaded
+- [Ollama installed](ollama.md) and running in your Olares environment.
+- [Open WebUI installed](openwebui.md) with your preferred language models downloaded.
   :::tip
   For optimal performance, consider using lightweight yet powerful models like `gemma2` or `qwen`, which offer a good balance between speed and capability.
   :::
@@ -30,18 +30,14 @@ Install Dify from Market based on your role:
 
 ## Add Ollama as model provider
 
-1. Set up the Ollama access entrance:
-   
-   a. Navigate to **Settings** > **Application** > **Ollama** > **Entrances**, and set the authentication level for Ollama to **Internal**. This configuration allows other applications to access Ollama services within the local network without authentication. 
+1. Navigate to **Settings** > **Application** > **Ollama** > **Entrances**, and set the authentication level for Ollama to **Internal**. This configuration allows other applications to access Ollama services within the local network without authentication. 
     
     ![Ollama entrance](/images/manual/use-cases/dify-ollama-entrance.png#bordered)
-   
-   b. From the **Entrances** page, enter the **Set up endpoint** page to retrieve the default route ID for Ollama(`39975b9a`). Now you get the local access address for Ollama: `https://39975b9a.local.{your username}.olares.com`, for example, `https://39975b9a.local.kevin112.olares.com`.
 
 2. In Dify, navigate to **Settings** > **Model Provider**.
 3. Select Ollama as the model provider, with the following configurations:
     - **Model Name**: Enter the model name. For example: `gemma2`.
-    - **Base URL**: Enter Ollama's local address you get in step 1, for example, `https://39975b9a.local.kevin112.olares.com`.
+    - **Base URL**: Enter Ollama's local address: `https://39975b9a1.local.{username}.olares.com`. Replace `{username}` with the Olares Admin's local name. For example, `https://39975b9a1.local.marvin123.olares.com`.
 
      ![Add gemma2](/images/manual/use-cases/dify-add-gemma2.png#bordered){width=70%}
 

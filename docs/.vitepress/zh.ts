@@ -145,6 +145,10 @@ const side = {
           link: "/zh/manual/use-cases/comfyui",
         },
         {
+          text: "Ollama 下载开源模型",
+          link: "/zh/manual/use-cases/ollama",
+        },
+        {
           text: "Open WebUI",
           link: "/zh/manual/use-cases/openwebui",
         },
