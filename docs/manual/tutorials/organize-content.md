@@ -85,8 +85,8 @@ You can collect online content, including web articles, videos, podcasts, using 
 ::: tip Uploading cookies for better experience
 Some websites restrict access for anonymous users. In such cases, you can upload your cookies to Olares for better experience.
 
-1. Log into the website.
-2. Open the LarePass extension, go to **Collect** > **Cookie**, and click **Upload**. You can hover over cookies to view details. If you don't want to upload a specific cookie item, click **X** to unselect it.
+1. Log into the website, open the LarePass extension.
+2. Go to **Collect** > **Cookie**, and click **Upload**. You can hover over cookies to view details. If you don't want to upload a specific cookie item, click **X** to unselect it.
 :::
 
 To collect web content using the LarePass extension:
@@ -101,15 +101,21 @@ Once collected, you can find the content in **Library** > **Articles** in Wise. 
 
 ### Collect via the LarePass mobile client
 
-You can share web links to the LarePass mobile client for content collection. For example, to save an article from the Chrome browser on your phone:
+You can share web links to the LarePass mobile client for content collection.
+:::info
+The exact steps may vary depending on your operating system and browser. The following uses Safari as an example.
+:::
 
-1. Tap **<i class="material-symbols-outlined">ios_share</i>Share** in the browser, then select **LarePass** as the sharing destination.
-2. Open the LarePass app. LarePass will automatically detect the collectable content on the shared page and prompt whether to add it to Wise.
-3. Tap **Confirm** to add it to the Wise library.
+1. Tap **<i class="material-symbols-outlined">ios_share</i>Share** in the browser, then either:
+   - Select the LarePass icon in the sharing options, or
+   - Tap **LarePass** in **Other Actions**
+   
+   ![Share to Wise](/images/manual/tutorials/wise-add-articles-via-share.png#bordered)
 
-![LarePass share](/images/manual/tutorials/wise-share-to-larepass.png#bordered)
+   You will be redirected to the LarePass app. LarePass will automatically detect the collectable content on the shared page and prompt whether to add it to Wise.
+2. Tap **Confirm** to add it to the Wise library.
 
-::: tip 
+::: tip Copy URL to share
 Alternatively, you can copy the URL directly and open LarePass. LarePass will automatically detect the URL in the clipboard and the collectable content as well.
 :::
 

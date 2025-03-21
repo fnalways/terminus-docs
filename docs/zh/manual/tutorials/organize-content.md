@@ -85,8 +85,8 @@ LarePass 扩展目前仅支持 Chrome 浏览器。
 ::: tip 上传 Cookie 以优化体验
 一些网站会限制匿名用户访问。这种情况下，你可以将 Cookie 上传到 Olares 以优化体验。
 
-1. 登录该网站。
-2. 打开 LarePass 扩展，进入**收集**> **Cookie** 页面，并点击**上传**。鼠标悬停可查看 Cookie 详情。如果不想上传某个 Cookie 项，可以点击 **X** 按钮取消选择。
+1. 登录该网站，打开 LarePass 扩展。
+2. 进入**收集**> **Cookie** 页面，并点击**上传**。鼠标悬停可查看 Cookie 详情。如果不想上传某个 Cookie 项，可以点击 **X** 按钮取消选择。
 :::
 
 通过 LarePass 扩展收集网页内容：
@@ -103,18 +103,25 @@ LarePass 扩展目前仅支持 Chrome 浏览器。
 
 ### 通过 LarePass 移动端
 
-你可以将网页链接分享到 LarePass 移动客户端来收集内容。此处以 iOS 上收藏微信公众号文章为例：
+你可以将网页链接分享到 LarePass 移动客户端来收集内容。
+:::info
+具体步骤可能会因操作系统和浏览器而有所不同。以下以 Safari 为例。
+:::
 
-![LarePass 分享](/images/zh/manual/tutorials/wise-larepass-share.png#bordered)
-1. 打开公众号文章，点击公众号文章右上角的 <i class="material-symbols-outlined">more_horiz</i> 按钮，选择在**默认浏览器中打开**。
-2. 点击浏览器的分享按钮 <i class="material-symbols-outlined">ios_share</i>，选择 LarePass 为分享对象。
-3. LarePass 会自动检测待分享页面的内容，并提示是否要添加至 Wise。点击**确认**。
+1. 在浏览器中点击 <i class="material-symbols-outlined">ios_share</i>，选择 LarePass 为分享对象。你可以：
+   - 在分享选项中选择 LarePass 的图标，或者
+   - 在**其他操作**栏中选择 **LarePass**
+
+   ![收藏到 Wise](/images/zh/manual/tutorials/wise-add-articles-via-share.png#bordered)
+
+   LarePass 应用会自动打开并检测待分享页面的内容，并提示是否要添加至 Wise。
+2. 点击**确认**添加。
 
 ::: tip 复制 URL 分享
 你也可以直接复制网页 URL 并打开 LarePass。LarePass 会自动检测剪贴板中的 URL 和可收藏的内容。
 :::
 
-收集完成后，可以在 Wise 的**库** > **文章**中阅读收集的微信文章。
+收集完成后，可以在 Wise 的**库** > **文章**中阅读收集的文章。
 
 ## 上传 PDF 及电子书内容
 
@@ -132,7 +139,6 @@ LarePass 扩展目前仅支持 Chrome 浏览器。
 :::
 
 ## 订阅 RSS 内容
-
 你可以在 Wise 中订阅播客、博客和喜爱的视频播放列表。系统会自动下载更新的剧集和内容，让你轻松追更，同时也无需担心原内容已被删除或无法访问。另外，对于那些往往不提供 RSS 订阅源的视频网站，Wise 也能自动下载你收藏的节目。
 
 ### 通过浏览器扩展订阅

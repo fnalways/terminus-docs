@@ -2,7 +2,6 @@
 outline: [2, 3]
 description: Get started with Wise in Olares. Learn to collect content, organize your reading library, add notes, track progress, and customize your reading experience.
 ---
-
 # Wise basics
 
 Wise helps you curate and organize your reading materials with flexible options for collecting, reading, and managing content. This page covers the essential tasks to get you started with Wise.
@@ -20,6 +19,10 @@ While browsing the title or reading, click **<i class="material-symbols-outlined
 
 ![Inbox or Read later](/images/manual/tasks/inbox-read-later.png#bordered)
 ### Save web pages via LarePass
+
+<tabs>
+<template #LarePass-Chrome-extension>
+
 :::tip
 LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
 :::
@@ -28,6 +31,13 @@ LarePass extension is currently available for Chrome browsers only. Download it 
 2. In the **Pages** section, click <i class="material-symbols-outlined">add_box</i> to save the current page to your Wise library.
 
 Once collected, you can find it in page **Library** > **Articles** in Wise.
+</template>
+
+<template #LarePass-mobile-client>
+
+<!--@include: ../tutorials/wise.reusables.md{15,32}-->
+</template>
+</tabs>
 
 ### Manually add content
 Wise supports various content types including videos, audio, PDFs, and eBooks:
@@ -91,3 +101,6 @@ By default, Wise follows your system's light/dark theme settings. You can overri
 2. Under **Theme**, choose your preferred appearance:
    - Light mode
    - Dark mode
+
+## Learn more
+- [Build your knowledge hub with Wise](../tutorials/organize-content.md)
