@@ -5,11 +5,10 @@
 `gpu` 命令用于管理 GPU 功能，包括安装、启用、禁用和卸载 GPU 驱动及相关组件，以及查看 GPU 安装状态。
 
 ```bash
-olares-cli gpu 子命令 [选项]
+olares-cli gpu <子命令> [选项]
 ```
 
-::: tip Note
-
+:::info
 - 通常情况下，Olares 安装脚本会自动检测显卡硬件和 CUDA 驱动，并根据检测结果自动安装、启用显卡相关组件和服务。
 - 当前仅支持 NVIDIA 显卡。
 :::

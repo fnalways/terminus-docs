@@ -5,7 +5,7 @@
 The `node` command manages node-related operations.
 
 ```bash
-olares-cli node subcommand [options]
+olares-cli node <subcommand> [options]
 ```
 
 ## Subcommands

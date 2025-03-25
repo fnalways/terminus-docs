@@ -5,7 +5,7 @@
 `node` 命令用于管理节点相关的操作。
 
 ```bash
-olares-cli node 子命令 [选项]
+olares-cli node <子命令> [选项]
 ```
 
 ## 子命令

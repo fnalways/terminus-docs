@@ -5,10 +5,10 @@
 The `gpu` command manages GPU-related operations, including installing, enabling, disabling, and uninstalling GPU drivers and related components, as well as checking the GPU status.
 
 ```bash
-olares-cli gpu subcommand [options]
+olares-cli gpu <subcommand> [options]
 ```
 
-::: tip Note
+:::info
 - By default, the Olares installation script detects your GPU hardware and CUDA drivers, then configures and enables the GPU components and services automatically.
 - Currently, only NVIDIA GPUs are supported.
 :::
