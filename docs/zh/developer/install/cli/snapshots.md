@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 # `olares backups snapshots`
-
+:::warning
+必须先运行 `olares-cli olares backups download` 命令来安装 Restic，否则直接运行此命令将返回错误。
+:::
 ## 命令说明
 `snapshots` 子命令用于列出指定备份仓库中的所有可用快照。它支持多种存储后端，并提供必要的选项来进行身份验证和查询快照。
 ```bash

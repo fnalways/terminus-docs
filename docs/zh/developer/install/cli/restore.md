@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 # `olares backups restore`
-
+:::warning
+必须先运行 `olares-cli olares backups download` 命令来安装 Restic，否则直接运行此命令将返回错误。
+:::
 ## 命令说明
 `restore` 子命令用于从指定的备份仓库和快照中恢复数据到目标目录。
 

@@ -9,11 +9,11 @@ olares-cli olares stop [option]
 
 ## Options
 
-| Name               | Shorthand | Usage                                                                                                |
-|--------------------|-----------|------------------------------------------------------------------------------------------------------|
-| `--check-interval` |           | Specifies the interval between checks for remaining processes during shutdown (default: 10 seconds). |
-| `--help`           | `-h`      | Displays help information.                                                                           |
-| `--timeout`        |           | Sets the maximum time to wait for a graceful shutdown before using SIGKILL (default: 1 minute).      |
+| Name               | Shorthand | Usage                                                                                                                         |
+|--------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------|
+| `--check-interval` |           | Specifies the interval between checks for remaining processes during shutdown (e.g., `5s`, `2m`, `3h`). </br> Default: `10s`. |
+| `--help`           | `-h`      | Displays help information.                                                                                                    |
+| `--timeout`        |           | Sets the maximum time to wait for a graceful shutdown before using SIGKILL (e.g., `5s`, `2m`, `3h`). </br> Default: `1m`.     |
 
 ## Example
 ```bash

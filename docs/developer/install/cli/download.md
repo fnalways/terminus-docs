@@ -1,7 +1,7 @@
 # `olares backups download`
 
 ## Synopsis
-The `download` subcommand downloads the Restic dependency tool. Restic is required for performing backup and restore operations, and this command ensures the tool is available on your system.
+The `download` subcommand downloads the Restic dependency tool. Restic is required for performing backup and restore operations, as well as managing snapshots.
 
 ```bash
 olares-cli olares backups download [options]

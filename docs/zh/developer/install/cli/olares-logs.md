@@ -1,7 +1,7 @@
 # `olares logs`
 
 ## 命令说明
-`olares logs` 命令用于获取 Olares 组件和服务的日志，无论这些组件是否在本地安装。可获取的日志包括：
+`olares logs` 命令用于获取本机上的 Olares 组件和服务日志。它会检查以下每个组件，如果找到则收集其日志，未找到则跳过：
 
 * K3s/Kubelet 日志
 * Containerd 日志
@@ -23,7 +23,7 @@ olares-cli olares logs [选项]
 |------------------------|------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | `--components`         |      | 指定要收集日志的组件（用逗号分隔）。<br/>支持的组件：`k3s`、`containerd`、`olaresd`、`kubelet`、`juicefs`、`redis`、`minio`、`etcd`、`NetworkManager`。<br/> 默认收集所有可检测到的组件日志。 |
 | `--help`               | `-h` | 显示命令帮助信息。                                                                                                                                    |
-| `--ignore-kube-errors` |      | 忽略 `kubectl` 命令的错误（例如无法连接 Kubernetes API）并继续收集其他日志。                                                                                          |
+| `--ignore-kube-errors` |      | 忽略 `kubectl` 命令的错误（例如无法连接 Kubernetes API）并继续收集其他日志。<br/>默认值：`false`。                                                                                           |
 | `--max-lines`          |      | 限制每个组件日志的最大行数，避免日志文件过大。<br/> 默认值为 `3000` 行。                                                                                                  |
 | `--output-dir`         |      | 设置日志保存目录。如果目录不存在则自动创建。<br/> 默认保存到 `./olares-logs`。                                                                                           |
 | `--since`              |      | 设置日志收集的时间范围（例如 `5s`、`2m`、`3h`）。<br/> 默认收集最近 `7d`（7天）的日志。                                                                                     |

@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 # `olares backups snapshots`
-
+:::warning
+The `olares-cli olares backups download` command must be run first to install Restic. Otherwise, this command will return an error.
+:::
 ## Synopsis
 The `snapshots` subcommand lists all available snapshots for a specific backup repository. It supports multiple storage backends and provides the necessary options to authenticate and query snapshots.
 

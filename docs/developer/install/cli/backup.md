@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 # `olares backups backup`
-
+:::warning
+The `olares-cli olares backups download` command must be run first to install Restic. Otherwise, this command will return an error.
+:::
 ## Synopsis
 The `backup` subcommand allows you to back up data to the specified storage backend. It ensures your data is securely stored and can be restored whenever needed.
 
@@ -13,11 +15,11 @@ olares-cli olares backups backup <backend> --path <path> --repo-name <name> [opt
 ## Common options
 These options apply to all backends:
 
-| Name          | Shorthand | Usage                                         |
-|---------------|-----------|-----------------------------------------------|
-| `--help`      | `-h`      | Displays help information.                    |
-| `--path`      |           | Specifies the directory to back up.           |
-| `--repo-name` |           | 	Specifies the name of the backup repository. |
+| Name          | Shorthand | Usage                                        |
+|---------------|-----------|----------------------------------------------|
+| `--help`      | `-h`      | Displays help information.                   |
+| `--path`      |           | Specifies the directory to back up.          |
+| `--repo-name` |           | Specifies the name of the backup repository. |
 
 ## Backend-specific options
 ### Options for `cos`

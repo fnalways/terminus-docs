@@ -2,7 +2,9 @@
 outline: [2, 3]
 ---
 # `olares backups restore`
-
+:::warning
+The `olares-cli olares backups download` command must be run first to install Restic. Otherwise, this command will return an error.
+:::
 ## Synopsis
 The `restore` subcommand allows you to restore data from a specified backup repository and snapshot to a target directory.
 
@@ -13,12 +15,12 @@ olares-cli olares backups restore <backend> --path <path> --repo-name <name> --s
 ## Common options
 These options apply to all backends:
 
-| Name            | Shorthand | Usage                                                         |
-|-----------------|-----------|---------------------------------------------------------------|
-| `--help`        | `-h`      | Displays help information.                                    |
-| `--path`        |           | Specifies the directory to which data will be restored.       |
-| `--repo-name`   |           | 	Specifies the name of the backup repository to restore from. |
-| `--snapshot-id` |           | 	Specifies the snapshot ID to restore.                        |
+| Name            | Shorthand | Usage                                                        |
+|-----------------|-----------|--------------------------------------------------------------|
+| `--help`        | `-h`      | Displays help information.                                   |
+| `--path`        |           | Specifies the directory to which data will be restored.      |
+| `--repo-name`   |           | Specifies the name of the backup repository to restore from. |
+| `--snapshot-id` |           | Specifies the snapshot ID to restore.                        |
 
 
 ## Backend-specific options
