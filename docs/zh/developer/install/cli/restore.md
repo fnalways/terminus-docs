@@ -52,15 +52,21 @@ olares-cli olares backups restore <存储后端> --path <恢复路径> --repo-na
 
 ### Olares Space 选项（`space`）
 
-| 名称	                     | 简写 | 用途                           |
-|-------------------------|----|------------------------------|
-| `--access-token`        |    | 设置 Olares Space 的访问令牌。       |
-| `--cloud-api-mirror`    |    | 设置云 API 镜像地址。                |
-| `--cloud-name`          |    | 设置 Olares Space 实例的云名称。      |
-| `--cluster-id`          |    | 设置存储备份的集群 ID。                |
-| `--limit-download-rate` |    | 设置下载速度的最大值，单位为 KiB/s（默认不限速）。 |
-| `--olares-did`          |    | 设置 Olares DID。               |
-| `--region-id`           |    | 设置 Olares Space 实例的区域 ID。    |
+| 名称	                     | 简写 | 用途                                                 |
+|-------------------------|----|----------------------------------------------------|
+| `--access-token`        |    | 设置 Olares Space 的访问令牌。                             |
+| `--cloud-api-mirror`    |    | 设置云 API 镜像地址。                                      |
+| `--cloud-name`          |    | 设置 Olares Space 实例的云名称，可在 Olares Space 的 UI 中查看。   |
+| `--cluster-id`          |    | 设置存储备份的集群 ID。                                      |
+| `--limit-download-rate` |    | 设置下载速度的最大值，单位为 KiB/s（默认不限速）。                       |
+| `--olares-did`          |    | 设置 Olares DID。                                     |
+| `--region-id`           |    | 设置 Olares Space 实例的区域 ID，可在 Olares Space 的 UI 中查看。 |
+
+- 要获取 Cluster ID，请运行以下命令：
+   ```bash
+   kubectl get terminus -o jsonpath='{.items[*].metadata.labels.bytetrade\.io/cluster-id}'
+   ```
+- 要获取 Olares DID 和 access token，请在登录 Olares Space 后检查页面网络请求的负载。`userid` 字段对应 Olares DID，`token` 字段对应 access token。
 
 ## 使用示例
 ```bash
