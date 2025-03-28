@@ -32,32 +32,40 @@ Route ID is a crucial component in accessing your Olares applications. It forms 
 For convenience, Olares uses easy-to-remember route IDs for pre-installed system applications.
 For community applications, you can quickly obtain a simple and memorable URL by changing the route ID. To use Jellyfin as an example:
 
-1. In Olares, open the Settings app from the Dock or Launchpad.
-2. Select **Application** from the left sidebar, and click **Jellyfin** on the right to view application details.
+1. Open the Settings app, and select **Application** from the left sidebar.
+2. Click **Jellyfin** on the right to view application details.
 3. Go to **Entrances** > **Set up endpoint**. You can see the default Route ID for Jellyfin, which is a combination of numbers and letters.
 4. Next to **Set custom Route ID**, click <i class="material-symbols-outlined">add</i>.
 5. Enter a route ID that is more memorable and recognizable. For example, `jellyfin`.
+
+   ![Custom route ID](/images/manual/tasks/custom-route-id.png#bordered)
 6. Click **Confirm**.
 
 Now, you will be able to access Jellyfin from your new URL: `https://jellyfin.local.bob.olares.com`.
 
 ### Custom domain name
 Instead of using the default Olares domain, you can use your own domain name to access your applications, making them more professional and easier to remember. To use Affine as an example:
-
-1. Open the Settings app from the Dock or Launchpad.
-2. Select **Application** from the left sidebar, and click Affine on the right to view application details.
+:::info
+Only applications with the authentication level set to **Internal** or **Public** support custom third-party domains.
+:::
+1. Open the Settings app, and select **Application** from the left sidebar.
+2. Click Affine on the right to view application details.
 3. Go to **Entrances** > **Set up endpoint**.
 4. Next to **Set custom domain**, click <i class="material-symbols-outlined">add</i>.
-5. Enter your custom domain, and click **Confirm**. For example, `hello.coffee`.
-6. Click **Activation**.
-7. Follow the prompt to add a CNAME record on your domain hosting website.
-8. Wait for DNS propagation, which can take anywhere from a few minutes to 48 hours.
 
-Olares will automatically verify the DNS record activation. Once verified, the custom domain status will change to "Activated". And you will be able to access Affine with the new URL: `hello.coffee`. 
+   ![Set third-party domain](/images/manual/tasks/set-custom-domain.png#bordered)
+5. Enter your custom domain, for example, `hello.coffee`, and click **Confirm**.
+6. Click **Activation**, and follow the instructions to add a CNAME record on your domain hosting site. Then click **Confirm**.
 
+   ![Activate third-party domain](/images/manual/tasks/activate-custom-domain.png#bordered)
+   At this stage, the custom domain status will display as "Waiting for CNAME Activation". This means you need to wait for the DNS changes to propagate. The propagation time typically ranges from a few minutes to 48 hours, depending on your domain provider.
+
+   Olares will periodically check if the DNS record is correctly configured. Once the CNAME record is verified, the custom domain status will automatically update to "Activated". After activation, you can access Affine using the new URL: `hello.coffee`.
 :::tip
 To allow public access to your custom domain without login, update the access policies as below:
 1. Navigate to **Settings** > **Application**, and click the target application.
 2. Click **Entrance**, then under **Create access policies**, set **Authentication level** to **Public**.
 3. Click **Submit** to apply changes.
+   
+   ![Set auth level to public](/images/manual/tasks/set-auth-level-to-public.png){width=50%}
 :::
