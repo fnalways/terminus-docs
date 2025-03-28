@@ -330,6 +330,10 @@ const side = {
                 },
               ],
             },
+          {
+           text: "远程 SSH 访问",
+           link: "/manual/tasks/remote-ssh",
+           }
           ],
         },
       ],

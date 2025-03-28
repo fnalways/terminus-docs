@@ -326,6 +326,10 @@ const side = {
                 },
               ],
             },
+           {
+               text: "Remote SSH access",
+               link: "/manual/tasks/remote-ssh",
+               }
           ],
         },
       ],
