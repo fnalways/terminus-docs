@@ -1,7 +1,7 @@
 # `olares backups region`
 
 ## Synopsis
-The `region` subcommand is used to retrieve the cloud name and region ID for Olares Space.
+The `region` subcommand is used to retrieve the cloud name and region ID. It is specifically used when the storage backend is Olares Space.
 ```bash
 olares-cli olares backups region space [options]
 ```
