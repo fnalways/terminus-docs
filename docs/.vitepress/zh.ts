@@ -428,10 +428,11 @@ const side = {
               link: "/zh/developer/install/cli/olares-backups",
               collapsed: true,
               items: [
-                  {text: "backup", link: "/zh/developer/install/cli/backup"},
                   {text: "download", link: "/zh/developer/install/cli/download"},
-                  {text: "snapshots", link: "/zh/developer/install/cli/snapshots"},
+                  {text: "region", link: "/zh/developer/install/cli/region"},
+                  {text: "backup", link: "/zh/developer/install/cli/backup"},
                   {text: "restore", link: "/zh/developer/install/cli/restore"},
+                  {text: "snapshots", link: "/zh/developer/install/cli/snapshots"},
                   ],
             },
             {

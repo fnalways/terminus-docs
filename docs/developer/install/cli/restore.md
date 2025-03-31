@@ -52,21 +52,22 @@ These options apply to all backends:
 
 ### Options for `space`
 
-| Name                    | Shorthand | Usage                                                                                                      |
-|-------------------------|-----------|------------------------------------------------------------------------------------------------------------|
-| `--access-token`        |           | Specifies the access token for Olares Space.                                                               |
-| `--cloud-api-mirror`    |           | Specifies the cloud API mirror.                                                                            |
-| `--cloud-name`          |           | Specifies the cloud name of the Olares Space instance. The cloud name can be found in the Olares Space UI. |
-| `--cluster-id`          |           | Specifies the cluster ID where the backup is stored.                                                       |
-| `--limit-download-rate` |           | Limits the download speed to a maximum rate in KiB/s (default: unlimited).                                 |
-| `--olares-did`          |           | Specifies the Olares DID.                                                                                  |
-| `--region-id`           |           | Specifies the region ID of the Olares Space instance. The region ID can be found in the Olares Space UI.   |
+| Name                          | Shorthand | Usage                                                                                                                                    |
+|-------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `--access-token` <sup>1</sup> |           | Specifies the access token for Olares Space.                                                                                             |
+| `--cloud-api-mirror`          |           | Specifies the cloud API mirror.                                                                                                          |
+| `--cloud-name`                |           | Specifies the cloud name of the Olares Space instance. <br/> The cloud name can be retrieved using the [`region`](region.md) subcommand. |
+| `--cluster-id` <sup>2</sup>   |           | Specifies the cluster ID where the backup will be stored.                                                                                |
+| `--limit-download-rate`       |           | Limits the download speed to a maximum rate in KiB/s (default: unlimited).                                                               |
+| `--olares-did` <sup>1</sup>   |           | Specifies the Olares DID.                                                                                                                |
+| `--region-id`                 |           | Specifies the region ID of the Olares Space instance. <br/> The region ID can be retrieved using the [`region`](region.md) subcommand.   |
 
-- To retrieve the cluster ID, use the following command:
+1. To retrieve the access token and Olares DID, inspect the payload of the network requests made by the Olares Space web interface after logging in. The `token` field corresponds to the access token, and the `userid` field corresponds to the Olares DID.
+
+2. To retrieve the cluster ID, use the following command:
   ```bash
   kubectl get terminus -o jsonpath='{.items[*].metadata.labels.bytetrade\.io/cluster-id}'
   ```
-- To retrieve the Olares DID and access token, inspect the payload of the network requests made by the Olares Space web interface after logging in. The `userid` field corresponds to the Olares DID, and the `token` field corresponds to the access token.
 
 ## Example
 ```bash

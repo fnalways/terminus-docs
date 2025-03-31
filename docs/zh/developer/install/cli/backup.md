@@ -48,22 +48,23 @@ olares-cli olares backups backup <存储后端> --path <备份路径> --repo-nam
 
 ### Olares Space 选项（`space`）
 
-| 名称	                   | 简写 | 用途                                                 |
-|-----------------------|----|----------------------------------------------------|
-| `--access-token`      |    | 设置 Olares Space 的访问令牌。                             |
-| `--cloud-api-mirror`  |    | 设置云 API 镜像地址。                                      |
-| `--cloud-name`        |    | 设置 Olares Space 实例的云名称，可在 Olares Space 的 UI 中查看。   |
-| `--cluster-id`        |    | 设置用于存储备份的集群 ID。                                    |
-| `--limit-upload-rate` |    | 设置上传速度的最大值，单位为 KiB/s（默认不限速）。                       |
-| `--olares-did`        |    | 设置 Olares DID。                                     |
-| `--region-id`         |    | 设置 Olares Space 实例的区域 ID，可在 Olares Space 的 UI 中查看。 |
+| 名称	                           | 简写 | 用途                                                              |
+|-------------------------------|----|-----------------------------------------------------------------|
+| `--access-token` <sup>1</sup> |    | 设置 Olares Space 的访问令牌。                                          |
+| `--cloud-api-mirror`          |    | 设置云 API 镜像地址。                                                   |
+| `--cloud-name`                |    | 设置 Olares Space 实例的云名称。<br/> 可通过 [`region`](region.md) 子命令获取。   |
+| `--cluster-id` <sup>2</sup>   |    | 设置用于存储备份的集群 ID。                                                 |
+| `--limit-upload-rate`         |    | 设置上传速度的最大值，单位为 KiB/s（默认不限速）。                                    |
+| `--olares-did` <sup>1</sup>   |    | 设置 Olares DID。                                                  |
+| `--region-id`                 |    | 设置 Olares Space 实例的区域 ID。<br/> 可通过 [`region`](region.md) 子命令获取。 |
 
-- 要获取 Cluster ID，请运行以下命令：
+
+1. 要获取访问令牌和 Olares DID，请在登录 Olares Space 后检查页面网络请求的负载。`token` 字段对应访问令牌，`userid` 字段对应 Olares DID。
+
+2. 要获取集群 ID，请运行以下命令：
    ```bash
    kubectl get terminus -o jsonpath='{.items[*].metadata.labels.bytetrade\.io/cluster-id}'
    ```
-- 要获取 Olares DID 和 access token，请在登录 Olares Space 后检查页面网络请求的负载。`userid` 字段对应 Olares DID，`token` 字段对应 access token。
-
 ## 使用示例
 ```bash
 # 备份到腾讯云对象存储

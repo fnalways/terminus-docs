@@ -3,12 +3,13 @@ The `olares backups` command provides a set of tools to manage data backups, res
 
 ## Subcommands
 
-| Subcommand  | Description                                     |
-|-------------|-------------------------------------------------|
-| `backup`    | Backups data to a specified storage backend.    |
-| `restore`   | Restores data from a specified storage backend. |
-| `snapshots` | Manages and views backup snapshots.             |
-| `download`  | Downloads the Restic dependency tool.           |
+| Subcommand  | Description                                                                                              |
+|-------------|----------------------------------------------------------------------------------------------------------|
+| `download`  | Downloads the Restic dependency tool.                                                                    |
+| `region`    | Retrieves the cloud name and region ID. Specifically used only when the storage backend is Olares Space. |
+| `backup`    | Backups data to a specified storage backend.                                                             |
+| `restore`   | Restores data from a specified storage backend.                                                          |
+| `snapshots` | Manages and views backup snapshots.                                                                      |
 
 ## Available backends
 
