@@ -331,8 +331,8 @@ const side = {
               ],
             },
           {
-           text: "远程 SSH 访问",
-           link: "/manual/tasks/remote-ssh",
+           text: "远程访问",
+           link: "zh/manual/tasks/remote-access",
            }
           ],
         },

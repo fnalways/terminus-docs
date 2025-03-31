@@ -327,8 +327,8 @@ const side = {
               ],
             },
            {
-               text: "Remote SSH access",
-               link: "/manual/tasks/remote-ssh",
+               text: "Remote access",
+               link: "/manual/tasks/remote-access",
                }
           ],
         },

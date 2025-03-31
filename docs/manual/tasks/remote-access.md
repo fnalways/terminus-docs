@@ -39,3 +39,15 @@ This feature allows you to access other devices in the same local network as you
 
 1. Open the Settings app, and select **System** > **VPN**.
 2. Toggle on **Enable subnet routes**.
+
+## Configure ACL rules for port access
+After enabling subnet routing, you can further configure ACL (Access Control List) rules to allow traffic to specific ports based on the services you want to access.
+
+For example, to access a Windows server via Remote Desktop:
+1. Click <i class="material-symbols-outlined">add</i> to open the **Add ACL** dialog.
+2. Enter `3389` (default port for Remote Desktop Protocol), and click **Confirm**.
+3. Click **Apply** to apply changes.
+
+   ![Add ACL port](/images/manual/tasks/add-acl-port.png#bordered)
+
+Now you can use Windows Remote Desktop to access the Windows server in the same LAN as Olares.

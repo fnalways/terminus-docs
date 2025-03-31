@@ -39,3 +39,15 @@ iOS 或 macOS 版本的 LarePass 在开启专用网络时需要在系统中添�
 
 1. 打开设置应用，选择**系统** > **VPN**。
 2. 开启**允许子网路由**。
+
+## 配置端口访问的访问控制规则
+启用子网路由后，你可以通过配置访问控制列表（ACL）规则来允许访问特定端口，以便使用所需的网络服务。
+
+例如，要通过远程桌面访问 Windows 服务器：
+1. 点击 <i class="material-symbols-outlined">add</i> 打开**添加 ACL**对话框。
+2. 输入 `3389`（远程桌面协议的默认端口），然后点击**确认**。
+3. 点击**应用**使更改生效。
+
+   ![添加 ACL 端口](/images/zh/manual/tasks/add-acl-port.png#bordered)
+
+完成配置后，你就可以使用 Windows 远程桌面来访问与 Olares 位于同一局域网的 Windows 服务器了。
