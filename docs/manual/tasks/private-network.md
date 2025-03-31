@@ -26,7 +26,7 @@ For different LarePass download options, visit [the official page](https://www.o
 
 ### On LarePass desktop client
 1. Open LarePass, click on the avatar area in the top left corner of the main interface.
-2. Turn on the switch for **Enable VPN connection** in the pop-up panel.
+2. Turn on the switch for **VPN connection** in the pop-up panel.
 
 Devices with activated VPN will use the VPN connection to access Olares, whether through the LarePass client or a browser.
 
