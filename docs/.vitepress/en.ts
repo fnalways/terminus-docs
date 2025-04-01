@@ -271,7 +271,7 @@ const side = {
               link: "/manual/tasks/subscribe",
             },
             {
-              text: "Add filtered view",
+              text: "Filter",
               link: "/manual/tasks/filter",
               collapsed: true,
               items: [

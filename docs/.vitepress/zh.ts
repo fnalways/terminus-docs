@@ -275,7 +275,7 @@ const side = {
               link: "/zh/manual/tasks/subscribe",
             },
             {
-              text: "添加过滤视图",
+              text: "过滤",
               link: "/zh/manual/tasks/filter",
               collapsed: true,
               items: [

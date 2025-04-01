@@ -19,16 +19,21 @@ author:John Doe
 This shows all documents where the author is "John Doe" so you can stay up-to-date with a writer's work.
 
 ## Stay up-to-date with the latest content
-Only want to see new articles? Filter for content published after a specific date, like April 1, 2025.
+Only want to see new articles? Filter for content published after a specific date.
 ```
 published_at__gt:2025-04-01
 ```
-This query displays entries published after January 1, 2023. It's a great way to focus on fresh updates and avoid getting lost in older material.
+This query displays entries published after April 1, 2025. It's a great way to focus on fresh updates and avoid getting lost in older material.
 
+## Review saved content with notes
+Use this query to find tagged entries that include your own notes:
+```
+tag:AI AND has:note
+```
+This is useful for revisiting saved content where you've added personal insights or comments.
 
 ## Prioritize tagged "Read Later" entries
 Need to focus on specific topics? This filter shows all your "Read Later" entries with a particular tag.
-
 ```
 tag:Work AND location:readlater
 ```
@@ -48,4 +53,4 @@ Got old productivity-related entries that you haven't touched in a while? This f
 ```
 last_opened__lt:2023-12-31 AND tag:Productivity
 ```
-This shows all entries that you last opened before December 31, 2022. You can revisit useful content you've saved for productivity but might have forgotten about—or decide if it's time to archive or delete it.
+This shows all entries that you last opened before December 31, 2023. You can revisit useful content you've saved for productivity but might have forgotten about—or decide if it's time to delete it.

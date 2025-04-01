@@ -23,35 +23,32 @@ Filtered views allow you to organize your content by grouping entries based on t
 3. For existing tags, click **Manage views...**. You can:
    - Group content from the tag or feed into an existing view, or
    - Create a new view to group all related content.
+
+   ![Filter entries from feeds](/images/manual/tasks/filter-entries-from-feed.png#bordered)
 4. If creating a new view:
     - Enter a name for the view (e.g., `Tech Articles`).
     - Click **Confirm** to save the view.
 
-## Use feed to filter entries
-
-1. Open Wise, click <i class="material-symbols-outlined">settings</i> in the bottom left corner and select **RSS feeds**.
-2. For existing feeds, click **Manage views...**. You can:
-   - Map the feed's content to an existing view, or
-   - Create a new view to group all content from the same feed.
-3. If creating a new view:
-   - Enter a name for the view (e.g., "Tech Articles").
-   - Click **Confirm** to save the view.
-
-
 ## Add custom filter view
 For more flexibility, you can create custom filtered views using query language. This allows you to define precise conditions for grouping content.
 
-The following demonstrates how to create a view for the tag "Tech Articles" using query language:
+The following demonstrates how to create a view for the tag "AI" using query language:
 
 1. Open Wise, click <i class="material-symbols-outlined">settings</i> in the bottom left corner and select **Filtered views**.
 2. In the top-right corner, select **Add view**.
-3. Enter a name for the view (e.g., "Tech Articles"), then click **Confirm**.
+3. Enter a name for the view (e.g., "AI trends"), then click **Confirm**.
 4. In the **Operations** column, click <i class="material-symbols-outlined">edit_square</i> to open the **Edit Filtered View** dialog.
-5. In the **Query** filed, enter `tag:Tech Articles`, and click **Confirm**.
+5. In the **Query** filed, enter `tag:AI`, and click **Confirm**.
+
+   ![Edit filtered view](/images/manual/tasks/edit-filtered-view.png#bordered){width=70%}
 
 ## Pin views to sidebar
-Click the <i class="material-symbols-outlined">keep</i> icon in the Operations column to pin the view. It will then appear in the sidebar for quick access.
+You can pin filtered views to the sidebar using either of these methods:
 
+- Locate the view in the list and click <i class="material-symbols-outlined">keep</i> in the corresponding **Operations** column.
+- Open the filtered view, click <i class="material-symbols-outlined">keyboard_arrow_down</i> in the header, and select **Pin to sidebar**.
+
+  ![Pin to sidebar](/images/manual/tasks/pin-to-sidebar.png#bordered){width=50%}
 ## Available filters
 To explore all available filtering options and learn how to use them, refer to the following:
 

@@ -52,7 +52,7 @@ Use the format `parameter:value` to filter entries based on specific conditions.
 
 #### `feed_id`
 Feed ID the entry belongs to.
-You can find the Feed ID in the **Settings** > **RSS feeds** page.
+You can find the Feed ID in the <i class="material-symbols-outlined">settings</i> > **RSS feeds** page.
 
 #### `author`
 Author of the entry.
@@ -73,7 +73,7 @@ Valid file types are:
 - `pdf`
 
 ### Time parameters
-Filter entries based on time-related fields using the format `parameter__operator:value`. Dates must be specified in absolute format, such as: `2023-01-01`.
+Filter entries based on time-related fields using the format `parameter__operator:value`. Dates must be specified in absolute format: `YYYY-MM-DD`.
 
 #### `published_at`
 Publication time of the entry.
@@ -92,19 +92,14 @@ Available operations are:
 - `__gt` (Greater than)<br/>
   Retrieve entries where the time is **after** the specified date.
 
-
 - `__gte` (Greater than or equal to)<br/>
   Retrieve entries where the time is **on or after** the specified date.
-
 
 - `__lt` (Less than)<br/>
   Retrieve entries where the time is **before** the specified date.
 
-
 - `__lte` (Less than or equal to)<br/>
   Retrieve entries where the time is **on or before** the specified date.
-
-
 
 ### Boolean parameters
 Filter entries based on true/false values using the format `field_name:true/false`.
@@ -144,4 +139,4 @@ Filter entries by the name of a specific tag.
 
 #### `tag_id`
 Filter entries by the unique ID of a specific tag.
-You can find the Feed ID in the **Settings** > **Tags** page.
+You can find the Feed ID in the <i class="material-symbols-outlined">settings</i> > **Tags** page.
