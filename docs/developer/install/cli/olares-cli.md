@@ -11,6 +11,16 @@ With the Olares CLI, you can streamline tasks such as verifying system compatibi
 Most `olares-cli` commands require root privileges. Use the root user or prepend commands with `sudo`.
 :::
 
+:::info Using Olares CLI with WSL
+If you installed Olares using the WSL (Windows Subsystem for Linux) method, you need to use `olares-cli` inside the WSL environment.
+
+To enter the WSL environment, run the following command in PowerShell:
+
+```powershell
+wsl -d Ubuntu
+```
+:::
+
 ## Syntax
 The Olares CLI uses the following syntax:
 

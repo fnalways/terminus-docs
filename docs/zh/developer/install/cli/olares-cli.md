@@ -11,6 +11,16 @@ Olares 命令行工具（Olares CLI）面向开发者和系统管理员，用于
 大多数 `olares-cli` 命令都需要 root 权限。请使用 root 用户执行命令，或在命令前加上 `sudo`。
 :::
 
+:::info 在 WSL 中使用 Olares CLI
+如果通过 WSL（Windows Subsystem for Linux）方式安装了 Olares，需要在 WSL 环境中使用 `olares-cli`。
+
+在 PowerShell 中执行以下命令进入 WSL：
+
+```powershell
+wsl -d Ubuntu
+```
+:::
+
 ## 语法
 Olares 命令行工具使用如下语法：
 
