@@ -8,13 +8,13 @@ This guide provides examples of filter queries for Wise. Each example addresses 
 ## Focus on unread entries from a specific feed
 Want to catch up on just one feed? Use this query to display all unread entries from a particular source.
 ```
-feed_id:12345 AND unread:1
+feed_id:12345 AND seen:false
 ```
 
 ## See everything by your favorite author
 Easily pull up all entries written by a specific author you love.
 ```
-author:John Doe
+author:"John Doe"
 ```
 This shows all documents where the author is "John Doe" so you can stay up-to-date with a writer's work.
 
@@ -43,7 +43,7 @@ This pulls up all entries tagged with "Work" that are saved to your "Read Later"
 Want to catch up on videos from your RSS feeds? This filter focuses on unwatched content.
 
 ```
-file_type:video AND unread:1 AND isfeed:true
+file_type:video AND seen:false AND isfeed:true
 ```
 This shows all unread video entries from your subscribed feeds. It's ideal for binge-watching or sorting through your video backlog.
 

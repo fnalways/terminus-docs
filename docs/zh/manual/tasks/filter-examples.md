@@ -8,7 +8,7 @@ description: 本文介绍如何利用 Wise 的高级筛选功能，帮助你更�
 ## 查看特定订阅源的未读内容
 想要追踪某个订阅源的更新？使用这个查询来显示该来源的所有未读条目：
 ```
-feed_id:12345 AND unread:1
+feed_id:12345 AND seen:false
 ```
 
 ## 查看特定作者的所有内容
@@ -42,7 +42,7 @@ tag:工作 AND location:readlater
 ## 整理未看的视频内容
 RSS 订阅源里的视频攒了不少？用这个查询筛选未看的视频：
 ```
-file_type:video AND unread:1 AND isfeed:true
+file_type:video AND seen:false AND isfeed:true
 ```
 
 这样就能列出订阅源中所有未看的视频，方便集中观看或整理。

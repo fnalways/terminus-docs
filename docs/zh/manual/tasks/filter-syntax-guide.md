@@ -43,7 +43,7 @@ islibrary:true OR last_opened__lt:2023-01-01
 
 以下查询会返回所有未读条目中，要么在收件箱中，要么标记为“稍后阅读”的内容：
 ```
-unread:true AND (location:inbox OR location:readlater)
+seen:false AND (location:inbox OR location:readlater)
 ```
 ## 参数
 
@@ -56,12 +56,6 @@ unread:true AND (location:inbox OR location:readlater)
 
 #### `author`
 条目作者。
-
-#### `readlater`
-条目是否标记为“稍后阅读”（`0` 或 `1`）。
-
-#### `unread`
-条目是否未读（`0` 或 `1`）。
 
 #### `file_type`
 条目的文件类型。
@@ -112,6 +106,9 @@ unread:true AND (location:inbox OR location:readlater)
 
 #### `seen`
 条目是否已读。
+
+#### `readlater`
+条目是否标记为“稍后阅读”。
 
 ### 位置参数
 使用 `location` 参数根据条目位置进行筛选。

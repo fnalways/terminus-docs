@@ -43,7 +43,7 @@ You can use parentheses (`()`) to group conditions and control the order of eval
 
 Retrieve entries that are unread *and* either in the inbox *or* marked as "Read Later":
 ```
-unread:true AND (location:inbox OR location:readlater)
+seen:false AND (location:inbox OR location:readlater)
 ```
 ## Parameters
 
@@ -56,12 +56,6 @@ You can find the Feed ID in the <i class="material-symbols-outlined">settings</i
 
 #### `author`
 Author of the entry.
-
-#### `readlater`
-Whether the entry is marked for "Read Later" (`0` or `1`).
-
-#### `unread`
-Whether the entry is unread (`0` or `1`).
 
 #### `file_type`
 The file type of the entry.
@@ -112,6 +106,9 @@ Whether the entry is from a "feed" source.
 
 #### `seen`
 Whether the entry has been read.
+
+#### `readlater`
+Whether the entry is marked for "Read Later".
 
 ### Location parameters
 Filter entries based on their location using the `location` parameter.

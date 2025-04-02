@@ -10,7 +10,7 @@ This guide covers how to:
 - Add custom filtered views using queries.
 
 :::info
-Only entries saved to **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** can be queried.
+Only entries from feeds or entries saved to **<i class="material-symbols-outlined">inbox</i> Inbox** or **<i class="material-symbols-outlined">schedule</i> Read Later** can be queried.
 :::
 
 ## Use tags or feeds to filter entries

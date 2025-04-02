@@ -10,7 +10,7 @@ description: 了解如何使用 Wise 强大的过滤系统来整理你的内容�
 - 使用查询添加自定义过滤视图。
 
 :::info
-过滤功能仅适用于 **<i class="material-symbols-outlined">inbox</i> 收件箱**和 **<i class="material-symbols-outlined">schedule</i> 稍后阅读**中的内容。
+过滤功能仅适用于 **<i class="material-symbols-outlined">inbox</i> 收件箱**和 **<i class="material-symbols-outlined">schedule</i> 稍后阅读** 和订阅源中的内容。
 :::
 
 ## 使用标签或订阅源过滤条目
