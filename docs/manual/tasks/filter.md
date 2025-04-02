@@ -36,11 +36,10 @@ The following demonstrates how to create a view for the tag "AI" using query lan
 
 1. Open Wise, click <i class="material-symbols-outlined">settings</i> in the bottom left corner and select **Filtered views**.
 2. In the top-right corner, select **Add view**.
-3. Enter a name for the view (e.g., "AI trends"), then click **Confirm**.
-4. In the **Operations** column, click <i class="material-symbols-outlined">edit_square</i> to open the **Edit Filtered View** dialog.
-5. In the **Query** filed, enter `tag:AI`, and click **Confirm**.
+3. Enter a name for the view (e.g., "AI trends"), and enter `tag:AI` in the **Query** filed.
+4. Click **Confirm** to save this view.
 
-   ![Edit filtered view](/images/manual/tasks/edit-filtered-view.png#bordered){width=70%}
+   ![Add filtered view](/images/manual/tasks/add-filtered-view.png#bordered){width=70%}
 
 ## Pin views to sidebar
 You can pin filtered views to the sidebar using either of these methods:

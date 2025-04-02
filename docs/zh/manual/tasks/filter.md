@@ -36,12 +36,10 @@ description: 了解如何使用 Wise 强大的过滤系统来整理你的内容�
 
 1. 打开 Wise，左下角点击 <i class="material-symbols-outlined">settings</i>， 选择**过滤视图**。
 2. 在右上角点击**添加视图**。
-3. 输入视图名称（如"AI 趋势"），然后点击**确认**。
-4. 在**操作**栏中，点击 <i class="material-symbols-outlined">edit_square</i> 打开**编辑视图**对话框。
-5. 在**查询**字段中输入 `tag:AI`，然后点击**确认**。
+3. 输入视图名称（如"AI 趋势"），在**查询**字段中输入 `tag:AI`。
+4. 点击**确认**，保存视图。
 
-   ![编辑过滤视图](/images/zh/manual/tasks/edit-filtered-view.png#bordered){width=70%}
-
+   ![添加过滤视图](/images/zh/manual/tasks/add-filtered-view.png#bordered){width=70%}
 ## 将视图固定到侧边栏
 你可以通过以下任一方式将过滤视图固定到侧边栏：
 
