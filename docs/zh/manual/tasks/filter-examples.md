@@ -44,7 +44,6 @@ RSS 订阅源里的视频攒了不少？用这个查询筛选未看的视频：
 ```
 file_type:video AND seen:false AND isfeed:true
 ```
-
 这样就能列出订阅源中所有未看的视频，方便集中观看或整理。
 
 ## 找出长期未读的内容

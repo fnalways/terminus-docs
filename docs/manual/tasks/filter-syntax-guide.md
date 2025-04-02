@@ -56,7 +56,12 @@ You can find the Feed ID in the <i class="material-symbols-outlined">settings</i
 
 #### `author`
 Author of the entry.
-
+:::tip
+If the author's name contains spaces, enclose it in double quotes. For example:
+```
+author:"John Doe"
+```
+:::
 #### `file_type`
 The file type of the entry.
 Valid file types are:
@@ -107,11 +112,8 @@ Whether the entry is from a "feed" source.
 #### `seen`
 Whether the entry has been read.
 
-#### `readlater`
-Whether the entry is marked for "Read Later".
-
 ### Location parameters
-Filter entries based on their location using the `location` parameter.
+Filter entries based on their location.
 
 #### `location`
 Indicates the location of the entry.
@@ -133,7 +135,12 @@ Available values are:
 
 #### `tag`
 Filter entries by the name of a specific tag.
-
+:::tip
+If the tag name contains spaces, enclose it in double quotes. For example:
+```
+tag:"Stable Diffusion"
+```
+:::
 #### `tag_id`
 Filter entries by the unique ID of a specific tag.
 You can find the Feed ID in the <i class="material-symbols-outlined">settings</i> > **Tags** page.

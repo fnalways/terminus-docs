@@ -1,10 +1,10 @@
 ---
 outline: [2,4]
-description: 介绍 Wise 的关键语法规则和可用筛选器。
+description: 介绍 Wise 过滤视图的关键语法规则。
 ---
-# 筛选语法参考
+# 过滤语法参考
 
-筛选视图是整理条目的强大工具。你可以使用各种参数和运算符自定义查询。下面详细介绍关键语法规则和可用筛选器。
+过滤视图是整理条目的强大工具。你可以使用各种参数和运算符自定义查询。
 
 ## 查询结构
 创建单个条件的查询时，只需指定参数和对应的值即可。
@@ -56,7 +56,12 @@ seen:false AND (location:inbox OR location:readlater)
 
 #### `author`
 条目作者。
-
+:::tip
+如果作者名称包含空格，使用半角双引号将其括起来。例如：
+```
+author:"John Doe"
+```
+:::
 #### `file_type`
 条目的文件类型。
 可用的文件类型包括：
@@ -107,11 +112,8 @@ seen:false AND (location:inbox OR location:readlater)
 #### `seen`
 条目是否已读。
 
-#### `readlater`
-条目是否标记为“稍后阅读”。
-
 ### 位置参数
-使用 `location` 参数根据条目位置进行筛选。
+根据条目位置进行筛选。
 
 #### `location`
 指示条目的位置。
@@ -133,7 +135,12 @@ seen:false AND (location:inbox OR location:readlater)
 
 #### `tag`
 按特定标签名称筛选条目。
-
+:::tip
+如果标签名称包含空格，使用半角双引号将其括起来。例如：
+```
+tag:"Stable Diffusion"
+```
+:::
 #### `tag_id`
 按特定标签的唯一 ID 筛选条目。
 可以在 <i class="material-symbols-outlined">settings</i> > **标签**页面查看标签 ID。
