@@ -35,7 +35,7 @@ To update `olaresd` manually:
    ![Open terminal in Olares](/images/manual/tasks/olares-terminal-in-control-hub.png#bordered)
 2. Execute the following command in the terminal:
    ```bash
-   curl -SsfL https://dc3p1870nn3cj.cloudfront.net/upgrade_1_11_5.sh | bash -
+   curl -SsfL https://dc3p1870nn3cj.cloudfront.net/upgrade_1_11_6.sh | bash -
    ```
    where:
-   - `1_11_5` means to upgrade `olaresd` and `olares-cli` to version `1.11.5`.
+   - `1_11_6` means to upgrade `olaresd` and `olares-cli` to version `1.11.6`.
