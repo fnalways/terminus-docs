@@ -40,48 +40,48 @@ const side = {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
           items: [
-              {
-                text: "General Linux",
-                collapsed: true,
-                items: [
-                    {
-                      text: "Using the script (recommended)",
-                      link: "/manual/get-started/install-olares-linux",
-                    },
-                  {
-                    text: "Using Docker Compose",
-                    link: "/manual/get-started/install-olares-linux-via-docker-compose",
-                  },
-                ],
-              },
-              {
-                text: "macOS",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Using the script (recommended)",
-                    link: "/manual/get-started/install-olares-mac",
-                  },
-                  {
-                    text: "Using Docker image",
-                    link: "/manual/get-started/install-olares-mac-via-docker-image",
-                  },
-                ],
-              },
-              {
-                text: "Windows (WSL 2)",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Using the script (recommended)",
-                    link: "/manual/get-started/install-olares-windows",
-                  },
-                  {
-                    text: "Using Docker image",
-                    link: "/manual/get-started/install-olares-windows-via-docker-image",
-                  },
-                ],
-              },
+            {
+              text: "General Linux",
+              collapsed: true,
+              items: [
+                {
+                  text: "Using the script (recommended)",
+                  link: "/manual/get-started/install-olares-linux",
+                },
+                {
+                  text: "Using Docker Compose",
+                  link: "/manual/get-started/install-olares-linux-via-docker-compose",
+                },
+              ],
+            },
+            {
+              text: "macOS",
+              collapsed: true,
+              items: [
+                {
+                  text: "Using the script (recommended)",
+                  link: "/manual/get-started/install-olares-mac",
+                },
+                {
+                  text: "Using Docker image",
+                  link: "/manual/get-started/install-olares-mac-via-docker-image",
+                },
+              ],
+            },
+            {
+              text: "Windows (WSL 2)",
+              collapsed: true,
+              items: [
+                {
+                  text: "Using the script (recommended)",
+                  link: "/manual/get-started/install-olares-windows",
+                },
+                {
+                  text: "Using Docker image",
+                  link: "/manual/get-started/install-olares-windows-via-docker-image",
+                },
+              ],
+            },
             { text: "PVE", link: "/manual/get-started/install-olares-pve" },
             { text: "LXC", link: "/manual/get-started/install-olares-lxc" },
             {
@@ -270,10 +270,21 @@ const side = {
               text: "Subscribe",
               link: "/manual/tasks/subscribe",
             },
-            //{
-            //  text: "Subscribe to an RSS feed",
-            //  link: "/manual/tasks/subscribe",
-            //},
+            {
+              text: "Filter",
+              link: "/manual/tasks/filter",
+              collapsed: true,
+              items: [
+                {
+                  text: "Examples",
+                  link: "/manual/tasks/filter-examples",
+                },
+                {
+                  text: "Filter syntax",
+                  link: "/manual/tasks/filter-syntax-guide",
+                },
+              ],
+            },
           ],
         },
         {

@@ -26,3 +26,8 @@ Learn how self-hosted recommendation algorithms work in Wise.
 <h4><a href="./subscribe">Subscribe and manage feeds</a></h4>
 Set up and organize your content sources through RSS feeds, manual subscriptions, and the LarePass browser extension.
 </div>
+
+<div>
+<h4><a href="./filter">Add filtered view</a></h4>
+Learn how to use advanced filters to organize and display content based on specific criteria like tags, authors, or publication dates.
+</div>

@@ -40,54 +40,54 @@ const side = {
           text: "安装激活",
           link: "/zh/manual/get-started/install-olares",
           items: [
-              {
-                text: "通用 Linux",
-                collapsed: true,
-                items: [
-                    {
-                      text: "使用脚本（推荐）",
-                      link: "/zh/manual/get-started/install-olares-linux",
-                    },
-                  {
-                    text: "使用 Docker Compose",
-                    link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
-                  },
-                ],
-              },
-              {
-                text: "macOS",
-                collapsed: true,
-                items: [
-                  {
-                    text: "使用脚本（推荐）",
-                    link: "/zh/manual/get-started/install-olares-mac",
-                  },
-                  {
-                    text: "使用 Docker 镜像",
-                    link: "/zh/manual/get-started/install-olares-mac-via-docker-image",
-                  },
-                ],
-              },
-              {
-                text: "Windows (WSL 2)",
-                collapsed: true,
-                items: [
-                  {
-                    text: "使用脚本（推荐）",
-                    link: "/zh/manual/get-started/install-olares-windows",
-                  },
-                  {
-                    text: "使用 Docker 镜像",
-                    link: "/zh/manual/get-started/install-olares-windows-via-docker-image",
-                  },
-                ],
-              },
-                { text: "PVE", link: "/zh/manual/get-started/install-olares-pve" },
-                { text: "LXC", link: "/zh/manual/get-started/install-olares-lxc" },
+            {
+              text: "通用 Linux",
+              collapsed: true,
+              items: [
                 {
-                  text: "树莓派",
-                  link: "/zh/manual/get-started/install-olares-raspberry-pi",
+                  text: "使用脚本（推荐）",
+                  link: "/zh/manual/get-started/install-olares-linux",
                 },
+                {
+                  text: "使用 Docker Compose",
+                  link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
+                },
+              ],
+            },
+            {
+              text: "macOS",
+              collapsed: true,
+              items: [
+                {
+                  text: "使用脚本（推荐）",
+                  link: "/zh/manual/get-started/install-olares-mac",
+                },
+                {
+                  text: "使用 Docker 镜像",
+                  link: "/zh/manual/get-started/install-olares-mac-via-docker-image",
+                },
+              ],
+            },
+            {
+              text: "Windows (WSL 2)",
+              collapsed: true,
+              items: [
+                {
+                  text: "使用脚本（推荐）",
+                  link: "/zh/manual/get-started/install-olares-windows",
+                },
+                {
+                  text: "使用 Docker 镜像",
+                  link: "/zh/manual/get-started/install-olares-windows-via-docker-image",
+                },
+              ],
+            },
+            { text: "PVE", link: "/zh/manual/get-started/install-olares-pve" },
+            { text: "LXC", link: "/zh/manual/get-started/install-olares-lxc" },
+            {
+              text: "树莓派",
+              link: "/zh/manual/get-started/install-olares-raspberry-pi",
+            },
           ],
         },
         {
@@ -227,7 +227,7 @@ const side = {
             {
               text: "挂载 SMB 共享文件夹",
               link: "/zh/manual/tasks/mount-SMB-shares",
-             },
+            },
           ],
         },
         {
@@ -274,10 +274,21 @@ const side = {
               text: "订阅",
               link: "/zh/manual/tasks/subscribe",
             },
-            //{
-            //  text: "Subscribe to an RSS feed",
-            //  link: "/zh/manual/tasks/subscribe",
-            //},
+            {
+              text: "过滤",
+              link: "/zh/manual/tasks/filter",
+              collapsed: true,
+              items: [
+                {
+                  text: "示例",
+                  link: "/zh/manual/tasks/filter-examples",
+                },
+                {
+                  text: "过滤语法",
+                  link: "/zh/manual/tasks/filter-syntax-guide",
+                },
+              ],
+            },
           ],
         },
         {
@@ -420,7 +431,8 @@ const side = {
         text: "环境变量",
         link: "/zh/developer/install/environment-variables",
       },
-      {text: "Olares CLI",
+      {
+          text: "Olares CLI",
         link: "/zh/developer/install/cli/olares-cli",
         collapsed: true,
           items: [
