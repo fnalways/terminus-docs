@@ -4,7 +4,7 @@
 The `olares download` command downloads the necessary packages and components required to install Olares on your local machine. It supports downloading components, checking the status of installation packages, and fetching the manifest file.
 
 ```bash
-olares-cli olares download subcommand [option]
+olares-cli olares download <subcommand> [option]
 ```
 
 ## Subcommands
@@ -17,12 +17,12 @@ olares-cli olares download subcommand [option]
 
 ## Options
 
-| Name                 | Shorthand | Usage                                                                                                                                                                                                                                                 |
-|----------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--base-dir`         | `-b`      | Sets the base directory for Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                  |
-| `--download-cdn-url` |           | Sets the CDN accelerated download URL in the format `https://example.cdn.com`. <br>If not provided, the default URL will be used.                                                                                                                     |
-| `--help`             | `-h`      | Displays help information.                                                                                                                                                                                                                            |
-| `--kube`             |           | Specifies the Kubernetes type. <br>Supported types are `k3s` (default) and `k8s`.                                                                                                                                                                     |
+| Name                 | Shorthand | Usage                                                                                                                                                                                                                                                     |
+|----------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--base-dir`         | `-b`      | Sets the base directory for Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                      |
+| `--download-cdn-url` |           | Sets the CDN accelerated download URL in the format `https://example.cdn.com`. <br>If not provided, the default URL will be used.                                                                                                                         |
+| `--help`             | `-h`      | Displays help information.                                                                                                                                                                                                                                |
+| `--kube`             |           | Specifies the Kubernetes type. <br>Supported types are `k3s` (default) and `k8s`.                                                                                                                                                                         |
 | `--version`          | `-v`      | Specifies the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
 
 ## Examples

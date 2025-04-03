@@ -4,7 +4,7 @@
 
 `olares download` 命令用于下载在本地机器上安装 Olares 所需的软件包和组件。它支持下载组件、检查安装包状态以及获取配置清单文件。
 ```bash
-olares-cli olares download 子命令 [选项]
+olares-cli olares download <子命令> [选项]
 ```
 
 ## 子命令

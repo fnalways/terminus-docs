@@ -3,20 +3,22 @@ outline: [2, 3]
 ---
 # Olares CLI
 
-Olares provides Olares CLI, a command-line tool for developers and system administrators to customize or troubleshoot the Olares installation process.
+The Olares CLI is a versatile command-line tool designed to help developers and system administrators manage and troubleshoot Olares systems. It offers a wide range of features, from installation and configuration to resource management and diagnostics.
 
-The recommended [one-liner installation command](../../../manual/get-started/install-olares.md) retrieves a shell script from https://olares.sh/ that downloads and installs Olares CLI. Once installed, the CLI orchestrates the remainder of the setup.
-
-In general, Olares CLI manages installation through four main phases:
-1. **Precheck**: Olares CLI checks the system environment.
-2. **Download**: Olares CLI fetches the necessary components.
-3. **Prepare**: Olares CLI prepares the environment for installation.
-4. **Install**: Olares CLI installs the core services of Olares.
-
-This page explains the Olares CLI syntax and describes the command operations.
+With the Olares CLI, you can streamline tasks such as verifying system compatibility, downloading resources, managing nodes, collecting logs, and more. This guide provides an overview of the CLI's syntax and details the commands available for different operations.
 
 :::info Root privileges required
 Most `olares-cli` commands require root privileges. Use the root user or prepend commands with `sudo`.
+:::
+
+:::info Using Olares CLI with WSL
+If you installed Olares using the WSL (Windows Subsystem for Linux) method, you need to use `olares-cli` inside the WSL environment.
+
+To enter the WSL environment, run the following command in PowerShell:
+
+```powershell
+wsl -d Ubuntu
+```
 :::
 
 ## Syntax
@@ -26,7 +28,7 @@ The Olares CLI uses the following syntax:
 
 where
 - `command`: Specifies the main operation you want to perform. For example, `olares download`.
-- `subcommand`: Further specifies the task of `command`. For example, `wizard` or `component`.
+- `subcommand`: Further specifies the task for commands that support additional operations. For example, `wizard` or `component`.
 - `option`: Optional arguments that modify the behavior of the `command`. Options include flags and options with arguments.
 
 Olares CLI allows you to temporarily override certain Olares default settings. Each option applies only to the command in which it is used.
@@ -37,17 +39,21 @@ To get detailed help for any command, run `olares-cli help`.
 
 ## Available CLI commands
 
-| Operation          | Syntax                                           | Description                                                                                                                  |
-|--------------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `info`             | `olares-cli olares info subcommand [option]`     | Displays general information about the operating system of the current device.                                               |
-| `olares info`      | `olares-cli olares info [option]`                | Displays general information about the downloaded Olares OS.                                                                 |
-| `olares precheck`  | `olares-cli olares precheck [option]`            | Verifies whether the system environment meets all requirements for Olares installation.                                      |
-| `olares download`  | `olares-cli olares download subcommand [option]` | Downloads specific resources.                                                                                                |
-| `olares prepare`   | `olares-cli olares prepare [option]`             | Prepares the environment for the installation process, including setting up essential services and configurations of Olares. |
-| `olares install`   | `olares-cli olares install [option]`             | Deploys system-level and user-level components of Olares.                                                                    |
-| `olares change-ip` | `olares-cli olares change-ip [option]`           | Changes the IP address of the Olares OS.                                                                                     |
-| `olares release`   | `olares-cli olares release [option]`             | Packages Olares installation resources for distribution or deployment.                                                       |
-| `olares uninstall` | `olares-cli olares uninstall [option]`           | Uninstalls Olares completely, or roll back the installation to a specific phase.                                             |
-| `gpu`              | `olares-cli gpu subcommand [option]`             | Manages GPU-related operations.                                                                                              |
-| `node`             | `olares-cli node subcommand [option]`            | Manages node-related operations.                                                                                             |
+| Operation          | Syntax                                             | Description                                                                                                                  |
+|--------------------|----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `gpu`              | `olares-cli gpu <subcommand> [option]`             | Manages GPU-related operations.                                                                                              |
+| `info`             | `olares-cli olares info <subcommand> [option]`     | Displays general information about the operating system of the current device.                                               |
+| `node`             | `olares-cli node <subcommand> [option]`            | Manages node-related operations.                                                                                             |
+| `olares backups`   | `olares-cli olares backups <subcommand> [option]`  | Manages backup-related operations.                                                                                           |
+| `olares change-ip` | `olares-cli olares change-ip [option]`             | Changes the IP address of the Olares OS.                                                                                     |
+| `olares download`  | `olares-cli olares download <subcommand> [option]` | Downloads specific resources.                                                                                                |
+| `olares info`      | `olares-cli olares info [option]`                  | Displays general information about the downloaded Olares OS.                                                                 |
+| `olares install`   | `olares-cli olares install [option]`               | Deploys system-level and user-level components of Olares.                                                                    |
+| `olares logs`      | `olares-cli olares logs [option]`                  | Collects logs from Olares system components for debugging and troubleshooting.                                               |
+| `olares precheck`  | `olares-cli olares precheck [option]`              | Verifies whether the system environment meets all requirements for Olares installation.                                      |
+| `olares prepare`   | `olares-cli olares prepare [option]`               | Prepares the environment for the installation process, including setting up essential services and configurations of Olares. |
+| `olares release`   | `olares-cli olares release [option]`               | Packages Olares installation resources for distribution or deployment.                                                       |
+| `olares start`     | `olares-cli olares start [option]`                 | Starts Olares services and components.                                                                                       |
+| `olares stop`      | `olares-cli olares stop [option]`                  | Stops Olares services and components.                                                                                        |
+| `olares uninstall` | `olares-cli olares uninstall [option]`             | Uninstalls Olares completely, or roll back the installation to a specific phase.                                             |
 

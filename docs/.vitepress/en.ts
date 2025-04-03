@@ -417,38 +417,62 @@ const side = {
           link: "/developer/install/cli/olares-cli",
           collapsed: true,
           items: [
+            { text: "gpu", link: "/developer/install/cli/gpu" },
             { text: "info", link: "/developer/install/cli/info" },
-            { text: "olares info", link: "/developer/install/cli/olares-info" },
+            { text: "node", link: "/developer/install/cli/node" },
             {
-              text: "olares precheck",
-              link: "/developer/install/cli/olares-precheck",
-            },
-            {
-              text: "olares download",
-              link: "/developer/install/cli/olares-download",
-            },
-            {
-              text: "olares prepare",
-              link: "/developer/install/cli/olares-prepare",
-            },
-            {
-              text: "olares install",
-              link: "/developer/install/cli/olares-install",
+              text: "olares backups",
+              link: "/developer/install/cli/olares-backups",
+              collapsed: true,
+              items: [
+                  {text: "download", link: "/developer/install/cli/download"},
+                  {text: "region", link: "/developer/install/cli/region"},
+                  {text: "backup", link: "/developer/install/cli/backup"},
+                  {text: "restore", link: "/developer/install/cli/restore"},
+                  {text: "snapshots", link: "/developer/install/cli/snapshots"},
+                  ],
             },
             {
               text: "olares change-ip",
               link: "/developer/install/cli/olares-change-ip",
             },
             {
+              text: "olares download",
+              link: "/developer/install/cli/olares-download",
+            },
+            { text: "olares info", link: "/developer/install/cli/olares-info" },
+            {
+              text: "olares install",
+              link: "/developer/install/cli/olares-install",
+            },
+            {
+              text: "olares logs",
+              link: "/developer/install/cli/olares-logs",
+            },
+            {
+              text: "olares precheck",
+              link: "/developer/install/cli/olares-precheck",
+            },
+            {
+              text: "olares prepare",
+              link: "/developer/install/cli/olares-prepare",
+            },
+            {
               text: "olares release",
               link: "/developer/install/cli/olares-release",
+            },
+            {
+              text: "olares start",
+              link: "/developer/install/cli/olares-start",
+            },
+            {
+              text: "olares stop",
+              link: "/developer/install/cli/olares-stop",
             },
             {
               text: "olares uninstall",
               link: "/developer/install/cli/olares-uninstall",
             },
-            { text: "gpu", link: "/developer/install/cli/gpu" },
-            { text: "node", link: "/developer/install/cli/node" },
           ],
         },
         {
