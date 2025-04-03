@@ -45,6 +45,15 @@ Retrieve entries that are unread *and* either in the inbox *or* marked as "Read 
 ```
 seen:false AND (location:inbox OR location:readlater)
 ```
+
+### Special characters
+If a filter condition contains special characters (such as spaces, colons, etc.), enclose it in double quotes `""` (excluding the double quotes themselves). For example:
+```
+tag:"Project/AI"
+```
+```
+author:"Arthur C. Clarke"
+```
 ## Parameters
 
 ### Basic parameters
@@ -56,12 +65,7 @@ You can find the Feed ID in the <i class="material-symbols-outlined">settings</i
 
 #### `author`
 Author of the entry.
-:::tip
-If the author's name contains spaces, enclose it in double quotes. For example:
-```
-author:"John Doe"
-```
-:::
+
 #### `file_type`
 The file type of the entry.
 Valid file types are:
@@ -135,12 +139,7 @@ Available values are:
 
 #### `tag`
 Filter entries by the name of a specific tag.
-:::tip
-If the tag name contains spaces, enclose it in double quotes. For example:
-```
-tag:"Stable Diffusion"
-```
-:::
+
 #### `tag_id`
 Filter entries by the unique ID of a specific tag.
 You can find the Feed ID in the <i class="material-symbols-outlined">settings</i> > **Tags** page.

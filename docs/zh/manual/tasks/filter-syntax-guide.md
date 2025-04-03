@@ -45,6 +45,15 @@ islibrary:true OR last_opened__lt:2023-01-01
 ```
 seen:false AND (location:inbox OR location:readlater)
 ```
+
+### 特殊符号
+如果过滤条件中包含特殊符号（如空格、冒号等）时，使用半角双引号`""`将其括起来（半角双引号除外）。例如：
+```
+tag:"学习/AI"
+```
+```
+author:"Arthur C. Clarke"
+```
 ## 参数
 
 ### 基础参数
@@ -56,12 +65,7 @@ seen:false AND (location:inbox OR location:readlater)
 
 #### `author`
 条目作者。
-:::tip
-如果作者名称包含空格，使用半角双引号将其括起来。例如：
-```
-author:"John Doe"
-```
-:::
+
 #### `file_type`
 条目的文件类型。
 可用的文件类型包括：
@@ -135,12 +139,7 @@ author:"John Doe"
 
 #### `tag`
 按特定标签名称筛选条目。
-:::tip
-如果标签名称包含空格，使用半角双引号将其括起来。例如：
-```
-tag:"Stable Diffusion"
-```
-:::
+
 #### `tag_id`
 按特定标签的唯一 ID 筛选条目。
 可以在 <i class="material-symbols-outlined">settings</i> > **标签**页面查看标签 ID。
