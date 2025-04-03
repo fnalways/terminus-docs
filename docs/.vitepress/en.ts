@@ -326,6 +326,10 @@ const side = {
                 },
               ],
             },
+           {
+               text: "Remote access",
+               link: "/manual/tasks/remote-access",
+               }
           ],
         },
       ],

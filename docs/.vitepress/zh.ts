@@ -330,6 +330,10 @@ const side = {
                 },
               ],
             },
+          {
+           text: "远程访问",
+           link: "zh/manual/tasks/remote-access",
+           }
           ],
         },
       ],
