@@ -14,12 +14,12 @@ To use local AI models on Dify, ensure you have:
   :::
 
 ## Install Dify
+:::info
+Starting from Olares 1.11.6, if "Dify For Cluster" or "Dify" was previously installed, uninstall them before proceeding.
+:::
 
-Install Dify from Market based on your role:
-* **For admin**: Install both "Dify For Cluster" and "Dify".
-* **For team members**: Ensure your admin has installed "Dify For Cluster", and install "Dify" only.
+Install "Dify Shared" from Olares Market.
 
-![Install Dify](/images/manual/use-cases/install-dify.png){width=30%}
 ## Create an AI assistant app
 
 1. Open Dify, navigate to the **Studio** tab, and select **Create from Blank** to create an app for the AI assistant. Here, we created an agent named "Ashia".
