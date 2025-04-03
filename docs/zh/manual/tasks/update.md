@@ -35,7 +35,7 @@ Olares 定期发布新版本，带来功能改进和用户体验优化。本文�
    ![Open terminal in Olares](/images/zh/manual/tasks/olares-terminal-in-control-hub.png#bordered)
 2. 在终端中执行以下命令：
    ```bash
-   curl -SsfL https://cdn.joinolares.cn/upgrade_1_11_5.sh | bash -
+   curl -SsfL https://cdn.joinolares.cn/upgrade_1_11_6.sh | bash -
    ```
    其中：
-   - `1_11_5` 表示将 `olaresd` 和 `olares-cli` 升级到 `1.11.5` 版本。
+   - `1_11_6` 表示将 `olaresd` 和 `olares-cli` 升级到 `1.11.6` 版本。
