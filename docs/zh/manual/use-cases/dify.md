@@ -14,12 +14,12 @@ Dify 是一个 AI 应用开发平台。它是 Olares 集成的关键开源项目
   :::
 
 ## 安装 Dify
+:::info
+从 Olares 1.11.6 开始，如果已安装 "Dify For Cluster" 或 "Dify"，需先卸载这些版本。
+:::
 
-根据你的角色安装相应应用：
-* **管理员**：需要安装“Dify For Cluster”和“Dify”。
-* **团队成员**：仅需安装“Dify”，同时确保管理员已安装 “Dify For Cluster”。
+从应用市场中安装 “Dify 共享版”。
 
-![安装 Dify](/images/manual/use-cases/install-dify.png){width=30%}
 ## 创建 AI 助手应用
 
 1. 打开 Dify，在**工作室**选项卡下，点击**创建空白应用**创建一个 AI 助手应用。这里我们创建一个名为 “Ashia” 的 Agent。
