@@ -39,16 +39,6 @@ const side = {
         {
           text: "安装激活",
           link: "/zh/manual/get-started/install-olares",
-          items: [
-            {
-              text: "使用脚本（推荐）",
-              link: "/zh/manual/get-started/install-olares-linux",
-            },
-            {
-              text: "使用 Docker Compose",
-              link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
-            },
-          ],
         },
         {
           text: "备份助记词",
@@ -463,6 +453,7 @@ const side = {
            link: "/zh/developer/install/additional-installations",
           collapsed: true,
           items: [
+            { text: "Linux (Docker 镜像)", link: "/zh/developer/install/linux-via-docker-compose" },
             {
               text: "macOS",
               collapsed: true,

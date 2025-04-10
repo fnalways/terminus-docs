@@ -5,7 +5,7 @@ description: 通过 WSL 在 Windows 系统安装配置 Olares 的完整步骤，
 # 在 Windows 上使用脚本安装 Olares
 本文介绍如何在 Windows （WSL 2）上使用脚本安装 Olares。
 
-:::info
+:::warning 不适用于生产环境
 Windows 版 Olares 目前存在以下限制：
 - 不支持分布式存储
 - 无法添加本地节点

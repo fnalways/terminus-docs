@@ -4,6 +4,10 @@ description: 在 PVE 虚拟化平台上安装配置 Olares 的完整步骤，包
 # 在 PVE 上安装 Olares
 Proxmox 虚拟环境（PVE）是一个基于 Debian Linux 的开源虚拟化平台。本文将介绍如何在 PVE 环境中安装 Olares。
 
+::: warning 不适用于生产环境
+该部署方式当前仍有功能限制，建议仅用于开发或测试环境。
+:::
+
 ## 系统要求
 请确保设备满足以下配置要求：
 

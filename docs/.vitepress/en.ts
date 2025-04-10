@@ -39,16 +39,6 @@ const side = {
         {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
-          items: [
-            {
-              text: "Using the script (recommended)",
-              link: "/manual/get-started/install-olares-linux",
-            },
-            {
-              text: "Using Docker Compose",
-              link: "/manual/get-started/install-olares-linux-via-docker-compose",
-            },
-          ],
         },
         {
           text: "Back up mnemonics",
@@ -459,6 +449,7 @@ const side = {
           link: "/developer/install/additional-installations",
           collapsed: true,
           items: [
+            { text: "Linux（via Docker)", link: "/developer/install/linux-via-docker-compose"},
             {
               text: "macOS",
               collapsed: true,

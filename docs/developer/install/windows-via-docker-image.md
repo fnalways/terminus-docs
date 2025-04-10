@@ -5,7 +5,7 @@ description: Learn how to run Olares on Windows using WSL 2 and Docker, includin
 # Install Olares on Windows (WSL 2) with Docker image
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker and WSL 2, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 
-:::info
+:::warning Not recommended for production use
 Currently, Olares on Windows has certain limitations including:
 - Lack of distributed storage support
 - Inability to add local nodes.

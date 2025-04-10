@@ -5,7 +5,7 @@ description: 了解如何通过 WSL 2 和 Docker 在 Windows 上安装和运行 
 # 使用 Docker 镜像在 Windows 上安装 Olares
 你可以通过 Docker 可以在容器化环境中安装和运行 Olares。本文将带你了解：如何使用 Docker 和 WSL 2 设置 Olares，准备安装环境，完成激活流程，并管理容器的生命周期。
 
-:::info
+:::warning 不适用于生产环境
 Windows 版 Olares 目前存在以下限制：
 - 不支持分布式存储
 - 无法添加本地节点

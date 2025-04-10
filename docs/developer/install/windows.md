@@ -5,7 +5,7 @@ description: Guide to installing Olares on Windows using WSL (Windows Subsystem 
 # Install Olares on Windows via the script
 This guide explains how to install Olares on Windows (WSL 2) using the provided installation script.
 
-:::info
+:::warning Not recommended for production use
 Currently, Olares on Windows has certain limitations including:
 - Lack of distributed storage support
 - Inability to add local nodes.

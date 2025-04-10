@@ -4,7 +4,7 @@ description: 在 Mac 系统上安装配置 Olares 的完整步骤，包括环境
 # 在 Mac 上使用脚本安装 Olares
 本文介绍如何在 Mac 上使用脚本安装 Olares。
 
-:::info
+::: warning 不适用于生产环境
 Mac 版 Olares 目前存在以下限制：
 - 不支持分布式存储
 - 无法添加本地节点
