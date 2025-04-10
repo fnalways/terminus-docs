@@ -1,11 +1,12 @@
 ---
 description: Installation guide for running Olares in containerized or virtual environments on macOS, Windows, PVE, Raspberry Pi, and more. Intended for development and testing only, not for production use.
+---
 
 # Additional installation options
 
 Additional installation options in this section are intended for **development or testing on special containerized or virtual environments* on Linux, macOS, Windows, PVE, or Raspberry Pi.
 
-::: tip Recommendation for production environment
+:::tip Recommendation for production environment
 Olares is optimized for Linux systems (Ubuntu or Debian). We recommend [installing Olares on Linux using script](../../manual/get-started/install-olares.md) to get the best performance and reliability for production use.
 :::
 
