@@ -29,7 +29,7 @@ Before you begin, ensure the following:
    - Using the graphical interface: Open **System Settings** (or **System Preferences**) > **Network**, and check the details under the currently active network connection.
    - Using the command line: Open a terminal window and enter `ipconfig getifaddr en0` for Wi-Fi, or `ipconfig getifaddr en1` for wired network.
      :::
-- You have [created an Olares ID via LarePass](create-olares-id.md).
+- You have [created an Olares ID via LarePass](/manual/get-started/create-olares-id.md).
 
 ## Run `olaresd-proxy`
 ::: tip Check Mac chip  

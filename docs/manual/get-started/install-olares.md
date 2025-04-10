@@ -13,7 +13,7 @@ This page provides an overview of installing Olares on Linux.
 Before installing, make sure to [create an Olares ID](create-olares-id.md) and verify that your operating system and hardware meet the minimum requirements.
 
 ::: tip Support for other platforms
-Olares also supports platforms such as macOS, Windows (WSL 2), PVE, and Raspberry Pi,but these are intended **only for development or testing**. For instructions on these environments, see [Additional installation methods](/developer/install/additional-installation-methods).
+Olares also supports platforms such as macOS, Windows (WSL 2), PVE, and Raspberry Pi,but these are intended **only for development or testing**. For instructions on these environments, see [Additional installation methods](/developer/install/additional-installations.md).
 :::
 
 You can install Olares on Linux using one of the following approaches:

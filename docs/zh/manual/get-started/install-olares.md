@@ -8,7 +8,7 @@ description: Olares 在 Linux 系统上的安装指南，支持脚本安装和 D
 开始安装前，请先[创建 Olares ID](create-olares-id.md)，并确认操作系统与硬件已满足最低要求。
 
 ::: tip 其他平台支持
-Olares 也支持其他平台（如 macOS、Windows、PVE 和树莓派），但这些环境仅适用于**开发或测试**。如需在这些平台上安装，请参考[其他安装方式](/developer/install/additional-installation-methods)。
+Olares 也支持其他平台（如 macOS、Windows、PVE 和树莓派），但这些环境仅适用于**开发或测试**。如需在这些平台上安装，请参考[其他安装方式](/developer/install/additional-installations.md)。
 :::
 
 在 Linux 上，你可以通过以下方式安装 Olares：

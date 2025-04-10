@@ -29,7 +29,7 @@ Mac 设备需满足以下条件：
   - 使用图形界面：打开**系统设置**（或**系统偏好设置**）> **网络**，在当前活动的网络连接中查看详细信息。
   - 使用命令行：打开终端窗口，Wi-Fi 网络输入 `ipconfig getifaddr en0`，有线网络输入 `ipconfig getifaddr en1`。
   :::
-- 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 运行 `olaresd-proxy`
 ::: tip 确认 Mac 芯片  

@@ -35,7 +35,7 @@ Windows 设备需满足以下条件：
   ipconfig | findstr /i "IPv4.*192"
   ```
   :::
-- 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 配置 WSL 2
 1. 打开 PowerShell，运行以下命令确认系统中安装的 WSL 内核版本：

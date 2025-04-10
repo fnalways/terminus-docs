@@ -35,7 +35,7 @@ Before you begin, ensure the following:
   ipconfig | findstr /i "IPv4.*192"
   ```
     :::
-- You have [created an Olares ID via LarePass](create-olares-id.md).
+- You have [created an Olares ID via LarePass](/manual/get-started/create-olares-id.md).
 
 ## Configure WSL 2
 1. Open PowerShell and run the following command to confirm the kernel version of WSL installed on your system:
