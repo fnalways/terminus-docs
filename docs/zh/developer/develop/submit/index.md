@@ -17,7 +17,7 @@ outline: [2, 3]
 ### 1. 创建并测试 Olares 应用
 
 在提交应用程序之前，请确保它已在你的 Olares 上经过完整测试。
-- 使用 DevBox 的开发容器在真实的在线环境中测试和调试你的应用。 [了解有关 DevBox 的更多信息](../tutorial/devbox.md)。
+- 使用 DevBox 的开发容器在真实的在线环境中测试和调试你的应用。 [了解有关 DevBox 的更多信息](../tutorial/studio)。
 - 使用 Market 应用程序中的[自定义安装](../../../manual/tasks/install-uninstall-update#install-custom-applications) 进行用户测试。
 
 ### 2. 提交应用

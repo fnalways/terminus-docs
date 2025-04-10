@@ -9,7 +9,7 @@ To get started, you can learn some basic concepts of Olares, such as:
 
 These fundamentals will help you grasp our development process more effectively.
 
-You can also [learn about DevBox](devbox.md), a built-in app that Olares provides for developers to build Olares applications.
+You can also [learn about DevBox](studio.md), a built-in app that Olares provides for developers to build Olares applications.
 
 If you're brand new to Olares development and want to jump straight into coding, start with the [**Create your first Olares app**](./note/index.md). This tutorial will step you through the process of building a small note application.
 

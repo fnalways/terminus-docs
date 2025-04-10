@@ -510,8 +510,8 @@ const side = {
           link: "/zh/developer/develop/tutorial/",
           items: [
             {
-              text: "了解 DevBox",
-              link: "/zh/developer/develop/tutorial/devbox",
+              text: "了解 Studio",
+              link: "/zh/developer/develop/tutorial/studio",
             },
             {
               text: "创建首个应用",
