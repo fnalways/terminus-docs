@@ -17,7 +17,7 @@ outline: [2, 3]
 ### 1. Develop and test your application
 
 Before submitting an application, please ensure that it has been thoroughly tested on your Olares.
-- Use DevBox's dev-container to test and debug your application in a real online environment. [Learn more about DevBox](../tutorial/devbox.md).
+- Use DevBox's dev-container to test and debug your application in a real online environment. [Learn more about DevBox](../tutorial/studio).
 - Use the [custom installation](../../../manual/tasks/install-uninstall-update#install-custom-applications) in the Market app for user testing.
 
 ### 2. Submit an application

@@ -506,8 +506,8 @@ const side = {
           link: "/developer/develop/tutorial/",
           items: [
             {
-              text: "Learn DevBox",
-              link: "/developer/develop/tutorial/devbox",
+              text: "Learn Studio",
+              link: "/developer/develop/tutorial/studio",
             },
             {
               text: "Create your first app",
