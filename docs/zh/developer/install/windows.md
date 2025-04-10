@@ -75,15 +75,7 @@ Windows 设备需满足以下条件：
    publicInstall.latest.ps1?
    [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
    ```
-
-4. 配置防火墙规则。输入 `yes` 自动设置防火墙规则，或者输入 `no` 跳过自动设置。<br>
-   如果你选择跳过，可以[暂时关闭防火墙](#如何关闭-windows-defender-防火墙)，或[手动添加 TCP 入站规则](#如何手动设置防火墙规则)。
-   ```powershell{2}
-   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
-   Do you want to set up the firewall rules? (yes/no):
-   ```
-
-5. 选择 WSL Ubuntu 的存储位置。请输入一个可用磁盘的盘符，并确保所选磁盘至少有 **80 GB** 的可用空间。
+4. 选择 WSL Ubuntu 的存储位置。请输入一个可用磁盘的盘符，并确保所选磁盘至少有 **80 GB** 的可用空间。
    ```powershell{8}
    Installing Olares will create a WSL Ubuntu Distro and occupy at least 80 GB of disk space.
    Please select the drive where you want to install it.
@@ -94,6 +86,21 @@ Windows 设备需满足以下条件：
    
    Please enter the drive letter (e.g., C):
    ```
+
+5. 配置防火墙规则。输入 `yes` 自动设置防火墙规则，或者输入 `no` 跳过自动设置。<br>
+   如果你选择跳过，可以[暂时关闭防火墙](#如何关闭-windows-defender-防火墙)，或[手动添加 TCP 入站规则](#如何手动设置防火墙规则)。
+   ```powershell{2}
+   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
+   Do you want to set up the firewall rules? (yes/no):
+   ```
+6. 确认 Windows 的 IP 地址。输入 **Y** 确认，或者 **R** 重新输入。
+   
+   ```powershell
+   The NAT gateway (the Windows host)'s IP is 192.168.50.136. Confirm [Y] or Re-enter [R]?
+   ```
+   ::: tip 获取 Windows IP 地址
+   你可以提前通过在 Windows 命令行里执行 `ipconfig` 获取 Windows 的 IPv4 地址。
+   :::
 
 <!--@include: ./reusables.md{7,9}-->
 

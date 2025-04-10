@@ -77,14 +77,7 @@ Make sure your Windows meets the following requirements.
    [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D"):
    ```
 
-4. When prompted with the firewall rules setup, type `yes` to automatically configure them, or type `no` to skip this step. <br>
-   If you choose to skip, either [disable Windows Firewall Defender](#how-to-disable-windows-defender-firewall), or [manually add TCP inbound rules](#how-to-manually-set-firewall-rules).
-   ```powershell{2}
-   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
-   Do you want to set up the firewall rules? (yes/no):
-   ```
-
-5. When prompted to select the drive to store the WSL Ubuntu distro, type the drive letter of an available disk. Ensure the selected drive has at least **80 GB** of free space.
+4. When prompted to select the drive to store the WSL Ubuntu distro, type the drive letter of an available disk. Ensure the selected drive has at least **80 GB** of free space.
    ```powershell{8}
    Installing Olares will create a WSL Ubuntu Distro and occupy at least 80 GB of disk space.
    Please select the drive where you want to install it.
@@ -95,6 +88,21 @@ Make sure your Windows meets the following requirements.
    
    Please enter the drive letter (e.g., C):
    ```
+
+5. When prompted with the firewall rules setup, type `yes` to automatically configure them, or type `no` to skip this step. <br>
+   If you choose to skip, either [disable Windows Firewall Defender](#how-to-disable-windows-defender-firewall), or [manually add TCP inbound rules](#how-to-manually-set-firewall-rules).
+   ```powershell{2}
+   Accessing Olares requires setting up firewall rules, specifically adding TCP inbound rules for ports 80, 443, and 30180.
+   Do you want to set up the firewall rules? (yes/no):
+   ```
+6. When promoted to confirm the IP address of Windows, type **Y** to confirm, or **R** to re-enter.
+
+   ```powershell
+   The NAT gateway (the Windows host)'s IP is 192.168.50.136. Confirm [Y] or Re-enter [R]?
+   ```
+   ::: tip Obtain the IPv4 address of Windows
+   You can get the IPv4 address in advance by running `ipconfig` in the Windows command line.
+   :::
 
 <!--@include: ./reusables.md{7,9}-->
 
