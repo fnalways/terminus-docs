@@ -35,7 +35,7 @@ Before you begin, ensure the following:
   ```
   Look for the line starting with `default via`. It will show the default gateway and the network interface being used.
   :::
-- You have [created an Olares ID via LarePass](create-olares-id.md).
+- You have [created an Olares ID via LarePass](/manual/get-started/create-olares-id.md).
 
 ## Create a new directory
 Create a directory to store the Olares configuration files. For example, you could make a new directory called `olares-config` with the following command:
