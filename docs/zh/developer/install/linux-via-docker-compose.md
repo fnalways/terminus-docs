@@ -9,6 +9,8 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 该部署方式仅适用于开发或测试环境。我们推荐[通过脚本方式在 Linux 上安装 Olares](/zh/manual/get-started/install-olares.md)，以获得最佳的性能与稳定性。
 :::
 
+<!--@include: ./reusables.md{36,41}-->
+
 ## 系统要求
 
 请确保设备满足以下配置要求：
@@ -19,10 +21,6 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 - 支持的系统版本：
    - Ubuntu 20.04 LTS 及以上
    - Debian 11 及以上
-
-::: info 版本兼容性
-虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
-:::
 
 ## 开始之前
 开始安装前，请确保：
