@@ -1,17 +1,51 @@
 ---
-description: Installing Olares on supported platforms including Linux, PVE, LXC, Raspberry Pi, macOS and Windows WSL using script or Docker methods.
+description: Get started with Olares on Linux using the one-line script
 ---
 :::warning Note for Mainland China users
 The steps in this guide differ for users in Mainland China due to regional differences. For a version tailored to your region, please read the Simplified Chinese documentation.
 :::
-# Install Olares
-This page provides an overview of the installation methods for Olares. To run Olares, you must [create an Olares ID](create-olares-id.md), and ensure that both the operating system and hardware meet the minimum requirements.
 
-Olares is recommended for use on **Linux (Ubuntu or Debian) systems**. These platforms provide the best performance and stability for production environments. Other platforms like macOS and Windows (WSL 2) are supported but should only be used for development or testing.
+# Install Olares on Linux
 
-You can install Olares using one of the following approaches:
+This document introduces how to install and activate Olares on Linux. **Linux (Ubuntu or Debian)** is the recommended platform for running Olares, as it offers the best performance and stability in production environments.
 
-- **Using the script**: Install Olares directly on your system using a simple installation script.
-- **Using Docker image**: Run Olares as a containerized application without installing it directly on your machine.
+Before installing, make sure to [create an Olares ID](create-olares-id.md) and verify that your operating system and hardware meet the minimum requirements.
 
-<!--@include: .installation-troubleshooting.md{4,9}-->
+::: tip Other installation options
+Olares also provides several other installation options across platforms such as macOS, Windows (WSL 2), PVE, and Raspberry Pi, but these are intended **only for development or testing**. For instructions on these options, see [Additional installation options](/developer/install/additional-installations.md).
+:::
+
+:::info Having trouble with installation?  
+If you encounter issues during the installation process, feel free to [submit a GitHub Issue](https://github.com/beclab/Olares/issues/new). Please include the following information when submitting: 
+
+- The platform or environment you're using (e.g., Ubuntu, Docker, WSL, etc.).  
+- The installation method (script installation or Docker image).  
+- Detailed error information (including logs, error messages, or screenshots).  
+:::
+
+## System requirements
+
+Make sure your device meets the following requirements.
+
+- CPU: At least 4 cores
+- RAM: At least 8GB of available memory
+- Storage: At least 64GB of available space (SSD recommended)
+- Supported systems:
+    - Ubuntu 20.04 LTS or later
+    - Debian 11 or later
+
+:::info Version compatibility
+While these specific versions are confirmed to work, the process may still work on other versions. Adjustments may be necessary depending on your environment. If you meet any issues with these platforms, feel free to raise an issue on [GitHub](https://github.com/beclab/Olares/issues/new).
+:::
+
+## Install Olares
+
+In your terminal, run the following command:
+
+<!--@include: ./reusables.md{4,33}-->
+
+<!--@include: ./activate-olares.md-->
+
+<!--@include: ./log-in-to-olares.md-->
+
+<!--@include: ./reusables.md{35,39}-->

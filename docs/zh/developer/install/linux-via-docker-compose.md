@@ -5,9 +5,12 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 # 使用 Docker Compose 在 Linux 上安装 Olares
 通过 Docker 可以在容器化环境中安装和运行 Olares。本文将介绍如何使用 Docker 设置 Olares、准备安装环境、完成激活过程以及管理容器生命周期。
 
-:::tip
-推荐[使用脚本在 Linux 上安装 Olares](install-olares-linux.md)。
+::: warning 不适用于生产环境
+该部署方式仅适用于开发或测试环境。我们推荐[通过脚本方式在 Linux 上安装 Olares](/zh/manual/get-started/install-olares.md)，以获得最佳的性能与稳定性。
 :::
+
+<!--@include: ./reusables.md{36,41}-->
+
 ## 系统要求
 
 请确保设备满足以下配置要求：
@@ -18,10 +21,6 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 - 支持的系统版本：
    - Ubuntu 20.04 LTS 及以上
    - Debian 11 及以上
-
-::: info 版本兼容性
-虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
-:::
 
 ## 开始之前
 开始安装前，请确保：
@@ -34,7 +33,7 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
   ```
   找到以 `default via` 开头的行，对应默认网关和正在使用的网络接口。
   :::
-- 已通过 LarePass [创建 Olares ID](create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/zh/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 创建文件夹
 创建文件夹存储 Olares 的配置文件。例如，用如下命令创建名为 `olares-config` 的文件夹：

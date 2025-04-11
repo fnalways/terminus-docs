@@ -1,15 +1,15 @@
 ---
-description: 全平台 Olares 安装指南，支持 Linux、PVE、LXC、树莓派、Mac、Windows WSL，提供命令行和 Docker 两种部署方式。
+description: 在 Linux 系统上通过一键脚本，快速上手 Olares。
 ---
 # 安装 Olares
-本文介绍安装 Olares 的不同方式。在运行 Olares 之前，你需要[创建 Olares ID](create-olares-id.md)，并确保操作系统和硬件配置满足最低要求。
 
-推荐在 **Linux 系统（Ubuntu 或 Debian）** 上使用 Olares，这些平台可以为生产环境提供最佳的性能和稳定性。你也可以在 macOS 和 Windows（通过 WSL 2）等平台运行 Olares，但建议仅用于开发或测试环境。
+本文介绍如何在 Linux 系统上安装 Olares。我们推荐在 **Linux 系统（如 Ubuntu 或 Debian）**上部署 Olares，以在生产环境中获得最佳的性能与稳定性。
 
-你可以选择以下方式安装 Olares：
+开始安装前，请先[创建 Olares ID](create-olares-id.md)，并确认操作系统与硬件已满足最低要求。
 
-- **使用脚本安装**：通过简单的安装脚本将 Olares 直接安装到系统中。
-- **使用 Docker 镜像**：以容器化方式运行 Olares，无需直接安装在机器上。
+::: tip 其他安装选项
+Olares 还提供在 macOS、Windows（WSL 2）、PVE 和树莓派等平台上的多种其他安装方式，但这些方式仅适用于**开发或测试用途**。请参考[其他安装方式](/developer/install/additional-installations.md)获取具体安装步骤。
+:::
 
 :::info 安装遇到问题？
 如果安装过程中遇到问题，[可以提交 GitHub Issue](https://github.com/beclab/Olares/issues/new)。提交时请提供以下信息：
@@ -17,3 +17,30 @@ description: 全平台 Olares 安装指南，支持 Linux、PVE、LXC、树莓�
 - 安装方式（脚本安装或 Docker 镜像）。
 - 详细的错误信息（包括日志、错误提示或截图）。
 :::
+
+## 系统要求
+
+请确保设备满足以下配置要求：
+
+- CPU：4 核及以上
+- 内存：不少于 8GB 可用内存
+- 存储：建议使用 SSD，且可用磁盘空间不少于 64GB
+- 支持的系统版本：
+    - Ubuntu 20.04 LTS 及以上
+    - Debian 11 及以上
+
+:::info 版本兼容性
+虽然以上版本已经过验证，但其他版本也可能正常运行 Olares。根据你的环境可能需要进行调整。如果你在这些平台上安装时遇到任何问题，欢迎在 [GitHub](https://github.com/beclab/Olares/issues/new) 上提问。
+:::
+
+## 安装 Olares
+
+在 Linux 命令行中，执行以下命令：
+
+<!--@include: ./reusables.md{4,28}-->
+
+<!--@include: ./activate-olares.md-->
+
+<!--@include: ./log-in-to-olares.md-->
+
+<!--@include: ./reusables.md{30,34}-->

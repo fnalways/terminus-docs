@@ -39,56 +39,6 @@ const side = {
         {
           text: "Install Olares",
           link: "/manual/get-started/install-olares",
-          items: [
-            {
-              text: "General Linux",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using the script (recommended)",
-                  link: "/manual/get-started/install-olares-linux",
-                },
-                {
-                  text: "Using Docker Compose",
-                  link: "/manual/get-started/install-olares-linux-via-docker-compose",
-                },
-              ],
-            },
-            {
-              text: "macOS",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using the script (recommended)",
-                  link: "/manual/get-started/install-olares-mac",
-                },
-                {
-                  text: "Using Docker image",
-                  link: "/manual/get-started/install-olares-mac-via-docker-image",
-                },
-              ],
-            },
-            {
-              text: "Windows (WSL 2)",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using the script (recommended)",
-                  link: "/manual/get-started/install-olares-windows",
-                },
-                {
-                  text: "Using Docker image",
-                  link: "/manual/get-started/install-olares-windows-via-docker-image",
-                },
-              ],
-            },
-            { text: "PVE", link: "/manual/get-started/install-olares-pve" },
-            { text: "LXC", link: "/manual/get-started/install-olares-lxc" },
-            {
-              text: "Raspberry Pi",
-              link: "/manual/get-started/install-olares-raspberry-pi",
-            },
-          ],
         },
         {
           text: "Back up mnemonics",
@@ -493,6 +443,45 @@ const side = {
         {
           text: "Olares versioning",
           link: "/developer/install/versioning",
+        },
+        {
+          text: "Additional installations",
+          link: "/developer/install/additional-installations",
+          collapsed: true,
+          items: [
+            { text: "Linux (via Docker)", link: "/developer/install/linux-via-docker-compose"},
+            {
+              text: "macOS",
+              collapsed: true,
+              items: [
+                {
+                  text: "Using the script (recommended)",
+                  link: "/developer/install/mac",
+                },
+                {
+                  text: "Using Docker image",
+                  link: "/developer/install/mac-via-docker-image",
+                },
+              ],
+            },
+            {
+              text: "Windows (WSL 2)",
+              collapsed: true,
+              items: [
+                {
+                  text: "Using the script (recommended)",
+                  link: "/developer/install/windows",
+                },
+                {
+                  text: "Using Docker image",
+                  link: "/developer/install/windows-via-docker-image",
+                },
+              ],
+            },
+            { text: "PVE", link: "/developer/install/pve" },
+            { text: "LXC", link: "/developer/install/lxc" },
+            { text: "Raspberry Pi", link: "/developer/install/raspberry-pi" },
+          ],
         },
       ],
     },

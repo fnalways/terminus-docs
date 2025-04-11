@@ -4,13 +4,15 @@ description: Step-by-step instructions for installing Olares on macOS systems in
 # Install Olares on Mac via the script
 This guide explains how to install Olares on macOS using the provided installation script.
 
-:::info
+:::warning Not for production use
 Olares on Mac has certain limitations including:
 - Lack of distributed storage support.
 - Inability to add local nodes.
 
 We recommend using it only for development or testing purposes.
 :::
+
+<!--@include: ./reusables.md{41,47}-->
 
 ## System compatibility
 Make sure your Mac meets the following requirements.

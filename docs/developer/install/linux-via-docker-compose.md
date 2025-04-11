@@ -5,6 +5,10 @@ description: Learn how to deploy Olares on a Linux server using Docker Compose. 
 # Install Olares on Linux using Docker Compose
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 
+:::tip Recommendation for production use
+For best performance and stability, we recommend [installing Olares on Linux via script](/manual/get-started/install-olares.md).
+:::
+
 ## System requirements
 
 Make sure your device meets the following requirements.
@@ -31,7 +35,7 @@ Before you begin, ensure the following:
   ```
   Look for the line starting with `default via`. It will show the default gateway and the network interface being used.
   :::
-- You have [created an Olares ID via LarePass](create-olares-id.md).
+- You have [created an Olares ID via LarePass](/manual/get-started/create-olares-id.md).
 
 ## Create a new directory
 Create a directory to store the Olares configuration files. For example, you could make a new directory called `olares-config` with the following command:

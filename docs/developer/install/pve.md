@@ -4,6 +4,12 @@ description: Guide to installing Olares on Proxmox VE (PVE) with system requirem
 # Install Olares on PVE
 Proxmox Virtual Environment (PVE) is an open-source virtualization platform based on Debian Linux. This guide explains how to install Olares in a PVE environment.
 
+:::warning Not recommended for production use
+Currently, Olares on PVE has certain limitations. We recommend using it only for development or testing purposes.
+:::
+
+<!--@include: ./reusables.md{41,47}-->
+
 ## System requirements
 Make sure your device meets the following requirements.
 

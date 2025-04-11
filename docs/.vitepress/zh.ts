@@ -39,56 +39,6 @@ const side = {
         {
           text: "安装激活",
           link: "/zh/manual/get-started/install-olares",
-          items: [
-            {
-              text: "通用 Linux",
-              collapsed: true,
-              items: [
-                {
-                  text: "使用脚本（推荐）",
-                  link: "/zh/manual/get-started/install-olares-linux",
-                },
-                {
-                  text: "使用 Docker Compose",
-                  link: "/zh/manual/get-started/install-olares-linux-via-docker-compose",
-                },
-              ],
-            },
-            {
-              text: "macOS",
-              collapsed: true,
-              items: [
-                {
-                  text: "使用脚本（推荐）",
-                  link: "/zh/manual/get-started/install-olares-mac",
-                },
-                {
-                  text: "使用 Docker 镜像",
-                  link: "/zh/manual/get-started/install-olares-mac-via-docker-image",
-                },
-              ],
-            },
-            {
-              text: "Windows (WSL 2)",
-              collapsed: true,
-              items: [
-                {
-                  text: "使用脚本（推荐）",
-                  link: "/zh/manual/get-started/install-olares-windows",
-                },
-                {
-                  text: "使用 Docker 镜像",
-                  link: "/zh/manual/get-started/install-olares-windows-via-docker-image",
-                },
-              ],
-            },
-            { text: "PVE", link: "/zh/manual/get-started/install-olares-pve" },
-            { text: "LXC", link: "/zh/manual/get-started/install-olares-lxc" },
-            {
-              text: "树莓派",
-              link: "/zh/manual/get-started/install-olares-raspberry-pi",
-            },
-          ],
         },
         {
           text: "备份助记词",
@@ -497,6 +447,45 @@ const side = {
         {
           text: "版本说明",
           link: "/zh/developer/install/versioning",
+        },
+        {
+          text: "其他安装方式",
+           link: "/zh/developer/install/additional-installations",
+          collapsed: true,
+          items: [
+            { text: "Linux（Docker 镜像）", link: "/zh/developer/install/linux-via-docker-compose" },
+            {
+              text: "macOS",
+              collapsed: true,
+              items: [
+                {
+                  text: "使用脚本（推荐）",
+                  link: "/zh/developer/install/mac",
+                },
+                {
+                  text: "使用 Docker 镜像",
+                  link: "/zh/developer/install/mac-via-docker-image",
+                },
+              ],
+            },
+            {
+              text: "Windows (WSL 2)",
+              collapsed: true,
+              items: [
+                {
+                  text: "使用脚本（推荐）",
+                  link: "/zh/developer/install/windows",
+                },
+                {
+                  text: "使用 Docker 镜像",
+                  link: "/zh/developer/install/windows-via-docker-image",
+                },
+              ],
+            },
+            { text: "PVE", link: "/zh/developer/install/pve" },
+            { text: "LXC", link: "/zh/developer/install/lxc" },
+            { text: "树莓派", link: "/zh/developer/install/raspberry-pi" },
+          ],
         },
       ],
     },

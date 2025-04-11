@@ -5,13 +5,16 @@ description: Learn how to run Olares as a containerized application on Mac with 
 # Install Olares on Mac with Docker image
 You can use Docker to install and run Olares in a containerized environment. This guide walks you through setting up Olares with Docker, preparing the installation environment, completing the activation process, and managing the container lifecycle.
 
-:::info
+:::warning Not for production use
 Currently, Olares on Mac has certain limitations including:
 - Lack of distributed storage support.
 - Inability to add local nodes.
 
 We recommend using it only for development or testing purposes.
 :::
+
+<!--@include: ./reusables.md{41,47}-->
+
 ## System requirements
 Make sure your device meets the following requirements.
 
@@ -29,7 +32,7 @@ Before you begin, ensure the following:
    - Using the graphical interface: Open **System Settings** (or **System Preferences**) > **Network**, and check the details under the currently active network connection.
    - Using the command line: Open a terminal window and enter `ipconfig getifaddr en0` for Wi-Fi, or `ipconfig getifaddr en1` for wired network.
      :::
-- You have [created an Olares ID via LarePass](create-olares-id.md).
+- You have [created an Olares ID via LarePass](/manual/get-started/create-olares-id.md).
 
 ## Run `olaresd-proxy`
 ::: tip Check Mac chip  
