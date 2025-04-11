@@ -12,6 +12,9 @@ Currently, Olares on Mac has certain limitations including:
 
 We recommend using it only for development or testing purposes.
 :::
+
+<!--@include: ./reusables.md{41,47}-->
+
 ## System requirements
 Make sure your device meets the following requirements.
 

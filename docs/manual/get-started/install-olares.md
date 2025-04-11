@@ -12,7 +12,15 @@ This document introduces how to install and activate Olares on Linux. **Linux (U
 Before installing, make sure to [create an Olares ID](create-olares-id.md) and verify that your operating system and hardware meet the minimum requirements.
 
 ::: tip Other installation options
-Olares also provides several other installation options across platforms such as macOS, Windows (WSL 2), PVE, and Raspberry Pi, butthese are intended **only for development or testing**. For instructions on these options, see [Additional installation options](/developer/install/additional-installations.md).
+Olares also provides several other installation options across platforms such as macOS, Windows (WSL 2), PVE, and Raspberry Pi, but these are intended **only for development or testing**. For instructions on these options, see [Additional installation options](/developer/install/additional-installations.md).
+:::
+
+:::info Having trouble with installation?  
+If you encounter issues during the installation process, feel free to [submit a GitHub Issue](https://github.com/beclab/Olares/issues/new). Please include the following information when submitting: 
+
+- The platform or environment you're using (e.g., Ubuntu, Docker, WSL, etc.).  
+- The installation method (script installation or Docker image).  
+- Detailed error information (including logs, error messages, or screenshots).  
 :::
 
 ## System requirements
@@ -41,11 +49,3 @@ In your terminal, run the following command:
 <!--@include: ./log-in-to-olares.md-->
 
 <!--@include: ./reusables.md{35,39}-->
-
-:::info Having trouble with installation?  
-If you encounter issues during the installation process, feel free to [submit a GitHub Issue](https://github.com/beclab/Olares/issues/new). Please include the following information when submitting: 
-
-- The platform or environment you're using (e.g., Ubuntu, Docker, WSL, etc.).  
-- The installation method (script installation or Docker image).  
-- Detailed error information (including logs, error messages, or screenshots).  
-:::

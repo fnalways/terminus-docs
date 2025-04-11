@@ -12,6 +12,8 @@ Olares on Mac has certain limitations including:
 We recommend using it only for development or testing purposes.
 :::
 
+<!--@include: ./reusables.md{41,47}-->
+
 ## System compatibility
 Make sure your Mac meets the following requirements.
 - Architecture: X86-64 or ARM64

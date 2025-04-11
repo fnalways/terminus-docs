@@ -11,6 +11,13 @@ description: 在 Linux 系统上通过一键脚本，快速上手 Olares。
 Olares 还提供在 macOS、Windows（WSL 2）、PVE 和树莓派等平台上的多种其他安装方式，但这些方式仅适用于**开发或测试用途**。请参考[其他安装方式](/developer/install/additional-installations.md)获取具体安装步骤。
 :::
 
+:::info 安装遇到问题？
+如果安装过程中遇到问题，[可以提交 GitHub Issue](https://github.com/beclab/Olares/issues/new)。提交时请提供以下信息：
+- 使用的平台或环境（如 Ubuntu、Docker、WSL 等）。
+- 安装方式（脚本安装或 Docker 镜像）。
+- 详细的错误信息（包括日志、错误提示或截图）。
+:::
+
 ## 系统要求
 
 请确保设备满足以下配置要求：
@@ -37,11 +44,3 @@ Olares 还提供在 macOS、Windows（WSL 2）、PVE 和树莓派等平台上的
 <!--@include: ./log-in-to-olares.md-->
 
 <!--@include: ./reusables.md{30,34}-->
-
-
-:::info 安装遇到问题？
-如果安装过程中遇到问题，[可以提交 GitHub Issue](https://github.com/beclab/Olares/issues/new)。提交时请提供以下信息：
-- 使用的平台或环境（如 Ubuntu、Docker、WSL 等）。
-- 安装方式（脚本安装或 Docker 镜像）。
-- 详细的错误信息（包括日志、错误提示或截图）。
-:::

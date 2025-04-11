@@ -13,6 +13,8 @@ Windows 版 Olares 目前存在以下限制：
 建议仅用于开发或测试环境。
 :::
 
+<!--@include: ./reusables.md{36,41}-->
+
 ## 系统要求
 Windows 设备需满足以下条件：
 - CPU：4 核及以上
@@ -35,7 +37,7 @@ Windows 设备需满足以下条件：
   ipconfig | findstr /i "IPv4.*192"
   ```
   :::
-- 已通过 LarePass [创建 Olares ID](/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/zh/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 配置 WSL 2
 1. 打开 PowerShell，运行以下命令确认系统中安装的 WSL 内核版本：

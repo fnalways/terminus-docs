@@ -13,6 +13,9 @@ Mac 版 Olares 目前存在以下限制：
 
 建议仅用于开发或测试环境。
 :::
+
+<!--@include: ./reusables.md{36,41}-->
+
 ## 系统要求
 Mac 设备需满足以下条件：
 - 处理器架构：AMD64 或 ARM64
@@ -29,7 +32,7 @@ Mac 设备需满足以下条件：
   - 使用图形界面：打开**系统设置**（或**系统偏好设置**）> **网络**，在当前活动的网络连接中查看详细信息。
   - 使用命令行：打开终端窗口，Wi-Fi 网络输入 `ipconfig getifaddr en0`，有线网络输入 `ipconfig getifaddr en1`。
   :::
-- 已通过 LarePass [创建 Olares ID](/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/zh/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 运行 `olaresd-proxy`
 ::: tip 确认 Mac 芯片  

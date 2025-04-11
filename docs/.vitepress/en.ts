@@ -449,7 +449,7 @@ const side = {
           link: "/developer/install/additional-installations",
           collapsed: true,
           items: [
-            { text: "Linux（via Docker)", link: "/developer/install/linux-via-docker-compose"},
+            { text: "Linux (via Docker)", link: "/developer/install/linux-via-docker-compose"},
             {
               text: "macOS",
               collapsed: true,

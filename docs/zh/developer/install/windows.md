@@ -13,6 +13,8 @@ Windows 版 Olares 目前存在以下限制：
 建议仅用于开发或测试环境。
 :::
 
+<!--@include: ./reusables.md{36,41}-->
+
 ## 系统要求
 Windows 设备需满足以下条件：
 - CPU：4 核及以上

@@ -35,7 +35,7 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
   ```
   找到以 `default via` 开头的行，对应默认网关和正在使用的网络接口。
   :::
-- 已通过 LarePass [创建 Olares ID](/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
+- 已通过 LarePass [创建 Olares ID](/zh/manual/get-started/create-olares-id.md) 且使用默认的 `olares.cn` 域名。
 
 ## 创建文件夹
 创建文件夹存储 Olares 的配置文件。例如，用如下命令创建名为 `olares-config` 的文件夹：
