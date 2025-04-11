@@ -6,7 +6,7 @@ description: 了解如何使用 Docker Compose 在 Linux 服务器上部署 Olar
 通过 Docker 可以在容器化环境中安装和运行 Olares。本文将介绍如何使用 Docker 设置 Olares、准备安装环境、完成激活过程以及管理容器生命周期。
 
 ::: warning 不适用于生产环境
-该部署方式仅适用于开发或测试环境。我们推荐[通过脚本方式在 Linux 上安装 Olares](/manual/get-started/install-olares.md)，以获得最佳的性能与稳定性。
+该部署方式仅适用于开发或测试环境。我们推荐[通过脚本方式在 Linux 上安装 Olares](/zh/manual/get-started/install-olares.md)，以获得最佳的性能与稳定性。
 :::
 
 ## 系统要求

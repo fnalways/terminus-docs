@@ -10,5 +10,5 @@ description: Olares 部署的技术概览，包含系统架构、安装流程、
 - [Olares Home 介绍](olares-home.md)：了解 Olares 默认安装目录的结构。
 - [Olares 环境变量](environment-variables.md)：查找合适的环境变量来自定义安装配置。
 - [Olares CLI 参考](./index.md)：使用 Olares CLI 命令行工具，自定义 Olares 安装或进行故障排查。
-- [Olares 版本说明](versioning.md): 了解 Olares 的版本号规则、版本类型、分支管理实践以及升级策略。
+- [Olares 版本说明](versioning.md)：了解 Olares 的版本号规则、版本类型、分支管理实践以及升级策略。
 - [其他安装方式](additional-installations.md)：在 Linux、macOS、Windows、PVE、树莓派等平台的容器或虚拟环境中安装 Olares。
