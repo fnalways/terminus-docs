@@ -12,6 +12,7 @@ This section contains detailed, hands-on guides to help you accomplish specific 
 ## Application
 - [Build your knowledge hub with Wise](organize-content.md)
 - [Stream your media library from anywhere with Olares](stream-media.md)
+- [Stream your favorite steam games on Olares](stream-game.md)
 - [Create AI art with ComfyUI and Krita](comfyui-for-krita.md)
 
 ## Setup and scaling
