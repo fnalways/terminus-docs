@@ -7,7 +7,7 @@ The steps in this guide differ for users in Mainland China due to regional diffe
 
 # Install Olares on Linux
 
-This document introduces how to install and activate Olares on Linux. **Linux (Ubuntu or Debian)** is the recommended platform for running Olares, as it offers the best performance and stability in production environments.
+This document introduces how to install and activate Olares on Linux. **Linux** (Ubuntu or Debian) is the recommended platform for running Olares, as it offers the best performance and stability in production environments.
 
 Before installing, make sure to [create an Olares ID](create-olares-id.md) and verify that your operating system and hardware meet the minimum requirements.
 
