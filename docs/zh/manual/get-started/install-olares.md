@@ -3,7 +3,7 @@ description: 在 Linux 系统上通过一键脚本，快速上手 Olares。
 ---
 # 安装 Olares
 
-本文介绍如何在 Linux 系统上安装 Olares。我们推荐在 **Linux 系统（如 Ubuntu 或 Debian）**上部署 Olares，以在生产环境中获得最佳的性能与稳定性。
+本文介绍如何在 Linux 系统上安装 Olares。我们推荐在 **Linux 系统**（如 Ubuntu 或 Debian）上部署 Olares，以在生产环境中获得最佳的性能与稳定性。
 
 开始安装前，请先[创建 Olares ID](create-olares-id.md)，并确认操作系统与硬件已满足最低要求。
 
