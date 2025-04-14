@@ -30,7 +30,7 @@ description: 在 Olares 上安装 Steam Headless，配置串流服务，并使�
 1. 打开 Olares 应用市场，在"娱乐"分类下找到 **Steam Headless** 并点击安装。
 2. 安装完成后，打开 **Steam Headless** 应用，点击 **Connect** 进入安装后台。 
 3. 点击 **Install** 按钮以安装并更新 Steam。安装完毕后会自动跳转到 Steam 登录页面。
-   ![安装 Steam](/images/zh/manual/tutorials/install-steam-client.PNG#bordered)
+   ![安装 Steam](/images/zh/manual/tutorials/install-steam-client.png#bordered)
 
 4. 登录你的 Steam 账号并完成基本设置。
 
