@@ -1,22 +1,22 @@
 ---
 outline: [2, 3]
-description: Comprehensive tutorial on streaming steam games with Olares. Learn to install Steam Headless, configure the streaming service, and stream games on Moonlight from both local and remote networks.
+description: Comprehensive tutorial on streaming steam games with Olares. Learn to install Steam, configure the streaming service, and stream games on Moonlight from both local and remote networks.
 ---
 
-# Stream your favorite games with Steam Headless
+# Stream your favorite games with Steam
 
-Want to enjoy some gaming with the power of Olares? You are all set. With the Steam Headless app, Olares easily transforms into a steam streaming server. You can now play your favorite games on any compatible device via Moonlight or Steam Link.
+Want to enjoy some gaming with the power of Olares? You are all set. With the Steam app, Olares easily transforms into a steam streaming server. You can now play your favorite games on any compatible device via Moonlight or Steam Link.
 
-This guide walks you through installing the Steam Headless app on Olares, configuring the streaming service, and using the Moonlight client to stream your games.
+This guide walks you through installing the Steam app on Olares, configuring the streaming service, and using the Moonlight client to stream your games.
 
 
 ## Objectives
 
 By the end of this tutorial, you’ll be able to:
 
-- Install Steam Headless on Olares and configure compatibility for Windows games
-- Configure the streaming service, which involves pairing the Sunshine streaming server with the Moonlight client
-- Stream games on the Moonlight client from both local and remote networks
+- Install Steam on Olares and configure compatibility for Windows games.
+- Configure the streaming service, which involves pairing the Sunshine streaming server with the host on the Moonlight client.
+- Stream games on the Moonlight client from both local and remote networks.
 
 ## Before you begin 
 
@@ -28,32 +28,33 @@ Before you begin, ensure the following:
   - **Remote streaming**: the device must have LarePass installed. Visit the [LarePass official site](https://www.joinolares.cn/larepass) to download and isstall the appropriate version.
 - You have a valid Steam account.
 
-## Install Steam Headless
+## Install Steam
 
-1. In Olares Market, find **Steam Headless** under the **Entertainment** category, and click **Install**.  
-2. Open the **Steam Headless** app and click **Connect** to access the console.
-3. In the Steam Headless console, click the **Install** button to install and update Steam. Once completed, the Steam login page should appear.
-   ![Install Steam](/images/manual/tutorials/install-steam-client.png#bordered)
+1. In Olares Market, find **Steam** under the **Entertainment** category, and click **Install**.  
+2. Open the Steam app, and then click **Connect** to access the Steam console.
+3. In the Steam console, click the **Install** button to install and update Steam client. Once completed, the Steam login page should appear.
+   ![Install Steam client](/images/manual/tutorials/install-steam-client.png#bordered)
 
 4. Log into your Steam account and complete the initial setup.
 
-   ![Steam Login Interface](/images/manual/tutorials/steam-login.png#bordered)
+   ![Steam login interface](/images/manual/tutorials/steam-login.png#bordered)
 
 ::: tip Retry installation upon failures
-Due to network issues, Steam installation or updates may fail. If this happens, go to the top-left menu in Steam Headless and navigate to **Applications** > **Internet** > **Steam** to reinstall.
+Due to network issues, Steam installation or update may fail. If this happens, go to the top-left menu in Steam console and navigate to **Applications** > **Internet** > **Steam** to reinstall.
 :::
 
 ## Configure game compatibility
 
 Olares runs on a Linux environment. You'll need to enable **Proton**, a compatibility layer, to support Windows games.
 
-1. Open the **Settings** page in Steam.  
+1. In the Steam page, navigate to **Steam** > **Settings** in the top left corner.
 2. Go to the **Compatibility** tab and check **Enable Steam Play for all other titles**.  
+   ![Steam Settings](/images/manual/tutorials/steam-setting.png#bordered)
 3. Restart Steam to view your complete game library.  
 
 ## Configure the streaming service
 
-To stream games using Moonlight, you need to pair your client device with the Sunshine streaming server integrated in Steam Headless. 
+The Steam app also integrates Sunshine, the streaming server. To stream games using Moonlight, you need to pair the host PC on moonlight with Sunshine. 
 
 ### Prepare for paring
 
@@ -74,13 +75,13 @@ To stream games using Moonlight, you need to pair your client device with the Su
 
 1. Open your Moonlight client and click the <i class="material-symbols-outlined">add_to_queue</i> button in the top-right corner.
 
-2. When promoted to enter the IP address of your host PC, enter the local URL of your Olares device, for example, `139ebc4f0.local.<your-olares-name>.olares.com`.
+2. When promoted to enter the IP address of your host PC, enter the local URL of Steam, for example, `139ebc4f0.local.<your-olares-name>.olares.com`.
 
    ::: tip Note
    Do not include `https://` and make sure to include the `.local` part in the hostname.
    ::: 
 
-3. Click **OK**, and a host icon will appear in locked status.
+3. Click **OK**, and a host icon appears in locked status.
 4. Click the host icon to receive a pairing code.
 
    ![Get pin code](/images/manual/tutorials/get-pin-code.png#bordered)
@@ -120,7 +121,7 @@ Once VPN is enabled on your device, simply follow the same instructions as local
 
 This could be due to your resolution settings. Try adjusting the resolution:
 - In Moonlight: adjust in **Settings** > **Basic Settings** > **Resolution and FPS**.
-- On the Steam Headless console page: adjust in **Applications** > **Settings** > **Display**.  
+- On the Steam console page: adjust in **Applications** > **Settings** > **Display**.  
   
   ![Set display](/images/manual/tutorials/set-steam-display.png#bordered)
 
