@@ -18,22 +18,11 @@ To achieve smooth streaming over external networks, enable the Olares VPN connec
 For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
-### On LarePass mobile client
-1. Open LarePass, go to **Settings** > **Account**.
-2. Turn on the VPN switch.
-   ![Enable VPN on LarePass mobile](/images/manual/use-cases/vpn-mobile.png#bordered)
-### On LarePass desktop client
-1. Open LarePass, click on the avatar area in the top left corner of the main interface.
-2. Turn on the switch for **VPN connection** in the pop-up panel.
-   ![Enable VPN on LarePass desktop](/images/manual/use-cases/vpn-desktop.png#bordered)
+<!--@include: ./remote.reusables.md{4,21}-->
 
 Once enabled, you can also access your applications using the format: `https://[RouteID].local.[OlaresDomainName]`.
 
 Devices with activated VPN will use the VPN connection to access Olares, whether through the LarePass client or a browser.
-
-:::info
-iOS or macOS versions of LarePass will require adding a VPN configuration file to the system when turning on the VPN. Follow the prompts to complete the setup.
-:::
 
 ## Access media files in LarePass
 After enabling VPN, you can browse media files stored on Olares.

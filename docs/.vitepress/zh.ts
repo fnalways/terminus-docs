@@ -72,6 +72,10 @@ const side = {
           link: "/zh/manual/tutorials/stream-media",
         },
         {
+          text: "串流 Steam 游戏",
+          link: "/zh/manual/tutorials/stream-game",
+        },
+        {
           text: "Krita + ComfyUI 实时绘画",
           link: "/zh/manual/tutorials/comfyui-for-krita",
         },

@@ -14,9 +14,9 @@ This guide walks you through installing the Steam Headless app on Olares, config
 
 By the end of this tutorial, you’ll be able to:
 
-- Install Steam Headless on Olares and configure compatibility for Windows games.  
-- Configure the streaming service, which involves pairing the Sunshine streaming server with the Moonlight client.
-- Stream games on the Moonlight client from both local and remote networks.
+- Install Steam Headless on Olares and configure compatibility for Windows games
+- Configure the streaming service, which involves pairing the Sunshine streaming server with the Moonlight client
+- Stream games on the Moonlight client from both local and remote networks
 
 ## Before you begin 
 
@@ -39,11 +39,15 @@ Before you begin, ensure the following:
 
    ![Steam Login Interface](/images/manual/tutorials/steam-login.png#bordered)
 
+::: tip Retry installation upon failures
+Due to network issues, Steam installation or updates may fail. If this happens, go to the top-left menu in Steam Headless and navigate to **Applications** > **Internet** > **Steam** to reinstall.
+:::
+
 ## Configure game compatibility
 
 Olares runs on a Linux environment. You'll need to enable **Proton**, a compatibility layer, to support Windows games.
 
-1. Open the Steam **Settings** page.  
+1. Open the **Settings** page in Steam.  
 2. Go to the **Compatibility** tab and check **Enable Steam Play for all other titles**.  
 3. Restart Steam to view your complete game library.  
 
@@ -84,7 +88,7 @@ To stream games using Moonlight, you need to pair your client device with the Su
 ### Complete paring
 
 1. In Sunshine's paring page, enter the pairing code.
-2. Enter a name for the device and click **Send** to finish pairing. If successful, you will be promoted "Success! Please check Moonlight to continue".
+2. Enter a name for the device and click **Send** to finish pairing. If successful, you will see the message: “Success! Please check Moonlight to continue”.
 3. Check the host status in Moonlight. The icon should be active now. 
 
 ## Stream your game
@@ -106,7 +110,7 @@ With Olares's VPN feature, you can enjoy a smooth streaming experience even acro
 
 To enable the VPN:
 
-<!--@include: ./remote.reusables.md{4,19}-->
+<!--@include: ./remote.reusables.md{4,21}-->
 
 Once VPN is enabled on your device, simply follow the same instructions as local streaming.
 
@@ -116,9 +120,9 @@ Once VPN is enabled on your device, simply follow the same instructions as local
 
 This could be due to your resolution settings. Try adjusting the resolution:
 - In Moonlight: adjust in **Settings** > **Basic Settings** > **Resolution and FPS**.
-- On the Steam Headless console page: adjust in **Applications** **Settings** > **Display**.  
+- On the Steam Headless console page: adjust in **Applications** > **Settings** > **Display**.  
   
-  ![Set display](/images/manual/tutorials/set-moonlight-display.png#bordered)
+  ![Set display](/images/manual/tutorials/set-steam-display.png#bordered)
 
 ### How do I exit full-screen streaming?
 

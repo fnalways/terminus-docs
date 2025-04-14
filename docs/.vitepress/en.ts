@@ -72,6 +72,10 @@ const side = {
           link: "/manual/tutorials/stream-media",
         },
         {
+          text: "Stream steam games",
+          link: "/manual/tutorials/stream-game",
+        },
+        {
           text: "Use ComfyUI in Krita",
           link: "/manual/tutorials/comfyui-for-krita",
         },
