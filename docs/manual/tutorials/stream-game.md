@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Comprehensive tutorial on streaming steam games with Olares. Learn to install Steam Headless, configure the streaming service, and stream games on Moonlight from both local and remote networks.
 ---
 
-# Stream your favorite steam games with Olares
+# Stream your favorite games with Steam Headless
 
 Want to enjoy some gaming with the power of Olares? You are all set. With the Steam Headless app, Olares easily transforms into a steam streaming server. You can now play your favorite games on any compatible device via Moonlight or Steam Link.
 
