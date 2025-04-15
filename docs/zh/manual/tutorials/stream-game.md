@@ -3,7 +3,7 @@ outline: [2, 3]
 description: 在 Olares 上安装 Steam Headless，配置串流服务，并使用 Moonlight 从本地或远程网络串流 Steam 游戏。
 --- 
 
-# 使用 Steam Headless 串流你喜爱的游戏
+# 使用 Steam Headless 串流喜爱的游戏
 
 想要利用 Olares 的强大性能放松一下？没有问题。借助 Steam Headless 应用，Olares 轻松化身为 Steam 串流服务器，让你可以通过 Moonlight 或 Steam Link 客户端在任意兼容设备上畅玩你最爱的游戏大作。
 
