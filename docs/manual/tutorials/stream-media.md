@@ -18,7 +18,7 @@ To achieve smooth streaming over external networks, enable the Olares VPN connec
 For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
 :::
 
-<!--@include: ./remote.reusables.md{4,21}-->
+<!--@include: ./remote.reusables.md{4,22}-->
 
 Once enabled, you can also access your applications using the format: `https://[RouteID].local.[OlaresDomainName]`.
 

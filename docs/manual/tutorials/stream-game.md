@@ -114,7 +114,7 @@ With Olares's VPN feature, you can enjoy a smooth streaming experience even acro
 
 To enable the VPN:
 
-<!--@include: ./remote.reusables.md{4,21}-->
+<!--@include: ./remote.reusables.md{4,22}-->
 
 Once VPN is enabled on your device, simply follow the same instructions as local streaming.
 
