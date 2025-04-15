@@ -4,7 +4,7 @@ search: false
 <tabs>
 <template #LarePass-移动端>
 
-1. 打开 LarePass，进入设置 > 账户。
+1. 打开 LarePass，进入**设置** > **账户**。
 
 2. 打开专用网络开关。
    

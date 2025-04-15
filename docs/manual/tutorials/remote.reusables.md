@@ -11,7 +11,7 @@ search: false
 <template #LarePass-desktop>
 1. Open LarePass, click on the avatar area in the top left corner of the main interface.
 
-2. Turn on the switch for `VPN connection` in the pop-up panel.
+2. Turn on the switch for **VPN connection** in the pop-up panel.
    ![Enable VPN on LarePass desktop](/images/manual/use-cases/vpn-desktop.png#bordered)
 </template>
 </tabs>
