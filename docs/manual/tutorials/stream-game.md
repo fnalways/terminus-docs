@@ -26,7 +26,7 @@ Before you begin, ensure the following:
 - Your streaming device has Moonlight installed. Visit the [Moonlight website](https://moonlight-stream.org/) to download and install the appropriate version.
 - Your streaming device is connected to the same LAN as your Olares.
    :::tip Remote streaming
-   For remote streaming, install LarePass on your streaming device. You can download the appropriate version from the [LarePass official site](https://olares.xyz/larepass).
+   For remote streaming, install LarePass on your streaming device. You can download the appropriate version from the [LarePass site](https://olares.xyz/larepass).
    :::
 - You have a valid Steam account to access your games.
 

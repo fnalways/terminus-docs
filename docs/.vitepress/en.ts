@@ -72,7 +72,7 @@ const side = {
           link: "/manual/tutorials/stream-media",
         },
         {
-          text: "Stream steam games",
+          text: "Stream Steam games",
           link: "/manual/tutorials/stream-game",
         },
         {
