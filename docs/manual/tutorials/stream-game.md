@@ -1,20 +1,20 @@
 ---
 outline: [2, 3]
-description: Comprehensive tutorial on streaming steam games with Olares. Learn to install Steam, configure the streaming service, and stream games on Moonlight from both local and remote networks.
+description: Comprehensive tutorial on streaming Steam games with Olares. Learn to install Steam Headless, configure the streaming service, and stream games on Moonlight from both local and remote networks.
 ---
 
-# Stream your favorite games with Steam
+# Stream your favorite games with Steam Headless
 
-Want to enjoy some gaming with the power of Olares? You are all set. With the Steam app, Olares easily transforms into a steam streaming server. You can now play your favorite games on any compatible device via Moonlight or Steam Link.
+Want to enjoy some gaming with the power of Olares? You are all set. With the Steam Headless app, Olares easily transforms into a steam streaming server. You can now play your favorite games on any compatible device via Moonlight or Steam Link.
 
-This guide walks you through installing the Steam app on Olares, configuring the streaming service, and using the Moonlight client to stream your games.
+This guide walks you through installing Steam Headless on Olares, configuring the streaming service, and using the Moonlight client to stream your games.
 
 
 ## Objectives
 
-By the end of this tutorial, you’ll be able to:
+By the end of this tutorial, you will learn how to:
 
-- Install Steam on Olares and configure compatibility for Windows games.
+- Install Steam Headless on Olares and configure compatibility for Windows games on the Steam client.
 - Configure the streaming service, which involves pairing the Sunshine streaming server with the host on the Moonlight client.
 - Stream games on the Moonlight client from both local and remote networks.
 
@@ -22,17 +22,19 @@ By the end of this tutorial, you’ll be able to:
 
 Before you begin, ensure the following:
 
-- Olares is up and running on a machine equipped with an Nvidia GPU.
+- Olares is up and running on a machine equipped with an NVIDIA GPU.
 - Your streaming device has Moonlight installed. Visit the [Moonlight website](https://moonlight-stream.org/) to download and install the appropriate version.
-  - **Local streaming**: the device must be on the same LAN as your Olares.  
-  - **Remote streaming**: the device must have LarePass installed. Visit the [LarePass official site](https://www.joinolares.cn/larepass) to download and isstall the appropriate version.
-- You have a valid Steam account.
+- Your streaming device is connected to the same LAN as your Olares.
+   :::tip Remote streaming
+   For remote streaming, install LarePass on your streaming device. You can download the appropriate version from the [LarePass official site](https://olares.xyz/larepass).
+   :::
+- You have a valid Steam account to access your games.
 
-## Install Steam
+## Install Steam Headless
 
-1. In Olares Market, find **Steam** under the **Entertainment** category, and click **Install**.  
-2. Open the Steam app, and then click **Connect** to access the Steam console.
-3. In the Steam console, click the **Install** button to install and update Steam client. Once completed, the Steam login page should appear.
+1. In Olares Market, find Steam Headless under the **Entertainment** category, and click **Install**.  
+2. Open Steam Headless, and then click **Connect** to access the Steam Headless console.
+3. In the Steam Headless console, click the **Install** button to install and update the Steam client. Once completed, the Steam login page should appear.
    ![Install Steam client](/images/manual/tutorials/install-steam-client.png#bordered)
 
 4. Log into your Steam account and complete the initial setup.
@@ -45,20 +47,20 @@ Due to network issues, Steam installation or update may fail. If this happens, g
 
 ## Configure game compatibility
 
-Olares runs on a Linux environment. You'll need to enable **Proton**, a compatibility layer, to support Windows games.
+Olares runs on a Linux environment. You'll need to enable [Proton](https://github.com/ValveSoftware/Proton), a compatibility layer, to support Windows games.
 
-1. In the Steam page, navigate to **Steam** > **Settings** in the top left corner.
+1. In the Steam client page, navigate to **Steam** > **Settings** in the top left corner.
 2. Go to the **Compatibility** tab and check **Enable Steam Play for all other titles**.  
    ![Steam Settings](/images/manual/tutorials/steam-setting.png#bordered)
-3. Restart Steam to view your complete game library.  
+3. Restart the Steam client to view your complete game library.  
 
 ## Configure the streaming service
 
-The Steam app also integrates Sunshine, the streaming server. To stream games using Moonlight, you need to pair the host PC on moonlight with Sunshine. 
+Steam Headless also integrates Sunshine, the streaming server. To stream games using Moonlight, you need to pair the host PC on moonlight with Sunshine. 
 
 ### Prepare for paring
 
-1. From your Steam page in the browser, get the URL and append `:47990`, for example, `https://139ebc4f0.local.<your-olares-name>.olares.com:47990`. Open this URL to access the Sunshine console page.
+1. From your Steam client in the browser, get the URL and append `:47990`, for example, `https://139ebc4f0.local.<your Olares ID>.olares.com:47990`. Open this URL to access the Sunshine console page.
 
    ![Sunshine console page](/images/manual/tutorials/access-sunshine.png#bordered)
 
@@ -66,16 +68,16 @@ The Steam app also integrates Sunshine, the streaming server. To stream games us
    - Username: `sam`  
    - Password: `password` 
 
-3. Click the **Pin** tab to open the pairing page, where you’ll be prompted to enter the pairing code.
+3. Click the **Pin** tab to open the pairing page, where you will be prompted to enter the pairing code.
    
    ![Sunshine's paring page](/images/manual/tutorials/pin-sunshine.png#bordered)
 
 
 ### Add host in Moonlight
 
-1. Open your Moonlight client and click the <i class="material-symbols-outlined">add_to_queue</i> button in the top-right corner.
+1. Open the Moonlight client on your streaming device and click the <i class="material-symbols-outlined">add_to_queue</i> button in the top-right corner.
 
-2. When promoted to enter the IP address of your host PC, enter the local URL of Steam, for example, `139ebc4f0.local.<your-olares-name>.olares.com`.
+2. When promoted to enter the IP address of your host PC, enter the local URL of Steam, for example, `139ebc4f0.local.<your Olares ID>.olares.com`.
 
    ::: tip Note
    Do not include `https://` and make sure to include the `.local` part in the hostname.
@@ -89,8 +91,9 @@ The Steam app also integrates Sunshine, the streaming server. To stream games us
 ### Complete paring
 
 1. In Sunshine's paring page, enter the pairing code.
-2. Enter a name for the device and click **Send** to finish pairing. If successful, you will see the message: “Success! Please check Moonlight to continue”.
+2. Enter a name for the device and click **Send** to finish pairing. If successful, you will see the message: "Success! Please check Moonlight to continue".
 3. Check the host status in Moonlight. The icon should be active now. 
+   ![Paring successfully](/images/manual/tutorials/active-host-moonlight.png#bordered)  
 
 ## Stream your game
 
@@ -100,8 +103,8 @@ Now you are done with configuring and ready for gaming.
 
 If you are streaming locally from the same network of Olares:
 
-1. Open Moonlight.
-2. Click to enter your steam host, and then click **Steam** to enter the Steam Big Screen mode and play. 
+1. Open Moonlight on your streaming device.
+2. Click your steam host, and then click the Steam icon to enter the Steam Big Screen mode and play. 
 
    ![Stream game](/images/manual/tutorials/stream-success.png#bordered)
 
@@ -117,7 +120,7 @@ Once VPN is enabled on your device, simply follow the same instructions as local
 
 ## FAQs
 
-### Why isn’t the game displaying in full screen?
+### Why isn't the game displaying in full screen?
 
 This could be due to your resolution settings. Try adjusting the resolution:
 - In Moonlight: adjust in **Settings** > **Basic Settings** > **Resolution and FPS**.
@@ -128,8 +131,9 @@ This could be due to your resolution settings. Try adjusting the resolution:
 ### How do I exit full-screen streaming?
 
 To exit streaming in the full-screen mode:
-- On **Windows/Mac**: Use the shortcut combo **Ctrl + Alt + Shift + Q**.  
-- On **mobile devices**: use the controller button combo **Start + Select + L1 + R1**.  
+- **On Windows**: Use the shortcut combo **Ctrl + Alt + Shift + Q**.  
+- **On Mac**: Use the shortcut combo **Command (⌘) + Option (⌥) + Shift + Q**.  
+- **On mobile devices**: use the controller button combo **Start + Select + L1 + R1**.  
 
 After finishing your streaming session, exit the Steam Big Picture mode to release system resources on Olares.
 

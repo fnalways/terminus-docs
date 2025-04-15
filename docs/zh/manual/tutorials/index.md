@@ -12,7 +12,7 @@ description: 探索丰富的教程资源，学习如何配置和优化 Olares �
 ## 应用
 - [使用 Wise 打造知识中枢](organize-content.md)
 - [远程串流你的媒体库](stream-media.md)
-- [使用 Steam 串流你喜爱的游戏](stream-game.md)
+- [使用 Steam Headless 串流游戏](stream-game.md)
 - [使用 ComfyUI 和 Krita 创建 AI 图像](comfyui-for-krita.md)
 
 ## 部署和扩展

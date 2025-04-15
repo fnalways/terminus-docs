@@ -3,7 +3,7 @@ search: false
 ---
 <tabs>
 <template #LarePass-mobile>
-1. Open LarePass, go to Settings > Account.
+1. Open LarePass, go to **Settings** > **Account**.
 
 2. Turn on the VPN switch.
    ![Enable VPN on LarePass mobile](/images/manual/use-cases/vpn-mobile.png#bordered)
