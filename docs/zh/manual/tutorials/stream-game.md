@@ -19,24 +19,24 @@ description: 在 Olares 上安装 Steam Headless，配置串流服务，并使�
 ## 准备工作
 
 开始前，请确保以下条件已满足：
-- Olares 已安装在配有 NVIDIA 显卡的主机上并运行。
+- Olares 已在配有 NVIDIA 显卡的主机上运行。
 - 串流设备已安装 Moonlight 客户端。可访问 [Moonlight 官网](https://moonlight-stream.org/)下载适合你设备的客户端并安装。
 - 你的串流设备和 Olares 处于同一个局域网。 
    :::tip 远程串流
-   如需远程串流，你需要提前在串流设备上安装 LarePass 客户端。请在 [LarePass 官网](https://olares.cn/larepass)上下载对应的版本。
+   如需远程串流，你需要提前在串流设备上安装 LarePass 客户端。请在 [LarePass 官网](https://joinolares.cn/larepass)上下载对应的版本。
    :::
 - 拥有一个有效的 Steam 账号以访问你的游戏。
 
 ## 安装 Steam Headless
 
-1. 打开 Olares 应用市场，在"娱乐"分类下找到 Steam Headless 并点击**安装**。
+1. 打开 Olares 应用市场，在“娱乐”分类下找到 Steam Headless 并点击**获取**。
 2. 安装完成后，打开应用，然后点击 **Connect** 进入 Steam Headless 的控制台。
 3. 点击 **Install** 按钮以安装并更新 Steam 客户端。安装完毕后会自动跳转至 Steam 登录页面。
    ![安装 Steam](/images/manual/tutorials/install-steam-client.png#bordered)
 
 4. 登录你的 Steam 账号并完成基本设置。
 
-   ![Steam 登陆界面](/images/zh/manual/tutorials/steam-login.png#bordered)
+   ![Steam 登录界面](/images/zh/manual/tutorials/steam-login.png#bordered)
 
 ::: tip 重试安装
 由于国内网络环境限制，Steam 客户端安装和更新可能失败，此时可从 Steam Headless 控制台左上角进入 **Applications** > **Internet** > **Steam** 以重新安装。多次尝试一般可以成功。
@@ -47,7 +47,7 @@ description: 在 Olares 上安装 Steam Headless，配置串流服务，并使�
 Olares 运行于 Linux 环境，需要通过 [Proton](https://github.com/ValveSoftware/Proton) 兼容层运行 Steam 上的 Windows 平台游戏。
 
 1. 在 Steam 客户端页面左上角，点击 **Steam** > **设置**。
-2. 前往 **兼容性** 选项，勾选**为所有其他产品启用 Steam Play**。
+2. 点击**兼容性**选项，打开**为所有其他产品启用 Steam Play**。
    ![Steam 设置](/images/zh/manual/tutorials/steam-setting.png#bordered)
 3. 保存设置后重启 Steam 客户端即可查看全部游戏库。
 
@@ -75,6 +75,7 @@ Steam Headless 集成了 Sunshine 串流服务器。要使用 Moonlight 客户�
    
    ::: tip 注意
    仅需填入 URL 部分（无需 `https://`），要包含 `local` 关键词。
+   :::
 
 3. 点击**确定**，界面上会出现一个锁定状态的主机图标。
 4. 点击主机图标获取配对码。
@@ -84,7 +85,7 @@ Steam Headless 集成了 Sunshine 串流服务器。要使用 Moonlight 客户�
 ### 完成配对
 
 1. 在 Sunshine 的配对页面中输入配对码和设备名称。 
-2. 点击 **Send** 完成配对。配对成功，你将看到提示信息："Success! Please check Moonlight to continue"。
+2. 点击 **Send** 完成配对。配对成功后，你将看到提示信息："Success! Please check Moonlight to continue"。
 3. 返回 Moonlight 界面，主机图标应变为激活状态。  
    
    ![配对成功](/images/manual/tutorials/active-host-moonlight.png#bordered)  

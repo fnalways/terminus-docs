@@ -32,7 +32,7 @@ Before you begin, ensure the following:
 
 ## Install Steam Headless
 
-1. In Olares Market, find Steam Headless under the **Entertainment** category, and click **Install**.  
+1. In Olares Market, find Steam Headless under the **Entertainment** category, and click **Get**.  
 2. Open Steam Headless, and then click **Connect** to access the Steam Headless console.
 3. In the Steam Headless console, click the **Install** button to install and update the Steam client. Once completed, the Steam login page should appear.
    ![Install Steam client](/images/manual/tutorials/install-steam-client.png#bordered)
