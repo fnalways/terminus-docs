@@ -14,6 +14,7 @@ description: 探索丰富的教程资源，学习如何配置和优化 Olares �
 - [远程串流你的媒体库](stream-media.md)
 - [使用 Steam Headless 串流喜爱的游戏](stream-game.md)
 - [使用 ComfyUI 和 Krita 创建 AI 图像](comfyui-for-krita.md)
+- [使用 redroid 搭建云端 Android](host-cloud-android.md)
 
 ## 部署和扩展
 

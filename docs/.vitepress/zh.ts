@@ -80,6 +80,10 @@ const side = {
           link: "/zh/manual/tutorials/comfyui-for-krita",
         },
         {
+          text: "搭建云端 Android",
+          link: "/zh/manual/tutorials/comfyui-for-krita",
+        },
+        {
           text: "设置 SMTP 邮件服务",
           link: "/zh/manual/tutorials/set-up-SMTP-service",
         },

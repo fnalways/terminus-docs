@@ -14,6 +14,7 @@ This section contains detailed, hands-on guides to help you accomplish specific 
 - [Stream your media library from anywhere with Olares](stream-media.md)
 - [Stream your favorite games with Steam Headless](stream-game.md)
 - [Create AI art with ComfyUI and Krita](comfyui-for-krita.md)
+- [Host your cloud Android with redroid](host-cloud-android.md)
 
 ## Setup and scaling
 
