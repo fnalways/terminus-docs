@@ -132,7 +132,7 @@ This could be due to your resolution settings. Try adjusting the resolution:
 
 To exit streaming in the full-screen mode:
 - **On Windows**: Use the shortcut combo **Ctrl + Alt + Shift + Q**.  
-- **On Mac**: Use the shortcut combo **Command (⌘) + Option (⌥) + Shift + Q**.  
+- **On Mac**: Use the shortcut combo **Control (^) + Option (⌥) + Shift + Q**. 
 - **On mobile devices**: use the controller button combo **Start + Select + L1 + R1**.  
 
 After finishing your streaming session, exit the Steam Big Picture mode to release system resources on Olares.
