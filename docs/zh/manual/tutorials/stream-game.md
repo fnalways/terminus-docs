@@ -128,7 +128,7 @@ Steam Headless 集成了 Sunshine 串流服务器。要使用 Moonlight 客户�
    
 要退出串流的游戏画面：
 - **Windows**：请使用快捷键组合 **Ctrl + Alt + Shift + Q**。
-- **Mac**：请使用快捷键组合 **Command (⌘) + Option (⌥) + Shift + Q**. 
+- **Mac**：请使用快捷键组合 **Control (^) + Option (⌥) + Shift + Q**. 
 - **移动设备**：请使用手柄按键组合 **Start + Select + L1 + R1**。
 
 游戏结束后，建议退出 Steam Big Picture 模式以释放 Olares 系统资源。
