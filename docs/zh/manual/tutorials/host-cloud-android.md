@@ -68,7 +68,7 @@ Windows 版本的 `scrcpy` 集成了 `adb` 工具，不用另行安装。
 1. 从[项目页面](https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md)下载 `scrcpy`，并解压至指定目录。
 
    ::: tip adb 版本冲突
-   如果你本地已安装了其他版本的 `adb`，可能会出现 `adb server` 版本冲突的问题。此时可以卸载先前安装的版本，或将其替换为 scrcpy 使用的版本。
+   如果你本地已安装了其他版本的 `adb`，可能会出现 `adb server` 版本冲突的问题。此时可以卸载先前安装的版本，或将其替换为 `scrcpy` 使用的版本。
    :::
 
 2. 打开 PowerShell，进入 `scrcpy` 目录:
@@ -135,7 +135,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    ```
    看到示例输出即代表服务连接成功。
 
-4. 用 scrcpy 渲染界面和音频：
+4. 用 `scrcpy` 渲染界面和音频：
    
    ```bash
    scrcpy -s beb583c3.local.<olares_id>.olares.cn:46878 --audio-codec=aac --audio-encoder=OMX.google.aac.encoder
@@ -148,7 +148,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
 
 ## 安装 APK 应用
     
-连接成功后，你可以尝试用 adb 为远程 Android 实例安装一个三方应用。
+连接成功后，你可以尝试用 `adb` 为远程 Android 实例安装一个三方应用。
 
 <tabs>
 <template #Windows>
@@ -172,7 +172,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    Performing Streamed Install
    Success
    ```
-   安装成功后，会看到 Success 的提示。此时，你再重新执行 scrcpy 命令重新渲染 Android 界面。上划屏幕，就能看到刚刚安装的应用了。
+   安装成功后，会看到 Success 的提示。此时，你再重新执行 `scrcpy` 命令重新渲染 Android 界面。上划屏幕，就能看到刚刚安装的应用了。
 </template>
 <template #macOS>
 1. 查看当前连接设备详细信息：
