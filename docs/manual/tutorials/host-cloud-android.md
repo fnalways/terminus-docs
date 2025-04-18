@@ -7,17 +7,17 @@ description: Deploy a cloud Android emulator using redroid on Olares, and access
 
 redroid (Remote Android) is a GPU-accelerated Android-in-Cloud (AIC) solution that integrates seamlessly with Olares. You can easily host high-performance Android instances on your Olares and access them anytime to run Android games, apps, or even automation tests.
 
-This tutorial walks you through installing redroid on Olares and accessing the Android instance from Windows and macOS via `adb` and `scrcpy`.
+This tutorial walks you through installing redroid on Olares and accessing the Android instance from Windows and macOS.
 
 ## Objectives
 
 By the end of this tutorial, you will learn how to:
 - Install the required Linux kernel modules on the Olares host.
 - Install the redroid app on Olares and get the service URL.
-- Connect and operate the Android instance from Windows and macOS using `adb` and `scrcpy`.
+- Connect and operate the Android instance from Windows and macOS, using `adb` and `scrcpy`.
 - Install APK apps on the Android instance.
 
-## Before You begin
+## Before you begin
 
 Make sure the following requirements are met:
 - Olares is installed and running.
@@ -56,18 +56,20 @@ redroid runs as a headless backend on Olares. To install redroid:
 
     b. In **Entrances** > **Set up endpoint**, get the base domain of redroid, e.g., `beb583c3.<olares_id>.olares.com`.
 
-    c. In **Permissions** > **Export Ports**, find the exported port of redroid (e.g., 46878) and append it to the base domain.
+    c. In **Permissions** > **Export Ports**, find the exported port of redroid (e.g., `46878`) and append it to the base domain.
 
-    Since redroid only allows local access, the domain should include `.local`. Here is an example of our final URL to access redroid service: `beb583c3.local.olares01.olares.com:46878`.
+    As redroid only allows local access, the domain should also include `.local`. Here is an example of our final URL to access the redroid service: `beb583c3.local.olares01.olares.com:46878`.
 
 ## Connect to the redroid service
 
-To access the Android instance hosted by redroid, you'll need to connect to it using `adb` and render the UI using `scrcpy`.
+To access the Android instance on Olares, you'll need to connect to the redroid service using `adb` and render the UI using `scrcpy`.
 
 <tabs> 
 <template #Windows>
+ 
+ The Windows version comes bundled with `adb`, so you don't need to install it seperately.
 
-1. Download the Windows version of `scrcpy` from the [project website](https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md) and extract it to a specific folder. The Windows version comes bundled with `adb`, so you don't need to install it seperately.
+1. Download the Windows version of `scrcpy` from the [project website](https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md) and extract it to a specific folder.
 
     ::: tip adb version conflict
     If another version of `adb` is installed, it may cause conflicts between `adb` servers. Uninstall the old version or replace it with the bundled version in `scrcpy`.
@@ -76,10 +78,11 @@ To access the Android instance hosted by redroid, you'll need to connect to it u
 2. Open PowerShell in the `scrcpy` directory:
 
     ```powershell
+    # Replace with the acutal version
     cd .\scrcpy-win64-v3.1
     ```
 
-3. Connect to the redroid service URL obtained earlier via `adb`:
+3. Use `adb` to connect to the redroid service via the URL obtained earlier:
 
     ```powershell
     .\adb.exe connect beb583c3.local.<olares_id>.olares.cn:46878
@@ -90,7 +93,7 @@ To access the Android instance hosted by redroid, you'll need to connect to it u
 
     The connection is successful if you see the example output.
 
-4. Render video and audio using `scrcpy`:
+4. Render UI and audio using `scrcpy`:
 
     ```powershell
     .\scrcpy.exe -s beb583c3.local.<olares_id>.olares.cn:46878 --audio-codec=aac --audio-encoder=OMX.google.aac.encoder
@@ -123,7 +126,7 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
     Installation is successful when you see the version info of the two.
 
     :::tip Gatekeeper alert
-    If blocked by macOS security, go to **System Settings** > **Privacy & Security** > **Security**, find the corresponding item and click **Allow Anyway**. You will be promoted to enter your password when re-running the command.
+    If blocked by macOS security, go to **System Settings** > **Privacy & Security** > **Security**, find the corresponding item, and click **Allow Anyway**. You will be promoted to enter your password when re-running the command.
     :::
 
 4. Connect to the redroid service URL obtained earlier via `adb`:
@@ -151,7 +154,7 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
 
 ## Install APK
 
-Once connected, you can use `adb` to install third-party APK apps to the Android instance. 
+Once connected, you can use `adb` to install third-party APK apps on the Android instance. 
 
 <tabs> 
 <template #Windows>
