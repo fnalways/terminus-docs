@@ -5,7 +5,7 @@ description: Deploy a cloud Android emulator using redroid on Olares, and access
 
 # Host your cloud Android with redroid
 
-redroid (Remote Android) is a GPU-accelerated Android-in-Cloud (AIC) solution that integrates seamlessly with Olares. You can easily host high-performance Android instances on your Olares and access them anytime to run Android games, apps, or even automation tests.
+[redroid](https://github.com/remote-android/redroid-doc) (Remote Android) is a GPU-accelerated Android-in-Cloud (AIC) solution that integrates seamlessly with Olares. You can easily host high-performance Android instances on your Olares and access them anytime to run Android games, apps, or even automation tests.
 
 This tutorial walks you through installing redroid on Olares and accessing the Android instance from Windows and macOS.
 
@@ -20,9 +20,10 @@ By the end of this tutorial, you will learn how to:
 ## Before you begin
 
 Make sure the following requirements are met:
-- Olares is installed and running.
-    :::tip Recommended Specs
-    redroid is resource-intensive. We recommend running Olares on a machine with at least 8-core CPU and 16GB of RAM.
+- Olares is installed and running on a Linux machine.
+    ::: tip Configuration requirements
+    - redroid is only supported on Linux. Make sure your Olares instance is running on a Linux system.
+    - redroid is resource-intensive. For best performance, we recommend using a machine with at least an 8-core CPU and 16GB of RAM.
     :::
 
 - Your device and Olares are on the same local network.
@@ -48,7 +49,7 @@ sudo modprobe ashmem_linux
 
 redroid runs as a headless backend on Olares. To install redroid:
 
-1. In Olares Market, find redroid under "System Tools", and click **Get**. redroid will launch automatically after installation.
+1. In Olares Market, find redroid under "Utilities", and click **Get**. redroid will launch automatically after installation.
 
 2. Get the URL to access the redroid service:
 
@@ -56,7 +57,7 @@ redroid runs as a headless backend on Olares. To install redroid:
 
     b. In **Entrances** > **Set up endpoint**, get the base domain of redroid, e.g., `beb583c3.<olares_id>.olares.com`.
 
-    c. In **Permissions** > **Export Ports**, find the exported port of redroid (e.g., `46878`) and append it to the base domain.
+    c. Append the exported port of redroid (`46878`) to the base domain.
 
     As redroid only allows local access, the domain should also include `.local`. Here is an example of our final URL to access the redroid service: `beb583c3.local.olares01.olares.com:46878`.
 
@@ -67,7 +68,7 @@ To access the Android instance on Olares, you'll need to connect to the redroid 
 <tabs> 
 <template #Windows>
  
- The Windows version comes bundled with `adb`, so you don't need to install it seperately.
+ The Windows version comes bundled with `adb`, so you don't need to install it separately.
 
 1. Download the Windows version of `scrcpy` from the [project website](https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md) and extract it to a specific folder.
 
@@ -75,10 +76,10 @@ To access the Android instance on Olares, you'll need to connect to the redroid 
     If another version of `adb` is installed, it may cause conflicts between `adb` servers. Uninstall the old version or replace it with the bundled version in `scrcpy`.
     :::
 
-2. Open PowerShell in the `scrcpy` directory:
+2. Open PowerShell, then navigate to the `scrcpy` directory:
 
     ```powershell
-    # Replace with the acutal version
+    # Replace with the acutal path
     cd .\scrcpy-win64-v3.1
     ```
 
@@ -86,12 +87,14 @@ To access the Android instance on Olares, you'll need to connect to the redroid 
 
     ```powershell
     .\adb.exe connect beb583c3.local.<olares_id>.olares.cn:46878
+    ```
 
+    The connection is successful if you see the example output:
+
+    ```powershell
     # Example output:
     already connected to beb583c3.local.<olares_id>.olares.cn:46878
     ```
-
-    The connection is successful if you see the example output.
 
 4. Render UI and audio using `scrcpy`:
 
@@ -99,18 +102,20 @@ To access the Android instance on Olares, you'll need to connect to the redroid 
     .\scrcpy.exe -s beb583c3.local.<olares_id>.olares.cn:46878 --audio-codec=aac --audio-encoder=OMX.google.aac.encoder
     ````
     
-    Upon successful execution, the command line outputs the device and rendering info. And the Android screen pops up.  
+    Upon successful execution, the command line outputs the device and rendering info. And the Android screen pops up.
+    
+     ![Render video](/images/manual/tutorials/render-android-windows.png#bordered)  
 </template>
 <template #macOS>
 
-On macOS, `scrcpy` does not include `adb` by default, so you'll need to install them separately. Using Homebrew is the recommended approach.
+On macOS, `scrcpy` does not include `adb` by default, so you'll need to install them separately. It is recommended to install them via Homebrew.
 
 1. Install `scrcpy`:
 
     ```bash
     brew install scrcpy
-    Install adb
     ```
+
 2. Install `adb`:
 
     ```bash
@@ -123,7 +128,7 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
     scrcpy --version
     adb version
     ```
-    Installation is successful when you see the version info of the two.
+    Installation is successful if you see the version numbers.
 
     :::tip Gatekeeper alert
     If blocked by macOS security, go to **System Settings** > **Privacy & Security** > **Security**, find the corresponding item, and click **Allow Anyway**. You will be promoted to enter your password when re-running the command.
@@ -133,13 +138,14 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
 
     ```bash
     adb connect beb583c3.local.<olares_id>.olares.cn:46878
-
-    # Example output:
-
-    already connected to beb583c3.local.<olares_id>.olares.cn:46878
     ```
 
     The connection is successful if you see the example output.
+
+    ```bash
+    # Example output:
+    already connected to beb583c3.local.<olares_id>.olares.cn:46878
+    ```
 
 5. Render UI and audio using `scrcpy`:
 
@@ -147,10 +153,12 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
     scrcpy -s beb583c3.local.<olares_id>.olares.cn:46878 --audio-codec=aac --audio-encoder=OMX.google.aac.encoder
     ```
     Upon success, the command line outputs the device information. The Android screen pops up.
+
+     ![Render video](/images/manual/tutorials/render-android-mac.png#bordered)
 </template> 
 </tabs>
 
-   ![Render video](/images/manual/tutorials/render-android.png#bordered)
+  
 
 ## Install APK
 
@@ -163,19 +171,28 @@ Once connected, you can use `adb` to install third-party APK apps on the Android
 
     ```powershell
     .\adb.exe devices -l
-
-    # Example output
-    List of devices attached
-    beb583c3.local.<olares_id>.olares.com:46878 device product:ziyi model:23031PN0DC device:ziyi transport_id:4
     ```
 
-    Get the `transport_id` of the device, which is 4 in our case.
+    Get the `transport_id` of the device, which is `4` in our case:
 
-2. Install the APK to the specified device. Use `-t` to specify the transport ID.
+    ```powershell 
+    # Example output
+    List of devices attached
+    beb583c3.local.<olares_id>.olares.com:46878 device 
+    product:ziyi model:23031PN0DC device:ziyi 
+    transport_id:4
+    ```
+
+2. Install the APK to the specified device. Use `-t` to specify the transport ID:
 
     ```powershell
-    .\adb.exe -t 4 install C:\Users\YourName\Downloads\your_app.apk
+    .\adb.exe -t 4 install C:\Users\YourName\Downloads\your_app.apk\
+    ```
+    
 
+    The installation is successful if you see the following message:
+    
+    ```powershell
     # Expected output
     Performing Streamed Install
     Success
@@ -187,23 +204,32 @@ Once connected, you can use `adb` to install third-party APK apps on the Android
 
     ```bash
     adb devices -l
-
-    # Example output
-    List of devices attached
-    beb583c3.local.<olares_id>.olares.cn:46878 device product:ziyi model:23031PN0DC device:ziyi transport_id:4
     ```
 
-     Get the `transport_id` of the device, which is 4 in our case.
+    Get the `transport_id` of the device, which is `4` in our case:
 
-2. Install the APK to the specified device. Use `-t` to specify the transport ID.
+    ```bash 
+    # Example output
+    List of devices attached
+    beb583c3.local.<olares_id>.olares.com:46878 device 
+    product:ziyi model:23031PN0DC device:ziyi 
+    transport_id:4
+    ```
+
+2. Install the APK to the specified device. Use `-t` to specify the transport ID:
 
     ```bash
     adb -t 4  install ~/Downloads/your_app.apk
-
+    ```
+    
+    The installation is successful if you see the following message:
+    
+    ```bash
     # Expected output
     Performing Streamed Install
     Success
     ```
+
 </template>  
 </tabs>
 
@@ -212,7 +238,7 @@ After installation, run `scrcpy` again to render the Android screen. Swipe up to
 ## Common `adb` commands
 
 :::tip Note
-The following commands are for macOS and Linux. On Windows, Use `adb.exe` instead of `adb` 
+The following commands are for macOS and Linux. On Windows, replace `adb` with `adb.exe`.
 :::
 
 ```bash
