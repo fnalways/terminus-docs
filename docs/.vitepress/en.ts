@@ -79,6 +79,10 @@ const side = {
           text: "Use ComfyUI in Krita",
           link: "/manual/tutorials/comfyui-for-krita",
         },
+        {
+          text: "Host cloud Android",
+          link: "/manual/tutorials/host-cloud-android",
+        },
       ],
     },
     {
