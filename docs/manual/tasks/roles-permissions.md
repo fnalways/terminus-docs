@@ -36,7 +36,7 @@ Olares has two default user roles:
             <ul>
                 <li>Create and manage user accounts</li>
                 <li>Manage vault teams, create shared vaults, and assign read/write permissions for shared vaults</li>
-                <li>Install and manage cluster-scoped applications</li>
+                <li>Install and manage shared applications</li>
                 <li>Monitor and manage system resources</li>
                 <li>Set GPU usage mode</li>
                 <li>Update Olares</li>

@@ -86,7 +86,7 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
 ### 文字转语音
 1. 安装 OpenedAI Speech。
    :::info 仅支持管理员安装
-   OpenedAI Speech 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 OpenedAI Speech。
+   OpenedAI Speech 是共享应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 OpenedAI Speech。
    :::
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
 3. 选择 OpenAI 作为文字转语音引擎，配置如下：
@@ -95,11 +95,11 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
 4. 点击**保存**。
 
 ### 文字转图像
-在 Olares 环境中安装了 SD Web UI For Cluster 后，你可以直接通过 Open WebUI 使用 Stable Diffusion 的强大图像生成功能。
+在 Olares 环境中安装了 SD Web UI for Cluster 后，你可以直接通过 Open WebUI 使用 Stable Diffusion 的强大图像生成功能。
 
-1. 安装 SD Web UI For Cluster。
+1. 安装 SD Web UI for Cluster
    :::info 仅支持管理员安装
-   SD Web UI For Cluster 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 SD Web UI For Cluster。
+   SD Web UI for Cluster 是共享应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 SD Web UI Shared。
    :::
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **图像**。
 3. 选择 **Automatic1111** 作为图像生成引擎，基础 URL 为：`http://sdwebui.sdwebui--{管理员本地名称}:7860`，例如：`http://sdwebui.sdwebui-alice123:7860`。

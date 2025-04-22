@@ -13,8 +13,8 @@ Before you start, it is recommended to familiarize yourself with a few concepts 
 |------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | [System application](../concepts/application.md#system-applications)                                 | Built-in applications that come pre-installed with Olares, such as Profile, Files, and Vault.                                    |
 | [Community application](../concepts/application.md#community-applications)                           | Applications that are created and maintained by third-party developers.                                                          |
-| &nbsp;&nbsp;[Cluster-scoped application](../concepts/application.md#cluster-scoped-applications)     | A special type of community application that can only be installed by Olares admin and only one instance is allowed per cluster. |
-| &nbsp;&nbsp;&nbsp;&nbsp;[Authorized application](../concepts/application.md#authorized-applications) | The client-side interfaces for cluster-scoped applications.                                                                      |
+| &nbsp;&nbsp;[Shared application](../concepts/application.md#cluster-scoped-applications)     | A special category of community applications on Olares designed to provide unified, shared resources or services to all users within an Olares cluster. Only one instance is allowed per cluster. |
+| &nbsp;&nbsp;&nbsp;&nbsp;[Authorized application](../concepts/application.md#authorized-applications) | The client-side interfaces for shared applications                                                                      |
 | [Dependencies](../concepts/application.md#dependencies)                                              | Prerequisite applications that must already be installed before a user can access an application that requires them.             |
 
 ## Find applications
@@ -49,16 +49,26 @@ You can also browse applications based on their functionality:
 To cancel an installation, hover over the operation button and click **Cancel** when it appears.
 :::
 
-### Install cluster-scoped and authorized applications
-In this context, a cluster refers to a server cluster within the Olares system that provides shared resources and services to multiple users. Cluster-scoped applications serve the entire cluster, while authorized applications allow individual users to access these services.
+### Install shared and authorized applications
 
-Therefore, to make sure a cluster-scoped service is running normally, follow the general process:
+To ensure a shared service is running and accessible within the cluster, follow this general installation process based on the type of Shared App:
 
-1. Install the cluster-scoped application first (for Olares admin).
-    Once installation is complete, the operation button will display "**Running**".
-2. Install the corresponding authorized application (for all Olares user).
+* **Headless backend service**:
+    This type of shared applications typically require third-party authorized applications to access its service. Take Ollama for example:
+    1. The administrator installs the shared application first. This makes the core service available in the cluster.
+    
+    2. Members (including the administrator) install the corresponding authorized application (e.g., Open WebUI or LobeChat) to access the service.
 
-After installation, users can access the cluster-scoped application's services by running the authorized application.
+* **Complete application with built-in UI**:
+    This type of shared applications can provide service to itself. Typical examples are Dify Shared and ComfyUI Shared.
+    
+    1. The administrator installs the shared application first. This not only launches the shared service for the cluster, but also installs the client-side interface as the authorized application. 
+    
+    ::: tip ComfyUI Launcher 
+    ComfyUI Shared contains a web launcher component to facilitate the management of related services and resources. The administrator needs to configure and start the service from the ComfyUI Launcher.
+    :::
+
+    2. Other members in the cluster install the same application. For these users, this step only installs the client-side interface.
 
 ### Install custom applications
 
@@ -94,6 +104,6 @@ If you can't install an application, it might be due to:
 * **Insufficient system resources**: Try freeing up system resources, or increasing your resource quota.
 * **Missing dependencies**: Check the **Dependency** section on the application details page and make sure all required apps are installed.
 * **Incompatible system version**: Try upgrading Olares to the latest version.
-* **Cluster-scoped application restrictions** (for Olares member): Install the authorized app, and contact your Olares admin to install the corresponding cluster-scoped application.
+* **Shared application restrictions** (for Olares member): Install the authorized app, and contact your Olares admin to install the corresponding shared application.
 
 

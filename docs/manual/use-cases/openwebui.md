@@ -79,7 +79,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 ### Text-to-speech
 1. Install OpenedAI Speech from Market.
    :::info
-   "OpenedAI Speech" is a cluster-scoped application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed "OpenedAI Speech".
+   "OpenedAI Speech" is a shared application and can only be installed by Olares admin. If you are a team member, ensure that the Olares admin has already installed "OpenedAI Speech".
 2. Open WebUI, and navigate to **Admin Panel** > **Settings** > **Audio**.
 3. Select OpenAI as the text-to-speech engine, with the following configurations:
     - API Base URL: `http://openedaispeech.openedaispeech-{admin's local name}:8000/v1`. For example: `http://openedaispeech.openedaispeech-alice123:8000/v1`.
@@ -87,7 +87,7 @@ Recommended starter models for optimal performance (13B parameters or smaller):
 4. Click **Save**.
 
 ### Text-to-image
-With [SD Web UI For Cluster installed in your Olares environment](stable-diffusion.md#install-sd-web-ui), you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
+With [SD Web UI for Cluster installed in your Olares environment](stable-diffusion.md#install-sd-web-ui), you can leverage Stable Diffusion's powerful image generation capabilities directly through Open WebUI.
 
 1. Open Open WebUI, and navigate to **Admin Panel** > **Settings** > **Images**.
 2. Select **Automatic1111** as the image generation engine, with the base URL:  `http://sdwebui.sdwebui--{admin's local name}:7860`. For example: `http://sdwebui.sdwebui-alice123:7860`.
