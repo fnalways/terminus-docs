@@ -57,7 +57,7 @@ To ensure a shared service is running and accessible within the cluster, follow 
     This type of shared applications typically require third-party authorized applications to access its service. Take Ollama for example:
     1. The administrator installs the shared application first. This makes the core service available in the cluster.
     
-    2. Members (including the administrator) install the corresponding authorized application (e.g., Open WebUI or LobeChat) to access the service.
+    2. Members (including the administrator) install the corresponding authorized application (e.g., Open WebUI or LobeChat) to access the Ollama service.
 
 * **Complete application with built-in UI**:
     This type of shared applications can provide service to itself. Typical examples are Dify Shared and ComfyUI Shared.
@@ -68,7 +68,7 @@ To ensure a shared service is running and accessible within the cluster, follow 
     ComfyUI Shared contains a web launcher component to facilitate the management of related services and resources. The administrator needs to configure and start the service from the ComfyUI Launcher.
     :::
 
-    2. Other members in the cluster install the same application. For these users, this step only installs the client-side interface.
+    2. Other members in the cluster install the same application. For these users, only the access point to the shared application is installed.
 
 ### Install custom applications
 
