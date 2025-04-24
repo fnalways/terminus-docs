@@ -17,17 +17,35 @@ ComfyUI puts advanced AI image generation capabilities at your fingertips:
 * Batch process images with consistent settings
 * Apply advanced post-processing effects
 
-## Install ComfyUI
+## Install ComfyUI Shared
 
-Based on your role:
-* **For admin**: Install both "ComfyUI For Cluster" and "ComfyUI".
-* **For team members**: Ensure your admin has installed "ComfyUI For Cluster", and install "ComfyUI" only.
+Olares provides ComfyUI Shared, an adapted version that allows multiple users to share models, plugins, and workflow resources across the cluster. It also features ComfyUI Launcher, providing administrator users with a simple way to manage ComfyUI resources and runtime environments.
 
-![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+::: tip Note
+Starting from Olares 1.11.6, Shared Applications will replace previous cluster-scoped applications. If you have installed ComfyUI for Cluster and its client, please uninstall them before installing ComfyUI Shared.
+:::
 
-Once installed, launch ComfyUI from your desktop.
+The installation of ComfyUI Shared Edition is divided into two phases: administrator installation and regular user installation.
 
-![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
+1.  **Administrator installation**. Open Olares Market, find **ComfyUI Shared**, and click **Get**.
+
+    After the administrator installation is complete, two icons  appear on the Olares desktop: one is the access point for ComfyUI, and the other is the access point for ComfyUI Launcher.
+
+    :::tip Start service
+    Only after the administrator configures and starts the service in the ComfyUI Launcher can cluster users access the ComfyUI interface and use workflows.
+    :::
+
+2. **Member installation**. Open Olares Market, find ComfyUI Shared, and click **Get**.
+
+    After the installation is complete, the member user only sees the ComfyUI icon on the desktop.
+
+    ![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+
+3. After installation is complete, click the ComfyUI icon from the desktop to open it. Administrators can also enter the ComfyUI interface from the ComfyUI Launcher.
+
+    ![ComfyUI Interface](/images/manual/use-cases/comfyui.png#bordered)
 
 ## Learn more
-- [Use ComfyUI in Krita](../tutorials/comfyui-for-krita.md): Learn how to leverage ComfyUI to empower your creative workflows in Krita.
+
+* [Manage ComfyUI using ComfyUI Launcher](comfyui-launcher.md)
+* [Krita + ComfyUI Real-time Painting](../tutorials/comfyui-for-krita.md): Learn how to leverage ComfyUI to assist creative workflows in Krita.
