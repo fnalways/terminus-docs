@@ -92,7 +92,7 @@ To access the Android instance on Olares, you'll need to connect to the redroid 
     The connection is successful if you see the example output:
 
     ```powershell
-    # Example output:
+    # Example output
     already connected to beb583c3.local.<olares_id>.olares.cn:46878
     ```
 
@@ -143,7 +143,7 @@ On macOS, `scrcpy` does not include `adb` by default, so you'll need to install 
     The connection is successful if you see the example output.
 
     ```bash
-    # Example output:
+    # Example output
     already connected to beb583c3.local.<olares_id>.olares.cn:46878
     ```
 

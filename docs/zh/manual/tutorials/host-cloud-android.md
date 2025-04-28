@@ -88,7 +88,7 @@ Windows 版本的 `scrcpy` 集成了 `adb` 工具，不用另行安装。
    连接成功会看到示例中的消息提示：
    
    ```powershell
-   # 示例输出：
+   # 示例输出
    ```powershell
    already connected to beb583c3.local.<olares_id>.olares.cn:46878
    ```
@@ -143,7 +143,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    
    ```bash
    ```bash
-   # 示例输出：
+   # 示例输出
    already connected to beb583c3.local.<olares_id>.olares.cn:46878
    ```
 
@@ -175,7 +175,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    从输出结果中获取目标设备的 `transport_id` 为 `4`：
 
    ```powershell
-   # 示例输出：
+   # 示例输出
    List of devices attached
    beb583c3.local.olares02.olares.cn:46878 device product:ziyi model:23031PN0DC device:ziyi transport_id:4
    ```
@@ -189,7 +189,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    看到如下输出则安装成功：
    
    ```powershell
-   # 示例输出：
+   # 示例输出
    Performing Streamed Install
    Success
    ```
@@ -203,7 +203,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    从输出结果中获取目标设备的 `transport_id` 为 `4`：
 
    ```bash
-   # 示例输出：
+   # 示例输出
    List of devices attached
    beb583c3.local.olares02.olares.cn:46878 device product:ziyi model:23031PN0DC device:ziyi transport_id:4
    ```
@@ -218,7 +218,7 @@ macOS 版本 `scrcpy` 没有集成 `adb`，需要你单独安装。推荐使用 
    看到如下输出则安装成功：
 
    ```bash
-   # 示例输出：
+   # 示例输出
    Performing Streamed Install
    Success
    ```
