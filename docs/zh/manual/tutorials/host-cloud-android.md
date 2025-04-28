@@ -89,7 +89,6 @@ Windows 版本的 `scrcpy` 集成了 `adb` 工具，不用另行安装。
    
    ```powershell
    # 示例输出
-   ```powershell
    already connected to beb583c3.local.<olares_id>.olares.cn:46878
    ```
 
