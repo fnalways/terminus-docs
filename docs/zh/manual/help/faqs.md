@@ -89,3 +89,17 @@ Olares 的助记词会被加密存储在所有安装了 LarePass 的设备上。
 - 如果只提供内部访问，可以在 Olares 上部署这类产品的集群版本。
 
 对于 Gitlab，我们提供了两个移植版本：[Gitlab Pure](https://github.com/beclab/apps/tree/main/gitlabpure) 和 [Gitlab Fusion](https://github.com/RLovelett/gitlab-fusion)。
+
+## 如何使用相同的 Olares ID 重新激活 Olares?
+
+如果你在同一台设备上重新安装了 Olares，你之前激活的 Olares 实例将无法再访问。你可以使用同一个 Olares ID 重新激活 Olares：
+
+:::tip 使用相同的 Olares ID 安装
+请确保在安装过程中输入了与之前完全相同的域名和 Olares ID。
+:::
+
+![重新激活](/images/zh/manual/help/reactivate.png)
+
+1. 在手机上打开 LarePass 并进入之前的账户。你应该会在顶部看到一个红色状态提示：“未发现运行中的 Olares”。
+2. 点击**了解更多**>**重新激活**，进入二维码扫描界面。
+3. 点击**扫描二维码**来扫描向导页面上的二维码并激活 Olares。
