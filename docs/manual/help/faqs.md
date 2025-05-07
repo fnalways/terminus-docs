@@ -89,3 +89,17 @@ It depends on whether you want to provide external service or simply let interna
 - To provide internal access only, you can deploy the Cluster-scoped version of such products on Olares.
 
 For Gitlab, we provide two versions of porting: [Gitlab Pure](https://github.com/beclab/apps/tree/main/gitlabpure) and [Gitlab Fusion](https://github.com/RLovelett/gitlab-fusion).
+
+## How can I reactivate Olares with the same Olares ID?
+
+If you've reinstalled Olares, the Olares instance you originally activated will no longer be accessible. To reactivate Olares using the same Olares ID:
+
+：：：tip Install with the same Olares ID
+During the Olares installation, ensure that you have entered the exact same domain and Olares ID that you used previously. 
+:::
+
+![Reactivate](/images/manual/help/reactivate.png)
+
+  1. Open LarePass on your phone and enter your previous account. You should see a red prompt on the top saying "No active Olares found".
+  2. Tap on the **Learn more** option, and then select **Reactivate** to enter the QR scan screen.
+  3. Tap **Scan QR code** to scan the QR code on the wizard page and activate Olares.
