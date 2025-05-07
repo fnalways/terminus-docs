@@ -4,7 +4,7 @@ description: Administrators' guide on how to manage ComfyUI on Olares using Comf
 
 # Manage ComfyUI using ComfyUI Launcher
 
-ComfyUI Launcher, included with ComfyUI Shared, is the core management tool of ComfyUI for **administrator users**. You can use it to control the running status of the ComfyUI service within the cluster, while easily managing models, plugins, runtime environment, and network configurations.
+ComfyUI Launcher is the core management tool of ComfyUI for **administrator users**. You can use it to control the running status of the ComfyUI service within the cluster, while easily managing models, plugins, runtime environment, and network configurations.
 
 This document guides you on how to use ComfyUI Launcher for ComfyUI service management and routine maintenance.
 
