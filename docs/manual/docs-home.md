@@ -24,7 +24,7 @@ Privacy and independence are at the core of Olares. It is perfect for individual
 Olares offers a wide array of features designed to enhance security, ease of use, and development flexibility:
 
 - **Enterprise-grade security**: Secure your self-hosted cloud with simplified network configuration using Tailscale, Headscale, Cloudflare Tunnel, and FRP.
-- **Secure and permissionless application ecosystem**: Access nearly 100 free applications in a secure, sandboxed environment. [See what Olares Market has to offer](https://market.olares.xyz/).
+- **Secure and permissionless application ecosystem**: Access nearly 100 free applications in a secure, sandboxed environment. [See what Olares Market has to offer](https://market.olares.com/).
 - **Unified file system and database**: Support automated scaling, backups, and high availability.
 - **Single sign-on**: Log in once to access all applications within Olares with a shared authentication service.
 - **AI capabilities**: Manage GPU resources, host AI models locally, and build private knowledge bases with complete privacy.
@@ -55,4 +55,4 @@ Before you roll up your sleeves and get your hands dirty with Olares, feel free 
 
 - [Develop Olares apps](../developer/develop/)
 - [Join our community on Discord](https://discord.com/invite/BzfqrgQPDK)
-- [Check out Olares blogs](https://blog.olares.xyz/)
+- [Check out Olares blogs](https://blog.olares.com/)

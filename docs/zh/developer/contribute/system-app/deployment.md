@@ -28,7 +28,7 @@ outline: [2, 3]
      applications.app.bytetrade.io/owner: {{ .Values.bfl.username }}
      applications.app.bytetrade.io/author: bytetrade.io
    annotations:
-     applications.app.bytetrade.io/icon: https://docs-dev.olares.xyz/icon. png
+     applications.app.bytetrade.io/icon: https://docs-dev.olares.com/icon.png
      applications.app.bytetrade.io/title: Desktop-dev
      applications.app.bytetrade.io/version: '0.0.1'
 

@@ -13,7 +13,7 @@ Only Olares admin can enable remote access to LAN Devices via LarePass VPN.
 ## Enable LarePass VPN
 
 :::tip
-Download the LarePass desktop client from [the official page](https://www.olares.xyz/larepass).
+Download the LarePass desktop client from [the official page](https://olares.com/larepass).
 :::
 
 1. Open the LarePass desktop client, click on the avatar area in the top left corner of the main interface.

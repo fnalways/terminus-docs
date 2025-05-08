@@ -59,7 +59,7 @@ A DID (Decentralized Identifier) is a temporary account state before you get you
 ## Step 2: Add your domain to Olares Space
 Add and verify your own domain in Olares Space before binding it.
 
-1. In your browser, access Olares Space at https://space.olares.xyz/.
+1. In your browser, access Olares Space at https://space.olares.com/.
 2. In LarePass app, tap the scan button in the top-right corner, and scan the QR code on the login page to log in to Olares Space.
 
    ![scan QR](/images/manual/tutorials/scan-qr-code.png)

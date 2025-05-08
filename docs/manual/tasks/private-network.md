@@ -17,7 +17,7 @@ This document walks you through how to setup VPN access to Olares.
 
 ## Set up VPN access on LarePass
 :::tip
-For different LarePass download options, visit [the official page](https://www.olares.xyz/larepass).
+For different LarePass download options, visit [the official page](https://olares.com/larepass).
 :::
 
 ### On LarePass mobile client

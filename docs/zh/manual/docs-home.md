@@ -24,7 +24,7 @@ Olares 是一款面向本地 AI 的开源私有云操作系统。它将你的设
 Olares 提供了丰富的功能，旨在提升安全性、易用性和开发灵活性：
 
 - **企业级安全**：通过 Tailscale、Headscale、Cloudflare Tunnel 和 FRP 等工具，简化网络配置，确保私有云的安全。
-- **安全且开放的应用生态**：在安全的沙箱环境中使用近百款免费应用。[查看 Olares 应用市场](https://market.olares.xyz/)。
+- **安全且开放的应用生态**：在安全的沙箱环境中使用近百款免费应用。[查看 Olares 应用市场](https://market.olares.com/)。
 - **统一文件系统和数据库**：支持自动扩容、备份和高可用。
 - **统一身份认证**：一次登录，访问所有 Olares 应用。
 - **AI 能力**：管理 GPU 资源，本地部署 AI 模型，构建私有知识库。
@@ -55,4 +55,4 @@ Olares 提供了丰富的功能，旨在提升安全性、易用性和开发灵�
 
 - [开发 Olares 应用](../developer/develop/)
 - [加入 Discord 社区](https://discord.com/invite/BzfqrgQPDK)
-- [查看 Olares 博客](https://blog.olares.xyz/)
+- [查看 Olares 博客](https://blog.olares.com/)

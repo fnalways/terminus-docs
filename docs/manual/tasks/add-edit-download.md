@@ -63,7 +63,7 @@ When downloading multiple files, the behavior differs between the Files in Olare
 * **Files in Olares (web interface)**: Automatically packages files into a zip file for download, requiring manual extraction.
 * **LarePass desktop**: Downloads are queued, allowing you to pause, resume, or cancel tasks, and easily locate downloaded files.
 :::tip
-For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://www.olares.xyz/larepass) for details and download options.
+For large files or multiple downloads, it's recommended to use the LarePass desktop application for more powerful download management and a better user experience. Visit the [official page](https://olares.com/larepass) for details and download options.
 :::
 
 1. Open the Files app from the Dock or Launchpad on Olares.
