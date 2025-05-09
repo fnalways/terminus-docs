@@ -9,7 +9,7 @@ description: 设置和使用 LarePass 的密码自动填充功能，在所有设
 确保你的设备上已安装 LarePass 移动客户端或 Chrome 扩展程序，并使用 Olares ID 登录。
 
 :::tip 提示
-要获取 LarePass 的不同下载选项，请访问 [LarePass 页面](https://www.olares.cn/larepass)。
+要获取 LarePass 的不同下载选项，请访问 [LarePass 页面](https://olares.cn/larepass)。
 :::
 
 ## 启用自动填充服务

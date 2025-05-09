@@ -15,7 +15,7 @@ description: 通过 Olares 搭建私人流媒体服务器，配置 VPN 远程访
 为了在外部网络中实现流畅的流媒体播放，需要在 LarePass 中启用 Olares 专用网络。这可以确保安装了 LarePass 的设备通过专用网络传输所有流量，从而提供类似局域网的速度和性能。
 
 :::tip
-如需下载不同版本的 LarePass，请访问[官方页面](https://www.joinolares.cn/larepass)。
+如需下载不同版本的 LarePass，请访问[官方页面](https://olares.cn/larepass)。
 :::
 
 <!--@include: ./remote.reusables.md{4,24}-->
