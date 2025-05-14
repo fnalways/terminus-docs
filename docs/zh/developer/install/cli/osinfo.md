@@ -1,11 +1,11 @@
-# `info`
+# `osinfo`
 
 ## 命令说明
 
 `info` 命令用于获取当前设备操作系统的详细信息。它能够检索并显示元数据信息，包括 `OS_TYPE`、`OS_PLATFORM`、`OS_ARCH`、`OS_VERSION`、`OS_KERNEL` 和 `OS_INFO` 等。
 
 ```bash
-olares-cli info <子命令> [选项]
+olares-cli  osinfo <子命令> [选项]
 ```
 
 ## 子命令

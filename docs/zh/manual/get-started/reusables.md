@@ -12,7 +12,7 @@ curl -fsSL https://cn.olares.sh |  bash -
 如果安装过程中出现错误，请先执行以下命令卸载：
 
 ```bash
-bash olares-cli uninstall
+bash olares-cli uninstall --all
 ```
 卸载完成后，重新运行安装命令进行安装。
 :::
