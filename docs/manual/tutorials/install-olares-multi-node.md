@@ -29,7 +29,7 @@ Before you begin, make sure the following requirements are met:
 
 ## Step 1: Set up the master node
 ::: tip Uninstall existing Olares cluster
-If you have already installed an Olares cluster using the default installation command, uninstall it using `bash olares-uninstall.sh` before you set up your master node.
+If you have already installed an Olares cluster using the default installation command, uninstall it using `bash olares-cli uninstall` before you set up your master node.
 :::
 
 To set up the master node with the JuiceFS support, run the following command:

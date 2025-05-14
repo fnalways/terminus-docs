@@ -14,28 +14,28 @@ The `olares logs` command retrieves logs from Olares components and services fou
 * Kubernetes node info
 
 ```bash
-olares-cli olares logs [option]
+olares-cli logs [option]
 ```
 
 ## Options
 
-| Name                   | Shorthand | Usage                                                                                                                                                                                                                                               |
-|------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--components`         |           | Collects logs from specific components (comma-separated).<br/>Supported values: `k3s`, `containerd`, `olaresd`, `kubelet`, `juicefs`, `redis`, `minio`, `etcd`, `NetworkManager`. <br/> Defaults to collecting logs from all detectable components. |
-| `--help`               | `-h`      | Displays help information.                                                                                                                                                                                                                          |
-| `--ignore-kube-errors` |           | Ignores errors from `kubectl` commands (e.g., when Kubernetes API is unreachable) and continues collecting logs. <br/> Default: `false`.                                                                                                            |
-| `--max-lines`          |           | Limits the maximum number of lines for each component's logs to prevent large log files. <br/> Defaults to `3000`.                                                                                                                                  |
-| `--output-dir`         |           | Saves logs to the specified directory. Creates the directory if it does not exist. <br/> Defaults to `./olares-logs`.                                                                                                                               |
-| `--since`              |           | Fetches logs newer than a specified relative duration (e.g., `5s`, `2m`, `3h`). <br/> Defaults to `7d`.                                                                                                                                             |
+| Option                 | Shorthand | Usage                                                                                                                                                                                            | Required | Default                        |
+|------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------------------|
+| `--components`         |           | Collects logs from specific components (comma-separated).<br/>Supported values: `k3s`, `containerd`, `olaresd`, `kubelet`, `juicefs`, `redis`, `minio`, `etcd`, `NetworkManager`.                  | No                   | All detectable components      |
+| `--help`               | `-h`      | Displays help information.                                                                                                                                                                       | No                   | N/A                            |
+| `--ignore-kube-errors` |           | Ignores errors from `kubectl` commands (e.g., when Kubernetes API is unreachable) and continues collecting logs.                                                                                 | No                   | `false`                        |
+| `--max-lines`          |           | Limits the maximum number of lines for each component's logs to prevent large log files.                                                                                                           | No                   | `3000`                         |
+| `--output-dir`         |           | Saves logs to the specified directory. Creates the directory if it does not exist.                                                                                                                 | No                   | `./olares-logs`                |
+| `--since`              |           | Fetches logs newer than a specified relative duration (e.g., `5s`, `2m`, `3h`).                                                                                                                    | No                   | `7d`                           |
 
 ## Example
 ```bash
 # Collect all logs with default settings
-olares-cli olares logs
+olares-cli logs
 
 # Collect logs for specific components
-olares-cli olares logs --components k3s,redis,minio
+olares-cli logs --components k3s,redis,minio
 
 # Collect logs for the last 3 hours only
-olares-cli olares logs --since 3h
+olares-cli logs --since 3h
 ```

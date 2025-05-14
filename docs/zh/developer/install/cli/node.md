@@ -17,17 +17,19 @@ olares-cli node <子命令> [选项]
 
 ## 选项
 
-| 名称                              | 简写   | 描述                                                                                                                                                         |
-|---------------------------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--base-dir`                    | `-b` | 指定安装的基础目录。通常是 Olares 的默认安装目录 `$HOME/.olares`。                                                                                                              |
-| `--master-host`                 |      | 指定主节点的 IP 地址。<br>此选项为必填项。                                                                                                                                  |
-| `--master-node-name`            |      | 指定主节点的 Kubernetes 节点名称。                                                                                                                                    |
-| `--master-ssh-user`             |      | 设置主节点 SSH 登录的 Linux 用户名。<br>默认为 root。                                                                                                                      |
-| `--master-ssh-password`         |      | 设置 Linux 用户的密码。<br>当指定非 root 用户时必填。                                                                                                                        |
-| `--master-ssh-private-key-path` |      | 指定 Linux 用户 SSH 认证的私钥路径。<br>默认为 `/root/.ssh/id_rsa`。                                                                                                       |
-| `--master-ssh-port`             |      | 设置主节点 SSH 服务的监听端口。<br>默认为 `22`。                                                                                                                            |
-| `--version`                     | `-v` | 安装指定 Olares 版本的 GPU 驱动及组件。版本号格式为 `x.y.z`（如 `1.10.0`）或包含构建日期（如 `1.10.0-20241109`）。<br>可用版本请参考 [GitHub Releases](https://github.com/beclab/Olares/releases)。 | |
-| `--help`                        | `-h` | 显示命令帮助信息。                                                                                                                                                  |
+
+
+| 选项 | 简写| 用途                                                                                                                                                         | 是否必需 | 默认值         |
+|---------------------------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|----------------|
+| `--base-dir`  | `-b` | 指定安装的基础目录。                                                                                                                                             | 否       | `$HOME/.olares`  |
+| `--master-host`                 |      | 指定主节点的 IP 地址。                                                                                                                                         | 是       | 无             |
+| `--master-node-name`            |      | 指定主节点的 Kubernetes 节点名称。                                                                                                                               | 否       | 无             |
+| `--master-ssh-user`             |      | 设置主节点 SSH 登录的 Linux 用户名。                                                                                                                               | 否       | `root`         |
+| `--master-ssh-password`         |      | 设置 Linux 用户的密码。                                                                                                  | 当指定非 root 登录用户时必填。               | 无             |
+| `--master-ssh-private-key-path` |      | 指定 Linux 用户 SSH 认证的私钥路径。                                                                                                                               | 否       | `/root/.ssh/id_rsa` |
+| `--master-ssh-port`             |      | 设置主节点 SSH 服务的监听端口。                                                                                                                                  | 否       | `22`           |
+| `--version`                     | `-v` | 指定 Olares 版本。版本号格式为 `x.y.z`（如 `1.10.0`）或包含构建日期（如 `1.10.0-20241109`）。<br>可用版本请参考 [GitHub Releases](https://github.com/beclab/Olares/releases)。 | 否       | 当前已安装版本 |
+| `--help`                        | `-h` | 显示命令帮助信息。                                                                                                                                             | 否       | 无             |
 
 ## 使用示例
 

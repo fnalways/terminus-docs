@@ -11,7 +11,7 @@ Olares Home 是 Olares 的默认安装目录，用于存储镜像、日志、依
 
 ```bash
 # 指定所有下载组件的存储目录
-olares-cli olares download component --base-dir /custom/path
+olares-cli download component --base-dir /custom/path
 ```
 
 ## 目录结构

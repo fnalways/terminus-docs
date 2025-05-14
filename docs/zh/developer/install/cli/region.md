@@ -3,7 +3,7 @@
 ## 命令说明
 `region` 子命令用于获取云名称和区域 ID。该命令专门用于存储后端为 Olares Space 的场景。
 ```bash
-olares-cli olares backups region space [选项]
+olares-cli backups region space [选项]
 ```
 
 ## 选项
@@ -20,7 +20,7 @@ olares-cli olares backups region space [选项]
 ## 使用示例
 ```bash
 # 查询云名称和区域 ID
-olares-cli olares backups region space \
+olares-cli backups region space \
 --access-token YOUR_ACCESS_TOKEN \
 --cloud-api-mirror https://api-mirror.example.com \
 --olares-did did:xyz123

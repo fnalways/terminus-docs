@@ -1,5 +1,6 @@
 // docs/.vitepress/theme/index.ts
 import DefaultTheme from "vitepress/theme";
+import "./styles/custom.css"; 
 import "./styles/index.css";
 import { inBrowser, useRoute, useRouter, useData } from "vitepress";
 import Layout from "./components/Layout.vue";
