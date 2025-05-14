@@ -436,7 +436,7 @@ const side = {
             },
             {
               text: "olares release",
-              link: "/zhdeveloper/install/cli/olares-release",
+              link: "/zh/developer/install/cli/olares-release",
             },
             {
               text: "olares start",
