@@ -14,7 +14,7 @@ Before you start, it is recommended to familiarize yourself with a few concepts 
 | [System application](../concepts/application.md#system-applications)                                 | Built-in applications that come pre-installed with Olares, such as Profile, Files, and Vault.                                    |
 | [Community application](../concepts/application.md#community-applications)                           | Applications that are created and maintained by third-party developers.                                                          |
 | &nbsp;&nbsp;[Shared application](../concepts/application.md#cluster-scoped-applications)     | A special category of community applications on Olares designed to provide unified, shared resources or services to all users within an Olares cluster. Only one instance is allowed per cluster. |
-| &nbsp;&nbsp;&nbsp;&nbsp;[Authorized application](../concepts/application.md#authorized-applications) | The applications that have been granted access to specific shared applications                                             |
+| &nbsp;&nbsp;&nbsp;&nbsp;[Reference application](../concepts/application.md#reference-applications) | The applications that have been granted access to specific shared applications                                             |
 | [Dependencies](../concepts/application.md#dependencies)                                              | Prerequisite applications that must already be installed before a user can access an application that requires them.             |
 
 ## Find applications
@@ -49,7 +49,7 @@ You can also browse applications based on their functionality:
 To cancel an installation, hover over the operation button and click **Cancel** when it appears.
 :::
 
-### Install shared and authorized applications
+### Install shared and reference applications
 
 To ensure a shared service is running and accessible within the cluster, follow this general installation process based on the type of Shared App:
 
@@ -62,9 +62,9 @@ To ensure a shared service is running and accessible within the cluster, follow 
 * **Complete application with built-in UI**:
     This type of shared applications can provide service to itself. Typical examples are Dify Shared and ComfyUI Shared.
     
-    1. The administrator installs the shared application first. This not only launches the shared service for the cluster, but also installs the client-side interface as the authorized application. 
+    1. The administrator installs the shared application first. This not only launches the shared service for the cluster, but also installs the client-side interface as the authorized application.
     
-    ::: tip ComfyUI Launcher 
+    ::: tip ComfyUI Launcher
     ComfyUI Shared contains a web launcher component to facilitate the management of related services and resources. The administrator needs to configure and start the service from the ComfyUI Launcher.
     :::
 

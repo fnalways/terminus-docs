@@ -22,11 +22,11 @@ SearXNG 作为 Perplexica 的后端，是一个注重隐私的元搜索引擎。
   :::
 
 ## 配置 Perplexica
-1. 根据角色安装 SearXNG：
-    - **管理员**：需要安装“SearXNG For Cluster”和“SearXNG”。
-    - **团队成员**：仅需安装“SearXNG”，同时确保管理员已安装"SearXNG For Cluster"。
-
-   ![安装 SearXNG](/images/manual/use-cases/install-searxng.png){width=40%}
+1. 管理员从应用市场安装 SearXNG。
+   
+   :::info
+  从 Olares 1.11.6 开始，如果已安装 "SearXNG For Cluster" 或 "SearXNG" 客户端入口，需先卸载这些版本。
+  :::
 
 2. 安装 Perplexica。
 3. 启动 Perplexica，点击左下角的 <i class="material-symbols-outlined">settings</i> 打开设置界面。

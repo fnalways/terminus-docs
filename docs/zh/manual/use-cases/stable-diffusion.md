@@ -20,13 +20,12 @@ Stable Diffusion 是基于潜在扩散模型（LDM）的新一代 AI 图像生�
 * 生成高清图像及超分辨率处理
 
 ## 安装 SD Web UI
-根据角色选择安装方式：
-* **管理员**：需要同时安装“SD Web UI For Cluster”和“SD Web UI”。
-* **团队成员**：确保管理员已安装“SD Web UI For Cluster”，然后只需安装“SD Web UI”。
+:::info
+从 Olares 1.11.6 开始，如果已安装 "SD Web UI For Cluster" 或 "SD Web UI" 客户端入口，需先卸载这些版本。
+:::
 
-![安装 SD Web UI](/images/manual/use-cases/install-sd.png){width=40%}
-
-完成安装后，从桌面启动应用即可开始创作。
+1. 从应用市场里安装 SD Web UI 共享版。
+2. 在桌面启动 SD Web UI 图标开始创作。请确保管理员已安装 SD Web UI 共享版。
 
 ## 多人使用避免冲突
 

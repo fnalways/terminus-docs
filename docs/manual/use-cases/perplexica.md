@@ -21,12 +21,13 @@ Before getting started, ensure you have:
   For optimal performance, consider using lightweight yet powerful models like `gemma2`, which offer a good balance between speed and capability.
   :::
 ## Set up Perplexica
-1. Install SearXNG from Market based on your role:
-    - **For admin**: Install both "SearXNG For Cluster" and "SearXNG".
-    - **For team members**: Ensure your admin has installed "SearXNG For Cluster", and install "SearXNG" only.
-    
-   ![Install SearXNG](/images/manual/use-cases/install-searxng.png){width=40%}
 
+1. The admin installs SearXNG from Market.
+    
+   :::info
+   Starting from Olares 1.11.6, if "SearXNG For Cluster" or the "SearXNG" client was previously installed, uninstall them before proceeding.
+   :::
+    
 2. Install Perplexica from Market.
 3. Launch Perplexica, and click <i class="material-symbols-outlined">settings</i> in the bottom left corner to open the settings window.
 4. Configure your search environment with the following settings (using `gemma2` as an example):
