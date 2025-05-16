@@ -29,7 +29,7 @@ Make sure the following requirements are met:
 - Your device and Olares are on the same local network.
 
     :::tip Remote access
-    If your device is on a different network, use [LarePass](https://olares.xyz/larepass) to enable a private network connection to Olares.
+    If your device is on a different network, use [LarePass](https://olares.com/larepass) to enable a private network connection to Olares.
     :::
 
 ## Install dependent kernel modules

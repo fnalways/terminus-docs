@@ -23,7 +23,7 @@ description: 在 Olares 上安装 Steam Headless，配置串流服务，并使�
 - 串流设备已安装 Moonlight 客户端。可访问 [Moonlight 官网](https://moonlight-stream.org/)下载适合你设备的客户端并安装。
 - 你的串流设备和 Olares 处于同一个局域网。 
    :::tip 远程串流
-   如需远程串流，你需要提前在串流设备上安装 LarePass 客户端。请在 [LarePass 官网](https://joinolares.cn/larepass)上下载对应的版本。
+   如需远程串流，你需要提前在串流设备上安装 LarePass 客户端。请在 [LarePass 官网](https://olares.cn/larepass)上下载对应的版本。
    :::
 - 拥有一个有效的 Steam 账号以访问你的游戏。
 

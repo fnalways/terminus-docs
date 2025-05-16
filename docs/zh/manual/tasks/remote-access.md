@@ -13,7 +13,7 @@ description: 了解如何在桌面客户端上启用 LarePass 专用网络，安
 ## 启用 LarePass 专用网络
 
 :::tip
-从[官方页面](https://www.joinolares.cn/larepass)下载 LarePass 桌面客户端。
+从[官方页面](https://olares.cn/larepass)下载 LarePass 桌面客户端。
 :::
 
 1. 打开 LarePass 桌面客户端，点击主界面左上角的头像区域。

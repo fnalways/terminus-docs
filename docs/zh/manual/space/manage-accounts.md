@@ -10,7 +10,7 @@ description: 介绍 Olares Space 的账号操作方法，通过 LarePass 扫码�
 Olares Space 使用去中心化身份（DID）或 Olares ID 进行身份验证。请确保你已在 LarePass 中获取了相应的凭据。
 
 1. 在 LarePass 应用中，选择要用于登录的 DID 或 Olares ID。
-2. 在浏览器中打开 [https://space.olares.xyz/](https://space.olares.xyz/)。
+2. 在浏览器中打开 [https://space.olares.com/](https://space.olares.com/)。
 3. 使用 LarePass 扫描二维码。
 
 ::: tip DID 与 Olares ID 的差异

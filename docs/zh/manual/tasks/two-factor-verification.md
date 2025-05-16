@@ -23,7 +23,7 @@ description: 在 Vault 中设置和使用双因素身份验证。生成安全的
 ## 在 Vault 中创建身份验证器
 
 :::tip 提示
-访问 [官方页面](https://www.olares.xyz/larepass) 获取下载选项。
+访问 [官方页面](https://olares.cn/larepass) 获取下载选项。
 :::
 
 <tabs>

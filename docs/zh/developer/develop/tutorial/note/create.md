@@ -6,7 +6,7 @@ outline: [2, 3]
 
 ## 下载并安装 DevBox
 
-1. 从 Olares 应用市场安装 [DevBox](https://market.olares.xyz/app/devbox)。
+1. 从 Olares 应用市场安装 [DevBox](https://market.olares.com/app/devbox)。
 2. 在 Olares 桌面的 LaunchPad 中找到 DevBox 图标。
 3. 点击图标启动应用程序。
 

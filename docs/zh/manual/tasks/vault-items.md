@@ -105,7 +105,7 @@ Vault 项目是存储敏感信息的独立安全容器。每个 Vault 项目包�
 <template #LarePass-浏览器扩展>
 
 :::info 提示
-LarePass 浏览器扩展目前仅支持 Google Chrome。请访问 [LarePass 页面](https://www.olares.xyz/larepass) 下载扩展。
+LarePass 浏览器扩展目前仅支持 Google Chrome。请访问 [LarePass 页面](https://olares.cn/larepass) 下载扩展。
 :::
 :::tip 提示
 为方便访问，你可以将扩展固定到工具栏。

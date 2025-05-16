@@ -24,7 +24,7 @@ While browsing the title or reading, click **<i class="material-symbols-outlined
 <template #LarePass-Chrome-extension>
 
 :::tip
-LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://www.olares.xyz/larepass).
+LarePass extension is currently available for Chrome browsers only. Download it from the [official page](https://olares.com/larepass).
 :::
 
 1. Open the LarePass browser extension and click **Collect**.

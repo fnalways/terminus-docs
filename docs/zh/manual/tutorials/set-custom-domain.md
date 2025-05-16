@@ -63,7 +63,7 @@ DID（Decentralized Identifier，去中心化标识符）是在获得最终的 O
 
 在绑定域名之前，你需要先在 Olares Space 中添加并验证域名。
 
-1. 在浏览器中访问 [Olares Space](https://space.olares.xyz/)。
+1. 在浏览器中访问 [Olares Space](https://space.olares.com/)。
 2. 在手机端的 LarePass 应用中，点击右上角的扫码按钮，并扫描登录页面的二维码以登录 Olares Space。
 
     ![扫描二维码](/images/manual/tutorials/scan-qr-code.png)

@@ -24,7 +24,7 @@ postgres:
 
 ## NoSQL
 
-Olares 中默认未部署 NoSQL 集群，但可以从应用市场中安装。要设置 NoSQL 集群，管理员需要安装 [**MongoDB**](https://market.olares.xyz/middleware/mongodb) 中间件。 安装后，[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) 会自动管理 **MongoDB** 集群。然后，用户可以水平扩展 **MongoDB** 集群副本，以及对数据库执行备份和恢复操作。
+Olares 中默认未部署 NoSQL 集群，但可以从应用市场中安装。要设置 NoSQL 集群，管理员需要安装 [**MongoDB**](https://market.olares.com/middleware/mongodb) 中间件。 安装后，[Percona Operator for MongoDB](https://github.com/percona/percona-server-mongodb-operator) 会自动管理 **MongoDB** 集群。然后，用户可以水平扩展 **MongoDB** 集群副本，以及对数据库执行备份和恢复操作。
 
 你可以在 [OlaresManifest.yaml](../package/manifest.md#middleware) 中指定 MongoDB 的详细配置，如下所示：
 

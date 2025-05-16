@@ -25,7 +25,7 @@ Wise 为你提供内容管理提供灵活丰富的选项，帮你轻松收集、
 <template #LarePass-浏览器扩展>
 
 :::tip 提示
-LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://www.olares.xyz/larepass)下载。
+LarePass 扩展目前仅支持 Chrome 浏览器。请从 [LarePass 页面](https://olares.cn/larepass)下载。
 :::
 
 1. 打开 LarePass 浏览器扩展，点击**收集**。

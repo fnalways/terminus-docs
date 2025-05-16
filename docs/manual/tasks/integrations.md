@@ -12,7 +12,7 @@ We're working on adding support for third-party account integrations. This featu
 
 To stay updated on this and other new features:
 
-* [Follow our official blog](https://blog.olares.xyz/)
+* [Follow our official blog](https://blog.olares.com/)
 * [Join our discord channel](https://discord.com/invite/BzfqrgQPDK)
 :::
 
@@ -20,7 +20,7 @@ To stay updated on this and other new features:
 Olares Space is a cloud hosting service for Olares that shares the same account system with LarePass and Olares.
 
 ### Step 1. Log in to Olares Space
-1. Open https://space.olares.xyz/login in your browser.
+1. Open https://space.olares.com/login in your browser.
 2. Open LarePass on your mobile device.
 3. On the Settings page, tap the "Scan" icon in the top-right corner.
 4. Scan the QR code on the Olares Space login page.

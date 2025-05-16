@@ -13,7 +13,7 @@ description: 介绍云端 Olares 实例的管理功能，包含系统监控面�
 
 1. 在 LarePass 应用中，进入**设置** > **集成**。
 2. 点击右上角的 <i class="material-symbols-outlined">add</i>，将 Olares Space 账号与 Olares 设备关联，授权 Olares Space 访问系统数据。
-3. 登录 [**Olares Space**](https://space.olares.xyz/)。
+3. 登录 [**Olares Space**](https://space.olares.com/)。
 4. 在 **Olares** 页面的系统面板中查看**存储使用量**和**流量消耗**。
 
 ![系统面板](/images/how-to/space/my_olares.jpg#bordered)

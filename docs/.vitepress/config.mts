@@ -76,7 +76,7 @@ export default withMermaid({
   },
 
   sitemap: {
-    hostname: "https://docs.olares.xyz/",
+    hostname: "https://docs.olares.com/",
   },
   lastUpdated: true,
   base: process.env.DOC_BASE || "/",

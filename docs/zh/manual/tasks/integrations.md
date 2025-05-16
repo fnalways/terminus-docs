@@ -14,7 +14,7 @@ Olares 支持集成 Olares Space 和其他第三方服务，以增强功能并�
 
 了解此功能及其他新功能的最新动态：
 
-* [关注我们的官方博客](https://blog.olares.xyz/)
+* [关注我们的官方博客](https://blog.olares.com/)
 * [加入我们的 Discord 频道](https://discord.com/invite/BzfqrgQPDK)
 :::
 
@@ -24,7 +24,7 @@ Olares Space 是 Olares 的云托管服务，与 LarePass 和 Olares 共享相�
 
 ### 第一步：登录 Olares Space
 
-1. 在浏览器中打开 [https://space.olares.xyz/login](https://space.olares.xyz/login)。
+1. 在浏览器中打开 [https://space.olares.com/login](https://space.olares.com/login)。
 2. 在移动设备上打开 LarePass。
 3. 在**设置**页面，点击右上角的“扫描”图标。
 4. 扫描 Olares Space 登录页面上的二维码。

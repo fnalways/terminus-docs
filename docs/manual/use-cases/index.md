@@ -10,7 +10,7 @@ While other guides tell you "what" and "how," these use cases reveal the full po
   { title: 'Open WebUI', link: './openwebui.html', tags: ['AI'] },
   { title: 'Perplexica', link: './perplexica.html', tags: ['AI']},
   { title: 'Dify', link: './dify.html', tags: ['AI']},
-  { title: 'Hubble', link: 'https://blog.olares.xyz/running-farcaster-hubble-on-your-home-cloud/', tags: ['Social Network']},
+  { title: 'Hubble', link: 'https://blog.olares.com/running-farcaster-hubble-on-your-home-cloud/', tags: ['Social Network']},
   { title: 'Ollama', link: './ollama.html', tags: ['AI']},
 ]" 
 />
