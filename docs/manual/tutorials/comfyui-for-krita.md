@@ -26,25 +26,22 @@ Before starting, ensure you have:
 
 ## Set up ComfyUI
 
-1. Install ComfyUI from Market based on your role:
+1. Install ComfyUI Shared from Market. 
+   - For administrator users, this installs both ComfyUI Launcher (the management UI) and ComfyUI (the client UI).
+   - For member users, this only installs ComfyUI.
+    
+   ![Intall ComfyUI](/images/manual/use-cases/install-comfyui.png){width=40%}
 
-   ![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=30%}
+2. The administrator configures and launches the ComfyUI service from the ComfyUI Launcher.
 
-   - **For admin**: Install "ComfyUI For Cluster" to set up the shared backend service within the Olares cluster. Then, install "ComfyUI" to enable the client interface for personal use.
-   - **For team members**: Confirm that your admin has installed "ComfyUI For Cluster", then install "ComfyUI" to access the service via the client application.
-
-   :::info
-   **ComfyUI For Cluster** operates as a backend service and does not display a desktop icon. All interactions are done via the client application.
-   :::
-
-2. Configure ComfyUI.
+3. Configure ComfyUI access policy.
 
    a. Open Settings, navigate to **Applications** > **ComfyUI** > **Entrances**.
 
    b. Set the **Authentication level** to **Internal**.
    ![ComfyUI authentication level](/images/manual/use-cases/comfyui-authentication-level.png#bordered){width=70%}
-3. Launch ComfyUI from your desktop, and verify the installation by generating a sample image.
-4. Copy the address of ComfyUI for next steps.
+4. Launch ComfyUI from your desktop, and verify the installation by generating a sample image.
+5. Copy the address of ComfyUI for next steps.
 :::tip
 For security, you should always run AI applications within your local network. When properly configured, your ComfyUI URL should contain `.local`.
 
