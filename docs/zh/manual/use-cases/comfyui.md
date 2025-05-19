@@ -24,23 +24,21 @@ Olares 应用商店提供 ComfyUI 共享版，可允许同一 Olares 集群上�
 自 1.11.6 版本起，Olares 会使用 ComfyUI 共享版取代之前的集群范围应用。如果安装过 ComfyUI For Cluster 和对应的 ComfyUI 客户端，请卸载后再安装共享版。
 ::: 
 
-ComfyUI 共享版的安装分为管理员安装和普通用户安装两个阶段。
+要安装 ComfyUI 共享版：
 
-1. 管理员安装。打开 Olares 的应用商店，找到并点击 ComfyUI 共享版，并点击**获取**。
- 
-    管理员安装完成后，将在 Olares 桌面上看到两个图标：一个是 ComfyUI 的使用入口，另一个是 ComfyUI 启动器的入口。
-    
-    :::tip 启动服务
-    只有管理员在 ComfyUI Launcher 里配置并启动 ComfyUI 服务后，集群用户才能通过 ComfyUI 入口打开 ComfyUI 界面，使用工作流。
+1. 打开 Olares 应用市场，找到 ComfyUI 共享版，并点击**获取**。
+
+   - 管理员将会在 Olares 桌面看到两个图标：一个是 ComfyUI 客户端界面，另一个是 ComfyUI 启动器。
+
+    ![安装 ComfyUI 共享版](/images/manual/use-cases/install-comfyui.png){width=40%}
+
+   - 成员用户只会在桌面看到 ComfyUI 客户端界面。
+
+    :::tip 启动 ComfyUI 服务
+    管理员必须从启动器启动 ComfyUI 服务之后，集群中的所有用户才能从客户端入口访问服务。
     :::
 
-2. 成员安装。打开 Olares 的应用商店，找到并点击 ComfyUI 共享版，并点击获取。
-   
-   安装完成后，该用户将在 Olares 桌面上看到 ComfyUI 的使用入口图标。
-
-    ![安装 ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
-
-3. 安装完成后，从桌面启动 ComfyUI。管理员也可以从 ComfyUI 启动器进入 ComfyUI 桌面。
+2. 点击 ComfyUI 图标打开界面。管理员也可以从 Launcher 进入 ComfyUI 界面。
 
     ![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
 

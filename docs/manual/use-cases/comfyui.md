@@ -19,29 +19,27 @@ ComfyUI puts advanced AI image generation capabilities at your fingertips:
 
 ## Install ComfyUI Shared
 
-Olares provides ComfyUI Shared, an adapted version that allows multiple users to share models, plugins, and workflow resources across the cluster. It also features ComfyUI Launcher, providing administrator users with a simple way to manage ComfyUI resources and runtime environments.
+Olares provides ComfyUI Shared to allow multiple users to share models, plugins, and workflow resources within the cluster. It also features ComfyUI Launcher, providing administrator users with a simple way to manage ComfyUI resources and runtime environments.
 
 ::: tip Note
-Starting from Olares 1.11.6, Shared Applications will replace previous cluster-scoped applications. If you have installed ComfyUI for Cluster and its client, please uninstall them before installing ComfyUI Shared.
+Starting from Olares 1.11.6, Shared applications will replace previous cluster-scoped applications. If you have installed ComfyUI for Cluster and its client, please uninstall them before installing ComfyUI Shared.
 :::
 
-The installation of ComfyUI Shared Edition is divided into two phases: administrator installation and regular user installation.
+To install ComfyUI Shared:
 
-1.  **Administrator installation**. Open Olares Market, find **ComfyUI Shared**, and click **Get**.
+1. Open Olares Market, find **ComfyUI Shared**, and click **Get**.
 
-    After the administrator installation is complete, two icons  appear on the Olares desktop: one is the access point for ComfyUI, and the other is the access point for ComfyUI Launcher.
+    - The administrator will see two icons on the Olares desktop: one is the client interface for ComfyUI, and the other is ComfyUI Launcher. 
 
-    :::tip Start service
-    Only after the administrator configures and starts the service in the ComfyUI Launcher can cluster users access the ComfyUI interface and use workflows.
+    ![Install ComfyUI](/images/manual/use-cases/install-comfyui.png){width=40%}
+
+    - Member users will only see the ComfyUI client interface on the desktop.
+
+    :::tip Start the ComfyUI service
+    The administrator must start the ComfyUI service from the Launcher before all users in the cluster can access the service from the client interface.
     :::
 
-2. **Member installation**. Open Olares Market, find ComfyUI Shared, and click **Get**.
-
-    After the installation is complete, the member user only sees the ComfyUI icon on the desktop.
-
-    ![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
-
-3. After installation is complete, click the ComfyUI icon from the desktop to open it. Administrators can also enter the ComfyUI interface from the ComfyUI Launcher.
+2. Click the ComfyUI icon to open the interface. Administrators can also enter the ComfyUI interface from the Launcher.
 
     ![ComfyUI Interface](/images/manual/use-cases/comfyui.png#bordered)
 
