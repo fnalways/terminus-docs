@@ -38,7 +38,7 @@ Olares 应用商店提供 ComfyUI 共享版，可允许同一 Olares 集群上�
     管理员必须从启动器启动 ComfyUI 服务之后，集群中的所有用户才能从客户端入口访问服务。
     :::
 
-2. 点击 ComfyUI 图标打开界面。管理员也可以从 Launcher 进入 ComfyUI 界面。
+2. 点击 ComfyUI 图标打开界面。管理员也可以从启动器进入 ComfyUI 界面。
 
     ![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
 
