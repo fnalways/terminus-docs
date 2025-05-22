@@ -395,7 +395,7 @@ const side = {
         collapsed: true,
           items: [
             { text: "gpu", link: "/zh/developer/install/cli/gpu" },
-            { text: "info", link: "/zh/developer/install/cli/info" },
+            { text: "osinfo", link: "/zh/developer/install/cli/osinfo" },
             { text: "node", link: "/zh/developer/install/cli/node" },
             {
               text: "olares backups",
@@ -436,7 +436,7 @@ const side = {
             },
             {
               text: "olares release",
-              link: "/zhdeveloper/install/cli/olares-release",
+              link: "/zh/developer/install/cli/olares-release",
             },
             {
               text: "olares start",

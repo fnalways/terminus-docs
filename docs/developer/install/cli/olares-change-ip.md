@@ -7,28 +7,28 @@ When Olares is deployed _inside_ a virtualized environment, such as macOS (via M
 Change the local IP address for all Olares components.
 
 ```bash
-olares-cli olares change-ip [option]
+olares-cli change-ip [option]
 ```
 
 ## Options
 
-| Name                | Shorthand | Usage                                                                                                                                                                                                                                                     |
-|---------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--base-dir`        | `-b`      | Sets the base directory for Olares.<br> Defaults to `$HOME/.olares`.                                                                                                                                                                                      |
-| `--distribution`    | `-d`      | Sets the WSL distribution name. Only applicable on Windows. <br> Defaults to `Ubuntu`.                                                                                                                                                                    |
-| `--help`            | `-h`      | Displays help information.                                                                                                                                                                                                                                |
-| `--new-master-host` |           | Specifies the new IP address of the master node on the worker node.<br> Only applicable for a multi-node Olares cluster.                                                                                                                                  |
-| `--profile`         | `-p`      | Sets the Minikube profile name. Only applicable on macOS. <br> Defaults to `olares-0`.                                                                                                                                                                    |
-| `--version`         | `-v`      | Specifies the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. |
+| Option              | Shorthand | Usage                                                                                                                                                                                                                                                     | Required | Default                        |
+|---------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------------------|
+| `--base-dir`        | `-b`      | Sets the base directory for Olares.                                                                                                                                                                                                                       | No                   | `$HOME/.olares`                |
+| `--distribution`    | `-d`      | Sets the WSL distribution name. Only applicable on Windows.                                                                                                                                                                                             | No                   | `Ubuntu`                       |
+| `--help`            | `-h`      | Displays help information.                                                                                                                                                                                                                                | No                   | N/A                            |
+| `--new-master-host` |           | Specifies the new IP address of the master node on the worker node.<br> Only applicable for a multi-node Olares cluster.                                                                                                                                  | No                   | N/A                            |
+| `--profile`         | `-p`      | Sets the Minikube profile name. Only applicable on macOS.                                                                                                                                                                                                 | No                   | `olares-0`                     |
+| `--version`         | `-v`      | Specifies the Olares version. <br>Version values follow the format `x.y.z` (e.g., `1.10.0`) or include a build date (e.g., `1.10.0-20241109`).<br> Refer to the [GitHub Releases page](https://github.com/beclab/Olares/releases) for available versions. | No                   | Current version    |
 
 ## Examples
 - For macOS:
 ```bash
 # Specify the Minikube profile name and change the IP.
-olares-cli olares change-ip --profile olares-0
+olares-cli change-ip --profile olares-0
 ```
 - For Windows WSL:
 ```bash
 # Specify the Linux distribution in WSL and change the IP.
-olares-cli olares change-ip --distribution Ubuntu
+olares-cli change-ip --distribution Ubuntu
 ```

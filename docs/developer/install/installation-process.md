@@ -15,7 +15,7 @@ The Olares installation process is divided into four phases, each ensuring a smo
 
 ## Precheck phase
 
-The precheck phase focuses on verifying that your system meets the necessary requirements for installing Olares. The `olares-cli olares precheck` command is used to run a series of validation checks. Any issues identified during this phase must be resolved before continuing with the installation.
+The precheck phase focuses on verifying that your system meets the necessary requirements for installing Olares. The `olares-cli precheck` command is used to run a series of validation checks. Any issues identified during this phase must be resolved before continuing with the installation.
 
 Key checks include:
 - Checks the compatibility with the operating system type, version, and CPU architecture

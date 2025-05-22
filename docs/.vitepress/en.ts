@@ -391,7 +391,7 @@ const side = {
           collapsed: true,
           items: [
             { text: "gpu", link: "/developer/install/cli/gpu" },
-            { text: "info", link: "/developer/install/cli/info" },
+            { text: "osinfo", link: "/developer/install/cli/osinfo" },
             { text: "node", link: "/developer/install/cli/node" },
             {
               text: "olares backups",
