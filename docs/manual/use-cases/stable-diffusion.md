@@ -18,13 +18,16 @@ Whether you're an artist looking to expand your creative toolkit, a developer in
 
 ## Install SD Web UI
 
-The installation process is straightforward, with just a couple of steps based on your role:
-* **For admin**: Install both "SD Web UI For Cluster" and "SD Web UI".
-* **For team members**: Ensure your admin has installed "SD Web UI For Cluster", and install "SD Web UI" only.
+:::info
+Starting from Olares 1.11.6, if "SD Web UI For Cluster" or "SD Web UI" was previously installed, uninstall them before proceeding.
+:::
 
-![Install SD Web UI](/images/manual/use-cases/install-sd.png){width=40%}
+1. Install SD Web UI Shared directly from Market. 
 
-Launch SD Web UI from your desktop, and voilà - unleash your creativity and start generating stunning images!
+2. Launch SD Web UI from your desktop. Please ensure the admin has already installed SD Web UI Shared.
+
+Now you are ready to unleash your creativity and start generating stunning images!
+
 ## Prevent conflicts among members
 In SD Web UI, checkpoint settings are globally applied to all users by default. When one user switches to a different checkpoint, all subsequent image generations by other users will also use this newly selected checkpoint. To prevent workflow disruptions in multi-user environments, you could specify checkpoints for individual tasks.
 

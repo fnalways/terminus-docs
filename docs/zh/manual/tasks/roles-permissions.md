@@ -37,7 +37,7 @@ Olares 提供两种默认用户角色：
             <ul>
                 <li>创建和管理用户账户</li>
                 <li>管理 Vault 团队，创建共享 Vault，并为共享 Vault 分配读/写权限</li>
-                <li>安装和管理集群范围的应用</li>
+                <li>安装和管理共享应用</li>
                 <li>监控和管理系统资源</li>
                 <li>设置 GPU 使用模式</li>
                 <li>更新 Olares</li>

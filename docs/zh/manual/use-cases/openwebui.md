@@ -52,6 +52,7 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
    - **团队成员**：仅需安装“Faster Whisper”，同时确保管理员已安装“Faster Whisper For Cluster”。
 
    ![Install Faster Whisper](/images/manual/use-cases/install-faster-whisper.png){width=40%}
+
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
 3. 选择 OpenAI 作为语音转文字引擎，配置如下：
    - **API 基础 URL**：`http://whisper.whisper-{管理员本地名称}:8000/v1`，例如：`http://whisper.whisper-alice123:8000/v1`。
@@ -84,10 +85,7 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
    ![配置 Faster Whisper](/images/zh/manual/use-cases/openwebui-faster-whisper.png#bordered)
 
 ### 文字转语音
-1. 安装 OpenedAI Speech。
-   :::info 仅支持管理员安装
-   OpenedAI Speech 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 OpenedAI Speech。
-   :::
+1. 管理员安装 OpenedAI Speech 应用，在集群内启动 OpenAI Speech 服务。
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **音频**。
 3. 选择 OpenAI 作为文字转语音引擎，配置如下：
    - **API 基础 URL**：`http://openedaispeech.openedaispeech-{管理员本地名称}:8000/v1`，例如：`http://openedaispeech.openedaispeech-alice123:8000/v1`。
@@ -95,12 +93,9 @@ Open WebUI 为大语言模型（LLM）提供了直观的管理界面，支持 Ol
 4. 点击**保存**。
 
 ### 文字转图像
-在 Olares 环境中安装了 SD Web UI For Cluster 后，你可以直接通过 Open WebUI 使用 Stable Diffusion 的强大图像生成功能。
+在 Olares 环境中安装了 SD Web UI 共享版后，你可以直接通过 Open WebUI 使用 Stable Diffusion 的强大图像生成功能。
 
-1. 安装 SD Web UI For Cluster。
-   :::info 仅支持管理员安装
-   SD Web UI For Cluster 是集群应用，只能由 Olares 管理员安装。如果你是团队成员，请确保 Olares 管理员已安装 SD Web UI For Cluster。
-   :::
+1. 管理员安装 SD Web UI 共享版，在集群里启动 Stable Diffusion 服务。
 2. 打开 Open WebUI，进入**管理员面板** > **设置** > **图像**。
 3. 选择 **Automatic1111** 作为图像生成引擎，基础 URL 为：`http://sdwebui.sdwebui--{管理员本地名称}:7860`，例如：`http://sdwebui.sdwebui-alice123:7860`。
 4. 点击 <i class="material-symbols-outlined">cached</i> 验证连接。

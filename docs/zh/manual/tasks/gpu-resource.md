@@ -33,7 +33,7 @@ Olares 提供灵活的 GPU 显存管理功能，以支持图像生成和大语�
 * 大内存请求可能会限制后续应用的可用资源
 
 :::info
-对于集群应用，如 SD Web UI（Stable Diffusion）和 ComfyUI，GPU 显存由集群应用自行管理，而不是由单个用户实例管理。
+对于共享应用，如 SD Web UI（Stable Diffusion）和 ComfyUI，GPU 显存由共享应用自行管理，而不是由单个用户实例管理。
 这意味着这里描述的 GPU 模式设置不会直接影响这些授权应用。
 :::
 

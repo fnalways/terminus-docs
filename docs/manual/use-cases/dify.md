@@ -18,7 +18,8 @@ To use local AI models on Dify, ensure you have:
 Starting from Olares 1.11.6, if "Dify For Cluster" or "Dify" was previously installed, uninstall them before proceeding.
 :::
 
-Install "Dify Shared" from Olares Market.
+1. Install "Dify Shared" from Olares Market. 
+2. Launch Dify from your desktop. Please ensure the admin has already installed Dify Shared.
 
 ## Create an AI assistant app
 
