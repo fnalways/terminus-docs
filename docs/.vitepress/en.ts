@@ -97,6 +97,13 @@ const side = {
         {
           text: "ComfyUI",
           link: "/manual/use-cases/comfyui",
+          collapsed: true,
+          items: [
+            {
+              text: "Manage ComfyUI",
+              link: "/manual/use-cases/comfyui-launcher",
+            },
+          ]
         },
         {
           text: "Ollama",

@@ -26,28 +26,26 @@ description: 将 ComfyUI 与 Krita 结合使用的教程，学习如何配置 AI
 
 ## 配置 ComfyUI
 
-1. 根据你的角色安装 ComfyUI：
+1. 从应用市场安装 ComfyUI 共享版。
+   - 管理员会同时安装 ComfyUI 启动器（管理界面）和 ComfyUI （客户端界面）。
+   - 成员仅会安装 ComfyUI。
 
-   ![安装 ComfyUI](/images/manual/tutorials/install-comfyui.png){width=30%}
+   ![安装 ComfyUI](/images/manual/use-cases/install-comfyui.png){width=40%}
 
-   - **管理员**：先安装“ComfyUI For Cluster”以在 Olares 集群中搭建共享实例，然后安装“ComfyUI”以启用个人使用的客户端界面。
-   - **团队成员**：确认管理员已安装“ComfyUI For Cluster”后，安装“ComfyUI”即可通过客户端访问该服务。
+2. 管理员通过 ComfyUI 启动器配置并启动 ComfyUI 后端服务。
 
-   :::info
-   **ComfyUI For Cluster** 作为后端服务运行，不会在桌面显示图标。所有操作都通过客户端应用完成。
-   :::
-2. 配置 ComfyUI 的认证级别。
+3. 配置 ComfyUI 的认证级别。
 
-   a. 打开设置，导航至**应用** > **ComfyUI** > **入口**。
+   a. 打开设置，导航至**应用** > **ComfyUI Shared** > **入口**。
 
-   b. 将**认证级别**设置为**内部**。
+   b. 将 ComfyUI 的**认证级别**设置为**内部**。
 
    ![ComfyUI 认证应用](/images/zh/manual/use-cases/comfyui-authentication-level.png#bordered){width=80%}
    :::info
    将 ComfyUI 应用的认证级别设置为“**内部**”后，当你的电脑和 Olares 主机在同一局域网或者通过专用网络访问 Olares 时，你可以在不登录 Olares 的情况下使用 ComfyUI。
    :::
-3. 从桌面启动 ComfyUI，通过生成测试图像验证安装是否成功。
-4. 复制 ComfyUI 地址，以备后续使用。
+4. 从桌面启动 ComfyUI，通过生成测试图像验证安装是否成功。
+5. 复制 ComfyUI 地址，以备后续使用。
    :::tip
    出于安全考虑，应始终在局域网中运行 AI 应用。正确配置后，ComfyUI 的 URL 中应包含“`.local`”字段。
    如果缺少“`.local`”，请检查本地网络环境，确保当前设备和 Olares 处于同一网段，并且未启用外部网络代理服务。

@@ -17,17 +17,33 @@ ComfyUI puts advanced AI image generation capabilities at your fingertips:
 * Batch process images with consistent settings
 * Apply advanced post-processing effects
 
-## Install ComfyUI
+## Install ComfyUI Shared
 
-Based on your role:
-* **For admin**: Install both "ComfyUI For Cluster" and "ComfyUI".
-* **For team members**: Ensure your admin has installed "ComfyUI For Cluster", and install "ComfyUI" only.
+Olares provides ComfyUI Shared to allow multiple users to share models, plugins, and workflow resources within the cluster. It also features ComfyUI Launcher, providing administrator users with a simple way to manage ComfyUI resources and runtime environments.
 
-![Install ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+::: tip Note
+Starting from Olares 1.11.6, Shared applications will replace previous cluster-scoped applications. If you have installed ComfyUI for Cluster and its client, please uninstall them before installing ComfyUI Shared.
+:::
 
-Once installed, launch ComfyUI from your desktop.
+To install ComfyUI Shared:
 
-![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
+1. Open Olares Market, find **ComfyUI Shared**, and click **Get**.
+
+    - The administrator will see two icons on the Olares desktop: one is the client interface for ComfyUI, and the other is ComfyUI Launcher. 
+
+    ![Install ComfyUI](/images/manual/use-cases/install-comfyui.png){width=40%}
+
+    - Member users will only see the ComfyUI client interface on the desktop.
+
+    :::tip Start the ComfyUI service
+    The administrator must start the ComfyUI service from the Launcher before all users in the cluster can access the service from the client interface.
+    :::
+
+2. Click the ComfyUI icon to open the interface. Administrators can also enter the ComfyUI interface from the Launcher.
+
+    ![ComfyUI Interface](/images/manual/use-cases/comfyui.png#bordered)
 
 ## Learn more
-- [Use ComfyUI in Krita](../tutorials/comfyui-for-krita.md): Learn how to leverage ComfyUI to empower your creative workflows in Krita.
+
+* [Manage ComfyUI using ComfyUI Launcher](comfyui-launcher.md)
+* [Krita + ComfyUI Real-time Painting](../tutorials/comfyui-for-krita.md): Learn how to leverage ComfyUI to assist creative workflows in Krita.

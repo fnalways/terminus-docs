@@ -9,7 +9,7 @@ ComfyUI 是一款基于节点的 Stable Diffusion 图形界面工具。它把 AI
 
 ## ComfyUI 能做什么？
 通过 ComfyUI，你可以实现以下功能：
-
+  
 * 用可视化方式搭建和复用工作流
 * 对绘图流程进行精细调优
 * 自由组合不同模型和技术
@@ -17,17 +17,32 @@ ComfyUI 是一款基于节点的 Stable Diffusion 图形界面工具。它把 AI
 * 使用相同配置批量处理图片
 * 添加高级图像后期效果
 
-## 安装 ComfyUI
+## 安装 ComfyUI 共享版
+Olares 应用商店提供 ComfyUI 共享版，可允许同一 Olares 集群上的多个用户共享 ComfyUI 的模型、插件和工作流资源。它还提供了一个启动器（ComfyUI Launcher），帮助管理员用户管理 ComfyUI 资源和运行环境。
 
-根据你的角色安装相应应用：
-* **管理员**：需要同时安装“ComfyUI For Cluster”和“ComfyUI”。
-* **团队成员**：仅需安装“ComfyUI”，同时确保管理员已安装“ComfyUI For Cluster”。
+::: tip 注意
+自 1.11.6 版本起，Olares 会使用 ComfyUI 共享版取代之前的集群范围应用。如果安装过 ComfyUI For Cluster 和对应的 ComfyUI 客户端，请卸载后再安装共享版。
+::: 
 
-![安装 ComfyUI](/images/manual/tutorials/install-comfyui.png){width=40%}
+要安装 ComfyUI 共享版：
 
-安装完成后，从桌面启动 ComfyUI。
+1. 打开 Olares 应用市场，找到 ComfyUI 共享版，并点击**获取**。
 
-![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
+   - 管理员将会在 Olares 桌面看到两个图标：一个是 ComfyUI 客户端界面，另一个是 ComfyUI 启动器。
+
+    ![安装 ComfyUI 共享版](/images/manual/use-cases/install-comfyui.png){width=40%}
+
+   - 成员用户只会在桌面看到 ComfyUI 客户端界面。
+
+    :::tip 启动 ComfyUI 服务
+    管理员必须从启动器启动 ComfyUI 服务之后，集群中的所有用户才能从客户端入口访问服务。
+    :::
+
+2. 点击 ComfyUI 图标打开界面。管理员也可以从启动器进入 ComfyUI 界面。
+
+    ![ComfyUI](/images/manual/use-cases/comfyui.png#bordered)
 
 ## 了解更多
+
+- [使用 ComfyUI 启动器管理 ComfyUI](comfyui-launcher.md)
 - [Krita + ComfyUI 实时绘画](../tutorials/comfyui-for-krita.md)：了解如何利用 ComfyUI 助力 Krita 中的创意工作流。

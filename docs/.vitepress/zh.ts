@@ -101,6 +101,13 @@ const side = {
         {
           text: "ComfyUI",
           link: "/zh/manual/use-cases/comfyui",
+          collapsed: true,
+              items: [
+                {
+                  text: "管理 ComfyUI",
+                  link: "/zh/manual/use-cases/comfyui-launcher",
+                },
+              ],
         },
         {
           text: "Ollama 下载开源模型",
