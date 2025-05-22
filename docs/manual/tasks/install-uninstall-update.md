@@ -54,15 +54,15 @@ To cancel an installation, hover over the operation button and click **Cancel** 
 To ensure a shared service is running and accessible within the cluster, follow this general installation process based on the type of Shared App:
 
 * **Headless backend service**:
-    This type of shared applications typically require third-party authorized applications to access its service. Take Ollama for example:
+    This type of shared applications typically require third-party reference applications to access its service. Take Ollama for example:
     1. The administrator installs the shared application first. This makes the core service available in the cluster.
     
-    2. Members (including the administrator) install the corresponding authorized application (e.g., Open WebUI or LobeChat) to access the Ollama service.
+    2. Members (including the administrator) install the corresponding reference application (e.g., Open WebUI or LobeChat) to access the Ollama service.
 
 * **Complete application with built-in UI**:
     This type of shared applications can provide service to itself. Typical examples are Dify Shared and ComfyUI Shared.
     
-    1. The administrator installs the shared application first. This not only launches the shared service for the cluster, but also installs the client-side interface as the authorized application.
+    1. The administrator installs the shared application first. This not only launches the shared service for the cluster, but also installs the client-side interface as the reference application.
     
     ::: tip ComfyUI Launcher
     ComfyUI Shared contains a web launcher component to facilitate the management of related services and resources. The administrator needs to configure and start the service from the ComfyUI Launcher.

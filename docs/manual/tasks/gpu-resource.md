@@ -33,7 +33,7 @@ For users requiring dedicated GPU resources, standalone mode can be enabled:
 
 :::info
 For shared applications, such as SD Web UI (Stable Diffusion) and ComfyUI, GPU memory is managed by the shared application itself, not individual user instances.
-This means that the GPU mode settings described here do not directly affect authorized applications.
+This means that the GPU mode settings described here do not directly affect reference applications.
 :::
 
 ## Change GPU mode for application
