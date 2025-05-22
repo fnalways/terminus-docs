@@ -104,6 +104,4 @@ If you can't install an application, it might be due to:
 * **Insufficient system resources**: Try freeing up system resources, or increasing your resource quota.
 * **Missing dependencies**: Check the **Dependency** section on the application details page and make sure all required apps are installed.
 * **Incompatible system version**: Try upgrading Olares to the latest version.
-* **Shared application restrictions** (for Olares member): Install the authorized app, and contact your Olares admin to install the corresponding shared application.
-
-
+* **Shared application restrictions** (for Olares member): Install the reference app, and contact your Olares admin to install the corresponding shared application.
