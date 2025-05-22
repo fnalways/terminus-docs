@@ -106,8 +106,9 @@ To manage available plugins registered in ComfyUI Manager:
 To install plugins directly from GitHub repositories:
 
 1. Navigate to **Plugin management** > **Custom Install**.
-2. In the GitHub URL input box, fill in the URL of the repository. Leave the branch empty to use the default branch.
-3. Click **INSTALL PLUGIN**.
+2. Enter the URL of the repository. 
+3. Specify the branch (optional). Use the default (usually 'main' or 'master') if not specified.
+4. Click **INSTALL PLUGIN**.
 
 ## Manage Python environment
 

@@ -36,9 +36,9 @@ description: 将 ComfyUI 与 Krita 结合使用的教程，学习如何配置 AI
 
 3. 配置 ComfyUI 的认证级别。
 
-   a. 打开设置，导航至**应用** > **ComfyUI** > **入口**。
+   a. 打开设置，导航至**应用** > **ComfyUI Shared** > **入口**。
 
-   b. 将**认证级别**设置为**内部**。
+   b. 将 ComfyUI 的**认证级别**设置为**内部**。
 
    ![ComfyUI 认证应用](/images/zh/manual/use-cases/comfyui-authentication-level.png#bordered){width=80%}
    :::info

@@ -36,9 +36,9 @@ Before starting, ensure you have:
 
 3. Configure ComfyUI access policy.
 
-   a. Open Settings, navigate to **Applications** > **ComfyUI** > **Entrances**.
+   a. Open Settings, navigate to **Applications** > **ComfyUI Shared** > **Entrances**.
 
-   b. Set the **Authentication level** to **Internal**.
+   b. Set the **Authentication level** for ComfyUI to **Internal**.
    ![ComfyUI authentication level](/images/manual/use-cases/comfyui-authentication-level.png#bordered){width=70%}
 4. Launch ComfyUI from your desktop, and verify the installation by generating a sample image.
 5. Copy the address of ComfyUI for next steps.
