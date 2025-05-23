@@ -49,10 +49,10 @@ These options apply to all backends:
 |-------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------|
 | `--access-token` <sup>1</sup> |           | Specifies the access token for Olares Space.                                                                                             | No                   | N/A     |
 | `--cloud-api-mirror`          |           | Specifies the cloud API mirror.                                                                                                          | No                   | N/A     |
-| `--cloud-name`                |           | Specifies the cloud name of the Olares Space instance. <br/> The cloud name can be retrieved using the [`region`](region.md) subcommand. | No                   | N/A     |
+| `--cloud-name`                |           | Specifies the cloud name of the Olares Space instance. <br/> The cloud name can be retrieved using the [`region`](./backups-region.md) subcommand. | No                   | N/A     |
 | `--cluster-id` <sup>2</sup>   |           | Specifies the cluster ID where the backup will be stored.                                                                                | No                   | N/A     |
 | `--olares-did` <sup>1</sup>   |           | Specifies the Olares DID.                                                                                                                | No                   | N/A     |
-| `--region-id`                 |           | Specifies the region ID of the Olares Space instance. <br/> The region ID can be retrieved using the [`region`](region.md) subcommand.   | No                   | N/A     |
+| `--region-id`                 |           | Specifies the region ID of the Olares Space instance. <br/> The region ID can be retrieved using the [`region`](./backups-region.md) subcommand.   | No                   | N/A     |
 
 1. To retrieve the access token and Olares DID, inspect the payload of the network requests made by the Olares Space web interface after logging in. The `token` field corresponds to the access token, and the `userid` field corresponds to the Olares DID.
 

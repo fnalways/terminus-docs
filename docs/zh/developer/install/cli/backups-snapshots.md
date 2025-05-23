@@ -48,10 +48,10 @@ olares-cli backups snapshots <存储后端> --repo-name <仓库名称> [选项]
 |-------------------------------|----|---------------------------------------------------------------------|----------|--------|
 | `--access-token` <sup>1</sup> |    | 设置 Olares Space 的访问令牌。                                              | 否       | 无     |
 | `--cloud-api-mirror`          |    | 设置云 API 镜像地址。                                                       | 否       | 无     |
-| `--cloud-name`                |    | 设置 Olares Space 实例的云名称。<br/> 可通过 [`region`](region.md) 子命令获取。       | 否       | 无     |
+| `--cloud-name`                |    | 设置 Olares Space 实例的云名称。<br/> 可通过 [`region`](./backups-region.md) 子命令获取。       | 否       | 无     |
 | `--cluster-id` <sup>2</sup>   |    | 设置用于存储备份的集群 ID。                                                     | 否       | 无     |
 | `--olares-did` <sup>1</sup>   |    | 设置 Olares DID。                                                      | 否       | 无     |
-| `--region-id`                 |    | 设置 Olares Space 实例的区域 ID。<br/> 可通过 [`region`](region.md) 子命令获取。 | 否       | 无     |
+| `--region-id`                 |    | 设置 Olares Space 实例的区域 ID。<br/> 可通过 [`region`](./backups-region.md) 子命令获取。 | 否       | 无     |
 
 1. 要获取访问令牌和 Olares DID，请在登录 Olares Space 后检查页面网络请求的负载。`token` 字段对应访问令牌，`userid` 字段对应 Olares DID。
 
