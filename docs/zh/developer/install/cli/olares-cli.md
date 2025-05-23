@@ -27,7 +27,7 @@ Olares 命令行工具使用如下语法：
 > `olares-cli 命令 [子命令] [选项]`
 
 其中：
-- `命令`：指定要执行的主要操作，例如 `olares download`。
+- `命令`：指定要执行的主要操作，例如 `olares-cli install`。
 - `子命令`：进一步指定命令的具体任务，适用于支持子操作的命令。例如 `wizard` 或 `component`。
 - `选项`：可选参数，用于修改命令的行为。包括标志（flags）和带参数的选项。
 
@@ -44,16 +44,16 @@ Olares 命令行工具使用如下语法：
 | `gpu`              | `olares-cli gpu <子命令> [选项]`             | 管理 GPU 相关的操作。                  |
 | `info`             | `olares-cli info <子命令> [选项]`     | 显示当前设备的操作系统信息。                 |
 | `node`             | `olares-cli node <子命令> [选项]`            | 管理节点相关的操作。                     |
-| `olares backups`   | `olares-cli backups <子命令> [选项]`  | 管理备份相关操作。                      |
-| `olares change-ip` | `olares-cli change-ip [选项]`      | 修改 Olares OS 的 IP 地址。          |
-| `olares download`  | `olares-cli download <子命令> [选项]` | 下载指定资源。                        |
-| `olares info`      | `olares-cli info [选项]`           | 显示已下载的 Olares OS 的常规信息。        |
-| `olares install`   | `olares-cli install [选项]`        | 部署 Olares 的系统级和用户级组件。          |
-| `olares logs`      | `olares-cli logs [选项]`           | 收集 Olares 系统组件的日志，用于调试和故障排查。   |
-| `olares precheck`  | `olares-cli precheck [选项]`       | 检查系统环境是否满足 Olares 安装要求。        |
-| `olares prepare`   | `olares-cli prepare [选项]`        | 为安装过程准备环境，包括设置 Olares 的基础服务和配置 |
-| `olares release`   | `olares-cli release [选项]`        | 打包 Olares 安装资源以供分发或部署。         |
-| `olares start`     | `olares-cli start [选项]`          | 启动 Olares 服务和组件。               |
-| `olares stop`      | `olares-cli stop [选项]`           | 停止 Olares 服务和组件。               |
-| `olares uninstall` | `olares-cli uninstall [选项]`      | 完全卸载 Olares，或将安装回滚到特定阶段。       |
+| `backups`   | `olares-cli backups <子命令> [选项]`  | 管理备份相关操作。                      |
+| `change-ip` | `olares-cli change-ip [选项]`      | 修改 Olares OS 的 IP 地址。          |
+| `download`  | `olares-cli download <子命令> [选项]` | 下载指定资源。                        |
+| `info`      | `olares-cli info [选项]`           | 显示已下载的 Olares OS 的常规信息。        |
+| `install`   | `olares-cli install [选项]`        | 部署 Olares 的系统级和用户级组件。          |
+| `logs`      | `olares-cli logs [选项]`           | 收集 Olares 系统组件的日志，用于调试和故障排查。   |
+| `precheck`  | `olares-cli precheck [选项]`       | 检查系统环境是否满足 Olares 安装要求。        |
+| `prepare`   | `olares-cli prepare [选项]`        | 为安装过程准备环境，包括设置 Olares 的基础服务和配置 |
+| `release`   | `olares-cli release [选项]`        | 打包 Olares 安装资源以供分发或部署。         |
+| `start`     | `olares-cli start [选项]`          | 启动 Olares 服务和组件。               |
+| `stop`      | `olares-cli stop [选项]`           | 停止 Olares 服务和组件。               |
+| `uninstall` | `olares-cli uninstall [选项]`      | 完全卸载 Olares，或将安装回滚到特定阶段。       |
 
