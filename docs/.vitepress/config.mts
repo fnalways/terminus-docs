@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { en } from "./en";
 import { zh } from "./zh";
+import markdownItMultimdTable from 'markdown-it-multimd-table';
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -73,6 +74,15 @@ export default withMermaid({
         },
       },
     },
+  markdown: {
+    config: (md) => {
+      // 使用 markdown-it-multimd-table 插件
+      md.use(markdownItMultimdTable, {
+        multiline: true, // 允许多行表格内容
+        rowspan: true,   // 支持行和列合并
+      });
+    },
+  },
   },
 
   sitemap: {
